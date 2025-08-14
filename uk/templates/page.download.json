@@ -1,0 +1,793 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "creality_anchor_point_gEQmai": {
+      "type": "creality_anchor_point",
+      "blocks": {
+        "anchor_point_4ekKPB": {
+          "type": "anchor_point",
+          "settings": {
+            "title": "Laser Engraver Firmware",
+            "anchor_id": "pia"
+          }
+        },
+        "anchor_point_kxGMxU": {
+          "type": "anchor_point",
+          "settings": {
+            "title": "User manual download",
+            "anchor_id": "pia2"
+          }
+        },
+        "anchor_point_ynpd8q": {
+          "type": "anchor_point",
+          "settings": {
+            "title": "Recommended Parameters",
+            "anchor_id": "pia3"
+          }
+        }
+      },
+      "block_order": [
+        "anchor_point_4ekKPB",
+        "anchor_point_kxGMxU",
+        "anchor_point_ynpd8q"
+      ],
+      "settings": {
+        "title": "Downloads",
+        "columns": 3,
+        "padding_pt_pc": 20,
+        "padding_pb_pc": 20,
+        "padding_pt_mb": 20,
+        "padding_pb_mb": 20
+      }
+    },
+    "creality_download_support_FPqYAB": {
+      "type": "creality_download_support",
+      "blocks": {
+        "header_Wy6477": {
+          "type": "header",
+          "settings": {
+            "title": "Creality Falcon A1",
+            "button_text": "download",
+            "button_link": "",
+            "time": "2025-4-17",
+            "description": "",
+            "button_text2": "download",
+            "button_link2": "",
+            "time2": "2022-03-11",
+            "description2": "",
+            "button_text3": "download",
+            "button_link3": "",
+            "time3": "2022-03-11",
+            "description3": ""
+          }
+        },
+        "header_BqHNdJ": {
+          "type": "header",
+          "settings": {
+            "title": "Creality Falcon2 Pro",
+            "button_text": "CrealityFalcon2 pro_CV50_40W_V3_0_5",
+            "button_link": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Creality_Falcon2_CV50-Pro_40W_V1_0_0.zip?v=1727423310",
+            "time": "2024-01-31",
+            "description": "",
+            "button_text2": "CrealityFalcon2 pro_CV50_60W_V3_0_5",
+            "button_link2": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Creality_Falcon2_CV50-Pro_60W_V1_0_1.zip?v=1730340524",
+            "time2": "2024-10-31",
+            "description2": "",
+            "button_text3": "CrealityFalcon2 pro_CV50_22W_V3_0_5",
+            "button_link3": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Creality_Falcon2_CV50-Pro_22W_V1_0_0.zip?v=1727423310",
+            "time3": "2022-03-11",
+            "description3": ""
+          }
+        },
+        "header_LJXxLw": {
+          "type": "header",
+          "settings": {
+            "title": "Creality Falcon2",
+            "button_text": "CrealityFalcon2_CV50_40W_V3_0_5",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Creality_Falcon2_CV50_40W_V3_0_5.zip?v=1704856352",
+            "time": "2024-01-03",
+            "description": "1.Added safety cover open emergency stop function.2.Optimize offline preview speed.3.If the switch of the safety cover is played above, the control is normally open, and when it is played below, the light and fan are automatically controlled according to the laser",
+            "button_text2": "",
+            "button_link2": "",
+            "time2": "",
+            "description2": "",
+            "button_text3": "",
+            "button_link3": "",
+            "time3": "",
+            "description3": ""
+          }
+        },
+        "header_R7RPpd": {
+          "type": "header",
+          "settings": {
+            "title": "CR-Laser Falcon",
+            "button_text": "CR-Laser User CV-30-Firmware_V3.0.24",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/CR-Laser_Falcon_User_CV-30-Firmware_V3.0.24.zip?v=1704954781",
+            "time": "2023-02-02",
+            "description": "1. Change: the way of open laser power2. Add: change machine parameter and save parameter3. Add: Automatic identification device function of lightburn software",
+            "button_text2": "",
+            "button_link2": "",
+            "time2": "",
+            "description2": "",
+            "button_text3": "",
+            "button_link3": "",
+            "time3": "",
+            "description3": ""
+          }
+        },
+        "header_4KDjiN": {
+          "type": "header",
+          "settings": {
+            "title": "CV-01 Pro",
+            "button_text": "CV-01 Pro_V3.0.16_202112311706",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/CV-01-Pro_V3.0.16_202112311706.bin?v=1704954791",
+            "time": "2022-05-11",
+            "description": "Factory standard firmware",
+            "button_text2": "",
+            "button_link2": "",
+            "time2": "",
+            "description2": "",
+            "button_text3": "",
+            "button_link3": "",
+            "time3": "",
+            "description3": ""
+          }
+        },
+        "header_JYKxKg": {
+          "type": "header",
+          "settings": {
+            "title": "Creality Laser Module",
+            "button_text": "CV-30-3DPrint-V3_0_24",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/CV-30-3DPrint-V3_0_24.zip?v=1704954365",
+            "time": "2023-03-09",
+            "description": "This firmware is the motherboard firmware for the 3D printer",
+            "button_text2": "",
+            "button_link2": "",
+            "time2": "",
+            "description2": "",
+            "button_text3": "download",
+            "button_link3": "",
+            "time3": "",
+            "description3": ""
+          }
+        },
+        "header_prmiQx": {
+          "type": "header",
+          "settings": {
+            "title": "Win7",
+            "button_text": "Win7-VCP-drivers",
+            "button_link": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Win7_UVC_driver.zip?v=1727423309",
+            "time": "2024-08-31",
+            "description": "1. Compatible with win7 users to use the computer to connect the self-developed software, connect the camera to use the calibration function.<br>2. Added win7 driver installation.",
+            "button_text2": "Win7-UVC-driver",
+            "button_link2": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Esp32-Win7-VCP-drivers-main.zip?v=1727423308",
+            "time2": "2024-08-31",
+            "description2": "1. Compatible with win7 users to use the computer to connect the self-developed software, connect the camera to use the calibration function.2. Added win7 driver installation.",
+            "button_text3": "",
+            "button_link3": "",
+            "time3": "",
+            "description3": ""
+          }
+        }
+      },
+      "block_order": [
+        "header_Wy6477",
+        "header_BqHNdJ",
+        "header_LJXxLw",
+        "header_R7RPpd",
+        "header_4KDjiN",
+        "header_JYKxKg",
+        "header_prmiQx"
+      ],
+      "settings": {
+        "jump_id": "pia",
+        "heading": "Laser Engraving Machine Firmware",
+        "subheading": "The CrealityFalcon laser engraving machine is designed for personal consumptive use. With a modular design, it is easy to assemble and use. It supports various materials for engraving, such as cardboard, wood, bamboo, rubber, leather, fabric, acrylic, plastic, stainless steel, and lacquered metal, as well as cutting with cardboard, felt, leather, wood, bamboo, etc, widely acceptable for engineers, designers, and DIY enthusiasts, to create all kinds of arts and crafts. Kindly proceed to download the firmware for the Creality Falcon laser engraving machine as per your requirements.",
+        "overall_bg_color": "#f0f8ff",
+        "content_bg_color": "#f9f9f9",
+        "pc_padding_top": 60,
+        "pc_padding_bottom": 60,
+        "mobile_padding_top": 30,
+        "mobile_padding_bottom": 30
+      }
+    },
+    "creality_product_list_pJMBLg": {
+      "type": "creality_product_list",
+      "settings": {
+        "jump_id": "pia2",
+        "title": "User manual download",
+        "collection_list": [
+          "falcon2-pro-engraver",
+          "falcon2-engraver",
+          "falcon-pro-engraver",
+          "falcon-laser-engraver"
+        ]
+      }
+    },
+    "creality_download_yyqmkg": {
+      "type": "creality_download",
+      "blocks": {
+        "header_QRXJ3Q": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_A1 engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Consumable_parameters_database_A1.xlsx?v=1742875525",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<h3>Release Notes</h3>"
+          }
+        },
+        "header_EmBT3d": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_60W engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "https://cdn.shopifycdn.net/s/files/1/0630/7522/1663/files/Recommended_Parameters_for_60W.pdf?v=1715939799",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<p>Specifications are for reference only. For more personalized creations, join our community to exchange and share with laser engraver enthusiasts from around the world.</p>"
+          }
+        },
+        "header_Uj8zCA": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_40W engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Recommended_Parameters_for_40W-Updated.pdf?v=1704958637",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<p>Specifications are for reference only. For more personalized creations, join our community to exchange and share with laser engraver enthusiasts from around the world.</p>"
+          }
+        },
+        "header_WJphjB": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_22W engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Recommended_Parameters_for_22W-Updated.pdf?v=1704958637",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<p>Specifications are for reference only. For more personalized creations, join our community to exchange and share with laser engraver enthusiasts from around the world.</p>"
+          }
+        },
+        "header_iEPYG6": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_12W engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/Recommended_Parameters_for_12W-Updated.pdf?v=1704958637",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<p>Specifications are for reference only. For more personalized creations, join our community to exchange and share with laser engraver enthusiasts from around the world.</p>"
+          }
+        },
+        "header_YAMLxc": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_10W engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Recommended_parameters_for_10W.pdf?v=1699868680",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<p>Specifications are for reference only. For more personalized creations, join our community to exchange and share with laser engraver enthusiasts from around the world.</p>"
+          }
+        },
+        "header_M7Udgx": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_7.5W engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Recommended_Parameters_for_7.5W_1.pdf?v=1704958637",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<p>Specifications are for reference only. For more personalized creations, join our community to exchange and share with laser engraver enthusiasts from around the world.</p>"
+          }
+        },
+        "header_AmVfUV": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_5W engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Recommended_parameters_for_5W.pdf?v=1704958637",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<p>Specifications are for reference only. For more personalized creations, join our community to exchange and share with laser engraver enthusiasts from around the world.</p>"
+          }
+        },
+        "header_UWy97h": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_1.6W engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/Recommended_parameters_for_1.6W.pdf?v=1704958637",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<p>Specifications are for reference only. For more personalized creations, join our community to exchange and share with laser engraver enthusiasts from around the world.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "header_QRXJ3Q",
+        "header_EmBT3d",
+        "header_Uj8zCA",
+        "header_WJphjB",
+        "header_iEPYG6",
+        "header_YAMLxc",
+        "header_M7Udgx",
+        "header_AmVfUV",
+        "header_UWy97h"
+      ],
+      "settings": {
+        "jump_id": "pia3",
+        "heading": "Recommended Parameters",
+        "pc_padding_top": 60,
+        "pc_padding_bottom": 60,
+        "mobile_padding_top": 30,
+        "mobile_padding_bottom": 30
+      }
+    },
+    "spotlight_block_8GEmR6": {
+      "type": "spotlight-block",
+      "blocks": {
+        "image_HnGYPC": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/img_v3_02cf_798c728b-214b-4220-9276-6aecdd64d18g_1.jpg",
+            "title_align": "center",
+            "enable_absolute": false,
+            "align_items": "center",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "Falcon Laser Cutters",
+            "color_title": "#232323",
+            "fontsize_title": 20,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "The Falcon Laser Engraver provides precise engraving and cutting capabilities on materials such as wood, acrylic, and metal. It's easy to assemble and perfect for both DIY enthusiasts and professionals.",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "Learn More",
+            "link": "shopify://collections/engraver",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#14a9de",
+            "bg_color_button": "#14a9de",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#14a9de",
+            "border_color_button_hover": "#14a9de",
+            "bg_color_button_hover": "#ffffff",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        },
+        "image_gMXngb": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/17.jpg",
+            "title_align": "center",
+            "enable_absolute": false,
+            "align_items": "center",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "Accessories for All Falcon Engravers",
+            "color_title": "#232323",
+            "fontsize_title": 20,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "Upgrade your Falcon engraver with premium accessories engineered for durability and precision. Compatible with all models, these accessories ensure optimal performance for every project.",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "Learn More",
+            "link": "shopify://collections/engraver",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#14a9de",
+            "bg_color_button": "#14a9de",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#14a9de",
+            "border_color_button_hover": "#14a9de",
+            "bg_color_button_hover": "#ffffff",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        },
+        "image_ftLGDJ": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/1_5083d105-4dac-4d39-a5c7-a6bac9a2423e.jpg",
+            "title_align": "center",
+            "enable_absolute": false,
+            "align_items": "center",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "Crafting Materials for All Engravers",
+            "color_title": "#232323",
+            "fontsize_title": 20,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "Our premium selection of materials, including wood, acrylic, paper, leather, metal, and more, ensures precise and durable results for diverse engraving needs, supported by quality and expert customization.",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "Learn More",
+            "link": "shopify://collections/engraver",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#14a9de",
+            "bg_color_button": "#14a9de",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#14a9de",
+            "border_color_button_hover": "#14a9de",
+            "bg_color_button_hover": "#ffffff",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_HnGYPC",
+        "image_gMXngb",
+        "image_ftLGDJ"
+      ],
+      "settings": {
+        "container": "1770",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "mg_minus_desktop": 0,
+        "block_layout": "grid",
+        "spotlight_block_swipe_on_mobile": "slider",
+        "column": "3",
+        "column_mb": "1",
+        "enable_arrows": true,
+        "enable_arrows_mb": true,
+        "position_horizontal_slick_arrow": "0",
+        "enable_dots": false,
+        "enable_dots_mb": true,
+        "display_border_bottom": false,
+        "border_color": "#e3e3e3",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "spotlight_bg": "#ffffff",
+        "spotlight_bg_gradient": "",
+        "spotlight_block_title": "Shop By Categories",
+        "enable_border_title": true,
+        "color_title": "#232323",
+        "fontsize_title": 24,
+        "fontsize_title_mb": 20,
+        "margin_bottom_title": 10,
+        "spotlight_block_des": "Picking The Right One By CrealityFalcon",
+        "color_des": "#3c3c3c",
+        "margin_bottom_des": 40,
+        "fontsize_des": 16,
+        "title_align": "center",
+        "item_distance": 15,
+        "item_radius": 15,
+        "view_all": "",
+        "view_all_fs": 30,
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "display_spotlight_button": false,
+        "spotlight_button_text": "",
+        "spotlight_button_link": "",
+        "color_button": "#ffffff",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "#232323",
+        "border_color_button_hover": "#ffffff",
+        "bg_color_button_hover": "#ffffff",
+        "bg_color_gradient_button_hover": "",
+        "maxwidth_button": 230,
+        "mg_top_button": 30,
+        "enable_shadow": false,
+        "shadow_horizontal_length": 0,
+        "shadow_vertical_length": 0,
+        "shadow_blur_radius": 0,
+        "shadow_spread": 0,
+        "shadow_color": "transparent",
+        "shadow_inset": "no",
+        "enable_plus_icon": false,
+        "color_plus_icon": "#ffffff",
+        "enable_content_border": false,
+        "content_border_color": "#e2e2e2"
+      }
+    },
+    "image_banner_GpAFW7": {
+      "type": "image-banner",
+      "blocks": {
+        "large_img_KdxXbQ": {
+          "type": "largeImg",
+          "settings": {
+            "image": "shopify://shop_images/extensive_compatibility_crealityfalcon.jpg",
+            "enable_max_width_image": false,
+            "custom_width_image": 1170,
+            "enable_scroll_down": false,
+            "enable_custom_image": false,
+            "image_behavior": "none",
+            "sub_title": "",
+            "border_sub_title": false,
+            "font_size_sub_title": 14,
+            "font_size_sub_title_mb": 14,
+            "margin_bottom_sub_title": 14,
+            "sub_heading_font": "font_1",
+            "font_weight_sub_title": "700",
+            "sub_title_position": "sub_title_above",
+            "color_sub_title": "#232323",
+            "color_sub_title_mb": "#ffffff",
+            "heading": "",
+            "letter_spacing_heading": "",
+            "enable_style_italic": false,
+            "font_size_heading": 40,
+            "font_size_heading_mb": 24,
+            "margin_bottom_heading": 20,
+            "font_weight_heading": "600",
+            "color_heading": "#232323",
+            "color_heading_mb": "#ffffff",
+            "border_title": "border_s1",
+            "border_color_title": "#232323",
+            "border_color_title_mobile": "#ffffff",
+            "text": "",
+            "font_size_des": 12,
+            "font_size_des_mb": 12,
+            "line_height_des": 26,
+            "margin_bottom_des": 35,
+            "color_des": "#232323",
+            "color_des_mb": "#ffffff",
+            "countdown": "",
+            "hide_countdown_fc": "countdown",
+            "countdown_style": "round",
+            "countdown_position": "countdown_below_desc",
+            "font_size_countdown_number": 30,
+            "font_size_countdown_text": 14,
+            "color_countdown": "#232323",
+            "color_countdown_mb": "#ffffff",
+            "countdown_margin_bottom": 35,
+            "content_width": 475,
+            "align": "center",
+            "align_items": "center",
+            "position": "left",
+            "custom_horizontal": "",
+            "custom_vertical": "",
+            "btn_text": "",
+            "link": "",
+            "btn_icon": "",
+            "button_1_width": 235,
+            "enable_button_custom_border": false,
+            "button_color": "#ffffff",
+            "button_border": "#232323",
+            "button_background": "#232323",
+            "button_background_gradient": "",
+            "button_color_hover": "#ffffff",
+            "button_border_hover": "#232323",
+            "button_background_hover": "#232323",
+            "button_background_gradient_hover": "",
+            "btn_text_2": "",
+            "link_2": "",
+            "btn_icon_2": "",
+            "button_color_2": "#ffffff",
+            "button_border_2": "#232323",
+            "button_background_2": "#232323",
+            "button_background_2_gradient": "",
+            "button_color_hover_2": "#ffffff",
+            "button_border_hover_2": "#232323",
+            "button_background_hover_2": "#232323",
+            "button_background_gradient_hover_2": "",
+            "video_link": "",
+            "adaptive_height_video": "56",
+            "icon_style": "style_1",
+            "color_icon": "#ffffff",
+            "bg_color_icon": "#000000",
+            "enable_custom_video_icon_position": false,
+            "video_icon_horizontal_position": "",
+            "video_icon_vertical_position": "",
+            "video_icon_horizontal_position_mb": "",
+            "video_icon_vertical_position_mb": ""
+          }
+        }
+      },
+      "block_order": [
+        "large_img_KdxXbQ"
+      ],
+      "settings": {
+        "id_section": "",
+        "container": "fullwidth",
+        "padding_full_width": 0,
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "image_banner_title": "",
+        "enable_border_title": false,
+        "color_title": "#202020",
+        "fontsize_title": 24,
+        "fontsize_title_mb": 20,
+        "margin_bottom_title": 25,
+        "image_banner_des": "",
+        "color_des": "#202020",
+        "fontsize_des": 16,
+        "title_align": "center",
+        "style_bg": "none",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "display_type": "slide",
+        "list_gap": 0,
+        "enable_arrows": false,
+        "arrows_position": "",
+        "enable_dots": false,
+        "enable_autoplay": false
+      }
+    },
+    "faqs_pMtyDD": {
+      "type": "faqs",
+      "blocks": {
+        "question_item_9ypjDp": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q: Which firmware version should I download for my CrealityFalcon engraver?",
+            "unswer_text": "A: Please download the latest firmware version available on the CrealityFalcon support page to ensure compatibility and access to the latest features and improvements.",
+            "is_open": true
+          }
+        },
+        "question_item_V9nVAa": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q: How do I update the firmware on my CrealityFalcon engraver?",
+            "unswer_text": "A: Follow the step-by-step instructions provided in the firmware download package or user manual to safely update your CrealityFalcon printer's firmware.",
+            "is_open": false
+          }
+        },
+        "question_item_VzQknE": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q: Can I revert to a previous firmware version if needed?",
+            "unswer_text": "A: Yes, previous firmware versions are usually available for download on our support page. Ensure compatibility with your specific printer model before proceeding with the downgrade.",
+            "is_open": false
+          }
+        },
+        "question_item_TQPqCV": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q: Is it necessary to update the firmware regularly?",
+            "unswer_text": "A: Regular firmware updates can enhance printer performance, introduce new features, and address potential issues. We recommend checking for updates periodically to optimize your printing experience.",
+            "is_open": false
+          }
+        },
+        "question_item_rCJEdW": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q: What should I do if I encounter issues after updating the firmware?",
+            "unswer_text": "A: If you experience any issues after updating the firmware, please ensure you followed the update instructions correctly. You can also check our troubleshooting guides or contact CrealityFalcon support for assistance. Email to: uk.support@crealityfalcon.com",
+            "is_open": false
+          }
+        },
+        "question_item_rgAd9e": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q: Do I need special software to update the firmware?",
+            "unswer_text": "A: Typically, firmware updates can be performed using a USB drive or through the printer's control interface. Specific instructions and necessary software tools, if any, will be included in the firmware download package or user manual.",
+            "is_open": false
+          }
+        }
+      },
+      "block_order": [
+        "question_item_9ypjDp",
+        "question_item_V9nVAa",
+        "question_item_VzQknE",
+        "question_item_TQPqCV",
+        "question_item_rCJEdW",
+        "question_item_rgAd9e"
+      ],
+      "settings": {
+        "ques_background_color": "linear-gradient(45deg, #F5F5F5, #B6B3C2)",
+        "ques_title": "Download FAQs",
+        "text_color": "#000000",
+        "border_color": "#333333",
+        "arrow_color": "#14a9de"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "creality_anchor_point_gEQmai",
+    "creality_download_support_FPqYAB",
+    "creality_product_list_pJMBLg",
+    "creality_download_yyqmkg",
+    "spotlight_block_8GEmR6",
+    "image_banner_GpAFW7",
+    "faqs_pMtyDD"
+  ]
+}

@@ -1,0 +1,694 @@
+<style>
+  #app-{{section.id}} {
+    padding-top: {{section.settings.pc_top}}px;
+    padding-bottom: {{section.settings.pc_bottom}}px;
+  }
+  #app-{{section.id}} .content {
+    width: 62.5vw;
+    margin: 0 auto;
+  }
+  #app-{{section.id}} .section {
+    position: relative;
+    padding: 3.125vw 0;
+    background-color: {{section.settings.bg_color}}; 
+  }
+  #app-{{section.id}} .common-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.083vw;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+    font-family: "Plus_Jakarta_Sans,sans-serif";
+  }
+  #app-{{section.id}} .section .content .common-subtitle {
+    margin-top: 1.042vw;
+    text-align: center;
+    font-size: 0.833vw;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.2em;
+  }
+  #app-{{section.id}} .section .content .shop-list {
+    margin-top: 1.5625vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.083vw;
+    grid-row: auto;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item {
+    position: relative;
+    border-radius: 0.78125vw;
+    overflow: hidden;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .star-list {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .star-list .comment {
+    font-size: 0.833vw;
+    color: #333333;
+    font-weight: 600;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .star-list .star-wrap {
+    display: flex;
+    width: 6.771vw;
+    justify-content: space-between;
+    margin-right: 0.833vw;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .star-list .star-wrap .star-img {
+    width: 0.9375vw;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .progress-wrap {
+    margin-top: 0.625vw;
+    width: 100%;
+    height: 1.042vw; 
+    border-radius: 52.031vw;
+    border: 0.052vw solid rgba(0,0,0, .2);
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .progress-wrap .progress-bar {
+    position: relative;
+    width: 2.604vw;
+    height: 100%;
+    border-radius: 52.031vw;
+    background: linear-gradient(to right, #F2D958 0%, #de7214 50%, #e61515 100% );
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .progress-wrap .progress-bar .nums {
+    position: absolute;
+    top: 50%;
+    color: #ffffff;
+    transform: translateY(-50%);
+    font-size: 0.729vw;
+    font-weight: 500;
+    right: 0.521vw;
+  }
+
+  #app-{{section.id}} .section .content .shop-list .shop-item .discount {
+    position: absolute;
+    left: 1.5625vw;
+    top: 1.5625vw;
+    padding: 0.365vw 0.521vw;
+    text-align: center;
+    background-color: #DE1D1D;
+    border-radius: 1.042vw;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .discount .discount-rate {
+    color: #ffffff;
+    font-size: 0.625vw;
+    font-weight: 600;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .shop-img {
+    width: 100%;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .shop-info {
+    border-radius: 0 0 0.78125vw 0.78125vw;
+    background-color: #ffffff;
+    padding: 1.042vw;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .shop-title {
+    padding: 0.625vw 0 0.833vw 0;
+    border-bottom: 0.052vw solid #EBEBEB;
+    font-size: 0.9375vw;
+    font-family: "Outfit";
+    font-weight: 600;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .price {
+    display: flex;
+    align-items: center;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .price .now-price {
+    margin-right: 1.042vw;
+    color: #e61515;
+    font-size: 1.33vw;
+    line-height: 1.25em; 
+    font-weight: 600;
+    font-family: Outfit;
+    font-style: normal;
+    letter-spacing: 0vw;
+    text-decoration: none;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .price .old-price {
+    color: #999;
+    font-size: 0.833vw;
+    font-weight: 600;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+    font-family: "Outfit";
+    font-style: normal;
+    text-decoration: line-through;
+    text-transform: none;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .buying-point {
+    margin-top: 0.833vw;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .buying-point .point-item {
+    display: flex;
+    font-size: 0.729vw;
+    font-weight: 500;
+    line-height: 1.2em;
+    text-decoration: none;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: 0vw;
+    font-family: "Albert Sans";
+    margin-bottom: 0.521vw;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .buying-point .point-item .containers-c {
+    width: 0.9375vw;
+    height: 0.9375vw;
+    margin-right: 0.833vw;
+    flex-shrink: 0;
+    fill: #F1953E;
+    stroke: #F1953E;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .b-img {
+    width: 80%;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap {
+    margin-top: 0.521vw;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap .buy-btn, #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap .buy-out {
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    font-weight: 600;
+    letter-spacing: 0vw;
+    font-style: normal;
+    font-size: 0.729vw;
+    text-decoration: none;
+    font-family: Outfit;
+    line-height: 1.4em;
+    text-transform: none;
+    box-shadow: 0 0 rgba(0, 0, 0, 0.3019607843) inset;
+    width: 100%;
+    height: 2.1875vw;
+    min-height: 2.1875vw;
+    color: #fff;
+    background-color: #de7214;  
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2.604vw;
+    transition-duration: 0.3s;
+    padding: 0.521vw;
+    margin: 0; 
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap .buy-btn:hover {
+    background-color: #ffffff;
+    color: #de7214;
+    border-color: #de7214;
+  }
+  #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap .buy-out {
+    display: none;
+    background-color: #d5d3d3;
+  }
+  @media (max-width: 767px) { 
+    #app-{{section.id}} {
+      padding-top: {{section.settings.md_top}}px; 
+      padding-bottom: {{section.settings.md_bottom}}px;
+    }
+    #app-{{section.id}} .section {
+      padding: 16vw 0;
+    } 
+    #app-{{section.id}} .content {
+      width: 100%;
+      padding: 0 16px;
+    }
+    #app-{{section.id}} .section .content .common-subtitle {
+      margin-top: 1.042vw;
+      text-align: center;
+      font-size: 3.733vw;
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      line-height: 1.2em;
+    }
+    #app-{{section.id}} .section .content .shop-list {
+      margin-top: 8vw;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10.667vw;
+      grid-row: auto;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item {
+      position: relative;
+      border-radius: 4vw;
+      overflow: hidden;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .star-list {
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .star-list .comment {
+      font-size: 3.733vw;
+      color: #333333;
+      font-weight: 600;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .star-list .star-wrap {
+      display: flex;
+      width: 34.667vw;
+      justify-content: space-between;
+      margin-right: 4.267vw;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .star-list .star-wrap .star-img {
+      width: 4.8vw;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .progress-wrap {
+      margin-top: 3.2vw;
+      width: 100%;
+      height: 4.267vw; 
+      border-radius: 52.031vw;
+      border: 0.052vw solid rgba(0,0,0, .2);
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .progress-wrap .progress-bar {
+      position: relative;
+      width: 2.604vw;
+      height: 100%;
+      border-radius: 52.031vw;
+      background: linear-gradient(to right, #F2D958 0%, #de7214 50%, #e61515 100% );
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .progress-wrap .progress-bar .nums {
+      position: absolute;
+      top: 50%;
+      color: #ffffff; 
+      transform: translateY(-50%);
+      font-size: 3.467vw;
+      font-weight: 500;
+      right: 2.667vw;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .discount {
+      position: absolute;
+      left: 8vw;
+      top: 8vw;
+      padding: 1.867vw 2.667vw;
+      text-align: center;
+      background-color: #DE1D1D;
+      border-radius: 5.333vw;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .discount .discount-rate {
+      color: #ffffff;
+      font-size: 3.2vw;
+      font-weight: 600;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-img {
+      width: 100%;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info {
+      border-radius: 0 0 4vw 4vw;
+      background-color: #ffffff;
+      padding: 5.333vw;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .shop-title {
+      padding: 3.2vw 0 4.267vw 0;
+      border-bottom: 0.267vw solid #EBEBEB;
+      font-size: 4.8vw;
+      font-family: "Outfit";
+      font-weight: 600;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+      text-transform: none;
+      font-style: normal;
+      text-decoration: none;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .price {
+      display: flex;
+      align-items: center;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .price .now-price {
+      margin-right: 5.333vw;
+      color: #e61515;
+      font-size: 5.267vw;
+      line-height: 1.25em;
+      font-weight: 600;
+      font-family: Outfit;
+      font-style: normal;
+      letter-spacing: 0vw;
+      text-decoration: none;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .price .old-price {
+      color: #999;
+      font-size: 4.867vw;
+      font-weight: 600;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+      font-family: "Outfit";
+      font-style: normal;
+      text-decoration: line-through;
+      text-transform: none;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .buying-point {
+      margin-top: 4.267vw;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .buying-point .point-item {
+      display: flex;
+      font-size: 3.733vw;
+      font-weight: 500;
+      line-height: 1.2em;
+      text-decoration: none;
+      font-style: normal;
+      text-transform: none;
+      letter-spacing: 0vw;
+      font-family: "Albert Sans";
+      margin-bottom: 2.667vw;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .buying-point .point-item .containers-c {
+      width: 4.8vw;
+      height: 4.8vw;
+      margin-right: 4.267vw;
+      flex-shrink: 0;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .b-img {
+      width: 80%;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap {
+      margin-top: 2.667vw;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap .buy-btn, #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap .buy-out {
+      cursor: pointer;
+      text-align: center;
+      justify-content: center;
+      font-weight: 600;
+      letter-spacing: 0vw;
+      font-style: normal;
+      font-size: 3.733vw;
+      text-decoration: none;
+      font-family: Outfit;
+      line-height: 1.4em;
+      text-transform: none;
+      box-shadow: 0 0 rgba(0, 0, 0, 0.3019607843) inset;
+      width: 100%;
+      height: 11.2vw;
+      min-height: 11.2vw;
+      color: #fff;
+      background-color: #de7214;
+      border-style: solid;
+      border-width: 0.267vw;
+      border-radius: 13.333vw;
+      transition-duration: 0.3s;
+      padding: 2.667vw;
+      margin: 0;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap .buy-out {
+      display: none;
+      background-color: #d5d3d3;
+    }
+  } 
+</style>
+
+<div id="app-{{section.id}}">
+  <div class="section">
+    <div class="content">
+      <div class="common-title fadein">{{section.settings.title}}</div>
+      <div class="common-subtitle fadein">{{section.settings.subtitle}}</div>
+      <div class="shop-list">
+        {% for block in section.blocks %}
+          {% if block.type == 'product1' %}
+            {% assign product = all_products[block.settings.product] %}
+            {% assign quantity = product.variants[0].inventory_quantity %}
+            <div class="shop-item">
+              <div class="discount">
+                {% assign discount_percentage = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round %}
+                <div class="discount-rate">SAVE {{discount_percentage}}%</div>
+              </div>
+              <img class="shop-img" srcset="
+                {%- if product.featured_media.width >= 533 -%}
+                    {{ product.featured_media | img_url: '533x' }} 533w, 
+                {%- endif -%}
+                {%- if product.featured_media.width >= 534 -%}
+                    {{ product.featured_media | img_url: '534x' }} 534w,
+                {%- endif -%}
+                {%- if product.featured_media.width >= 720 -%}
+                    {{ product.featured_media | img_url: '720x' }} 720w,
+                {%- endif -%}
+                {%- if product.featured_media.width >= 940 -%}
+                    {{ product.featured_media | img_url: '940x' }} 940w,
+                {%- endif -%}
+                {%- if product.featured_media.width >= 1066 -%}
+                    {{ product.featured_media | img_url: '1066x' }} 1066w
+                {%- endif -%}" 
+                src="{{ product.images[2] | img_url: '533x' }}"
+                sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                alt="{{ product.featured_media.alt | escape }} {{product.featured_media.width}}"
+                loading="lazy"
+                class="motion-reduce"
+              >
+              <div class="shop-info">
+
+                <div class="star-list">
+                  <div class="star-wrap">
+                    {% for i in (1..block.settings.star) %}
+                      <img class="star-img" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/ZS.png?v=1726196712" alt="">
+                    {% endfor %}
+                    {% assign gray = 5 | minus: block.settings.star %}
+                    {% for i in (1..gray) %}
+                      <img class="star-img" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/ZS_1.png?v=1726196712" alt="">
+                    {% endfor %}
+                  </div>
+                  <div class="comment">({{block.settings.comment}})</div>
+                </div>
+                <div class="price">
+                  <div class="now-price">{{product.price | money}}</div>
+                  <del class="old-price">{{product.compare_at_price | money}}</del>
+                </div>
+                <div class="progress-wrap"> 
+                  <div class="progress-bar" style="width: {{quantity | times: 1.0 | divided_by: block.settings.products_quantity_base | times: 100 |  append: '%'}};">
+                    <div class="nums">{{quantity}}</div> 
+                  </div>
+                </div>
+                <div class="shop-title">{{product.title}}</div>
+                <div class="buying-point">
+                  <div class="point-item">
+                    <svg class="containers-c" width="18" height="18" viewBox="0 0 18 18" stroke="#F1953E" fill="#F1953E" xmlns="http://www.w3.org/2000/svg"><path d="M8.55027 18L0 13.7288V4.21001L8.55027 0L17.1005 4.20764V13.7288L8.55027 18ZM1.5878 12.7476L8.55027 16.2233L15.5127 12.7452V5.19765L8.55027 1.77041L1.5878 5.19765V12.7476ZM9.34417 17.1124H7.7564V9.00913L0.443829 5.41679L1.14402 3.98776L9.34417 8.01995V17.1124ZM9.34417 17.1124H7.7564V8.01992L15.9565 3.9909L16.6567 5.41992L9.34417 9.00911V17.1124ZM8.55027 9.39575L0.443829 5.41679L1.14402 3.98776L8.55027 7.63017L15.9565 3.99175L16.6567 5.42074L8.55027 9.39575Z"></path></svg>
+                    <p class="point-title">{{block.settings.point1}}</p>
+                  </div>
+                  <div class="point-item">
+                    <svg class="containers-c"  width="15" height="18" viewBox="0 0 15 18" fill="#F1953E" xmlns="http://www.w3.org/2000/svg"><path d="M13.6935 3.39421L7.39099 0.242941C7.30351 0.199227 7.20706 0.176471 7.10927 0.176471C7.01147 0.176471 6.91502 0.199227 6.82754 0.242941L0.525001 3.39421C0.420232 3.44656 0.332124 3.52708 0.270561 3.62671C0.208998 3.72635 0.176416 3.84117 0.176471 3.95829V9.65579C0.177044 10.7224 0.434506 11.7732 0.927077 12.7193C1.41965 13.6654 2.13284 14.4789 3.00631 15.0911L6.74813 17.7098C6.85401 17.7838 6.98008 17.8235 7.10927 17.8235C7.23846 17.8235 7.36453 17.7838 7.4704 17.7098L11.2122 15.0911C12.0857 14.4789 12.7989 13.6654 13.2915 12.7193C13.784 11.7732 14.0415 10.7224 14.0421 9.65579V3.95829C14.0421 3.84117 14.0095 3.72635 13.948 3.62671C13.8864 3.52708 13.7983 3.44656 13.6935 3.39421ZM12.7816 9.65579C12.7811 10.5197 12.5725 11.3708 12.1735 12.1371C11.7745 12.9034 11.1968 13.5623 10.4893 14.0581L7.10927 16.4241L3.72921 14.0581C3.0217 13.5623 2.444 12.9034 2.04501 12.1371C1.64601 11.3708 1.43745 10.5197 1.43698 9.65579V4.34779L7.10927 1.51164L12.7816 4.34779V9.65579Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M0.176471 9.65579V3.95829C0.176416 3.84117 0.208998 3.72635 0.270561 3.62671C0.332124 3.52708 0.420232 3.44656 0.525001 3.39421L6.82754 0.242941C6.91502 0.199227 7.01147 0.176471 7.10927 0.176471C7.20706 0.176471 7.30351 0.199227 7.39099 0.242941L13.6935 3.39421C13.7983 3.44656 13.8864 3.52708 13.948 3.62671C14.0095 3.72635 14.0421 3.84117 14.0421 3.95829V9.65579C14.0415 10.7224 13.784 11.7732 13.2915 12.7193C12.7989 13.6654 12.0857 14.4789 11.2122 15.0911L7.4704 17.7098C7.36453 17.7838 7.23846 17.8235 7.10927 17.8235C6.98008 17.8235 6.85401 17.7838 6.74813 17.7098L3.00631 15.0911C2.13284 14.4789 1.41965 13.6654 0.927077 12.7193C0.434506 11.7732 0.177044 10.7224 0.176471 9.65579ZM14.2185 3.95837V9.65579C14.2179 10.7508 13.9536 11.8296 13.448 12.8008C12.9423 13.772 12.2102 14.6072 11.3135 15.2356L7.57159 17.8544C7.43606 17.9491 7.27463 18 7.10927 18C6.9439 18 6.78254 17.9492 6.64701 17.8544L2.90513 15.2357C2.00844 14.6072 1.27621 13.772 0.77055 12.8008C0.264892 11.8296 0.00058893 10.7509 5.35254e-08 9.65588V3.95837C5.35254e-08 3.95834 5.35254e-08 3.9584 5.35254e-08 3.95837C-5.45373e-05 3.80848 0.0416496 3.66146 0.120436 3.53395C0.199229 3.40643 0.311994 3.30338 0.446081 3.23637C0.446069 3.23638 0.446094 3.23637 0.446081 3.23637L6.74862 0.0851009C6.8606 0.0291477 6.98409 0 7.10927 0C7.23444 0 7.3579 0.0291288 7.46987 0.085082L13.7724 3.23635C13.7724 3.23635 13.7724 3.23636 13.7724 3.23635C13.9065 3.30337 14.0193 3.40643 14.0981 3.53395C14.1769 3.66146 14.2186 3.80848 14.2185 3.95837C14.2185 3.9584 14.2185 3.95834 14.2185 3.95837ZM12.017 12.0556C12.4029 11.3145 12.6046 10.4913 12.6051 9.65569V4.45685L7.10927 1.70894L1.61345 4.45685V9.65569C1.61391 10.4913 1.81562 11.3145 2.20153 12.0556C2.58744 12.7968 3.14618 13.4341 3.83049 13.9136L7.10927 16.2087L10.388 13.9136C11.0724 13.4341 11.6311 12.7968 12.017 12.0556ZM10.4893 14.0581C11.1968 13.5623 11.7745 12.9034 12.1735 12.1371C12.5725 11.3708 12.7811 10.5197 12.7816 9.65579V4.34779L7.10927 1.51164L1.43698 4.34779V9.65579C1.43745 10.5197 1.64601 11.3708 2.04501 12.1371C2.444 12.9034 3.0217 13.5623 3.72921 14.0581L7.10927 16.4241L10.4893 14.0581Z"></path></svg>
+                    <p class="point-title">{{block.settings.point2}}</p>
+                  </div>
+                  <div class="point-item">
+                    <svg class="containers-c"  width="15" height="18" viewBox="0 0 15 18" fill="#F1953E" xmlns="http://www.w3.org/2000/svg"><path d="M13.6935 3.39421L7.39099 0.242941C7.30351 0.199227 7.20706 0.176471 7.10927 0.176471C7.01147 0.176471 6.91502 0.199227 6.82754 0.242941L0.525001 3.39421C0.420232 3.44656 0.332124 3.52708 0.270561 3.62671C0.208998 3.72635 0.176416 3.84117 0.176471 3.95829V9.65579C0.177044 10.7224 0.434506 11.7732 0.927077 12.7193C1.41965 13.6654 2.13284 14.4789 3.00631 15.0911L6.74813 17.7098C6.85401 17.7838 6.98008 17.8235 7.10927 17.8235C7.23846 17.8235 7.36453 17.7838 7.4704 17.7098L11.2122 15.0911C12.0857 14.4789 12.7989 13.6654 13.2915 12.7193C13.784 11.7732 14.0415 10.7224 14.0421 9.65579V3.95829C14.0421 3.84117 14.0095 3.72635 13.948 3.62671C13.8864 3.52708 13.7983 3.44656 13.6935 3.39421ZM12.7816 9.65579C12.7811 10.5197 12.5725 11.3708 12.1735 12.1371C11.7745 12.9034 11.1968 13.5623 10.4893 14.0581L7.10927 16.4241L3.72921 14.0581C3.0217 13.5623 2.444 12.9034 2.04501 12.1371C1.64601 11.3708 1.43745 10.5197 1.43698 9.65579V4.34779L7.10927 1.51164L12.7816 4.34779V9.65579Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M0.176471 9.65579V3.95829C0.176416 3.84117 0.208998 3.72635 0.270561 3.62671C0.332124 3.52708 0.420232 3.44656 0.525001 3.39421L6.82754 0.242941C6.91502 0.199227 7.01147 0.176471 7.10927 0.176471C7.20706 0.176471 7.30351 0.199227 7.39099 0.242941L13.6935 3.39421C13.7983 3.44656 13.8864 3.52708 13.948 3.62671C14.0095 3.72635 14.0421 3.84117 14.0421 3.95829V9.65579C14.0415 10.7224 13.784 11.7732 13.2915 12.7193C12.7989 13.6654 12.0857 14.4789 11.2122 15.0911L7.4704 17.7098C7.36453 17.7838 7.23846 17.8235 7.10927 17.8235C6.98008 17.8235 6.85401 17.7838 6.74813 17.7098L3.00631 15.0911C2.13284 14.4789 1.41965 13.6654 0.927077 12.7193C0.434506 11.7732 0.177044 10.7224 0.176471 9.65579ZM14.2185 3.95837V9.65579C14.2179 10.7508 13.9536 11.8296 13.448 12.8008C12.9423 13.772 12.2102 14.6072 11.3135 15.2356L7.57159 17.8544C7.43606 17.9491 7.27463 18 7.10927 18C6.9439 18 6.78254 17.9492 6.64701 17.8544L2.90513 15.2357C2.00844 14.6072 1.27621 13.772 0.77055 12.8008C0.264892 11.8296 0.00058893 10.7509 5.35254e-08 9.65588V3.95837C5.35254e-08 3.95834 5.35254e-08 3.9584 5.35254e-08 3.95837C-5.45373e-05 3.80848 0.0416496 3.66146 0.120436 3.53395C0.199229 3.40643 0.311994 3.30338 0.446081 3.23637C0.446069 3.23638 0.446094 3.23637 0.446081 3.23637L6.74862 0.0851009C6.8606 0.0291477 6.98409 0 7.10927 0C7.23444 0 7.3579 0.0291288 7.46987 0.085082L13.7724 3.23635C13.7724 3.23635 13.7724 3.23636 13.7724 3.23635C13.9065 3.30337 14.0193 3.40643 14.0981 3.53395C14.1769 3.66146 14.2186 3.80848 14.2185 3.95837C14.2185 3.9584 14.2185 3.95834 14.2185 3.95837ZM12.017 12.0556C12.4029 11.3145 12.6046 10.4913 12.6051 9.65569V4.45685L7.10927 1.70894L1.61345 4.45685V9.65569C1.61391 10.4913 1.81562 11.3145 2.20153 12.0556C2.58744 12.7968 3.14618 13.4341 3.83049 13.9136L7.10927 16.2087L10.388 13.9136C11.0724 13.4341 11.6311 12.7968 12.017 12.0556ZM10.4893 14.0581C11.1968 13.5623 11.7745 12.9034 12.1735 12.1371C12.5725 11.3708 12.7811 10.5197 12.7816 9.65579V4.34779L7.10927 1.51164L1.43698 4.34779V9.65579C1.43745 10.5197 1.64601 11.3708 2.04501 12.1371C2.444 12.9034 3.0217 13.5623 3.72921 14.0581L7.10927 16.4241L10.4893 14.0581Z"></path></svg>
+                    <p class="point-title">{{block.settings.point3}}</p>
+                  </div>
+                </div> 
+                <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/payment.jpg?v=1721983833" alt="" class="b-img">
+                <div class="btn-wrap">
+                  {% if product.available %}
+                    {% comment %} <div class="buy-btn" data-id="{{product.variants[0].id}}">Buy Now</div> {% endcomment %}
+                    {%- assign product_form_id = 'product-quick-view-form-' | append: product.id -%}
+                    {%- form 'product', product, id: product_form_id, class: 'form productView-action', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                      <div class="productView-group">
+                        <div class="productView-groupTop">
+                          <div class="productView-action">
+                            <input
+                              type="hidden"
+                              name="id"
+                              value="{{ product.variants[0].id }}">
+                            <div class="product-form__buttons">
+                              <button
+                                type="submit"
+                                name="add"
+                                data-btn-addToCart
+                                class="add-cart button buy-btn"
+                                id="product-quick-shop-add-to-cart">
+                                ADD TO CART
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    {%- endform -%}
+                  {% else %}
+                    <div class="buy-out">sold out</div>
+                  {% endif %} 
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  $(function() {
+    function fadeInListen () { 
+      var fadeIn = $('#container-{{section.id}}').find('.fadein');
+      fadeIn.each(function () {
+        let element = this;
+        let {
+          scrub,
+          reverse,
+          duration,
+          actions,
+          fn
+        } = $(this).data()
+
+        gsap.set(element, { 
+          opacity: 0,
+          y: 20
+        });
+        let toggleActions = "play none none none";
+        let start = $(this).data('start') || 70; 
+        duration ? '' : duration = 0.8
+        let tl = gsap.to(element, {
+          opacity: 1,
+          y: 0,
+          duration
+        });
+        if (reverse) {
+          toggleActions = "play none none reverse"
+        }
+
+        ScrollTrigger.create({
+          animation: tl,
+          trigger: element,
+          toggleActions,
+          start: `top ${start}%`, // 调整触发点，视情况而定
+          onEnter: function () {
+
+          },
+          once: true // 只触发一次
+        });
+      });
+    }
+    fadeInListen();
+  })
+</script>
+
+{% schema %}
+  {
+    "name": "creality promotion 1",
+    "max_blocks": 3,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "标题"
+      },
+      {
+        "type": "text", 
+        "id": "subtitle",
+        "label": "副标题"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "背景颜色",
+        "default": "#FBF8F2"
+      }, 
+      {
+        "type": "range",
+        "id": "pc_top",
+        "label": {
+          "en-US": "PC top spacing",
+          "zh-CN": "PC上边距"
+        },
+        "default": 30,
+        "unit":"px",
+        "step": 1,
+        "max": 100,
+        "min": 0
+      },
+      {
+        "type": "range",
+        "id": "pc_bottom",
+        "label": {
+          "en-US": "PC bottom spacing",
+          "zh-CN": "PC端下边距"
+        },
+        "default": 30,
+        "unit":"px",
+        "step": 1,
+        "max": 100,
+        "min": 0
+      },
+      {
+        "type": "range",
+        "id": "md_top",
+        "label": {
+          "en-US": "Mobile top spacing",
+          "zh-CN": "移动端上边距"
+        },
+        "default": 30,
+        "unit":"%",
+        "step": 1,
+        "max": 100,
+        "min": 0
+      },
+      {
+        "type": "range",
+        "id": "md_bottom",
+        "label": {
+          "en-US": "Mobile bottom spacing",
+          "zh-CN": "移动端下边距"
+        },
+        "default": 30,
+        "unit":"px",
+        "step": 1,
+        "max": 100,
+        "min": 0
+      }
+    ],
+    "blocks": [
+      {
+        "type":"product1",
+        "name": "产品",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "产品"
+          },
+          {
+            "type": "range",
+            "id": "star",
+            "label": "推荐星级",
+            "default": 5,
+            "step": 1,
+            "min": 1,
+            "max": 5
+          },
+          {
+            "type": "text",
+            "id": "comment",
+            "label": "评论数",
+            "default": "300"
+          },
+          {
+            "type": "number",
+            "id": "products_quantity_base",
+            "label": "产品总库存",
+            "default": 30
+          },
+          {
+            "type": "text",
+            "id": "point1",
+            "label": "买点文案1"
+          },
+          {
+            "type": "text",
+            "id": "point2",
+            "label": "买点文案2"
+          },
+          {
+            "type": "text",
+            "id": "point3",
+            "label": "买点文案3"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "creality promotion 1"
+      }
+    ]
+  }
+{% endschema %}

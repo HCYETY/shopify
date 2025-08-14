@@ -1,0 +1,937 @@
+<style>
+  a {
+    text-decoration: none;
+  }
+
+  .common-title {
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.667vw;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 0.833vw;
+  }
+
+  .common-subtitle {
+    font-size: 1.25vw;
+    color: #666666;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .make-container {
+    background-color: #DCFAFB;
+  }
+
+  .content {
+    width: 62.5vw;
+    margin: 0 auto;
+  }
+
+  .section1 {
+    background-color: #D3F2F3;
+    padding-bottom: 2.083vw;
+  }
+  .section1 .banner-img {
+    width: 100%;
+    vertical-align: middle;
+  }
+
+  .seciont2 {
+    background-color: #ffffff;
+    display: flex;
+  }
+  .seciont2 .left-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 1.563vw 0;
+    width: 45%;
+    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+    background-color: #F7F0ED;
+  }
+  .seciont2 .left-content .common-title {
+    width: 100%;
+  }
+  .seciont2 .left-content .description {
+    text-align: center;
+    font-size: 1.146vw;
+    padding: 0 5.208vw;
+    color: #949494;
+  }
+  .seciont2 .right-content {
+    flex: 1 1 auto;
+    padding: 1.563vw 0;
+    width: 55%;
+    background-color: #ffffff;
+  }
+  .seciont2 .right-content .title-img {
+    width: 8.333vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0.833vw;
+  }
+  .seciont2 .right-content .img-box {
+    display: flex;
+    justify-content: center;
+  }
+  .seciont2 .right-content .img-box .img-box-item {
+    position: relative;
+  }
+  .seciont2 .right-content .img-box .img-box-item .discount {
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 1.042vw;
+  }
+  .seciont2 .right-content .img-box .img-box-item .discount .text-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+  }
+  .seciont2 .right-content .img-box .img-box-item .discount .text-wrap .discount-text {
+    font-size: 0.729vw;
+    margin-bottom: 0.26vw;
+  }
+  .seciont2 .right-content .img-box .img-box-item .discount .text-wrap .discount-save {
+    font-size: 1.042vw;
+    font-weight: 600;
+    transform: skewY(-10deg);
+    -webkit-transform: skewY(-10deg);
+    -moz-transform: skewY(-10deg);
+    -ms-transform: skewY(-10deg);
+    -o-transform: skewY(-10deg);
+  }
+  .seciont2 .right-content .img-box .img-box-item .discount .discount-img {
+    width: 3.021vw;
+  }
+  .seciont2 .right-content .img-box .img-box-item .img1, .seciont2 .right-content .img-box .img-box-item .img2 {
+    width: 19.792vw;
+    margin-right: 1.042vw;
+  }
+  .seciont2 .right-content .b-title {
+    text-align: center;
+    margin: 0.625vw 0;
+    font-size: 0.729vw;
+    color: #949494;
+  }
+
+  .section3 {
+    background-color: #EBF5F4;
+    padding: 3.125vw 0;
+  }
+  .section3 .imgs {
+    margin-top: 1.042vw;
+    width: 100%;
+  }
+
+  .section4 {
+    background-color: #EBF5F4;
+    padding: 0 0 3.125vw 0;
+  }
+  .section4 .product-tow {
+    width: 62.5vw;
+    margin: 0 auto;
+    margin-top: 1.042vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  .section4 .product-tow .product-item:first-child {
+    margin-right: 1.042vw;
+  }
+  .section4 .product-tow .product-item {
+    display: flex;
+    flex: 1;
+    border-radius: 0.521vw;
+    background-color: #ffffff;
+    padding: 1.042vw;
+    -webkit-border-radius: 0.521vw;
+    -moz-border-radius: 0.521vw;
+    -ms-border-radius: 0.521vw;
+    -o-border-radius: 0.521vw;
+  }
+  .section4 .product-tow .product-item .left-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .section4 .product-tow .product-item .left-box .product-title {
+    font-size: 0.938vw;
+  }
+  .section4 .product-tow .product-item .left-box .save {
+    font-size: 1.354vw;
+    color: #00B3E6;
+    font-weight: 600;
+  }
+  .section4 .product-tow .product-item .left-box .shop-now {
+    width: 100%;
+    margin-top: 1.042vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.25vw;
+    height: 1.979vw;
+    font-size: 0.938vw;
+    color: #ffffff;
+    background-color: #00B3E6;
+    border-radius: 2.604vw;
+    -webkit-border-radius: 2.604vw;
+    -moz-border-radius: 2.604vw;
+    -ms-border-radius: 2.604vw;
+    -o-border-radius: 2.604vw;
+  }
+  .section4 .product-tow .product-item .right-box .product-img {
+    width: 20.417vw;
+  }
+
+  .section5 {
+    padding: 3.125vw 0;
+    background-color: #EBF5F4;
+  }
+  .section5 .video-wrap {
+    display: flex;
+    width: 72.917vw;
+    margin: 0 auto;
+    margin-top: 2.083vw;
+    display: flex;
+  }
+  .section5 .video-wrap .video-item:first-child {
+    margin-right: 1.042vw;
+  }
+  .section5 .video-wrap .video-item {
+    border-radius: 0.417vw;
+    flex: 1;
+    width: 35.938vw;
+    height: 20.833vw;
+    -webkit-border-radius: 0.417vw;
+    -moz-border-radius: 0.417vw;
+    -ms-border-radius: 0.417vw;
+    -o-border-radius: 0.417vw;
+  }
+
+  .section6 {
+    padding: 0 0 3.125vw 0;
+    background-color: #EBF5F4;
+  }
+  .section6 .product-list {
+    position: relative;
+    padding: 2.083vw 0;
+    background-color: #F7F0ED;
+  }
+  .section6 .product-list .swiper-container {
+    margin: 0 auto;
+    width: 52.083vw;
+    position: relative;
+  }
+  .section6 .product-list .swiper-container .prev-btn, .section6 .product-list .swiper-container .next-btn {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.344vw;
+    height: 2.344vw;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    cursor: pointer;
+  }
+  .section6 .product-list .swiper-container .next-btn {
+    right: -2.604vw;
+    background-image: url("https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/12_c59ebf27-3a7b-40f5-bb1e-2f3a8a859bfc.png?v=1718779891");
+  }
+  .section6 .product-list .swiper-container .prev-btn {
+    left: -2.604vw;
+    background-image: url("https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/40_5ce13c42-174f-424e-afc4-47c36b6be1ca.png?v=1718779891");
+  }
+  .section6 .product-list .swiper-container .swiper-sale {
+    width: 52.083vw;
+    margin: 0 auto;
+  }
+  .section6 .product-list .swiper-container .swiper-sale .shop-item {
+    background-color: #ffffff;
+    border-radius: 0.417vw;
+    -webkit-border-radius: 0.417vw;
+    -moz-border-radius: 0.417vw;
+    -ms-border-radius: 0.417vw;
+    -o-border-radius: 0.417vw;
+  }
+  .section6 .product-list .swiper-container .swiper-sale .shop-item .shop-img {
+    width: 100%;
+  }
+  .section6 .product-list .swiper-container .swiper-sale .shop-item .b-box {
+    padding: 0.521vw 0.833vw;
+  }
+  .section6 .product-list .swiper-container .swiper-sale .shop-item .b-box .shop-title {
+    font-size: 0.900vw;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    height: 2.708vw;
+  }
+  .section6 .product-list .swiper-container .swiper-sale .shop-item .b-box .price-box {
+    margin: 0.625vw 0;
+    display: flex;
+    align-items: flex-end;
+  }
+  .section6 .product-list .swiper-container .swiper-sale .shop-item .b-box .price-box .now-price {
+    font-size: 1.458vw;
+    font-weight: 600;
+    color: #00B3E6;
+    margin-right: 1.042vw;
+  }
+  .section6 .product-list .swiper-container .swiper-sale .shop-item .b-box .price-box .old-price {
+    font-size: 1.042vw;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #949494;
+  }
+  .section6 .product-list .swiper-container .swiper-sale .shop-item .b-box .add-cart {
+    width: 100%;
+    margin-top: 1.042vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.188vw;
+    font-size: 1.042vw;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #00B3E6;
+    border-radius: 2.604vw;
+    -webkit-border-radius: 2.604vw;
+    -moz-border-radius: 2.604vw;
+    -ms-border-radius: 2.604vw;
+  }
+
+  @media (min-width: 768px) {
+    .container-{{section.id}} .pc {
+      display: block;
+    }
+    .container-{{section.id}} .mb {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .container-{{section.id}} .pc {
+      display: none;
+    }
+    .container-{{section.id}} .mb {
+      display: block;
+    }
+    .common-title {
+      padding: 0 4.267vw;
+      text-align: center;
+      font-size: 5.467vw;
+      color: #000000;
+      font-weight: 600;
+      margin-bottom: 4.267vw;
+    }
+    .common-subtitle {
+      padding: 0 4.267vw;
+      font-size: 3.733vw;
+      color: #666666;
+      font-weight: 400;
+      text-align: center;
+    }
+    .content {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 4.267vw;
+      box-sizing: border-box;
+    }
+    .section1 {
+      background-color: #DCFAFB;
+      padding-bottom: 4.083vw;
+    }
+    .section1 .banner-img {
+      width: 100%;
+      vertical-align: middle;
+    }
+    .seciont2 {
+      width: 91.467vw;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .seciont2 .left-content {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 1 auto;
+      align-items: center;
+      justify-content: center;
+      padding: 8vw 0;
+      width: 100%;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      background-color: #F7F0ED;
+    }
+    .seciont2 .left-content .common-title {
+      width: 100%;
+    }
+    .seciont2 .left-content .description {
+      text-align: center;
+      font-size: 3.867vw;
+      padding: 0 5.333vw;
+      color: #949494;
+    }
+    .seciont2 .right-content {
+      flex: 1 1 auto;
+      padding: 8vw 0;
+      width: 100%;
+      background-color: #ffffff;
+    }
+    .seciont2 .right-content .title-img {
+      width: 53.333vw;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 4.267vw;
+    }
+    .seciont2 .right-content .img-box {
+      display: flex;
+      justify-content: space-around;
+    }
+    .seciont2 .right-content .img-box .img-box-item {
+      position: relative;
+    }
+    .seciont2 .right-content .img-box .img-box-item .discount {
+      text-align: center;
+      color: #ffffff;
+      position: absolute;
+      top: 0;
+      left: 5.333vw;
+    }
+    .seciont2 .right-content .img-box .img-box-item .discount .text-wrap {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -60%);
+      -webkit-transform: translate(-50%, -60%);
+      -moz-transform: translate(-50%, -60%);
+      -ms-transform: translate(-50%, -60%);
+      -o-transform: translate(-50%, -60%);
+    }
+    .seciont2 .right-content .img-box .img-box-item .discount .text-wrap .discount-text {
+      font-size: 3.733vw;
+      margin-bottom: 1.333vw;
+    }
+    .seciont2 .right-content .img-box .img-box-item .discount .text-wrap .discount-save {
+      font-size: 5.333vw;
+      font-weight: 600;
+      transform: skewY(-10deg);
+      -webkit-transform: skewY(-10deg);
+      -moz-transform: skewY(-10deg);
+      -ms-transform: skewY(-10deg);
+      -o-transform: skewY(-10deg);
+    }
+    .seciont2 .right-content .img-box .img-box-item .discount .discount-img {
+      width: 15.467vw;
+    }
+    .seciont2 .right-content .img-box .img-box-item .img1, .seciont2 .right-content .img-box .img-box-item .img2 {
+      width: 37.333vw;
+      margin-right: 0vw;
+    }
+    .seciont2 .right-content .b-title {
+      padding: 0 4.267vw;
+      text-align: center;
+      margin: 3.2vw 0;
+      font-size: 3.733vw;
+      color: #949494;
+    }
+    .section3 {
+      background-color: #EBF5F4;
+      padding: 8vw 0;
+    }
+    .section3 .imgs {
+      margin-top: 5.333vw;
+      width: 100%;
+    }
+    .section4 {
+      background-color: #EBF5F4;
+      padding: 0 0 8vw 0;
+    }
+    .section4 .product-tow {
+      box-sizing: border-box;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 5.333vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 4.267vw;
+    }
+    .section4 .product-tow .product-item:first-child {
+      margin-right: 0vw;
+      margin-bottom: 5.333vw;
+    }
+    .section4 .product-tow .product-item {
+      display: flex;
+      flex: auto;
+      width: 100%;
+      border-radius: 2.667vw;
+      background-color: #ffffff;
+      padding: 5.333vw;
+      -webkit-border-radius: 2.667vw;
+      -moz-border-radius: 2.667vw;
+      -ms-border-radius: 2.667vw;
+      -o-border-radius: 2.667vw;
+    }
+    .section4 .product-tow .product-item .left-box {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .section4 .product-tow .product-item .left-box .product-title {
+      font-size: 4.8vw;
+    }
+    .section4 .product-tow .product-item .left-box .save {
+      font-size: 6.933vw;
+      color: #00B3E6;
+      font-weight: 600;
+    }
+    .section4 .product-tow .product-item .left-box .shop-now {
+      width: 100%;
+      margin-top: 5.333vw;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32vw;
+      height: 10.133vw;
+      font-size: 4.8vw;
+      color: #ffffff;
+      background-color: #00B3E6;
+      border-radius: 13.333vw;
+      -webkit-border-radius: 13.333vw;
+      -moz-border-radius: 13.333vw;
+      -ms-border-radius: 13.333vw;
+      -o-border-radius: 13.333vw;
+    }
+    .section4 .product-tow .product-item .right-box {
+      flex-shrink: 0;
+    }
+    .section4 .product-tow .product-item .right-box .product-img {
+      width: 38vw;
+    }
+    .section5 {
+      padding: 8vw 0;
+      background-color: #EBF5F4;
+    }
+    .section5 .video-wrap {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 4.267vw;
+      margin: 0 auto;
+      margin-top: 10.667vw;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .section5 .video-wrap .video-item:first-child {
+      margin-right: 0vw;
+      margin-bottom: 5.333vw;
+    }
+    .section5 .video-wrap .video-item {
+      border-radius: 2.133vw;
+      flex: 1;
+      width: 100%;
+      height: 51.2vw;
+      -webkit-border-radius: 2.133vw;
+      -moz-border-radius: 2.133vw;
+      -ms-border-radius: 2.133vw;
+      -o-border-radius: 2.133vw;
+    }
+    .section6 {
+      padding: 0 0 8vw 0;
+      background-color: #EBF5F4;
+    }
+    .section6 .product-list {
+      position: relative;
+      padding: 10.667vw 0;
+      background-color: #F7F0ED;
+    }
+    .section6 .product-list .swiper-container {
+      box-sizing: border-box;
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 4.267vw;
+      position: relative;
+    }
+    .section6 .product-list .swiper-container .prev-btn, .section6 .product-list .swiper-container .next-btn {
+      z-index: 3;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 9.6vw;
+      height: 9.6vw;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      cursor: pointer;
+    }
+    .section6 .product-list .swiper-container .next-btn {
+      right: 1.333vw;
+    }
+    .section6 .product-list .swiper-container .prev-btn {
+      left: 1.333vw;
+    }
+    .section6 .product-list .swiper-container .swiper-sale {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .section6 .product-list .swiper-container .swiper-sale .shop-item {
+      background-color: #ffffff;
+      border-radius: 2.133vw;
+      -webkit-border-radius: 2.133vw;
+      -moz-border-radius: 2.133vw;
+      -ms-border-radius: 2.133vw;
+      -o-border-radius: 2.133vw;
+    }
+    .section6 .product-list .swiper-container .swiper-sale .shop-item .shop-img {
+      width: 100%;
+    }
+    .section6 .product-list .swiper-container .swiper-sale .shop-item .b-box {
+      padding: 2.667vw 4.267vw;
+    }
+    .section6 .product-list .swiper-container .swiper-sale .shop-item .b-box .shop-title {
+      font-size: 3.8vw;
+      height: 11.733vw;
+    }
+    .section6 .product-list .swiper-container .swiper-sale .shop-item .b-box .price-box {
+      margin: 3.2vw 0;
+      display: flex;
+      align-items: flex-end;
+    }
+    .section6 .product-list .swiper-container .swiper-sale .shop-item .b-box .price-box .now-price {
+      font-size: 4.533vw;
+      font-weight: 600;
+      color: #00B3E6;
+      margin-right: 5.333vw;
+    }
+    .section6 .product-list .swiper-container .swiper-sale .shop-item .b-box .price-box .old-price {
+      font-size: 4vw;
+      font-weight: 400;
+      text-decoration: line-through;
+      color: #949494;
+    }
+    .section6 .product-list .swiper-container .swiper-sale .shop-item .b-box .add-cart {
+      width: 100%;
+      margin-top: 5.333vw;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 9.6vw;
+      font-size: 4.8vw;
+      font-weight: 600;
+      color: #ffffff;
+      background-color: #00B3E6;
+      border-radius: 13.333vw;
+      -webkit-border-radius: 13.333vw;
+      -moz-border-radius: 13.333vw;
+      -ms-border-radius: 13.333vw;
+    }
+  }
+</style>
+
+<div class="make-container container-{{section.id}}">
+  <div class="section1">
+    <img class="banner-img pc" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/834.png?v=1718692150" alt="Banner">
+    <img class="banner-img mb" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/17_b3c7eb8d-a356-4020-b323-ac88ca7bd12e.png?v=1718783344" alt="Banner">
+  </div>
+  <div class="seciont2">
+    <div class="left-content">
+      <div class="fadein">
+        <div class="common-title">Skip the store-bought & save.</div>
+        <div class="description">Why buy it when you can make it? From truly custom decor to one-of-a-kind gifts, you can make it all — and save — with Falcon Laser.</div>
+      </div>
+    </div>
+    <div class="right-content">
+      <img class="title-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/20_e535ced5-2042-4856-8816-cf35a5390a11.png?v=1718760026" alt="make vs buy">
+      <div class="img-box">
+        <div class="img-box-item">
+          <div class="discount">
+            <img class="discount-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/793df0e10cab411ea4d870a42b0b0929.png?v=1718763506" alt="">
+            <div class="text-wrap">
+              <div class="discount-text">Make</div>
+              <em class="discount-save">$10</em>
+            </div>
+          </div>
+          <img class="img1" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/721.png?v=1718760108" alt="make vs buy">
+        </div>
+        <div  class="img-box-item">
+          <div class="discount">
+            <img class="discount-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/41c6554a3dc693cab25ac62c2b4f1086.png?v=1718763506" alt="">
+            <div class="text-wrap">
+              <div class="discount-text">BUY</div>
+              <em class="discount-save">$80</em>
+            </div>
+          </div>
+          <img class="img2" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/722.png?v=1718760108" alt="make vs buy">
+        </div>
+      </div>
+      <div class="b-title">Make Price does not include the machine investing cost</div>
+    </div>
+  </div>
+  <div class="section3">
+    <div class="common-title fadein">Make & save throughout the year.</div>
+    <div class="common-subtitle fadein">Year-round, there are countless laser projects you can tackle that spark creativity and save money</div>
+    <div class="content">
+      <img class="imgs" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/21_eb95d5d0-bba2-4032-a437-ce020e40beff.png?v=1718766573" alt="imgs">
+    </div>
+  </div>
+  <div class="section4">
+    <div class="common-title">Get started for less</div>
+    <div class="product-tow fadein">
+      <div class="product-item">
+        <div class="left-box">
+          <div class="product-title">
+            Get a Falcon Laser machine for as low as <span class="save">$189.00</span>.
+          </div>
+          <a href="https://www.crealityfalcon.com/products/cr-laser-falcon-5w-laser-engraver" target="_blank" rel="noopener noreferrer">
+            <div class="shop-now">Shop Now</div>
+          </a>
+        </div>
+        <div class="right-box">
+          <img class="product-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1crealityfalcon10w.jpg?v=1714295966" alt="">
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="left-box">
+          <div class="product-title">
+            <!-- Sign up for our email list & get <span class="save">15% off</span> your first purchase. -->
+            Most laser beginners start their laser journey with Falcon 10W.
+          </div>
+          <a href="https://www.crealityfalcon.com/products/cr-laser-falcon-10w-laser-engraver" target="_blank" rel="noopener noreferrer">
+            <div class="shop-now">Shop Now</div>
+          </a>
+        </div>
+        <div class="right-box">
+          <img class="product-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/5crealityfalcon7.5w.jpg?v=1714295699" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section5"> 
+    <div class="common-title fadein">Tutorials make your journey esay</div>
+    <div class="video-wrap">
+      111
+      <iframe class="video-item" src="https://www.youtube.com/embed/OuEIJ9yF67k?si=RE6QXe1Nh9i8nnfq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe class="video-item" src="https://www.youtube.com/embed/AfdlU2La7bc?si=VZJz9TnUop5-7Mwz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="section6">
+    <div class="common-title fadein">DIY laser materials sets that match your need</div>
+    <div class="product-list">
+      <div class="swiper-container">
+        <div class="prev-btn"></div>
+        <div class="next-btn"></div>
+        <div class="swiper swiper-sale">
+          <div class="swiper-wrapper">
+            {% for product in section.settings.collection.products %} 
+              <div class="swiper-slide">
+                <div class="shop-item">
+                  <a class="product-hover-img"  href="{{product.url }}">
+                    <img class="hop-img" srcset="
+                      {%- if product.featured_media.width >= 533 -%}
+                          {{ product.featured_media | img_url: '533x' }} 533w,
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 534 -%}
+                          {{ product.featured_media | img_url: '534x' }} 534w,
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 720 -%}
+                          {{ product.featured_media | img_url: '720x' }} 720w,
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 940 -%}
+                          {{ product.featured_media | img_url: '940x' }} 940w,
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 1066 -%}
+                          {{ product.featured_media | img_url: '1066x' }} 1066w
+                      {%- endif -%}"
+                      src="{{ product.images[2] | img_url: '533x' }}"
+                      sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                      alt="{{ product.featured_media.alt | escape }} {{product.featured_media.width}}"
+                      loading="lazy"
+                      class="motion-reduce"
+                    >
+                  </a>
+                  <div class="b-box">
+                    <div class="shop-title">
+                      {{product.title}}
+                    </div>
+                    <div class="price-box">
+                      <span class="now-price">{{product.price | money}}</span>
+                      <span class="old-price">{{product.compare_at_price | money}}</span>
+                    </div> 
+                      {%- assign product_form_id = 'product-quick-view-form-' | append: product.id -%}
+                      {%- form 'product', product, id: product_form_id, class: 'form productView-action', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                        <div class="productView-group">
+                          <div class="productView-groupTop">
+                            <div class="productView-action">
+                              <input
+                                type="hidden"
+                                name="id"
+                                value="{{ product.variants[0].id }}">
+                              <div class="product-form__buttons">
+                                <button
+                                  type="submit"
+                                  name="add"
+                                  data-btn-addToCart
+                                  class="add-cart product-form__submit button"
+                                  id="product-quick-shop-add-to-cart">
+                                  Add to Cart
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      {%- endform -%}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+            {% comment %} <div class="swiper-slide">
+              <div class="shop-item">
+                <img class="shop-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/31.png?v=1714982850" alt="shop-img">
+                <div class="b-box">
+                  <div class="shop-title">
+                    DIY Laser Materials Set
+                  </div>
+                  <div class="price-box">
+                    <span class="now-price">$199.00</span>
+                    <span class="old-price">$249.00</span>
+                  </div>
+                  <a href="https://www.crealityfalcon.com/products/cr-laser-falcon-10w-laser-engraver" target="_blank" rel="noopener noreferrer">
+                    <div class="add-cart">Add to Cart</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="shop-item">
+                <img class="shop-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/31.png?v=1714982850" alt="shop-img">
+                <div class="b-box">
+                  <div class="shop-title">
+                    DIY Laser Materials Set
+                  </div>
+                  <div class="price-box">
+                    <span class="now-price">$199.00</span>
+                    <span class="old-price">$249.00</span>
+                  </div>
+                  <a href="https://www.crealityfalcon.com/products/cr-laser-falcon-10w-laser-engraver" target="_blank" rel="noopener noreferrer">
+                    <div class="add-cart">Add to Cart</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="shop-item">
+                <img class="shop-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/31.png?v=1714982850" alt="shop-img">
+                <div class="b-box">
+                  <div class="shop-title">
+                    DIY Laser Materials Set
+                  </div>
+                  <div class="price-box">
+                    <span class="now-price">$199.00</span>
+                    <span class="old-price">$249.00</span>
+                  </div>
+                  <a href="https://www.crealityfalcon.com/products/cr-laser-falcon-10w-laser-engraver" target="_blank" rel="noopener noreferrer">
+                    <div class="add-cart">Add to Cart</div>
+                  </a>
+                </div>
+              </div>
+            </div> {% endcomment %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  $(function () {
+    const isMobile = window.innerWidth < 768;
+    const swiperSale = new Swiper('.swiper-sale', {
+      slidesPerView: isMobile ? 2 : 3,
+      spaceBetween: 10,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      }
+    });
+
+    $(".prev-btn").click(function () {
+      swiperSale.slidePrev();
+    });
+
+    $(".next-btn").click(function () {
+      swiperSale.slideNext();
+    });
+
+    // 监听滚动
+    function fadeInListen() {
+      var fadeIn = $('.make-container').find('.fadein');
+      fadeIn.each(function () {
+        let element = this;
+        let {
+          scrub,
+          reverse,
+          duration,
+          actions,
+          fn
+        } = $(this).data()
+
+        gsap.set(element, {
+          opacity: 0,
+          y: 20
+        });
+        let toggleActions = "play none none none";
+        let start = $(this).data('start') || 70;
+        duration ? '' : duration = 0.8
+        let tl = gsap.to(element, {
+          opacity: 1,
+          y: 0,
+          duration
+        });
+        if (reverse) {
+          toggleActions = "play none none reverse"
+        }
+
+        ScrollTrigger.create({
+          animation: tl,
+          trigger: element,
+          toggleActions,
+          start: `top ${start}%`, // 调整触发点，视情况而定
+          onEnter: function () {
+
+          },
+          once: true // 只触发一次
+        });
+      });
+    }
+    fadeInListen();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Make vs Buy",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "轮播专辑"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Make vs Buy"
+    }
+  ]
+}
+{% endschema %}

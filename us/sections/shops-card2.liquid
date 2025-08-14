@@ -1,0 +1,1198 @@
+<style>
+  #container-{{section.id}} * {
+      box-sizing: border-box;
+      line-height: 1;
+  }
+
+  #container-{{section.id}} img {
+      width: 100%;
+      height: auto;
+  }
+
+  .swiper-container {
+    overflow: hidden;
+  }
+  #container-{{section.id}} .title {
+      font-family: HarmonyOS_Sans_SC_Bold;
+      font-weight: 900;
+      font-size: 2.13vw;
+      /* 可修改 */
+      color: #fff;
+      text-align: center;
+      line-height: 1.2;
+  }
+
+  #container-{{section.id}} .desc {
+      text-align: center;
+      font-family: HarmonyOS_Sans_SC_Regular;
+      font-weight: 400;
+      font-size: 1.06vw;
+      /* 可修改 */
+      color: #fff;
+      line-height: 1.2;
+      margin-top: 1.2vw;
+  }
+
+  #container-{{section.id}} .package-item {
+      display: flex;
+      gap: 0.32vw;
+      margin-bottom: 0.2vw;
+  }
+
+  #container-{{section.id}} .package-item .star-img {
+      width: 1.06vw;
+      padding-top: 0.1vw;
+      height: auto;
+      flex-shrink: 0;
+  }
+
+  #container-{{section.id}} .package-item .star-img svg {
+      width: 1.06vw;
+      height: 1.06vw;
+  }
+
+  #container-{{section.id}} .package-item span {
+      display: block;
+      font-size: 1.06vw;
+      color: #000000;
+      line-height: 1.2;
+      opacity: 0.7;
+      flex: 1;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+  }
+
+  #container-{{section.id}} .product-item .pic {
+      width: 13.3vw;
+      position: relative;
+      background-color: #fff;
+  }
+
+  #container-{{section.id}} .product-item .pic .discount {
+      line-height: 1;
+      position: absolute;
+      left: -1vw;
+      top: -2.15vw;
+      width: 3.6vw;
+  }
+
+  #container-{{section.id}} .product-item .pic .discount img {
+      width: 100%;
+      height: auto;
+  }
+
+  #container-{{section.id}} .product-item .pic .discount .discount_text {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      padding-top: 0.5vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  #container-{{section.id}} .product-item .pic .discount .discount_text .t1 {
+      font-weight: 900;
+      font-size: 1.2vw;
+      color: #ffffff;
+  }
+
+  #container-{{section.id}} .product-item .pic .discount .discount_text .t2 {
+      font-size: 1.06vw;
+      color: #ffffff;
+      margin-top: 0.5vw;
+  }
+
+  #container-{{section.id}} .product-item .pic .product-img {
+      width: 100%;
+      height: 100%;
+  }
+
+  #container-{{section.id}} .product-item form.caption-large {
+      margin-top: 1vw;
+      font-size: 0.9vw;
+      line-height: 1.2;
+  }
+
+  #container-{{section.id}} .product-item .product-myinfo {
+      width: 100%;
+      padding-top: 1.8vw;
+  }
+
+  #container-{{section.id}} .product-item .product-myinfo .product-tag {
+      font-weight: 400;
+      font-size: 1.06vw;
+      color: #000000;
+      opacity: 0.7;
+  }
+
+  #container-{{section.id}} .product-item .product-myinfo .product-name {
+      font-weight: 400;
+      font-size: 1.6vw;
+      color: #000000;
+      margin-top: 0.6vw;
+      height: 4vw;
+  }
+
+  #container-{{section.id}} .product-item .product-myinfo .product-name .product-name-text {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      height: auto;
+      padding-bottom: 0.15vw;
+      line-height: 1.2;
+  }
+
+  #container-{{section.id}} .product-item .product-myinfo .price_wrap {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 0.9vw;
+      gap: 0.2vw;
+  }
+
+  #container-{{section.id}} .product-item .product-myinfo .price_wrap .old_price {
+      font-size: 0.78vw;
+      color: #686868;
+      position: relative;
+      padding: 0 1vw;
+      padding-bottom: 0.2vw;
+  }
+
+  #container-{{section.id}} .product-item .product-myinfo .price_wrap .old_price::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-0.1vw);
+      width: 100%;
+      height: 1px;
+      background-color: #686868;
+  }
+
+  #container-{{section.id}} .product-item .product-myinfo .price_wrap .new_price {
+      font-family: HarmonyOS_Sans_SC_Bold;
+      font-weight: 900;
+      font-size: 2.13vw;
+      color: #14a9de;
+  }
+
+  #container-{{section.id}} .product-item .product-myinfo .event-wrap {
+      width: 18.5vw;
+      height: 2.67vw;
+      border-radius: 32px;
+      display: flex;
+      margin-top: 1.65vw;
+      background-color: #14a9de;
+      overflow: hidden;
+      border: 1px solid #14a9de;
+      box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+      outline: 1px solid;
+      outline-color: rgba(255, 255, 255, 0.5);
+      outline-offset: 0px;
+      text-shadow: none;
+      transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  #container-{{section.id}} .product-item .product-myinfo .event-wrap:hover {
+      border: 2px solid #14a9de;
+      box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+      outline-color: rgba(255, 255, 255, 0);
+      outline-offset: 15px;
+      text-shadow: 1px 1px 2px #14a9de;
+  }
+
+  #container-{{section.id}} .product-item .product-myinfo .event-wrap button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background: transparent;
+      height: 100%;
+      border: none;
+      outline: none;
+      margin: 0;
+      padding: 0;
+  }
+
+  #container-{{section.id}} .product-item .product-myinfo .event-wrap .addcart {
+      height: 100%;
+      width: 5.5vw;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  #container-{{section.id}} .product-item .product-myinfo .event-wrap .addcart img {
+      width: 1.7vw;
+  }
+
+  #container-{{section.id}} .product-item .product-myinfo .event-wrap .buynow {
+      flex: 1;
+      display: flex;
+      text-align: center;
+      font-weight: 900;
+      font-size: 1.28vw;
+      color: #ffffff;
+      align-items: center;
+      justify-content: center;
+  }
+
+  #container-{{section.id}} .product-item .save_price {
+      background: #de1414;
+      border-radius: 4px;
+      padding: 0.32vw;
+      font-weight: 400;
+      font-size: 1.06vw;
+      color: #ffffff;
+      white-space: nowrap;
+  }
+
+  #container-{{section.id}} .section7 {
+      padding-top: 6vw;
+  }
+
+  #container-{{section.id}} .section7 .swiper-tablist {
+      padding: 0 28vw;
+      display: flex;
+      height: 4.2vw;
+      margin-top: 2.5vw;
+  }
+
+  #container-{{section.id}} .section7 .swiper-tablist .swiper-tabitem {
+      flex: 1;
+      height: 100%;
+      background-color: #FFFFFF;
+      font-size: 1.28vw;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+  }
+
+  #container-{{section.id}} .section7 .swiper-tablist .swiper-tabitem.tab-active {
+      background-color: #14a9de;
+      font-family: HarmonyOS_Sans_SC_Bold;
+      font-weight: bold;
+      color: #fff;
+  }
+
+  #container-{{section.id}} .section7 .s7_wrap {
+      margin-top: 3vw;
+      padding: 4.4vw;
+      gap: 0.9vw;
+  }
+
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper {
+      width: 100%;
+      height: 39.5vw;
+  }
+
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_1,
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_2 {
+      position: relative;
+      width: 100%;
+      height: 100%;
+  }
+
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container,
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container {
+      width: 100%;
+      height: 100%;
+  }
+
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide,
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide {
+      height: 100%;
+      width: 22vw;
+  }
+
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item,
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      padding-top: 1vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 1.3vw;
+      padding-top: 4vw;
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+  }
+
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .star-wrap,
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .star-wrap {
+      overflow: hidden;
+      margin-top: 1vw;
+      height: 6vw;
+  }
+
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .pic,
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .pic {
+      width: 12.5vw;
+  }
+
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .navigation-wrap {
+      position: absolute;
+      left: 50%;
+      top: 28%;
+      transform: translateX(-50%);
+      width: 100%;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0;
+      padding: 0 0vw;
+  }
+
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .navigation-wrap .prev-btn svg {
+      transform: rotate(180deg);
+  }
+
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .navigation-wrap .prev-btn,
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .navigation-wrap .next-btn {
+      cursor: pointer;
+      position: relative;
+      z-index: 3;
+      width: 3.5vw;
+      height: 3.5vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+  }
+
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .navigation-wrap .prev-btn svg,
+  #container-{{section.id}} .section7 .s7_wrap .s7_swiper .navigation-wrap .next-btn svg {
+      width: 1.5vw;
+      height: 2.4vw;
+  }
+
+  @media (max-width: 769px) {
+      #container-{{section.id}} .title {
+          font-size: 5vw;
+      }
+
+      #container-{{section.id}} .desc {
+          font-size: 2.96vw;
+          margin-top: 2vw;
+      }
+
+      #container-{{section.id}} .package-item {
+          display: flex;
+          gap: 0.8vw;
+          margin-bottom: 2.6vw;
+      }
+
+      #container-{{section.id}} .package-item .star-img {
+          width: 2.96vw;
+          padding-top: 0vw;
+          height: auto;
+          flex-shrink: 0;
+      }
+
+      #container-{{section.id}} .package-item .star-img svg {
+          width: 2.96vw;
+          height: 2.96vw;
+      }
+
+      #container-{{section.id}} .package-item span {
+          display: block;
+          font-size: 2.96vw;
+          color: #000000;
+          line-height: 1.2;
+          margin-top: 0.4vw;
+          opacity: 0.7;
+          flex: 1;
+      }
+
+      #container-{{section.id}} .product-item .pic {
+          width: 30vw;
+          position: relative;
+          background-color: #fff;
+      }
+
+      #container-{{section.id}} .product-item .pic .discount {
+          position: absolute;
+          left: -2vw;
+          top: -4.4vw;
+          width: 8.5vw;
+      }
+
+      #container-{{section.id}} .product-item .pic .discount img {
+          width: 100%;
+          height: auto;
+      }
+
+      #container-{{section.id}} .product-item .pic .discount .discount_text {
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 2;
+          width: 100%;
+          height: 100%;
+          padding-top: 1vw;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+      }
+
+      #container-{{section.id}} .product-item .pic .discount .discount_text .t1 {
+          font-weight: 900;
+          font-size: 2.8vw;
+          color: #ffffff;
+      }
+
+      #container-{{section.id}} .product-item .pic .discount .discount_text .t2 {
+          font-size: 2.96vw;
+          color: #ffffff;
+          margin-top: 1vw;
+      }
+
+      #container-{{section.id}} .product-item .pic .product-img {
+          width: 100%;
+          height: 100%;
+      }
+
+      #container-{{section.id}} .product-item form.caption-large {
+          margin-top: 1vw;
+          font-size: 3vw;
+          line-height: 1.2;
+      }
+
+      #container-{{section.id}} .product-item .product-myinfo {
+          padding-top: 3.2vw;
+      }
+
+      #container-{{section.id}} .product-item .product-myinfo .product-tag {
+          font-weight: 400;
+          font-size: 2.96vw;
+          color: #000000;
+          opacity: 0.7;
+      }
+
+      #container-{{section.id}} .product-item .product-myinfo .product-name {
+          font-weight: 400;
+          font-size: 3.4vw;
+          color: #000000;
+          margin-top: 1.2vw;
+          height: 10vw;
+      }
+
+      #container-{{section.id}} .product-item .product-myinfo .price_wrap {
+          display: flex;
+          align-items: flex-end;
+          margin-top: 3vw;
+          gap: 2.2vw;
+      }
+
+      #container-{{section.id}} .product-item .product-myinfo .price_wrap .old_price {
+          font-size: 2.96vw;
+          color: #686868;
+          position: relative;
+          padding: 0 1vw;
+          padding-bottom: 0.4vw;
+      }
+
+      #container-{{section.id}} .product-item .product-myinfo .price_wrap .old_price::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-0.2vw);
+          width: 100%;
+          height: 1px;
+          background-color: #686868;
+      }
+
+      #container-{{section.id}} .product-item .product-myinfo .price_wrap .new_price {
+          font-family: HarmonyOS_Sans_SC_Bold;
+          font-weight: 900;
+          font-size: 4.5vw;
+          color: #14a9de;
+      }
+
+      #container-{{section.id}} .product-item .product-myinfo .event-wrap {
+          width: 42vw;
+          height: 6vw;
+          border-radius: 32px;
+          display: flex;
+          margin-top: 3.5vw;
+          overflow: hidden;
+      }
+
+      #container-{{section.id}} .product-item .product-myinfo .event-wrap .addcart {
+          width: 15.1vw;
+      }
+
+      #container-{{section.id}} .product-item .product-myinfo .event-wrap .addcart img {
+          width: 3.8vw;
+      }
+
+      #container-{{section.id}} .product-item .product-myinfo .event-wrap .buynow {
+          font-size: 3.56vw;
+      }
+
+      #container-{{section.id}} .product-item .save_price {
+          background: #de1414;
+          border-radius: 4px;
+          padding: 0.5vw 0.6vw;
+          font-weight: 400;
+          font-size: 2.06vw;
+          color: #ffffff;
+          margin-left: -1vw;
+      }
+
+      #container-{{section.id}} .section7 .swiper-tablist {
+          padding: 0 4.4vw;
+          display: flex;
+          height: 8.2vw;
+          margin-top: 4.2vw;
+      }
+
+      #container-{{section.id}} .section7 .swiper-tablist .swiper-tabitem {
+          font-size: 3.56vw;
+      }
+
+      #container-{{section.id}} .section7 .swiper-tablist .swiper-tabitem.tab-active {
+          background-color: #14a9de;
+      }
+
+      #container-{{section.id}} .section7 .s7_wrap {
+          margin-top: 6.6vw;
+          padding: 7.2vw 4.4vw;
+          gap: 0.9vw;
+          background-color: #c2ead1;
+      }
+
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper {
+          width: 100%;
+          height: 85vw;
+      }
+
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide,
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide {
+          height: 100%;
+          width: 49.5%;
+      }
+
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item,
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item {
+          padding-top: 1vw;
+          padding: 0 2.6vw;
+          padding-top: 4vw;
+          background-color: #fff;
+          border-radius: 8px;
+          overflow: hidden;
+      }
+
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .product-myinfo,
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .product-myinfo {
+          width: 100%;
+      }
+
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .product-myinfo .product-name,
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .product-myinfo .product-name {
+          font-size: 3.4vw;
+      }
+
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .event-wrap,
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .event-wrap {
+          width: 100%;
+          height: 6vw;
+      }
+
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .star-wrap,
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .star-wrap {
+          margin-top: 1vw;
+          height: 12vw;
+      }
+
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .star-wrap .package-item,
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .star-wrap .package-item {
+          margin-bottom: 1vw;
+      }
+
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .pic,
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .pic {
+          width: 28vw;
+      }
+
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .navigation-wrap {
+          position: absolute;
+          left: 50%;
+          top: 28%;
+          transform: translateX(-50%);
+          width: 100%;
+          z-index: 1;
+          display: flex;
+          justify-content: space-between;
+          font-size: 0;
+          padding: 0 0vw;
+      }
+
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .navigation-wrap .prev-btn svg {
+          transform: rotate(180deg);
+      }
+
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .navigation-wrap .prev-btn,
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .navigation-wrap .next-btn {
+          cursor: pointer;
+          position: relative;
+          z-index: 3;
+          width: 7vw;
+          height: 7vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+      }
+
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .navigation-wrap .prev-btn svg,
+      #container-{{section.id}} .section7 .s7_wrap .s7_swiper .navigation-wrap .next-btn svg {
+          width: 3.6vw;
+          height: 4.8vw;
+      }
+  }
+</style>
+
+{%- liquid 
+  assign card_background_color = section.settings.card_background_color
+  assign card_background_color2 = section.settings.card_background_color2
+  assign card_title = section.settings.card_title
+  assign card_text = section.settings.card_text
+  assign card_title_color = section.settings.card_title_color
+  assign tabitem1_text = section.settings.tabitem1_text
+  assign tabitem2_text = section.settings.tabitem2_text
+  assign star_color = section.settings.star_color
+-%}
+
+<div id="container-{{section.id}}">
+  <div class="section7" style="background: {{card_background_color}}">
+      <div class="title" style="color: {{card_title_color}};">
+          {{card_title}}
+      </div>
+      <div class="desc" style="color: {{card_title_color}};">
+          {{card_text}}
+      </div>
+      <div class="swiper-tablist">
+          <div class="swiper-tabitem tab-active">{{tabitem1_text}}</div>
+          <div class="swiper-tabitem">{{tabitem2_text}}</div>
+      </div>
+
+      <div class="s7_wrap" style="background: {{card_background_color2}}">
+        <div class="swiper-container s7_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide s7_swiper_1">
+                    <div class="swiper-container ">
+                        <div class="swiper-wrapper">
+                          {%- for block in section.blocks -%}
+                            {%- if block.type == 'products-accessory' -%}
+                              <div class="swiper-slide">
+                                  <div class="product-item">
+                                      <div class="pic">
+                                          <img class="product-img"
+                                              src="{{block.settings.item_image_link}}"
+                                              alt="">
+                                          <div class="discount">
+                                              <img src="{{block.settings.item_discount_img}}"
+                                                  alt="discount_icon.jpg">
+                                              <div class="discount_text">
+                                                  <span class="t1 fontBold">{{block.settings.item_discount_text1}}</span>
+                                                  <span class="t2">{{block.settings.item_discount_text2}}</span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="product-myinfo">
+                                          <div class="product-tag">Creality Falcon</div>
+                                          <div class="product-name">
+                                              <div class="product-name-text">{{block.settings.item_title}}
+                                              </div>
+                                          </div>
+                                          <div class="star-wrap">
+                                              {%- if block.settings.item_desc1 != blank -%}
+                                              <div class="package-item">
+                                                  <div class="star-img">
+                                                       <svg t="1718263446909" class="icon" viewBox="0 0 1024 1024"
+                                                          version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                          p-id="9794" width="200" height="200">
+                                                          <path
+                                                              d="M514.442415 0c-8.932261 0-26.750261 7.164418-49.964836 53.081823-55.826632 99.883149-144.2188 262.850393-144.218799 262.850393s-161.385489 31.355958-265.455636 51.174413a53.035301 53.035301 0 0 0-41.869974 85.973013c73.225932 88.392168 202.790241 233.913589 202.790241 233.913589s-21.167598 159.989823-33.07728 269.177411a52.197901 52.197901 0 0 0 49.034392 66.014992 76.063786 76.063786 0 0 0 32.332925-7.908772c87.368679-43.358684 220.282586-109.699332 250.335923-124.679479 29.588115 15.119713 161.152878 82.530371 247.544591 126.028622a74.43551 74.43551 0 0 0 32.007269 7.955295 51.96529 51.96529 0 0 0 48.429604-66.014992c-11.770115-109.373677-32.565535-269.828722-32.565536-269.828722s128.122121-145.800554 200.510654-234.1462a53.267911 53.267911 0 0 0-41.35823-86.159102c-102.86057-19.771932-262.385171-51.174413-262.385171-51.174413S619.256917 153.058016 564.035073 53.081823a99.883149 99.883149 0 0 0-43.91695-52.011813 12.467948 12.467948 0 0 0-5.675708-1.07001z"
+                                                              fill="{{star_color}}" p-id="9795"></path>
+                                                      </svg>
+                                                  </div>
+                                                  <span>{{block.settings.item_desc1}}</span>
+                                              </div>
+                                              {%- endif -%}
+                                              {%- if block.settings.item_desc2 != blank -%}
+                                              <div class="package-item">
+                                                  <div class="star-img">
+                                                       <svg t="1718263446909" class="icon" viewBox="0 0 1024 1024"
+                                                          version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                          p-id="9794" width="200" height="200">
+                                                          <path
+                                                              d="M514.442415 0c-8.932261 0-26.750261 7.164418-49.964836 53.081823-55.826632 99.883149-144.2188 262.850393-144.218799 262.850393s-161.385489 31.355958-265.455636 51.174413a53.035301 53.035301 0 0 0-41.869974 85.973013c73.225932 88.392168 202.790241 233.913589 202.790241 233.913589s-21.167598 159.989823-33.07728 269.177411a52.197901 52.197901 0 0 0 49.034392 66.014992 76.063786 76.063786 0 0 0 32.332925-7.908772c87.368679-43.358684 220.282586-109.699332 250.335923-124.679479 29.588115 15.119713 161.152878 82.530371 247.544591 126.028622a74.43551 74.43551 0 0 0 32.007269 7.955295 51.96529 51.96529 0 0 0 48.429604-66.014992c-11.770115-109.373677-32.565535-269.828722-32.565536-269.828722s128.122121-145.800554 200.510654-234.1462a53.267911 53.267911 0 0 0-41.35823-86.159102c-102.86057-19.771932-262.385171-51.174413-262.385171-51.174413S619.256917 153.058016 564.035073 53.081823a99.883149 99.883149 0 0 0-43.91695-52.011813 12.467948 12.467948 0 0 0-5.675708-1.07001z"
+                                                              fill="{{star_color}}" p-id="9795"></path>
+                                                      </svg>
+                                                  </div>
+                                                  <span>{{block.settings.item_desc2}}</span>
+                                              </div>
+                                              {%- endif -%}
+                                          </div>
+                                          <div class="price_wrap">
+                                            <span class="old_price">{{block.settings.item_old_price}}</span>
+                                            {{block.settings.item_new_price}}
+                                          </div>
+                                          {{block.settings.item_addcart_code}}
+                                      </div>
+                                  </div>
+                              </div>
+                            {%- endif -%}
+                          {%- endfor -%}  
+                        </div>
+                    </div>
+                    <!-- Add Navigation -->
+                    <div class="navigation-wrap">
+                        <div class="prev-btn">
+                            <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                                <path
+                                    d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z"
+                                    p-id="8092" fill="#000"></path>
+                            </svg>
+                        </div>
+                        <div class="next-btn">
+                            <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                                <path
+                                    d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z"
+                                    p-id="8092" fill="#000"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide s7_swiper_2">
+                    <div class="swiper-container ">
+                        <div class="swiper-wrapper">
+                          {%- for block in section.blocks -%}
+                            {%- if block.type == 'products-Material' -%}
+                              <div class="swiper-slide">
+                                  <div class="product-item">
+                                      <div class="pic">
+                                          <img class="product-img"
+                                              src="{{block.settings.item_image_link}}"
+                                              alt="">
+                                          <div class="discount">
+                                              <img src="{{block.settings.item_discount_img}}"
+                                                  alt="discount_icon.jpg">
+                                              <div class="discount_text">
+                                                  <span class="t1 fontBold">{{block.settings.item_discount_text1}}</span>
+                                                  <span class="t2">{{block.settings.item_discount_text2}}</span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="product-myinfo">
+                                          <div class="product-tag">Creality Falcon</div>
+                                          <div class="product-name">
+                                              <div class="product-name-text">{{block.settings.item_title}}
+                                              </div>
+                                          </div>
+                                          <div class="star-wrap">
+                                              {%- if block.settings.item_desc1 != blank -%}
+                                              <div class="package-item">
+                                                  <div class="star-img">
+                                                       <svg t="1718263446909" class="icon" viewBox="0 0 1024 1024"
+                                                          version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                          p-id="9794" width="200" height="200">
+                                                          <path
+                                                              d="M514.442415 0c-8.932261 0-26.750261 7.164418-49.964836 53.081823-55.826632 99.883149-144.2188 262.850393-144.218799 262.850393s-161.385489 31.355958-265.455636 51.174413a53.035301 53.035301 0 0 0-41.869974 85.973013c73.225932 88.392168 202.790241 233.913589 202.790241 233.913589s-21.167598 159.989823-33.07728 269.177411a52.197901 52.197901 0 0 0 49.034392 66.014992 76.063786 76.063786 0 0 0 32.332925-7.908772c87.368679-43.358684 220.282586-109.699332 250.335923-124.679479 29.588115 15.119713 161.152878 82.530371 247.544591 126.028622a74.43551 74.43551 0 0 0 32.007269 7.955295 51.96529 51.96529 0 0 0 48.429604-66.014992c-11.770115-109.373677-32.565535-269.828722-32.565536-269.828722s128.122121-145.800554 200.510654-234.1462a53.267911 53.267911 0 0 0-41.35823-86.159102c-102.86057-19.771932-262.385171-51.174413-262.385171-51.174413S619.256917 153.058016 564.035073 53.081823a99.883149 99.883149 0 0 0-43.91695-52.011813 12.467948 12.467948 0 0 0-5.675708-1.07001z"
+                                                              fill="{{star_color}}" p-id="9795"></path>
+                                                      </svg>
+                                                  </div>
+                                                  <span>{{block.settings.item_desc1}}</span>
+                                              </div>
+                                              {%- endif -%}
+                                              {%- if block.settings.item_desc2 != blank -%}
+                                              <div class="package-item">
+                                                  <div class="star-img">
+                                                       <svg t="1718263446909" class="icon" viewBox="0 0 1024 1024"
+                                                          version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                          p-id="9794" width="200" height="200">
+                                                          <path
+                                                              d="M514.442415 0c-8.932261 0-26.750261 7.164418-49.964836 53.081823-55.826632 99.883149-144.2188 262.850393-144.218799 262.850393s-161.385489 31.355958-265.455636 51.174413a53.035301 53.035301 0 0 0-41.869974 85.973013c73.225932 88.392168 202.790241 233.913589 202.790241 233.913589s-21.167598 159.989823-33.07728 269.177411a52.197901 52.197901 0 0 0 49.034392 66.014992 76.063786 76.063786 0 0 0 32.332925-7.908772c87.368679-43.358684 220.282586-109.699332 250.335923-124.679479 29.588115 15.119713 161.152878 82.530371 247.544591 126.028622a74.43551 74.43551 0 0 0 32.007269 7.955295 51.96529 51.96529 0 0 0 48.429604-66.014992c-11.770115-109.373677-32.565535-269.828722-32.565536-269.828722s128.122121-145.800554 200.510654-234.1462a53.267911 53.267911 0 0 0-41.35823-86.159102c-102.86057-19.771932-262.385171-51.174413-262.385171-51.174413S619.256917 153.058016 564.035073 53.081823a99.883149 99.883149 0 0 0-43.91695-52.011813 12.467948 12.467948 0 0 0-5.675708-1.07001z"
+                                                              fill="{{star_color}}" p-id="9795"></path>
+                                                      </svg>
+                                                  </div>
+                                                  <span>{{block.settings.item_desc2}}</span>
+                                              </div>
+                                              {%- endif -%}
+                                          </div>
+                                          <div class="price_wrap">
+                                            <span class="old_price">{{block.settings.item_old_price}}</span>
+                                            {{block.settings.item_new_price}}
+                                          </div>
+                                          {{block.settings.item_addcart_code}}
+                                      </div>
+                                  </div>
+                              </div>
+                            {%- endif -%}
+                          {%- endfor -%}  
+                        </div>
+                    </div>
+                    <!-- Add Navigation -->
+                    <div class="navigation-wrap">
+                        <div class="prev-btn">
+                            <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                                <path
+                                    d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z"
+                                    p-id="8092" fill="#000"></path>
+                            </svg>
+                        </div>
+                        <div class="next-btn">
+                            <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                                <path
+                                    d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z"
+                                    p-id="8092" fill="#000"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+    let docWidth = document.documentElement.clientWidth;
+    let spaceNum = docWidth < 960 ? 0.02 : 0.005;
+
+    var swiper2 = new Swiper('.section7 .s7_swiper', {
+        allowTouchMove: false, // Disable dragging
+        direction: 'vertical',
+    });
+    $('.section7 .swiper-tabitem').click(function () {
+        var index = $(this).index();
+        $(this).addClass('tab-active').siblings().removeClass('tab-active')
+
+        swiper2.slideTo(index); // Change to the specified slide index
+    })
+
+    let slidesPerView = docWidth < 960 ? 2 : 4;
+    var mySwiper2 = new Swiper('.section7 .s7_swiper_1 .swiper-container', {
+        allowTouchMove: true, // Disable dragging
+        slidesPerView,
+        spaceBetween: docWidth * spaceNum,
+        on: {
+            resize: function () { // 监听窗口大小变化
+                docWidth = document.documentElement.clientWidth;
+                this.params.spaceBetween = docWidth * spaceNum; // 动态设置间距
+                this.update(); // 更新Swiper
+            }
+        },
+        loop: true,
+        // autoplay: {
+        //     delay: 2500
+        // },
+        navigation: {
+            "nextEl": ".section7 .s7_swiper_1 .navigation-wrap .next-btn",
+            "prevEl": ".section7 .s7_swiper_1 .navigation-wrap .prev-btn"
+        }
+    });
+
+    var mySwiper3 = new Swiper('.section7 .s7_swiper_2 .swiper-container', {
+        allowTouchMove: true, // Disable dragging
+        slidesPerView,
+        spaceBetween: docWidth * spaceNum,
+        on: {
+            resize: function () { // 监听窗口大小变化
+                docWidth = document.documentElement.clientWidth;
+                this.params.spaceBetween = docWidth * spaceNum; // 动态设置间距
+                this.update(); // 更新Swiper
+            }
+        },
+        loop: true,
+        // autoplay: {
+        //     delay: 2500
+        // },
+        navigation: {
+            "nextEl": ".section7 .s7_swiper_2 .navigation-wrap .next-btn",
+            "prevEl": ".section7 .s7_swiper_2 .navigation-wrap .prev-btn"
+        }
+    });
+</script>
+
+
+{% schema %}
+  {
+    "name": "shops-card2",
+    "settings": [
+      {
+        "type": "text",
+        "id": "card_background_color",
+        "label": "背景颜色-上区域",
+        "default": "linear-gradient(15deg, #fff, #0A188C)"
+      },
+      {
+        "type": "text",
+        "id": "card_background_color2",
+        "label": "背景颜色-下区域",
+        "default": "linear-gradient(45deg, #809DD5, #7281D0);"
+      },
+      {
+        "type": "text",
+        "id": "card_title",
+        "label": "标题",
+        "default": "Get 20% off all accessories and materials."
+      },
+      {
+        "type": "textarea",
+        "id": "card_text",
+        "label": "文本",
+        "default": "Shop to your heart's content! Don't miss out."
+      },
+      {
+        "type": "color",
+        "id": "card_title_color",
+        "label": "标题及文本颜色",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "tabitem1_text",
+        "label": "tab1-文本",
+        "default": "Accessories"
+      },
+      {
+        "type": "text",
+        "id": "tabitem2_text",
+        "label": "tab2-文本",
+        "default": "Materials"
+      },
+      {
+        "type": "color",
+        "id": "star_color",
+        "label": "星星顔色",
+        "default": "#5CB2F6"
+      }
+    ],
+    "blocks": [
+      {
+      "type": "products-accessory",
+      "name": {
+        "en-US": "products-accessory",
+        "zh-CN": "产品列表-Accessory"
+      },
+      "settings": [
+          {
+              "type": "text",
+              "id": "item_image_link",
+              "label": {
+                "en-US": "accessory image link",
+                "zh-CN": "accessory图片链接"
+              },
+              "default": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864"
+          },
+          {
+              "type": "text",
+              "id": "item_title",
+              "label": {
+                "en-US": "accessory title text",
+                "zh-CN": "accessory标题"
+              },
+              "default": "Creality Falcon Honeycomb Workbench 500mm x 500mm"
+          },
+          {
+              "type": "text",
+              "id": "item_desc1",
+              "label": {
+                "en-US": "accessory desc1",
+                "zh-CN": "accessory描述1"
+              },
+              "default": "Better Heat Dissipation"
+          },
+          {
+              "type": "text",
+              "id": "item_desc2",
+              "label": {
+                "en-US": "accessory desc2",
+                "zh-CN": "accessory描述2"
+              },
+              "default": "Double Desktop Protection"
+          },
+          {
+              "type": "text",
+              "id": "item_old_price",
+              "label": {
+                "en-US": "accessory old price",
+                "zh-CN": "accessory原价"
+              },
+              "default": "$169.00"
+          },
+          {
+              "type": "textarea",
+              "id": "item_new_price",
+              "label": {
+                "en-US": "accessory new price",
+                "zh-CN": "accessory现价"
+              },
+              "default": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">$119.00</span>"
+          },
+          {
+              "type": "text",
+              "id": "item_discount_img",
+              "label": {
+                "en-US": "item_discount_img",
+                "zh-CN": "item_discount_img"
+              },
+              "default": "https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon2.png"
+          },
+          {
+              "type": "text",
+              "id": "item_discount_text1",
+              "label": {
+                "en-US": "discount_text1",
+                "zh-CN": "discount_text1"
+              },
+              "default": "SAVE"
+          },
+          {
+              "type": "text",
+              "id": "item_discount_text2",
+              "label": {
+                "en-US": "discount_text2",
+                "zh-CN": "discount_text2"
+              },
+              "default": "$50"
+          },
+          {
+              "type": "textarea",
+              "id": "item_addcart_code",
+              "label": {
+                "en-US": "accessory addcart code",
+                "zh-CN": "accessory加入购物车代码"
+              },
+              "default": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9245054337329\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\"><input type=\"hidden\" name=\"id\" value=\"47925198324017\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"9\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\"><div class=\"addcart\"><img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\"></div><div class=\"buynow\">Buy Now</div></button></form>"
+          }
+        ]
+      },
+      {
+        "type": "products-Material",
+        "name": {
+          "en-US": "products-Material",
+          "zh-CN": "产品列表-Material"
+        },
+       "settings": [
+          {
+              "type": "text",
+              "id": "item_image_link",
+              "label": {
+                "en-US": "Material image link",
+                "zh-CN": "Material 图片链接"
+              },
+              "default": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864"
+          },
+          {
+              "type": "text",
+              "id": "item_title",
+              "label": {
+                "en-US": "Material title text",
+                "zh-CN": "Material 标题"
+              },
+              "default": "Creality Falcon Honeycomb Workbench 500mm x 500mm"
+          },
+          {
+              "type": "text",
+              "id": "item_desc1",
+              "label": {
+                "en-US": "Material desc1",
+                "zh-CN": "Material 描述1"
+              },
+              "default": "Better Heat Dissipation"
+          },
+          {
+              "type": "text",
+              "id": "item_desc2",
+              "label": {
+                "en-US": "Material desc2",
+                "zh-CN": "Material 描述2"
+              },
+              "default": "Double Desktop Protection"
+          },
+          {
+              "type": "text",
+              "id": "item_old_price",
+              "label": {
+                "en-US": "Material old price",
+                "zh-CN": "Material 原价"
+              },
+              "default": "$169.00"
+          },
+          {
+              "type": "textarea",
+              "id": "item_new_price",
+              "label": {
+                "en-US": "Material new price",
+                "zh-CN": "Material 现价"
+              },              
+              "default": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">$119.00</span>"
+          },
+          {
+              "type": "text",
+              "id": "item_discount_img",
+              "label": {
+                "en-US": "item_discount_img",
+                "zh-CN": "item_discount_img"
+              },
+              "default": "https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon2.png"
+          },
+          {
+              "type": "text",
+              "id": "item_discount_text1",
+              "label": {
+                "en-US": "discount_text1",
+                "zh-CN": "discount_text1"
+              },
+              "default": "SAVE"
+          },
+          {
+              "type": "text",
+              "id": "item_discount_text2",
+              "label": {
+                "en-US": "discount_text2",
+                "zh-CN": "discount_text2"
+              },
+              "default": "$50"
+          },
+          {
+              "type": "textarea",
+              "id": "item_addcart_code",
+              "label": {
+                "en-US": "Material addcart code",
+                "zh-CN": "Material 加入购物车代码"
+              },
+              "default": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9245054337329\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\"><input type=\"hidden\" name=\"id\" value=\"47925198324017\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"9\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\"><div class=\"addcart\"><img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\"></div><div class=\"buynow\">Buy Now</div></button></form>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "shops-card2"
+      }
+    ]
+  }
+{% endschema %}

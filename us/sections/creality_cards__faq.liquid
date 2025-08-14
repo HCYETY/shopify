@@ -1,0 +1,246 @@
+<style>
+.faq-container {
+  display: flex;
+  margin: auto;
+}
+
+#{{ section.id }} .faq-sidebar {
+  padding: 0 1.04vw;
+  border: 1px solid #f4f4f4;
+  height: fit-content;
+}
+
+#{{ section.id }} .faq-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+:root {
+  --themeStyle-color: #1D80DC;
+}
+#{{ section.id }} .faq-sidebar li {
+  cursor: pointer;
+  border-bottom: 1px solid #f4f4f4;
+  padding: 0.83vw 0;
+  font-family: "HarmonyOS_Sans_SC_Bold";
+  transition: color 0.3s ease;
+}
+#{{ section.id }} .faq-sidebar li:hover {
+  color: var(--themeStyle-color);
+}
+#{{ section.id }} .faq-sidebar li:last-child {
+  border-bottom: none;
+}
+#{{ section.id }} .faq-sidebar li.selected {
+  color: var(--themeStyle-color);
+}
+#{{ section.id }} .faq-sidebar li.selected .circle {
+  background-color: var(--themeStyle-color);
+}
+#{{ section.id }} .faq-sidebar li.selected span {
+  color: #fff;
+}
+
+#{{ section.id }} .faq-content {
+  flex-grow: 1;
+  padding-left: 3.65vw;
+}
+
+#{{ section.id }} .faq-section {
+  display: none;
+}
+#{{ section.id }} .faq-section h6 {
+  margin-top: 1.04vw;
+}
+#{{ section.id }} .faq-section p {
+  margin-top: 0.52vw;
+  color: #6A6A6A;
+}
+#{{ section.id }} .faq-section .faq-module-group {
+  margin-bottom: 2.08vw;
+}
+
+#{{ section.id }} .circle {
+  display: inline-block;
+  width: 1.88vw;
+  height: 1.88vw;
+  line-height: 1.88vw;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin-right: 0.52vw;
+}
+  h3 {
+    font-size: 1.56vw;
+}
+@media (max-width: 960px) {
+  #{{ section.id }}.faq-container {
+    flex-direction: column;
+  }
+  #{{ section.id }} .faq-sidebar {
+    padding: 0 2.67vmin;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  #{{ section.id }} .faq-sidebar ul {
+    display: flex;
+  }
+  #{{ section.id }} .faq-sidebar li {
+    display: inline-block;
+    margin-right: 4.33vmin;
+    padding: 2.13vmin 0;
+  }
+  #{{ section.id }} .faq-section {
+    display: none;
+  }
+  #{{ section.id }} .faq-section h3 {
+    margin-top: 4vmin;
+  }
+  #{{ section.id }} .faq-section h6 {
+    margin-top: 2.67vmin;
+  }
+  #{{ section.id }} .faq-section p {
+    margin-top: 1.33vmin;
+  }
+  #{{ section.id }} .faq-section .faq-module-group {
+    margin-bottom: 5.33vmin;
+  }
+  #{{ section.id }} .faq-sidebar .circle {
+    width: 6.8vmin;
+    height: 6.8vmin;
+    line-height: 6.8vmin;
+    margin-right: 1.33vmin;
+  }
+}
+</style>
+
+<div class="cr-common cr-section-column cr-section-row">
+  <div class="faq-container" id="{{ section.id }}">
+  <div class="faq-sidebar">
+    {% assign list_index = 0 %}
+    <ul>
+      {% for block in section.blocks %}
+        {% if block.type == "creality-faq-list" %}
+          {%assign list_index = list_index | plus: 1 %}
+          <li>
+            <span class="circle {% if list_index == 1 %}selected{% endif %}">
+              {{ list_index }}
+            </span>
+            {{ block.settings.list_item | strip }}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="faq-content">
+    {% assign list_index = 0 %}
+    {% for block in section.blocks %}
+      {% if block.type == "creality-faq-list" %}
+        <div class="faq-section">
+          {% assign offset_number = forloop.index %}
+          {% for item in section.blocks offset: offset_number %}
+            {% if item.type == "creality-faq-list" %}
+              {% break %}
+            {% endif %}
+            {% if item.type == "creality-faq-title" %}
+              <h3>{{ item.settings.faq-h3 }}</h3>
+            {% endif %}
+            {% if item.type == "creality-faq-question" %}
+              <h6>{{ item.settings.faq-h6 }}</h6>
+            {% endif %}
+            {% if item.type == "creality-faq-answer" %}
+              <h6>{{ item.settings.faq-p }}</h6>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+</div>
+
+<script>
+  const $sidebarItems = $('.faq-sidebar li');
+  const $sections = $('.faq-section');
+
+  $sidebarItems.on('click', function () {
+      const index = $(this).index();
+      $sections.each(function (i) {
+          $(this).css('display', i === index ? 'block' : 'none');
+      });
+      $sidebarItems.removeClass('selected');
+      $(this).addClass('selected');
+  });
+
+  // 默认显示第一个
+  if ($sections.length > 0) {
+      $sections.first().css('display', 'block');
+      $sidebarItems.first().addClass('selected');
+  }
+</script>
+{% schema %}
+  {
+    "name": "cr-faq",
+    "blocks": [
+      {
+        "type": "creality-faq-list",
+        "name": "section-faq-listItem",
+        "settings":[
+          {
+            "type": "header",
+            "content": "左侧列表"
+          },
+          {
+            "type": "text",
+            "id": "list_item",
+            "label": "菜单标题",
+            "default": "title"
+          },
+        ]
+      },
+      {
+        "type": "creality-faq-title",
+        "name": "faq-title",
+        "settings": [
+          {
+            "type": "text",
+            "id": "faq-h3",
+            "label": "标题",
+            "default": "title"
+          }
+        ]
+      },
+      {
+        "type": "creality-faq-question",
+        "name": "faq-question",
+        "settings": [
+          {
+            "type": "text",
+            "id": "faq-h6",
+            "label": "问题",
+            "default": "Q: "
+          }
+        ]
+      },
+      {
+        "type": "creality-faq-answer",
+        "name": "faq-answer",
+        "settings": [
+          {
+            "type": "text",
+            "id": "faq-p",
+            "label": "回答",
+            "default": "answer the question"
+          }
+        ]
+      }
+    ],
+    "settings": [
+     
+    ],
+    "presets": [
+      {
+        "name": "cr-faq",
+      }
+    ]
+  }
+{% endschema %}

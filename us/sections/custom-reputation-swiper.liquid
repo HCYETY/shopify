@@ -1,0 +1,497 @@
+{{ 'swiper.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+<div id="container-{{ sid }}">
+  <div class="cs-reputation-swiper main-content">
+    <div class="cs-reputation-title" style="--he-fz:{{ se_stts.he-fz }}px;--he-fz-mb:{{ se_stts.he-fz-mb }}px">
+      {{ se_stts.title }}
+    </div>
+
+    <div
+      class="swiper swiper-container reputation-swiper fadein"
+    >
+      <div class="swiper-wrapper">
+        {% for block in se_blocks %}
+          {% assign bk_stts = block.settings %}
+          <div class="swiper-slide ">
+            <div class="reputation-content">
+              <div class="reputation-info">
+                <img
+                  loading="lazy"
+                  class="reputation-good"
+                  src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/ecom-no-replace-9TPZylTlHgFrame_20.png?v=1730366132"
+                  alt="reputation-good"
+                >
+                <div class="reputation-title">
+                  {{ bk_stts['reputation-title'] }}
+                </div>
+                <div class="reputation-text">
+                  {{ bk_stts['reputation-text'] }}
+                </div>
+                <div class="reputation-foot">
+                  <div class="reputation-user-info">
+                    <div class="reputation-author">
+                      {{ bk_stts['reputation-author'] }}
+                    </div>
+                    <div class="reputation-address">
+                      {{ bk_stts['reputation-address'] }}
+                    </div>
+                  </div>
+                  <div class="reputation-user-img">
+                    <img loading="lazy" width="50" height="50" src="{{bk_stts['avatar'] | img_url: 'medium'}}" alt="avatar">
+                  </div>
+                </div>
+              </div>
+              <div class="reputation-product">
+                <div class="reputation-product-info">
+                  <div class="reputation-product-img">
+                    <img
+                      width="58"
+                      height="58"
+                      loading="lazy"
+                      class="product-img"
+                      srcset="
+                        {%- if bk_stts.reputation-product.featured_image.width >= 533 -%}
+                            {{ bk_stts.reputation-product.featured_image | img_url: '533x' }} 533w,
+                        {%- endif -%}
+                        {%- if bk_stts.reputation-product.featured_image.width >= 534 -%}
+                            {{ bk_stts.reputation-product.featured_image | img_url: '534x' }} 534w,
+                        {%- endif -%}
+                        {%- if bk_stts.reputation-product.featured_image.width >= 720 -%}
+                            {{ bk_stts.reputation-product.featured_image | img_url: '720x' }} 720w,
+                        {%- endif -%}
+                        {%- if bk_stts.reputation-product.featured_image.width >= 940 -%}
+                            {{ bk_stts.reputation-product.featured_image | img_url: '940x' }} 940w,
+                        {%- endif -%}
+                        {%- if bk_stts.reputation-product.featured_image.width >= 1066 -%}
+                            {{ bk_stts.reputation-product.featured_image | img_url: '1066x' }} 1066w
+                        {%- endif -%}
+                      "
+                      src="{{ bk_stts.reputation-product.featured_image | img_url: '533x' }}"
+                      sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                      alt="{{ bk_stts.reputation-product.featured_image.alt | escape }} {{bk_stts.reputation-product.featured_image.width}}"
+                      loading="lazy"
+                      class="motion-reduce"
+                    >
+                  </div>
+                  <div class="reputation-product-con">
+                    <div class="reputation-product-title">
+                      <a href="{{ bk_stts['reputation-product'].url }}">{{ bk_stts['reputation-product'].title }}</a>
+                    </div>
+                    <div class="reputation-product-price">
+                      {% assign compare_at_price = bk_stts['reputation-product'].compare_at_price %}
+                      {% assign price = bk_stts['reputation-product'].price %}
+                      {% if compare_at_price > price %}
+                        <span class="compare"> {{ bk_stts['reputation-product'].price | money }}</span>
+                        <span class="price"> {{ bk_stts['reputation-product'].compare_at_price | money }}</span>
+                      {% else %}
+                        <span>{{ bk_stts['reputation-product'].price | money }}</span>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+                <div class="reputation-product-btn">
+                  <form
+                    method="post"
+                    action="/cart/add"
+                    id="product-form-{{ bk_stts['reputation-product'].variants[0].id }}"
+                    accept-charset="UTF-8"
+                    class="event-wrap"
+                    enctype="multipart/form-data"
+                    novalidate="novalidate"
+                    data-type="add-to-cart-form"
+                  >
+                    <input
+                      type="hidden"
+                      name="id"
+                      value="{{ bk_stts['reputation-product'].variants[0].id }}"
+                    >
+                    <button
+                      type="submit"
+                      name="add"
+                      data-btn-addtocart=""
+                      data-inventory-quantity="13"
+                      data-available="false"
+                      class=""
+                      id="product-add-to-cart"
+                    >
+                      <svg
+                        t="1730367881734"
+                        class="icon btn-icon"
+                        viewBox="0 0 1028 1024"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        p-id="4338"
+                      >
+                        <path
+                            d="M332.8 790.528q19.456 0 36.864 7.168t30.208 19.968 20.48 30.208 7.68 36.864-7.68 36.864-20.48 30.208-30.208 20.48-36.864 7.68q-20.48 0-37.888-7.68t-30.208-20.48-20.48-30.208-7.68-36.864 7.68-36.864 20.48-30.208 30.208-19.968 37.888-7.168zM758.784 792.576q19.456 0 37.376 7.168t30.72 19.968 20.48 30.208 7.68 36.864-7.68 36.864-20.48 30.208-30.72 20.48-37.376 7.68-36.864-7.68-30.208-20.48-20.48-30.208-7.68-36.864 7.68-36.864 20.48-30.208 30.208-19.968 36.864-7.168zM930.816 210.944q28.672 0 44.544 7.68t22.528 18.944 6.144 24.064-3.584 22.016-13.312 37.888-22.016 62.976-23.552 68.096-18.944 53.248q-13.312 40.96-33.28 56.832t-49.664 15.872l-35.84 0-65.536 0-86.016 0-96.256 0-253.952 0 14.336 92.16 517.12 0q49.152 0 49.152 41.984 0 20.48-9.728 35.84t-38.4 14.336l-49.152 0-94.208 0-118.784 0-119.808 0-99.328 0-55.296 0q-20.48 0-34.304-9.216t-23.04-24.064-14.848-32.256-8.704-32.768q-1.024-6.144-5.632-29.696t-11.264-58.88-14.848-78.848-16.384-87.552q-19.456-103.424-44.032-230.4l-76.8 0q-15.36 0-25.6-7.68t-16.896-18.432-9.216-23.04-2.56-22.528q0-20.48 13.824-33.792t37.376-12.288l103.424 0q20.48 0 32.768 6.144t19.456 15.36 10.24 18.944 5.12 16.896q2.048 8.192 4.096 23.04t4.096 30.208q3.072 18.432 6.144 38.912l700.416 0zM892.928 302.08l-641.024-2.048 35.84 185.344 535.552 1.024z"
+                            p-id="4339"></path>
+                      </svg>
+                      <svg
+                        t="1730367881734"
+                        class="icon hover-icon"
+                        viewBox="0 0 1028 1024"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        p-id="4338"
+                      >
+                        <path
+                            d="M332.8 790.528q19.456 0 36.864 7.168t30.208 19.968 20.48 30.208 7.68 36.864-7.68 36.864-20.48 30.208-30.208 20.48-36.864 7.68q-20.48 0-37.888-7.68t-30.208-20.48-20.48-30.208-7.68-36.864 7.68-36.864 20.48-30.208 30.208-19.968 37.888-7.168zM758.784 792.576q19.456 0 37.376 7.168t30.72 19.968 20.48 30.208 7.68 36.864-7.68 36.864-20.48 30.208-30.72 20.48-37.376 7.68-36.864-7.68-30.208-20.48-20.48-30.208-7.68-36.864 7.68-36.864 20.48-30.208 30.208-19.968 36.864-7.168zM930.816 210.944q28.672 0 44.544 7.68t22.528 18.944 6.144 24.064-3.584 22.016-13.312 37.888-22.016 62.976-23.552 68.096-18.944 53.248q-13.312 40.96-33.28 56.832t-49.664 15.872l-35.84 0-65.536 0-86.016 0-96.256 0-253.952 0 14.336 92.16 517.12 0q49.152 0 49.152 41.984 0 20.48-9.728 35.84t-38.4 14.336l-49.152 0-94.208 0-118.784 0-119.808 0-99.328 0-55.296 0q-20.48 0-34.304-9.216t-23.04-24.064-14.848-32.256-8.704-32.768q-1.024-6.144-5.632-29.696t-11.264-58.88-14.848-78.848-16.384-87.552q-19.456-103.424-44.032-230.4l-76.8 0q-15.36 0-25.6-7.68t-16.896-18.432-9.216-23.04-2.56-22.528q0-20.48 13.824-33.792t37.376-12.288l103.424 0q20.48 0 32.768 6.144t19.456 15.36 10.24 18.944 5.12 16.896q2.048 8.192 4.096 23.04t4.096 30.208q3.072 18.432 6.144 38.912l700.416 0zM892.928 302.08l-641.024-2.048 35.84 185.344 535.552 1.024z"
+                            p-id="4339" fill="#ffffff"></path>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .main-content {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .cs-reputation-swiper {
+    padding: 6vw 0;
+  }
+  .cs-reputation-swiper .cs-reputation-title {
+    font-weight: 600;
+    line-height: 1.25em;
+    letter-spacing: -1.2px;
+    font-size: var(--he-fz);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .cs-reputation-swiper .reputation-content {
+    height: 26vw;
+    min-height: 400px;
+    padding: 2vw;
+    border-radius: 1.2vw;
+    border: 1px solid #f2f2f2;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 70%;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-good {
+    width: 40%;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.25em;
+    letter-spacing: 0px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-text {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.6em;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0px;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-info .reputation-product-con {
+    flex: 1;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-author {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.4em;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0px;
+    margin-bottom: 10px;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-address {
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.4em;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0px;
+    color: #999;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-info {
+    display: flex;
+    width: 80%;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-info .reputation-product-img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-info .reputation-product-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-info .reputation-product-title {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: none;
+    text-decoration: none;
+    line-height: 1.4em;
+    letter-spacing: 0px;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-info .reputation-product-price {
+    display: flex;
+    font-size: 13px;
+    line-height: 1.25em;
+    font-weight: 600;
+    font-family: 'Albert Sans', sans-serif;
+    letter-spacing: 0px;
+    text-transform: none;
+    text-decoration: none;
+  }
+
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-foot .reputation-user-img {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #f2f2f2;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-foot .reputation-user-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .cs-reputation-swiper
+    .reputation-content
+    .reputation-product
+    .reputation-product-info
+    .reputation-product-price
+    .compare {
+    color: #ee1818;
+    margin-right: 10px;
+  }
+  .cs-reputation-swiper
+    .reputation-content
+    .reputation-product
+    .reputation-product-info
+    .reputation-product-price
+    .price {
+    text-decoration: line-through;
+    color: #cacaca;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #000;
+    cursor: pointer;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn .icon {
+    width: 60%;
+    height: 60%;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn .hover-icon {
+    display: none;
+  }
+
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn form {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn form button {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn:hover {
+    background-color: #000;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn:hover .btn-icon {
+    display: none;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn:hover .hover-icon {
+    display: block;
+  }
+
+  .swiper-container .swiper-slide {
+    width:30%;
+    margin-right:20px;
+  }
+
+  @media (max-width: 960px) {
+    .cs-reputation-swiper .cs-reputation-title {
+      font-size: var(--he-fz-mb);
+    }
+
+    .swiper-container .swiper-slide {
+      width:100%;
+      margin-right:0px;
+    }
+  }
+</style>
+
+{% javascript %}
+  $(function () {
+    const docWidth = document.documentElement.clientWidth;
+    const docHeight = document.documentElement.clientHeight;
+    const vw = docWidth / 100;
+    const vh = docHeight / 100;
+    let spaceBetween = 1.3 * vw;
+
+    let spaceNum = docWidth > 960 ? 0.012 : 0.05;
+
+    let ScreenwidthShow = false;
+    function checkScreenWidth() {
+      ScreenwidthShow = window.innerWidth < 960;
+    }
+
+    // 初始化时调用一次
+    checkScreenWidth();
+
+    let reputationSwiper = new Swiper('.reputation-swiper', {
+      spaceBetween: docWidth * spaceNum,
+      slidesPerView: 'auto',
+      loop: true,
+      autoplay: {
+        delay: 3000, // 自动轮播的间隔时间（毫秒）
+        disableOnInteraction: false, // 用户操作后是否停止自动轮播
+      },
+      normalizeSlideIndex: false, //关闭标准化的Slide 索引
+      slidesPerView: ScreenwidthShow ? 1 : 3,
+    });
+  });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Custom Reputation Swiper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title",
+      "default": "Hear from Our Happy Customers"
+    },
+    {
+      "type": "range",
+      "label": "fontSize",
+      "id": "he-fz",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "label": "fontSize(mobile)",
+      "id": "he-fz-mb",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 28
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Reputation Swiper Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "avatar",
+          "id": "avatar"
+        },
+        {
+          "type": "text",
+          "id": "reputation-title",
+          "label": "Title",
+          "default": "Hear from Our Happy Customers"
+        },
+        {
+          "type": "text",
+          "id": "reputation-text",
+          "label": "Text",
+          "default": "Hear from Our Happy Customers"
+        },
+        {
+          "type": "text",
+          "id": "reputation-author",
+          "label": "Author",
+          "default": "Hear from Our Happy Customers"
+        },
+        {
+          "type": "text",
+          "id": "reputation-address",
+          "label": "Address",
+          "default": "Hear from Our Happy Customers"
+        },
+        {
+          "type": "product",
+          "id": "reputation-product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Reputation Swiper"
+    }
+  ]
+}
+{% endschema %}

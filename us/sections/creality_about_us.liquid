@@ -1,0 +1,1202 @@
+<style>
+  @charset "UTF-8";
+  #app-{{section.id}} .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .container-box .HarmonyOS_Regular {
+    font-family: "HarmonyOS_Sans_SC_Regular";
+  }
+  .container-box .HarmonyOS_Bold {
+    font-family: "HarmonyOS_Sans_SC_Bold";
+  }
+  .container-box img {
+    vertical-align: middle;
+  }
+  .container-box a {
+    text-decoration: none;
+  }
+  .container-box .common-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.083vw;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+  }
+  .container-box .common-subtitle {
+    margin-top: 0.625vw;
+    font-size: 1.05vw;
+    color: #000000;
+    font-weight: 400;
+    text-align: center;
+  }
+  .container-box .content {
+    width: 62.5vw;
+    margin: 0 auto;
+  }
+
+  #app-{{section.id}} .section1 {
+    position: relative;
+    position: relative;
+  }
+  #app-{{section.id}} .section1 .banner-img {
+    width: 100%;
+    height: 36.458vw;
+    object-fit: cover;
+  }
+  #app-{{section.id}} .section1 .text-box-t {
+    position: absolute;
+    left: 50%;
+    top: 9.375vw;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+  #app-{{section.id}} .section1 .text-box-t .page-title {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 2.917vw;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+    text-align: center;
+  }
+  #app-{{section.id}} .section1 .text-box {
+    padding: 0.78125vw;
+    background-color: #FAFAFA;
+    width: 60.417vw;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(50%) translateX(-50%);
+    -webkit-transform: translateY(50%) translateX(-50%);
+    -moz-transform: translateY(50%) translateX(-50%);
+    -ms-transform: translateY(50%) translateX(-50%);
+    -o-transform: translateY(50%) translateX(-50%);
+    border-radius: 52.031vw;
+  }
+  #app-{{section.id}} .section1 .text-box .img-wrap {
+    padding: 1.042vw;
+    flex-shrink: 0;
+  }
+  #app-{{section.id}} .section1 .text-box .img-wrap img {
+    width: 21.458vw;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  #app-{{section.id}} .section1 .text-box .right-box {
+    padding: 1.042vw 6.771vw 1.042vw 3.385vw;
+  }
+  #app-{{section.id}} .section1 .text-box .right-box .banner-title {
+    font-weight: 500;
+    font-size: 2.083vw;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+  }
+  #app-{{section.id}} .section1 .text-box .right-box .banner-subtitle {
+    margin: 1.042vw 0;
+    font-size: 0.833vw;
+    font-weight: 400;
+    line-height: 1.4em;
+    letter-spacing: 0vw;
+  }
+  #app-{{section.id}} .section1 .text-box .right-box .nums {
+    display: flex;
+    margin-top: 2.5vw;
+  }
+  #app-{{section.id}} .section1 .text-box .right-box .nums .num-item:first-child {
+    margin-right: 2.5vw;
+  }
+  #app-{{section.id}} .section1 .text-box .right-box .nums .num-item .num {
+    font-size: 2.083vw;
+    font-weight: 500;
+    line-height: 1.4em;
+    letter-spacing: 0vw;
+  }
+  #app-{{section.id}} .section1 .text-box .right-box .nums .num-item .desc {
+    font-size: 0.833vw;
+    font-weight: 500;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+  }
+
+  #app-{{section.id}} .section2 {
+    padding-top: 12.552vw;
+    padding-bottom: 3.125vw;
+  }
+  #app-{{section.id}} .section2 .content .info-list {
+    margin-top: 5.208vw;
+    width: 60.417vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  #app-{{section.id}} .section2 .content .info-list .info-item {
+    width: 17.917vw;
+    text-align: center;
+  }
+  #app-{{section.id}} .section2 .content .info-list .info-item .info-icon {
+    margin: 0 auto;
+    width: 3.333vw;
+    height: 3.333vw;
+  }
+  #app-{{section.id}} .section2 .content .info-list .info-item .info-title {
+    font-size: 1.25vw;
+    font-weight: 500;
+    line-height: 1.25em;
+    text-transform: none;
+    font-style: italic;
+    text-decoration: none;
+    letter-spacing: 0vw;
+    color: #000;
+    margin: 0.625vw 0;
+  }
+  #app-{{section.id}} .section2 .content .info-list .info-item .info-desc {
+    font-size: 0.833vw;
+    font-weight: 500;
+    line-height: 1.5em;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: 0vw;
+    color: rgba(0, 0, 0, 0.5607843137);
+  }
+
+  #app-{{section.id}} .section3 {
+    padding: 3.385vw 0;
+    background-color: #F5F5F5;
+  }
+  #app-{{section.id}} .section3 .content .our-vision {
+    padding: 1.042vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  #app-{{section.id}} .section3 .content .our-vision .img-wrap {
+    padding: 0 1.042vw;
+    flex-shrink: 0;
+  }
+  #app-{{section.id}} .section3 .content .our-vision .img-wrap .l-img {
+    width: 29.167vw;
+    border-radius: 0.78125vw;
+    -webkit-border-radius: 0.78125vw;
+    -moz-border-radius: 0.78125vw;
+    -ms-border-radius: 0.78125vw;
+    -o-border-radius: 0.78125vw;
+  }
+  #app-{{section.id}} .section3 .content .our-vision .r-text {
+    padding: 0 1.042vw 0 3.385vw;
+    display: flex;
+    align-items: center;
+  }
+  #app-{{section.id}} .section3 .content .our-vision .r-text .text-wrap .r-title {
+    font-weight: 500;
+    font-size: 2.083vw;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+  }
+  #app-{{section.id}} .section3 .content .our-vision .r-text .text-wrap .r-desc {
+    margin-top: 1.042vw;
+    font-size: 0.833vw;
+    font-weight: 500;
+    line-height: 1.4em;
+    letter-spacing: 0vw;
+    color: rgba(0, 0, 0, 0.5607843137);
+  }
+
+  #app-{{section.id}} .section4 {
+    position: relative;
+    padding: 3.125vw 0;
+  }
+  #app-{{section.id}} .section4 .content .offer {
+    padding: 1.042vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  #app-{{section.id}} .section4 .content .offer .img-wrap {
+    width: 50%;
+    position: relative;
+    padding: 0 1.042vw;
+  }
+  #app-{{section.id}} .section4 .content .offer .img-wrap .img1-wrap {
+    padding-top: 5.833vw;
+    padding-left: 2.083vw;
+  }
+  #app-{{section.id}} .section4 .content .offer .img-wrap .img1-wrap .l-img {
+    position: relative;
+    width: 22.396vw;
+    border-radius: 0.78125vw;
+    -webkit-border-radius: 0.78125vw;
+    -moz-border-radius: 0.78125vw;
+    -ms-border-radius: 0.78125vw;
+    -o-border-radius: 0.78125vw;
+    z-index: 1;
+    transition: all 1s;
+  }
+  #app-{{section.id}} .section4 .content .offer .img-wrap .img1-wrap .l-img:hover {
+    z-index: 99;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+  #app-{{section.id}} .section4 .content .offer .img-wrap .l-img2 {
+    position: absolute;
+    top: 1.302vw;
+    right: 0vw;
+    width: 16.5625vw;
+    z-index: 1;
+    border-radius: 0.78125vw;
+    -webkit-border-radius: 0.78125vw;
+    -moz-border-radius: 0.78125vw;
+    -ms-border-radius: 0.78125vw;
+    -o-border-radius: 0.78125vw;
+    transition: all 1s;
+  }
+  #app-{{section.id}} .section4 .content .offer .img-wrap .l-img2:hover {
+    z-index: 99;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
+  #app-{{section.id}} .section4 .content .offer .l-text {
+    width: 50%;
+    padding: 5.208vw 1.042vw 0 1.042vw;
+    display: flex;
+    align-items: center;
+  }
+  #app-{{section.id}} .section4 .content .offer .l-text .text-wrap .l-title {
+    font-weight: 500;
+    font-size: 3.333vw;
+    text-transform: none;
+    font-style: italic;
+    text-decoration: none;
+    line-height: 3.6675vw;
+    letter-spacing: 0vw;
+  }
+  #app-{{section.id}} .section4 .content .offer .l-text .text-wrap .l-subtitle {
+    margin: 1.25vw 0;
+    font-weight: 600;
+    font-size: 1.042vw;
+    font-family: "HarmonyOS_Sans_SC_Bold";
+    text-transform: none;
+    text-decoration: none;
+    line-height: 1.667vw;
+    letter-spacing: -0.01vw;
+  }
+  #app-{{section.id}} .section4 .content .offer .l-text .text-wrap .r-desc {
+    font-size: 0.833vw;
+    font-weight: 400;
+   
+    text-transform: none;
+    text-decoration: none;
+    line-height: 1.333vw;
+    letter-spacing: -0.008vw;
+    color: rgba(0, 0, 0, 0.6392156863);
+  }
+
+  #app-{{section.id}} .section5 {
+    padding: 3.125vw 0;
+    background-color: #F8F9FB;
+  }
+  #app-{{section.id}} .section5 .content .title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.083vw;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+  }
+  #app-{{section.id}} .section5 .content .more-list {
+    margin-top: 1.042vw;
+    padding: 1.042vw;
+    display: flex;
+  }
+  #app-{{section.id}} .section5 .content .more-list .more-item {
+    flex: 1;
+    text-align: center;
+    margin-right: 1.5625vw;
+  }
+  #app-{{section.id}} .section5 .content .more-list .more-item:last-child {
+    margin-right: 0;
+  }
+  #app-{{section.id}} .section5 .content .more-list .more-item .more-img {
+    width: 100%;
+    border-radius: 52.031vw;
+    margin-bottom: 1.042vw;
+  }
+  #app-{{section.id}} .section5 .content .more-list .more-item .more-title {
+    margin-bottom: 0.833vw;
+    font-weight: 500;
+    font-size: 1.042vw;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+  }
+  #app-{{section.id}} .section5 .content .more-list .more-item .learn-more {
+    font-size: 0.833vw;
+    font-weight: 500;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.4em;
+    letter-spacing: 0vw;
+    color: #14a9de;
+  }
+
+  #app-{{section.id}} .section6 {
+    padding: 3.125vw 0;
+  }
+  #app-{{section.id}} .section6 .title {
+    font-weight: 500;
+    font-size: 1.5625vw;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    text-align: center;
+    color: #000;
+    padding: 1.042vw;
+  }
+  #app-{{section.id}} .section6 .sub-title {
+    text-align: center;
+    font-family: Nunito Sans, sans-serif;
+    font-size: 1.042vw;
+    font-weight: 600;
+    line-height: 1.2em;
+    text-align: center;
+    color: #777;
+  }
+  #app-{{section.id}} .section6 .photo-wall {
+    margin-top: 2.604vw;
+    display: flex;
+  }
+  #app-{{section.id}} .section6 .photo-wall .img-item {
+    flex: 1;
+    text-align: center;
+    margin: 0 auto;
+  }
+  #app-{{section.id}} .section6 .photo-wall .img-item .card-img {
+    max-width: 26.042vw;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    #app-{{section.id}} .pc {
+      display: block;
+    }
+    #app-{{section.id}} .mb {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    #app-{{section.id}} .pc {
+      display: none;
+    }
+    #app-{{section.id}} .mb {
+      display: block;
+    }
+    .container-box .common-title {
+      padding: 0 4.267vw;
+      text-align: center;
+      font-size: 5.467vw;
+      color: #000000;
+      font-weight: 600;
+      margin-bottom: 4.267vw;
+    }
+    .container-box .common-subtitle {
+      padding: 0 4.267vw;
+      font-size: 3.733vw;
+      color: #666666;
+      font-weight: 400;
+      text-align: center;
+    }
+    .container-box .listing1, .container-box .listing2 {
+      display: none;
+    }
+    .container-box .listing1.checked, .container-box .listing2.checked {
+      display: block;
+    }
+    .container-box .view-btn {
+      margin: 0 auto;
+      margin-top: 0.521vw;
+      font-size: 4.042vw;
+      text-decoration: underline;
+      display: flex;
+      color: #93D500;
+      font-weight: 600;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1.563vw;
+      height: 2.604vw;
+      cursor: pointer;
+    }
+    .container-box .hidden {
+      display: none;
+    }
+    .container-box .icon-box {
+      background-color: #FFA018;
+      border-radius: 4vw;
+      padding: 2.667vw 0;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 8vw;
+    }
+    .container-box .icon-box .icon-box-mb {
+      display: flex;
+      width: 100%;
+      margin-bottom: 2.667vw;
+    }
+    .container-box .icon-box .icon-box-mb .icon-item {
+      width: 50%;
+    }
+    .container-box .icon-box .icon-item {
+      cursor: pointer;
+      flex: 1;
+    }
+    .container-box .icon-box .icon-item.active {
+      color: #02B95D;
+    }
+    .container-box .icon-box .icon-item img {
+      width: 21.333vw;
+    }
+    .container-box .icon-box .icon-item .text-title {
+      font-weight: 600;
+      color: #FFC878;
+      font-size: 3.433vw;
+      text-align: center;
+    }
+    .container-box .icon-box .icon-item .text-title.active {
+      color: #ffffff;
+    }
+    .container-box .content {
+      width: 100%;
+      padding: 0 4.267vw;
+      margin: 0 auto;
+    }
+    #app-{{section.id}} .section1 {
+      position: relative;
+      position: relative;
+    }
+    #app-{{section.id}} .section1 .banner-img {
+      width: 100%;
+      height: 186.667vw;
+      object-fit: cover;
+    }
+    #app-{{section.id}} .section1 .text-box-t {
+      width: 100%;
+      position: absolute;
+      left: 50%;
+      top: 40vw;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+    }
+    #app-{{section.id}} .section1 .text-box-t .page-title {
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 8.533vw;
+      font-style: italic;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+      text-align: center;
+    }
+    #app-{{section.id}} .section1 .text-box {
+      padding: 4vw;
+      background-color: #FAFAFA;
+      width: 88vw;
+      display: flex;
+      flex-wrap: wrap;
+      position: absolute;
+      justify-content: center;
+      bottom: 0;
+      left: 50%;
+      transform: translateY(60%) translateX(-50%);
+      -webkit-transform: translateY(60%) translateX(-50%);
+      -moz-transform: translateY(60%) translateX(-50%);
+      -ms-transform: translateY(60%) translateX(-50%);
+      -o-transform: translateY(60%) translateX(-50%);
+      border-radius: 266.4vw 266.4vw 2.133vw 2.133vw;
+    }
+    #app-{{section.id}} .section1 .text-box .img-wrap {
+      padding: 2.667vw;
+    }
+    #app-{{section.id}} .section1 .text-box .img-wrap img {
+      width: 74.667vw;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+    #app-{{section.id}} .section1 .text-box .right-box {
+      text-align: center;
+      padding: 5.333vw;
+    }
+    #app-{{section.id}} .section1 .text-box .right-box .banner-title {
+      font-size: 8vw;
+    }
+    #app-{{section.id}} .section1 .text-box .right-box .banner-subtitle {
+      margin: 5.333vw 0;
+      font-size: 4.267vw;
+      font-weight: 400;
+      line-height: 1.4em;
+      letter-spacing: 0vw;
+    }
+    #app-{{section.id}} .section1 .text-box .right-box .nums {
+      display: flex;
+      margin-top: 12.8vw;
+    }
+    #app-{{section.id}} .section1 .text-box .right-box .nums .num-item:first-child {
+      margin-right: 12.8vw;
+    }
+    #app-{{section.id}} .section1 .text-box .right-box .nums .num-item .num {
+      font-size: 10.667vw;
+      font-weight: 500;
+      line-height: 1.4em;
+      letter-spacing: 0vw;
+    }
+    #app-{{section.id}} .section1 .text-box .right-box .nums .num-item .desc {
+      font-size: 4.267vw;
+      font-weight: 500;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+    }
+    #app-{{section.id}} .section2 {
+      padding-top: 106.667vw;
+      padding-bottom: 16vw;
+    }
+    #app-{{section.id}} .section2 .content .info-list {
+      margin-top: 40vw;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    #app-{{section.id}} .section2 .content .info-list .info-item {
+      margin-top: 5.333vw;
+      width: 100%;
+      text-align: center;
+    }
+    #app-{{section.id}} .section2 .content .info-list .info-item .info-icon {
+      width: 13.333vw;
+      height: 13.333vw;
+    }
+    #app-{{section.id}} .section2 .content .info-list .info-item .info-title {
+      font-size: 5.333vw;
+      font-weight: 500;
+      line-height: 1.25em;
+      text-transform: none;
+      font-style: italic;
+      text-decoration: none;
+      letter-spacing: 0vw;
+      color: #000;
+      margin: 3.2vw 0;
+    }
+    #app-{{section.id}} .section2 .content .info-list .info-item .info-desc {
+      font-size: 4vw;
+      font-weight: 500;
+      line-height: 1.5em;
+      text-transform: none;
+      font-style: normal;
+      text-decoration: none;
+      letter-spacing: 0vw;
+      color: rgba(0, 0, 0, 0.5607843137);
+    }
+    #app-{{section.id}} .section3 {
+      padding: 17.333vw 0;
+      background-color: #F5F5F5;
+    }
+    #app-{{section.id}} .section3 .content .our-vision {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    #app-{{section.id}} .section3 .content .our-vision .img-wrap {
+      width: 100%;
+      padding: 0;
+    }
+    #app-{{section.id}} .section3 .content .our-vision .img-wrap .l-img {
+      width: 100%;
+      border-radius: 4vw;
+      -webkit-border-radius: 4vw;
+      -moz-border-radius: 4vw;
+      -ms-border-radius: 4vw;
+      -o-border-radius: 4vw;
+    }
+    #app-{{section.id}} .section3 .content .our-vision .r-text {
+      margin-top: 5.333vw;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    #app-{{section.id}} .section3 .content .our-vision .r-text .text-wrap {
+      text-align: center;
+    }
+    #app-{{section.id}} .section3 .content .our-vision .r-text .text-wrap .r-title {
+      font-weight: 500;
+      font-size: 8vw;
+      font-style: italic;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+    }
+    #app-{{section.id}} .section3 .content .our-vision .r-text .text-wrap .r-desc {
+      margin-top: 5.333vw;
+      font-size: 4vw;
+      font-weight: 500;
+      line-height: 1.4em;
+      letter-spacing: 0vw;
+      color: rgba(0, 0, 0, 0.5607843137);
+    }
+    #app-{{section.id}} .section4 {
+      position: relative;
+      padding: 3.125vw 0;
+    }
+    #app-{{section.id}} .section4 .content .offer {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    #app-{{section.id}} .section4 .content .offer .img-wrap {
+      width: 100%;
+      position: relative;
+      padding: 0;
+    }
+    #app-{{section.id}} .section4 .content .offer .img-wrap .img1-wrap {
+      padding-top: 29.867vw;
+      padding-left: 0;
+    }
+    #app-{{section.id}} .section4 .content .offer .img-wrap .img1-wrap .l-img {
+      position: relative;
+      width: 53.333vw;
+      border-radius: 4vw;
+      -webkit-border-radius: 4vw;
+      -moz-border-radius: 4vw;
+      -ms-border-radius: 4vw;
+      -o-border-radius: 4vw;
+      z-index: 1;
+      transition: all 1s;
+    }
+    #app-{{section.id}} .section4 .content .offer .img-wrap .img1-wrap .l-img:hover {
+      z-index: 99;
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+    }
+    #app-{{section.id}} .section4 .content .offer .img-wrap .l-img2 {
+      position: absolute;
+      top: 8vw;
+      right: 0vw;
+      width: 45.333vw;
+      z-index: 1;
+      border-radius: 4vw;
+      -webkit-border-radius: 4vw;
+      -moz-border-radius: 4vw;
+      -ms-border-radius: 4vw;
+      -o-border-radius: 4vw;
+      transition: all 1s;
+    }
+    #app-{{section.id}} .section4 .content .offer .img-wrap .l-img2:hover {
+      z-index: 99;
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+    }
+    #app-{{section.id}} .section4 .content .offer .l-text {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    #app-{{section.id}} .section4 .content .offer .l-text .text-wrap .l-title {
+      font-weight: 500;
+      font-size: 10.667vw;
+      text-transform: none;
+      font-style: italic;
+      text-decoration: none;
+      line-height: 18.7776vw;
+      letter-spacing: 0vw;
+    }
+    #app-{{section.id}} .section4 .content .offer .l-text .text-wrap .l-subtitle {
+      margin: 6.4vw 0;
+      font-weight: 600;
+      font-size: 5.333vw;
+      font-family: "HarmonyOS_Sans_SC_Bold";
+      text-transform: none;
+      text-decoration: none;
+      line-height: 8.533vw;
+      letter-spacing: -0.053vw;
+    }
+    #app-{{section.id}} .section4 .content .offer .l-text .text-wrap .r-desc {
+      font-size: 3.733vw;
+      font-weight: 400;
+      
+      text-transform: none;
+      text-decoration: none;
+      line-height: 6.827vw;
+      letter-spacing: -0.043vw;
+      color: rgba(0, 0, 0, 0.6392156863);
+    }
+    #app-{{section.id}} .section5 {
+      padding: 3.125vw 0;
+      background-color: #F8F9FB;
+    }
+    #app-{{section.id}} .section5 .content .title {
+      text-align: center;
+      font-weight: 500;
+      font-size: 8vw;
+      font-style: italic;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+    }
+    #app-{{section.id}} .section5 .content .more-wrap {
+      position: relative;
+    }
+    #app-{{section.id}} .section5 .content .more-wrap .icon-wrap .icon-left, #app-{{section.id}} .section5 .content .more-wrap .icon-wrap .icon-right {
+      top: 25.333vw;
+      width: 9.067vw;
+      height: 9.067vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      background-color: #fff;
+      cursor: pointer;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+    #app-{{section.id}} .section5 .content .more-wrap .icon-wrap .icon-left {
+      left: -3.2vw;
+    }
+    #app-{{section.id}} .section5 .content .more-wrap .icon-wrap .icon-right {
+      right: -3.2vw;
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+    }
+    #app-{{section.id}} .section5 .content .more-wrap .icon-wrap .icon {
+      width: 4.8vw;
+      height: 4.8vw;
+    }
+    #app-{{section.id}} .section5 .content .more-list {
+      margin-top: 5.333vw;
+      padding: 0;
+      display: flex;
+      overflow-x: auto;
+      -ms-overflow-style: none; /* 适用于 Internet Explorer 和 Edge */
+      scrollbar-width: none; /* 适用于 Firefox */
+    }
+    #app-{{section.id}} .section5 .content .more-list::-webkit-scrollbar {
+      display: none; /* 适用于 Chrome, Safari 和其他使用 Webkit 引擎的浏览器 */
+    }
+    #app-{{section.id}} .section5 .content .more-list .more-item {
+      width: 43.6vw;
+      flex: auto;
+      flex-shrink: 0;
+      display: inline-block;
+      text-align: center;
+      margin-right: 4.267vw;
+    }
+    #app-{{section.id}} .section5 .content .more-list .more-item:last-child {
+      margin-right: 0;
+    }
+    #app-{{section.id}} .section5 .content .more-list .more-item .more-img {
+      width: 100%;
+      border-radius: 266.4vw;
+      margin-bottom: 5.333vw;
+    }
+    #app-{{section.id}} .section5 .content .more-list .more-item .more-title {
+      margin-bottom: 4.267vw;
+      font-weight: 500;
+      font-size: 5.333vw;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+    }
+    #app-{{section.id}} .section5 .content .more-list .more-item .learn-more {
+      font-size: 4.267vw;
+      font-weight: 500;
+      text-transform: none;
+      font-style: normal;
+      text-decoration: none;
+      line-height: 1.4em;
+      letter-spacing: 0vw;
+      color: #14a9de;
+    }
+    #app-{{section.id}} .section6 {
+      padding: 3.125vw 0;
+    }
+    #app-{{section.id}} .section6 .title {
+      font-weight: 500;
+      font-size: 8vw;
+      text-transform: uppercase;
+      line-height: 1.2em;
+      text-align: center;
+      color: #000;
+      padding: 5.333vw;
+    }
+    #app-{{section.id}} .section6 .sub-title {
+      text-align: center;
+      font-family: Nunito Sans, sans-serif;
+      font-size: 5.333vw;
+      font-weight: 600;
+      line-height: 1.2em;
+      text-align: center;
+      color: #777;
+      margin-bottom: 8vw;
+    }
+    #app-{{section.id}} .section6 .photo-wall {
+      margin-top: 0vw;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #app-{{section.id}} .section6 .photo-wall .img-item {
+      flex: auto;
+      text-align: center;
+      margin: 0 auto;
+    }
+    #app-{{section.id}} .section6 .photo-wall .img-item:nth-child(1), #app-{{section.id}} .section6 .photo-wall .img-item:nth-child(2) {
+      width: 50%;
+    }
+    #app-{{section.id}} .section6 .photo-wall .img-item:nth-child(3), #app-{{section.id}} .section6 .photo-wall .img-item:nth-child(4) {
+      width: 100%;
+    }
+    #app-{{section.id}} .section6 .photo-wall .img-item .card-img {
+      max-width: 133.333vw;
+      width: 100%;
+      margin-left: 0;
+      transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      -o-transform: translateX(0%);
+    }
+  }
+</style>
+
+<div id="app-{{section.id}}" class="container-box">
+  <div class="section1"> 
+    <div class="text-box-t">
+      <div class="page-title fadein HarmonyOS_Bold">CrealityFalcon <br>Crafted to Create  <br class="mb"> Masterpieces </div>
+    </div>
+    <div class="text-box">
+      <div class="img-wrap">
+        <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/20240816-101238.jpg?v=1723774363" alt="BACK TO SCHOOL SALE">
+      </div>
+      <div class="right-box">
+        <div class="banner-title HarmonyOS_Bold">Who We Are</div>
+        <div class="banner-subtitle">Falcon was initially born out of Creality, marking our first endeavor into emphasizing the essence of creation. Over the past two years, we've engaged in profound dialogues with numerous creators from different walks of life. These meaningful interactions have influenced our decision to commit fully to supporting creators. This commitment serves as the very foundation for Falcon's existence.</div>
+        <div class="nums">
+          <div class="num-item">
+            <div class="num"><span id="num1" class="chenge-num">00</span>+</div> 
+            <div class="desc">Years of Experiences</div>
+          </div>
+          <div class="num-item">
+            <div class="num"><span id="num2" class="chenge-num">00</span>K+</div>
+            <div class="desc">Customer Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img class="banner-img" 
+      src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Crealityfalcon-engravers_768bc3a9-5ea6-425b-9b30-3aec3b73e3a4.jpg?v=1723517171" 
+      srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/20240815-102314.jpg?v=1723688599 768w, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Crealityfalcon-engravers_768bc3a9-5ea6-425b-9b30-3aec3b73e3a4.jpg?v=1723517171"
+      alt="Summer Crafting Bonanza">
+  </div>
+  <div class="section2">
+    <div class="content">
+      <div class="info-list">
+        <div class="info-item">
+          <img class="info-icon" src="https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-fv85od866eic-ft-ab-1.png?v=1704787055" alt="">
+          <div class="info-title HarmonyOS_Bold">Quality</div>
+          <div class="info-desc">CrealityFalcon offers 12 months of warranty, delivering high-quality products through rigorous testing and precision engineering. Our commitment ensures continuous improvement of user experiences, consistently meeting and exceeding customer expectations.</div>
+        </div>
+        <div class="info-item">
+          <img class="info-icon" src="https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-nH6wxRLYwwic-ft-ab-2.png?v=1704787190" alt="">
+          <div class="info-title HarmonyOS_Bold">Innovation</div>
+          <div class="info-desc">We continuously achieve technological breakthroughs, leading the development of the laser engraving industry. Our latest product, such as the 60W laser engraving machine, is the first in the industry to reach this wattage. Looking ahead, we will introduce more iterative innovative products, so stay tuned.</div>
+        </div>
+        <div class="info-item">
+          <img class="info-icon" src="https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-ntG7aZFml0ic-ft-ab-3.png?v=1704787163" alt="">
+          <div class="info-title HarmonyOS_Bold">User Experience</div>
+          <div class="info-desc">We prioritize user experience by offering user-friendly designs and a comprehensive range of accessory kits to meet diverse user needs. Our products are not only easy to use but also support a wide range of creative applications, inspiring user creativity and driving technological exploration.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section3">
+    <div class="content">
+      <div class="our-vision">
+        <div class="img-wrap">
+          <img class="l-img" src="https://cdn.shopify.com/s/files/1/0678/2933/4237/files/creality_1.jpg?v=1721125068" alt="">
+        </div>
+        <div class="r-text fadein">
+          <div class="text-wrap">
+            <h3 class="r-title">Our Vision</h3>
+            <div class="r-desc">
+              At CrealityFalcon, our vision is to set new benchmarks in laser engraving technology. We aspire to revolutionize the industry by delivering cutting-edge machines that combine precision, versatility, and user-friendliness, empowering users to unleash their creative potential.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>      
+  </div>
+  <div class="section4">
+    <div class="content">
+      <div class="offer">
+        <div class="l-text fadein">
+          <div class="text-wrap">
+            <h3 class="l-title">What We Offer</h3>
+            <h3 class="l-subtitle">“Falcon Laser Engraver”</h3>
+            <div class="r-desc">
+              CrealityFalcon pioneers innovative, user-centric designs, consistently exceeding customer expectations. Our laser technology advancements, including the CR-Laser Falcon 10W, the popular Falcon2 22W series, and the groundbreaking 40W model, the world's first 60W laser cutter, push industry boundaries and spark user creativity. We support our community with a variety of accessory kits and crafting materials, enhancing creative possibilities and technological exploration.
+            </div>
+          </div>
+        </div>
+        <div class="img-wrap">
+          <img class="l-img2" src="https://cdn.shopify.com/s/files/1/0678/2933/4237/files/crealityfalcon-falcon-pro-10w-engraver-01_5445c397-3c8c-45fe-9740-f3b41688afa0.jpg?v=1721184374" alt="">
+          <div class="img1-wrap">
+            <img class="l-img" src="https://cdn.shopify.com/s/files/1/0678/2933/4237/files/falcon-laser-engraver-cutter_2c17eb07-ef84-4531-9073-c8b8e45b485b.jpg?v=1721195884" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section5">
+    <div class="content">
+      <div class="title">Meet Our Featured Products</div>
+      <div class="more-wrap fadein">
+        <div class="mb icon-wrap">
+          <div id="scrollLeft" class="icon-left">
+            <svg t="1723704914929" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10193" width="64" height="64"><path d="M765.952 124.928l0 81.92 0 129.024 0 156.672 0 159.744q0 76.8 0.512 141.312t0.512 100.352q0 24.576-11.776 40.96t-29.696 22.016-39.424 0-39.936-24.064q-37.888-38.912-81.92-81.408t-90.624-85.504-94.208-86.016-91.648-82.944q-19.456-17.408-29.184-43.008t-8.704-53.248 11.776-54.272 32.256-45.056q39.936-34.816 79.36-70.144t80.896-72.704 87.04-78.336 96.768-87.04q22.528-20.48 45.568-27.136t41.472-2.048 29.696 20.48 11.264 40.448z" p-id="10194"></path></svg>
+          </div>
+          <div id="scrollRight" class="icon-right">
+            <svg t="1723704914929" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10193" width="64" height="64"><path d="M765.952 124.928l0 81.92 0 129.024 0 156.672 0 159.744q0 76.8 0.512 141.312t0.512 100.352q0 24.576-11.776 40.96t-29.696 22.016-39.424 0-39.936-24.064q-37.888-38.912-81.92-81.408t-90.624-85.504-94.208-86.016-91.648-82.944q-19.456-17.408-29.184-43.008t-8.704-53.248 11.776-54.272 32.256-45.056q39.936-34.816 79.36-70.144t80.896-72.704 87.04-78.336 96.768-87.04q22.528-20.48 45.568-27.136t41.472-2.048 29.696 20.48 11.264 40.448z" p-id="10194"></path></svg>
+          </div>
+        </div>
+        <div class="more-list">
+          <div class="more-item">
+            <img class="more-img" src="https://cdn.shopify.com/s/files/1/0678/2933/4237/files/laser-engraving_1c7d3d08-6c7d-448c-824f-7cb0a53c24f2.jpg?v=1721184583" alt="">
+            <div class="more-title">CR-Laser Falcon Engravers</div>
+            <a href="{{section.settings.link1}}" target="_blank" rel="noopener noreferrer">
+              <div class="learn-more">Learn More >></div>
+            </a>
+          </div>
+          <div class="more-item">
+            <img class="more-img" src="https://cdn.shopify.com/s/files/1/0678/2933/4237/files/crealityfalcon-falcon2-40w-engraver-02_a2d450a1-3646-4f83-bc5d-ab91a5abc1cb.jpg?v=1721184654" alt="">
+            <div class="more-title">Falcon2 Laser Engravers</div>
+            <a href="{{section.settings.link2}}" target="_blank" rel="noopener noreferrer">
+              <div class="learn-more">Learn More >></div>
+            </a>
+          </div>
+          <div class="more-item">
+            <img class="more-img" src="https://cdn.shopify.com/s/files/1/0678/2933/4237/files/falcon2-pro-60w-wap_a066b620-c828-4a0f-b3b1-1552fc21ac7d.jpg?v=1721184714" alt="">
+            <div class="more-title">Falcon2 Pro Laser Cutter</div>
+            <a href="{{section.settings.link3}}" target="_blank" rel="noopener noreferrer">
+              <div class="learn-more">Learn More >></div>
+            </a>
+          </div>
+          <div class="more-item">
+            <img class="more-img" src="https://cdn.shopify.com/s/files/1/0678/2933/4237/files/materials-for-engraver-wap_ba3f16fe-52c7-476a-b21e-55bde8003e48.jpg?v=1721184737" alt="">
+            <div class="more-title">Crafting Materials</div>
+            <a href="{{section.settings.link4}}" target="_blank" rel="noopener noreferrer">
+              <div class="learn-more">Learn More >></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="section6">
+    <div class="title">Unleashing Creativity: Explore the Extraordinary</div>
+    <div class="sub-title">@crealityfalcon</div>
+    <div class="photo-wall">
+      <div class="img-item">
+        <img class="card-img" src="https://cdn.shopify.com/s/files/1/0678/2933/4237/files/clock-Obj_LunchTrucks.jpg?v=1720431437&width=500&height=500&crop=center" alt="">
+      </div>
+      <div class="img-item">
+        <img class="card-img" src="https://cdn.shopify.com/s/files/1/0678/2933/4237/files/Joshua_Godbee-laser-bottle.jpg?v=1721197268&width=500&height=500&crop=center" alt="">
+      </div>
+      <div class="img-item">
+        <img class="card-img" src="https://cdn.shopify.com/s/files/1/0678/2933/4237/files/Rostislav_Matuska-earrings2_3f52e8aa-9c8b-4907-95c0-716a1a6ba3ba.jpg?v=1721120832&width=500&height=500&crop=center" alt="">
+      </div>
+      <div class="img-item">
+        <img class="card-img" src="https://cdn.shopify.com/s/files/1/0678/2933/4237/files/Henry_Dandi-merry-man_125f6b5f-76f9-4998-9ba2-6abc197f4f93.jpg?v=1721196636&width=500&height=500&crop=center" alt="">
+      </div>
+    </div>
+    <div class="photo-wall">
+      <div class="img-item">
+        <img class="card-img" src="https://cdn.shopify.com/s/files/1/0678/2933/4237/files/Rostislav_Matuska-_3_6f30bb2c-3c2d-4c92-a0ca-696639cbbb73.jpg?v=1720431294&width=500&height=500&crop=center" alt="">
+      </div>
+      <div class="img-item">
+        <img class="card-img" src="https://cdn.shopify.com/s/files/1/0678/2933/4237/files/Rostislav_Matuska.jpg?v=1720431322&width=500&height=500&crop=center" alt="">
+      </div>
+      <div class="img-item">
+        <img class="card-img" src="https://cdn.shopify.com/s/files/1/0678/2933/4237/files/diy-cat.jpg?v=1720430776&width=500&height=500&crop=center" alt="">
+      </div>
+      <div class="img-item">
+        <img class="card-img" src="https://cdn.shopify.com/s/files/1/0678/2933/4237/files/cute_butterfly3.jpg?v=1720430733&width=500&height=500&crop=center" alt="">
+      </div>
+    </div>
+  </div> -->
+</div>
+
+<script type="module">
+  $(function() {
+    const isMobile = document.documentElement.clientWidth <= 768;
+    // 监听滚动
+    function fadeInListen() {
+      var fadeIn = $('.container-box').find('.fadein');
+      fadeIn.each(function () {
+        let element = this;
+        let {
+          scrub,
+          reverse,
+          duration,
+          actions,
+          fn
+        } = $(this).data()
+
+        gsap.set(element, {
+          opacity: 0,
+          y: 20
+        });
+        let toggleActions = "play none none none";
+        let start = $(this).data('start') || 70;
+        duration ? '' : duration = 0.8
+        let tl = gsap.to(element, {
+          opacity: 1,
+          y: 0,
+          duration
+        });
+        if (reverse) {
+          toggleActions = "play none none reverse"
+        }
+
+        ScrollTrigger.create({
+          animation: tl,
+          trigger: element,
+          toggleActions,
+          start: `top ${start}%`, // 调整触发点，视情况而定
+          onEnter: function () {
+
+          },
+          once: true // 只触发一次
+        });
+      });
+    }
+    fadeInListen();
+
+    // 轮播一
+    new Swiper('.swiper-products .swiper', {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3000
+      },
+      loop: true
+    });
+
+    // seciton 6 动画
+    const numtl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".nums",
+        start: "top 50%", // 当到达视口70%位置时触发
+        end: "bottom 20%", // 当到底部时结束
+        // scrub: 1, // 使动画跟随滚动
+        // markers: true // 显示触发器的起始和终止点（调试用）
+      }
+    });
+
+    function animateNumber(elementId,endValue, isUNumber = false) {
+      const element = $("#" + elementId);
+      // console.log(element,'element')
+      return gsap.to("#" + elementId, {
+        innerText: endValue,
+        duration: .5,
+        snap: { innerText: 1 },
+        ease: "none",
+        onUpdate: function() {
+          console.log(this.targets()[0],'this.targets()[0]');
+          const currentValue = Math.ceil(this.targets()[0].innerText);
+          let formattedValue = isUNumber ?
+            new Intl.NumberFormat('en-US').format(currentValue) :
+            currentValue;
+          element.text(formattedValue);
+        }
+      });
+    };
+
+    $('#scrollLeft').click(function(){
+      $('.more-list').animate({
+        scrollLeft: 0 
+      }, 1000); 
+    }); 
+    $('#scrollRight').click(function(){
+      console.log($(this)[0].scrollWidth,'$(this)[0].scrollWidth');
+      $('.more-list').animate({
+        scrollLeft: Number($('.more-list')[0].scrollWidth)
+      }, 1000);
+    });
+
+    // 将动画添加到Timeline中，并增加较小的延迟时间
+    numtl.add(animateNumber("num1", 10, true), 0)
+      .add(animateNumber("num2", 10), 0.5)
+})
+</script>
+
+{% schema %}
+  {
+    "name": "creality aubot us",
+    "settings": [
+      {
+        "type": "url",
+        "id": "link1",
+        "label": "链接1"
+      },
+      {
+        "type": "url",
+        "id": "link2",
+        "label": "链接2"
+      },
+      {
+        "type": "url",
+        "id": "link3",
+        "label": "链接3"
+      },
+      {
+        "type": "url",
+        "id": "link4",
+        "label": "链接4"
+      }
+    ],
+    "blocks": [],
+    "presets": [
+      {
+        "name": "creality aubot us"
+      }
+    ]
+  }
+{% endschema %}

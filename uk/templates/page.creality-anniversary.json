@@ -1,0 +1,436 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "2025_03_27_s1_NUTPAT": {
+      "type": "2025-03-27-s1",
+      "settings": {
+        "background_image": "shopify://shop_images/74b96dbb2d19db9758ba306fc55ad040.jpg",
+        "background_image_mobile": "shopify://shop_images/10_ead2818e-54e9-42f1-ba89-9675da19b6ca.png",
+        "logo_image": "shopify://shop_images/11_f9db805b-58e2-4f68-9fb2-c65a70b21fc0.png",
+        "logo_text": "Anniversary",
+        "headline": "Join the Celebration!",
+        "subheadline": "Engrave Excellence, Craft the Future",
+        "offer_text": "Up To 52% OFF",
+        "date_range": "Apr 1 - Apr 10",
+        "countdown_end_date": "2025-4-11 7:59:59",
+        "days_text": "Days",
+        "hours_text": "Hours",
+        "minutes_text": "Minutes",
+        "seconds_text": "Seconds"
+      }
+    },
+    "2025_3_27_s2_mnj9p9": {
+      "type": "2025-3-27-s2",
+      "blocks": {
+        "ticker_fKX7Qj": {
+          "type": "ticker",
+          "settings": {
+            "is_reverse": false,
+            "offset": 0,
+            "duration": 10,
+            "gap": 28
+          }
+        }
+      },
+      "block_order": [
+        "ticker_fKX7Qj"
+      ],
+      "disabled": true,
+      "settings": {
+        "headline": "Win Your Ultimate 11th Anniversary Wishlist",
+        "subheadline": "Sign up now to share your heartfelt wishes for Anniversary and stand a chance to win fantastic products!",
+        "countdown_end_date": "2024-12-31 23:59:59",
+        "days_text": "DAYS",
+        "hours_text": "HOURS",
+        "minutes_text": "MINUTES",
+        "seconds_text": "SECONDS",
+        "cta_text": "Sign up and write your Anniversary wishes",
+        "cta_button_text": "Sign Up"
+      }
+    },
+    "2025_03_27_s3_X4k3pG": {
+      "type": "2025-03-27-s3",
+      "settings": {
+        "background_image": "shopify://shop_images/7_fdf4eea4-4469-4b36-8e85-4d4982ba392a.png",
+        "background_image_mobile": "shopify://shop_images/7_ad157371-505b-4c5c-956b-acf920e32ed6.png",
+        "gift_image_1": "shopify://shop_images/3_e3ae639f-ac4b-4032-9280-d284947b9562.png",
+        "gift_image_2": "shopify://shop_images/4_ebc55b62-c385-41fb-85d7-3d30601c2625.png",
+        "gift_image_3": "shopify://shop_images/5_a83888cc-ec51-4189-aa0c-87caeae8f956.png",
+        "gift_image_4": "shopify://shop_images/2_0db8d88c-283b-49ae-a2f8-379c62d39eb7.png",
+        "gift_image_5": "shopify://shop_images/1_4dc60d93-adba-436c-b3fe-cf2238da285e.png",
+        "gift_image_6": "shopify://shop_images/6_473c5a79-6f9c-4d3f-afe8-5ec26bcacf39.png"
+      }
+    },
+    "featured_product_JeG6Aa": {
+      "type": "featured-product",
+      "blocks": {
+        "title_iMDV7h": {
+          "type": "title",
+          "settings": {
+            "fontsize_text": 35,
+            "fontsize_text_mb": 24,
+            "color_title": "#232323",
+            "spacing_top": 0,
+            "spacing_bottom": 17
+          }
+        },
+        "meta_qQLb7F": {
+          "type": "meta",
+          "disabled": true,
+          "settings": {
+            "spacing_top": 0,
+            "spacing_bottom": 13,
+            "show_review": true,
+            "show_sold_in": true,
+            "sold_in_number": "3,5,6,7,8,10,12,15",
+            "sold_in_hours": "10,15,16,17,18,20,25,35",
+            "color_text_sold_in": "#b60b32"
+          }
+        },
+        "short_description_T4nrEB": {
+          "type": "short_description",
+          "disabled": true,
+          "settings": {
+            "word_number": "17",
+            "fontsize_text": 16,
+            "color_text": "#ffffff",
+            "spacing_top": 0,
+            "spacing_bottom": 24
+          }
+        },
+        "product_text_VzxDhF": {
+          "type": "product_text",
+          "settings": {
+            "text": "",
+            "text_icon": "",
+            "text_description": "One person can only buy one 0.1￡ gift card",
+            "fontsize_text": 14,
+            "content_spacing": 15,
+            "custom_block_align": "left",
+            "color_title": "#232323",
+            "background_color_block": "#ffffff",
+            "background_gradient_color_block": "",
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "price_c9yhBw": {
+          "type": "price",
+          "settings": {
+            "fontsize_text": 23,
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "product_text_aY7tdd": {
+          "type": "product_text",
+          "settings": {
+            "text": "",
+            "text_icon": "",
+            "text_description": "Checkout at £0.1 Automatically",
+            "fontsize_text": 19,
+            "content_spacing": 0,
+            "custom_block_align": "left",
+            "color_title": "#e95144",
+            "background_color_block": "rgba(0,0,0,0)",
+            "background_gradient_color_block": "",
+            "spacing_top": 0,
+            "spacing_bottom": 26
+          }
+        },
+        "variant_picker_hVgkGd": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "show_variant_image_group": false,
+            "color_label": "#232323",
+            "enable_border_top": false,
+            "enable_border_bottom": false,
+            "color_border": "#e6e6e6",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "quantity_selector_PbVchf": {
+          "type": "quantity_selector",
+          "settings": {
+            "qty_style": "1",
+            "qty_layout": "2",
+            "color_qty_label": "#ffffff",
+            "color_qty_input": "#f2f5ff",
+            "bg_color_qty_input": "#ffffff",
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "buy_buttons_rVzAb3": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "fontsize_text": 14,
+            "checkbox_color": "#ffffff",
+            "checkbox_border_color": "#494a4d",
+            "spacing_top": 0,
+            "spacing_bottom": 15,
+            "color_qty_label": "#ffffff",
+            "color_qty_input": "#f2f5ff",
+            "bg_color_qty_input": "rgba(0,0,0,0)",
+            "wishlist_color": "#747474",
+            "wishlist_border_color": "#121212",
+            "wishlist_bg_color": "#121212",
+            "wishlist_color_hover": "#ffffff",
+            "wishlist_border_color_hover": "#3faeea",
+            "wishlist_bg_color_hover": "#3faeea",
+            "atc_animation": "horizontal-shaking",
+            "atc_color": "#ffffff",
+            "atc_border_color": "rgba(0,0,0,0)",
+            "atc_bg_color": "rgba(0,0,0,0)",
+            "atc_bg_color_gradient": "linear-gradient(90deg, rgba(48, 188, 237, 1), rgba(127, 72, 176, 1) 50%, rgba(229, 26, 203, 1) 100%)",
+            "atc_color_hover": "#ffffff",
+            "atc_border_color_hover": "rgba(0,0,0,0)",
+            "atc_bg_color_hover": "rgba(0,0,0,0)",
+            "atc_bg_color_gradient_hover": "linear-gradient(#000, #000) padding-box,        linear-gradient(90deg, rgba(48, 188, 237, 1), rgba(127, 72, 176, 1) 50%, rgba(229, 26, 203, 1) 100%) border-box",
+            "bin_color": "#ffffff",
+            "bin_border_color": "rgba(0,0,0,0)",
+            "bin_bg_color": "rgba(0,0,0,0)",
+            "bin_bg_color_gradient": "linear-gradient(#000, #000) padding-box,        linear-gradient(90deg, rgba(48, 188, 237, 1), rgba(127, 72, 176, 1) 50%, rgba(229, 26, 203, 1) 100%) border-box",
+            "bin_color_hover": "#ffffff",
+            "bin_border_color_hover": "rgba(0,0,0,0)",
+            "bin_bg_color_hover": "rgba(0,0,0,0)",
+            "bin_bg_color_hover_gradient": "linear-gradient(90deg, rgba(48, 188, 237, 1), rgba(127, 72, 176, 1) 50%, rgba(229, 26, 203, 1) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "title_iMDV7h",
+        "meta_qQLb7F",
+        "short_description_T4nrEB",
+        "product_text_VzxDhF",
+        "price_c9yhBw",
+        "product_text_aY7tdd",
+        "variant_picker_hVgkGd",
+        "quantity_selector_PbVchf",
+        "buy_buttons_rVzAb3"
+      ],
+      "settings": {
+        "id_section": "",
+        "container": "1170",
+        "padding_full_width": 0,
+        "show_sticky_info": false,
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "bg_color_product": "#fff7e6",
+        "title": "0.1 Fash Sale Starts at 10am on Apr. 1st",
+        "color_title": "#000000",
+        "fontsize_title": 34,
+        "fontsize_title_mb": 24,
+        "margin_bottom_title": 48,
+        "margin_bottom_title_mb": 20,
+        "des": "",
+        "color_des": "#232323",
+        "fontsize_des": 16,
+        "margin_bottom_des": 45,
+        "margin_bottom_des_mb": 30,
+        "title_align": "center",
+        "featured_product": "creality-falcon-gift-card-1",
+        "main_image_arrows_desktop": true,
+        "main_image_counter_mobile": false,
+        "main_image_position": "left",
+        "main_image_bg_color": "#fff7e6",
+        "show_thumbnail_mobile": false,
+        "thumnail_layout": "4",
+        "thumbnail_to_show": 5,
+        "thumbnail_active_color": "#75c4d9",
+        "thumbnail_arrow_color_mb": "#ffffff",
+        "thumbnail_image_bg_color": "#ffffff",
+        "product_image_ratio": "square",
+        "portrait_aspect_ratio": 100,
+        "media_fit": "unset",
+        "product_image_popup": "fancybox",
+        "video_layout": "popup",
+        "show_badge": false,
+        "show_qty": true
+      }
+    },
+    "2025_03_27_s4_TztWDc": {
+      "type": "2025-03-27-s4",
+      "settings": {
+        "background_image": "shopify://shop_images/41.png",
+        "background_image_mobile": "shopify://shop_images/42.png",
+        "headline": "Choose the one that's right for you",
+        "subheadline": "Unmissable 11th Anniversary Celebration Sale: Choose the Perfect Machine for You",
+        "button_text": "Compare Engravers",
+        "button_url": "shopify://pages/compare",
+        "products": [
+          "falcon2-22w-laser-engraver-cutter",
+          "falcon2-pro-enclosed-laser-engraver-cutter",
+          "falcon2-pro-60w-enclosed-laser-engraver-and-cutter",
+          "cr-laser-falcon-engraver-10w-low-wattage",
+          "falcon2-40w-laser-engraver-and-cutter",
+          "cr-laser-falcon-5w-laser-engraver"
+        ],
+        "slides_per_view": 5
+      }
+    },
+    "2025_03_27_s5_yjfCB3": {
+      "type": "2025-03-27-s5",
+      "blocks": {
+        "bestsell-product-slider-beginner": {
+          "type": "bestsell-product-slider",
+          "static": true,
+          "settings": {
+            "products": [
+              "cr-laser-falcon-10w-laser-engraver-for-sale",
+              "cr-laser-falcon-5w-laser-engraver",
+              "creality-falcon-a1-laser-engraver-cutter"
+            ],
+            "product_level": "Beginner",
+            "card_layout_reverse": false
+          }
+        },
+        "offsell-product-small-slider-beginner": {
+          "type": "offsell-product-small-slider",
+          "static": true,
+          "settings": {
+            "collection": "accessories-for-5w-7-5w-10w-for-laser-engravers"
+          }
+        },
+        "bestsell-product-slider-passionate-creator": {
+          "type": "bestsell-product-slider",
+          "static": true,
+          "settings": {
+            "products": [
+              "falcon2-22w-laser-engraver-cutter"
+            ],
+            "product_level": "Advanced",
+            "card_layout_reverse": false
+          }
+        },
+        "offsell-product-small-slider-passionate-creator": {
+          "type": "offsell-product-small-slider",
+          "static": true,
+          "settings": {
+            "collection": "accessories-for-12w-22w-40w-60w-laser-cutter"
+          }
+        },
+        "bestsell-product-slider-professional": {
+          "type": "bestsell-product-slider",
+          "static": true,
+          "settings": {
+            "products": [
+              "falcon2-pro-enclosed-laser-engraver-cutter"
+            ],
+            "product_level": "Pro",
+            "card_layout_reverse": false
+          }
+        },
+        "offsell-product-small-slider-professional": {
+          "type": "offsell-product-small-slider",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "collection": "accessories-for-12w-22w-40w-60w-laser-cutter"
+          }
+        }
+      },
+      "settings": {
+        "background_image": "shopify://shop_images/7d7bdc1864f980a470c693a8cef152c0.png",
+        "headline_beginner": "Best-Seller Falcon2 Engraver and Cutter",
+        "subheadline_beginner": "Falcon 2 Series: Versatile 22W and 40W Laser Engravers for Passionate Creators.",
+        "headline_passionate_creator": "Falcon2 Laser Engraver and Cutter",
+        "subheadline_passionate_creator": "Falcon 2 Series: Versatile 22W and 40W Laser Engravers for Passionate Creators.",
+        "headline_professional": "Falcon2 Pro Enclosed Laser Engraver and Cutter",
+        "subheadline_professional": "The World's First 60W | FDA Class 1 Safety Certification | Cuts up to 30mm wood and 0.15mm stainless steel"
+      }
+    },
+    "2025_03_27_s7_wm3AnG": {
+      "type": "2025-03-27-s7",
+      "blocks": {
+        "youtube_video_slider_UngNfg": {
+          "type": "youtube-video-slider",
+          "settings": {
+            "autoplay": true
+          },
+          "blocks": {
+            "youtube_video_card_yNBKfa": {
+              "type": "youtube-video-card",
+              "settings": {
+                "video_url": "https://www.youtube.com/watch?v=vn4q9RACK2E",
+                "autoplay": false
+              }
+            },
+            "youtube_video_card_iPnn7Q": {
+              "type": "youtube-video-card",
+              "settings": {
+                "video_url": "https://www.youtube.com/watch?v=mviPc5Ermag",
+                "autoplay": false
+              }
+            },
+            "youtube_video_card_Uf6RYE": {
+              "type": "youtube-video-card",
+              "settings": {
+                "video_url": "https://www.youtube.com/watch?v=XWV6yWgFkG8",
+                "autoplay": false
+              }
+            },
+            "youtube_video_card_a8RMJa": {
+              "type": "youtube-video-card",
+              "settings": {
+                "video_url": "https://www.youtube.com/watch?v=2Z9vYQ2EM2c&t",
+                "autoplay": false
+              }
+            },
+            "youtube_video_card_XApY78": {
+              "type": "youtube-video-card",
+              "settings": {
+                "video_url": "https://www.youtube.com/watch?v=fKk562Nl8kM",
+                "autoplay": false
+              }
+            }
+          },
+          "block_order": [
+            "youtube_video_card_yNBKfa",
+            "youtube_video_card_iPnn7Q",
+            "youtube_video_card_Uf6RYE",
+            "youtube_video_card_a8RMJa",
+            "youtube_video_card_XApY78"
+          ]
+        }
+      },
+      "block_order": [
+        "youtube_video_slider_UngNfg"
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "headline": "Product Video Center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "2025_03_27_s1_NUTPAT",
+    "2025_3_27_s2_mnj9p9",
+    "2025_03_27_s3_X4k3pG",
+    "featured_product_JeG6Aa",
+    "2025_03_27_s4_TztWDc",
+    "2025_03_27_s5_yjfCB3",
+    "2025_03_27_s7_wm3AnG"
+  ]
+}

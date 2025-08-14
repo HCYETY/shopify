@@ -1,0 +1,610 @@
+<link rel="stylesheet" href="{{ 'swiper.css' | asset_url }}">
+<script src="{{ 'swiper.js' | asset_url }}" defer></script>
+
+{% style %}
+  .offsell-product-small-slider-container {
+    width: 100%;
+    height: 375px;
+    max-width: 700px;
+    position: relative;
+  }
+
+  .offsell-product-small-slider {
+    height: 100%;
+    overflow: hidden;
+  }
+  .offsell-product-small-slider .swiper-slide {
+    /* width: 221px !important;
+    height: 375px !important; */
+    border-radius: 10px;
+    user-select: none;
+    overflow: hidden;
+  }
+  .offsell-product-small-slider .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .offsell-product-card {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 左侧产品图片样式 */
+  .offsell-product-card .product-image-container {
+    position: relative;
+    width: 100%;
+    height: 192.5px;
+    padding: 15.5px;
+    background-color: #fff;
+  }
+  .offsell-product-card .offsell-product-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .offsell-product-card .discount-badge {
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    color: #000;
+    padding: 8px 10px;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: bold;
+    z-index: 1;
+    border-radius: 0px 0px 5px 5px;
+    background: linear-gradient(-28deg, #f9d231, #fffcbb, #d48d02);
+    text-align: center;
+  }
+
+  /* 右侧产品信息样式 */
+  .offsell-product-card .product-info {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15.5px 22.5px;
+  }
+
+  .offsell-product-card .level-badge {
+    background-color: #d68c00;
+    color: white;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 11px;
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 10px;
+  }
+
+  .offsell-product-card .product-title {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    line-height: 1;
+    max-height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .offsell-product-card .product-description {
+    font-size: 10px;
+    color: #808080;
+    line-height: 1;
+    font-weight: 600;
+    max-height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .offsell-product-card .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17.5px;
+    margin-top: auto;
+  }
+  /* 价格样式 */
+  .offsell-product-card .price-container {
+    display: flex;
+    align-items: end;
+    gap: 6px;
+  }
+
+  .offsell-product-card .original-price {
+    text-decoration: line-through;
+    color: #666;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .offsell-product-card .current-price {
+    font-size: 20px;
+    color: #d48d02;
+    line-height: 1;
+    font-weight: 600;
+  }
+
+  /* 按钮样式 */
+  .offsell-product-card .button-container {
+    display: flex;
+    gap: 10px;
+  }
+  .offsell-product-card .button-container .card-action {
+    width: fit-content;
+  }
+  .offsell-product-card .button {
+    padding: 9px 12.5px !important;
+    border-radius: 14px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 1;
+    background: linear-gradient(-28deg, #f9d231, #fffcbb, #d48d02);
+    color: #000;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    width: fit-content;
+    min-width: unset;
+  }
+  .offsell-product-card .button:hover {
+    background: linear-gradient(-28deg, #f9d231, #fffcbb, #d48d02);
+    color: #000;
+    border: none;
+    box-shadow: none;
+  }
+  .offsell-product-card .is-loading.button {
+    width: 90px;
+    height: 29px;
+  }
+  .offsell-product-card .is-loading.button:hover {
+    background: none;
+  }
+  .offsell-product-card .is-loading.button:before {
+    left: 40%;
+    transform: translateX(0);
+  }
+
+  .offsell-product-small-slider-container .swiper-button-next,
+  .offsell-product-small-slider-container .swiper-button-prev {
+    width: 31px;
+    height: 31px;
+    color: #fff;
+    background-color: #d48d02;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .offsell-product-small-slider-container .swiper-button-next:after,
+  .offsell-product-small-slider-container .swiper-button-prev:after {
+    display: none;
+  }
+  .offsell-product-small-slider-container .swiper-button-prev {
+    left: 0;
+    transform: translateX(calc(-100% - 12px));
+  }
+  .offsell-product-small-slider-container .swiper-button-next {
+    right: 0;
+    transform: translateX(calc(100% + 12px));
+  }
+  .offsell-product-small-slider-container .swiper-button-prev svg {
+    transform: translateX(-1px) scale(1.5);
+    transform-origin: center;
+  }
+  .offsell-product-small-slider-container .swiper-button-next svg {
+    transform: translateX(1px) scale(1.5);
+    transform-origin: center;
+  }
+
+  /* 响应式设计 */
+  @media (max-width: 900px) {
+    .offsell-product-small-slider-container {
+      width: 95%;
+      max-width: 700px;
+      height: calc(375px * 2 + 7.5px);
+    }
+
+    .offsell-product-small-slider {
+    }
+    .offsell-product-small-slider .swiper-slide {
+      height: 375px !important;
+    }
+
+    .offsell-product-card .product-info {
+      padding: 0 15px 15px;
+    }
+    .offsell-product-card .product-title {
+      text-align: center;
+    }
+    .offsell-product-card .current-price {
+      font-size: 18px;
+    }
+
+    /* 隐藏滑动按钮 */
+    .offsell-product-small-slider-container .swiper-button-next,
+    .offsell-product-small-slider-container .swiper-button-prev {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .offsell-product-small-slider-container {
+      width: 100%;
+      height: 29.297vw;
+      max-width: 54.6875vw;
+      position: relative;
+    }
+
+    .offsell-product-small-slider {
+      height: 100%;
+      overflow: hidden;
+    }
+    .offsell-product-small-slider .swiper-slide {
+      /* width: 17.266vw !important;
+    height: 29.297vw !important; */
+      border-radius: 0.78125vw;
+      user-select: none;
+      overflow: hidden;
+    }
+    .offsell-product-small-slider .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .offsell-product-card {
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      border-radius: 0.9375vw;
+      overflow: hidden;
+      box-shadow: 0 0.3125vw 0.625vw rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 左侧产品图片样式 */
+    .offsell-product-card .product-image-container {
+      position: relative;
+      width: 100%;
+      height: 15.039vw;
+      padding: 1.211vw;
+      background-color: #fff;
+    }
+    .offsell-product-card .offsell-product-image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .offsell-product-card .discount-badge {
+      position: absolute;
+      top: 0vw;
+      left: 1.172vw;
+      color: #000;
+      padding: 0.625vw 0.78125vw;
+      font-size: 1.016vw;
+      line-height: 1.172vw;
+      font-weight: bold;
+      z-index: 1;
+      border-radius: 0vw 0vw 0.391vw 0.391vw;
+      background: linear-gradient(-28deg, #f9d231, #fffcbb, #d48d02);
+      text-align: center;
+    }
+
+    /* 右侧产品信息样式 */
+    .offsell-product-card .product-info {
+      flex: 1;
+      min-height: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0 1.211vw 1.758vw;
+    }
+
+    .offsell-product-card .level-badge {
+      background-color: #d68c00;
+      color: white;
+      width: fit-content;
+      padding: 0.391vw 0.9375vw;
+      border-radius: 0.859vw;
+      font-size: 0.78125vw;
+      line-height: 0.9375vw;
+      margin-bottom: 0.78125vw;
+    }
+
+    .offsell-product-card .product-title {
+      font-size: 0.9375vw;
+      font-weight: bold;
+      margin-bottom: 0.78125vw;
+      color: #333;
+      line-height: 1;
+      max-height: 2.8125vw;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+
+    .offsell-product-card .product-description {
+      font-size: 0.78125vw;
+      color: #808080;
+      line-height: 1;
+      font-weight: 600;
+      max-height: 2.8125vw;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+
+    .offsell-product-card .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.367vw;
+      margin-top: auto;
+    }
+    /* 价格样式 */
+    .offsell-product-card .price-container {
+      display: flex;
+      align-items: end;
+      gap: 0.46875vw;
+    }
+
+    .offsell-product-card .original-price {
+      text-decoration: line-through;
+      color: #666;
+      font-size: 0.9375vw;
+      line-height: 1;
+      font-weight: 600;
+      margin-bottom: 0.15625vw;
+    }
+
+    .offsell-product-card .current-price {
+      font-size: 1.5625vw;
+      color: #d48d02;
+      line-height: 1;
+      font-weight: 600;
+    }
+
+    /* 按钮样式 */
+    .offsell-product-card .button-container {
+      display: flex;
+      gap: 0.78125vw;
+    }
+
+    .offsell-product-card .button-container .card-action {
+      width: fit-content;
+    }
+    .offsell-product-card .button {
+      padding: 0.703vw 0.977vw !important;
+      border-radius: 1.09375vw;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+      font-size: 0.859vw;
+      line-height: 1;
+      background: linear-gradient(-28deg, #f9d231, #fffcbb, #d48d02);
+      color: #000;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      width: fit-content;
+      min-width: unset;
+    }
+    .offsell-product-card .button:hover {
+      background: linear-gradient(-28deg, #f9d231, #fffcbb, #d48d02);
+      color: #000;
+      border: none;
+      box-shadow: none;
+    }
+    .offsell-product-card .is-loading.button {
+      width: 7.03125vw;
+      height: 2.266vw;
+    }
+    .offsell-product-card .is-loading.button:hover {
+      background: none;
+    }
+    .offsell-product-card .is-loading.button:before {
+      left: 40%;
+      transform: translateX(0);
+    }
+
+    .offsell-product-small-slider-container .swiper-button-next,
+    .offsell-product-small-slider-container .swiper-button-prev {
+      width: 2.422vw;
+      height: 2.422vw;
+      color: #fff;
+      background-color: #d48d02;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .offsell-product-small-slider-container .swiper-button-next:after,
+    .offsell-product-small-slider-container .swiper-button-prev:after {
+      display: none;
+    }
+    .offsell-product-small-slider-container .swiper-button-prev {
+      left: 0;
+      transform: translateX(calc(-100% - 0.9375vw));
+    }
+    .offsell-product-small-slider-container .swiper-button-next {
+      right: 0;
+      transform: translateX(calc(100% + 0.9375vw));
+    }
+    .offsell-product-small-slider-container .swiper-button-prev svg {
+      transform: translateX(-0.078vw) scale(1.5);
+      transform-origin: center;
+    }
+    .offsell-product-small-slider-container .swiper-button-next svg {
+      transform: translateX(0.078vw) scale(1.5);
+      transform-origin: center;
+    }
+  }
+{% endstyle %}
+
+<div class="offsell-product-small-slider-container">
+  <div id="{{ block.id }}-swiper" class="swiper offsell-product-small-slider">
+    <div class="swiper-wrapper">
+      {% for product in block.settings.collection.products %}
+        <div class="swiper-slide">
+          <div class="offsell-product-card">
+            <!-- 产品图片部分 -->
+            <div class="product-image-container">
+              {% unless product.compare_at_price == product.price %}
+                <div class="discount-badge">
+                  {% assign str = product.compare_at_price | minus: product.price | money %}
+                  {% assign size = str | size | minus: 3 %}
+                  {% assign removed_three = str | slice: 0, size %}
+                  <p class="discount-price">{{ removed_three }}</p>
+                  <p class="discount-text">OFF</p>
+                </div>
+              {% endunless %}
+              <div
+                class="offsell-product-image"
+                style="background-image: url('{{ product.featured_image | img_url: 'master' }}');"
+              ></div>
+            </div>
+
+            <!-- 产品信息部分 -->
+            <div class="product-info">
+              <!-- 产品标题和描述 -->
+              <p class="product-title" title="{{ product.title }}">{{ product.title }}</p>
+              <p class="product-description" title="{{ product.metafields.custom.product_description }}">
+                {{ product.metafields.custom.product_description }}
+              </p>
+
+              <div class="footer-container">
+                <!-- 价格信息 -->
+                <div class="price-container">
+                  <div class="current-price">{{ product.price | money }}</div>
+                  <div class="original-price">{{ product.compare_at_price | money }}</div>
+                </div>
+
+                <!-- 按钮区域 -->
+                <div class="button-container">
+                  {% comment %}
+                    {% form 'product', product %}
+                      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                      <button type="submit" class="buy-now-btn" id="add-to-cart-{{ product.id }}">Quick Add</button>
+                    {% endform %}
+                  {% endcomment %}
+                  <div class="card-action">
+                    {% render 'add-to-cart-form',
+                      product: product,
+                      id: 'form',
+                      position: position,
+                      sectionId: sectionId
+                    %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div id="{{ block.id }}-swiper-button-next" class="swiper-button-next">
+    <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 2L8 6L4 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+  </div>
+  <div id="{{ block.id }}-swiper-button-prev" class="swiper-button-prev">
+    <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 2L4 6L8 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+  </div>
+</div>
+
+<script defer>
+  function init() {
+    if (typeof Swiper !== 'undefined') {
+      swiper = new Swiper('#{{ block.id }}-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 7.5,
+        navigation: {
+          nextEl: '#{{ block.id }}-swiper-button-next',
+          prevEl: '#{{ block.id }}-swiper-button-prev',
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 7.5,
+            grid: {
+              rows: 2,
+            },
+          },
+          900: {
+            slidesPerView: 3,
+            spaceBetween: 18.5,
+            grid: {
+              rows: 1,
+            },
+          },
+        },
+      });
+    } else {
+      console.error('Swiper库未加载成功');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
+
+  // shopify block load
+  document.addEventListener('shopify:block:load', init);
+</script>
+
+{% schema %}
+{
+  "name": "促销产品轮播图-小",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "产品"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "产品集合"
+    }
+  ],
+  "presets": [
+    {
+      "name": "促销产品轮播图-小"
+    }
+  ]
+}
+{% endschema %}

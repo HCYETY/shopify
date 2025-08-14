@@ -1,0 +1,292 @@
+<link rel="stylesheet" href="{{ 'swiper.css' | asset_url }}">
+<script src="{{ 'swiper.js' | asset_url }}" defer></script>
+
+{% style %}
+  .anniversary-2025-s4 {
+    width: 100%;
+    height: 330px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('{{ section.settings.background_image | img_url: 'master' }}');
+    background-repeat: no-repeat;
+    padding-top: 34px;
+  }
+  .anniversary-2025-s4 .s4-headline-container {
+    margin: 0 auto;
+    color: #333;
+    text-align: center;
+    line-height: 1;
+  }
+  .anniversary-2025-s4 .s4-headline {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .anniversary-2025-s4 .s4-subheadline {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  .anniversary-2025-s4 .s4-products-container {
+    margin-top: 28px;
+    width: calc(116px * {{ section.settings.slides_per_view }} + 8px * {{ section.settings.slides_per_view | minus: 1 }});
+    margin-left: 50%;
+    transform: translateX(-70%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .anniversary-2025-s4 .s4-products-container .s4-compare-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 38px;
+    width: fit-content;
+    height: 32px;
+    padding: 0 16px;
+    background: #fff0cd;
+    border-radius: 16px;
+    border: 1px solid #ffa900;
+    white-space: nowrap;
+  }
+  .anniversary-2025-s4 .s4-products-container .s4-compare-button-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1;
+  }
+  .anniversary-2025-s4 .s4-products-container .{{ section.id }}-swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .anniversary-2025-s4 .s4-products-container .swiper-slide {
+    /* width: 116px !important; */
+    height: 110.5px !important;
+    background-color: #FFE1CC;
+    border-radius: 5px;
+    user-select: none;
+    padding: 8px;
+  }
+  .anniversary-2025-s4 .s4-products-container .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media screen and (max-width: 767px) {
+    .anniversary-2025-s4 {
+      height: 555px;
+      background-position: bottom center;
+      background-image: url('{{ section.settings.background_image_mobile | img_url: 'master' }}');
+    }
+    .anniversary-2025-s4 .s4-headline-container {
+      width: 95%;
+      padding: 0 10px;
+      text-align: left;
+    }
+    .anniversary-2025-s4 .s4-products-container {
+      width: 240px;
+    }
+    .anniversary-2025-s4 .s4-products-container .{{ section.id }}-swiper {
+      height: calc(110.5px * 2 + 8px);
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .anniversary-2025-s4 {
+      width: 100%;
+      height: 25.781vw;
+      background-size: cover;
+      background-position: center;
+      background-image: url('{{ section.settings.background_image | img_url: 'master' }}');
+      background-repeat: no-repeat;
+      padding-top: 2.65625vw;
+    }
+    .anniversary-2025-s4 .s4-headline-container {
+      margin: 0 auto;
+      color: #333;
+      text-align: center;
+      line-height: 1;
+    }
+    .anniversary-2025-s4 .s4-headline {
+      font-size: 1.5625vw;
+      font-weight: 600;
+    }
+    .anniversary-2025-s4 .s4-subheadline {
+      font-size: 0.9375vw;
+      font-weight: 600;
+      margin-top: 0.78125vw;
+    }
+    .anniversary-2025-s4 .s4-products-container {
+      margin-top: 2.1875vw;
+      width: calc(9.0625vw * {{ section.settings.slides_per_view }} + 0.625vw * {{ section.settings.slides_per_view | minus: 1 }});
+      margin-left: 50%;
+      transform: translateX(-70%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .anniversary-2025-s4 .s4-products-container .s4-compare-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2.96875vw;
+      width: fit-content;
+      height: 2.5vw;
+      padding: 0 1.25vw;
+      background: #fff0cd;
+      border-radius: 1.25vw;
+      border: 0.078vw solid #ffa900;
+      white-space: nowrap;
+    }
+    .anniversary-2025-s4 .s4-products-container .s4-compare-button-text {
+      font-size: 1.016vw;
+      font-weight: 600;
+      color: #333;
+      line-height: 1;
+    }
+    .anniversary-2025-s4 .s4-products-container .{{ section.id }}-swiper {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .anniversary-2025-s4 .s4-products-container .swiper-slide {
+      /* width: 9.0625vw !important; */
+      height: 8.633vw !important;
+      background-color: #FFE1CC;
+      border-radius: 0.391vw;
+      user-select: none;
+      padding: 0.625vw;
+    }
+    .anniversary-2025-s4 .s4-products-container .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+{% endstyle %}
+
+<div class="anniversary-2025-s4">
+  <div class="s4-headline-container">
+    <p class="s4-headline">{{ section.settings.headline }}</p>
+    <p class="s4-subheadline">{{ section.settings.subheadline }}</p>
+  </div>
+  <div class="s4-products-container">
+    <div class="{{ section.id }}-swiper">
+      <div class="swiper-wrapper">
+        {% for product in section.settings.products %}
+          <div class="swiper-slide">
+            <img
+              src="{{ product.featured_image | img_url: 'master' }}"
+              alt="{{ product.title }}"
+              width="100%"
+              height="auto"
+            >
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <a href="{{ section.settings.button_url }}" class="s4-compare-button">
+      <span class="s4-compare-button-text">{{ section.settings.button_text }}</span>
+    </a>
+  </div>
+</div>
+
+<script defer>
+  function initSwiper() {
+    if (typeof Swiper !== 'undefined') {
+      swiper = new Swiper('.{{ section.id }}-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 8,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 2,
+            grid: {
+              rows: 2,
+            },
+          },
+          767: {
+            slidesPerView: 4,
+            grid: {
+              rows: 1,
+            },
+          },
+        },
+      });
+    } else {
+      console.error('Swiper库未加载成功');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', initSwiper);
+
+  // shopify section load
+  document.addEventListener('shopify:section:load', initSwiper);
+</script>
+
+{% schema %}
+{
+  "name": "2025-03-27-s4",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "背景图片"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "背景图片（移动端）"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "主标题",
+      "default": "Choose the one that's right for you"
+    },
+    {
+      "type": "textarea",
+      "id": "subheadline",
+      "label": "副标题",
+      "default": "Unmissable 11th Anniversary Celebration Sale: Choose the Perfect Machine for You"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "按钮文字",
+      "default": "Compare Engravers"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "按钮链接"
+    },
+    {
+      "type": "header",
+      "content": "产品"
+    },
+    {
+      "type": "product_list",
+      "id": "products",
+      "label": "产品列表"
+    },
+    {
+      "type": "number",
+      "id": "slides_per_view",
+      "label": "每屏显示产品数量",
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "2025-周年庆-s4",
+      "category": "周年庆"
+    }
+  ]
+}
+{% endschema %}

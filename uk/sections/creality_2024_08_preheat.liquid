@@ -1,0 +1,1792 @@
+
+<style>
+  #app-{{section.id}} .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #app-{{section.id}} .container-box .listing1, #app-{{section.id}} .container-box .listing2 {
+    display: none;
+  }
+  #app-{{section.id}} .container-box .listing1.checked, #app-{{section.id}} .container-box .listing2.checked {
+    display: block;
+  }
+  #app-{{section.id}} .container-box .view-btn {
+    margin: 0 auto;
+    margin-top: 0.521vw;
+    font-size: 1.042vw;
+    text-decoration: underline;
+    display: flex;
+    color: #93D500;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.563vw;
+    height: 2.604vw;
+    cursor: pointer;
+  }
+  #app-{{section.id}} .container-box .hidden {
+    display: none;
+  }
+  #app-{{section.id}} .container-box .icon-box {
+    background-color: #FFA018;
+    border-radius: 0.781vw;
+    padding: 0.521vw 0;
+    text-align: center;
+    display: flex;
+    margin-bottom: 1.563vw;
+  }
+  #app-{{section.id}} .container-box .icon-box .icon-item {
+    cursor: pointer;
+    flex: 1;
+  }
+  #app-{{section.id}} .container-box .icon-box .icon-item.active {
+    color: #02B95D;
+  }
+  #app-{{section.id}} .container-box .icon-box .icon-item img {\
+    flex-shrink: 0;
+    width: 5.208vw;
+  }
+  #app-{{section.id}} .container-box .icon-box .icon-item .text-title {
+    font-weight: 600;
+    color: #FFC878;
+    font-size: 0.833vw;
+    text-align: center;
+  }
+  #app-{{section.id}} .container-box .icon-box .icon-item .text-title.active {
+    color: #ffffff;
+  }
+
+  #app-{{section.id}} img {
+    vertical-align: middle;
+  }
+
+  #app-{{section.id}} a {
+    text-decoration: none;
+  }
+
+  #app-{{section.id}} .font-lora {
+    font-family: "Lora", sans-serif;
+  }
+
+  #app-{{section.id}} .common-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.083vw;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+  }
+
+  #app-{{section.id}} .common-subtitle {
+    margin-top: 1.042vw;
+    text-align: center;
+    font-size: 1.042vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.2em;
+    font-family: Montserrat, sans-serif;
+    color: #ffffff;
+  }
+
+  #app-{{section.id}} .content {
+    width: 62.5vw;
+    margin: 0 auto;
+  }
+
+  #app-{{section.id}} .section1 {
+    position: relative;
+    padding-top: 6.354vw;
+    padding-bottom: 7.708vw;
+    background: radial-gradient(at center center, rgba(255, 199, 0, 0.5019607843), #ffc700);
+    position: relative;
+  }
+  #app-{{section.id}} .section1 .b-content {
+    width: 62.5vw;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    z-index: 1;
+  }
+  #app-{{section.id}} .section1 .b-content .l-box {
+    flex-shrink: 0;
+    margin-right: 5.208vw;
+  } 
+  #app-{{section.id}} .section1 .b-content .l-box .banner-img {
+    width: 26.042vw;
+    border-radius: 1.042vw;
+    -webkit-border-radius: 1.042vw;
+    -moz-border-radius: 1.042vw;
+    -ms-border-radius: 1.042vw;
+    -o-border-radius: 1.042vw;
+  }
+  #app-{{section.id}} .section1 .b-content .r-box .title {
+    font-weight: 800;
+    font-size: 3.646vw;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+  }
+  #app-{{section.id}} .section1 .b-content .r-box .desc, #app-{{section.id}} .section1 .b-content .r-box .small-title {
+    font-size: 0.833vw;
+    font-weight: 600;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.5em;
+    font-family: Montserrat, sans-serif;
+  }
+  #app-{{section.id}} .section1 .b-content .r-box .small-title {
+    margin-top: 1.563vw;
+    color: #ff0000;
+  }
+  #app-{{section.id}} .section1 .b-content .r-box .count-down {
+    margin-top: 2.083vw;
+    display: flex;
+    text-align: center;
+  }
+  #app-{{section.id}} .section1 .b-content .r-box .count-down .time-item {
+    background-color: #ffffff;
+    border-radius: 0.26vw;
+    margin-right: 0.521vw;
+    text-align: center; 
+    padding: .342vw;
+    width: 5.469vw;
+    height: 5.573vw;
+  }
+  #app-{{section.id}} .section1 .b-content .r-box .count-down .time-item .num {
+    font-size: 2.188vw;
+    font-weight: 700;
+    color: #ED1F22;
+  }
+  #app-{{section.id}} .section1 .b-content .r-box .count-down .time-item .date-text {
+    font-size: 0.938vw;
+    font-weight: 600;
+  }
+  #app-{{section.id}} .section1 .bg-img-wrap .bg-img {
+    background: url("https://cdn.shopifycdn.net/s/files/1/0726/1221/7115/files/back-shool-overlay-no-replace.png?v=1681196800&ecom-need-replace&ecom-need-replace&ecom-need-replace") no-repeat scroll center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  #app-{{section.id}} .section1 .banner-img {
+    width: 100%;
+    vertical-align: middle;
+  }
+
+  #app-{{section.id}} .section2 {
+    padding-top: 3.906vw;
+  }
+  #app-{{section.id}} .section2 .gift-list {
+    margin-top: 2.604vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  #app-{{section.id}} .section2 .gift-list .gift-item {
+    padding: 2.083vw;
+    text-align: center;
+  }
+  #app-{{section.id}} .section2 .gift-list .gift-item .gift-img {
+    width: 100%;
+  }
+  #app-{{section.id}} .section2 .gift-list .gift-item .gift-name {
+    margin-top: 2.083vw;
+    font-weight: 800;
+    font-size: 1.51vw;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+  }
+  #app-{{section.id}} .section2 .gift-list .gift-item .gift-desc {
+    margin-top: 1.042vw;
+    font-size: 0.729vw;
+    font-weight: 500;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.7em;
+    font-family: Montserrat, sans-serif;
+  }
+
+  #app-{{section.id}} .section3 {
+    position: relative;
+    background-color: #0E0E0E;
+    overflow: hidden;
+  }
+  #app-{{section.id}} .section3 .border {
+    border-top: 10.417vw solid #fff;
+    border-right: 100vw solid transparent;
+  }
+  #app-{{section.id}} .section3 .border2 {
+    border-bottom: 10.417vw solid #fff;
+    border-left: 100vw solid transparent;
+    position: relative;
+    z-index: 20;
+  }
+  #app-{{section.id}} .section3 .content .common-title {
+    color: #ffffff;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap {
+    margin-top: 5.208vw;
+    display: flex;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-left {
+    color: #ffffff;
+    width: 43%;
+    padding-left: 4.167vw;
+    padding-bottom: 3.646vw;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-left .icon-date {
+    width: 2.24vw;
+    height: 2.24vw;
+    margin-bottom: 1.563vw;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-left .desc1 {
+    font-size: 1.042vw;
+    font-weight: 600;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.5em;
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 2.083vw;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-left .desc2, #app-{{section.id}} .section3 .content .form-wrap .f-left .desc3 {
+    font-size: 0.833vw;
+    font-weight: 500;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.5em;
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 2.083vw;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-left .l-img {
+    width: 100%;
+    margin-bottom: -56%;
+    position: relative;
+    z-index: 10;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right {
+    padding: 1.042vw 1.042vw 1.042vw 1.563vw;
+    width: 57%;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box {
+    background-color: #FFC701;
+    position: relative;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box::after {
+    content: "";
+    position: absolute;
+    border-bottom: 3.125vw solid transparent;
+    border-right: 41.667vw solid #0e0e0e;
+    top: 0;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box::before {
+    content: "";
+    border-bottom: 5.208vw solid #0e0e0e;
+    border-right: 41.667vw solid transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-title {
+    font-weight: 800;
+    font-size: 1.25vw;
+    font-family: Montserrat, sans-serif;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+    text-transform: uppercase;
+    margin-bottom: 1.042vw;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box {
+    width: 21.146vw;
+    margin: 0 auto;
+    padding: 3.646vw 1.042vw 5.208vw 1.042vw;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box::after {
+    content: "";
+    border-top: 41.667vw solid transparent;
+    position: absolute;
+    border-left: 4.167vw solid #0E0E0E;
+    left: 0;
+    bottom: 0;
+    top: 0;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box::before {
+    content: "";
+    position: absolute;
+    border-top: 35.417vw solid transparent;
+    border-right: 2.604vw solid #0e0e0e;
+    right: 0;
+    bottom: 0;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .imput-item {
+    margin-bottom: 0.521vw;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .imput-item label {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.521vw;
+    font-family: "Montserrat, sans-serif";
+    font-size: 0.729vw;
+    line-height: 1.5em;
+    letter-spacing: 0vw;
+    font-weight: 700;
+    text-transform: none;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .imput-item .text-input {
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.729vw;
+    font-family: "Montserrat, sans-serif";
+    line-height: 1.35em;
+    color: #000;
+    width: 100%;
+    border-style: solid;
+    border-width: 0.052vw;
+    border-color: #ededed;
+    border-radius: 0.156vw;
+    outline-style: none;
+    padding: 0.885vw 0.781vw 0.885vw 1.042vw;
+    margin: 0;
+    background-color: #FFC701;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .imput-item .text-input:focus {
+    box-shadow: 0 0 rgba(255, 0, 0, 0);
+    border-style: solid;
+    border-width: 0.052vw;
+    border-color: #1d80db;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .submit-btn {
+    display: flex;
+    position: relative;
+    transition: 0.3s;
+    top: 0;
+    cursor: pointer;
+    align-self: center;
+    justify-content: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.042vw;
+    line-height: 1.42em;
+    font-weight: 800;
+    text-transform: uppercase;
+    width: 100%;
+    height: 2.865vw;
+    min-height: 2.865vw;
+    color: #fff;
+    background-color: #ed1f22;
+    border-style: none;
+    border-radius: 0.156vw;
+    transition-duration: 0.3s;
+    padding: 0.781vw 1.042vw 0.521vw;
+    margin-top: 1.146vw;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .submit-btn .icon-btn {
+    height: 1.354vw;
+    width: 1.354vw;
+    margin-top: 0.208vw;
+    margin-left: 0.365vw;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .submit-btn::before {
+    content: "";
+    position: absolute;
+    border: 0.196vw solid #880507;
+    left: 0;
+    bottom: -0.26vw;
+    right: 0;
+    transition: 0.3s;
+    border-radius: 0 0 0.26vw 0.26vw;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .submit-btn:hover {
+    top: 0.104vw;
+  }
+  #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .submit-btn:hover::before {
+    border-color: #ed1f22;
+  }
+
+  #app-{{section.id}} .section4 {
+    position: relative;
+    padding: 1.563vw 0;
+  }
+  #app-{{section.id}} .section4 .condition {
+    border-style: dashed;
+    border-width: 0.104vw;
+    border-color: #ffc701;
+    margin: 0 auto;
+    width: 51.875vw;
+    padding: 3.646vw;
+    border-radius: 1.563vw;
+    -webkit-border-radius: 1.563vw;
+    -moz-border-radius: 1.563vw;
+    -ms-border-radius: 1.563vw;
+    -o-border-radius: 1.563vw;
+  }
+  #app-{{section.id}} .section4 .condition .c-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.563vw;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 2.083vw;
+  }
+  #app-{{section.id}} .section4 .condition .c-item {
+    display: flex;
+    margin-bottom: 1.563vw;
+  }
+  #app-{{section.id}} .section4 .condition .c-item .c-icon {
+    color: #279600;
+    margin-top: 0.208vw;
+    margin-right: 0.938vw;
+    width: 0.938vw;
+    height: 0.938vw;
+  }
+  #app-{{section.id}} .section4 .condition .c-item .c-desc {
+    font-size: 0.833vw;
+    font-weight: 600;
+    line-height: 1.5em;
+    text-decoration: none;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: 0vw;
+    font-family: Montserrat, sans-serif;
+  }
+  #app-{{section.id}} .section4 .sliding {
+    bottom: -1.042vw;
+    left: 50%;
+    bottom: -6.25vw;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 45.833vw;
+    overflow: hidden;
+    z-index: 10;
+  }
+  #app-{{section.id}} .section4 .sliding .slid-img {
+    float: right;
+    width: 6.823vw;
+  }
+
+  #app-{{section.id}} .section5 {
+    background-color: #F6F6F6;
+    padding-bottom: 5.208vw;
+    overflow: hidden;
+    position: relative;
+  }
+  #app-{{section.id}} .section5 .border {
+    position: absolute;
+    border-top: 10.417vw solid #fff;
+    border-left: 100vw solid transparent;
+    height: 0;
+  }
+  #app-{{section.id}} .section5 .content {
+    margin-top: 11.458vw;
+  }
+  #app-{{section.id}} .section5 .content .title {
+    font-weight: 800;
+    font-size: 1.563vw;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap {
+    display: flex;
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap .l-box {
+    padding: 2.083vw 1.042vw 1.042vw 3.125vw;
+    width: 40%;
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap .l-box .gift-img {
+    width: 100%;
+    border-radius: 1.042vw;
+    -webkit-border-radius: 1.042vw;
+    -moz-border-radius: 1.042vw;
+    -ms-border-radius: 1.042vw;
+    -o-border-radius: 1.042vw;
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap .r-box {
+    width: 60%;
+    padding: 1.042vw;
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion {
+    padding: 1.302vw 1.979vw 1.563vw 2.188vw;
+    background-color: #FFC701;
+    width: 100%;
+    max-width: 31.25vw;
+    border: 0.052vw solid #ccc;
+    border-radius: 0.208vw;
+    box-shadow: 0 0.104vw 0.26vw rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    border-radius: 0.521vw;
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item {
+    border-bottom: 0.052vw solid rgba(0, 0, 0, 0.1019607843);
+    padding: 0.521vw 0;
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item:last-child {
+    border-bottom: none;
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item .accordion-header {
+    position: relative;
+    padding: 0.781vw;
+    font-size: 0.938vw;
+    cursor: pointer;
+    user-select: none;
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item .accordion-header:hover .down-icon {
+    color: #ffffff;
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item .accordion-header .down-icon {
+    transition: 0.3s;
+    color: #000000;
+    position: absolute;
+    right: 0.208vw;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item .accordion-header .down-icon.active {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item .accordion-content {
+    display: none;
+    padding: 0.781vw;
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item .accordion-content p {
+    margin: 0;
+    font-size: 0.729vw;
+    color: #000;
+    font-weight: 400;
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap .r-box .b-desc {
+    margin-top: 3.125vw;
+    font-weight: 600;
+    font-size: 0.833vw;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+    font-family: Montserrat, sans-serif;
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap .r-box .b-desc .desc {
+    margin-bottom: 0.833vw;
+  }
+  #app-{{section.id}} .section5 .content .faq-wrap .r-box .b-desc .desc a {
+    font-size: 0.729vw;
+    color: #4da4eb;
+    text-decoration: underline;
+    text-decoration-color: #232323;
+    -moz-text-decoration-color: #232323;
+  }
+
+  @media (min-width: 768px) {
+    #app-{{section.id}} .pc {
+      display: block;
+    }
+    #app-{{section.id}} .mb {
+      display: none;
+    }
+    #app-{{section.id}} .gift-item {
+      flex: 1;
+    }
+  }
+  @media (max-width: 768px) {
+    #app-{{section.id}} .pc {
+      display: none;
+    }
+    #app-{{section.id}} .mb {
+      display: block;
+    }
+    #app-{{section.id}} .common-title {
+      padding: 0 4.267vw;
+      text-align: center;
+      font-size: 5.467vw;
+      color: #000000;
+      font-weight: 600;
+      margin-bottom: 4.267vw; 
+    }
+    #app-{{section.id}} .common-subtitle {
+      padding: 0 4.267vw;
+      font-size: 3.733vw; 
+      color: #666666;
+      font-weight: 400;
+      text-align: center;
+    }
+    #app-{{section.id}} .container-box .listing1, #app-{{section.id}} .container-box .listing2 {
+      display: none;
+    }
+    #app-{{section.id}} .container-box .listing1.checked, #app-{{section.id}} .container-box .listing2.checked {
+      display: block;
+    }
+    #app-{{section.id}} .container-box .view-btn {
+      margin: 0 auto;
+      margin-top: 0.521vw;
+      font-size: 4.042vw;
+      text-decoration: underline;
+      display: flex;
+      color: #93D500;
+      font-weight: 600;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1.563vw;
+      height: 2.604vw;
+      cursor: pointer;
+    }
+    #app-{{section.id}} .container-box .hidden {
+      display: none;
+    }
+    #app-{{section.id}} .container-box .icon-box {
+      background-color: #FFA018;
+      border-radius: 4vw;
+      padding: 2.667vw 0;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 8vw;
+    }
+    #app-{{section.id}} .container-box .icon-box .icon-box-mb {
+      display: flex;
+      width: 100%;
+      margin-bottom: 2.667vw;
+    }
+    #app-{{section.id}} .container-box .icon-box .icon-box-mb .icon-item {
+      width: 50%;
+    }
+    #app-{{section.id}} .container-box .icon-box .icon-item {
+      cursor: pointer;
+      flex: 1;
+    }
+    #app-{{section.id}} .container-box .icon-box .icon-item.active {
+      color: #02B95D;
+    }
+    #app-{{section.id}} .container-box .icon-box .icon-item img {
+      width: 21.333vw;
+    }
+    #app-{{section.id}} .container-box .icon-box .icon-item .text-title {
+      font-weight: 600;
+      color: #FFC878;
+      font-size: 3.433vw;
+      text-align: center;
+    }
+    #app-{{section.id}} .container-box .icon-box .icon-item .text-title.active {
+      color: #ffffff;
+    }
+    #app-{{section.id}} .content {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 4.267vw;
+      box-sizing: border-box;
+    }
+    #app-{{section.id}} .section1 {
+      position: relative;
+      padding-top: 16vw;
+      padding-bottom: 16vw;
+      background: radial-gradient(at center center, rgba(255, 199, 0, 0.5019607843), #ffc700);
+      position: relative;
+    }
+    #app-{{section.id}} .section1 .b-content {
+      width: 100%;
+      flex-wrap: wrap;
+      z-index: 1;
+      padding: 0 4vw;
+    }
+    #app-{{section.id}} .section1 .b-content .l-box {
+      flex-shrink: inherit;
+      margin-right: 0;
+    }
+    #app-{{section.id}} .section1 .b-content .l-box .banner-img {
+      width: 100%;
+      border-radius: 5.333vw;
+      -webkit-border-radius: 5.333vw;
+      -moz-border-radius: 5.333vw;
+      -ms-border-radius: 5.333vw;
+      -o-border-radius: 5.333vw;
+    }
+    #app-{{section.id}} .section1 .b-content .r-box .title {
+      margin-top: 8vw;
+      text-align: center;
+      font-size: 8vw;
+      line-height: 1.25em;
+    }
+    #app-{{section.id}} .section1 .b-content .r-box .desc, #app-{{section.id}} .section1 .b-content .r-box .small-title {
+      text-align: center;
+      font-size: 4.267vw;
+      font-weight: 600;
+      text-transform: none;
+      font-style: normal;
+      text-decoration: none;
+      line-height: 1.5em;
+      font-family: Montserrat, sans-serif;
+    }
+    #app-{{section.id}} .section1 .b-content .r-box .small-title {
+      margin-top: 8vw;
+      color: #ff0000;
+    }
+    #app-{{section.id}} .section1 .b-content .r-box .count-down {
+      margin-top: 10.667vw;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+    #app-{{section.id}} .section1 .b-content .r-box .count-down .time-item {
+      border-radius: 1.333vw;
+      margin-right: 2.667vw;
+      padding: 1.333vw;
+      width: 16vw;
+      height: 17.333vw;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    #app-{{section.id}} .section1 .b-content .r-box .count-down .time-item .num {
+      width: 100%;
+      font-size: 5.867vw;
+      font-weight: 700;
+      color: #ED1F22;
+    }
+    #app-{{section.id}} .section1 .b-content .r-box .count-down .time-item .date-text {
+      width: 100%;
+      font-size: 3.5vw;
+      font-weight: 600;
+    }
+    #app-{{section.id}} .section1 .bg-img-wrap .bg-img {
+      background: url("https://cdn.shopifycdn.net/s/files/1/0726/1221/7115/files/back-shool-overlay-no-replace.png?v=1681196800&ecom-need-replace&ecom-need-replace&ecom-need-replace") no-repeat scroll center center/cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    #app-{{section.id}} .section1 .banner-img {
+      width: 100%;
+      vertical-align: middle;
+    }
+    #app-{{section.id}} .section2 {
+      padding-top: 20vw;
+    }
+    #app-{{section.id}} .section2 .gift-list {
+      margin-top: 10.667vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    #app-{{section.id}} .section2 .gift-list .gift-item {
+      width: 100%;
+      padding: 10.667vw;
+      text-align: center;
+    }
+    #app-{{section.id}} .section2 .gift-list .gift-item .gift-img {
+      width: 100%;
+    }
+    #app-{{section.id}} .section2 .gift-list .gift-item .gift-name {
+      margin-top: 10.667vw;
+      font-weight: 800;
+      font-size: 7.733vw;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+      font-family: Montserrat, sans-serif;
+      text-transform: uppercase;
+    }
+    #app-{{section.id}} .section2 .gift-list .gift-item .gift-desc {
+      margin-top: 5.333vw;
+      font-size: 3.733vw;
+      font-weight: 500;
+      text-transform: none;
+      font-style: normal;
+      text-decoration: none;
+      line-height: 1.7em;
+      font-family: Montserrat, sans-serif;
+    }
+    #app-{{section.id}} .section3 {
+      position: relative;
+      background-color: #0E0E0E;
+      overflow: hidden;
+    }
+    #app-{{section.id}} .section3 .border {
+      border-top: 13.333vw solid #fff;
+      border-right: 100vw solid transparent;
+    }
+    #app-{{section.id}} .section3 .border2 {
+      border-bottom: 13.333vw solid #fff;
+      border-left: 100vw solid transparent;
+      position: relative;
+      z-index: 20;
+    }
+    #app-{{section.id}} .section3 .content .common-title {
+      color: #ffffff;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap {
+      margin-top: 13.333vw;
+      flex-wrap: wrap;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-left {
+      text-align: center;
+      width: 100%;
+      padding-left: 0vw;
+      padding-bottom: 8vw;
+      overflow: hidden;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-left .icon-date {
+      width: 11.467vw;
+      height: 11.467vw;
+      margin-bottom: 8vw;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-left .desc1 {
+      font-size: 4.8vw;
+      font-weight: 600;
+      margin-bottom: 10.667vw;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-left .desc2, #app-{{section.id}} .section3 .content .form-wrap .f-left .desc3 {
+      font-size: 4vw;
+      font-weight: 500;
+      margin-bottom: 10.667vw;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-left .l-img {
+      margin-bottom: -10%;
+    } 
+    #app-{{section.id}} .section3 .content .form-wrap .f-right {
+      margin-top: 4vw;
+      padding: 2.667vw;
+      width: 100%;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box {
+      background-color: #FFC701;
+      position: relative;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box::after {
+      content: "";
+      position: absolute;
+      border-bottom: 8vw solid transparent;
+      border-right: 213.333vw solid #0e0e0e;
+      top: 0;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box::before {
+      content: "";
+      border-bottom: 8vw solid #0e0e0e;
+      border-right: 213.333vw solid transparent;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-title {
+      text-align: center;
+      font-weight: 800;
+      font-size: 6.4vw;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+      margin-bottom: 5.333vw;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box {
+      width: 100%;
+      margin: 0 auto;
+      padding: 18.667vw 5.333vw 13.333vw 5.333vw;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box::after {
+      content: "";
+      border-top: 213.333vw solid transparent;
+      position: absolute;
+      border-left: 2.667vw solid #0E0E0E;
+      left: 0;
+      bottom: 0;
+      top: 0;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box::before {
+      content: "";
+      position: absolute;
+      border-top: 181.333vw solid transparent;
+      border-right: 2.667vw solid #0e0e0e;
+      right: 0;
+      bottom: 0;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .imput-item {
+      width: 66.667vw;
+      margin: 0 auto;
+      margin-bottom: 2.667vw;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .imput-item label {
+      display: block;
+      width: 100%;
+      margin-bottom: 2.667vw;
+      font-family: "Montserrat, sans-serif";
+      font-size: 3.733vw;
+      line-height: 1.5em;
+      letter-spacing: 0vw;
+      font-weight: 700;
+      text-transform: none;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .imput-item .text-input {
+      text-align: left;
+      font-weight: 500;
+      font-size: 3.733vw;
+      font-family: "Montserrat, sans-serif";
+      line-height: 1.35em;
+      color: #000;
+      border-style: solid;
+      border-width: 0.267vw;
+      border-color: #ededed;
+      border-radius: 0.8vw;
+      outline-style: none;
+      padding: 2.667vw 4vw 2.667vw 5.333vw;
+      margin: 0;
+      background-color: #FFC701;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .imput-item .text-input:focus {
+      box-shadow: 0 0 rgba(255, 0, 0, 0);
+      border-style: solid;
+      border-width: 0.267vw;
+      border-color: #1d80db;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .submit-btn {
+      top: 0;
+      font-size: 4.333vw;
+      line-height: 1.42em;
+      font-weight: 800;
+      width: 70%;
+      margin: 0 auto;
+      height: 14.667vw;
+      min-height: 14.667vw;
+      border-radius: 0.8vw;
+      transition-duration: 0.3s;
+      padding: 4vw 5.333vw 2.667vw;
+      margin-top: 5.867vw;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .submit-btn .icon-btn {
+      height: 6.933vw;
+      width: 6.933vw;
+      margin-top: 1.067vw;
+      margin-left: 1.867vw;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .submit-btn::before {
+      content: "";
+      position: absolute;
+      border: 0.8vw solid #880507;
+      left: 0;
+      bottom: -1.333vw;
+      right: 0;
+      transition: 0.3s;
+      border-radius: 0 0 1.333vw 1.333vw;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .submit-btn:hover {
+      top: 0.533vw;
+    }
+    #app-{{section.id}} .section3 .content .form-wrap .f-right .inner-box .form-box .submit-btn:hover::before {
+      border-color: #ed1f22;
+    }
+    #app-{{section.id}} .section4 {
+      position: relative;
+      padding: 8vw 0;
+    }
+    #app-{{section.id}} .section4 .condition {
+      border-style: dashed;
+      border-width: 0.533vw;
+      border-color: #ffc701;
+      margin: 0 auto;
+      width: 100%;
+      padding: 8vw 5.333vw;
+      border-radius: 8vw;
+      -webkit-border-radius: 8vw;
+      -moz-border-radius: 8vw;
+      -ms-border-radius: 8vw;
+      -o-border-radius: 8vw;
+    }
+    #app-{{section.id}} .section4 .condition .c-title {
+      text-align: center;
+      font-weight: 800;
+      font-size: 5.867vw;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+      font-family: Montserrat, sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 10.667vw;
+    }
+    #app-{{section.id}} .section4 .condition .c-item {
+      display: flex;
+      margin-bottom: 8vw;
+    }
+    #app-{{section.id}} .section4 .condition .c-item .c-icon {
+      color: #279600;
+      margin-top: 1.067vw;
+      margin-right: 4.8vw;
+      width: 4.8vw;
+      height: 4.8vw;
+    }
+    #app-{{section.id}} .section4 .condition .c-item .c-desc {
+      font-size: 4.267vw;
+      font-weight: 600;
+      line-height: 1.5em;
+      text-decoration: none;
+      font-style: normal;
+      text-transform: none;
+      letter-spacing: 0vw;
+      font-family: Montserrat, sans-serif;
+    }
+    #app-{{section.id}} .section4 .sliding {
+      display: none;
+    }
+    #app-{{section.id}} .section5 {
+      background-color: #F6F6F6;
+      padding-bottom: 13.333vw;
+      overflow: hidden;
+      position: relative;
+    }
+    #app-{{section.id}} .section5 .border {
+      position: absolute;
+      border-top: 26.667vw solid #fff;
+      border-left: 100vw solid transparent;
+      height: 0;
+    }
+    #app-{{section.id}} .section5 .content {
+      margin-top: 32vw;
+    }
+    #app-{{section.id}} .section5 .content .title {
+      font-weight: 800;
+      font-size: 8vw;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+      font-family: Montserrat, sans-serif;
+      text-transform: uppercase;
+      text-align: left;
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap {
+      flex-wrap: wrap;
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap .l-box {
+      margin-top: 5.333vw;
+      padding: 0vw;
+      width: 100%;
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap .l-box .gift-img {
+      width: 100%;
+      border-radius: 5.333vw;
+      -webkit-border-radius: 5.333vw;
+      -moz-border-radius: 5.333vw;
+      -ms-border-radius: 5.333vw;
+      -o-border-radius: 5.333vw;
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap .r-box {
+      width: 100%;
+      margin-top: 5.333vw;
+      padding: 0;
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion {
+      padding: 1.667vw 7.133vw 8vw 3.2vw;
+      background-color: #FFC701;
+      width: 100%;
+      max-width: 100%;
+      border: 0.267vw solid #ccc;
+      border-radius: 1.067vw;
+      box-shadow: 0 0.533vw 1.333vw rgba(0, 0, 0, 0.2);
+      font-family: Arial, sans-serif;
+      border-radius: 2.667vw;
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item {
+      border-bottom: 0.267vw solid rgba(0, 0, 0, 0.1019607843);
+      padding: 2.667vw 0;
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item:last-child {
+      border-bottom: none;
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item .accordion-header {
+      position: relative;
+      padding: 2vw;
+      font-size: 3.3vw;
+      cursor: pointer;
+      user-select: none;
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item .accordion-header:hover .down-icon {
+      color: #ffffff;
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item .accordion-header .down-icon {
+      transition: 0.3s;
+      color: #000000;
+      position: absolute;
+      right: 1.067vw;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item .accordion-header .down-icon.active {
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item .accordion-content {
+      display: none;
+      padding: 4vw;
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap .r-box .accordion .accordion-item .accordion-content p {
+      margin: 0;
+      font-size: 3.733vw;
+      color: #000;
+      font-weight: 400;
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap .r-box .b-desc {
+      text-align: center;
+      margin-top: 16vw;
+      font-weight: 600;
+      font-size: 4.267vw;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+      font-family: Montserrat, sans-serif;
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap .r-box .b-desc .desc {
+      margin-bottom: 4.267vw;
+    }
+    #app-{{section.id}} .section5 .content .faq-wrap .r-box .b-desc .desc a {
+      font-size: 3.733vw;
+      color: #4da4eb;
+      text-decoration: underline;
+      text-decoration-color: #232323;
+      -moz-text-decoration-color: #232323;
+    }
+  }
+</style>
+
+<style>
+#app-{{section.id}}  .newsletter-section {
+  background-color: #f9f9f9;
+  padding: 3.125vw 1.042vw; /* 60px 20px -> 60/1920=3.125vw, 20/1920=1.042vw */
+  text-align: center;
+}
+
+.newsletter-container {
+  max-width: 31.25vw; /* 600px -> 600/1920=31.25vw */
+  margin: 0 auto;
+}
+
+.newsletter-title {
+  font-size: 1.304vw; /* 50px -> 50/1920=2.604vw */
+  color: #ED1F22;
+  margin-bottom: 1.042vw; /* 20px -> 20/1920=1.042vw */
+}
+
+.newsletter-description {
+  font-size: .75vw; /* 24px -> 24/1920=1.25vw */
+  color: #666;
+  margin-bottom: 1.563vw; /* 30px -> 30/1920=1.563vw */
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.521vw; /* 10px -> 10/1920=0.521vw */
+  flex-wrap: wrap;
+}
+
+.newsletter-input {
+  padding: 0.521vw; /* 10px -> 10/1920=0.521vw */
+  font-size: .842vw; /* 20px -> 20/1920=1.042vw */
+  border: 0.104vw solid #ccc; /* 2px -> 2/1920=0.104vw */
+  border-radius: 0.26vw; /* 5px -> 5/1920=0.26vw */
+  width: 100%;
+  max-width: 15.625vw; /* 300px -> 300/1920=15.625vw */
+  transition: border-color 0.3s ease;
+}
+
+.newsletter-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.newsletter-button {
+  padding: 0.321vw 1.042vw; /* 10px 20px -> 10/1920=0.521vw, 20/1920=1.042vw */
+  font-size: 1.042vw; /* 20px -> 20/1920=1.042vw */
+  color: #fff;
+  background-color: #14a9de;
+  border: none;
+  border-radius: 0.26vw; /* 5px -> 5/1920=0.26vw */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #0056b3;
+}
+
+.newsletter-message {
+  display: none;
+  margin-top: 1.042vw; /* 20px -> 20/1920=1.042vw */
+  font-size: 1.25vw; /* 24px -> 24/1920=1.25vw */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+#newsletter-success {
+  color: #28a745;
+}
+
+#newsletter-error {
+  color: #dc3545;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 响应式设计 - 移动端 (max-width: 960px) */
+@media (max-width: 960px) {
+  .newsletter-section {
+    padding: 16vw 5.333vw; /* 60px 20px -> 60/375=16vw, 20/375=5.333vw */
+  }
+
+  .newsletter-container {
+    max-width: 80vw; /* 300px -> 300/375=80vw */
+  }
+
+  .newsletter-title {
+    font-size: 6.667vw; /* 25px -> 25/375=6.667vw */
+    margin-bottom: 5.333vw; /* 20px -> 20/375=5.333vw */
+  }
+
+  .newsletter-description {
+    font-size: 4.267vw; /* 16px -> 16/375=4.267vw */
+    margin-bottom: 8vw; /* 30px -> 30/375=8vw */
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 2.667vw; /* 10px -> 10/375=2.667vw */
+  }
+
+  .newsletter-input {
+    padding: 2.667vw; /* 10px -> 10/375=2.667vw */
+    font-size: 4.267vw; /* 16px -> 16/375=4.267vw */
+    border-width: 0.533vw; /* 2px -> 2/375=0.533vw */
+    border-radius: 1.333vw; /* 5px -> 5/375=1.333vw */
+    max-width: 100%;
+  }
+
+  .newsletter-button {
+    padding: 2.667vw 5.333vw; /* 10px 20px -> 10/375=2.667vw, 20/375=5.333vw */
+    font-size: 4.267vw; /* 16px -> 16/375=4.267vw */
+    border-radius: 1.333vw; /* 5px -> 5/375=1.333vw */
+    width: 100%;
+  }
+
+  .newsletter-message {
+    margin-top: 5.333vw; /* 20px -> 20/375=5.333vw */
+    font-size: 4.267vw; /* 16px -> 16/375=4.267vw */
+  }
+}
+</style>
+
+<div id="app-{{section.id}}" class="container-box">
+  <div class="section1"> 
+    <div class="b-content">
+      <div class="l-box">
+        <a href="{{section.settings.main_link}}" target="_blank" rel="noopener noreferrer">
+          <img class="banner-img" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/960-1200.jpg?v=1727694585" alt="">
+        </a>
+      </div>
+      <div class="r-box">
+        <div class="title">IT'S TIME FOR <br> HALLOWEEN GIVEAWAY</div>
+        <div class="small-title">Innovate and Win!</div>
+        <div class="desc">
+          Join our spooktacular Halloween giveaway and bring your laser-cut creations to life with eerie precision! Whether you're crafting with the cost-effective Falcon2 22W or 40W laser engraver, or summoning professional-grade magic with the Falcon2 Pro 22W or 40W, you're sure to cast a spell on your projects!
+        </div>
+        <div class="count-down">
+          <div class="time-item">
+            <div class="num">22</div>
+            <div class="date-text">DAYS</div>
+          </div>
+          <div class="time-item">
+            <div class="num">22</div>
+            <div class="date-text">HOURS</div>
+          </div>
+          <div class="time-item">
+            <div class="num">22</div>
+            <div class="date-text">MINS</div>
+          </div>
+          <div class="time-item">
+            <div class="num">22</div>
+            <div class="date-text">SECS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-img-wrap">
+      <div class="bg-img"></div>
+    </div>
+  </div>
+  <div class="section2">
+    <div class="content">
+      <div class="common-title">ENJOY OUR Halloween Crafting GIVEAWAY <br>WINNWER LIST: </div>
+      <div class="gift-list">
+        <div class="gift-item">
+          <img class="gift-img" src="https://cdn.shopify.com/s/files/1/0630/7522/1663/files/falcon_Halloween_giveaway.png?v=1728294829" alt="">
+          <div class="gift-info">
+            <div class="gift-name">PROTECTIVE COVER</div>
+            <div class="gift-desc">
+              <span>Stephanie Mcquillan、Charlene Morgans</span>
+              <br><br>
+              <span>Giveaway 2pcs</span>
+            </div>
+          </div>
+        </div>
+        <div class="gift-item"> 
+          <img class="gift-img" src="https://cdn.shopify.com/s/files/1/0630/7522/1663/files/falcon_Halloween_giveaway_3.png?v=1728294830" alt="">
+          <div class="gift-info">
+            <div class="gift-name">Falcon 10w Laser Engraver</div>
+            <div class="gift-desc">
+              <span>Shuabur Chowdhury</span>
+              <br><br>
+              <span>Giveaway 1pcs</span>
+            </div>
+          </div>
+        </div>
+        <div class="gift-item">
+          <img class="gift-img" src="https://cdn.shopify.com/s/files/1/0630/7522/1663/files/falcon_Halloween_giveaway_2.png?v=1728294830" alt="">
+          <div class="gift-info">
+            <div class="gift-name">DIY CRAFT MATERIALS SET</div>
+            <div class="gift-desc">
+              <span>Shane Dimmelow、Alan Kent、rashasalama@xxx.com </span>
+              <br><br>
+              <span>Giveaway 3 Sets</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section3 clearfix">
+    <div class="border"></div>
+    <div class="content">
+      <div class="common-title">ENTERING IS EASY</div>
+      <div class="common-subtitle">JUST FILL OUT THE FORM BELOW AND YOU'LL BE ENTERED TO WIN</div>
+      <div class="form-wrap">
+        <div class="f-left">
+          <svg class="icon-date" viewBox="0 0 43 43" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M23.2632 22.8326V12.9429C23.2632 11.7794 22.4795 11.0037 21.3041 11.0037C20.1286 11.0037 19.345 11.7794 19.345 12.9429V23.6083C19.345 24.1901 19.5409 24.5779 19.9327 24.9657L27.5732 32.5285C27.965 32.9163 28.5528 33.1102 28.9446 33.1102C29.5323 33.1102 29.9241 32.9163 30.3159 32.5285C31.0996 31.7528 31.0996 30.5893 30.3159 29.8136L23.2632 22.8326ZM3.08447 8.28885L9.94132 3.44093C10.725 2.85918 11.1168 1.69568 10.3331 0.72609C9.74541 -0.0495782 8.56995 -0.243495 7.5904 0.338256L0.733552 5.18618C-0.0500877 5.76793 -0.245998 6.93143 0.341732 7.90102C0.733552 8.48277 1.32128 8.67669 1.90901 8.67669C2.30083 8.67669 2.69265 8.67669 3.08447 8.28885ZM21.5 3.63485C10.529 3.63485 1.51719 12.3611 1.51719 23.2205C1.51719 34.0798 10.529 43 21.5 43C32.471 43 41.4828 34.0798 41.4828 23.2205C41.4828 12.3611 32.471 3.63485 21.5 3.63485ZM21.5 39.1217C12.6841 39.1217 5.43539 31.9467 5.43539 23.2205C5.43539 14.4942 12.6841 7.51319 21.5 7.51319C30.3159 7.51319 37.5646 14.6881 37.5646 23.4144C37.5646 32.1406 30.3159 39.1217 21.5 39.1217ZM42.2664 5.18618L35.4096 0.338256C34.626 -0.243495 33.2546 -0.0495782 32.6669 0.72609C32.0791 1.50176 32.275 2.85918 33.0587 3.44093L39.9155 8.28885C40.3074 8.48277 40.6992 8.67669 41.091 8.67669C41.6787 8.67669 42.2664 8.48277 42.6583 7.90102C43.246 6.93143 43.0501 5.76793 42.2664 5.18618Z" fill="#FFC706"></path></svg>
+          <div class="desc1">
+            We'll be selecting 6 lucky winners at random on <span style="color: #ED1F22;">16 October</span>, so be sure to enter before then.
+          </div>
+          <div class="desc2">
+            In addition to the chance to win some amazing prizes, our Halloween Crafting Giveaway is a great way to stay connected with our brand and learn about the latest products and services we offer. By entering, you'll also be added to our email list and be the first to know about future giveaways, promotions, and more.
+          </div>
+          <div class="desc3">
+            Don't miss out on this amazing opportunity to win some great prizes and for a chance to transform your laser-cut projects with CrealityFalcon Laser Engravers. Enter our Halloween Crafting Giveaway today!
+          </div>
+          <img class="l-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1200x1200.png?v=1722233621" alt="ENTERING IS EASY">
+        </div> 
+        <div class="f-right">
+          <div class="inner-box">
+            <div class="form-box">
+              <div class="newsletter-section">
+                <div class="newsletter-container">
+                  <h2 class="newsletter-title">Innovate and Win! </h2>
+                  <p class="newsletter-description">Subscribe to our email newsletter for a chance to win exciting prizes! To be one of the lucky winners!</p>
+                  <form id="newsletter-form" class="newsletter-form" action="/contact" method="post">
+                    <input type="hidden" name="form_type" value="customer">
+                    <input type="hidden" name="utf8" value="✓">
+                    <input type="email" name="contact[email]" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="newsletter-button">Submit</button>
+                  </form>
+                  <div id="newsletter-success" class="newsletter-message">
+                    <p>Thank you for subscribing!</p>
+                  </div>
+                  <div id="newsletter-error" class="newsletter-message">
+                    <p>Please enter a valid email address.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border2"></div>
+  </div>
+  <div class="section4">
+    <div class="content">
+      <div class="condition">
+        <div class="c-title">TERMS AND CONDITIONS:</div>
+        <div class="conditions">
+          <div class="c-item">
+            <div class="icon-wrap">
+              <svg class="c-icon" viewBox="0 0 19 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.86962 13.14L14.3209 6.795L13.0398 5.535L7.86962 10.62L5.26166 8.055L3.98056 9.315L7.86962 13.14ZM9.15072 18C7.88487 18 6.69527 17.7636 5.58194 17.2908C4.4686 16.818 3.50015 16.1769 2.67658 15.3675C1.85302 14.5575 1.20118 13.605 0.721077 12.51C0.240969 11.415 0.000610048 10.245 0 9C0 7.755 0.240359 6.585 0.721077 5.49C1.20179 4.395 1.85363 3.4425 2.67658 2.6325C3.50015 1.8225 4.4686 1.1814 5.58194 0.7092C6.69527 0.237 7.88487 0.0006 9.15072 0C10.4166 0 11.6062 0.2364 12.7195 0.7092C13.8328 1.182 14.8013 1.8231 15.6248 2.6325C16.4484 3.4425 17.1006 4.395 17.5813 5.49C18.062 6.585 18.302 7.755 18.3014 9C18.3014 10.245 18.0611 11.415 17.5804 12.51C17.0996 13.605 16.4478 14.5575 15.6248 15.3675C14.8013 16.1775 13.8328 16.8189 12.7195 17.2917C11.6062 17.7645 10.4166 18.0006 9.15072 18ZM9.15072 16.2C11.1944 16.2 12.9254 15.5025 14.3437 14.1075C15.7621 12.7125 16.4713 11.01 16.4713 9C16.4713 6.99 15.7621 5.2875 14.3437 3.8925C12.9254 2.4975 11.1944 1.8 9.15072 1.8C7.10706 1.8 5.37605 2.4975 3.95768 3.8925C2.53932 5.2875 1.83014 6.99 1.83014 9C1.83014 11.01 2.53932 12.7125 3.95768 14.1075C5.37605 15.5025 7.10706 16.2 9.15072 16.2Z" fill="#35904D"></path></svg>
+            </div>
+            <div class="c-desc">The Halloween Crafting Giveaway is open to residents of the United Kingdom who are 18
+              years of age or older.</div>
+          </div>
+          <div class="c-item">
+            <div class="icon-wrap">
+              <svg class="c-icon" viewBox="0 0 19 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.86962 13.14L14.3209 6.795L13.0398 5.535L7.86962 10.62L5.26166 8.055L3.98056 9.315L7.86962 13.14ZM9.15072 18C7.88487 18 6.69527 17.7636 5.58194 17.2908C4.4686 16.818 3.50015 16.1769 2.67658 15.3675C1.85302 14.5575 1.20118 13.605 0.721077 12.51C0.240969 11.415 0.000610048 10.245 0 9C0 7.755 0.240359 6.585 0.721077 5.49C1.20179 4.395 1.85363 3.4425 2.67658 2.6325C3.50015 1.8225 4.4686 1.1814 5.58194 0.7092C6.69527 0.237 7.88487 0.0006 9.15072 0C10.4166 0 11.6062 0.2364 12.7195 0.7092C13.8328 1.182 14.8013 1.8231 15.6248 2.6325C16.4484 3.4425 17.1006 4.395 17.5813 5.49C18.062 6.585 18.302 7.755 18.3014 9C18.3014 10.245 18.0611 11.415 17.5804 12.51C17.0996 13.605 16.4478 14.5575 15.6248 15.3675C14.8013 16.1775 13.8328 16.8189 12.7195 17.2917C11.6062 17.7645 10.4166 18.0006 9.15072 18ZM9.15072 16.2C11.1944 16.2 12.9254 15.5025 14.3437 14.1075C15.7621 12.7125 16.4713 11.01 16.4713 9C16.4713 6.99 15.7621 5.2875 14.3437 3.8925C12.9254 2.4975 11.1944 1.8 9.15072 1.8C7.10706 1.8 5.37605 2.4975 3.95768 3.8925C2.53932 5.2875 1.83014 6.99 1.83014 9C1.83014 11.01 2.53932 12.7125 3.95768 14.1075C5.37605 15.5025 7.10706 16.2 9.15072 16.2Z" fill="#35904D"></path></svg>
+            </div>
+            <div class="c-desc">Entries will be accepted until 15 Oct. The winner will be selected at random
+              and notified via email on 16 Oct.</div>
+          </div>
+          <div class="c-item">
+            <div class="icon-wrap">
+              <svg class="c-icon" viewBox="0 0 19 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.86962 13.14L14.3209 6.795L13.0398 5.535L7.86962 10.62L5.26166 8.055L3.98056 9.315L7.86962 13.14ZM9.15072 18C7.88487 18 6.69527 17.7636 5.58194 17.2908C4.4686 16.818 3.50015 16.1769 2.67658 15.3675C1.85302 14.5575 1.20118 13.605 0.721077 12.51C0.240969 11.415 0.000610048 10.245 0 9C0 7.755 0.240359 6.585 0.721077 5.49C1.20179 4.395 1.85363 3.4425 2.67658 2.6325C3.50015 1.8225 4.4686 1.1814 5.58194 0.7092C6.69527 0.237 7.88487 0.0006 9.15072 0C10.4166 0 11.6062 0.2364 12.7195 0.7092C13.8328 1.182 14.8013 1.8231 15.6248 2.6325C16.4484 3.4425 17.1006 4.395 17.5813 5.49C18.062 6.585 18.302 7.755 18.3014 9C18.3014 10.245 18.0611 11.415 17.5804 12.51C17.0996 13.605 16.4478 14.5575 15.6248 15.3675C14.8013 16.1775 13.8328 16.8189 12.7195 17.2917C11.6062 17.7645 10.4166 18.0006 9.15072 18ZM9.15072 16.2C11.1944 16.2 12.9254 15.5025 14.3437 14.1075C15.7621 12.7125 16.4713 11.01 16.4713 9C16.4713 6.99 15.7621 5.2875 14.3437 3.8925C12.9254 2.4975 11.1944 1.8 9.15072 1.8C7.10706 1.8 5.37605 2.4975 3.95768 3.8925C2.53932 5.2875 1.83014 6.99 1.83014 9C1.83014 11.01 2.53932 12.7125 3.95768 14.1075C5.37605 15.5025 7.10706 16.2 9.15072 16.2Z" fill="#35904D"></path></svg>
+            </div>
+            <div class="c-desc">By entering the giveaway, you agree to be added to our email list and receive occasional updates
+              and promotional messages from us. You can unsubscribe at any time.</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    {% comment %} <div class="sliding"> 
+      <img class="slid-img" src="https://placeholder.ecomposer.app/faker.png?width=131&height=98" alt="131 * 98">
+    </div> {% endcomment %}
+  </div>
+  <div class="section5">
+    <div class="border"></div>
+    <div class="content">
+      <div class="title">
+        FREQUENTLY <br>
+        ASKED QUESTIONS
+      </div>
+      <div class="faq-wrap">
+        <div class="l-box">
+          <img class="gift-img" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Rostislav_Matuska-earrings2.jpg?v=1721809196" alt="gift">
+        </div>
+        <div class="r-box">
+          <div class="faqs">
+            <div class="accordion">
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    How Can I Enter the Halloween Giveaway?
+                    <div class="down-icon">
+                      <svg width="14" height="9" viewBox="0 0 14 9" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 1.2425L7 8.2425L0 1.2425L1.2425 5.03338e-07L7 5.7575L12.7575 0L14 1.2425Z"></path></svg>
+                    </div>
+                  </h2>
+                  <div class="accordion-content">
+                    <p>To join our spooktacular Halloween crafting giveaway, simply visit our haunted landing page and fill out the entry form with your name, email address, and any other required details. Don't miss this frightfully fun chance to win!</p>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    What Prizes Are Being Given Away?
+                    <div class="down-icon">
+                      <svg width="14" height="9" viewBox="0 0 14 9" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 1.2425L7 8.2425L0 1.2425L1.2425 5.03338e-07L7 5.7575L12.7575 0L14 1.2425Z"></path></svg>
+                    </div>
+                  </h2>
+                  <div class="accordion-content">
+                    <p>The gifts being given away include crafted supplies: Falcon Protective Cover, Falcon Laser Engraver 10W and DIY Craft Materials Set to help you master your laser-cut projects with haunting precision.</p>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  When Is The Deadline To Enter The Giveaway?
+                  <div class="down-icon">
+                    <svg width="14" height="9" viewBox="0 0 14 9" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 1.2425L7 8.2425L0 1.2425L1.2425 5.03338e-07L7 5.7575L12.7575 0L14 1.2425Z"></path></svg>
+                  </div>
+                </h2>
+                <div class="accordion-content">
+                  <p>The deadline to enter this spooky giveaway is midnight, 15 October. Make sure to submit your entry before the witching hour to be eligible!</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                How Will The Winners Be Notified And Receive Their Gifts?
+                <div class="down-icon">
+                  <svg width="14" height="9" viewBox="0 0 14 9" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 1.2425L7 8.2425L0 1.2425L1.2425 5.03338e-07L7 5.7575L12.7575 0L14 1.2425Z"></path></svg>
+                </div>
+              </h2>
+              <div class="accordion-content">
+                <p>Winners will be contacted via email on 16 October. After confirming their details, they'll receive their ghoulish gifts through secure delivery, ensuring their treats arrive in time for some Halloween crafting magic.</p>
+              </div>
+          </div>
+          </div>
+          </div>
+          <div class="b-desc">
+            <div class="desc">Have you a question?</div>
+            <div class="desc">Email Us: <a href="mailto:uk.support@crealityfalcon.com"><strong>uk.support@crealityfalcon.com</strong></a></div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  $(function() {
+    const isMobile = document.documentElement.clientWidth <= 768;
+    // 注册 ScrollTrigger 插件
+    gsap.registerPlugin(ScrollTrigger);
+    // 监听滚动
+    function fadeInListen() {
+      var fadeIn = $('.container').find('.fadein');
+      fadeIn.each(function () {
+        let element = this;
+        let {
+          scrub,
+          reverse,
+          duration,
+          actions,
+          fn
+        } = $(this).data()
+
+        gsap.set(element, {
+          opacity: 0,
+          y: 20
+        });
+        let toggleActions = "play none none none";
+        let start = $(this).data('start') || 70;
+        duration ? '' : duration = 0.8
+        let tl = gsap.to(element, {
+          opacity: 1,
+          y: 0,
+          duration
+        });
+        if (reverse) {
+          toggleActions = "play none none reverse"
+        }
+
+        ScrollTrigger.create({
+          animation: tl,
+          trigger: element,
+          toggleActions,
+          start: `top ${start}%`, // 调整触发点，视情况而定
+          onEnter: function () {
+
+          },
+          once: true // 只触发一次
+        });
+      });
+    }
+    fadeInListen();
+    
+    // section1 动画
+    gsap.timeline({
+      scrollTrigger: {
+        start: "top 80%",  // 元素到达视口顶部80%处时触发
+        end: "bottom 20%", // 元素到达视口顶部20%处时结束
+        // scrub: true,       // 根据滚动条滚动时间轴
+        // markers: true      // 添加可视化标记，帮助调试
+      }
+    })
+    .from(".banner-img", {x: -500, opacity: 0, duration: .5})
+    .from(".count-down", {y: 250, opacity: 0, duration: .5})
+
+    // setion2 动画
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".gift-img",
+        start: "top 80%",  // 元素到达视口顶部80%处时触发
+        // end: "bottom 20%", // 元素到达视口顶部20%处时结束
+        toggleActions: "play none none none",
+        // scrub: true,       // 根据滚动条滚动时间轴
+        // markers: true      // 添加可视化标记，帮助调试
+      }
+    })
+    if(isMobile) {
+      // 获取所有 gift-img 元素
+      $('.gift-img').each(function(index) {
+        let element = this;
+        console.log("element");
+        const tl = gsap.from(element, {scale: 0, duration: 0.5}, index * 0.5); // 每个动画延迟 0.5 秒
+        ScrollTrigger.create({
+          animation: tl,
+          trigger: element,
+          toggleActions: "play none none none",
+          start: `top 80%`, // 调整触发点，视情况而定
+          onEnter: function () {
+            
+          },
+          once: true // 只触发一次
+        });
+        // 为每个元素添加动画到时间轴上
+      });
+    } else {
+      tl2.from(".gift-img",{scale: 0, duration: .5})
+    }
+
+    // section3 动画
+    const tl3  = gsap.from(".l-img",{ y: "100%", duration: .5})
+    ScrollTrigger.create({
+      animation: tl3, 
+      trigger: ".l-img", 
+      start: "top 100%",  // 元素到达视口顶部80%处时触发
+      end: "bottom 20%", // 元素到达视口顶部20%处时结束
+      toggleActions: "play none none none",
+      // scrub: true,       // 根据滚动条滚动时间轴
+      // markers: true      // 添加可视化标记，帮助调试
+    })
+
+    // section4 动画
+    // gsap.timeline({ 
+    //   scrollTrigger: {
+    //     trigger: ".slid-img",
+    //     start: "top 80%",  // 元素到达视口顶部80%处时触发
+    //     end: "bottom 20%", // 元素到达视口顶部20%处时结束
+    //     toggleActions: "play none none none",
+    //     // scrub: true,       // 根据滚动条滚动时间轴
+    //     // markers: true      // 添加可视化标记，帮助调试
+    //   }
+    // })
+    // .from(".slid-img",{ opacity: 0, x: -170, duration: .3})
+
+    // faqs
+    $(".accordion-header").click(function(){
+      $(this).next(".accordion-content").slideToggle();
+      $(".accordion-content").not($(this).next()).slideUp();
+      $(this).find(".down-icon").toggleClass("active");
+    });
+
+    // 倒计时
+    const count_down = {{ section.settings.count_down | json}}; 
+    (function () {
+        if (!count_down && !count_down.length) return;
+        let ymdarr = count_down.split(" ")[0].split("-");
+        let hmsarr = count_down.split(" ")[1].split(":");
+      
+        if (ymdarr.length === 3 && hmsarr.length === 3) {
+            let timer = null;
+            clearInterval(timer);
+
+            const oYear = Number(ymdarr[0]);
+            const oMonth = Number(ymdarr[1]) - 1; // 月份应减1
+            const oDay = Number(ymdarr[2]);
+            const oHour = Number(hmsarr[0]);
+            const oMinute = Number(hmsarr[1]);
+            const oSecond = Number(hmsarr[2]);
+
+            // 设置定时器
+            timer = setInterval(function () {
+                // 使用北京时间
+                const funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+                const now = new Date();
+                const beijingNow = new Date(now.getTime() + (now.getTimezoneOffset() * 60000) + 28800000); // 调整时间到北京时间
+                const isTime = funtureDate.getTime() - beijingNow.getTime();
+
+                if (isTime < 1000) {
+                    $(".count-down").hide();
+                    clearInterval(timer);
+                    return;
+                }
+
+                const funtureTime = funtureDate.getTime();
+                const presenTime = beijingNow.getTime(); 
+
+                if (funtureTime < presenTime) return; // 时间已过，停止定时器
+
+                const allTime = funtureTime - presenTime;
+                const allSecond = parseInt(allTime / 1000);
+
+                const day = size(parseInt(allSecond / 3600 / 24));
+                const hour = size(parseInt(allSecond / 3600 % 24));
+                const minute = size(parseInt(allSecond / 60 % 60));
+                const second = size(parseInt(allSecond % 60));
+
+                const nodes = document.querySelectorAll(".num");
+                nodes[0].innerHTML = day;
+                nodes[1].innerHTML = hour;
+                nodes[2].innerHTML = minute;
+                nodes[3].innerHTML = second;
+            }, 1000);
+        }
+    })();
+ 
+    function size(num) {
+        return num < 10 && num >= 0 ? '0' + num : num;
+    }
+        const form = document.getElementById('newsletter-form');
+    const successMessage = document.getElementById('newsletter-success');
+    const errorMessage = document.getElementById('newsletter-error');
+  
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // 阻止表单默认提交行为
+  
+      const emailInput = form.querySelector('input[name="contact[email]"]');
+      const email = emailInput.value.trim();
+  
+      // 表单验证
+      if (!validateEmail(email)) {
+        errorMessage.style.display = 'block';
+        // successMessage.style.display = 'none';
+        return;
+      }
+  
+      // AJAX 提交
+      const formData = new FormData(form);
+      fetch('/contact', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json',
+        },
+      })
+        .then(response => {
+          if (response.ok) {
+            form.style.display = 'none';
+            // successMessage.style.display = 'block';
+            errorMessage.style.display = 'none';
+          } else {
+            throw new Error('Form submission failed');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          errorMessage.style.display = 'block';
+          // successMessage.style.display = 'none';
+        });
+    });
+  
+    // 邮箱验证函数
+    function validateEmail(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+  })
+</script>
+
+{% schema %}
+  {
+    "name": "2024 08 预热活动",
+    "settings": [
+      {
+        "type": "text",
+        "id": "count_down",
+        "label": "倒计时",
+        "default": "2024-08-09 10:00:00",
+        "info": "格式：2024-08-09 10:00:00"
+      },
+      {
+        "type": "url",
+        "id": "main_link",
+        "label": "主图链接"
+      }
+    ],
+    "presets": [
+      {
+        "name": "2024 08 预热活动"
+      }
+    ]
+  }
+{% endschema %}

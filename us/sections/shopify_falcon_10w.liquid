@@ -1,0 +1,2676 @@
+<style>
+    .blur-up {
+        filter: blur(1.25rem);
+        transition: filter 0.4s, -webkit-filter 0.4s;
+    }
+
+    .blur-up.loaded {
+        filter: blur(0rem);
+    }
+
+    .CR-Laser-Falcon-10W .blur-up {
+        filter: blur(20px);
+        transition: filter 0.4s, -webkit-filter 0.4s;
+    }
+
+    .CR-Laser-Falcon-10W .blur-up.loaded {
+        filter: blur(0px);
+    }
+    .CR-Laser-Falcon-10W .fit_picture {
+        display: block;
+        width: 1170px;
+        height: auto;
+        position: relative;
+    }
+    .swiper-container {
+        position: relative;
+    }
+    .CR-Laser-Falcon-10W .fit_picture img {
+        position: absolute;
+        width: 1170px;
+        height: auto;
+        left: 0;
+        top: 0;
+        object-fit: contain;
+    }
+
+    @media (min-width:0px) {
+        .CR-Laser-Falcon-10W .fit_picture .placeholderTag {
+            display: none;
+        }
+        .CR-Laser-Falcon-10W .fit_picture ._large {
+            display: block;
+        }
+    }
+    
+    @media (max-width:1440px) {
+        .CR-Laser-Falcon-10W .fit_picture .placeholderTag {
+            display: none;
+        }
+        .CR-Laser-Falcon-10W .fit_picture ._medium {
+            display: block;
+        }
+    }
+    
+    @media (max-width:960px) {
+        .CR-Laser-Falcon-10W .fit_picture .placeholderTag {
+            display: none;
+        }
+        .CR-Laser-Falcon-10W .fit_picture ._small {
+            display: block;
+        }
+    }
+
+    @charset "UTF-8";
+
+    body,
+    html {
+    margin: 0;
+    padding: 0;
+    }
+
+    .en .fontBold {
+    font-family: HarmonyOS_Sans_SC_Bold, sans-serif;
+    }
+    .en .fontRegular {
+    font-family: HarmonyOS_Sans_SC_Regular, sans-serif;
+    }
+    .en .fontLight {
+    font-family: HarmonyOS_Sans_SC_Light, sans-serif;
+    }
+    .en .fontMedium {
+    font-family: HarmonyOS_Sans_SC_Medium, sans-serif;
+    }
+
+    .cn .fontBold {
+    font-family: HarmonyOS_Sans_SC_Bold, sans-serif;
+    }
+    .cn .fontRegular {
+    font-family: HarmonyOS_Sans_SC_Regular, sans-serif;
+    }
+    .cn .fontLight {
+    font-family: HarmonyOS_Sans_SC_Light, sans-serif;
+    }
+    .cn .fontMedium {
+    font-family: HarmonyOS_Sans_SC_Medium, sans-serif;
+    }
+
+    .scroll-no {
+    overflow-y: hidden;
+    }
+
+    .CR-Laser-Falcon-10W {
+    width: 100%;
+    font-size: 0;
+    position: relative;
+    line-height: 1;
+    }
+    .CR-Laser-Falcon-10W.cn {
+    font-family: "HarmonyOS_Sans_SC_Regular", "Microsoft YaHei", "Open Sans", "PingFang SC", "Arial", "sans-serif";
+    }
+    .CR-Laser-Falcon-10W.cn h2 {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    }
+    .CR-Laser-Falcon-10W.en {
+    font-family: "HarmonyOS_Sans_SC_Regular", "Microsoft YaHei", "Open Sans", "PingFang SC", "Arial", "sans-serif";
+    }
+    .CR-Laser-Falcon-10W.en h2 {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    }
+    .CR-Laser-Falcon-10W .mbold2 {
+    font-family: Montserrat-SemiBold;
+    }
+    .CR-Laser-Falcon-10W .mbold {
+    font-family: Montserrat-Medium;
+    }
+    .CR-Laser-Falcon-10W * {
+    box-sizing: border-box;
+    }
+    .CR-Laser-Falcon-10W > * {
+    position: relative;
+    }
+    .CR-Laser-Falcon-10W .play_btn {
+    width: 3vw;
+    height: 3vw;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGQ9Ik0xNS4yOSAxMC42NTVsLTguNTEyIDQuODA4YTEuMiAxLjIgMCAwMS0xLjc5LTEuMDQ1VjQuODAxYTEuMiAxLjIgMCAwMTEuNzktMS4wNDZsOC41MTIgNC44MDlhMS4yIDEuMiAwIDAxMCAyLjA5eiIgaWQ9ImEiLz48L2RlZnM+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cmVjdCBmaWxsPSJub25lIiB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHJ4PSIyNCIvPjxyZWN0IHN0cm9rZT0iI0ZGRiIgeD0iLjUiIHk9Ii41IiB3aWR0aD0iNDciIGhlaWdodD0iNDciIHJ4PSIyMy41Ii8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQuNCAxNC40KSI+PHVzZSBmaWxsPSIjRkZGIiB4bGluazpocmVmPSIjYSIvPjwvZz48L2c+PC9zdmc+);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    }
+    .CR-Laser-Falcon-10W img {
+    width: 100%;
+    height: auto;
+    }
+    .CR-Laser-Falcon-10W .mb {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .fit_picture {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    }
+    .CR-Laser-Falcon-10W .fit_picture img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+    object-fit: contain;
+    }
+    .CR-Laser-Falcon-10W a {
+    text-decoration: none;
+    }
+    .CR-Laser-Falcon-10W h1,
+    .CR-Laser-Falcon-10W h2,
+    .CR-Laser-Falcon-10W h3,
+    .CR-Laser-Falcon-10W h4,
+    .CR-Laser-Falcon-10W h5,
+    .CR-Laser-Falcon-10W h6,
+    .CR-Laser-Falcon-10W p {
+    margin: 0;
+    padding: 0;
+    }
+    .CR-Laser-Falcon-10W h2 {
+    font-size: 2.15vw;
+    color: #000000;
+    line-height: 1;
+    font-family: HarmonyOS_Sans_SC_Bold;
+    text-align: center;
+    }
+    .CR-Laser-Falcon-10W .desc {
+    text-align: center;
+    font-size: 0.94vw;
+    color: #000;
+    line-height: 1.4;
+    margin-top: 1vw;
+    }
+    .CR-Laser-Falcon-10W .abs_wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap {
+    padding: 0 18vw;
+    padding-top: 5vw;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap .text-box {
+    text-align: center;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap .text-box .text1 {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-size: 2.73vw;
+    color: #000000;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap .text-box .text2 {
+    font-family: HarmonyOS_Sans_SC_Medium;
+    font-size: 1.41vw;
+    color: #000000;
+    margin-top: 0.8vw;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap .flex-wrap {
+    margin-top: 5.5vw;
+    width: 26vw;
+    display: flex;
+    flex-wrap: wrap;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap .flex-wrap .flex-item {
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.5vw;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap .flex-wrap .flex-item img {
+    height: 2.54vw;
+    width: auto;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap .flex-wrap .flex-item span {
+    margin-top: 1vw;
+    line-height: 1.3;
+    font-family: HarmonyOS_Sans_SC_Medium;
+    font-size: 0.78vw;
+    color: #000000;
+    line-height: 1.5;
+    text-align: center;
+    }
+    .CR-Laser-Falcon-10W .section2 {
+    padding: 1.6vw 3.2vw;
+    background-color: #ecfafc;
+    }
+    .CR-Laser-Falcon-10W .section2 .flex-wrap {
+    display: flex;
+    gap: 0.5vw;
+    }
+    .CR-Laser-Falcon-10W .section2 .flex-wrap .fit_picture {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section3 {
+    padding: 4.5vw 21.8vw;
+    background: linear-gradient(to bottom, #f7fdfe, #d8f5f9);
+    }
+    .CR-Laser-Falcon-10W .section3 .text3 {
+    font-size: 3.13vw;
+    color: #00d3ef;
+    text-align: center;
+    margin-top: 2.5vw;
+    font-family: HarmonyOS_Sans_SC_Bold;
+    }
+    .CR-Laser-Falcon-10W .section3 .s3_wrap {
+    display: flex;
+    align-items: center;
+    margin-top: 3vw;
+    margin-bottom: 6vw;
+    gap: 2.56vw;
+    }
+    .CR-Laser-Falcon-10W .section3 .s3_wrap .left-wrap {
+    width: 39.6vw;
+    border-radius: 12px;
+    overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section3 .s3_wrap .right-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.56vw;
+    }
+    .CR-Laser-Falcon-10W .section3 .s3_wrap2 {
+    margin-top: 4vw;
+    display: flex;
+    gap: 0.5vw;
+    }
+    .CR-Laser-Falcon-10W .section3 .s3_wrap2 .fit_picture {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section4 {
+    padding: 5vw 21.8vw;
+    padding-top: 6.5vw;
+    background: linear-gradient(to bottom, #ecfafc, #ecfafc);
+    position: relative;
+    overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section4 h2.title {
+    text-align: left;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap1 {
+    display: flex;
+    gap: 3vw;
+    position: relative;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap1 h2.title {
+    position: absolute;
+    top: 2vw;
+    left: 0;
+    width: 26vw;
+    text-align: left;
+    line-height: 1.2;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap1 .left-wrap {
+    display: flex;
+    flex: 1;
+    margin-top: 10vw;
+    gap: 1.4vw;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap1 .left-wrap .img-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vw;
+    flex: 1;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap1 .left-wrap .img-item .img-text {
+    border-radius: 36px;
+    text-align: center;
+    width: 100%;
+    background-color: #31a2b1;
+    color: #fff;
+    font-size: 0.89vw;
+    padding: 0.6vw 0;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap1 .left-wrap .img-item .img-text span {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap1 .left-wrap .img-item .fit_picture {
+    border-radius: 12px;
+    overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap1 .right-item {
+    width: 25.4vw;
+    border-radius: 12px;
+    overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 {
+    margin-top: 10vw;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .text2 {
+    margin-top: 2vw;
+    font-size: 3.52vw;
+    color: #00d3ef;
+    position: relative;
+    font-family: HarmonyOS_Sans_SC_Bold;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .text2::before {
+    content: "10000mm/min";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.7;
+    filter: blur(7px);
+    transform: translateY(70%) rotateX(180deg);
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .text2::after {
+    content: "";
+    position: absolute;
+    left: -10%;
+    bottom: -30%;
+    width: 120%;
+    height: 5vw;
+    transform: translateY(90%);
+    background: #ecfafc;
+    filter: blur(15px);
+    z-index: 2;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .flex-wrap {
+    display: flex;
+    margin-top: 6vw;
+    gap: 0.6vw;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .flex-wrap .left-wrap,
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .flex-wrap .right-wrap {
+    flex: 1;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .flex-wrap .left-wrap {
+    width: 27.8vw;
+    flex: inherit;
+    border-radius: 12px;
+    overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .flex-wrap .right-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6vw;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .flex-wrap .right-wrap .fit_picture {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section5 .text-box {
+    position: absolute;
+    left: 21.8vw;
+    top: 12vw;
+    z-index: 2;
+    }
+    .CR-Laser-Falcon-10W .section5 .text-box h2,
+    .CR-Laser-Falcon-10W .section5 .text-box .desc {
+    text-align: left;
+    }
+    .CR-Laser-Falcon-10W .section5 .text-box .text3 {
+    font-family: HarmonyOS_Sans_SC_Medium;
+    font-size: 1.3vw;
+    color: #010101;
+    margin-top: 1vw;
+    }
+    .CR-Laser-Falcon-10W .section6 {
+    padding: 4vw 0;
+    background-color: #fff;
+    }
+    .CR-Laser-Falcon-10W .section6 h2.title {
+    text-align: left;
+    margin-left: 21.8vw;
+    }
+    .CR-Laser-Falcon-10W .section6 .s6-swiper {
+    padding-left: 21.8vw;
+    width: auto;
+    margin-top: 4vw;
+    overflow: hidden;
+    padding-right: 21.8vw;
+    }
+    .CR-Laser-Falcon-10W .section6 .s6-swiper .swiper-wrapper .swiper-slide {
+    width: 31.25vw;
+    opacity: 0.5;
+    border-radius: 12px;
+    overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section6 .s6-swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
+    opacity: 1;
+    }
+    .CR-Laser-Falcon-10W .section6 .s6-swiper .swiper-wrapper .swiper-slide .text-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 9vw;
+    width: 100%;
+    padding: 1.5vw 2vw;
+    }
+    .CR-Laser-Falcon-10W .section6 .s6-swiper .swiper-wrapper .swiper-slide .text-box .text1 {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-size: 1.41vw;
+    color: #000000;
+    }
+    .CR-Laser-Falcon-10W .section6 .s6-swiper .swiper-wrapper .swiper-slide .text-box .text2 {
+    letter-spacing: -0.02vw;
+    font-size: 0.94vw;
+    color: #000000;
+    line-height: 1.2;
+    margin-top: 1vw;
+    }
+    .CR-Laser-Falcon-10W .section6 .navigation-wrap {
+    margin: 0 21.8vw;
+    margin-top: 2vw;
+    z-index: 1;
+    display: flex;
+    gap: 2.4vw;
+    font-size: 0;
+    padding: 0;
+    }
+    .CR-Laser-Falcon-10W .section6 .navigation-wrap .prev-btn svg {
+    transform: rotate(180deg);
+    }
+    .CR-Laser-Falcon-10W .section6 .navigation-wrap .prev-btn,
+    .CR-Laser-Falcon-10W .section6 .navigation-wrap .next-btn {
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    width: 2.85vw;
+    height: 2.85vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #898a8a;
+    }
+    .CR-Laser-Falcon-10W .section6 .navigation-wrap .prev-btn.swiper-button-disabled,
+    .CR-Laser-Falcon-10W .section6 .navigation-wrap .next-btn.swiper-button-disabled {
+    opacity: 0.5;
+    }
+    .CR-Laser-Falcon-10W .section6 .navigation-wrap .prev-btn svg,
+    .CR-Laser-Falcon-10W .section6 .navigation-wrap .next-btn svg {
+    width: 1.5vw;
+    height: 2.4vw;
+    }
+    .CR-Laser-Falcon-10W .section7 {
+    padding: 6vw 21.8vw;
+    background-color: #ecfafc;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap1 .s7_pic {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 2vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 {
+    margin-top: 8vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .pic-wrap {
+    margin-top: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .pic-wrap .pic-item {
+    position: relative;
+    width: 15vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .pic-wrap .pic-item:nth-child(2) {
+    width: 4vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .pic-wrap .pic-item span {
+    position: absolute;
+    top: 1vw;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: HarmonyOS_Sans_SC_Medium;
+    font-size: 0.89vw;
+    color: #000000;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 3vw;
+    position: relative;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap {
+    padding-top: 2vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap .text1 {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-size: 1.41vw;
+    line-height: 1;
+    text-align: center;
+    color: #ffffff;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap .desc {
+    margin-top: 0.5vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap .param-wrap {
+    margin-top: 3vw;
+    width: 100%;
+    position: relative;
+    height: 10vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap .param-wrap .param-text {
+    z-index: 2;
+    position: absolute;
+    font-size: 0.94vw;
+    color: #ffffff;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap .param-wrap .param1 {
+    left: 9.5vw;
+    top: 0.5vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap .param-wrap .param2 {
+    left: 36.5vw;
+    top: 0.5vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap .param-wrap .param3 {
+    top: 4.5vw;
+    left: 40vw;
+    }
+    .CR-Laser-Falcon-10W .section9 .abs_wrap {
+    padding: 10vw 21.8vw;
+    }
+    .CR-Laser-Falcon-10W .section9 .abs_wrap h2.title {
+    text-align: left;
+    }
+    .CR-Laser-Falcon-10W .section9 .abs_wrap .flex-wrap {
+    margin-top: 3vw;
+    display: flex;
+    gap: 0.6vw;
+    }
+    .CR-Laser-Falcon-10W .section9 .abs_wrap .flex-wrap .flex-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 8.8vw;
+    }
+    .CR-Laser-Falcon-10W .section9 .abs_wrap .flex-wrap .flex-item .fit_picture {
+    border-radius: 12px;
+    overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section9 .abs_wrap .flex-wrap .flex-item .text1 {
+    margin-top: 0.5vw;
+    font-family: HarmonyOS_Sans_SC_Medium;
+    font-size: 0.78vw;
+    color: #000000;
+    width: 1.05vw;
+    height: 1.05vw;
+    background: #00d3ef;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
+    .CR-Laser-Falcon-10W .section9 .abs_wrap .flex-wrap .flex-item .text2 {
+    font-size: 0.86vw;
+    color: #000000;
+    text-align: center;
+    margin-top: 0.5vw;
+    line-height: 1.2;
+    }
+    .CR-Laser-Falcon-10W .section10 {
+    padding: 5vw 21.8vw;
+    background-color: #ecfafc;
+    }
+    .CR-Laser-Falcon-10W .section10 .flex-wrap {
+    display: flex;
+    gap: 0.6vw;
+    margin-top: 4vw;
+    }
+    .CR-Laser-Falcon-10W .section10 .flex-wrap .flex-item {
+    flex: 1;
+    position: relative;
+    height: 13vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vw;
+    background-color: #fff;
+    box-shadow: 18px 0 50px 0 #aee4ef;
+    border-radius: 12px;
+    border: 1px solid #245c67;
+    }
+    .CR-Laser-Falcon-10W .section10 .flex-wrap .flex-item.mb {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section10 .flex-wrap .flex-item .icon-img {
+    height: 4.18vw;
+    width: auto;
+    }
+    .CR-Laser-Falcon-10W .section10 .flex-wrap .flex-item .text {
+    font-family: HarmonyOS_Sans_SC_Medium;
+    font-size: 0.94vw;
+    color: #000000;
+    line-height: 1.5;
+    margin-top: 2vw;
+    text-align: center;
+    }
+    .CR-Laser-Falcon-10W .section10 .flex-wrap .flex-item .icon {
+    position: absolute;
+    left: 0.2vw;
+    top: 0;
+    transform: translateY(-70%);
+    width: 1.95vw;
+    }
+    .CR-Laser-Falcon-10W .section11 {
+    padding-top: 6vw;
+    }
+    .CR-Laser-Falcon-10W .section11 .s11-swiper {
+    margin-top: 4vw;
+    overflow: hidden;
+    height: 20vw;
+    }
+    .CR-Laser-Falcon-10W .section11 .s11-swiper .swiper-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    display: flex;
+    height: auto;
+    width: auto;
+    animation: scrollX 30s linear infinite; /* 自定义动画，30秒内水平匀速滚动 */
+    }
+    @keyframes scrollX {
+    0% {
+        transform: translateX(0);
+    }
+    95% {
+        transform: translateX(calc(-100% + 100vw));
+    } /* 水平移动到最左边 */
+    100% {
+        transform: translateX(calc(-100% + 100vw));
+    }
+    }
+    .CR-Laser-Falcon-10W .section11 .s11-swiper .swiper-wrapper .swiper-slide {
+    position: relative;
+    width: 14vw;
+    height: auto;
+    margin: 0 0.25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+    .CR-Laser-Falcon-10W .section11 .s11-swiper .swiper-wrapper .swiper-slide .fit_picture {
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    }
+    .CR-Laser-Falcon-10W .section11 .s11-swiper .swiper-wrapper .swiper-slide span {
+    font-family: HarmonyOS_Sans_SC_Medium;
+    font-size: 1.17vw;
+    color: #000000;
+    margin-top: 0.5vw;
+    }
+    .CR-Laser-Falcon-10W .section12 {
+    padding-top: 6vw;
+    padding-bottom: 4vw;
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper {
+    margin-top: 4vw;
+    overflow: hidden;
+    height: 32vw;
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper .swiper-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    height: auto;
+    width: auto;
+    animation: scrollX 30s linear infinite; /* 自定义动画，30秒内水平匀速滚动 */
+    }
+    @keyframes scrollX {
+    0% {
+        transform: translateX(0);
+    }
+    95% {
+        transform: translateX(calc(-100% + 100vw));
+    } /* 水平移动到最左边 */
+    100% {
+        transform: translateX(calc(-100% + 100vw));
+    }
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper .swiper-wrapper .swiper-slide {
+    position: relative;
+    width: 21vw;
+    height: auto;
+    margin: 0 0.25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper .swiper-wrapper .swiper-slide .card-img {
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper .swiper-wrapper .swiper-slide .text-box {
+    padding: 0 1.25vw;
+    position: absolute;
+    height: 14vw;
+    padding-top: 2vw;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper .swiper-wrapper .swiper-slide .text-box .text1 {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-size: 1.17vw;
+    color: #000000;
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper .swiper-wrapper .swiper-slide .text-box .text2 {
+    font-size: 0.86vw;
+    color: #000000;
+    line-height: 1.4;
+    margin-top: 1vw;
+    width: 100%;
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper .swiper-wrapper .swiper-slide .text-box img {
+    width: 5.7vw;
+    margin-top: 0.5vw;
+    }
+    .CR-Laser-Falcon-10W .section13 {
+    padding: 5vw 18.4vw;
+    }
+    .CR-Laser-Falcon-10W .section13 h2.title {
+    text-align: left;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap {
+    margin-top: 4vw;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 1.45vw 0;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item:first-child {
+    align-items: center;
+    padding-bottom: 2.8vw;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item .param-name {
+    width: 12vw;
+    flex-shrink: 0;
+    font-family: HarmonyOS_Sans_SC_Medium;
+    font-size: 0.86vw;
+    color: #000000;
+    line-height: 1;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item .param-name.first {
+    font-size: 1.17vw;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item .value-wrap {
+    flex: 1;
+    display: flex;
+    gap: 5vw;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item .value-wrap .value-item {
+    flex: 1;
+    font-family: HarmonyOS_Sans_SC_Medium;
+    font-size: 0.86vw;
+    color: #000000;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item .value-wrap .value-item .product-name {
+    font-family: HarmonyOS_Sans_SC_Medium;
+    font-size: 1.17vw;
+    color: #000000;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 2.5vw;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item .value-wrap .value-item .fit_picture {
+    width: 100%;
+    }
+    .CR-Laser-Falcon-10W .section15 {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section16 {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section17 {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section18 {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section19 {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section20 {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section21 {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section22 {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section23 {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section24 {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section25 {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section26 {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section27 {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section28 {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section29 {
+    display: none;
+    }
+    .CR-Laser-Falcon-10W .section30 {
+    display: none;
+    }
+
+    .toTop {
+    position: fixed;
+    z-index: 999;
+    cursor: pointer;
+    bottom: 8.75vw;
+    right: 2%;
+    transform: rotate(180deg);
+    width: 2vw;
+    height: 2vw;
+    }
+    .toTop:hover .sellpoint-item-jump svg {
+    transform: translateY(0);
+    }
+    .toTop .sellpoint-item-jump {
+    width: 100%;
+    height: 100%;
+    background-color: #ecfafb;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 9;
+    transform: translate3d(0, 0, 0);
+    }
+    .toTop .sellpoint-item-jump svg {
+    width: 100%;
+    height: auto;
+    transition: all 1s;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    }
+
+    @media (max-width: 960px) {
+    .CR-Laser-Falcon-10W {
+        width: 100%;
+        font-size: 0;
+        position: relative;
+    }
+    .CR-Laser-Falcon-10W .mb {
+        display: block;
+    }
+    .CR-Laser-Falcon-10W .pc {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W h2 {
+        font-size: 5.33vw;
+        line-height: 1.2;
+    }
+    .CR-Laser-Falcon-10W .desc {
+        font-size: 2.93vw;
+        margin-top: 2vw;
+    }
+    .CR-Laser-Falcon-10W .abs_wrap {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 2;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap {
+        padding: 0 4.13vw;
+        padding-top: 14vw;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap .text-box {
+        text-align: center;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap .text-box .text1 {
+        font-size: 5.6vw;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap .text-box .text2 {
+        font-size: 3.2vw;
+        margin-top: 2vw;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap .flex-wrap {
+        margin: 0 auto;
+        margin-top: 8vw;
+        width: 68vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap .flex-wrap .flex-item {
+        width: 33.3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5vw;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap .flex-wrap .flex-item img {
+        height: 6.8vw;
+        width: auto;
+    }
+    .CR-Laser-Falcon-10W .section1 .abs_wrap .flex-wrap .flex-item span {
+        margin-top: 3vw;
+        font-size: 2.13vw;
+    }
+    .CR-Laser-Falcon-10W .section2 {
+        padding: 6.4vw 4.5vw;
+        padding-bottom: 8vw;
+    }
+    .CR-Laser-Falcon-10W .section2 .flex-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5vw;
+    }
+    .CR-Laser-Falcon-10W .section2 .flex-wrap .fit_picture {
+        flex: 1;
+        border-radius: 1.3vw;
+        overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section2 .flex-wrap .fit_picture:nth-child(1) {
+        width: 100%;
+        flex: inherit;
+    }
+    .CR-Laser-Falcon-10W .section3 {
+        padding: 10vw 8vw;
+    }
+    .CR-Laser-Falcon-10W .section3 h2.title,
+    .CR-Laser-Falcon-10W .section3 .desc {
+        text-align: left;
+    }
+    .CR-Laser-Falcon-10W .section3 .text3 {
+        font-size: 6.66vw;
+        margin-top: 4.5vw;
+        text-align: left;
+    }
+    .CR-Laser-Falcon-10W .section3 .s3_wrap {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        margin-top: 6vw;
+        margin-bottom: 18vw;
+        gap: 6vw;
+    }
+    .CR-Laser-Falcon-10W .section3 .s3_wrap .left-wrap {
+        width: 100%;
+        border-radius: 2.67vw;
+        overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section3 .s3_wrap .right-wrap {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        gap: 4vw;
+    }
+    .CR-Laser-Falcon-10W .section3 .s3_wrap .right-wrap .fit_picture {
+        width: 32vw;
+    }
+    .CR-Laser-Falcon-10W .section3 .s3_wrap2 {
+        margin-top: 8vw;
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+    }
+    .CR-Laser-Falcon-10W .section3 .s3_wrap2 .fit_picture {
+        flex: 1;
+        border-radius: 2.67vw;
+        overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section4 {
+        padding: 12vw 8vw;
+        position: relative;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap1 {
+        display: flex;
+        gap: 3vw;
+        position: relative;
+        padding-top: 22vw;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap1 h2.title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        text-align: left;
+        line-height: 1.2;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap1 .left-wrap {
+        display: flex;
+        flex-direction: column;
+        flex: inherit;
+        margin-top: 3vw;
+        gap: 3vw;
+        width: 30vw;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap1 .left-wrap .img-item {
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        flex: 1;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap1 .left-wrap .img-item .img-text {
+        border-radius: 2vw;
+        text-align: center;
+        width: 100%;
+        padding: 1vw 0;
+        font-size: 2.04vw;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap1 .left-wrap .img-item .fit_picture {
+        border-radius: 1.32vw;
+        overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap1 .right-item {
+        flex: 1;
+        width: auto;
+        border-radius: 2.67vw;
+        overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section4 h2.title {
+        width: 70%;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 {
+        margin-top: 20vw;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .text2 {
+        margin-top: 4vw;
+        font-size: 10.55vw;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .text2::before {
+        filter: blur(4px);
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .text2::after {
+        transform: translateY(80%);
+        height: 8vw;
+        filter: blur(6px);
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .flex-wrap {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10vw;
+        gap: 3vw;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .flex-wrap .left-wrap,
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .flex-wrap .right-wrap {
+        flex: 1;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .flex-wrap .left-wrap {
+        width: 100%;
+        flex: inherit;
+        border-radius: 1.32vw;
+        overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .flex-wrap .right-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+    }
+    .CR-Laser-Falcon-10W .section4 .s4-wrap2 .flex-wrap .right-wrap .fit_picture {
+        flex: 1;
+        border-radius: 1.32vw;
+        overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section5 .text-box {
+        position: absolute;
+        left: 8vw;
+        top: 12vw;
+        z-index: 2;
+    }
+    .CR-Laser-Falcon-10W .section5 .text-box h2,
+    .CR-Laser-Falcon-10W .section5 .text-box .desc {
+        text-align: left;
+    }
+    .CR-Laser-Falcon-10W .section5 .text-box .text3 {
+        font-size: 4.44vw;
+        color: #010101;
+        margin-top: 5vw;
+    }
+    .CR-Laser-Falcon-10W .section6 {
+        padding: 12vw 0;
+        background-color: #fff;
+    }
+    .CR-Laser-Falcon-10W .section6 h2.title {
+        text-align: left;
+        margin-left: 8vw;
+    }
+    .CR-Laser-Falcon-10W .section6 .s6-swiper {
+        padding-left: 8vw;
+        width: auto;
+        margin-top: 4vw;
+        overflow: hidden;
+        padding-right: 8vw;
+    }
+    .CR-Laser-Falcon-10W .section6 .s6-swiper .swiper-wrapper .swiper-slide {
+        width: 75.6vw;
+        border-radius: 2.67vw;
+    }
+    .CR-Laser-Falcon-10W .section6 .s6-swiper .swiper-wrapper .swiper-slide .text-box {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 28vw;
+        width: 100%;
+        padding: 4vw;
+    }
+    .CR-Laser-Falcon-10W .section6 .s6-swiper .swiper-wrapper .swiper-slide .text-box .text1 {
+        font-size: 4vw;
+    }
+    .CR-Laser-Falcon-10W .section6 .s6-swiper .swiper-wrapper .swiper-slide .text-box .text2 {
+        letter-spacing: -0.02vw;
+        font-size: 3.2vw;
+        margin-top: 4vw;
+    }
+    .CR-Laser-Falcon-10W .section6 .navigation-wrap {
+        margin: 0;
+        margin-left: 8vw;
+        margin-top: 6vw;
+        z-index: 1;
+        display: flex;
+        gap: 6vw;
+        font-size: 0;
+        padding: 0;
+    }
+    .CR-Laser-Falcon-10W .section6 .navigation-wrap .prev-btn,
+    .CR-Laser-Falcon-10W .section6 .navigation-wrap .next-btn {
+        width: 9vw;
+        height: 9vw;
+    }
+    .CR-Laser-Falcon-10W .section6 .navigation-wrap .prev-btn svg,
+    .CR-Laser-Falcon-10W .section6 .navigation-wrap .next-btn svg {
+        width: 4vw;
+        height: 6.6vw;
+    }
+    .CR-Laser-Falcon-10W .section7 {
+        padding: 13vw 8vw;
+        background-color: #ecfafc;
+    }
+    .CR-Laser-Falcon-10W .section7 h2.title,
+    .CR-Laser-Falcon-10W .section7 .desc {
+        text-align: left;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap1 .s7_pic {
+        border-radius: 2.67vw;
+        overflow: hidden;
+        margin-top: 8vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 {
+        margin-top: 16vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .pic-wrap {
+        margin-top: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .pic-wrap .pic-item {
+        position: relative;
+        width: 32vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .pic-wrap .pic-item:nth-child(2) {
+        width: 9vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .pic-wrap .pic-item span {
+        font-size: 2.08vw;
+        top: 2.4vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 {
+        border-radius: 2.67vw 2.67vw 2.67vw 2.67vw;
+        overflow: hidden;
+        margin-top: 10vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap {
+        padding-top: 6vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap .text1 {
+        font-size: 2.4vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap .desc {
+        font-size: 1.8vw;
+        margin-top: 1vw;
+        text-align: center;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap .param-wrap {
+        margin-top: 0vw;
+        width: 100%;
+        position: relative;
+        height: 40vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap .param-wrap .param-text {
+        font-size: 1.87vw;
+        color: #ffffff;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap .param-wrap .param1 {
+        left: 11vw;
+        top: 5vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap .param-wrap .param2 {
+        left: 58vw;
+        top: 5vw;
+    }
+    .CR-Laser-Falcon-10W .section7 .wrap2 .s7_pic5 .abs_wrap .param-wrap .param3 {
+        top: 11vw;
+        left: 63vw;
+    }
+    .CR-Laser-Falcon-10W .section9 .abs_wrap {
+        padding: 14vw 8vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .CR-Laser-Falcon-10W .section9 .abs_wrap h2.title {
+        text-align: left;
+    }
+    .CR-Laser-Falcon-10W .section9 .abs_wrap .flex-wrap {
+        margin-top: 6vw;
+        display: flex;
+        gap: 1.5vw;
+    }
+    .CR-Laser-Falcon-10W .section9 .abs_wrap .flex-wrap .flex-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        flex: 1;
+    }
+    .CR-Laser-Falcon-10W .section9 .abs_wrap .flex-wrap .flex-item .fit_picture {
+        border-radius: 1.3vw;
+        overflow: hidden;
+    }
+    .CR-Laser-Falcon-10W .section9 .abs_wrap .flex-wrap .flex-item .text1 {
+        font-size: 2.2vw;
+        margin-top: 1vw;
+        width: 3.6vw;
+        height: 3.6vw;
+    }
+    .CR-Laser-Falcon-10W .section9 .abs_wrap .flex-wrap .flex-item .text2 {
+        font-size: 2.66vw;
+        margin-top: 2vw;
+    }
+    .CR-Laser-Falcon-10W .section10 {
+        padding: 13vw 8vw;
+    }
+    .CR-Laser-Falcon-10W .section10 h2.title {
+        text-align: left;
+    }
+    .CR-Laser-Falcon-10W .section10 .flex-wrap {
+        display: flex;
+        gap: 0;
+        justify-content: space-between;
+        margin-top: 10vw;
+        flex-wrap: wrap;
+    }
+    .CR-Laser-Falcon-10W .section10 .flex-wrap .flex-item {
+        width: 30%;
+        flex: inherit;
+        height: 32vw;
+        padding-top: 5vw;
+        box-shadow: 3vw 0 8.6vw 0 #aee4ef;
+        border-radius: 1.32vw;
+        margin-bottom: 8vw;
+    }
+    .CR-Laser-Falcon-10W .section10 .flex-wrap .flex-item.mb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+    }
+    .CR-Laser-Falcon-10W .section10 .flex-wrap .flex-item.mb .text {
+        margin-top: 0;
+    }
+    .CR-Laser-Falcon-10W .section10 .flex-wrap .flex-item .icon-img {
+        height: 11vw;
+        width: auto;
+    }
+    .CR-Laser-Falcon-10W .section10 .flex-wrap .flex-item .text {
+        font-size: 2.3vw;
+        margin-top: 4vw;
+        text-align: center;
+    }
+    .CR-Laser-Falcon-10W .section10 .flex-wrap .flex-item .icon {
+        position: absolute;
+        left: 1vw;
+        top: 0;
+        transform: translateY(-70%);
+        width: 5vw;
+    }
+    .CR-Laser-Falcon-10W .section11 {
+        padding-top: 9vw;
+    }
+    .CR-Laser-Falcon-10W .section11 .s11-swiper {
+        margin-top: 8vw;
+        overflow: hidden;
+        height: 40vw;
+    }
+    .CR-Laser-Falcon-10W .section11 .s11-swiper .swiper-wrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        white-space: nowrap;
+        display: flex;
+        height: auto;
+        width: auto;
+        animation: scrollX 50s linear infinite; /* 自定义动画，30秒内水平匀速滚动 */
+    }
+    @keyframes scrollX {
+        0% {
+        transform: translateX(0);
+        }
+        95% {
+        transform: translateX(calc(-100% + 100vw));
+        } /* 水平移动到最左边 */
+        100% {
+        transform: translateX(calc(-100% + 100vw));
+        }
+    }
+    .CR-Laser-Falcon-10W .section11 .s11-swiper .swiper-wrapper .swiper-slide {
+        position: relative;
+        width: 29.5vw;
+        height: auto;
+        margin: 0 1vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .CR-Laser-Falcon-10W .section11 .s11-swiper .swiper-wrapper .swiper-slide .fit_picture {
+        border-radius: 1.32vw;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+    }
+    .CR-Laser-Falcon-10W .section11 .s11-swiper .swiper-wrapper .swiper-slide span {
+        font-size: 2.4vw;
+        margin-top: 1vw;
+    }
+    .CR-Laser-Falcon-10W .section12 {
+        padding-top: 15vw;
+        padding-bottom: 13vw;
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper {
+        margin-top: 6vw;
+        overflow: hidden;
+        height: 65vw;
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper .swiper-wrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        height: auto;
+        width: auto;
+        animation: scrollX 50s linear infinite; /* 自定义动画，30秒内水平匀速滚动 */
+    }
+    @keyframes scrollX {
+        0% {
+        transform: translateX(0);
+        }
+        95% {
+        transform: translateX(calc(-100% + 100vw));
+        } /* 水平移动到最左边 */
+        100% {
+        transform: translateX(calc(-100% + 100vw));
+        }
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper .swiper-wrapper .swiper-slide {
+        position: relative;
+        width: 45vw;
+        height: auto;
+        margin: 0 1vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper .swiper-wrapper .swiper-slide .card-img {
+        border-radius: 1.32vw;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper .swiper-wrapper .swiper-slide .text-box {
+        padding: 0 1.25vw;
+        position: absolute;
+        height: 32vw;
+        padding-top: 4vw;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper .swiper-wrapper .swiper-slide .text-box .text1 {
+        font-size: 2.2vw;
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper .swiper-wrapper .swiper-slide .text-box .text2 {
+        font-size: 1.64vw;
+        margin-top: 1.2vw;
+        width: 100%;
+    }
+    .CR-Laser-Falcon-10W .section12 .s12-swiper .swiper-wrapper .swiper-slide .text-box img {
+        width: 10.8vw;
+        margin-top: 0.8vw;
+    }
+    .CR-Laser-Falcon-10W .section13 {
+        padding: 13vw 5.2vw;
+    }
+    .CR-Laser-Falcon-10W .section13 h2.title {
+        text-align: center;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap {
+        margin-top: 6vw;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item {
+        display: flex;
+        padding: 2.7vw 0;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item:first-child {
+        align-items: center;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item .param-name {
+        width: 20vw;
+        font-size: 1.87vw;
+        color: #000000;
+        line-height: 1;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item .param-name.first {
+        font-size: 1.87vw;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item .value-wrap {
+        flex: 1;
+        display: flex;
+        gap: 5vw;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item .value-wrap .value-item {
+        font-size: 1.87vw;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item .value-wrap .value-item .product-name {
+        font-size: 1.87vw;
+        margin-bottom: 3.5vw;
+    }
+    .CR-Laser-Falcon-10W .section13 .table_wrap .row-item .value-wrap .value-item .fit_picture {
+        width: 100%;
+    }
+    .CR-Laser-Falcon-10W .section14 {
+        /* display: none; */
+    }
+    .CR-Laser-Falcon-10W .section15 {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W .section16 {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W .section17 {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W .section18 {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W .section19 {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W .section20 {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W .section21 {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W .section22 {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W .section23 {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W .section24 {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W .section25 {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W .section26 {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W .section27 {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W .section28 {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W .section29 {
+        display: none;
+    }
+    .CR-Laser-Falcon-10W .section30 {
+        display: none;
+    }
+    .toTop {
+        position: fixed;
+        z-index: 999;
+        cursor: pointer;
+        bottom: 8.75vw;
+        right: 2%;
+        transform: rotate(180deg);
+        width: 8vw;
+        height: 8vw;
+    }
+    .toTop:hover .sellpoint-item-jump svg {
+        transform: translateY(0);
+    }
+    .toTop .sellpoint-item-jump {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(244, 245, 249);
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: 9;
+        transform: translate3d(0, 0, 0);
+    }
+    .toTop .sellpoint-item-jump svg {
+        width: 100%;
+        height: auto;
+        transition: all 1s;
+        transform: translateY(-50%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+    }
+    }    
+</style>
+<div id="container-{{section.id}}">
+    <div class="CR-Laser-Falcon-10W main-contain en">
+        <div class="section1">
+            <div class="abs_wrap">
+                <div class="text-box en fadein">
+                    <div class="text1 mbold2">CR-Laser Falcon 10W</div>
+                    <div class="text2">Ultra Accurate and Fast Laser Engraver &amp; Cutter</div>
+                </div>
+                <div class="flex-wrap">
+                    <div class="flex-item">
+                        <img src="https://cdn.shoplazza.com/46d256184e6354442cf3696ce76489db.png" alt="CR-Laser-Falcon-10W_icon1.png">
+                        <span>
+                            0.06*0.08mm <br>
+                            ultra-fine laser spot
+                        </span>
+                    </div>
+                    <div class="flex-item">
+                        <img src="https://cdn.shoplazza.com/9c0d0c525d875c6f3447e362275f3b80.png" alt="CR-Laser-Falcon-10W_icon2.png">
+                        <span>
+                            Super speed up to <br>
+                            10000mm/min
+                        </span>
+                    </div>
+                    <div class="flex-item">
+                        <img src="https://cdn.shoplazza.com/666b94b389f775efacae00fd787bbf2c.png" alt="CR-Laser-Falcon-10W_icon3.png">
+                        <span>
+                            Large work area <br>
+                            400*415mm
+                        </span>
+                    </div>
+                    <div class="flex-item">
+                        <img src="https://cdn.shoplazza.com/cd0763442b3c37abd2d3725f78b6e87f.png" alt="CR-Laser-Falcon-10W_icon4.png">
+                        <span>
+                            Processing <br>
+                            300+materials
+                        </span>
+                    </div>
+                    <div class="flex-item">
+                        <img src="https://cdn.shoplazza.com/292f08e7c85854a4d73babcb6a3bb915.png" alt="CR-Laser-Falcon-10W_icon5.png">
+                        <span>
+                            Cut 6mm woodboard <br>
+                            in one pass
+                        </span>
+                    </div>
+                    <div class="flex-item">
+                        <img src="https://cdn.shoplazza.com/764fdeb73389fe39ea725959e2c355e2.png" alt="CR-Laser-Falcon-10W_icon6.png">
+                        <span>
+                            Easy to <br> operate
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <picture class="fit_picture"><div style="padding-bottom: 149.60%;" class="_small placeholderTag"></div><div style="padding-bottom: 39.06%;" class="_medium placeholderTag"></div><div style="padding-bottom: 39.06%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/4ec5301b2e6efe3609a0fba2386a2352.jpg, https://cdn.shoplazza.com/d5874be79efd4021cb4c9d128f8ea95b.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/f07c344498e76291d67d44908c290100.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/670a76edab1afeb72205f39ffdf70dea.jpg, https://cdn.shoplazza.com/4634061a0064ab1c9a046d2c8516d178.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/d006cb77911145922d1ef3bdf80ddf63.jpg, https://cdn.shoplazza.com/74f9c2b09f0646b0135235fa02311b06.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/79d52f1594ffd0828cf3ae52be06d1ca.jpg" alt="s1_pic1"></picture>
+        </div>
+        <div class="section2">
+            <div class="flex-wrap delay-fadein">
+                <picture class="fit_picture"><div style="padding-bottom: 55.09%;" class="_small placeholderTag"></div><div style="padding-bottom: 67.80%;" class="_medium placeholderTag"></div><div style="padding-bottom: 67.80%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/42b11254865016fcdf43639a134ad8ca.jpg, https://cdn.shoplazza.com/8b6f6ac579672cd83094857f9cdbfd9c.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/7cc2e73267de630d9222829052d26bac.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/d6f87248347b2eab7a3087d39cad319d.jpg, https://cdn.shoplazza.com/6dbab0a79bc3071169874c4c978d92c7.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/8b4e7e3ec80db23268709b9d9b7f4d4e.jpg, https://cdn.shoplazza.com/7cf310f550361f85916f9493e0ac8e8f.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/23f0da8a05d8c16628a92e27b79953ef.jpg" alt="CR-Laser-Falcon-10W_s2_pic1_blur.jpg"></picture>
+                <picture class="fit_picture"><div style="padding-bottom: 98.52%;" class="_small placeholderTag"></div><div style="padding-bottom: 67.80%;" class="_medium placeholderTag"></div><div style="padding-bottom: 67.80%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/3374ddeca4fba5a8d2db36082feaeea2.jpg, https://cdn.shoplazza.com/0f0829fd9034ca6308e9a17da565d3bf.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/27d6cc23ca55a1b0a1c9ceffd340e246.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/7e85cd8e726c594200deb4b4cce92897.jpg, https://cdn.shoplazza.com/c8e56e6f819b967b27d6cf681b86615d.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/baf43f285536066fb5e38d14e15fee20.jpg, https://cdn.shoplazza.com/d92a0bf2d7c220b3f80d7dcef2f2dd87.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/f76e8f645a4183dc557452abe68634a2.jpg" alt="CR-Laser-Falcon-10W_s2_pic2_blur.jpg"></picture>
+                <picture class="fit_picture"><div style="padding-bottom: 98.52%;" class="_small placeholderTag"></div><div style="padding-bottom: 67.80%;" class="_medium placeholderTag"></div><div style="padding-bottom: 67.80%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/4da629dbc1faae3aae717a013af65065.jpg, https://cdn.shoplazza.com/3b9130173fda8689229eb3c094b21954.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/633fb208c7654211fe829b667a5deb2d.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/dec0138830fb4737d59191a9c9c9e096.jpg, https://cdn.shoplazza.com/82ab702ec67df8778b3394e4c7fe6ce7.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/cd4e611cd8e1b86fcd59b6605745e40e.jpg, https://cdn.shoplazza.com/e7437f7d238db14737dc3764c166aa7e.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/b04764f599bf6773c8bb5003ca78f2e1.jpg" alt="CR-Laser-Falcon-10W_s2_pic3_blur.jpg"></picture>
+            </div>
+        </div>
+
+        <div class="section3">
+            <h2 class="title">Laser Engraving with <br class="mb">High Precision</h2>
+            <div class="desc">Advanced Compresssed-spot Technology Delivers Finer Details, Whether in Engraving or
+                Cutting.</div>
+            <div class="text3" style="color: #00D3EF;">0.06*0.08mm</div>
+            <div class="s3_wrap fadein">
+                <div class="left-wrap">
+                    <picture class="fit_picture"><div style="padding-bottom: 63.03%;" class="_small placeholderTag"></div><div style="padding-bottom: 59.08%;" class="_medium placeholderTag"></div><div style="padding-bottom: 59.08%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/8a785e5ea2b93cc980578ffac105860d.jpg, https://cdn.shoplazza.com/2128ca60e3a11a985b8be08c458e2cc8.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/91e9f2f2ef883ac903a5da4cd78253ba.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/86ed620c6f77ada24e2cab61963e43f0.jpg, https://cdn.shoplazza.com/bd782579c03f44ef2cb767bf9510dde2.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/c151bfe5e7f70e004c268d73fe5ffaa0.jpg, https://cdn.shoplazza.com/055abaf2e83798c0e67c3125d0997459.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/a139e61170e1e3428fefdc8d1156caa8.jpg" alt="CR-Laser-Falcon-10W_s3_pic1_blur.jpg"></picture>
+                </div>
+                <div class="right-wrap">
+                    <picture class="fit_picture"><div style="padding-bottom: 53.71%;" class="_small placeholderTag"></div><div style="padding-bottom: 53.45%;" class="_medium placeholderTag"></div><div style="padding-bottom: 53.45%;" class="_large placeholderTag"></div><source type="image/png" data-srcset="https://cdn.shoplazza.com/4c9d6d4eeaacd68469c8e8d076e67cef.png, https://cdn.shoplazza.com/e8b3b3c4fc0938602c206a71f400b4a9.png 2x" media="(max-width:960px)"><source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/7f1ca21f04722e3f7d91b1cf4c79070b.png"><source type="image/png" data-srcset="https://cdn.shoplazza.com/2511de0405cfd84729781a3a407ba954.png, https://cdn.shoplazza.com/41334a1fd58aad22768fc34c495d12fd.png 2x" media="(max-width:1440px)"><source type="image/png" data-srcset="https://cdn.shoplazza.com/5c700d15a319ca7c514dcd98faea8ec6.png, https://cdn.shoplazza.com/0ee78d1a26f9405fd1c00bb6fbb51f2b.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/767378880a1cceb65fb632939620b77f.png" alt="CR-Laser-Falcon-10W_s3_pic2_blur.png"></picture>
+                    <picture class="fit_picture"><div style="padding-bottom: 54.15%;" class="_small placeholderTag"></div><div style="padding-bottom: 53.82%;" class="_medium placeholderTag"></div><div style="padding-bottom: 53.82%;" class="_large placeholderTag"></div><source type="image/png" data-srcset="https://cdn.shoplazza.com/a051a15ac31dbad51bd47b5ec448d1c0.png, https://cdn.shoplazza.com/aadda97e59a31505122ccb81c3fd9cf9.png 2x" media="(max-width:960px)"><source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/ac862d9107bbb12f2dfa47d237fafef4.png"><source type="image/png" data-srcset="https://cdn.shoplazza.com/ff82f70ad1e9d5a540932af5580e794d.png, https://cdn.shoplazza.com/f7d8e23121c752e1aacd5f2ca5489437.png 2x" media="(max-width:1440px)"><source type="image/png" data-srcset="https://cdn.shoplazza.com/876601af70205c3cd23ca3d0bd509177.png, https://cdn.shoplazza.com/0a308026c00480607710e7a6fb4da849.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/149d09c30fabc6acdbc6a497fa55cbe9.png" alt="CR-Laser-Falcon-10W_s3_pic3_blur.png"></picture>
+                </div>
+            </div>
+            <h2 class="title">Showing Precise Details</h2>
+            <div class="s3_wrap2 delay-fadein">
+                <picture class="fit_picture"><div style="padding-bottom: 74.80%;" class="_small placeholderTag"></div><div style="padding-bottom: 74.86%;" class="_medium placeholderTag"></div><div style="padding-bottom: 74.86%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/e3797e1349b5f221c91267f25aaa010d.jpg, https://cdn.shoplazza.com/f3db67f5a2cfe50bf8956193047f8b7b.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/071bc7e1a95bae59d34fce4fbb149d4e.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/d7c3ea475977b13dc01286486ffc0fbb.jpg, https://cdn.shoplazza.com/12587f938eb84443c441c5ea5b497ea1.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/dca57aa2040bb2137cfc97506140187d.jpg, https://cdn.shoplazza.com/58054f845cfdd0d6d6d0fcddea8fc415.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/bdae296618264bc83e31d8a3c45a7ddf.jpg" alt="CR-Laser-Falcon-10W_s3_pic4_blur.jpg"></picture>
+                <picture class="fit_picture"><div style="padding-bottom: 74.80%;" class="_small placeholderTag"></div><div style="padding-bottom: 74.86%;" class="_medium placeholderTag"></div><div style="padding-bottom: 74.86%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/f055dc649325e0abe352150ad9f826f4.jpg, https://cdn.shoplazza.com/9f7c73d2a1e6dbee181ec32bcdb810f2.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/d55e49672fe93a003be55143cc03c532.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/0ea54a01454f04a27e390f622db03e24.jpg, https://cdn.shoplazza.com/9120f0201ec80a876bec5ddedfca451f.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/9f3c8260e8bf9d7ba9901a7ccdcfb145.jpg, https://cdn.shoplazza.com/3b3ca95942bb604f9167e1ee2f85fa31.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/2ede7482cf0b743ef85a7bd82a1344b4.jpg" alt="CR-Laser-Falcon-10W_s3_pic5_blur.jpg"></picture>
+            </div>
+        </div>
+
+        <div class="section4">
+            <div class="s4-wrap1">
+                <h2 class="title">
+                    10W Powerful Output Cleaner Cutting Ability
+                </h2>
+                <div class="left-wrap delay-fadein">
+                    <div class="img-item">
+                        <div class="img-text">
+                            One Pass: <span style="font-weight: 600;">5mm</span> black acrylic
+                        </div>
+                        <picture class="fit_picture"><div style="padding-bottom: 79.77%;" class="_small placeholderTag"></div><div style="padding-bottom: 79.77%;" class="_medium placeholderTag"></div><div style="padding-bottom: 79.77%;" class="_large placeholderTag"></div><source type="image/png" data-srcset="https://cdn.shoplazza.com/d456024de5521c520861b83e38440835.png, https://cdn.shoplazza.com/adc53b5dea66851623b14eba44c6a6c4.png 2x" media="(max-width:960px)"><source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/59a1726b76363d4cee6b907f7dcabc37.png"><source type="image/png" data-srcset="https://cdn.shoplazza.com/8be0d8b3febf092d35758e0d4ba7b298.png, https://cdn.shoplazza.com/acf01964e8585b9a2644a88502fd9c74.png 2x" media="(max-width:1440px)"><source type="image/png" data-srcset="https://cdn.shoplazza.com/6d543f00cf90b9004cfab68f4837c3e8.png, https://cdn.shoplazza.com/2d9ee450207485cb75edd9ea0080f9a8.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/8fde91e01b37ca9878f2cd40afe852da.png" alt="CR-Laser-Falcon-10W_s4_pic1_blur.png"></picture>
+                    </div>
+
+                    <div class="img-item">
+                        <div class="img-text">
+                            One Pass: <span style="font-weight: 600;">6mm</span> basswood
+                        </div>
+                        <picture class="fit_picture"><div style="padding-bottom: 79.77%;" class="_small placeholderTag"></div><div style="padding-bottom: 79.77%;" class="_medium placeholderTag"></div><div style="padding-bottom: 79.77%;" class="_large placeholderTag"></div><source type="image/png" data-srcset="https://cdn.shoplazza.com/dc78ae076a02d0e3b29af2a16f6774f9.png, https://cdn.shoplazza.com/75697f452705230b66f16b48f84a1f79.png 2x" media="(max-width:960px)"><source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/730e6770e780676a6e20f279eb81693a.png"><source type="image/png" data-srcset="https://cdn.shoplazza.com/e0ff5f475feb3887f29a82ee6c1e5a3d.png, https://cdn.shoplazza.com/ee6d25646fec287e1a9ffdf38d386ddc.png 2x" media="(max-width:1440px)"><source type="image/png" data-srcset="https://cdn.shoplazza.com/3437cd949f07d483bcef3ffcc717c780.png, https://cdn.shoplazza.com/f801758fe0ef33e15b147ec2682fb8fc.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/56d7b7a3ba2e19fc02b5a45f3aa5b0c6.png" alt="CR-Laser-Falcon-10W_s4_pic2_blur.png"></picture>
+                    </div>
+                </div>
+                <div class="right-item">
+                    <picture class="fit_picture"><div style="padding-bottom: 131.51%;" class="_small placeholderTag"></div><div style="padding-bottom: 102.89%;" class="_medium placeholderTag"></div><div style="padding-bottom: 102.89%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/b980e7aeb022d5bc627092c7e14cdf61.jpg, https://cdn.shoplazza.com/d356e61a8b830308cda91576354a22ed.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/a18efe612de735687925a498d805bbef.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/866c84037f033a5e3e3d1d9deaab6851.jpg, https://cdn.shoplazza.com/086b52adca0114597320e6c20446a2c5.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/53560672ffbb158db492de747a532d11.jpg, https://cdn.shoplazza.com/5a4653bf25c4e48259f6e1dda95d1734.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/46b380fcc358531a4fbf0623b6ed1bdb.jpg" alt="CR-Laser-Falcon-10W_s4_pic3_blur.jpg"></picture>
+                </div>
+            </div>
+
+            <div class="s4-wrap2">
+                <h2 class="title">
+                    Higher Productivity at Higher Speed
+                </h2>
+                <div class="text2">10000mm/min</div>
+                <div class="flex-wrap delay-fadein">
+                    <div class="left-wrap">
+                        <picture class="fit_picture"><div style="padding-bottom: 91.62%;" class="_small placeholderTag"></div><div style="padding-bottom: 91.62%;" class="_medium placeholderTag"></div><div style="padding-bottom: 91.62%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/e6d842177f1e0ba85ee35629b731a074.jpg, https://cdn.shoplazza.com/415e35c8adc29597a7c45f6e7ea814c6.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/2ae4393f53b064e57bd25a90e0873e58.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/e20246544d7d805a7c97ce10b164dad5.jpg, https://cdn.shoplazza.com/c3f018a05b22c47417fb7cabdf16f7cb.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/c0828f81a1b7fb3ed0505e68f02964c8.jpg, https://cdn.shoplazza.com/477d5ba2e16f4cd0ddbdb1fb12b02627.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/e03cd42c4e61c64c0ea2f65082f67a39.jpg" alt="CR-Laser-Falcon-10W_s4_pic4_blur.jpg"></picture>
+                    </div>
+                    <div class="right-wrap">
+                        <picture class="fit_picture"><div style="padding-bottom: 44.99%;" class="_small placeholderTag"></div><div style="padding-bottom: 44.99%;" class="_medium placeholderTag"></div><div style="padding-bottom: 44.99%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/690e7ba1659733bf991961a2815d4332.jpg, https://cdn.shoplazza.com/61282c7470925281a66054ce5ee33f5b.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/176ad03afa7bd8922dfab32d1cac1a37.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/a80e66f811c2fa64800cfba1986bfee4.jpg, https://cdn.shoplazza.com/939bea1e9b03b1326414ba28037301d8.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/1bfc6cec010e5cf0aa9ff907d62d6151.jpg, https://cdn.shoplazza.com/d2d23ea7ec5d79df01000a82f9a45ab5.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/efd302c79db36b8fd411b12837ba6c51.jpg" alt="CR-Laser-Falcon-10W_s4_pic5_blur.jpg"></picture>
+                        <picture class="fit_picture"><div style="padding-bottom: 44.99%;" class="_small placeholderTag"></div><div style="padding-bottom: 44.99%;" class="_medium placeholderTag"></div><div style="padding-bottom: 44.99%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/53a89634cdc2e49b56f6590a11ce3f9d.jpg, https://cdn.shoplazza.com/6138fdf8852797cc5a31bec0f9711566.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/7c86d073e0601a47ee2ebe151e038850.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/1a5c059e6e90673883ef90cfdc857296.jpg, https://cdn.shoplazza.com/06dffd03bdf7e779f63b50bf4681e20c.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/edddffeabb7d17ae8ae575e144a68509.jpg, https://cdn.shoplazza.com/3ba07000ad792ca73cf371d801db823a.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/3de926b75849dc7541cad5e0e346b8b0.jpg" alt="CR-Laser-Falcon-10W_s4_pic6_blur.jpg"></picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section5">
+            <div class="text-box fadein">
+                <h2 class="title">Larger Engraving Area</h2>
+                <div class="desc">
+                    Allows you to engrave more patterns at once, <br>
+                    easy to use and more efficient.
+                </div>
+                <div class="text3">
+                    Working Area: 400*415mm
+                </div>
+            </div>
+            <picture class="fit_picture"><div style="padding-bottom: 150.80%;" class="_small placeholderTag"></div><div style="padding-bottom: 36.35%;" class="_medium placeholderTag"></div><div style="padding-bottom: 36.35%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/680cc63335398573f37ba0f6b2883f24.jpg, https://cdn.shoplazza.com/135bd9800459e750874a05649eeb51cc.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/b81ed34910087550f37ea513d4ea68b1.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/dbf28f681e6ffd539c6e9477f26850b1.jpg, https://cdn.shoplazza.com/47a38fd253f3fa17410a28c6c1da07a7.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/3d3b416814f427c1171e6ed23e1cd9e5.jpg, https://cdn.shoplazza.com/5c8279bef4a021465bf4700348a41f9c.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/a324f87c696784d3d7c77b2ba221ca6c.jpg" alt="CR-Laser-Falcon-10W_s5_pic1_blur.jpg"></picture>
+        </div>
+
+        <!-- <div class="section6">
+            <h2 class="title">
+                All-round <span style="color: #00D3EF">Safety Guarantee</span>
+            </h2>
+            <div class="swiper-container s6-swiper fadein">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide first">
+                        <picture class="fit_picture"><div style="padding-bottom: 105.11%;" class="_small placeholderTag"></div><div style="padding-bottom: 97.17%;" class="_medium placeholderTag"></div><div style="padding-bottom: 97.17%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/fb12d11d08700a5f77eb351019d47d17.jpg, https://cdn.shoplazza.com/72ea368a994f1c7ff492b09357590834.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/9236ec4b23fbb122600a04bf93f89a8e.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/5f8d85c3dca9077d343f4b3fbb9ba8eb.jpg, https://cdn.shoplazza.com/a6ae11304ed327b046969c19be754545.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/fcb163b8c68674b932f0211fb6be651b.jpg, https://cdn.shoplazza.com/c793989abc5b56e302582fb7d00bf62b.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/5ff6e12ef90a96724c90dc99b3c299f0.jpg" alt="CR-Laser-Falcon-10W_s6_pic1_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">
+                                Eye-friendy Protective Cover
+                            </div>
+                            <div class="text2">
+                                Using UV-anti acrylic to make a laser shield, <br class="pc">
+                                which effectively filters out 97% laser light <br class="pc">
+                                to ensure safe work.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide second">
+                        <picture class="fit_picture"><div style="padding-bottom: 104.93%;" class="_small placeholderTag"></div><div style="padding-bottom: 97.00%;" class="_medium placeholderTag"></div><div style="padding-bottom: 97.00%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/82214c91b561ab4934e5e712499c845b.jpg, https://cdn.shoplazza.com/bca4aceef59886929d127e33a975fbae.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/20362a30a4794fbf23b3f5fb3b51a77f.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/76fa29f3f74239a8bd1e7320cac6d01d.jpg, https://cdn.shoplazza.com/472a7b2212e9c5e0000035bd26268c54.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/dbfe8a0247a0d0c96560676296182518.jpg, https://cdn.shoplazza.com/4970072dc28aba621b83f174ede1ffc8.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/3511fef4c7a0ce4384fbe3c6ee402bec.jpg" alt="CR-Laser-Falcon-10W_s6_pic2_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">
+                                Active Stop Function
+                            </div>
+                            <div class="text2">
+                                The machine will stop working in case of accidental tilt, <br class="pc">
+                                flip or drop, with the buzzer and indicator sending alert.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide third">
+                        <picture class="fit_picture"><div style="padding-bottom: 104.93%;" class="_small placeholderTag"></div><div style="padding-bottom: 97.17%;" class="_medium placeholderTag"></div><div style="padding-bottom: 97.17%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/812b63aeb1e783e835c2240cf689a733.jpg, https://cdn.shoplazza.com/eb0919ca80e00d60cb7544b0c1a1500e.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/c368f288cd560efe2b19c7d9422471ae.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/3a5d1bd125494785ee0f3364e44a774f.jpg, https://cdn.shoplazza.com/ad85793c1b3da2e00de7ef62a20d3721.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/8a5df51b8d06f504779ea5213967aa17.jpg, https://cdn.shoplazza.com/9d29132b05d9875cf56305f8a466e665.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/c1715827f23f4f99f0404410d2b29057.jpg" alt="CR-Laser-Falcon-10W_s6_pic3_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">
+                                Protective Enclosure
+                            </div>
+                            <div class="text2">
+                                Ultra-convenient folding protective enclosure for safer engraving, <br class="pc">
+                                which bring efficient
+                                ventilation and health protection during operation.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation-wrap">
+                <div class="prev-btn">
+                    <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                        <path d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z" p-id="8092" fill="#fff"></path>
+                    </svg>
+                </div>
+                <div class="next-btn">
+                    <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                        <path d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z" p-id="8092" fill="#fff"></path>
+                    </svg>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="section7">
+            <div class="wrap1">
+                <h2 class="title fadein">
+                    Optional Risers &amp; Rotary Roller, <br>
+                    for More Needs
+                </h2>
+                <div class="desc fadein">
+                    Cutting through thicker materials, customize your big objects to make them cooler, <br class="pc">
+                    engrave most cylinders and spheres to make unique wine glasses and custom rings.
+                </div>
+                <div class="s7_pic">
+                    <picture class="fit_picture"><div style="padding-bottom: 60.22%;" class="_small placeholderTag"></div><div style="padding-bottom: 50.37%;" class="_medium placeholderTag"></div><div style="padding-bottom: 50.37%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/03f5440a9e756ddf313e83f43cb0f8a5.jpg, https://cdn.shoplazza.com/aa3c35a82d6f8ba46287141586e68c6d.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/522c1282f4c22e770484cd081c2102d7.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/2812768132630c4eec6e7c82d18aa3a6.jpg, https://cdn.shoplazza.com/cb3078392686588204f4c7118c41c86d.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/0a6ddff5df3289c4b76686b4745a9181.jpg, https://cdn.shoplazza.com/b7b616dee7e0610b862a3afe7ff37ce5.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/af785a3a67aeabfc923a012b980d141b.jpg" alt="CR-Laser-Falcon-10W_s7_pic1_blur.jpg"></picture>
+                </div>
+            </div>
+            <div class="wrap2">
+                <h2 class="title">
+                    Leading in Motion Stability
+                </h2>
+                <div class="desc">
+                    The wheels and shafts with strong belt help CR-Falcon reduce fractions to <br class="pc"> achieve ultra-high
+                    motion
+                    accuracy, and improve engraving and cutting accurcy to 0.01mm.
+                </div>
+                <div class="pic-wrap delay-fadein">
+                    <div class="pic-item">
+                        <picture class="fit_picture"><div style="padding-bottom: 77.82%;" class="_small placeholderTag"></div><div style="padding-bottom: 77.82%;" class="_medium placeholderTag"></div><div style="padding-bottom: 77.82%;" class="_large placeholderTag"></div><source type="image/png" data-srcset="https://cdn.shoplazza.com/4070c3f6c9d8188a4aed93b76d2cce43.png, https://cdn.shoplazza.com/6913bfc1f8c2b67644de6dbf8f581fbe.png 2x" media="(max-width:960px)"><source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/6aae1e0553a58bac26a76793d30405a1.png"><source type="image/png" data-srcset="https://cdn.shoplazza.com/51696edd94376df730e7dcddac923403.png, https://cdn.shoplazza.com/02d62e858b4d97cf6e5eec7afecc569d.png 2x" media="(max-width:1440px)"><source type="image/png" data-srcset="https://cdn.shoplazza.com/420a424f9d7fded5515f294a8b23483d.png, https://cdn.shoplazza.com/a868793c517fd33078d30484a84ee4a5.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/a8d56fa0fbddcbd286cab920688cea63.png" alt="CR-Laser-Falcon-10W_s7_pic3_blur.png"></picture>
+                        <span>CrealityFalcon</span>
+                    </div>
+                    <div class="pic-item">
+                        <picture class="fit_picture"><div style="padding-bottom: 94.59%;" class="_small placeholderTag"></div><div style="padding-bottom: 94.59%;" class="_medium placeholderTag"></div><div style="padding-bottom: 94.59%;" class="_large placeholderTag"></div><source type="image/png" data-srcset="https://cdn.shoplazza.com/23f3840360b08b87a74f013285d0a2f3.png, https://cdn.shoplazza.com/83b301f69a148df991f0d933232b8d09.png 2x" media="(max-width:960px)"><source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/4e65cbc88e81deffa6df14d606ded5d8.png"><source type="image/png" data-srcset="https://cdn.shoplazza.com/59b11a215001e74905915a073d3558b0.png, https://cdn.shoplazza.com/b3c7fc3daede6ea6cfb326e8d3125094.png 2x" media="(max-width:1440px)"><source type="image/png" data-srcset="https://cdn.shoplazza.com/26737a62dc29603df4a7716c1c1a0572.png, https://cdn.shoplazza.com/d6d0516343210f43b88a01645ee41a47.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/350e57410fe6081f433509efa9e1a346.png" alt="CR-Laser-Falcon-10W_s7_pic4_blur.png"></picture>
+                    </div>
+                    <div class="pic-item">
+                        <picture class="fit_picture"><div style="padding-bottom: 77.52%;" class="_small placeholderTag"></div><div style="padding-bottom: 77.52%;" class="_medium placeholderTag"></div><div style="padding-bottom: 77.52%;" class="_large placeholderTag"></div><source type="image/png" data-srcset="https://cdn.shoplazza.com/63c13925109ff9ac18d9296be557c389.png, https://cdn.shoplazza.com/f72b4f2b5ba076531c53119e39e8c42b.png 2x" media="(max-width:960px)"><source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/4b60f4d6994fdd081199a45688fc5cd4.png"><source type="image/png" data-srcset="https://cdn.shoplazza.com/e3b9c8db663908babe6d1c481ab27d7e.png, https://cdn.shoplazza.com/138fb34c9512cd151393125f030946bf.png 2x" media="(max-width:1440px)"><source type="image/png" data-srcset="https://cdn.shoplazza.com/e0d8219c8d99decf0b91ee14e49a17ca.png, https://cdn.shoplazza.com/7e9fc64642cec8531905c26b19d9baed.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/4fa0069802a019f748c181930ce78f31.png" alt="CR-Laser-Falcon-10W_s7_pic2_blur.png"></picture>
+                        <span>Others</span>
+                    </div>
+                </div>
+                <div class="s7_pic5">
+                    <picture class="fit_picture"><div style="padding-bottom: 62.62%;" class="_small placeholderTag"></div><div style="padding-bottom: 55.65%;" class="_medium placeholderTag"></div><div style="padding-bottom: 55.65%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/a6faf25d0b858b54c743188148fb309a.jpg, https://cdn.shoplazza.com/45b8fe8faa6cac76012278a82e899167.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/4c4bf1046f1fe83b9e58d53fff1e26ea.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/cdd2ee19d4de2731f5cefb73ac59917b.jpg, https://cdn.shoplazza.com/29c7fdff6e4139984ae357cadac167e5.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/06133868d2ea7708a4a5d09eb4570d73.jpg, https://cdn.shoplazza.com/75ea81d4b7f51b29feeac3ec052e664f.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/affe8a8009467a62bbfeabd76fd3b5d1.jpg" alt="CR-Laser-Falcon-10W_s7_pic5_blur.jpg"></picture>
+                    <div class="abs_wrap">
+                        <div class="text_box fadein">
+                            <div class="text1" style="color: #fff;">Reinforced, Strong and High Speed</div>
+                            <div class="desc" style="color: #fff;">Largely Improved Engraving Motion Accuracy to .01mm
+                            </div>
+                        </div>
+                        <div class="param-wrap fadein">
+                            <div class="param-text param1">
+                                V-shaped Motion Wheels
+                            </div>
+                            <div class="param-text param2">
+                                Synchronous Belt
+                            </div>
+                            <div class="param-text param3">
+                                Smooth Shafts
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section6 section8">
+            <h2 class="title">
+                Every Detail Matters
+            </h2>
+            <div class="swiper-container s6-swiper fadein">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide first">
+                        <picture class="fit_picture"><div style="padding-bottom: 105.46%;" class="_small placeholderTag"></div><div style="padding-bottom: 98.33%;" class="_medium placeholderTag"></div><div style="padding-bottom: 98.33%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/5124fa17af5da1a1d7d3aff41a85876b.jpg, https://cdn.shoplazza.com/ecfd06e73e73595d288a68bdae534ddb.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/32d4de9d01838442df1cc746523edfa8.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/76682ec7e1b3b0f4720b26bedaf6ba9b.jpg, https://cdn.shoplazza.com/8de01b542e389894d59956cb69ce4937.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/86c2670106748355833214b46f9639ae.jpg, https://cdn.shoplazza.com/70f8054efe66fb80917476eb96364fd1.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/cc37cc9a8b687c998eee782c0b9d1e98.jpg" alt="CR-Laser-Falcon-10W_s8_pic1_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">
+                                Stable and Robust Structure
+                            </div>
+                            <div class="text2">
+                                8mm shaft instead of the ordinary 6mm shaft, <br class="pc">
+                                and L-shaped anti-slip rubber tripods, <br class="pc">
+                                enhancing stability in the structure.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide second">
+                        <picture class="fit_picture"><div style="padding-bottom: 105.27%;" class="_small placeholderTag"></div><div style="padding-bottom: 98.17%;" class="_medium placeholderTag"></div><div style="padding-bottom: 98.17%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/2fcb2c341ab7c95c712c9f660835cbdb.jpg, https://cdn.shoplazza.com/54e8daa724ce0e0dc1dc442358f94d50.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/b668e63b0d7a3846dd91489c44190884.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/dd054fb6aec1446be31bc4018f6030f3.jpg, https://cdn.shoplazza.com/c4113aaacac083dbc5f9f975dd391c76.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/4802556ecf4e5fc9a50e8ecda27c00bf.jpg, https://cdn.shoplazza.com/92e6455da8f7a4e37f9093b6f40e0217.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/38f30308f5176f15bb0edc37d5ed62c0.jpg" alt="CR-Laser-Falcon-10W_s8_pic2_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">
+                                Built-in Leveler
+                            </div>
+                            <div class="text2">
+                                A visualized aid to level the machine body for ideal <br class="pc">
+                                engraving details.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide third">
+                        <picture class="fit_picture"><div style="padding-bottom: 105.27%;" class="_small placeholderTag"></div><div style="padding-bottom: 98.33%;" class="_medium placeholderTag"></div><div style="padding-bottom: 98.33%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/8a56b4b21bf56558d6b4c7199fa7c718.jpg, https://cdn.shoplazza.com/c2405a59b1b1aa1c45b53419e3c282b3.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/984172f9ace93a42697e11267f7856de.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/b4cf8a75bb2a125e24bed04c6804979e.jpg, https://cdn.shoplazza.com/6b4ae67e8ffd84777ae2d86b99f9aaac.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/fed6ab66f27e3dcea12ec228a1b53c5b.jpg, https://cdn.shoplazza.com/94254ad9201c7fd35ed336bf11c89e19.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/8caba659e4fb98c8bfee68d8f0360b1d.jpg" alt="CR-Laser-Falcon-10W_s8_pic3_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">
+                                Measuring Scale on the Axis Profiles
+                            </div>
+                            <div class="text2">
+                                Quick to locate the engraving position and <br class="pc">
+                                gauge the size of the engraving object.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Navigation -->
+            <div class="navigation-wrap">
+                <div class="prev-btn">
+                    <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                        <path d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z" p-id="8092" fill="#fff"></path>
+                    </svg>
+                </div>
+                <div class="next-btn">
+                    <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                        <path d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z" p-id="8092" fill="#fff"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="section9">
+            <picture class="fit_picture"><div style="padding-bottom: 190.67%;" class="_small placeholderTag"></div><div style="padding-bottom: 39.11%;" class="_medium placeholderTag"></div><div style="padding-bottom: 39.11%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/36ce1bb4bf063ae6381115f5facaa360.jpg, https://cdn.shoplazza.com/b5ea07581c2aa5843110132529b46319.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/9ee2c077dbeb45613e7b0a65573ae357.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/19a51c2e7ce855ab20711ff1902759c9.jpg, https://cdn.shoplazza.com/0aff2054c8863466141a23a023e7162a.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/8ef4fd6765cb3e8eb275177ea23aa3a7.jpg, https://cdn.shoplazza.com/89792e9774a3a093b189bcf9a5a9aeb0.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/0f5c3bb046654cbff5fb7b783f8f7a84.jpg" alt="CR-Laser-Falcon-10W_s9_pic4_blur.jpg"></picture>
+            <div class="abs_wrap">
+                <h2 class="title">
+                    3 Steps Focusing
+                </h2>
+                <div class="flex-wrap delay-fadein">
+                    <div class="flex-item">
+                        <picture class="fit_picture"><div style="padding-bottom: 119.53%;" class="_small placeholderTag"></div><div style="padding-bottom: 119.53%;" class="_medium placeholderTag"></div><div style="padding-bottom: 119.53%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/3d1e3201d86a4e7374711f4572c91ecc.jpg, https://cdn.shoplazza.com/caa9041be694614ccd5882ab4950f076.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/27166ff319d5ffb613f8536f8c679c3f.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/8abf9bf1bc611fea7deae7dd1fcfb4bf.jpg, https://cdn.shoplazza.com/a4e403e416806321c6a82f909b48e997.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/3fb5dab719df50d5939b67db262e2ff6.jpg, https://cdn.shoplazza.com/6429d26e01a8bf41cc213bda1b9507bb.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/6754a2a0ebebab4566eab859f276fbbb.jpg" alt="CR-Laser-Falcon-10W_s9_pic1_blur.jpg"></picture>
+                        <span class="text1">1</span>
+                        <span class="text2">
+                            Loosen the laser <br>
+                            module screw.
+                        </span>
+                    </div>
+                    <div class="flex-item">
+                        <picture class="fit_picture"><div style="padding-bottom: 119.53%;" class="_small placeholderTag"></div><div style="padding-bottom: 119.53%;" class="_medium placeholderTag"></div><div style="padding-bottom: 119.53%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/860c789184b78a71d5a8d5a163b1c586.jpg, https://cdn.shoplazza.com/f36aed9f0fffa56326f02d87766c4d8f.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/2a666ff4f42a75492c9078ac7faee649.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/6f6fb2983ea5fce9538e4e4a74cdcfd0.jpg, https://cdn.shoplazza.com/7023866171f80ab3d202216fe5427bc8.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/aacf9c5ec8f94f14f199a4fbd1ed1c76.jpg, https://cdn.shoplazza.com/e7692aa1a31e650c9fb56d7536cc3edc.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/1c45b571f3fbc457ca2e841dbb79e027.jpg" alt="CR-Laser-Falcon-10W_s9_pic2_blur.jpg"></picture>
+                        <span class="text1">2</span>
+                        <span class="text2">
+                            Slide the module <br>
+                            until its protective <br>
+                            cover touches the <br>
+                            focus block.
+                        </span>
+                    </div>
+                    <div class="flex-item">
+                        <picture class="fit_picture"><div style="padding-bottom: 119.53%;" class="_small placeholderTag"></div><div style="padding-bottom: 119.53%;" class="_medium placeholderTag"></div><div style="padding-bottom: 119.53%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/f175393a5f83241a01c3ab4a1c8a424b.jpg, https://cdn.shoplazza.com/d953ebb668e534a3c88e41ec9c7951b5.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/1b4c35fb5342a996032a42d444c88f15.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/f20f198db2309de9902f3fd6fe51bade.jpg, https://cdn.shoplazza.com/1633461316ba6c4213380b4110967244.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/99bb4627571ea435dd5f6d469be0f02e.jpg, https://cdn.shoplazza.com/07ef8c6b23782fc94ac1163ac7c3e656.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/31a251eda410e912e75931ae3112b5c9.jpg" alt="CR-Laser-Falcon-10W_s9_pic3_blur.jpg"></picture>
+                        <span class="text1">3</span>
+                        <span class="text2">
+                            Tighten the screw.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section10">
+            <h2 class="title fadein">
+                Pioritize Your Rights
+            </h2>
+            <div class="flex-wrap">
+                <div class="flex-item">
+                    <img class="icon-img" src="https://cdn.shoplazza.com/7a8975a4f8d93bef550daceba3b9c982.png" alt="CR-Laser-Falcon-10W_icon10.png">
+                    <img class="icon" src="https://cdn.shoplazza.com/d0898156295e08ad0e323c8ca5861b28.png" alt="CR-Laser-Falcon-10W_icon7.png">
+                    <div class="text">
+                        Support and <br>
+                        Connect in 24 Hours
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <img class="icon-img" src="https://cdn.shoplazza.com/5d56e21ea28f20d0bae024c1799bee3c.png" alt="CR-Laser-Falcon-10W_icon9.png">
+                    <img class="icon" src="https://cdn.shoplazza.com/d0898156295e08ad0e323c8ca5861b28.png" alt="CR-Laser-Falcon-10W_icon7.png">
+                    <div class="text">
+                        14-Day Money-Back <br>
+                        Guarantee
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <img class="icon-img" src="https://cdn.shoplazza.com/2453fc9f3ec02050da35867691f4f2fb.png" alt="CR-Laser-Falcon-10W_icon11.png">
+                    <img class="icon" src="https://cdn.shoplazza.com/d0898156295e08ad0e323c8ca5861b28.png" alt="CR-Laser-Falcon-10W_icon7.png">
+                    <div class="text">
+                        12-Month <br>
+                        Manufacturer's <br>
+                        Warranty
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <img class="icon-img" src="https://cdn.shoplazza.com/a9ab59153cbc25f41bb4f537b9d82335.png" alt="CR-Laser-Falcon-10W_icon13.png">
+                    <img class="icon" src="https://cdn.shoplazza.com/d0898156295e08ad0e323c8ca5861b28.png" alt="CR-Laser-Falcon-10W_icon7.png">
+                    <div class="text">
+                        Various After-sale <br>
+                        Tutorials
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <img class="icon-img" src="https://cdn.shoplazza.com/70073c06161b58edc1e6a4e98c2a3a94.png" alt="CR-Laser-Falcon-10W_icon12.png">
+                    <img class="icon" src="https://cdn.shoplazza.com/d0898156295e08ad0e323c8ca5861b28.png" alt="CR-Laser-Falcon-10W_icon7.png">
+                    <div class="text">
+                        Vibrant User <br>
+                        Community
+                    </div>
+                </div>
+                <div class="flex-item mb">
+                    <div class="text">
+                        More...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section11">
+            <h2 class="title fadein">
+                Work with 300+ materials
+            </h2>
+            <div class="swiper-container s11-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture class="fit_picture"><div style="padding-bottom: 100.00%;" class="_small placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_medium placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/ba5affc3ed2da7a2d96bec99b5a84c3c.jpg, https://cdn.shoplazza.com/d3af64dda1ea1deb68f2016ee4a9c776.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/de319e33b78b2ebf348046c156605d3f.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/7c5c1081ef8f582df02f9d28224d3646.jpg, https://cdn.shoplazza.com/bf094bdbb8eb1b81a936a5f09c9af78e.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/2e9a44af8507d737fb7d45fedc8083a3.jpg, https://cdn.shoplazza.com/868de4cd5bf83463bd13d6639a8bbaa5.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/047e1c8be7e44bef632939b5f438b425.jpg" alt="CR-Laser-Falcon-10W_Acrylic_blur.jpg"></picture>
+                        <span>Acrylic</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture"><div style="padding-bottom: 100.00%;" class="_small placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_medium placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/1ccf18f0c2267ab94de74c072df534bc.jpg, https://cdn.shoplazza.com/47759a2863a9d20f288e2f318a287e58.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/659a45475fe37ae5316aab8f1a47fe74.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/2409aa2c4d3d43d89af7ebd0efcf4eb2.jpg, https://cdn.shoplazza.com/1afe46886ceddd87a29739f0edcac62b.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/702f3e8d916bd6e0e81967010a540d8e.jpg, https://cdn.shoplazza.com/fab19a1b4b3db4702a7240dc4382f03a.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/db2808636b1ae8b616897018d9f34c49.jpg" alt="CR-Laser-Falcon-10W_Baseball_Bat_blur.jpg"></picture>
+                        <span>Baseball Bat</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture"><div style="padding-bottom: 100.00%;" class="_small placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_medium placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/8f3f9445cb7f7517f29be2b0a065cc75.jpg, https://cdn.shoplazza.com/9f8c1a9ae936e2291ba2882640abd68f.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/dae248cb2b13424a17a36f538739cf46.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/b49d80314af3b5c702b6c854ef4c1832.jpg, https://cdn.shoplazza.com/33d90291e1a2c3beafd2354ab5548320.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/7e86c561c8ffe6eee73af708c8506587.jpg, https://cdn.shoplazza.com/3d73ef5d0c1082890af266a49c7cd1ce.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/17d3bcea52d28bef6901bdc31bbad902.jpg" alt="CR-Laser-Falcon-10W_Cardboard_blur.jpg"></picture>
+                        <span>Cardboard</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture"><div style="padding-bottom: 100.00%;" class="_small placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_medium placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/2ff84a803db62ee37471f39eada4381f.jpg, https://cdn.shoplazza.com/009f4818e98a6441edb1f32b8fbda4f1.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/0031c8cb2c5315c0b3df1156320c80a1.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/352729fbc9b51fa13c84742583d414dc.jpg, https://cdn.shoplazza.com/2757ced9cffff54a03a34a20603c7f9d.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/56746dca18e4061ee9717b348e346957.jpg, https://cdn.shoplazza.com/48f7c131a53ab87725c7679a078ad171.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/789a08642cb4d1badaf40c728115c88d.jpg" alt="CR-Laser-Falcon-10W_Glass_blur.jpg"></picture>
+                        <span>Glass</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture"><div style="padding-bottom: 100.00%;" class="_small placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_medium placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/74505a3a93899a5e4edc2e978711aae8.jpg, https://cdn.shoplazza.com/5559ced2a3e63e5a7c271f54873e47ec.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/8a23db2ee4e063ce7390f8e06790ebf5.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/d6974b0f5ee095461b09cee10a46d5b1.jpg, https://cdn.shoplazza.com/573c95b8a303f629d1d685f8bb6bf99e.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/6148bb17c5f2378668ab8b25d14ceb1e.jpg, https://cdn.shoplazza.com/05d5c14a34e88f7db3e579241554a1e6.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/3dee67c90920f96321728a788b5f5f85.jpg" alt="CR-Laser-Falcon-10W_Leather_blur.jpg"></picture>
+                        <span>Leather</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture"><div style="padding-bottom: 100.00%;" class="_small placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_medium placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/d4d2523291522ef061207a3c11ba4168.jpg, https://cdn.shoplazza.com/f7479351c09ad6a24d17a58c96972fdd.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/d9d1c08e860c43515704e7b0186b20cb.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/518fba8f29782c701535977f0aecbe2b.jpg, https://cdn.shoplazza.com/3cf55154b8c8a82f5ca61653c9cbbf95.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/3d83fdd35fe2f026677e76e38b152c2b.jpg, https://cdn.shoplazza.com/4a89047bc2ad7f5017ffdaacea1efa70.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/92f7b6bb5111b1014e2a966c79a8df13.jpg" alt="CR-Laser-Falcon-10W_Metal_blur.jpg"></picture>
+                        <span>Metal</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture"><div style="padding-bottom: 100.00%;" class="_small placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_medium placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/4d0c7b0361d52f3e56e0d740a347a927.jpg, https://cdn.shoplazza.com/0483f26c80294771111e586e92658987.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/9b7742432f52d4028b775c8775beb1bc.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/835f414820b2da6233017b687e7d9c8b.jpg, https://cdn.shoplazza.com/2b3d5450faf40a2487e3da70c5cf45d2.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/c4bf358633d0e6679621d3d524c527fd.jpg, https://cdn.shoplazza.com/e037f5da2c8f5b0a71aad3fdd488b19f.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/08ea95c64d307d2b3304594039b5049a.jpg" alt="CR-Laser-Falcon-10W_Paper_blur.jpg"></picture>
+                        <span>Paper</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture"><div style="padding-bottom: 100.00%;" class="_small placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_medium placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/f3e24bd330617cb4a7cf6079717aeabc.jpg, https://cdn.shoplazza.com/4da2e3a8f551a9689a830717e815a3d9.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/2f5cfadcb588a9df84b436e590741da8.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/ffd098b70669f4abc57a15f896c6152a.jpg, https://cdn.shoplazza.com/8fb152437b79bad3cd69e68ce8a68baa.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/bcf1d4268cb5be6c0b50da5d4a0c6d1f.jpg, https://cdn.shoplazza.com/72b49c44a3edec55cc46973885024caf.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/3ea84cc571a9332a4359daa7f83d1401.jpg" alt="CR-Laser-Falcon-10W_Rubber_blur.jpg"></picture>
+                        <span>Rubber</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture"><div style="padding-bottom: 100.00%;" class="_small placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_medium placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/000839ab577a4eb8ba303d99e49f3b24.jpg, https://cdn.shoplazza.com/9a2811a302ad7b29a7e49b60261e4482.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/293bbaf678347200293f88822d22209d.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/ff028da0d2c58583543deca5ee17c9f3.jpg, https://cdn.shoplazza.com/afb5724c6a4b45236fdcf7acc037dff6.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/7cbe72305975aaa90589ac4bf8b9833b.jpg, https://cdn.shoplazza.com/3d887bbdf6faf4ff36fab0fd45a8e903.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/fca5af26beb90fc89d9796df4d0cfce1.jpg" alt="CR-Laser-Falcon-10W_Stainless_Steel_blur.jpg"></picture>
+                        <span>Stainless Steel</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture"><div style="padding-bottom: 100.00%;" class="_small placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_medium placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/1b80c21da879a5fe56cf3ad23fe64a2c.jpg, https://cdn.shoplazza.com/7992caa2f613f130d893ccbfcd1f1554.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/5a1af58167e5777279a11ab7d7f91120.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/e76ec4b3aad1d35a389f42aac4c2180f.jpg, https://cdn.shoplazza.com/ca60e711b7abc576dfd717b76abea7a7.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/ed327950163db6b179f82bb537313f77.jpg, https://cdn.shoplazza.com/15385f7fbc22e1f4256146ad69ab03c1.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/6d026386c04898ed495ffcfd655af594.jpg" alt="CR-Laser-Falcon-10W_Wood_blur.jpg"></picture>
+                        <span>Wood</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture"><div style="padding-bottom: 100.00%;" class="_small placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_medium placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/7acfccfbdd1e1ed64f2e6553a765c9c9.jpg, https://cdn.shoplazza.com/3c1aeb331e3f93be457b41988c53ceb3.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/dc6de6ab984300c8fe18b48762d310df.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/7022aee33979b7d76a5229bc12a1735e.jpg, https://cdn.shoplazza.com/c7d48c89932fc051cad81e27026f25b4.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/64f1b468b4e182886ce9790c2cd04d86.jpg, https://cdn.shoplazza.com/94ee2f23632fd97bc6c92bdfd1848a8a.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/9b0104984df135358e499072036c556c.jpg" alt="CR-Laser-Falcon-10W_Wine_Class_blur.jpg"></picture>
+                        <span>Wine Class</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture"><div style="padding-bottom: 100.00%;" class="_small placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_medium placeholderTag"></div><div style="padding-bottom: 100.00%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/1b80c21da879a5fe56cf3ad23fe64a2c.jpg, https://cdn.shoplazza.com/7992caa2f613f130d893ccbfcd1f1554.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/5a1af58167e5777279a11ab7d7f91120.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/e76ec4b3aad1d35a389f42aac4c2180f.jpg, https://cdn.shoplazza.com/ca60e711b7abc576dfd717b76abea7a7.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/ed327950163db6b179f82bb537313f77.jpg, https://cdn.shoplazza.com/15385f7fbc22e1f4256146ad69ab03c1.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/6d026386c04898ed495ffcfd655af594.jpg" alt="CR-Laser-Falcon-10W_Wood_blur.jpg"></picture>
+                        <span>Wood</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section12">
+            <h2 class="title fadein">
+                Thumbs Up Ratings <br class="mb">from Falcon Users
+            </h2>
+            <div class="swiper-container s12-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture class="fit_picture card-img"><div style="padding-bottom: 145.81%;" class="_small placeholderTag"></div><div style="padding-bottom: 145.81%;" class="_medium placeholderTag"></div><div style="padding-bottom: 145.81%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/eabeb903fc8eb637e36f125464cdab11.jpg, https://cdn.shoplazza.com/07df0ede675deb6e02998955597af1c4.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/bf36766d4b85d4bdc8202fc6e0542b0f.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/b70916f5026ade08b7b665d043cf9899.jpg, https://cdn.shoplazza.com/c996dc87f3d2c8cf85d69f405fe60375.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/4040f11f9507db9139c32b207b93674a.jpg, https://cdn.shoplazza.com/1a722169ff08469604467e3c653108d6.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/a8dcc995312cfc26797667f7e53dee62.jpg" alt="CR-Laser-Falcon-10W_Angelina_Jolie_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Angelina Jolie</div>
+                            <img src="https://cdn.shoplazza.com/2ca8ea7c2b68fd79f326980b9b240702.png" alt="CR-Laser-Falcon-10W_icon8.png">
+                            <div class="text2">
+                                Whether you're a creative beginner or a seasoned artist, a laser engraver can help you
+                                <br class="pc">
+                                realize your creative dreams - that's the comment my cousin gave me when he used my <br class="pc">
+                                engraver, and he really loved it.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture card-img"><div style="padding-bottom: 146.42%;" class="_small placeholderTag"></div><div style="padding-bottom: 146.42%;" class="_medium placeholderTag"></div><div style="padding-bottom: 146.42%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/d2ed022054103b75c7ab30c534a0e2b9.jpg, https://cdn.shoplazza.com/91b8370fa66885740b6ef9ae13bb78ae.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/a44fc376fad80dd452a7fb35a7de9a7a.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/e4fa41e26ea12f947cf21f9f530c9c06.jpg, https://cdn.shoplazza.com/174b2fb5662436294a4516bd428d1dab.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/ee46cef746e882498321ae25e09277b3.jpg, https://cdn.shoplazza.com/1afb5962655d6eb6a8ef4f1e0ff7bff1.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/c84da5aac3d16f838057d66c08925da8.jpg" alt="CR-Laser-Falcon-10W_Taylor_Swift_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Taylor Swift</div>
+                            <img src="https://cdn.shoplazza.com/2ca8ea7c2b68fd79f326980b9b240702.png" alt="CR-Laser-Falcon-10W_icon8.png">
+                            <div class="text2">
+                                I've had this 10W laser engraving machine for about two months now, and I'm thoroughly
+                                impressed. It's very user-friendly and produces high-quality engravings. I've used it on
+                                wood, acrylic, and leather, and the results have been fantastic every time.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture card-img"><div style="padding-bottom: 146.06%;" class="_small placeholderTag"></div><div style="padding-bottom: 146.06%;" class="_medium placeholderTag"></div><div style="padding-bottom: 146.06%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/b34dba03baf4f744fef55bbb8a7ce4b7.jpg, https://cdn.shoplazza.com/45f39d7fd0644e8d48a8269d4042261d.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/63249c8e66d0c8d283dd17e8d8a8f14f.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/0bbc51286dafcc3709f1c7cfdefa28b5.jpg, https://cdn.shoplazza.com/70c7a012e0891a79f71e34604c111fc2.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/45983751deec04ce4882472d33e4b965.jpg, https://cdn.shoplazza.com/978e0fabdc080ab0341589473e1cdffe.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/0ef012930f82f5157c52fcc3b2ed639c.jpg" alt="CR-Laser-Falcon-10W_Michael_Johnson_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Michael Johnson</div>
+                            <img src="https://cdn.shoplazza.com/2ca8ea7c2b68fd79f326980b9b240702.png" alt="CR-Laser-Falcon-10W_icon8.png">
+                            <div class="text2">
+                                This is a great machine for the price. It's not as powerful as some of the expensive
+                                models, but for a hobbyist like me, it's more than sufficient. It's easy to use and I've
+                                had a lot of fun experimenting with different materials.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture card-img"><div style="padding-bottom: 145.81%;" class="_small placeholderTag"></div><div style="padding-bottom: 145.81%;" class="_medium placeholderTag"></div><div style="padding-bottom: 145.81%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/d63a12e57e551bee8cf85ad7c6a17c53.jpg, https://cdn.shoplazza.com/86cd5b0e599cf49804c95ca17745e46c.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/33e6f89b476353c1f0bd0a08e3011d1b.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/8245ce23e58cfb9ce23b0c189d12f769.jpg, https://cdn.shoplazza.com/8e13cee86f660be15eebc0f2c1bb5f25.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/2d89ea0b7e5778439e82b72ab19cf2c0.jpg, https://cdn.shoplazza.com/abb79835b7eb43dc0cac596448e4d868.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/206a235b91151c7d9fff0f9b891b3b3f.jpg" alt="CR-Laser-Falcon-10W_Emma_Watson_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Emma Watson</div>
+                            <img src="https://cdn.shoplazza.com/2ca8ea7c2b68fd79f326980b9b240702.png" alt="CR-Laser-Falcon-10W_icon8.png">
+                            <div class="text2">
+                                I've been very happy with this laser engraver. It's easy to use, and the quality of the
+                                engravings is excellent. I've been using it for my small crafting business and it's been
+                                a huge help
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture card-img"><div style="padding-bottom: 145.81%;" class="_small placeholderTag"></div><div style="padding-bottom: 145.81%;" class="_medium placeholderTag"></div><div style="padding-bottom: 145.81%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/5d4388d58684e911876fc6a2bf151602.jpg, https://cdn.shoplazza.com/00681e726e93129ca26ec98a34d80e33.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/c90637b20ea46d323f81477ab393c0a1.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/9bc9022b0aa98b904a0799ecbbdf1e70.jpg, https://cdn.shoplazza.com/c02e8c3038b59c962f91812b04e02ae6.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/69ed521bfce9a3295a95b9292913acfa.jpg, https://cdn.shoplazza.com/4095ed76dc0b77f33d0cc0927b3ae670.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/50c2144ae6cfa1d573bc77ad60c54104.jpg" alt="CR-Laser-Falcon-10W_AJ_Smith_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">AJ Smith</div>
+                            <img src="https://cdn.shoplazza.com/2ca8ea7c2b68fd79f326980b9b240702.png" alt="CR-Laser-Falcon-10W_icon8.png">
+                            <div class="text2">
+                                I bought one of these earlier in the year and have fallen in love with it. I have used
+                                mine for leather and wood projects and love it. I am looking at getting a second one so
+                                I can have two of them running at a time. Perfect for hand made gifts.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture card-img"><div style="padding-bottom: 146.06%;" class="_small placeholderTag"></div><div style="padding-bottom: 146.06%;" class="_medium placeholderTag"></div><div style="padding-bottom: 146.06%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/9f4490e1747c33d156697bc85d5fb806.jpg, https://cdn.shoplazza.com/7c69ec27c7a9ecf28e8048b24fc93714.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/68fb48eb6ed1993c03a3625b393d0d70.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/cdea57253eefde68e9685bde550adb23.jpg, https://cdn.shoplazza.com/fbb45ffa9e9f3c21b6653968835495bb.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/6ce9b3286a68135823d2c64a624ed563.jpg, https://cdn.shoplazza.com/12ead59d6b02ff63f288661ff148c7c4.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/78753b48bbd44a3456747158f341681e.jpg" alt="CR-Laser-Falcon-10W_Illustrator_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Illustrator</div>
+                            <img src="https://cdn.shoplazza.com/2ca8ea7c2b68fd79f326980b9b240702.png" alt="CR-Laser-Falcon-10W_icon8.png">
+                            <div class="text2">
+                                Its decently powerful at 10w. Not the highest wattage available, but also not the
+                                lowest. Its perfect for a beginner like myself.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture card-img"><div style="padding-bottom: 146.17%;" class="_small placeholderTag"></div><div style="padding-bottom: 146.17%;" class="_medium placeholderTag"></div><div style="padding-bottom: 146.17%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/f196edbcbb5b3e605f6275b1db0dc4f9.jpg, https://cdn.shoplazza.com/60dc4b3eb94d3b1ef598b43dd6cb04f5.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/2967412437abeb18007e7248752b51df.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/1fc3b4d0d6776af2c041176b66ccc498.jpg, https://cdn.shoplazza.com/81f04fdf3247fef0d9be3a982870935b.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/58fc65389098d74a0d750a8f7c120de5.jpg, https://cdn.shoplazza.com/2f9f44bd2c7b92695a2eb42c4883665d.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/0e0ff659f00b985b2113e185572b43ba.jpg" alt="CR-Laser-Falcon-10W_Hardshell_Woodworks_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Hardshell Woodworks</div>
+                            <img src="https://cdn.shoplazza.com/2ca8ea7c2b68fd79f326980b9b240702.png" alt="CR-Laser-Falcon-10W_icon8.png">
+                            <div class="text2">
+                                This laser has already helped me increase the value of my woodworking projects by being
+                                able to provide my clients with personalized projects.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture card-img"><div style="padding-bottom: 146.06%;" class="_small placeholderTag"></div><div style="padding-bottom: 146.06%;" class="_medium placeholderTag"></div><div style="padding-bottom: 146.06%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/ba61b4dd059747853487f82488f911a0.jpg, https://cdn.shoplazza.com/80fe6f01e49309702edb2d9d9ff86f48.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/3b5d078293c112b7816f68a76ddeef81.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/aa48997e6a5589532aa240f7e3427ee7.jpg, https://cdn.shoplazza.com/20120cc715e5883ffb11fbae323b2771.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/7aa98c1c78e2dce44d872d6789a62d43.jpg, https://cdn.shoplazza.com/4bd188cd3a3b359ef0b8387219025c89.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/2a1aa836f49910229725a50ed1617a8b.jpg" alt="CR-Laser-Falcon-10W_Leonardo_DiCaprio_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Leonardo DiCaprio</div>
+                            <img src="https://cdn.shoplazza.com/2ca8ea7c2b68fd79f326980b9b240702.png" alt="CR-Laser-Falcon-10W_icon8.png">
+                            <div class="text2">
+                                The 10W laser engraving machine is a game-changer. It's powerful, easy to set up, and
+                                the software it comes with is straightforward to use. I've been able to create some
+                                amazing designs with it. Highly recommend!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture card-img"><div style="padding-bottom: 145.81%;" class="_small placeholderTag"></div><div style="padding-bottom: 145.81%;" class="_medium placeholderTag"></div><div style="padding-bottom: 145.81%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/ae7797e4afdca3b7e7303a8a0bbef78d.jpg, https://cdn.shoplazza.com/e1fae5ff1f58f563cd3554740741b618.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/4d2bfe3c9bfc6213fc542295eb743e2e.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/f06eb5669d48ee596131be6eb06e599b.jpg, https://cdn.shoplazza.com/8dd91c03d0da8128349d1f42481c758f.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/e70e06ce8071bf24f55db2bf23b73819.jpg, https://cdn.shoplazza.com/9113f0c668ef4b8f763b563e0bed0a4e.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/459c7f761006332279a47d19643376b6.jpg" alt="CR-Laser-Falcon-10W_Jennifer_Aniston_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Jennifer Aniston</div>
+                            <img src="https://cdn.shoplazza.com/2ca8ea7c2b68fd79f326980b9b240702.png" alt="CR-Laser-Falcon-10W_icon8.png">
+                            <div class="text2">
+                                The 10W laser engraving machine is a solid piece of equipment. It's well-built,
+                                reliable, and operates much faster than I expected. It's also surprisingly quiet which
+                                is a big plus
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="fit_picture card-img"><div style="padding-bottom: 146.06%;" class="_small placeholderTag"></div><div style="padding-bottom: 146.06%;" class="_medium placeholderTag"></div><div style="padding-bottom: 146.06%;" class="_large placeholderTag"></div><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/7b2206afc7edd684bb8bd41cf02caefb.jpg, https://cdn.shoplazza.com/b277fb167b2ea37b63ea3394af66f375.jpg 2x" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/cf2966b630cb13cbb6a2603bb2ca2283.jpg"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/3ebca8a8288d535db64669e274793ac5.jpg, https://cdn.shoplazza.com/c3bb291f4ab612bdcdb83a4be937adfd.jpg 2x" media="(max-width:1440px)"><source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/c5ea9d1e83f13749e26df8f7abcf6e07.jpg, https://cdn.shoplazza.com/75dc4a17bb7e1069a675d3158ad30026.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/556f365cf50e8d6134f69270a16ba5ea.jpg" alt="CR-Laser-Falcon-10W_David_Beckham_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">David Beckham</div>
+                            <img src="https://cdn.shoplazza.com/2ca8ea7c2b68fd79f326980b9b240702.png" alt="CR-Laser-Falcon-10W_icon8.png">
+                            <div class="text2">
+                                This engraving machine has been great for my crafting hobby. It's compact and doesn't
+                                take up much space. Works really well on wood and leather.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section14">
+            <a href="https://webapp.craftseek.com/#/download" target="_blank">
+                <picture class="fit_picture">
+                    <div style="padding-bottom: 133.33%;" class="_small placeholderTag"></div>
+                    <div style="padding-bottom: 53.19%;" class="_medium placeholderTag"></div>
+                    <div style="padding-bottom: 39.06%;" class="_large placeholderTag"></div>
+                    <source type="image/jpeg" media="(max-width:960px)" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/750x1000_ab6d5624-e1a7-4144-a0d7-f7fe350e0a4f.jpg?v=1754278823">
+                    <source type="image/jpeg" media="(max-width:960px)" data-srcset="" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/750x1000_ab6d5624-e1a7-4144-a0d7-f7fe350e0a4f.jpg?v=1754278823">
+                    <source type="image/jpeg" media="(max-width:1440px)" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/1880x.jpg?v=1754278823">
+                    <source type="image/jpeg" media="(min-width:0px)" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/2560x1000.jpg?v=1754278823">
+                    <img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/publicity-s-blur-up.jpg?v=1754287973" alt="CR-Laser-Falcon-10W_publicity_blur.jpg">
+                </picture>
+            </a>
+        </div>
+
+        <div class="section13">
+            <h2 class="title fadein">Product Specifications</h2>
+            <div class="table_wrap">
+                <div class="row-item">
+                    <div class="param-name first">
+                        Type
+                    </div>
+                    <div class="value-wrap">
+                        <div class="value-item">
+                            <span class="product-name">CR-Laser Falcon 5W </span>
+                            <picture class="fit_picture"><div style="padding-bottom: 75.77%;" class="_small placeholderTag"></div><div style="padding-bottom: 75.77%;" class="_medium placeholderTag"></div><div style="padding-bottom: 75.77%;" class="_large placeholderTag"></div><source type="image/png" data-srcset="https://cdn.shoplazza.com/428b2067537afd2a03ca952fc17e89a6.png, https://cdn.shoplazza.com/0b392cac4f51635a4264d791a169d77a.png 2x" media="(max-width:960px)"><source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/343cbd7e36e63cd29cc7cd6607e3cb6f.png"><source type="image/png" data-srcset="https://cdn.shoplazza.com/252a30ade724175d986e376688468146.png, https://cdn.shoplazza.com/35908c413b0d3c8ef34ae022fd01a396.png 2x" media="(max-width:1440px)"><source type="image/png" data-srcset="https://cdn.shoplazza.com/b8ea151c6c20311648826329ffc36063.png, https://cdn.shoplazza.com/b48c14734f759f64f5390b2a526e185a.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/78bd9e6ac571c13a96cd4b840e15b790.png" alt="CR-Laser-Falcon-10W_5w_blur.png"></picture>
+                        </div>
+                        <div class="value-item">
+                            <span class="product-name">CR-Laser Falcon 10W </span>
+                            <picture class="fit_picture"><div style="padding-bottom: 75.65%;" class="_small placeholderTag"></div><div style="padding-bottom: 75.65%;" class="_medium placeholderTag"></div><div style="padding-bottom: 75.65%;" class="_large placeholderTag"></div><source type="image/png" data-srcset="https://cdn.shoplazza.com/0ffa0997fd23967be4bfa7b8f696e872.png, https://cdn.shoplazza.com/c15a62a9e8523e100e7d9fb8b12be326.png 2x" media="(max-width:960px)"><source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/bc64847b4e136620d60b482f0ee44d0b.png"><source type="image/png" data-srcset="https://cdn.shoplazza.com/60d5d47de1a20977cd9ab9781d2e5f8d.png, https://cdn.shoplazza.com/9ef6ff0039030c35651aded94c315fb3.png 2x" media="(max-width:1440px)"><source type="image/png" data-srcset="https://cdn.shoplazza.com/fec076ee6b117311337448cfdd6bcbd7.png, https://cdn.shoplazza.com/264fd4674e5ac9aa3e2244f2dd779f90.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/9cd7ac2e6d909083b14f362621f8195a.png" alt="CR-Laser-Falcon-10W_10w_blur.png"></picture>
+                        </div>
+                        <div class="value-item">
+                            <span class="product-name">Falcon Pro 10W </span>
+                            <picture class="fit_picture"><div style="padding-bottom: 66.67%;" class="_small placeholderTag"></div><div style="padding-bottom: 66.67%;" class="_medium placeholderTag"></div><div style="padding-bottom: 66.67%;" class="_large placeholderTag"></div><source type="image/png" data-srcset="https://cdn.shoplazza.com/04ae6674faf2267ffccb85ade6014501.png, https://cdn.shoplazza.com/5d5abd0e9d8d03339aef13053def10e2.png 2x" media="(max-width:960px)"><source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/0cb08015409ce9d996b44d3359f7ce6e.png"><source type="image/png" data-srcset="https://cdn.shoplazza.com/169e946574cabdf1ee9c85810ebf45f8.png, https://cdn.shoplazza.com/c684883ac89d64415403f5b7cf89fdc5.png 2x" media="(max-width:1440px)"><source type="image/png" data-srcset="https://cdn.shoplazza.com/5fa3af6e0cf8013e9aed8106766f623f.png, https://cdn.shoplazza.com/66338a9672b18d93dccbbed1528d93ae.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/4c6bbed70339713cd6eba4cf3434e5df.png" alt="CR-Laser-Falcon-10W_10wpro_blur.png"></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Buying Guide</div>
+                    <div class="value-wrap">
+                        <div class="value-item">0.06*0.06mm fine laser spot enables high-precision engraving.</div>
+                        <div class="value-item">Falcon 10W can achieve high-precision engraving, also it cuts 6mm wooden
+                            boards and 5mm black acrylic at one pass, to unlock various creations.</div>
+                        <div class="value-item">Falcon Pro 10W adds the air assist. The real-time airflow cools
+                            the engraving and cutting process, reducing coking and producing a more beautiful result.
+                        </div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Optical Power</div>
+                    <div class="value-wrap">
+                        <div class="value-item">5W </div>
+                        <div class="value-item">10W</div>
+                        <div class="value-item">10W</div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Cutting Ability</div>
+                    <div class="value-wrap">
+                        <div class="value-item">3mm basswood in one pass</div>
+                        <div class="value-item">6mm Basswood in one pass</div>
+                        <div class="value-item">6mm basswood in one pass</div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Engraving Area</div>
+                    <div class="value-wrap">
+                        <div class="value-item">400mm*415mm</div>
+                        <div class="value-item">400mm*415mm</div>
+                        <div class="value-item">400mm*415mm</div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Laser Source</div>
+                    <div class="value-wrap">
+                        <div class="value-item">Diode Laser</div>
+                        <div class="value-item">Diode Laser</div>
+                        <div class="value-item">Diode Laser</div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Laser spot</div>
+                    <div class="value-wrap">
+                        <div class="value-item">0.06*0.06mm</div>
+                        <div class="value-item">0.06*0.08mm</div>
+                        <div class="value-item">0.06*0.08mm</div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Laser Wavelength</div>
+                    <div class="value-wrap">
+                        <div class="value-item">455±5nm</div>
+                        <div class="value-item">455±5nm</div>
+                        <div class="value-item">455±5nm</div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Laser Class</div>
+                    <div class="value-wrap">
+                        <div class="value-item">Class 4 (FDA)</div>
+                        <div class="value-item">Class 4 (FDA)</div>
+                        <div class="value-item">Class 4 (FDA)</div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Laser Engraving Software</div>
+                    <div class="value-wrap">
+                        <div class="value-item">LightBurn、LaserGRBL、Falcon Design Space</div>
+                        <div class="value-item">LightBurn、LaserGRBL、Falcon Design Space</div>
+                        <div class="value-item">LightBurn、LaserGRBL、Falcon Design Space</div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Operating System</div>
+                    <div class="value-wrap">
+                        <div class="value-item">Windows /MacOS</div>
+                        <div class="value-item">Windows /MacOS</div>
+                        <div class="value-item">Windows /MacOS</div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Supported File Formats</div>
+                    <div class="value-wrap">
+                        <div class="value-item"> Jpeg, jpg, png, bmp, svg, dxf, etc.</div>
+                        <div class="value-item"> Jpeg, jpg, png, bmp, svg, dxf, etc.</div>
+                        <div class="value-item"> Jpeg, jpg, png, bmp, svg, dxf, etc.</div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Supported Materials</div>
+                    <div class="value-wrap">
+                        <div class="value-item">Cardboard, wood, bamboo, rubber, leather, fabric, acrylic, plastic, etc.
+                        </div>
+                        <div class="value-item">Cardboard, wood, bamboo, rubber, leather, fabric, acrylic, plastic, etc.
+                        </div>
+                        <div class="value-item">Cardboard, wood, bamboo, rubber, leather, fabric, acrylic, plastic, etc.
+                        </div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Operating Temperature</div>
+                    <div class="value-wrap">
+                        <div class="value-item">5℃-35℃</div>
+                        <div class="value-item">5℃-35℃</div>
+                        <div class="value-item">5℃-35℃</div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Product Size</div>
+                    <div class="value-wrap">
+                        <div class="value-item">568*632*198mm</div>
+                        <div class="value-item">568*632*198mm</div>
+                        <div class="value-item">568*638*198mm</div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Equipment Weight</div>
+                    <div class="value-wrap">
+                        <div class="value-item">3.2kg</div>
+                        <div class="value-item">3.2kg</div>
+                        <div class="value-item">5.6kg</div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Input Voltage</div>
+                    <div class="value-wrap">
+                        <div class="value-item">100-240V~ 50-60Hz</div>
+                        <div class="value-item">100-240V~ 50-60Hz</div>
+                        <div class="value-item">100-240V~ 50-60Hz</div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="param-name">Output Voltage</div>
+                    <div class="value-wrap">
+                        <div class="value-item">DC 24.0V 3.0A</div>
+                        <div class="value-item">DC 24.0V 3.0A</div>
+                        <div class="value-item">DC 24.0V 3.0A</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <!-- 回到顶部 -->
+    <div class="toTop" data-target=".section2">
+        <div class="sellpoint-item-jump">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="92" viewBox="0 0 46 92">
+                <defs>
+                    <clipPath id="clip-path">
+                        <rect id="pash_17131" data-name="pash 17131" width="46" height="92" transform="translate(9802 -12581)" fill="#fff" stroke="#707070" stroke-width="1"></rect>
+                    </clipPath>
+                </defs>
+                <g id="sdf_3084" data-name="sdf 3084" transform="translate(-9802 12581)" clip-path="url(#clip-path)">
+                    <g id="gds_48908" data-name="gds 48908" transform="translate(34 2)">
+                        <g id="gds_9" data-name="gds 9" transform="translate(8728 -14303)">
+                            <path id="uutyu_24" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#00D3EF">
+                            </path>
+                        </g>
+                        <g id="gds_9-2" data-name="gds 9" transform="translate(8728 -14257)">
+                            <path id="uutyu_24-2" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#00D3EF">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+</div>
+
+
+<script>
+ gsap.registerPlugin(ScrollToPlugin);
+    gsap.registerPlugin(ScrollTrigger)
+    const delay = function (timer) {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+        res()
+        }, timer)
+    })
+    }
+
+    const docWidth = document.documentElement.clientWidth;
+    const docHeight = document.documentElement.clientHeight;
+    const vw = docWidth / 100;
+    const vh = docHeight / 100;
+    let spaceBetween = 1.3 * vw;
+
+    let spaceNum = docWidth > 960 ? 0.012 : 0.05
+
+    var mySwiper1 = new Swiper('.section6 .s6-swiper', {
+    spaceBetween: docWidth * spaceNum,
+    slidesPerView: "auto",
+    normalizeSlideIndex: false, //关闭标准化的Slide 索引
+    // slidesPerView: 2.8, // 设置显示的 swiper 滑块数量，这里设置为 2.5
+    navigation: {
+        "nextEl": ".section6 .navigation-wrap .next-btn",
+        "prevEl": ".section6 .navigation-wrap .prev-btn"
+    }
+    });
+
+    let tarGetinit = function () {
+    $('[data-target]').click(function (e) {
+        e.preventDefault();
+        // $('.page-pagination li').removeClass('active')
+        // $(this).addClass('active')
+        let target = $(this).data('target')
+        gsap.to(window, {
+        duration: 0.5,
+        scrollTo: {
+            y: target
+        }
+        });
+    })
+    let pagePagination = $(".page-pagination")
+
+    $(window).scroll(function () {
+        if (docWidth > 960) {
+        var scrollPos = $(window).scrollTop();
+        let docHeight = document.documentElement.clientHeight
+
+        $(".page-pagination li").each(function (key) {
+            var target = $(this).data("target");
+            var targetPos = $(target).offset().top;
+            var targetHeight = $(target).outerHeight();
+
+            // 检查元素是否在视图中
+            if (scrollPos >= (targetPos - docHeight * (1 - 0.3))) {
+            pagePagination.fadeIn();
+            $('.page-pagination li').removeClass('active')
+            $(this).addClass("active"); // 如果在视图中，添加"active"类
+            } else if (key === 0) {
+            pagePagination.fadeOut()
+            }
+        });
+        }
+    });
+    }
+
+    var fadeInListen = function () {
+    var fadeIn = $('.main-contain').find('.fadein');
+
+    fadeIn.each(function () {
+        let element = this;
+        let {
+        scrub,
+        reverse,
+        duration,
+        actions,
+        fn
+        } = $(this).data()
+
+        gsap.set(element, {
+        opacity: 0,
+        y: 30
+        });
+        let toggleActions = "play none none none";
+        let start = $(this).data('start') || 70;
+        duration ? '' : duration = 0.8
+        let tl = gsap.to(element, {
+        opacity: 1,
+        y: 0,
+        duration
+        });
+        if (reverse) {
+        toggleActions = "play none none reverse"
+        }
+
+        ScrollTrigger.create({
+        animation: tl,
+        trigger: element,
+        toggleActions,
+        start: `top ${start}%`, // 调整触发点，视情况而定
+        onEnter: function () {
+
+        },
+        once: true // 只触发一次
+        });
+    });
+
+    var delayFadeIn = $('.delay-fadein');
+    delayFadeIn.each(function () {
+        let element = this;
+        let {
+        parent,
+        el,
+        scrub,
+        reverse,
+        duration,
+        actions,
+        fn
+        } = $(this).data()
+        let parentEl = $(parent);
+        parentEl.length ? '' : parentEl = $(element)
+        let delayEl = [];
+        if (el) {
+        el.split(',').forEach((selector) => delayEl.push(...parentEl.find(
+            selector)))
+        } else {
+        delayEl = parentEl.children();
+        }
+
+        let toggleActions = "play none none none";
+        scrub ? scrub = true : scrub = false;
+
+        duration ? '' : duration = 0.8
+        console.log(duration)
+        let start = $(this).data('start') || 70;
+        let stagger = $(this).data('delay') || 0.3;
+
+
+        gsap.set(delayEl, {
+        opacity: 0,
+        y: 30
+        });
+
+        let tl = gsap.timeline();
+        tl.to(delayEl, {
+        stagger,
+        opacity: 1,
+        y: 0,
+        duration
+        })
+        if (fn) {
+        console.log(fn)
+        tl = k1c_tl[fn](tl)
+        }
+        if (reverse) {
+        toggleActions = "play none none reverse"
+        gsap.set(element, {
+            opacity: 0,
+            y: 30
+        });
+        let t2 = gsap.to(element, {
+            opacity: 1,
+            y: 0,
+            duration
+        })
+        ScrollTrigger.create({
+            animation: t2,
+            toggleActions,
+            trigger: element,
+            scrub,
+            start: `top ${start}%`, // 调整触发点，视情况而定
+        });
+        }
+        actions ? toggleActions = actions : ''
+
+
+        ScrollTrigger.create({
+        animation: tl,
+        toggleActions,
+        trigger: element,
+        scrub,
+        start: `top ${start}%`, // 调整触发点，视情况而定
+        // marker: true
+        // once: true // 只触发一次
+        });
+    });
+
+    }
+
+    const swiperWrapper = $('.section11 .s11-swiper .swiper-wrapper,.section12 .s12-swiper .swiper-wrapper');
+
+    // 鼠标悬停时暂停动画
+    swiperWrapper.hover(
+    function () {
+        $(this).css('animation-play-state', 'paused');
+    },
+    function () {
+        $(this).css('animation-play-state', 'running');
+    }
+    );
+
+    // 淡入淡出 初始化
+    fadeInListen();
+    tarGetinit() //跳转初始化
+
+    // <!-- lazy load -->
+    const picture_observer = lozad('.fit_picture,.lazy-video', {
+        rootMargin: '1500px 0px', // syntax similar to that of CSS Margin
+        load: function (el) {
+            // console.log(el)
+            if (el.tagName === 'PICTURE' || el.tagName === 'IMG') {
+                let image = el.tagName === 'IMG' ? el : el.querySelector('img');
+                if (el.tagName === 'IMG') image = el;
+
+                image.onload = function () {
+                    this.classList.add('loaded')
+                }
+                el.querySelectorAll('source').forEach(source => {
+                    let srcset = source.getAttribute('data-srcset');
+                    srcset ? source.setAttribute('srcset', srcset) : ''
+                });
+            } else if (el.tagName === 'VIDEO') {
+                el.onloadeddata = function () {
+                    console.log('loaded...')
+                    this.classList.add('loaded');
+                };
+                const poster = el.getAttribute('data-poster');
+                if (poster) el.setAttribute('poster', poster);
+
+                el.querySelectorAll('source').forEach(source => {
+                    const src = source.getAttribute('data-src');
+                    if (src) {
+                        source.setAttribute('src', src);
+                        el.load()
+                    }
+                });
+            }
+        }
+    });
+    picture_observer.observe();
+</script>
+
+{% schema %}
+  {
+    "name": "shopify_falcon_10w",
+    "settings": [],
+    "presets": [
+      {
+        "name": "shopify_falcon_10w"
+      }
+    ]
+  }
+{% endschema %}

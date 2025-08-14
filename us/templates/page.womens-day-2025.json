@@ -1,0 +1,360 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "custom_banner_bpQMkx": {
+      "type": "custom-banner",
+      "settings": {
+        "banner": "shopify://shop_images/women_s_day_banner.jpg",
+        "m_banner": "shopify://shop_images/womens_day_banner_m.jpg",
+        "time": "2025-03-09 20:59:59",
+        "title": "Work Smart, Create More!",
+        "subtitle": "Celebrate Women in Craft & Industry",
+        "desc": "<p>Save Up To <strong>52%OFF</strong> On Falcon2 Pro Lasers</p>"
+      }
+    },
+    "timedown_collections_JRdYhB": {
+      "type": "timedown-collections",
+      "blocks": {
+        "product_WXiWhb": {
+          "type": "product",
+          "settings": {
+            "product": "stainless-steel-cups-leather-covers-4-pack"
+          }
+        },
+        "product_wfcFqW": {
+          "type": "product",
+          "settings": {
+            "product": "brown-wood-for-laser-engraving-and-cnc-cutting-6pcs"
+          }
+        },
+        "product_cnH6C4": {
+          "type": "product",
+          "settings": {
+            "product": "bubinga-brazilian-rosewood-plywood-sheets-for-laser-engraving-6pcs"
+          }
+        }
+      },
+      "block_order": [
+        "product_WXiWhb",
+        "product_wfcFqW",
+        "product_cnH6C4"
+      ],
+      "settings": {
+        "bind": "Section 1",
+        "icon": "shopify://shop_images/5.flash_sale.png",
+        "time": "2025-04-05"
+      }
+    },
+    "collection_products_4Kq4bq": {
+      "type": "collection-products",
+      "blocks": {
+        "product_9kgE6W": {
+          "type": "product",
+          "settings": {
+            "product": "low-wattage-laser-engraver-cutter-cr-falcon-10w-machine",
+            "icon": "shopify://shop_images/6.2.png",
+            "desc": ""
+          }
+        },
+        "product_VmN4Rk": {
+          "type": "product",
+          "settings": {
+            "product": "falcon2-22w-laser-engraver-cutter",
+            "icon": "shopify://shop_images/6.1.png",
+            "desc": ""
+          }
+        },
+        "product_zW7B7Y": {
+          "type": "product",
+          "settings": {
+            "product": "laser-engraver-cutter-falcon2-40w-engraving-machine",
+            "icon": "shopify://shop_images/6.3.png",
+            "desc": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_9kgE6W",
+        "product_VmN4Rk",
+        "product_zW7B7Y"
+      ],
+      "settings": {
+        "bind": "Section 2",
+        "title": "Get Your Trusted Tool for Creativity and Productivity.",
+        "subtitle": "Checkout Creality Falcon's Bestsellers"
+      }
+    },
+    "long_collection_list_TinwEk": {
+      "type": "long-collection-list",
+      "blocks": {
+        "feature_k7YNB4": {
+          "type": "feature",
+          "settings": {
+            "text": "22W/40W/60W"
+          }
+        },
+        "feature_gXTiA3": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/FDA.png",
+            "text": "Class I Safety"
+          }
+        },
+        "feature_zNPrWc": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/afe301bc3e76be3ac1f7e1cfb7aa8f9c_7da07f67-dd3d-47e2-83f6-3ac16f48129a.png",
+            "text": "Bonus 1.6W Laser Module"
+          }
+        },
+        "feature_kyDVFB": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/b059942a7321575b31567fab557b7626.png",
+            "text": "Built-in Camera"
+          }
+        },
+        "feature_taMGRP": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/daf2e77e4ec241918761fc502291f416.png",
+            "text": "Precise Positioning"
+          }
+        },
+        "feature_mVMUVW": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/41c2144c5fb21d8be33944d26f56924f.png",
+            "text": "25000mm/min"
+          }
+        },
+        "product_m78K7x": {
+          "type": "product",
+          "settings": {
+            "product": "honeycomb-workbench-for-laser-engraver-500mm-500mm",
+            "description": "22W"
+          }
+        },
+        "product_kQngj6": {
+          "type": "product",
+          "settings": {
+            "product": "rotary-kit-pro-for-curved-surface-engraving",
+            "description": "40W"
+          }
+        },
+        "product_GG9jdG": {
+          "type": "product",
+          "settings": {
+            "product": "creality-falcon-smoke-purifier",
+            "description": "60W"
+          }
+        }
+      },
+      "block_order": [
+        "feature_k7YNB4",
+        "feature_gXTiA3",
+        "feature_zNPrWc",
+        "feature_kyDVFB",
+        "feature_taMGRP",
+        "feature_mVMUVW",
+        "product_m78K7x",
+        "product_kQngj6",
+        "product_GG9jdG"
+      ],
+      "settings": {
+        "bind": "Section 3",
+        "is_reverse": false,
+        "heading": "Power Meets Precision, Craft Without Limits",
+        "subheading": "Falcon2 Pro Series: Powerful 22W, 40W, and 60W Lasers for Professional Precision.",
+        "tag": "Top Picks",
+        "main_product_title": "Falcon2 Pro Enclosed Laser Engraver and Cutter",
+        "main_product_specs": "22W/40W/60W | Bonus 1.6W | FDA Class 1 Safety",
+        "main_product_image": "shopify://shop_images/24.jpg",
+        "product": "falcon-2-pro-40w-enclosed-laser-engraver-and-cutter"
+      }
+    },
+    "long_collection_list_UNUHkN": {
+      "type": "long-collection-list",
+      "blocks": {
+        "feature_dYjimW": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/22w_8ad3b392-10c5-4cf8-a3a5-bc48c4f8b863.png",
+            "text": "22W/40W"
+          }
+        },
+        "feature_i743kB": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/41c2144c5fb21d8be33944d26f56924f.png",
+            "text": "25000mm/min"
+          }
+        },
+        "feature_C7Vcn9": {
+          "type": "feature",
+          "settings": {
+            "text": "Integrated Air Assist"
+          }
+        },
+        "feature_8wCLFJ": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/b059942a7321575b31567fab557b7626.png",
+            "text": "Triple Monitoring Systems"
+          }
+        },
+        "feature_V7WycM": {
+          "type": "feature",
+          "settings": {
+            "text": "Five Safety Protection"
+          }
+        },
+        "feature_EN6D4t": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/bb9c35e3e480a559eaac21c077c84d61.png",
+            "text": "Hassle-Free Assembly"
+          }
+        },
+        "product_QfaaeX": {
+          "type": "product",
+          "settings": {
+            "product": "falcon2-22w-laser-engraver-cutter-bundle-for-glass-engraving",
+            "description": "22W Bundle"
+          }
+        },
+        "product_UtBQjK": {
+          "type": "product",
+          "settings": {
+            "product": "laser-engraver-cutter-falcon2-40w-engraving-machine-extension-kits",
+            "description": "40W Bundle"
+          }
+        },
+        "product_e66NWq": {
+          "type": "product",
+          "settings": {
+            "product": "laser-engraver-cutter-falcon2-40w-engraving-machine-all-in-one-kits",
+            "description": "40W Ultra Bundle"
+          }
+        }
+      },
+      "block_order": [
+        "feature_dYjimW",
+        "feature_i743kB",
+        "feature_C7Vcn9",
+        "feature_8wCLFJ",
+        "feature_V7WycM",
+        "feature_EN6D4t",
+        "product_QfaaeX",
+        "product_UtBQjK",
+        "product_e66NWq"
+      ],
+      "settings": {
+        "bind": "Section 4",
+        "is_reverse": false,
+        "heading": "Work Smarter, Create Bigger",
+        "subheading": "Falcon 2 Series: Versatile 22W and 40W Laser Engravers for Passionate Creators.",
+        "tag": "Top Picks",
+        "main_product_title": "Falcon2 22W Laser Engraver and Cutter",
+        "main_product_specs": "22W | 25000mm/min | New Integrated Air Assist",
+        "main_product_image": "shopify://shop_images/7_dc657945-a23c-4dbd-8684-a6c01edb85cf.jpg",
+        "product": "falcon2-22w-laser-engraver-cutter"
+      }
+    },
+    "rights_and_interests_cNcdPN": {
+      "type": "rights-and-interests",
+      "blocks": {
+        "rights_jPCAWz": {
+          "type": "rights",
+          "settings": {
+            "icon": "shopify://shop_images/dba4f26b71de541ce9ca07d477f67233.png",
+            "desc": "Free  Shipping Over $49.99"
+          }
+        },
+        "rights_RVhfkD": {
+          "type": "rights",
+          "settings": {
+            "icon": "shopify://shop_images/e75059fa3fd1f40b65511e345c144ed2.png",
+            "desc": "Engraving Gifts with Order"
+          }
+        },
+        "rights_Qq7WmR": {
+          "type": "rights",
+          "settings": {
+            "icon": "shopify://shop_images/b1b8d38d99152bccb164e2c1b259cb50.png",
+            "desc": "Time-Limited Deals"
+          }
+        },
+        "rights_G8hVhh": {
+          "type": "rights",
+          "settings": {
+            "icon": "shopify://shop_images/62b346479761e66abbf8c135abb2c594.png",
+            "desc": "14Days Money Back"
+          }
+        },
+        "rights_p7NRfF": {
+          "type": "rights",
+          "settings": {
+            "icon": "shopify://shop_images/88c3eb86da2aa0a72be97a9aeb171090.png",
+            "desc": "12-Month Warranty"
+          }
+        },
+        "rights_yYrThW": {
+          "type": "rights",
+          "settings": {
+            "icon": "shopify://shop_images/90525e031f104fa9d91cb37d31a518ef.png",
+            "desc": "100% Secure Payment"
+          }
+        }
+      },
+      "block_order": [
+        "rights_jPCAWz",
+        "rights_RVhfkD",
+        "rights_Qq7WmR",
+        "rights_G8hVhh",
+        "rights_p7NRfF",
+        "rights_yYrThW"
+      ],
+      "settings": {
+        "bind": "Section 5"
+      }
+    },
+    "second_newsletter_bAfbYQ": {
+      "type": "second-newsletter",
+      "settings": {
+        "bind": "",
+        "link": "",
+        "tag_text": "New Arrival",
+        "heading": "Creality Falcon A1 10W",
+        "subtext": "Get first-hand news and offers from Creality Falcon.",
+        "placeholder": "Your Email",
+        "button_text": "Sign up",
+        "background_image": "shopify://shop_images/25.jpg",
+        "mobile_image": "shopify://shop_images/25.jpg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_banner_bpQMkx",
+    "timedown_collections_JRdYhB",
+    "collection_products_4Kq4bq",
+    "long_collection_list_TinwEk",
+    "long_collection_list_UNUHkN",
+    "rights_and_interests_cNcdPN",
+    "second_newsletter_bAfbYQ"
+  ]
+}

@@ -1,0 +1,624 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "creality_2025_1_new_year_XmEgPj": {
+      "type": "creality_2025_1_newYear",
+      "blocks": {
+        "card_rule_wwHgwR": {
+          "type": "card-rule",
+          "settings": {
+            "card_image": "shopify://shop_images/CR-laser-falcon-engraver-1_44eb739b-f709-48e5-98de-c41aba1efd55.jpg",
+            "card_content": "5W/10W <br> Basics from:",
+            "card_price": "149.5",
+            "coupon_title": "VOUCHER",
+            "coupon_rule": "5% OFF",
+            "coupon_desc": "<span style=\"text-decoration:underline\">Extra Discount Code for New Subscribers</span>"
+          }
+        },
+        "card_rule_gGab8p": {
+          "type": "card-rule",
+          "settings": {
+            "card_image": "shopify://shop_images/falcon2-leaser-engravers_9cd31f84-cf66-4079-b205-f4dda8ed605d.jpg",
+            "card_content": "22W/40W <br> Basics from:",
+            "card_price": "719",
+            "coupon_title": "VOUCHER",
+            "coupon_rule": "10% OFF",
+            "coupon_desc": "<span style=\"text-decoration:underline\">Get It for Materials in Your Order Confirmation Email </span>"
+          }
+        },
+        "card_rule_hHXTm4": {
+          "type": "card-rule",
+          "settings": {
+            "card_image": "shopify://shop_images/falcon2-pro-laser-engraver_d61a9b61-147a-44aa-b374-edcdd3707783.jpg",
+            "card_content": "22W/40W/60W <br> Basics from:",
+            "card_price": "1299",
+            "coupon_title": "DISCOUNT",
+            "coupon_rule": "30% OFF",
+            "coupon_desc": "<span style=\"text-decoration:underline\">For Some Accessories and Material Packages</span>"
+          }
+        },
+        "right_protection_BzhfqR": {
+          "type": "right-protection",
+          "settings": {
+            "rp_image": "shopify://shop_images/free-delivery-truck-svgrepo-com_1.png",
+            "rp_title": "Free Shipping Over $49.99",
+            "rp_desc": "Delivery calculated per shipment"
+          }
+        },
+        "right_protection_dWzNWr": {
+          "type": "right-protection",
+          "settings": {
+            "rp_image": "shopify://shop_images/refund-svgrepo-com_1.png",
+            "rp_title": "14-Day Money Back Guarantee",
+            "rp_desc": "Hassle-free returns within 14 days."
+          }
+        },
+        "right_protection_eGyR8T": {
+          "type": "right-protection",
+          "settings": {
+            "rp_image": "shopify://shop_images/secure-payment-fill-svgrepo-com_2_1.png",
+            "rp_title": "100% Secure Payment",
+            "rp_desc": "Shop with confidence."
+          }
+        },
+        "review_CBpMbq": {
+          "type": "review",
+          "settings": {
+            "avatar": "shopify://shop_images/20240821-181704_87f8160d-ce68-4338-b1ec-70ca56ca24e3.png",
+            "reputation-title": "Expert Craftsmanship",
+            "reputation-text": "\"As a full-time mom, I create and sell custom products on Etsy, turning my passion into profit. I now share my laser crafting knowledge on social media to inspire other women to start their own ventures.\"",
+            "reputation-author": "@Heidi Ho",
+            "reputation-address": "Falcon2 Pro 40W",
+            "reputation-product": "falcon-2-pro-40w-enclosed-laser-engraver-and-cutter"
+          }
+        },
+        "review_7kDgMQ": {
+          "type": "review",
+          "settings": {
+            "avatar": "shopify://shop_images/20240821-180844_36de0884-46da-4903-a568-16a5d8e8880a.png",
+            "reputation-title": "High Profit and Personalized",
+            "reputation-text": "\"I started doing baseball cap customization business in October 2023; I now achieved a profit of $1,000 per order, and it usually only takes two days to complete a batch of orders. I am my own boss.\"",
+            "reputation-author": "@Andres Castro",
+            "reputation-address": "Falcon2 40W",
+            "reputation-product": "laser-engraver-cutter-falcon2-40w-engraving-machine"
+          }
+        },
+        "review_qH7wUV": {
+          "type": "review",
+          "settings": {
+            "avatar": "shopify://shop_images/20240821-181020_fd56b723-b050-49cb-b47f-8ae3106aa635.png",
+            "reputation-title": "Detailed Laser-engraved Woodwork.",
+            "reputation-text": "\"I am a designer and mainly use laser to integrate wooden parts into my projects. Ithappens that they ask me for objects such as key rings, plates, and writings, and I do these jobs on request. \"",
+            "reputation-author": "@Marco Andrea Fichera",
+            "reputation-address": "Falcon2 22W",
+            "reputation-product": "falcon2-22w-laser-engraver-cutter"
+          }
+        },
+        "review_mRAJUa": {
+          "type": "review",
+          "settings": {
+            "avatar": "shopify://shop_images/20240821-181553_38545266-ae3a-41a5-89d3-1713ab12b971.png",
+            "reputation-title": "Expertly Laser-etched Designs",
+            "reputation-text": "\"I do image designs that many are used for laser etching on cups. So I also etch my designs on cups using the 10w.\"",
+            "reputation-author": "@Joshua Godbee",
+            "reputation-address": "Falcon 10W",
+            "reputation-product": "low-wattage-laser-engraver-cutter-cr-falcon-10w-machine"
+          }
+        }
+      },
+      "block_order": [
+        "card_rule_wwHgwR",
+        "card_rule_gGab8p",
+        "card_rule_hHXTm4",
+        "right_protection_BzhfqR",
+        "right_protection_dWzNWr",
+        "right_protection_eGyR8T",
+        "review_CBpMbq",
+        "review_7kDgMQ",
+        "review_qH7wUV",
+        "review_mRAJUa"
+      ],
+      "disabled": true,
+      "settings": {
+        "header_title": "Create More in 2025",
+        "header_subTitle": "BUY 1 GET 1 for FREE!<strong> </strong>",
+        "header_subTitle3": "Tier 1: ≥$999+ to receive a Laser Engraving Gift Set. (Value $47) Tier 2: ≥$1499+ to receive a 39-piece Wood Material Set. (Value $144.95)",
+        "big_title": "",
+        "big_image": "shopify://shop_images/falcon2-pro-60w_3a5bd801-2910-41c8-92ed-7d04195fd1de.jpg",
+        "hot_product": "low-wattage-laser-engraver-cutter-cr-falcon-10w-machine",
+        "hot_title": "Best Selling Product - 50% Off",
+        "hot_review": "(1098 reviews)",
+        "countdown": "2025-01-30T11:59:00",
+        "hot_link": "Full details",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/763edcd4ceea413491c2e3e37bed0f11.mp4",
+        "video_review": "Rated 4.9/5 by 167 of happy customers",
+        "section1_title": "Laser Into the New Year – Exclusive Discounts!",
+        "section1_sub_title": "",
+        "section1_collection": "engravers",
+        "section2_title": "Start Fresh with January Savings!",
+        "section2_sub_title": "Tier 1: ≥$999+ to receive a Laser Engraving Gift Set. (Value $47) Tier 2: ≥$1499+ to receive a 39-piece Wood Material Set. (Value $144.95)",
+        "section2_collection": "engraving-machine-craft-materials",
+        "section2_collection_left_text": "Accessories for 22W/40W/60W",
+        "section2_collection_left_subtitle": "",
+        "section2_collection_left": "accessories-for-falcon2-laser-engravers-cutters",
+        "section2_collection_right_text": "Accessories for 5W/10W",
+        "section2_collection_right_subtitle": "",
+        "section2_collection_right": "accessories-for-cr-laser-falcon-engravers",
+        "section3_collection": "black-friday-bundle-sale",
+        "section3_json": "{\"Falcon2 40W Laser Engraver and Cutter Complete Crafting Engraver Set\":{\"review\":\"100\", \"desc\":\"aaaaaa\"}}",
+        "title": "Hear from Our Happy Customers",
+        "he-fz": 40,
+        "he-fz-mb": 28,
+        "form_title": "GET ON THE LIST",
+        "form_subTitle": "Create More in 2025 – Limited-Time Promos!",
+        "form_btn": "Subscribe"
+      }
+    },
+    "creality_2025_2_valentine_day_RWVqHJ": {
+      "type": "creality_2025_2_valentine_day",
+      "blocks": {
+        "card_rule_CXTMrz": {
+          "type": "card-rule",
+          "settings": {
+            "card_image": "shopify://shop_images/CR-laser-falcon-engraver-1_44eb739b-f709-48e5-98de-c41aba1efd55.jpg",
+            "card_content": "5W/10W <br> Basics from:",
+            "card_price": "149.5",
+            "coupon_title": "VOUCHER",
+            "coupon_rule": "5% OFF",
+            "coupon_desc": "<span style=\"text-decoration:underline\">Extra Discount Code for New Subscribers</span>"
+          }
+        },
+        "card_rule_ePKMBd": {
+          "type": "card-rule",
+          "settings": {
+            "card_image": "shopify://shop_images/falcon2-leaser-engravers_9cd31f84-cf66-4079-b205-f4dda8ed605d.jpg",
+            "card_content": "22W/40W <br> Basics from:",
+            "card_price": "579",
+            "coupon_title": "VOUCHER",
+            "coupon_rule": "10% OFF",
+            "coupon_desc": "<span style=\"text-decoration:underline\">Get It for Materials in Your Order Confirmation Email </span>"
+          }
+        },
+        "card_rule_R6AWwr": {
+          "type": "card-rule",
+          "settings": {
+            "card_image": "shopify://shop_images/falcon2-pro-laser-engraver_d61a9b61-147a-44aa-b374-edcdd3707783.jpg",
+            "card_content": "22W/40W/60W <br> Basics from:",
+            "card_price": "1039",
+            "coupon_title": "DISCOUNT",
+            "coupon_rule": "30% OFF",
+            "coupon_desc": "<span style=\"text-decoration:underline\">For Some Accessories and Material Packages</span>"
+          }
+        },
+        "right_protection_qL33KY": {
+          "type": "right-protection",
+          "settings": {
+            "rp_image": "shopify://shop_images/free-shipping-sales-svgrepo-com_1_1.png",
+            "rp_title": "Free Shipping Over $49.99",
+            "rp_desc": "Delivery calculated per shipment"
+          }
+        },
+        "right_protection_dLMHWk": {
+          "type": "right-protection",
+          "settings": {
+            "rp_image": "shopify://shop_images/return-box-cycle-svgrepo-com_1.png",
+            "rp_title": "14-Day Money Back Guarantee",
+            "rp_desc": "Hassle-free returns within 14 days."
+          }
+        },
+        "right_protection_L6pQ6Q": {
+          "type": "right-protection",
+          "settings": {
+            "rp_image": "shopify://shop_images/payment-svgrepo-com_1.png",
+            "rp_title": "100% Secure Payment",
+            "rp_desc": "Shop with confidence."
+          }
+        },
+        "review_ej8N6p": {
+          "type": "review",
+          "settings": {
+            "avatar": "shopify://shop_images/20250205-174847.jpg",
+            "reputation-title": "Crafting Innovation, Igniting Design",
+            "reputation-text": "\"My Falcon2 22W has allowed me to create a wide range of products. Crafting with new materials really gets my design juices flowing.\"",
+            "reputation-author": "@Ryan Prosser",
+            "reputation-address": "Falcon2 22W",
+            "reputation-product": "falcon2-22w-laser-engraver-cutter"
+          }
+        },
+        "review_Mb8jPz": {
+          "type": "review",
+          "settings": {
+            "avatar": "shopify://shop_images/20250205-181606.jpg",
+            "reputation-title": "Family Creations with Falcon",
+            "reputation-text": "\"I cut this out on my 22W; my 6-year-old painted it, and we assembled it together. We have lots more planned for the Creality Falcon machine too!\"",
+            "reputation-author": "@Daniel Taylor",
+            "reputation-address": "Falcon2 Pro 22W",
+            "reputation-product": "falcon-2-pro-40w-enclosed-laser-engraver-and-cutter"
+          }
+        },
+        "review_JtLXNt": {
+          "type": "review",
+          "settings": {
+            "avatar": "shopify://shop_images/20250205-180708_9d531a8b-837d-4571-863f-c78d6bdaec95.jpg",
+            "reputation-title": "Weekend Creations with Falcon240W",
+            "reputation-text": "\"We use Falcon2 40w for crafting every weekend. Seeing my designs come to life is the most exciting moment for me.\"",
+            "reputation-author": "@Marie Elaine",
+            "reputation-address": "Falcon2 40W",
+            "reputation-product": "laser-engraver-cutter-falcon2-40w-engraving-machine"
+          }
+        },
+        "review_km9mwN": {
+          "type": "review",
+          "settings": {
+            "avatar": "shopify://shop_images/20240821-181704_87f8160d-ce68-4338-b1ec-70ca56ca24e3.png",
+            "reputation-title": "The Crafty Socialite",
+            "reputation-text": "\"I choose Falcon because it's not only afantastic quality build but also really affordable and very competitive!\"",
+            "reputation-author": "@Heidi",
+            "reputation-address": "Falcon2 Pro 40W",
+            "reputation-product": "falcon-2-pro-40w-enclosed-laser-engraver-and-cutter"
+          }
+        },
+        "review_VyD3V8": {
+          "type": "review",
+          "settings": {
+            "avatar": "shopify://shop_images/20250205-175121.jpg",
+            "reputation-title": "Precision Engraving on Any Surface",
+            "reputation-text": "\"I'm able to bring my ideas to life in anumber of ways. My designs pop with super-detailed engravings on glass, mirrors, slate, ceramics, and tons of other materials.\"",
+            "reputation-author": "@Jim Shupe",
+            "reputation-address": "Falcon2 Pro 60W",
+            "reputation-product": "falcon2-pro-60w-enclosed-laser-cutter-and-engraver"
+          }
+        }
+      },
+      "block_order": [
+        "card_rule_CXTMrz",
+        "card_rule_ePKMBd",
+        "card_rule_R6AWwr",
+        "right_protection_qL33KY",
+        "right_protection_dLMHWk",
+        "right_protection_L6pQ6Q",
+        "review_ej8N6p",
+        "review_Mb8jPz",
+        "review_JtLXNt",
+        "review_km9mwN",
+        "review_VyD3V8"
+      ],
+      "settings": {
+        "header_title": "Engrave Love",
+        "header_subTitle": "SALE: UP to <span style=\"text-decoration:underline\">52% OFF</span>",
+        "header_subTitle3": "Create Your Memories!",
+        "big_title": "Happy Valentine's Day!",
+        "big_image": "shopify://shop_images/20250207-175201.jpg",
+        "hot_product": "falcon-2-pro-40w-enclosed-laser-engraver-and-cutter",
+        "hot_title": "Deal of the days",
+        "hot_review": "(1298 reviews)",
+        "countdown": "2025-02-15T00:00:00",
+        "hot_link": "Full details",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/5c47c52e353f42e6892f999fc20b823f.mp4",
+        "video_review": "Rated 4.9/5 by 167 of happy customers",
+        "section1_title": "Create with Love: Exclusive Valentine’s Deals!",
+        "section1_sub_title": "Buy a laser engraving machine to get 30% off on accessories.",
+        "section1_collection": "home-page-collection",
+        "section2_title": "Shop Now & Unlock Tiered Gifts!",
+        "section2_sub_title": "Spend $699+ to get a free engraving gift set, or $1,599+ to receive a 39-piece wood material set.",
+        "section2_collection": "engraving-machine-craft-materials",
+        "section2_collection_left_text": "Accessories for 22W, 40W, 60W",
+        "section2_collection_left_subtitle": "",
+        "section2_collection_left": "accessories-for-falcon2-laser-engravers-cutters",
+        "section2_collection_right_text": "Accessories for 5W, 7.5W, 10W",
+        "section2_collection_right_subtitle": "",
+        "section2_collection_right": "accessories-for-cr-laser-falcon-engravers",
+        "section3_collection": "bundle-cr-laser-falcon-10w-engravers",
+        "section3_json": "",
+        "title": "Hear from Our Happy Customers",
+        "he-fz": 40,
+        "he-fz-mb": 28,
+        "form_title": "GET ON THE LIST",
+        "form_subTitle": "Create More in 2025 – Limited-Time Promos!",
+        "form_btn": "subscirbe"
+      }
+    },
+    "instagram_DCDxPq": {
+      "type": "instagram",
+      "blocks": {
+        "instagram_Ypck9C": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/wooden-wedding-table-numbers_1a612c90-72fd-4a94-827e-390dba680677.webp",
+            "link": ""
+          }
+        },
+        "instagram_WYMK3J": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/engraved-metal-tumblers_f6b61f4f-a1c1-412a-b7f0-7470cd35b1a9.webp",
+            "link": ""
+          }
+        },
+        "instagram_JEenYe": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/laser-cutting-custom-engraved-leather-keychain_dccd7b63-6afa-4889-b3d4-e4c2a49659ae.webp",
+            "link": ""
+          }
+        },
+        "instagram_cFrNEc": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Chrismas_Creality_Falcon_8.jpg",
+            "link": ""
+          }
+        },
+        "instagram_Lq3E48": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Chrismas_Creality_Falcon_5.jpg",
+            "link": ""
+          }
+        },
+        "instagram_kzHQfh": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Chrismas_Creality_Falcon_7.jpg",
+            "link": ""
+          }
+        },
+        "instagram_JkUjik": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Halloween_candle_holder_with_laser_engraver_1359844d-a903-43bf-b13e-c276affa4d0c.jpg",
+            "link": ""
+          }
+        },
+        "instagram_86RDzQ": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Halloween_candy_box_with_laser_engraver_2_5c7180de-0b21-4f64-873f-28610ec7d903.jpg",
+            "link": ""
+          }
+        },
+        "instagram_AGjjzg": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Sophie_Smith_37e68d8e-df82-4437-9f3e-3f3d78ff09c2.png",
+            "link": ""
+          }
+        },
+        "instagram_aF4MVk": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Doriane_Louin-rose_6c816283-5828-4be1-88dd-2b75ff506c3b.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "instagram_Ypck9C",
+        "instagram_WYMK3J",
+        "instagram_JEenYe",
+        "instagram_cFrNEc",
+        "instagram_Lq3E48",
+        "instagram_kzHQfh",
+        "instagram_JkUjik",
+        "instagram_86RDzQ",
+        "instagram_AGjjzg",
+        "instagram_aF4MVk"
+      ],
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "type_instagram": "default",
+        "block_layout": "infinite",
+        "scroll_from": "rtl",
+        "scroll_time": "30",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "enable_border_instagram": false,
+        "instagram_border_color": "#e6e6e6",
+        "instagram_bg": "#fafafa",
+        "instagram_bg_gradient": "",
+        "instagram_title": "Laser Engraved Creations Gallery",
+        "enable_border_title": false,
+        "border_color_title": "#973a59",
+        "color_title": "#a33956",
+        "mg_bottom_title": 25,
+        "fontsize_title": 20,
+        "fontsize_title_mb": 18,
+        "instagram_des": "Unleash Your Creativity with DIY Crafts and #CrealityFalcon Laser Engraver",
+        "color_des": "#a33956",
+        "fontsize_des": 16,
+        "margin_bottom_des": 35,
+        "content_width": 375,
+        "title_align": "center",
+        "view_all": "",
+        "view_all_fs": 12,
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "display_instagram_button": true,
+        "instagram_button_text": "View Gallery",
+        "type_button_more": "load",
+        "instagram_button_link": "",
+        "enable_underline_button": false,
+        "color_button": "#ffffff",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "#232323",
+        "border_color_button_hover": "#232323",
+        "bg_color_button_hover": "#ffffff",
+        "bg_color_gradient_button_hover": "",
+        "maxwidth_button": 230,
+        "mg_top_button": 30,
+        "embed_code": "",
+        "type_instagram_by_gallery": "popup_image",
+        "images_per_row": "5",
+        "instagram_item_limit": 5,
+        "grid_gap": 5,
+        "enable_hide_portion": false,
+        "slide_ins": "default_ins",
+        "display_arrow": true,
+        "icon_for_image": "",
+        "icon_style": "style_1",
+        "effects_bg": "",
+        "effects_opacity": 0
+      }
+    },
+    "creality_cards_faq_KR3WmE": {
+      "type": "creality_cards__faq",
+      "blocks": {
+        "creality_faq_list_8Mx73X": {
+          "type": "creality-faq-list",
+          "settings": {
+            "list_item": "title 1"
+          }
+        },
+        "creality_faq_list_fzVAUj": {
+          "type": "creality-faq-list",
+          "settings": {
+            "list_item": "title 1"
+          }
+        },
+        "creality_faq_list_NmN6qA": {
+          "type": "creality-faq-list",
+          "settings": {
+            "list_item": "title 1"
+          }
+        },
+        "creality_faq_title_7BxF7x": {
+          "type": "creality-faq-title",
+          "settings": {
+            "faq-h3": "title"
+          }
+        },
+        "creality_faq_question_aKpVR4": {
+          "type": "creality-faq-question",
+          "settings": {
+            "faq-h6": "Q:"
+          }
+        },
+        "creality_faq_answer_FYUVC4": {
+          "type": "creality-faq-answer",
+          "settings": {
+            "faq-p": "answer the question"
+          }
+        }
+      },
+      "block_order": [
+        "creality_faq_list_8Mx73X",
+        "creality_faq_list_fzVAUj",
+        "creality_faq_list_NmN6qA",
+        "creality_faq_title_7BxF7x",
+        "creality_faq_question_aKpVR4",
+        "creality_faq_answer_FYUVC4"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "creality_cards_banner_default_gAW6gh": {
+      "type": "creality_cards_banner-default",
+      "disabled": true,
+      "settings": {
+        "banner-title": "title",
+        "banner-desc": "desc",
+        "banner-image": "shopify://shop_images/1880x600-no_30279af1-da6f-4c32-95bf-9bb6e1e7ffc8.jpg"
+      }
+    },
+    "creality_cards_skip_GDbFDE": {
+      "type": "creality_cards_skip",
+      "blocks": {
+        "skip_card_BHPHpQ": {
+          "type": "skip_card",
+          "settings": {
+            "icon": "shopify://shop_images/20240821-181704_f9ef5dfe-6e71-4c24-8d1e-302566689af3.png",
+            "title": "Hardware",
+            "description": "Check out our latest hardware offerings.",
+            "link": "#"
+          }
+        },
+        "skip_card_QmU7tm": {
+          "type": "skip_card",
+          "settings": {
+            "title": "Software",
+            "description": "The public beta version is currently available for download.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "skip_card_BHPHpQ",
+        "skip_card_QmU7tm"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "creality_cards_h_tap_8epKXH": {
+      "type": "creality_cards_h-tap",
+      "disabled": true,
+      "settings": {
+        "heading_tag": "h2",
+        "heading_text": "This is a custom heading",
+        "heading_class": "custom-heading",
+        "heading_id": "custom-heading-1",
+        "is_enable": false,
+        "heading_color": "#000000",
+        "heading_font_size": 24
+      }
+    },
+    "creality_cards_h_tap_WaJma9": {
+      "type": "creality_cards_h-tap",
+      "disabled": true,
+      "settings": {
+        "heading_tag": "h2",
+        "heading_text": "This is a custom heading",
+        "heading_class": "custom-heading",
+        "heading_id": "custom-heading-2",
+        "is_enable": true,
+        "heading_color": "#000000",
+        "heading_font_size": 30
+      }
+    }
+  },
+  "order": [
+    "main",
+    "creality_2025_1_new_year_XmEgPj",
+    "creality_2025_2_valentine_day_RWVqHJ",
+    "instagram_DCDxPq",
+    "creality_cards_faq_KR3WmE",
+    "creality_cards_banner_default_gAW6gh",
+    "creality_cards_skip_GDbFDE",
+    "creality_cards_h_tap_8epKXH",
+    "creality_cards_h_tap_WaJma9"
+  ]
+}

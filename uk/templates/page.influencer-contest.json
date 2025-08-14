@@ -1,0 +1,43 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "creality_creative_contest_EX4jAY": {
+      "type": "creality_creative_contest",
+      "settings": {
+        "count_down": "2024-10-14 10:00:00",
+        "show_top_five": true
+      }
+    },
+    "join_facebook_button_shopify_ejePF6": {
+      "type": "join_facebook_button_shopify",
+      "settings": {
+        "join_facebook_group_url": "https://www.facebook.com/groups/falconlaser.uk",
+        "join_facebook_group_url_new": "https://www.facebook.com/groups/falconlaser.uk",
+        "join_facebook_group_title": "Join Our Facebook Group",
+        "join_facebook_group_desc": "Join the active Creality Falcon Facebook community, a vibrant hub for sharing ideas,<br class=\"pc\">discovering the latest updates, and engaging with real users.",
+        "pc_margin_top": 60,
+        "pc_margin_bottom": 60,
+        "mobile_margin_top": 30,
+        "mobile_margin_bottom": 30
+      }
+    }
+  },
+  "order": [
+    "main",
+    "creality_creative_contest_EX4jAY",
+    "join_facebook_button_shopify_ejePF6"
+  ]
+}

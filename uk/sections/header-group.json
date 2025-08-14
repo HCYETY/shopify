@@ -1,0 +1,164 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "17536065705cf39a52": {
+      "type": "apps",
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "creality_2024_header_advertisement_Pe89VM": {
+      "type": "creality_2024_header_advertisement",
+      "settings": {
+        "item_bgcolor": "#000000",
+        "item_bgcolor_url": "",
+        "font_size": 14,
+        "item_bgcolor_pd_tb": 9,
+        "item_title": "Best Prices  · Local Shipping· Great Support – UK Official Web",
+        "item_title_color": "#ffffff",
+        "item_btn_text": "",
+        "item_btn_url": "",
+        "item_btn_color": "#232323",
+        "item_btn_bgcolor": "#000000",
+        "item_btn_brr_size": 4,
+        "item_btn_pdlr_size": 12,
+        "item_btn_pdtb_size": 4,
+        "item_btn_text_size": 14,
+        "item_position": "center",
+        "is_countDown": false,
+        "item_count_down_start": "2025-3-09 0:00:00",
+        "item_count_down_end": "2025-3-9 23:59:00",
+        "item_count_down_color": "#ffffff",
+        "item_count_down_text_sieze": 12
+      }
+    },
+    "header-mobile": {
+      "type": "header-mobile",
+      "blocks": {
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944": {
+          "type": "menu",
+          "settings": {
+            "color": "#232323"
+          }
+        },
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53": {
+          "type": "search",
+          "settings": {
+            "color": "#232323"
+          }
+        },
+        "550fbd21-75fb-4051-9dee-77d91b5239f0": {
+          "type": "logo",
+          "settings": {
+            "logo_mobile": "shopify://shop_images/0e44a1e857d737112dc14a2239bda79c_677fea3a-6cfe-456e-a780-8d46fdf9e0a7.png",
+            "logo_width_mobile": 75,
+            "logo_text": "",
+            "logo_font_size": 20,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#232323"
+          }
+        },
+        "20dae707-64c0-4ea3-a05e-561cae9836d8": {
+          "type": "customer",
+          "settings": {
+            "icon": "1",
+            "color": "#232323"
+          }
+        },
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d": {
+          "type": "cart",
+          "settings": {
+            "icon": "2",
+            "color": "#232323",
+            "color_bubble": "#ffffff",
+            "bg_bubble": "#232323"
+          }
+        },
+        "megamenu_style_6_zTXTt7": {
+          "type": "megamenu_style_6",
+          "disabled": true,
+          "settings": {
+            "item_bgcolor": "#000000",
+            "item_bgcolor_url": "",
+            "font_size": 14,
+            "item_bgcolor_pd_tb": 9,
+            "item_title": "⚡ The Biggist Sale Never Ever Have! Free gifts await you!🔥",
+            "item_title_color": "#ddaf30",
+            "item_btn_text": "SHOP NOW",
+            "item_btn_url": "https://uk.crealityfalcon.com/pages/black-friday-laser-engraver-sale-2024",
+            "item_btn_color": "#ffffff",
+            "item_btn_bgcolor": "#ddaf30",
+            "item_btn_brr_size": 4,
+            "item_btn_pdlr_size": 12,
+            "item_btn_pdtb_size": 4,
+            "item_btn_text_size": 14,
+            "item_position": "center",
+            "is_countDown": false,
+            "item_count_down_start": "2024-10-16 10:00:00",
+            "item_count_down_end": "2024-11-02 18:00:00",
+            "item_count_down_color": "#ffffff",
+            "item_count_down_text_sieze": 12
+          }
+        }
+      },
+      "block_order": [
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944",
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53",
+        "550fbd21-75fb-4051-9dee-77d91b5239f0",
+        "20dae707-64c0-4ea3-a05e-561cae9836d8",
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d",
+        "megamenu_style_6_zTXTt7"
+      ],
+      "disabled": true,
+      "settings": {
+        "background": "#ffffff",
+        "gradient": "",
+        "sticky_header_type": "on_scroll",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "item_rotatingBroadcast_color_md": "#ffffff",
+        "item_rotatingBroadcast_size_md": 1,
+        "is_rotatingBroadcast_md": false
+      }
+    },
+    "home_s_header_rXULBG": {
+      "type": "home-s-header",
+      "settings": {
+        "menu": "main-menu-1",
+        "logo": "shopify://shop_images/crealityfalcon-logo-png.png",
+        "sale_page_one": "",
+        "sale_page_two": "",
+        "sale_page_three": ""
+      }
+    },
+    "home_s_header_mobile_qF6FgN": {
+      "type": "home-s-header-mobile",
+      "name": "Home S Header mobile 顶部导航栏",
+      "settings": {
+        "menu": "main-menu-1",
+        "logo": "shopify://shop_images/2_c909e4cb-d4dc-4121-a3f5-38d42ba22f65.png",
+        "sale_page_one": "",
+        "sale_page_two": "",
+        "sale_page_three": ""
+      }
+    }
+  },
+  "order": [
+    "17536065705cf39a52",
+    "creality_2024_header_advertisement_Pe89VM",
+    "header-mobile",
+    "home_s_header_rXULBG",
+    "home_s_header_mobile_qF6FgN"
+  ]
+}

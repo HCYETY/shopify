@@ -1,0 +1,119 @@
+<style>
+    #shopify-section-{{section.id}} .why-us {
+      background: #ddf4ff;
+      width: 100%;
+    }
+    #shopify-section-{{section.id}} .why-us .wrapper {
+      width: 100%;
+      display: grid;
+      padding: 5.47vw 0;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.09vw;
+      max-width: 54.6875vw;
+      margin: 0 auto;
+    }
+    #shopify-section-{{section.id}} .why-us .wrapper .item {
+      flex: 1;
+      background: linear-gradient(-39deg, #79C9E5, #5AB6E7, #74D3F5);
+      width: 100%;
+      height: 14.94vw;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-direction: column;
+      gap: 2.34vw;
+      padding:1.34vw;
+      border-radius: 0.39vw;
+    }
+    #shopify-section-{{section.id}} .why-us .wrapper .item img {
+      width: 4.07vw;
+      height:4.07vw;
+      object-fit: contain;
+      margin:0 auto;
+    }
+    #shopify-section-{{section.id}} .why-us .wrapper .item .content h3 {
+      font-size: 0.94vw;
+      color: #fff;
+      text-align:center;
+    }
+  @media(max-width:750px){
+     #shopify-section-{{section.id}} .why-us {
+        background: #ddf4ff;
+        width: 100%;
+        padding: 18.67vw 6.67vw;
+      }
+       #shopify-section-{{section.id}} .why-us .wrapper {
+        max-width: 100%;
+        width: 100%;
+        display: grid;
+        padding: 0;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3.73vw;
+        margin: 0 auto;
+      }
+       #shopify-section-{{section.id}} .why-us .wrapper .item {
+        flex: 1;
+        background: linear-gradient(-39deg, #79C9E5, #5AB6E7, #74D3F5);
+        width: 100%;
+        height: 37.33vw;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 8vw;
+        border-radius: 1.33vw;
+      }
+       #shopify-section-{{section.id}} .why-us .wrapper .item img {
+        width: 11.67vw;
+        object-fit: cover;
+      }
+       #shopify-section-{{section.id}} .why-us .wrapper .item .content h3 {
+        font-size: 3.2vw;
+        color: #fff;
+      }
+  }
+</style>
+<div class="why-us" data-id="{{ section.settings.bind }}">
+    <div class="wrapper">
+        {% for block in section.blocks %}
+            {% case block.type %}
+                {% when 'rights' %}
+                    <div class="item">
+                        <img src="{{ block.settings.icon | img_url:'' }}" alt="{{ block.settings.icon.alt }}" width="" height="">
+                        <div class="content">
+                            <h3 class="title">{{ block.settings.desc }}</h3>
+                        </div>
+                    </div>
+            {% endcase %}
+        {% endfor %}
+    </div>
+</div>
+{% schema %}
+    {
+        "name": "rights-and-interests",
+        "settings": [
+            {
+              "type": "text",
+              "id": "bind",
+              "label": "bind"
+            },
+        ],
+        "blocks": [{
+            "type": "rights",
+            "name": "rights",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "icon",
+                    "label": "icon"
+                },
+                {
+                    "type": "text",
+                    "id": "desc",
+                    "label": "desc"
+                }
+            ]
+        }],
+        "presets": [{"name": "rights-and-interests"}]
+    }
+{% endschema %}

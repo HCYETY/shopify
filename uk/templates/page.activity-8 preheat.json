@@ -1,0 +1,266 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "creality_2024_08_preheat_mBQrqM": {
+      "type": "creality_2024_08_preheat",
+      "settings": {
+        "count_down": "2024-10-16 09:00:00",
+        "main_link": ""
+      }
+    },
+    "custom_press_banner_YL6EWq": {
+      "type": "custom-press-banner",
+      "settings": {
+        "container": "1770",
+        "padding_full_width": 0,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "align_items": "center",
+        "press_image": "shopify://shop_images/crealityfalcon-halloween-sale.jpg",
+        "press_image_width_ratio": 51,
+        "press_image_width": 650,
+        "sub_title": "CrealityFalcon DIY Giveaway And Discount Fest!",
+        "letter_spacing_sub_title": "",
+        "font_size_sub_title": 16,
+        "font_size_sub_title_mb": 14,
+        "margin_bottom_sub_title": 23,
+        "font_weight_sub_title": "400",
+        "sub_title_position": "sub_title_above",
+        "color_sub_title": "#3c3c3c",
+        "title": "Get Ready For A Spooktacular Halloween",
+        "title_font_size": 21,
+        "title_font_size_mb": 18,
+        "title_font_weight": "700",
+        "mg_bottom_title": 29,
+        "title_color": "#3c3c3c",
+        "des": "Halloween is almost here, and CrealityFalcon is excited to launch its spooktacular Halloween Crafting Giveaway and a massive Halloween Sale to fuel your creativity. From now until 16th October 2024, join our Halloween Giveaway for a chance to win incredible prizes!",
+        "des_font_size": 12,
+        "des_font_size_mb": 12,
+        "des_font_weight": "400",
+        "mg_bottom_des": 15,
+        "des_color": "#3c3c3c",
+        "item_spacing": 120,
+        "content_max_width": 870,
+        "button_text": "Read more",
+        "button_link": "shopify://blogs/creality-falcon-news/halloween-sale",
+        "fontsize_btn": 16,
+        "button_width": 190,
+        "color_button": "#e29160",
+        "border_color_button": "#e29160",
+        "bg_color_button": "#ffffff",
+        "bg_gradient_color_button": "",
+        "color_button_hover": "#ffffff",
+        "border_color_button_hover": "#ff8b21",
+        "bg_color_button_hover": "#ff8b21",
+        "bg_gradient_color_button_hover": "",
+        "btn_text_transform": "uppercase",
+        "press_bg": "#fafafa",
+        "press_gradient": "",
+        "image_behavior": "none"
+      }
+    },
+    "instagram_hegtDq": {
+      "type": "instagram",
+      "blocks": {
+        "instagram_Hfdmyy": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/halloween-ruler.jpg",
+            "link": ""
+          }
+        },
+        "instagram_pWaeiT": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/halloween-pumpkin-candle-holder.jpg",
+            "link": ""
+          }
+        },
+        "instagram_PiBXwd": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/bat-halloween-Candlestick.jpg",
+            "link": ""
+          }
+        },
+        "instagram_cTL4wt": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/halloween-wood-sign.jpg",
+            "link": ""
+          }
+        },
+        "instagram_LL8MFy": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/halloween-bookend.jpg",
+            "link": ""
+          }
+        },
+        "instagram_7xGwM8": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/halloween-candy-box.jpg",
+            "link": ""
+          }
+        },
+        "instagram_EK3n7H": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/halloween-candy-box-with-laser-engraver.jpg",
+            "link": ""
+          }
+        },
+        "instagram_MEJtUC": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/halloween-calendar.jpg",
+            "link": ""
+          }
+        },
+        "instagram_4KmYwN": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Halloween_pumpkin_candle_holder_with_laser_engraver.jpg",
+            "link": ""
+          }
+        },
+        "instagram_AKHmnA": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/halloween-candle-holder.jpg",
+            "link": ""
+          }
+        },
+        "instagram_V34UgK": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Halloween_decoration_with_laser_engraver_2.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "instagram_Hfdmyy",
+        "instagram_pWaeiT",
+        "instagram_PiBXwd",
+        "instagram_cTL4wt",
+        "instagram_LL8MFy",
+        "instagram_7xGwM8",
+        "instagram_EK3n7H",
+        "instagram_MEJtUC",
+        "instagram_4KmYwN",
+        "instagram_AKHmnA",
+        "instagram_V34UgK"
+      ],
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "type_instagram": "default",
+        "block_layout": "infinite",
+        "scroll_from": "rtl",
+        "scroll_time": "30",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "enable_border_instagram": false,
+        "instagram_border_color": "#e6e6e6",
+        "instagram_bg": "#fafafa",
+        "instagram_bg_gradient": "",
+        "instagram_title": "Halloween magic idea for laser engraving",
+        "enable_border_title": false,
+        "border_color_title": "#232323",
+        "color_title": "#232323",
+        "mg_bottom_title": 15,
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "instagram_des": "",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "margin_bottom_des": 35,
+        "content_width": 375,
+        "title_align": "center",
+        "view_all": "",
+        "view_all_fs": 12,
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "display_instagram_button": true,
+        "instagram_button_text": "",
+        "type_button_more": "load",
+        "instagram_button_link": "",
+        "enable_underline_button": false,
+        "color_button": "#ffffff",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "#232323",
+        "border_color_button_hover": "#232323",
+        "bg_color_button_hover": "#ffffff",
+        "bg_color_gradient_button_hover": "",
+        "maxwidth_button": 230,
+        "mg_top_button": 30,
+        "embed_code": "",
+        "type_instagram_by_gallery": "popup_image",
+        "images_per_row": "5",
+        "instagram_item_limit": 5,
+        "grid_gap": 5,
+        "enable_hide_portion": false,
+        "slide_ins": "default_ins",
+        "display_arrow": true,
+        "icon_for_image": "",
+        "icon_style": "style_1",
+        "effects_bg": "",
+        "effects_opacity": 0
+      }
+    },
+    "custom_liquid_LKeXEz": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<body>\n\n\n  <meta charset=\"UTF-8\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Document</title>\n  <style>\n    .tw-text-center {\n      text-align: center;\n    }\n\n    .comment-wrap {\n      width: 1200px;\n      margin: 0 auto;\n      margin-top: 30px;\n      margin-bottom: 30px;\n    }\n\n    .products_heading {\n      text-align: center;\n      cursor: pointer;\n      font-family: 'Montserrat-Bold';\n      font-style: normal;\n      font-weight: 700;\n      font-size: 40px;\n      line-height: 49px;\n      color: #000000;\n      margin-bottom: 40px;\n    }\n\n    .subheading {\n      text-align: center;\n      width: 700px;\n      margin: 0 auto;\n      color: #978C8C;\n      font-size: 18px;\n    }\n\n    .join-button {\n      width: 180px;\n      display: flex;\n      justify-content: right;\n      margin-left: 50%;\n      margin-top: 30px;\n      margin-bottom: 30px;\n      transform: translateX(-50%);\n      height: 42px;\n      line-height: 42px;\n      color: #fff;\n      font-size: 20px;\n      font-weight: 500;\n      padding: 0 15px;\n      border-radius: 20px;\n      background-color: #0473FF;\n    }\n\n    .icon-xxxx {\n      width: 38px;\n      position: absolute;\n      top: 50%;\n      left: 15px;\n      transform: translateY(-50%);\n    }\n\n    .bolck_heading {\n      font-family: 'Montserrat-Bold';\n      font-style: normal;\n      font-size: 26px;\n      color: #000000;\n    }\n\n    .comment-list {\n      margin: 35px 0;\n    }\n\n    .comment-item {\n      width: 389.3px;\n      background-color: #F5F5F5;\n      border-radius: 8px;\n      padding: 20px 30px;\n      box-sizing: border-box;\n    }\n\n    .avatar {\n      border-radius: 50%;\n      width: 80px;\n    }\n\n    .name {\n      font-size: 18px;\n      font-weight: 600;\n    }\n\n    .comment-header {\n      margin-bottom: 20px;\n    }\n\n    .quotation-mark {\n      width: 28px;\n      margin-left: 10px;\n    }\n\n    .quotation-mark-2 {\n      width: 28px;\n      margin-right: 10px;\n      transform: rotate(180deg);\n      vertical-align: bottom;\n    }\n\n    .text-part {\n      font-size: 16px;\n      color: #978C8C;\n    }\n\n    .pictrue {\n      border-radius: 16px;\n    }\n\n    @media (max-width: 960px) {\n      .products_heading {\n        font-style: normal;\n        font-weight: 500;\n        font-size: 26px;\n        line-height: 22px;\n        color: #000000;\n        margin-bottom: 10px;\n      }\n\n      .subheading {\n        font-size: 14px;\n      }\n\n      .bolck_heading {\n        font-size: 18px;\n      }\n\n      .comment-wrap {\n        width: 100%;\n        margin-top: 30px;\n        margin-bottom: 30px;\n      }\n\n      .subheading {\n        width: 100%;\n        font-size: 14px;\n      }\n\n      .comment-list {\n        margin: 35px 0;\n        flex-wrap: wrap;\n      }\n\n      .comment-item {\n        width: 100%;\n        margin-bottom: 16px;\n      }\n\n      .comment-item:last-child {\n        margin-bottom: 0;\n      }\n    }\n\n    .tw-no-underline {\n      text-decoration: none\n    }\n\n    .tw-flex {\n      display: flex;\n    }\n\n    .tw-justify-between {\n      justify-content: space-between;\n    }\n\n    .tw-justify-around {\n      justify-content: space-around;\n    }\n\n    .tw-items-center {\n      align-items: center;\n    }\n\n    .tw-mt-4 {\n      margin-bottom: 16px;\n    }\n\n    .tw-w-full {\n      width: 100%;\n    }\n\n    .tw-flex-col {\n      flex-direction: column;\n    }\n\n    .tw-mt-4 {\n      margin-top: 16px;\n    }\n  </style>\n\n\n  <div class=\"comment-wrap\">\n    <div class=\"products_heading\">\n      Join Our Facebook Group\n    </div>\n    <div class=\"subheading\">\n      Join the active Creality Falcon Facebook community, a vibrant hub for sharing ideas, discovering the latest\n      updates, and engaging with real users.\n    </div>\n    <a class=\"tw-no-underline\" href=\"https://www.facebook.com/groups/falconlaserengraver\" target=\"_blank\">\n      <div class=\"join-button\">\n        <svg t=\"1690269851759\" class=\"icon-xxxx \" viewbox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"\n          p-id=\"6038\" width=\"32\" height=\"32\">\n          <path d=\"M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z\" fill=\"#1B77F2\" p-id=\"6039\"></path>\n          <path\n            d=\"M1024 512c0-282.7776-229.2224-512-512-512S0 229.2224 0 512s229.2224 512 512 512 512-229.2224 512-512zM374.528 512V414.0032h60.0064V354.816c0-79.872 23.9104-137.472 111.4112-137.472h104.0384v97.7408h-73.216c-36.7616 0-45.056 24.3712-45.056 49.92v49.0496h112.896L629.248 512h-97.536v295.5264H434.5344V512H374.528z\"\n            fill=\"#FFFFFF\" p-id=\"6040\"></path>\n        </svg>\n        <span>Join Now</span>\n      </div>\n    </a>\n    <div class=\"bolck_heading tw-text-center tw-cursor-pointer\">\n      Explore genuine user reviews\n    </div>\n    <div class=\"subheading tw-text-center\">\n      Dive into authentic reviews and videos to learn more about our machines before you place your order.\n    </div>\n    <div class=\"comment-list tw-flex tw-justify-between\">\n      <div class=\"comment-item tw-flex tw-flex-col tw-justify-between\">\n        <div class=\"comment-header tw-flex tw-justify-around tw-items-center\">\n          <img class=\"avatar\" src=\"https://img.staticdj.com/57090c393572675053154f26254321fd.jpg\" alt=\"avatar\">\n          <div class=\"name\">Donovan Jacobs</div>\n        </div>\n        <div class=\"text-box\">\n          <img class=\"quotation-mark\" src=\"https://img.staticdj.com/9c7cf47a815d56781f69997415bab79c.png\"\n            alt=\"quotation-mark\">\n          <span class=\"text-part\">Greetings, greetings all. Love my 10w falcon. This thing exceeded my expectations like\n            crazy. Works like a charm and so easy to build.</span>\n          <img class=\"quotation-mark-2\" src=\"https://img.staticdj.com/9c7cf47a815d56781f69997415bab79c.png\"\n            alt=\"quotation-mark\">\n        </div>\n        <div class=\"img-wrap tw-mt-4\">\n          <img class=\"tw-w-full pictrue\" src=\"https://img.staticdj.com/36ba027d97adce5b7d767525a53ff8fc.png\" alt=\"\">\n        </div>\n      </div>\n      <div class=\"comment-item tw-flex tw-flex-col tw-justify-between\">\n        <div class=\"comment-header tw-flex tw-justify-around tw-items-center\">\n          <img class=\"avatar\" src=\"https://img.staticdj.com/c0e1d51dc8ef79053bc1cd76d6eccaca.jpg\" alt=\"avatar\">\n          <div class=\"name\">Daniel Hughes</div>\n        </div>\n        <div class=\"text-box\">\n          <img class=\"quotation-mark\" src=\"https://img.staticdj.com/9c7cf47a815d56781f69997415bab79c.png\"\n            alt=\"quotation-mark\">\n          <span class=\"text-part\">Did a little something for myself for a change. Engraved my stainless steel ciggy\n            case. Surprised how crisp it came out!</span>\n          <img class=\"quotation-mark-2\" src=\"https://img.staticdj.com/9c7cf47a815d56781f69997415bab79c.png\"\n            alt=\"quotation-mark\">\n        </div>\n        <div class=\"img-wrap tw-mt-4\">\n          <img class=\"tw-w-full pictrue\" src=\"https://img.staticdj.com/1f0b19322c65fc82e2193bb8b0990347.png\" alt=\"\">\n        </div>\n      </div>\n      <div class=\"comment-item tw-flex tw-flex-col tw-justify-between\">\n        <div class=\"comment-header tw-flex tw-justify-around tw-items-center\">\n          <img class=\"avatar\" src=\"https://img.staticdj.com/050526c09766760807a495b82e69a513.jpg\" alt=\"avatar\">\n          <div class=\"name\">Alby Martin</div>\n        </div>\n        <div class=\"text-box\">\n          <img class=\"quotation-mark\" src=\"https://img.staticdj.com/9c7cf47a815d56781f69997415bab79c.png\"\n            alt=\"quotation-mark\">\n          <span class=\"text-part\">100 Wedding Gifts, with a falcon 5W (I had to make 3 layers of 0.4mm wood). I cut the\n            adhesive paper itself with my own laser. Besides, I made a custom keychain design for the friends of the\n            couple that formed the figure of the meplee.</span>\n          <img class=\"quotation-mark-2\" src=\"https://img.staticdj.com/9c7cf47a815d56781f69997415bab79c.png\"\n            alt=\"quotation-mark\">\n        </div>\n        <div class=\"img-wrap tw-mt-4\">\n          <img class=\"tw-w-full pictrue\" src=\"https://img.staticdj.com/4fcf9e19424d30baabeb1f119c863269.png\" alt=\"\">\n        </div>\n      </div>\n    </div>\n  </div>\n\n</body>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "creality_2024_08_preheat_mBQrqM",
+    "custom_press_banner_YL6EWq",
+    "instagram_hegtDq",
+    "custom_liquid_LKeXEz"
+  ]
+}

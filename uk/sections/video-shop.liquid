@@ -1,0 +1,549 @@
+<style>
+  #app-{{section.id}} {
+    padding-top: {{section.settings.pc_top}}px;
+    padding-bottom: {{section.settings.pc_bottom}}px;
+  }
+  #app-{{section.id}} img {
+    vertical-align: middle;
+  }
+
+  #app-{{section.id}} a {
+    text-decoration: none;
+  }
+
+  #app-{{section.id}} .common-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.083vw;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+    font-family: "Plus_Jakarta_Sans,sans-serif";
+  }
+  #app-{{section.id}} .common-subtitle {
+    margin-top: 0.625vw;
+    font-size: 1.05vw;
+    font-weight: 400;
+    text-align: center;
+  }
+  #app-{{section.id}} .content {
+    width: 62.5vw;
+    margin: 0 auto;
+  }
+
+  #app-{{section.id}} .section5 {
+    padding: 2.125vw 0;
+    position: relative;
+  }
+  #app-{{section.id}} .section5 .content .video-shop {
+    margin-top: 0.833vw;
+    display: flex;
+    justify-content: center;
+  }
+  #app-{{section.id}} .section5 .content .video-shop .video-shop-item {
+    position: relative;
+    width: 20.278vw;
+    margin-right: 0.833vw;
+  }
+  #app-{{section.id}} .section5 .content .video-shop .video-shop-item:last-child {
+    margin-right: 0;
+  }
+  #app-{{section.id}} .section5 .content .video-shop .video-shop-item .video {
+    width: 100%;
+    border-radius: 1.042vw;
+    -webkit-border-radius: 1.042vw;
+    -moz-border-radius: 1.042vw;
+    -ms-border-radius: 1.042vw;
+    -o-border-radius: 1.042vw;
+  }
+  #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop {
+    background-color: #ffffff;
+    border-radius: 0.625vw;
+    position: absolute;
+    display: flex;
+    bottom: 1.5625vw;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+  #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .discount {
+    position: absolute;
+    top: 0;
+    left: 1.042vw;
+    align-self: flex-start;
+    font-size: 0.573vw;
+    font-weight: 500;
+    font-family: Inter;
+    height: 1.146vw;
+    min-height: 1.146vw;
+    color: #fff;
+    background-color: #ba1e1e;
+    border-radius: 0.15625vw;
+    padding: 0.26vw 0.78125vw 0.26vw 0.26vw;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+  #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop {
+    padding: 1.042vw;
+    display: flex;
+  }
+  #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop .img-wrap {
+    cursor: pointer;
+    margin-right: 1.042vw;
+    flex-shrink: 0;
+  }
+  #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop .img-wrap .shop-img {
+    border: 0.052vw solid #c1c1c1;
+    width: 5.208vw;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop .r-info .shop-title {
+    cursor: pointer;
+    font-size: 0.7975vw;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: none;
+    font-style: normal;
+    line-height: 1.3em;
+    letter-spacing: 0vw;
+    font-family: "Questrial";
+    margin-bottom: 0.521vw;
+    transition: 0.3s;
+  }
+  #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop .r-info .shop-title :hover {
+    color: #e289d4;
+  }
+  #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop .r-info .price {
+    display: flex;
+    align-items: center;
+  }
+  #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop .r-info .price .now-price {
+    font-size: 0.9375vw;
+    font-weight: 700;
+    color: #f53b3b;
+    border-radius: 0;
+    margin-right: 0.521vw;
+    padding: 0;
+    font-family: "Questrial,sans-serif";
+  }
+  #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop .r-info .price .old-price {
+    text-decoration: line-through;
+    color: #777777;
+    font-size: 0.729vw;
+    font-weight: 400;
+    font-family: "Questrial";
+    text-transform: none;
+    font-style: normal;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+  }
+
+  @media (min-width: 768px) {
+    #app-{{section.id}} .pc {
+      display: block;
+    }
+    #app-{{section.id}} .mb {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    #app-{{section.id}} .pc {
+      display: none;
+    }
+    #app-{{section.id}} .mb {
+      display: block;
+    }
+    #app-{{section.id}} {
+      padding-top: {{section.settings.md_top}}px; 
+      padding-bottom: {{section.settings.md_bottom}}px;
+    }
+    #app-{{section.id}} .content {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 4.267vw;
+    }
+    #app-{{section.id}} .common-title {
+      padding: 0 4.267vw;
+      text-align: center; 
+      font-size: 5.467vw;
+      color: #000000;
+      font-weight: 600;
+      margin-bottom: 4.267vw;
+    }
+    #app-{{section.id}} .common-subtitle {
+      padding: 0 4.267vw;
+      font-size: 3.733vw;
+      color: #666666;
+      font-weight: 400;
+      text-align: center;
+    }
+    #app-{{section.id}} .section5 {
+      padding: 6vw 0;
+      position: relative;
+    }
+    #app-{{section.id}} .section5 .content .video-shop {
+      margin-top: 4.267vw;
+      flex-wrap: wrap;
+    }
+    #app-{{section.id}} .section5 .content .video-shop .video-shop-item {
+      width: 100%;
+      position: relative;
+      margin-right: 0;
+      margin-bottom: 4.267vw;
+    }
+    #app-{{section.id}} .section5 .content .video-shop .video-shop-item .video {
+      width: 100%;
+      border-radius: 5.333vw;
+      -webkit-border-radius: 5.333vw;
+      -moz-border-radius: 5.333vw;
+      -ms-border-radius: 5.333vw;
+      -o-border-radius: 5.333vw;
+    }
+    #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop {
+      background-color: #ffffff;
+      border-radius: 3.2vw;
+      position: absolute;
+      display: flex;
+      bottom: 8vw;
+      width: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+    }
+    #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .discount {
+      position: absolute;
+      top: 0;
+      left: 5.333vw;
+      align-self: flex-start;
+      font-size: 2.933vw;
+      font-weight: 500;
+      font-family: Inter;
+      height: 5.867vw;
+      min-height: 5.867vw;
+      color: #fff;
+      background-color: #ba1e1e;
+      border-radius: 0.8vw;
+      padding: 1.333vw 4vw 1.333vw 1.333vw;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+    }
+    #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop {
+      padding: 5.333vw;
+      display: flex;
+    }
+    #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop .img-wrap {
+      cursor: pointer;
+      margin-right: 5.333vw;
+      flex-shrink: 0;
+    }
+    #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop .img-wrap .shop-img {
+      border: 0.267vw solid #c1c1c1;
+      width: 26.667vw;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+    #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop .r-info .shop-title {
+      cursor: pointer;
+      font-size: 4.8vw;
+      text-decoration: none;
+      font-weight: 500;
+      text-transform: none;
+      font-style: normal;
+      line-height: 1.3em;
+      letter-spacing: 0vw;
+      font-family: "Questrial";
+      margin-bottom: 2.667vw;
+      transition: 0.3s;
+    }
+    #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop .r-info .shop-title :hover {
+      color: #e289d4;
+    }
+    #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop .r-info .price {
+      display: flex;
+      align-items: center;
+    }
+    #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop .r-info .price .now-price {
+      font-size: 4.8vw;
+      font-weight: 700;
+      color: #f53b3b;
+      border-radius: 0;
+      margin-right: 2.667vw;
+      padding: 0;
+      font-family: "Questrial,sans-serif";
+    }
+    #app-{{section.id}} .section5 .content .video-shop .video-shop-item .float-shop .v-shop .r-info .price .old-price {
+      text-decoration: line-through;
+      color: #777777;
+      font-size: 3.733vw;
+      font-weight: 400;
+      font-family: "Questrial";
+      text-transform: none;
+      font-style: normal;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+    }
+  }
+</style>
+
+<div id="app-{{section.id}}" class="containers">
+  <div class="section5">
+    <div class="common-title">{{section.settings.title}}</div>
+    <div class="common-subtitle">{{section.settings.subtitle}}</div>
+    <div class="content">
+       <div class="video-shop">
+        {% for item in section.blocks %}
+          {% assign product = all_products[item.settings.video_product] %}
+          <div class="video-shop-item"> 
+            <video class="video" autoplay muted loop>
+              <source src="{{item.settings.video_link}}" type="video/mp4">
+              <p> The current browser does not support video tags </p>
+            </video>
+            <div class="float-shop fadein">
+              {% assign discount_percentage = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round %}
+              <div class="discount">-{{discount_percentage}}% OFF</div> 
+              <div class="v-shop">
+                <div class="img-wrap">
+                  <a href="{{product.url}}" target="_blank">
+                    <img class="shop-img" srcset="
+                      {%- if product.featured_media.width >= 533 -%}
+                          {{ product.featured_media | img_url: '533x' }} 533w, 
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 534 -%}
+                          {{ product.featured_media | img_url: '534x' }} 534w,
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 720 -%}
+                          {{ product.featured_media | img_url: '720x' }} 720w,
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 940 -%}
+                          {{ product.featured_media | img_url: '940x' }} 940w,
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 1066 -%}
+                          {{ product.featured_media | img_url: '1066x' }} 1066w
+                      {%- endif -%}" 
+                      src="{{ product.images[2] | img_url: '533x' }}"
+                      sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                      alt="{{ product.featured_media.alt | escape }} {{product.featured_media.width}}"
+                      loading="lazy"
+                      class="motion-reduce"
+                    >
+                  </a>
+                </div>
+                <div class="r-info">
+                  <a href="{{product.url}}" target="_blank">
+                    <div class="shop-title">{{product.title}}</div>
+                  </a>
+                  <div class="price">
+                    <div class="now-price">{{product.price | money}}</div> 
+                    <u class="old-price">{{product.compare_at_price | money}}</u>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  $(function() {
+    const isMobile = document.documentElement.clientWidth <= 768;
+    // 监听滚动
+    function fadeInListen() {
+      var fadeIn = $('.containers').find('.fadein');
+      fadeIn.each(function () {
+        let element = this;
+        let {
+          scrub,
+          reverse,
+          duration,
+          actions,
+          fn
+        } = $(this).data()
+
+        gsap.set(element, {
+          opacity: 0,
+          y: 20
+        });
+        let toggleActions = "play none none none";
+        let start = $(this).data('start') || 70;
+        duration ? '' : duration = 0.8
+        let tl = gsap.to(element, {
+          opacity: 1,
+          y: 0,
+          duration
+        });
+        if (reverse) {
+          toggleActions = "play none none reverse"
+        }
+
+        ScrollTrigger.create({
+          animation: tl,
+          trigger: element,
+          toggleActions,
+          start: `top ${start}%`, // 调整触发点，视情况而定
+          onEnter: function () {
+
+          },
+          once: true // 只触发一次
+        });
+      });
+    }
+    fadeInListen();
+
+    // 购买按钮事件
+    $("#app-{{section.id}} .buy-btn").click(function(e) {
+      var productId = $(this).attr("data-id"); 
+      $.ajax({
+        type: "POST",
+        url: "/cart/clear.js",
+        data: {},
+        dataType: "json",
+        success: function() { 
+          $.ajax({
+            type: "POST",
+            url: "/cart/add.js",
+            data: {
+              quantity: 1,
+              id: productId
+            },
+            dataType: "json",
+            success: function() { 
+              window.location.href = "/checkout";
+            }
+          });
+        }
+      });
+    })
+  })
+</script>
+
+{% schema %}
+  {
+    "name": "creality video shop",
+    "max_blocks": 3,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "标题"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "副标题"
+      },
+      {
+        "type": "product",
+        "id": "product1",
+        "label": "视频产品1"
+      },
+      {
+        "type": "range",
+        "id": "pc_top",
+        "label": {
+          "en-US": "PC top spacing",
+          "zh-CN": "PC上边距"
+        },
+        "default": 30,
+        "unit":"px",
+        "step": 1,
+        "max": 100,
+        "min": 0
+      },
+      {
+        "type": "range",
+        "id": "pc_bottom",
+        "label": {
+          "en-US": "PC bottom spacing",
+          "zh-CN": "PC端下边距"
+        },
+        "default": 30,
+        "unit":"px",
+        "step": 1,
+        "max": 100,
+        "min": 0
+      },
+      {
+        "type": "range",
+        "id": "md_top",
+        "label": {
+          "en-US": "Mobile top spacing",
+          "zh-CN": "移动端上边距"
+        },
+        "default": 30,
+        "unit":"%",
+        "step": 1,
+        "max": 100,
+        "min": 0
+      },
+      {
+        "type": "range",
+        "id": "md_bottom",
+        "label": {
+          "en-US": "Mobile bottom spacing",
+          "zh-CN": "移动端下边距"
+        },
+        "default": 30,
+        "unit":"px",
+        "step": 1,
+        "max": 100,
+        "min": 0
+      }
+    ],
+    "blocks":[
+      {
+        "type":"product",
+        "name": "video product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "video_product",
+            "label": "产品"
+          },
+          {
+            "type": "text",
+            "id": "video_link",
+            "label": "视频链接"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "creality video shop"
+      }
+    ]
+  }
+{% endschema %}

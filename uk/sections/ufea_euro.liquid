@@ -1,0 +1,1861 @@
+<style>
+  @charset "UTF-8";
+
+  .en .fontBold {
+    font-family: HarmonyOS_Sans_SC_Bold, sans-serif;
+  }
+  .en .fontRegular {
+    font-family: HarmonyOS_Sans_SC_Regular, sans-serif;
+  }
+  .en .fontLight {
+    font-family: HarmonyOS_Sans_SC_Light, sans-serif;
+  }
+  .en .fontMedium {
+    font-family: HarmonyOS_Sans_SC_Medium, sans-serif;
+  }
+
+  .cn .fontBold {
+    font-family: HarmonyOS_Sans_SC_Bold, sans-serif;
+  }
+  .cn .fontRegular {
+    font-family: HarmonyOS_Sans_SC_Regular, sans-serif;
+  }
+  .cn .fontLight {
+    font-family: HarmonyOS_Sans_SC_Light, sans-serif;
+  }
+  .cn .fontMedium {
+    font-family: HarmonyOS_Sans_SC_Medium, sans-serif;
+  }
+
+  #container-{{section.id}} {
+    width: 100%;
+    font-family: HarmonyOS_Sans_SC_Regular;
+    font-size: 0;
+    line-height: 1;
+  }
+  #container-{{section.id}} .swiper-container {
+    overflow: hidden;
+  }
+  #container-{{section.id}} * {
+    box-sizing: border-box;
+  }
+  #container-{{section.id}} .mb {
+    display: none;
+  }
+  #container-{{section.id}} img {
+    width: 100%;
+    height: auto;
+    max-width: inherit;
+  }
+  #container-{{section.id}} a {
+    text-decoration: none;
+  }
+  #container-{{section.id}} h2.title {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-weight: 900;
+    font-size: 2.13vw;
+    color: #fff;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0;
+  }
+  #container-{{section.id}} .desc {
+    text-align: center;
+    font-family: HarmonyOS_Sans_SC_Regular;
+    font-weight: 400;
+    font-size: 1.06vw;
+    color: #fff;
+    line-height: 1.2;
+    margin-top: 1.2vw;
+  }
+  #container-{{section.id}} .swiper-container {
+    overflow: hidden;
+    position: relative;
+  }
+  #container-{{section.id}} .section3_4 {
+    background: linear-gradient(to bottom, #5962c9, #6a95d3);
+  }
+  #container-{{section.id}} .section1 {
+    width: 100%;
+    min-height: 29vw;
+    position: relative;
+    overflow: hidden;
+  }
+  #container-{{section.id}} .section2 {
+    height: 4vw;
+    background-color: #14a9de;
+    padding: 0 14.3vw;
+  }
+  #container-{{section.id}} .section2 .icon_list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+  }
+  #container-{{section.id}} .section2 .icon_list .icon_item {
+    display: flex;
+    align-items: center;
+  }
+  #container-{{section.id}} .section2 .icon_list .icon_item:nth-child(1) img {
+    height: 2.3vw;
+    width: auto;
+  }
+  #container-{{section.id}} .section2 .icon_list .icon_item:nth-child(2) img {
+    height: 2.7vw;
+    width: auto;
+  }
+  #container-{{section.id}} .section2 .icon_list .icon_item:nth-child(3) img {
+    height: 2.7vw;
+    width: auto;
+  }
+  #container-{{section.id}} .section2 .icon_list .icon_item .text {
+    font-weight: 400;
+    font-size: 1.28vw;
+    color: #ffffff;
+    margin-left: 0.4vw;
+  }
+  #container-{{section.id}} .section3 {
+    padding-top: 6vw;
+  }
+  #container-{{section.id}} .section3 .contain {
+    width: 100%;
+    margin-top: 2vw;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper {
+    z-index: 2;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide {
+    height: 28.35vw;
+    transform: scale(0.8, 0.8);
+    transition: transform 0.3s ease;
+    transform-origin: right center;
+    display: flex;
+    align-items: center;
+    background-clip: padding-box;
+    border: solid 8px transparent;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide .slide-wrap {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide.swiper-slide-next + .swiper-slide {
+    transform-origin: left center;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide.swiper-slide-prev, #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide.swiper-slide-next {
+    transform: scale(0.9, 0.9);
+    transform-origin: center center;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
+    transform: scale(1, 1);
+    transform-origin: center center;
+    position: relative;
+    z-index: 6;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide.swiper-slide-active::before {
+    content: "";
+    opacity: 1;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: linear-gradient(45deg, #54c8f8, #82eed8);
+    z-index: -1; /* 确保伪元素在背景下 */
+    border-radius: 16px; /* 确保边框圆角与原元素一致 */
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide .team-text {
+    font-size: 1.51vw;
+    font-family: HarmonyOS_Sans_SC_Bold;
+    color: #000;
+    text-align: center;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide .team-list {
+    margin-top: 1vw;
+    width: 17vw;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide .team-list .team-item {
+    padding: 1.2vw 1vw;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+    cursor: pointer;
+    background-color: #fff;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide .team-list .team-item:hover {
+    opacity: 0.5;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide .team-list .team-item img {
+    width: 4.26vw;
+    height: auto;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide .team-list .team-item span {
+    font-size: 1.28vw;
+    text-transform: uppercase;
+    color: #000;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide .team-list .team-item:last-child {
+    border-bottom: none;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .navigation-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0;
+    padding: 0 1.84vw;
+    pointer-events: none;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .navigation-wrap .prev-btn svg {
+    transform: rotate(180deg);
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .navigation-wrap .prev-btn,
+  #container-{{section.id}} .section3 .contain .s3_swiper .navigation-wrap .next-btn {
+    pointer-events: auto;
+    cursor: pointer;
+    position: relative;
+    z-index: 6;
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .navigation-wrap .prev-btn:hover,
+  #container-{{section.id}} .section3 .contain .s3_swiper .navigation-wrap .next-btn:hover {
+    opacity: 0.8;
+  }
+  #container-{{section.id}} .section3 .contain .s3_swiper .navigation-wrap .prev-btn svg,
+  #container-{{section.id}} .section3 .contain .s3_swiper .navigation-wrap .next-btn svg {
+    width: 1vw;
+    height: 1.6vw;
+  }
+  #container-{{section.id}} .section3 .contain .s3_wrap {
+    display: flex;
+    margin: 0 18.5vw;
+    margin-top: 2vw;
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 21.5vw;
+  }
+  #container-{{section.id}} .section3 .contain .s3_wrap .left-item {
+    height: 100%;
+    width: 21vw;
+    padding: 2.4vw 1.7vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #container-{{section.id}} .section3 .contain .s3_wrap .left-item .title {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-size: 1.28vw;
+    color: #000000;
+    text-align: center;
+  }
+  #container-{{section.id}} .section3 .contain .s3_wrap .left-item .flag-pic {
+    margin-top: 2.5vw;
+  }
+  #container-{{section.id}} .section3 .contain .s3_wrap .left-item .flag-pic img {
+    width: 100%;
+  }
+  #container-{{section.id}} .section3 .contain .s3_wrap .left-item span {
+    margin-top: 1vw;
+    font-size: 1.06vw;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  #container-{{section.id}} .section3 .contain .s3_wrap .right-item {
+    flex: 1;
+    display: flex;
+    height: 100%;
+  }
+  #container-{{section.id}} .section3 .contain .s3_wrap .right-item .flex-item {
+    flex: 1;
+    height: 100%;
+  }
+  #container-{{section.id}} .section3 .contain .s3_wrap .right-item .flex-item.mail-box {
+    padding: 2.1vw 1.85vw;
+  }
+  #container-{{section.id}} .section3 .contain .s3_wrap .right-item .flex-item .text1 {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-size: 1.28vw;
+    color: #000000;
+    text-align: center;
+  }
+  #container-{{section.id}} .section4 {
+    margin-top: 6.5vw;
+    padding: 0 4vw;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap {
+    margin-top: 2vw;
+    width: 100%;
+    height: 35.6vw;
+    background-color: #e3ecf7;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .price_wrap {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 0.9vw;
+    gap: 0.2vw;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .price_wrap .old_price {
+    font-size: 0.78vw;
+    color: #686868;
+    position: relative;
+    padding: 0 0.5vw;
+    padding-bottom: 0.2vw;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .price_wrap .old_price::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-0.1vw);
+    width: 100%;
+    height: 1px;
+    background-color: #686868;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .price_wrap .new_price {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-weight: 900;
+    font-size: 2.13vw;
+    background: linear-gradient(to right, #ed3b4b, #4c3b92);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container {
+    height: 100%;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper {
+    height: 100%;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide {
+    display: flex;
+    height: 100%;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .left-item {
+    width: 35.6vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .left-item::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 2vw solid transparent;
+    border-bottom: 35.6vw solid #E3ECF7;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .left-item .discount {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    width: 3.6vw;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .left-item .discount img {
+    width: 100%;
+    height: auto;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .left-item .discount .discount_text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding-top: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .left-item .discount .discount_text .t1 {
+    font-size: 1.2vw;
+    color: #ffffff;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .left-item .discount .discount_text .t2 {
+    font-size: 1.06vw;
+    color: #ffffff;
+    margin-top: 0.5vw;
+    font-weight: 900;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .left-item .product-img {
+    width: 80%;
+    margin-top: 1vw;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item {
+    padding: 3.2vw 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #e3ecf7;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item .product-info .product-name {
+    font-size: 1.6vw;
+    color: #000000;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item .product-info .desc {
+    margin-top: 1.5vw;
+    color: #000;
+    text-align: left;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item .event-wrap {
+    cursor: pointer;
+    width: 18.5vw;
+    height: 2.67vw;
+    border-radius: 32px;
+    display: flex;
+    margin-top: 1.65vw;
+    background-color: #14a9de;
+    overflow: hidden;
+    border: 1px solid #14a9de;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, 0.5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item .event-wrap:hover {
+    border: 2px solid #14a9de;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #14a9de;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item .event-wrap button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    height: 100%;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item .event-wrap .addcart {
+    height: 100%;
+    width: 5.5vw;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item .event-wrap .addcart img {
+    width: 1.7vw;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item .event-wrap .buynow {
+    flex: 1;
+    display: flex;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.28vw;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list {
+    position: absolute;
+    top: 12.6vw;
+    left: 37.5vw;
+    display: flex;
+    gap: 1vw;
+    z-index: 2;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item {
+    width: 25vw;
+    height: 11vw;
+    background: #ffffff;
+    border-radius: 12px;
+    background-clip: padding-box; /* 防止背景色渗出边框 */
+    border: solid 4px transparent; /* 边框透明以显示伪元素 */
+    display: flex;
+    align-items: center;
+    padding: 1.4vw 0.7vw;
+    position: relative;
+    cursor: pointer;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item .product-img {
+    flex: auto;
+    flex-shrink: 0;
+    width: 8.2vw;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item .product-info {
+    padding-left: 0.5vw;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item .product-info .product-name {
+    font-size: 1.06vw;
+    color: #000000;
+    line-height: 1.2;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item::before {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(45deg, #54c8f8, #82eed8);
+    z-index: -1; /* 确保伪元素在背景下 */
+    border-radius: 12px; /* 确保边框圆角与原元素一致 */
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item:hover::before {
+    opacity: 1;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item .check-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2.8vw;
+    height: 2.8vw;
+    transform: translate(50%, -50%);
+    z-index: 2;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item .check-box img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 1;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item .check-box .checked-img {
+    opacity: 0;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item.checked::before {
+    opacity: 1;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item.checked .check-box img {
+    opacity: 0;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item.checked .check-box .checked-img {
+    opacity: 1;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-pagination {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 6vw;
+    bottom: 3vw;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-pagination .swiper-tabitem {
+    padding: 0 2vw;
+    font-size: 1.28vw;
+    color: #000000;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-pagination .swiper-tabitem:nth-child(2) {
+    border-left: 1px solid #000;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-pagination .swiper-tabitem:last-child {
+    border-left: 1px solid #000;
+  }
+  #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-pagination .swiper-tabitem.checked {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    color: #14a9de;
+  }
+  #container-{{section.id}} .section5 {
+    display: none;
+  }
+  #container-{{section.id}} .section6 {
+    display: none;
+  }
+  #container-{{section.id}} .section7 {
+    display: none;
+  }
+  #container-{{section.id}} .section8 {
+    display: none;
+  }
+  #container-{{section.id}} .section9 {
+    display: none;
+  }
+  #container-{{section.id}} .section10 {
+    display: none;
+  }
+  #container-{{section.id}} .section11 {
+    display: none;
+  }
+  #container-{{section.id}} .section12 {
+    display: none;
+  }
+  #container-{{section.id}} .section13 {
+    display: none;
+  }
+  #container-{{section.id}} .section14 {
+    display: none;
+  }
+  #container-{{section.id}} .section15 {
+    display: none;
+  }
+  #container-{{section.id}} .section16 {
+    display: none;
+  }
+
+  @media (max-width: 769px) {
+    #container-{{section.id}} .pc {
+      display: none;
+    }
+    #container-{{section.id}} .mb {
+      display: block;
+    }
+    #container-{{section.id}} h2.title {
+      font-size: 5vw;
+    }
+    #container-{{section.id}} .desc {
+      font-size: 2.96vw;
+      line-height: 1.2;
+      margin-top: 2vw;
+    }
+    #container-{{section.id}} .section1 {
+      min-height: 97vw;
+    }
+    #container-{{section.id}} .section2 {
+      height: 36vw;
+      padding: 0 0;
+    }
+    #container-{{section.id}} .section2 .icon_list {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5vw;
+    }
+    #container-{{section.id}} .section2 .icon_list .icon_item {
+      display: flex;
+      align-items: center;
+    }
+    #container-{{section.id}} .section2 .icon_list .icon_item:nth-child(1) img {
+      height: 6.4vw;
+      width: auto;
+    }
+    #container-{{section.id}} .section2 .icon_list .icon_item:nth-child(2) img {
+      height: 7.5vw;
+      width: auto;
+    }
+    #container-{{section.id}} .section2 .icon_list .icon_item:nth-child(3) img {
+      height: 7.5vw;
+      width: auto;
+    }
+    #container-{{section.id}} .section2 .icon_list .icon_item .text {
+      font-size: 3.56vw;
+      margin-left: 1vw;
+      white-space: nowrap;
+    }
+    #container-{{section.id}} .section3 {
+      padding-top: 14vw;
+    }
+    #container-{{section.id}} .section3 .contain {
+      width: 100%;
+      margin-top: 7vw;
+    }
+    #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide {
+      height: 55vw;
+      border-radius: 12px;
+      transform: scale(0.9, 0.9);
+      transition: transform 0.3s ease;
+      transform-origin: right center;
+      border: solid 4px transparent;
+    }
+    #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide .slide-wrap {
+      border-radius: 12px;
+    }
+    #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide.swiper-slide-next + .swiper-slide {
+      transform-origin: left center;
+    }
+    #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide.swiper-slide-prev, #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide.swiper-slide-next {
+      transform: scale(0.9, 0.9);
+      transform-origin: center center;
+    }
+    #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
+      transform: scale(1, 1);
+      transform-origin: center center;
+    }
+    #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide.swiper-slide-active::before {
+      content: "";
+      opacity: 1;
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      right: -4px;
+      bottom: -4px;
+      background: linear-gradient(45deg, #54c8f8, #82eed8);
+      z-index: -1; /* 确保伪元素在背景下 */
+      border-radius: 16px; /* 确保边框圆角与原元素一致 */
+    }
+    #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide .team-text {
+      font-size: 3.56vw;
+      font-family: HarmonyOS_Sans_SC_Bold;
+      color: #000;
+      text-align: center;
+    }
+    #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide .team-list {
+      margin-top: 1vw;
+      width: 36vw;
+    }
+    #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide .team-list .team-item {
+      padding: 2.4vw 1.5vw;
+      gap: 8vw;
+      cursor: pointer;
+    }
+    #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide .team-list .team-item img {
+      width: 8vw;
+      height: auto;
+    }
+    #container-{{section.id}} .section3 .contain .s3_swiper .swiper-wrapper .swiper-slide .team-list .team-item span {
+      font-size: 2.67vw;
+    }
+    #container-{{section.id}} .section3 .contain .s3_swiper .navigation-wrap {
+      padding: 0 4.5vw;
+    }
+    #container-{{section.id}} .section3 .contain .s3_swiper .navigation-wrap .prev-btn,
+    #container-{{section.id}} .section3 .contain .s3_swiper .navigation-wrap .next-btn {
+      cursor: pointer;
+      position: relative;
+      z-index: 3;
+      width: 6vw;
+      height: 6vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    #container-{{section.id}} .section3 .contain .s3_swiper .navigation-wrap .prev-btn:hover,
+    #container-{{section.id}} .section3 .contain .s3_swiper .navigation-wrap .next-btn:hover {
+      opacity: 0.8;
+    }
+    #container-{{section.id}} .section3 .contain .s3_swiper .navigation-wrap .prev-btn svg,
+    #container-{{section.id}} .section3 .contain .s3_swiper .navigation-wrap .next-btn svg {
+      width: 2vw;
+      height: 3.2vw;
+    }
+    #container-{{section.id}} .section3 .contain .s3_wrap {
+      margin: 0 4.5vw;
+      margin-top: 4vw;
+      height: 31vw;
+    }
+    #container-{{section.id}} .section3 .contain .s3_wrap .left-item {
+      height: 100%;
+      width: 30vw;
+      padding: 2.6vw 2.5vw;
+    }
+    #container-{{section.id}} .section3 .contain .s3_wrap .left-item .title {
+      font-size: 2.37vw;
+    }
+    #container-{{section.id}} .section3 .contain .s3_wrap .left-item .flag-pic {
+      width: 100%;
+      margin-top: 2.5vw;
+      height: 15vw;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+    #container-{{section.id}} .section3 .contain .s3_wrap .left-item .flag-pic img {
+      width: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 0;
+    }
+    #container-{{section.id}} .section3 .contain .s3_wrap .left-item img {
+      width: 100%;
+      margin-top: 2.5vw;
+    }
+    #container-{{section.id}} .section3 .contain .s3_wrap .left-item span {
+      margin-top: 2vw;
+      font-size: 2.4vw;
+    }
+    #container-{{section.id}} .section3 .contain .s3_wrap .right-item {
+      flex: 1;
+      display: flex;
+      height: 100%;
+    }
+    #container-{{section.id}} .section3 .contain .s3_wrap .right-item .flex-item {
+      flex: 1;
+      height: 100%;
+    }
+    #container-{{section.id}} .section3 .contain .s3_wrap .right-item .flex-item.mail-box {
+      padding: 2.1vw 1.85vw;
+    }
+    #container-{{section.id}} .section3 .contain .s3_wrap .right-item .flex-item .text1 {
+      font-family: HarmonyOS_Sans_SC_Bold;
+      font-size: 2.4vw;
+      color: #000000;
+      text-align: center;
+    }
+    #container-{{section.id}} .section4 {
+      margin-top: 6.5vw;
+      padding: 0 4.5vw;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap {
+      margin-top: 5vw;
+      width: 100%;
+      height: 206vw;
+      background-color: #e3ecf7;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .price_wrap {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 2vw;
+      gap: 0.5vw;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .price_wrap .old_price {
+      font-size: 2.96vw;
+      padding: 0 1vw;
+      padding-bottom: 0.2vw;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .price_wrap .new_price {
+      font-size: 5.93vw;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container {
+      height: 100%;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper {
+      height: 100%;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .left-item {
+      width: 100%;
+      height: 85vw;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .left-item::after {
+      display: none;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .left-item .discount {
+      position: absolute;
+      left: 13%;
+      top: 0;
+      width: 10.2vw;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .left-item .discount .discount_text {
+      padding-top: 1vw;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .left-item .discount .discount_text .t1 {
+      font-weight: 900;
+      font-size: 2.96vw;
+      color: #ffffff;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .left-item .discount .discount_text .t2 {
+      font-size: 4.4vw;
+      color: #ffffff;
+      margin-top: 0.5vw;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .left-item .product-img {
+      width: 75%;
+      margin-top: 2vw;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item {
+      padding: 8vw 10vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #e3ecf7;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item .product-info .product-name {
+      font-size: 4.4vw;
+      color: #000000;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item .product-info .desc {
+      margin-top: 2.96vw;
+      color: #000;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item .event-wrap {
+      width: 48vw;
+      height: 8vw;
+      border-radius: 32px;
+      display: flex;
+      margin-top: 80vw;
+      overflow: hidden;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item .event-wrap .addcart {
+      width: 15.1vw;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item .event-wrap .addcart img {
+      width: 3.8vw;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-wrapper .swiper-slide .right-item .event-wrap .buynow {
+      font-size: 3.56vw;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list {
+      position: absolute;
+      top: 116vw;
+      left: 0;
+      width: 100%;
+      padding: 0 10vw;
+      display: flex;
+      gap: 2vw;
+      z-index: 2;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item {
+      flex: 1;
+      height: 65vw;
+      border-radius: 12px;
+      border: solid 4px transparent; /* 边框透明以显示伪元素 */
+      padding: 5.6vw 3.6vw;
+      flex-direction: column;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item .product-img {
+      flex: initial;
+      width: 100%;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item .product-info {
+      padding-top: 2vw;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item .product-info .product-name {
+      font-size: 2.96vw;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      height: auto;
+      padding-bottom: 0.15vw;
+      line-height: 1.2;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item .product-info .price_wrap {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1vw;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item::before {
+      content: "";
+      opacity: 0;
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      right: -4px;
+      bottom: -4px;
+      background: linear-gradient(45deg, #54c8f8, #82eed8);
+      z-index: -1; /* 确保伪元素在背景下 */
+      border-radius: 12px; /* 确保边框圆角与原元素一致 */
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item:hover::before {
+      opacity: 1;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .accessories-list .accessories-item .check-box {
+      width: 5.6vw;
+      height: 5.6vw;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-pagination {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 72vw;
+      bottom: auto;
+    }
+    #container-{{section.id}} .section4 .s4_swiper_wrap .swiper-container .swiper-pagination .swiper-tabitem {
+      padding: 0 6vw;
+      font-size: 3.56vw;
+    }
+  }
+</style>
+{%- liquid 
+  assign card_background_color = section.settings.card_background_color
+-%}
+
+<div id="container-{{section.id}}" class="fontRegular en">
+  <div class="banner-pic section1">
+    <img data-srcset="https://cdn.shopifycdn.net/s/files/1/0630/7522/1663/files/675-975.png?v=1718871462 768w, https://cdn.shopifycdn.net/s/files/1/0630/7522/1663/files/1880-720.png?v=1718871462"
+        data-sizes="100vw" class="lazyload" alt="Responsive Image" />
+  </div>
+  <div class="section2">
+      <div class="icon_list">
+          <div class="icon_item">
+              <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_icon1.png"
+                  alt="icon1.png">
+              <div class="text">
+                  Free Shipping Over <span class="fontBold">£49.99</span>
+              </div>
+          </div>
+          <div class="icon_item">
+              <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_icon2.png"
+                  alt="icon2.png">
+              <div class="text">
+                  <span class="fontBold">14-Day</span> Money-Back Guarantee
+              </div>
+          </div>
+          <div class="icon_item">
+              <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_icon3.png"
+                  alt="icon3.png">
+              <div class="text">
+                  <span class="fontBold">12-Month</span> Warranty Offer
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="section3_4">
+    <div class="section3">
+        <h2 class="title">Choose Your Home Team, <br class="mb">Rally Behind Them!</h2>
+        <div class="desc">
+            Spend £100 and Select Your Favorite Team to Get a <b style="color: #E2161F;">Free Gift Plywood!</b>
+        </div>
+        <div class="contain">
+            <div class="swiper-container s3_swiper">
+
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-wrap">
+                            <div class="team-text">
+                                A Team
+                            </div>
+                            <div class="team-list">
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_flag.png" alt="">
+                                    <span>flag</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_germany.png" alt="">
+                                    <span>germany</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_scotland.png" alt="">
+                                    <span>scotland</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_switzerland.png" alt="">
+                                    <span>switzerland</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-wrap">
+                            <div class="team-text">
+                                B Team
+                            </div>
+                            <div class="team-list">
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_Albania.png" alt="">
+                                    <span>Albania</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_Croatia.png" alt="">
+                                    <span>Croatia</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_Italy.png" alt="">
+                                    <span>Italy</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_Spain.png" alt="">
+                                    <span>Spain</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-wrap">
+                            <div class="team-text">
+                                C Team
+                            </div>
+                            <div class="team-list">
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_Denmark.png" alt="">
+                                    <span>Denmark</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_England.png" alt="">
+                                    <span>England</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_Serbia.png" alt="">
+                                    <span>Serbia</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_Slovenia.png" alt="">
+                                    <span>Slovenia</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-wrap">
+                            <div class="team-text">
+                                D Team
+                            </div>
+                            <div class="team-list">
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_austria.png" alt="">
+                                    <span>austria</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_france.png" alt="">
+                                    <span>france</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_netherlands.png" alt="">
+                                    <span>netherlands</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_poland.png" alt="">
+                                    <span>poland</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-wrap">
+                            <div class="team-text">
+                                E Team
+                            </div>
+                            <div class="team-list">
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_belgium.png" alt="">
+                                    <span>belgium</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_romania.png" alt="">
+                                    <span>romania</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_slovakia.png" alt="">
+                                    <span>slovakia</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_ukraine.png" alt="">
+                                    <span>ukraine</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-wrap">
+                            <div class="team-text">
+                                F Team
+                            </div>
+                            <div class="team-list">
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_Czech_Republic.png" alt="">
+                                    <span>Czech Republic</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_Georgia.png" alt="">
+                                    <span>Georgia</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_Portugal.png" alt="">
+                                    <span>Portugal</span>
+                                </div>
+                                <div class="team-item">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_Turkey.png" alt="">
+                                    <span>Turkey</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation-wrap">
+                    <div class="prev-btn">
+                        <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                            <path
+                                d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z"
+                                p-id="8092" fill="#fff"></path>
+                        </svg>
+                    </div>
+                    <div class="next-btn">
+                        <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                            <path
+                                d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z"
+                                p-id="8092" fill="#fff"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="s3_wrap">
+                <div class="left-item">
+                    <div class="title">Choose Your <br class="mb">Home Team</div>
+                    <div class="flag-pic">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_flag.png" alt="">
+                    </div>
+                    <span>FLAG</span>
+                </div>
+                <div class="right-item">
+                    <img class="flex-item" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_s3_pic1.jpg" alt="">
+                    <div class="flex-item mail-box">
+                        <div class="text1">Receive Plywood Gift in Your Email</div>
+                        <mag-form><div class="mag-form" data-token="24IdK5dpzmyGxTn3rzJdPFHWEyN57Sia"></div></mag-form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <div class="section4">
+          <h2 class="title">Unleash Your Creativity with Falcon Laser Engraver</h2>
+          <div class="desc">
+              Explore Limitless Possibilities with <b style="color: #E2161F;">57% Off!</b> 
+          </div>
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'products-lists' -%}
+              {% assign settings_count = forloop.index %}
+            <div class="s4_swiper_wrap">
+                <div class="swiper-container s4_swiper_{{ settings_count }}  ">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="left-item">
+                                <div class="discount">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1_42609f68-f41e-46ab-9871-38a1315c7c09.png?v=1718175000"
+                                        alt="discount_icon.jpg">
+                                    <div class="discount_text">
+                                        <span class="t1">{{ block.settings.item1_discount_text1 }}</span> <br>
+                                        <span class="t2 fontBold">{{ block.settings.item1_discount_text2 }}</span>
+                                    </div>
+                                </div>
+                                <img class="product-img"
+                                    src="{{ block.settings.item1_image_link }}"
+                                    alt="">
+                            </div>
+                            <div class="right-item">
+                                <div class="product-info">
+                                    <div class="product-name">
+                                      {{ block.settings.item1_title }}
+                                    </div>
+                                    <div class="price_wrap">
+                                        <span class="new_price">{{ block.settings.item1_new_price }}</span>
+                                        <span class="old_price">{{ block.settings.item1_old_price }}</span>
+                                    </div>
+                                    <div class="desc">{{ block.settings.item1_desc1 }}</div>
+                                </div>
+                                <div class="event-wrap event-wrap-btn">
+                                  <div class="addcart"><img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png" alt="cart.png"></div>
+                                  <div class="buynow">Add To Cart</div>
+                                  <div class="code" style="visibility: hidden; position:absolute; ">{{ block.settings.item1_addcart_code }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="left-item">
+                                <div class="discount">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1_42609f68-f41e-46ab-9871-38a1315c7c09.png?v=1718175000"
+                                        alt="discount_icon.jpg">
+                                    <div class="discount_text">
+                                        <span class="t1">{{ block.settings.item2_discount_text1 }}</span> <br>
+                                        <span class="t2 fontBold">{{ block.settings.item2_discount_text2 }}</span>
+                                    </div>
+                                </div>
+                                <img class="product-img"
+                                    src="{{ block.settings.item2_image_link }}"
+                                    alt="">
+                            </div>
+                            <div class="right-item">
+                                <div class="product-info">
+                                    <div class="product-name">
+                                      {{ block.settings.item2_title }}
+                                    </div>
+                                    <div class="price_wrap">
+                                        <span class="new_price">{{ block.settings.item2_new_price }}</span>
+                                        <span class="old_price">{{ block.settings.item2_old_price }}</span>
+                                    </div>
+                                    <div class="desc">{{ block.settings.item2_desc1 }}</div>
+                                </div>
+                                <div class="event-wrap event-wrap-btn">
+                                  <div class="addcart"><img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png" alt="cart.png"></div>
+                                  <div class="buynow">Add To Cart</div>
+                                  <div class="code" style="visibility: hidden; position:absolute; ">{{ block.settings.item2_addcart_code }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="left-item">
+                                <div class="discount">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1_42609f68-f41e-46ab-9871-38a1315c7c09.png?v=1718175000"
+                                        alt="discount_icon.jpg">
+                                    <div class="discount_text">
+                                        <span class="t1">{{ block.settings.item3_discount_text1 }}</span> <br>
+                                        <span class="t2 fontBold">{{ block.settings.item3_discount_text2 }}</span>
+                                    </div>
+                                </div>
+                                <img class="product-img"
+                                    src="{{ block.settings.item3_image_link }}"
+                                    alt="">
+                            </div>
+                            <div class="right-item">
+                                <div class="product-info">
+                                    <div class="product-name">
+                                      {{ block.settings.item3_title }}
+                                    </div>
+                                    <div class="price_wrap">
+                                        <span class="new_price">{{ block.settings.item3_new_price }}</span>
+                                        <span class="old_price">{{ block.settings.item3_old_price }}</span>
+                                    </div>
+                                    <div class="desc">{{ block.settings.item3_desc1 }}</div>
+                                </div>
+                                <div class="event-wrap event-wrap-btn">
+                                  <div class="addcart"><img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png" alt="cart.png"></div>
+                                  <div class="buynow">Add To Cart</div>
+                                  <div class="code" style="visibility: hidden; position:absolute; ">{{ block.settings.item3_addcart_code }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accessories-list">
+                        <div class="accessories-item checked">
+                            <div class="product-img">
+                                <img src="{{ block.settings.accessories1_image_link }}"
+                                    alt="">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-name">{{ block.settings.accessories1_title }}</div>
+                                <div class="price_wrap">
+                                    <span class="new_price">{{ block.settings.accessories1_new_price }}</span>
+                                    <span class="old_price">{{ block.settings.accessories1_old_price }}</span>
+                                </div>
+                            </div>
+                            <div class="check-box">
+                                <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_checked.png" class="checked-img" alt="">
+                                <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_uncheck.png" alt="">
+                            </div>
+                            <div class="addcard-btn" style="visibility: hidden;">
+                              {{ block.settings.accessories1_addcart_code }}
+                            </div>
+                        </div>
+                        <div class="accessories-item checked">
+                          <div class="product-img">
+                              <img src="{{ block.settings.accessories2_image_link }}"
+                                  alt="">
+                          </div>
+                          <div class="product-info">
+                              <div class="product-name">{{ block.settings.accessories2_title }}</div>
+                              <div class="price_wrap">
+                                  <span class="new_price">{{ block.settings.accessories2_new_price }}</span>
+                                  <span class="old_price">{{ block.settings.accessories2_old_price }}</span>
+                              </div>
+                          </div>
+                          <div class="check-box">
+                              <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_checked.png" class="checked-img" alt="">
+                              <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/ufea_euro_uncheck.png" alt="">
+                          </div>
+                          <div class="addcard-btn" style="visibility: hidden;">
+                            {{ block.settings.accessories2_addcart_code }}
+                          </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination">
+                        <span class="swiper-tabitem checked" data-swiper="swiper{{ settings_count }}">{{ block.settings.item1_tab_text }}</span>
+                        <span class="swiper-tabitem" data-swiper="swiper{{ settings_count }}">{{ block.settings.item2_tab_text }}</span>
+                        <span class="swiper-tabitem" data-swiper="swiper{{ settings_count }}">{{ block.settings.item3_tab_text }}</span>
+                    </div>
+                </div>
+            </div>
+            {%- endif -%}
+          {%- endfor -%}
+      </div>
+  </div>
+</div>
+
+<script>
+
+let docWidth = document.documentElement.clientWidth;
+let teamData = 'FLAG'
+var s3_options = {}
+
+if (docWidth < 769) {
+    s3_options = {
+        slidesPerView: 2,
+        spaceBetween: 1.8,
+    }
+} else {
+    s3_options = {
+        slidesPerView: 4,
+        spaceBetween: 10,
+    }
+}
+var swiper = new Swiper('#container-{{section.id}} .section3 .s3_swiper', {
+    ...s3_options,
+    centeredSlides: true,
+    loop: true,
+    navigation: {
+        "nextEl": ".section3 .s3_swiper .navigation-wrap .next-btn",
+        "prevEl": ".section3 .s3_swiper .navigation-wrap .prev-btn"
+    }
+});
+var s4Swiper = {
+    swiper1: new Swiper('#container-{{section.id}} .section4 .s4_swiper_1', {
+        effect: 'fade'
+    }),
+    swiper2: new Swiper('#container-{{section.id}} .section4 .s4_swiper_2', {
+        effect: 'fade'
+    }),
+    swiper3: new Swiper('#container-{{section.id}} .section4 .s4_swiper_3', {
+        effect: 'fade'
+    })
+}
+
+$('#container-{{section.id}} .accessories-item').click(function () {
+    $(this).toggleClass('checked');
+})
+
+
+$('#container-{{section.id}} .section4 .swiper-pagination .swiper-tabitem').click(function () {
+  // debugger
+    var index = $(this).index();
+    var swiper = $(this).data('swiper')
+    $(this).parent().find('.swiper-tabitem').removeClass('checked');
+    $(this).addClass('checked');
+    s4Swiper[swiper].slideTo(index); // Change to the specified slide index
+})
+
+$('#container-{{section.id}} .team-item').click(function () {
+    $('#container-{{section.id}} .s3_wrap .left-item').find('img').attr('src', $(this).find('img').attr('src'));
+    teamData = $(this).find('span').text()
+    $('#container-{{section.id}} .s3_wrap .left-item').find('span').text(teamData);
+})
+
+function productAddCart(ids) {
+      let formData = {
+          'items': []
+      };
+      console.log(ids)
+      ids.forEach(function (id) {
+          formData.items.push({
+              'id': id,
+              'quantity': 1
+          })
+      })
+      return fetch(window.Shopify.routes.root + 'cart/add.js', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+      })
+  }
+
+  const delay = async function (ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+  $('#container-{{section.id}} .s4_swiper_wrap  .swiper-slide .event-wrap-btn').click(async function (e) {
+      console.log('--')
+      if ($(e.target).is('button')) {
+          return; // 如果是按钮，则退出函数
+      }
+      let ids = []
+      $(this).parents('#container-{{section.id}} .s4_swiper_wrap').find('.accessories-item.checked').find('input[name="id"]').each(function(){
+          ids.push(this.value)
+      });
+      if(ids.length) {
+        await productAddCart(ids);
+      }
+      await delay(250);
+      console.log('click susccess')
+      $(this).find('.code button').click();
+  })
+
+</script>
+
+{% schema %}
+  {
+    "name": "ufea_euro",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "products-lists",
+        "name": {
+          "en-US": "products-lists",
+          "zh-CN": "产品列表"
+        },
+        "settings": [
+          {
+              "type": "text",
+              "id": "item1_tab_text",
+              "label": {
+                "en-US": "item1_tab_text",
+                "zh-CN": "产品1-tab文本"
+              },
+              "default": "40W"
+          },
+          {
+              "type": "text",
+              "id": "item1_image_link",
+              "label": {
+                "en-US": "image link",
+                "zh-CN": "产品1-图片链接"
+              },
+              "default": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864"
+          },
+          {
+              "type": "text",
+              "id": "item1_title",
+              "label": {
+                "en-US": "title text",
+                "zh-CN": "产品1-标题"
+              },
+              "default": "Creality Falcon2 Pro 40W"
+          },
+          {
+              "type": "text",
+              "id": "item1_desc1",
+              "label": {
+                "en-US": "desc1",
+                "zh-CN": "产品1-描述1"
+              },
+              "default": "Working Together with Your Falcon Laser Engraver"
+          },
+          {
+              "type": "text",
+              "id": "item1_old_price",
+              "label": {
+                "en-US": "old price",
+                "zh-CN": "产品1-原价"
+              },
+              "default": "$169.00"
+          },
+          {
+              "type": "textarea",
+              "id": "item1_new_price",
+              "label": {
+                "en-US": "new price",
+                "zh-CN": "产品1-现价"
+              },
+              "default": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">$119.00</span>"
+          },
+          {
+              "type": "text",
+              "id": "item1_discount_text1",
+              "label": {
+                "en-US": "discount_text1",
+                "zh-CN": "产品1-discount_text1"
+              },
+              "default": "SAVE"
+          },
+          {
+              "type": "text",
+              "id": "item1_discount_text2",
+              "label": {
+                "en-US": "discount_text2",
+                "zh-CN": "产品1-discount_text2"
+              },
+              "default": "50%"
+          },
+          {
+              "type": "textarea",
+              "id": "item1_addcart_code",
+              "label": {
+                "en-US": "addcart code",
+                "zh-CN": "产品1-加入购物车代码"
+              },
+              "default": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9245054337329\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\"><input type=\"hidden\" name=\"id\" value=\"47925198324017\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"9\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\"><div class=\"addcart\"><img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\"></div><div class=\"buynow\">Add To Cart</div></button></form>"
+          },
+
+
+
+          {
+              "type": "text",
+              "id": "item2_tab_text",
+              "label": {
+                "en-US": "item2_tab_text",
+                "zh-CN": "产品2-tab文本"
+              },
+              "default": "22W"
+          },
+          {
+              "type": "text",
+              "id": "item2_image_link",
+              "label": {
+                "en-US": "image link",
+                "zh-CN": "产品2-图片链接"
+              },
+              "default": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864"
+          },
+          {
+              "type": "text",
+              "id": "item2_title",
+              "label": {
+                "en-US": "title text",
+                "zh-CN": "产品2-标题"
+              },
+              "default": "Creality Falcon2 Pro 50W"
+          },
+          {
+              "type": "text",
+              "id": "item2_desc1",
+              "label": {
+                "en-US": "desc1",
+                "zh-CN": "产品2-描述1"
+              },
+              "default": "Working Together with Your Falcon Laser Engraver"
+          },
+          {
+              "type": "text",
+              "id": "item2_old_price",
+              "label": {
+                "en-US": "old price",
+                "zh-CN": "产品2-原价"
+              },
+              "default": "$209.00"
+          },
+          {
+              "type": "textarea",
+              "id": "item2_new_price",
+              "label": {
+                "en-US": "new price",
+                "zh-CN": "产品2-现价"
+              },
+              "default": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">$119.00</span>"
+          },
+          {
+              "type": "text",
+              "id": "item2_discount_text1",
+              "label": {
+                "en-US": "discount_text1",
+                "zh-CN": "产品2-discount_text1"
+              },
+              "default": "SAVE"
+          },
+          {
+              "type": "text",
+              "id": "item2_discount_text2",
+              "label": {
+                "en-US": "discount_text2",
+                "zh-CN": "产品2-discount_text2"
+              },
+              "default": "50%"
+          },
+          {
+              "type": "textarea",
+              "id": "item2_addcart_code",
+              "label": {
+                "en-US": "addcart code",
+                "zh-CN": "产品2-加入购物车代码"
+              },
+              "default": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9245054337329\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\"><input type=\"hidden\" name=\"id\" value=\"47925198324017\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"9\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\"><div class=\"addcart\"><img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\"></div><div class=\"buynow\">Add To Cart</div></button></form>"
+          },
+
+
+
+
+
+          {
+              "type": "text",
+              "id": "item3_tab_text",
+              "label": {
+                "en-US": "item3_tab_text",
+                "zh-CN": "产品3-tab文本"
+              },
+              "default": "60W(NEW)"
+          },
+          {
+              "type": "text",
+              "id": "item3_image_link",
+              "label": {
+                "en-US": "image link",
+                "zh-CN": "产品3-图片链接"
+              },
+              "default": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864"
+          },
+          {
+              "type": "text",
+              "id": "item3_title",
+              "label": {
+                "en-US": "title text",
+                "zh-CN": "产品3-标题"
+              },
+              "default": "Creality Falcon2 Pro 60W"
+          },
+          {
+              "type": "text",
+              "id": "item3_desc1",
+              "label": {
+                "en-US": "desc1",
+                "zh-CN": "产品3-描述1"
+              },
+              "default": "Working Together with Your Falcon Laser Engraver"
+          },
+          {
+              "type": "text",
+              "id": "item3_old_price",
+              "label": {
+                "en-US": "old price",
+                "zh-CN": "产品3-原价"
+              },
+              "default": "$189.00"
+          },
+          {
+              "type": "textarea",
+              "id": "item3_new_price",
+              "label": {
+                "en-US": "new price",
+                "zh-CN": "产品3-现价"
+              },
+              "default": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">$119.00</span>"
+          },
+          {
+              "type": "text",
+              "id": "item3_discount_text1",
+              "label": {
+                "en-US": "discount_text1",
+                "zh-CN": "产品3-discount_text1"
+              },
+              "default": "SAVE"
+          },
+          {
+              "type": "text",
+              "id": "item3_discount_text2",
+              "label": {
+                "en-US": "discount_text2",
+                "zh-CN": "产品3-discount_text2"
+              },
+              "default": "50%"
+          },
+          {
+              "type": "textarea",
+              "id": "item3_addcart_code",
+              "label": {
+                "en-US": "addcart code",
+                "zh-CN": "产品3-加入购物车代码"
+              },
+              "default": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9245054337329\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\"><input type=\"hidden\" name=\"id\" value=\"47925198324017\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"9\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\"><div class=\"addcart\"><img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\"></div><div class=\"buynow\">Add To Cart</div></button></form>"
+          },
+
+
+
+
+          {
+              "type": "text",
+              "id": "accessories1_image_link",
+              "label": {
+                "en-US": "image link",
+                "zh-CN": "配件1-图片链接"
+              },
+              "default": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864"
+          },
+          {
+              "type": "text",
+              "id": "accessories1_title",
+              "label": {
+                "en-US": "title text",
+                "zh-CN": "配件1-标题"
+              },
+              "default": "Creality Falcon2 Pro 40W"
+          },
+          {
+              "type": "text",
+              "id": "accessories1_old_price",
+              "label": {
+                "en-US": "old price",
+                "zh-CN": "配件1-原价"
+              },
+              "default": "$169.00"
+          },
+          {
+              "type": "textarea",
+              "id": "accessories1_new_price",
+              "label": {
+                "en-US": "new price",
+                "zh-CN": "配件1-现价"
+              },
+              "default": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">$119.00</span>"
+          },
+          {
+              "type": "textarea",
+              "id": "accessories1_addcart_code",
+              "label": {
+                "en-US": "addcart code",
+                "zh-CN": "配件1-加入购物车代码"
+              },
+              "default": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9245054337329\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\"><input type=\"hidden\" name=\"id\" value=\"47925198324017\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"9\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\"><div class=\"addcart\"><img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\"></div><div class=\"buynow\">Add To Cart</div></button></form>"
+          },
+
+
+
+
+
+          {
+              "type": "text",
+              "id": "accessories2_image_link",
+              "label": {
+                "en-US": "image link",
+                "zh-CN": "配件2-图片链接"
+              },
+              "default": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864"
+          },
+          {
+              "type": "text",
+              "id": "accessories2_title",
+              "label": {
+                "en-US": "title text",
+                "zh-CN": "配件2-标题"
+              },
+              "default": "Creality Falcon2 Pro 40W"
+          },
+          {
+              "type": "text",
+              "id": "accessories2_old_price",
+              "label": {
+                "en-US": "old price",
+                "zh-CN": "配件2-原价"
+              },
+              "default": "$169.00"
+          },
+          {
+              "type": "textarea",
+              "id": "accessories2_new_price",
+              "label": {
+                "en-US": "new price",
+                "zh-CN": "配件2-现价"
+              },
+              "default": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">$119.00</span>"
+          },
+          {
+              "type": "textarea",
+              "id": "accessories2_addcart_code",
+              "label": {
+                "en-US": "addcart code",
+                "zh-CN": "配件2-加入购物车代码"
+              },
+              "default": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9245054337329\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\"><input type=\"hidden\" name=\"id\" value=\"47925198324017\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"9\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\"><div class=\"addcart\"><img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\"></div><div class=\"buynow\">Add To Cart</div></button></form>"
+          }
+
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "ufea_euro"
+      }
+    ]
+  }
+{% endschema %}

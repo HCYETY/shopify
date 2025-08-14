@@ -1,0 +1,271 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "creality_2024_05_small_business_UEiK7d": {
+      "type": "creality_2024_05_small_business",
+      "settings": {
+        "product1": "falcon2-pro-60w-enclosed-laser-cutter-and-engraver-for-sale",
+        "product1_2": "falcon-2-pro-40w-enclosed-laser-engraver-and-cutter",
+        "product2": "falcon2-22w-laser-engraver-cutter",
+        "product2_2": "falcon2-22w-laser-engraver-cutter-bundle-all-in-one-kits",
+        "product3": "low-wattage-laser-engraver-cutter-cr-falcon-10w-machine",
+        "product3_2": "low-wattage-laser-engraver-cutter-cr-falcon-5w"
+      }
+    },
+    "product_tab_block_HyE6bp": {
+      "type": "product-tab-block",
+      "blocks": {
+        "product_tabs_LddBKa": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "All",
+            "collection": "accessories-for-falcon-laser-engraver"
+          }
+        },
+        "product_tabs_CeTMKh": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Enclosure",
+            "collection": "protection-case"
+          }
+        },
+        "product_tabs_TtMWr6": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Air Purifier",
+            "collection": "air-purifier"
+          }
+        },
+        "product_tabs_Hwrttk": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "HoneyComb",
+            "collection": "honeycomb"
+          }
+        },
+        "product_tabs_aiAaxK": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Rotary",
+            "collection": "rotary"
+          }
+        },
+        "product_tabs_kLtEbR": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Raisers",
+            "collection": "risers"
+          }
+        }
+      },
+      "block_order": [
+        "product_tabs_LddBKa",
+        "product_tabs_CeTMKh",
+        "product_tabs_TtMWr6",
+        "product_tabs_Hwrttk",
+        "product_tabs_aiAaxK",
+        "product_tabs_kLtEbR"
+      ],
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "mg_top_desktop": 30,
+        "mg_top_tablet": 30,
+        "mg_top_mobile": 30,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "product_block_layout": "slider",
+        "product_bg": "#ffffff",
+        "product_block_title": "Accessories For Engraver And Cutter",
+        "fontsize_title": 21,
+        "fontsize_title_mb": 16,
+        "mg_bottom_title": 12,
+        "enable_border_title": true,
+        "border_color_title": "#3c3c3c",
+        "enable_border_title2": false,
+        "border_color_title2": "#3c3c3c",
+        "color_title": "#3c3c3c",
+        "product_tab_des": "",
+        "product_tab_des_color": "#232323",
+        "title_align": "center",
+        "product_block_limit": 20,
+        "image_behavior": "none",
+        "product_block_per_row": "4",
+        "product_block_infinite_scroll": true,
+        "min_width_button": "",
+        "product_block_dots": false,
+        "product_block_dots_mb": false,
+        "product_block_arrows": true,
+        "product_block_arrows_mb": true,
+        "product_block_show": "4",
+        "product_block_per_view": "4",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_hover_drag_icon": true,
+        "position": "left",
+        "width_banner": 20,
+        "tab_title_style": "style_1",
+        "mg_bottom_title_tab": 24,
+        "type_tab_font": "font_1",
+        "separation": true,
+        "style_separation": "style2",
+        "color_separation": "#727272",
+        "enable_scroll_title": true,
+        "fontsize_tab": 14,
+        "fontsize_tab_mb": 14,
+        "font_weight_tab": "700",
+        "font_weight_active_tab": "700",
+        "spacing_between_title": 24,
+        "line_height_tab": 20,
+        "line_height_tab_mobile": 24,
+        "border_tab_radius": 15,
+        "min_width_tab": 5,
+        "border_width_tab": 3,
+        "color_tab": "#3c3c3c",
+        "border_color_tab": "",
+        "bg_color_tab": "#ffffff",
+        "bg_color_gradient_tab": "",
+        "color_tab_active": "#14a9de",
+        "bg_color_tab_active": "#f8f8f8",
+        "bg_color_gradient_tab_active": ""
+      }
+    },
+    "product_tab_block_qNAVwV": {
+      "type": "product-tab-block",
+      "blocks": {
+        "product_tabs_fqUtmw": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Craft Wood and Sheets",
+            "collection": "craft-wood-and-sheets-for-laser-cutting-engraving"
+          }
+        },
+        "product_tabs_xnGXVx": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Art & Craft Paper",
+            "collection": "quality-art-and-craft-paper-for-laser-engraving"
+          }
+        },
+        "product_tabs_Bq67eG": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Colorful Transparent Acrylic",
+            "collection": "premium-craft-acrylic-sheets-for-laser-engraving"
+          }
+        },
+        "product_tabs_f7R6xi": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Leather Crafting Supplies",
+            "collection": "premium-leather-crafting-supplies-for-laser-engraving"
+          }
+        },
+        "product_tabs_Qiq46h": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Metalworking Supplies",
+            "collection": "quality-metalworking-supplies-for-laser-engraving"
+          }
+        }
+      },
+      "block_order": [
+        "product_tabs_fqUtmw",
+        "product_tabs_xnGXVx",
+        "product_tabs_Bq67eG",
+        "product_tabs_f7R6xi",
+        "product_tabs_Qiq46h"
+      ],
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "mg_top_desktop": 30,
+        "mg_top_tablet": 30,
+        "mg_top_mobile": 30,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "product_block_layout": "slider",
+        "product_bg": "#ffffff",
+        "product_block_title": "Materials For Engraving And Cutting",
+        "fontsize_title": 21,
+        "fontsize_title_mb": 16,
+        "mg_bottom_title": 20,
+        "enable_border_title": true,
+        "border_color_title": "#3c3c3c",
+        "enable_border_title2": false,
+        "border_color_title2": "#3c3c3c",
+        "color_title": "#3c3c3c",
+        "product_tab_des": "",
+        "product_tab_des_color": "#232323",
+        "title_align": "center",
+        "product_block_limit": 20,
+        "image_behavior": "none",
+        "product_block_per_row": "5",
+        "product_block_infinite_scroll": true,
+        "min_width_button": "",
+        "product_block_dots": false,
+        "product_block_dots_mb": false,
+        "product_block_arrows": true,
+        "product_block_arrows_mb": true,
+        "product_block_show": "5",
+        "product_block_per_view": "5",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_hover_drag_icon": true,
+        "position": "left",
+        "width_banner": 20,
+        "tab_title_style": "style_1",
+        "mg_bottom_title_tab": 24,
+        "type_tab_font": "font_1",
+        "separation": true,
+        "style_separation": "style2",
+        "color_separation": "#727272",
+        "enable_scroll_title": true,
+        "fontsize_tab": 14,
+        "fontsize_tab_mb": 14,
+        "font_weight_tab": "700",
+        "font_weight_active_tab": "700",
+        "spacing_between_title": 24,
+        "line_height_tab": 20,
+        "line_height_tab_mobile": 24,
+        "border_tab_radius": 3,
+        "min_width_tab": 5,
+        "border_width_tab": 3,
+        "color_tab": "#3c3c3c",
+        "border_color_tab": "",
+        "bg_color_tab": "#ffffff",
+        "bg_color_gradient_tab": "",
+        "color_tab_active": "#14a9de",
+        "bg_color_tab_active": "#f8f8f8",
+        "bg_color_gradient_tab_active": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "creality_2024_05_small_business_UEiK7d",
+    "product_tab_block_HyE6bp",
+    "product_tab_block_qNAVwV"
+  ]
+}

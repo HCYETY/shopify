@@ -1,0 +1,122 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "creality_cards_faq_rMaaAa": {
+      "type": "creality_cards__faq",
+      "blocks": {
+        "creality_faq_list_PN8keb": {
+          "type": "creality-faq-list",
+          "settings": {
+            "list_item": "title"
+          }
+        },
+        "creality_faq_title_XFYbDW": {
+          "type": "creality-faq-title",
+          "settings": {
+            "faq-h3": "title"
+          }
+        },
+        "creality_faq_question_fwjnwH": {
+          "type": "creality-faq-question",
+          "settings": {
+            "faq-h6": "Q:"
+          }
+        },
+        "creality_faq_answer_m4ri9i": {
+          "type": "creality-faq-answer",
+          "settings": {
+            "faq-p": "answer the question"
+          }
+        }
+      },
+      "block_order": [
+        "creality_faq_list_PN8keb",
+        "creality_faq_title_XFYbDW",
+        "creality_faq_question_fwjnwH",
+        "creality_faq_answer_m4ri9i"
+      ],
+      "settings": {}
+    },
+    "creality_cards_h_tap_aGhQb4": {
+      "type": "creality_cards_h-tap",
+      "settings": {
+        "heading_tag": "h2",
+        "heading_text": "This is a custom heading",
+        "heading_class": "custom-heading",
+        "heading_id": "custom-heading-1",
+        "alignment": "center",
+        "is_enable": true,
+        "heading_color": "#000000",
+        "heading_font_size": 53
+      }
+    },
+    "creality_cards_skip_qetXPg": {
+      "type": "creality_cards_skip",
+      "blocks": {
+        "skip_card_NTNcdP": {
+          "type": "skip_card",
+          "settings": {
+            "title": "Hardware",
+            "description": "Check out our latest hardware offerings.",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "skip_card_NTNcdP"
+      ],
+      "settings": {}
+    },
+    "creality_cards_banner_default_AnYhg4": {
+      "type": "creality_cards_banner-default",
+      "settings": {
+        "banner-title": "title",
+        "banner-desc": "desc",
+        "banner-image": "shopify://shop_images/1880x600-no_30279af1-da6f-4c32-95bf-9bb6e1e7ffc8.jpg"
+      }
+    },
+    "creality_cards_skip_list_JUpPtG": {
+      "type": "creality_cards_skip_list",
+      "blocks": {
+        "skip_list_item_YBibiY": {
+          "type": "skipList_item",
+          "settings": {
+            "title": "Call",
+            "link_text": "+001 626 239 3346",
+            "link_url": "tel:+001 626 239 3346"
+          }
+        }
+      },
+      "block_order": [
+        "skip_list_item_YBibiY"
+      ],
+      "settings": {}
+    },
+    "creality_fa_icon_cv40y_e6q6gU": {
+      "type": "creality_faIcon_cv40y",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "creality_cards_faq_rMaaAa",
+    "creality_cards_h_tap_aGhQb4",
+    "creality_cards_skip_qetXPg",
+    "creality_cards_banner_default_AnYhg4",
+    "creality_cards_skip_list_JUpPtG",
+    "creality_fa_icon_cv40y_e6q6gU"
+  ]
+}

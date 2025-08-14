@@ -1,0 +1,638 @@
+<!-- Site Switch 组件 -->
+<style>
+    .site-switch {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .site-switch:hover .site-switch-value {
+      opacity: 0.8;
+    }
+
+    .site-switch-lang,
+    .site-switch-nation {
+      font-size: 14px;
+    }
+
+    .site-switch-value {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .site-switch-value img {
+      margin-right: 5px;
+    }
+
+    .site-switch-nation svg {
+      height: 20px;
+      width: 20px;
+      stroke: none;
+      fill: none;
+      rotate: 90deg;
+    }
+
+    .site-switch img {
+      border-radius: 50%;
+      height: 18px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 18px;
+    }
+
+    .s-dropdown-menu-item img {
+      border-radius: 50%;
+      height: 18px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 18px;
+    }
+
+    .s-dropdown-menu-list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      width: max-content; /* 修改为max-content，使其宽度由最宽的item决定 */
+      z-index: 1000;
+      padding: 4px;
+      list-style-type: none;
+      background-color: #ffffff;
+      background-clip: padding-box;
+      border-radius: 8px;
+      outline: none;
+      box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+      max-height: 80vh; /* 限制最大高度为视窗高度的80% */
+      overflow-y: auto;
+      margin: 10px 0;
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+      will-change: opacity, transform;
+      opacity: 0;
+    }
+
+    .s-dropdown-menu-list[style*='display: none'] {
+      opacity: 0;
+      transform: scaleY(0.8);
+      pointer-events: none;
+    }
+
+    .s-dropdown-menu-list[style*='display: block'] {
+      /* 不在CSS中设置opacity和transform，而是通过JavaScript动态设置 */
+      pointer-events: auto;
+    }
+
+    .s-dropdown-menu-item {
+      display: flex;
+      margin: 0;
+      padding: 5px 12px;
+      color: rgba(0, 0, 0, 0.88);
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 1.5714285714285714;
+      cursor: pointer;
+      transition: all 0.2s;
+      border-radius: 4px;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .s-dropdown-menu-item:hover {
+      background-color: #f5f5f5;
+    }
+
+    .s-dropdown-menu-item img {
+      flex: 0 0 auto;
+    }
+
+    .s-dropdown-menu-title-content {
+      display: block;
+      flex: 1 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .site-switch {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .site-switch:hover .site-switch-value {
+        opacity: 0.8;
+      }
+
+      .site-switch-lang,
+      .site-switch-nation {
+        font-size: 3.7333333333vw;
+      }
+
+      .site-switch-value {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .site-switch-value img {
+        margin-right: 1.333vw;
+      }
+
+      .site-switch-nation svg {
+        height: 5.3333333333vw;
+        width: 5.3333333333vw;
+        stroke: none;
+        fill: none;
+        rotate: 90deg;
+      }
+
+      .site-switch img {
+        border-radius: 50%;
+        height: 4.8vw;
+        -o-object-fit: cover;
+        object-fit: cover;
+        width: 4.8vw;
+      }
+
+      .s-dropdown-menu-item img {
+        border-radius: 50%;
+        height: 4.8vw;
+        -o-object-fit: cover;
+        object-fit: cover;
+        width: 4.8vw;
+      }
+
+      .s-dropdown-menu-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        width: max-content; /* 修改为max-content，使其宽度由最宽的item决定 */
+        z-index: 1000;
+        padding: 1.067vw;
+        list-style-type: none;
+        background-color: #ffffff;
+        background-clip: padding-box;
+        border-radius: 2.133vw;
+        outline: none;
+        box-shadow: 0 1.6vw 4.267vw 0 rgba(0, 0, 0, 0.08), 0 0.8vw 1.6vw -1.067vw rgba(0, 0, 0, 0.12),
+          0 2.4vw 7.467vw 2.133vw rgba(0, 0, 0, 0.05);
+        max-height: 80vh; /* 限制最大高度为视窗高度的80% */
+        overflow-y: auto;
+        margin: 2.667vw 0;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        will-change: opacity, transform;
+      }
+
+      .s-dropdown-menu-list[style*='display: none'] {
+        opacity: 0;
+        transform: scaleY(0.8);
+        pointer-events: none;
+      }
+
+      .s-dropdown-menu-list[style*='display: block'] {
+        /* 不在CSS中设置opacity和transform，而是通过JavaScript动态设置 */
+        pointer-events: auto;
+      }
+
+      .s-dropdown-menu-item {
+        display: flex;
+        margin: 0;
+        padding: 1.333vw 3.2vw;
+        color: rgba(0, 0, 0, 0.88);
+        font-weight: normal;
+        font-size: 3.733vw;
+        line-height: 1.5714285714285714;
+        cursor: pointer;
+        transition: all 0.2s;
+        border-radius: 1.067vw;
+        align-items: center;
+        gap: 2.667vw;
+      }
+
+      .s-dropdown-menu-item:hover {
+        background-color: #f5f5f5;
+      }
+
+      .s-dropdown-menu-item img {
+        flex: 0 0 auto;
+      }
+
+      .s-dropdown-menu-title-content {
+        display: block;
+        flex: 1 0 auto;
+      }
+    }
+
+    @media (min-width: 1920px) {
+    .site-switch-lang,
+    .site-switch-nation {
+      font-size: 0.729vw;
+    }
+    .site-switch-value img {
+      margin-right: 0.26vw;
+    }
+    .site-switch-nation svg {
+      height: 1.042vw;
+      width: 1.042vw;
+    }
+    .site-switch img {
+      height: 0.938vw;
+      width: 0.938vw;
+    }
+    .s-dropdown-menu-item img {
+      height: 0.938vw;
+      width: 0.938vw;
+    }
+    .s-dropdown-menu-list {
+      padding: 0.208vw;
+      border-radius: 0.417vw;
+      box-shadow: 0 0.313vw 0.833vw 0 rgba(0, 0, 0, 0.08),
+        0 0.156vw 0.313vw -0.208vw rgba(0, 0, 0, 0.12),
+        0 0.469vw 1.458vw 0.417vw rgba(0, 0, 0, 0.05);
+      margin: 0.521vw 0;
+    }
+    .s-dropdown-menu-item {
+      padding: 0.26vw 0.625vw;
+      font-size: 0.729vw;
+      border-radius: 0.208vw;
+      gap: 0.521vw;
+    }
+  }
+</style>
+
+<div class="site-switch">
+  <a class="site-switch-nation">
+    <div class="site-switch-value">
+      {% assign current_domain = request.host %}
+      {% assign current_country = 'US' %}
+      {% assign country_img_src = 'https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_US.png?v=1731584909' %}
+
+      {% if current_domain contains 'au.' %}
+        {% assign current_country = 'AU' %}
+        {% assign country_img_src = 'https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_AU.png?v=1731584909' %}
+      {% elsif current_domain contains 'eu.' %}
+        {% assign current_country = 'EU' %}
+        {% assign country_img_src = 'https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_EU.png?v=1731584909' %}
+      {% elsif current_domain contains 'uk.' %}
+        {% assign current_country = 'UK' %}
+        {% assign country_img_src = 'https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_UK.png?v=1731584909' %}
+      {% elsif current_domain contains 'de.' %}
+        {% assign current_country = 'DE' %}
+        {% assign country_img_src = 'https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_DE.png?v=1731584909' %}
+      {% elsif current_domain contains 'ca.' %}
+        {% assign current_country = 'CA' %}
+        {% assign country_img_src = 'https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_CA.png?v=1731584909' %}
+      {% else %}
+        {% assign current_country = 'US' %}
+        {% assign country_img_src = 'https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_US.png?v=1731584909' %}
+      {% endif %}
+
+      <img
+        alt="{{ current_country }}"
+        decoding="async"
+        loading="lazy"
+        width="24"
+        height="24"
+        src="{{ country_img_src }}"
+      >
+
+      <span class="site-value-name">{{ current_country }}</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="rotate-90">
+        <path d="M10 17L15 12L10 7" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </div>
+  </a>
+
+  <ul class="s-dropdown-menu-list" role="menu" tabindex="0">
+    <a
+      href="https://www.crealityfalcon.com/"
+      class="s-dropdown-menu-item"
+      role="menuitem"
+      tabindex="-1"
+      data-menu-id="us"
+    >
+      <img
+        alt="US"
+        decoding="async"
+        loading="lazy"
+        width="24"
+        height="24"
+        src="https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_US.png?v=1731584909"
+
+      ><span class="s-dropdown-menu-title-content">US</span>
+    </a>
+    <a
+      href="https://eu.crealityfalcon.com"
+      class="s-dropdown-menu-item"
+      role="menuitem"
+      tabindex="-1"
+      data-menu-id="eu"
+    >
+      <img
+        alt="EU"
+        decoding="async"
+        loading="lazy"
+        width="24"
+        height="24"
+        src="https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_EU.png?v=1731584909"
+
+      ><span class="s-dropdown-menu-title-content">EU</span>
+    </a>
+
+    <a
+      href="https://uk.crealityfalcon.com/"
+      class="s-dropdown-menu-item"
+      role="menuitem"
+      tabindex="-1"
+      data-menu-id="uk"
+    >
+      <img
+        alt="UK"
+        decoding="async"
+        loading="lazy"
+        width="24"
+        height="24"
+        src="https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_UK.png?v=1731584909"
+
+      ><span class="s-dropdown-menu-title-content">UK</span>
+    </a>
+    <a
+      href="https://au.crealityfalcon.com/"
+      class="s-dropdown-menu-item"
+      role="menuitem"
+      tabindex="-1"
+      data-menu-id="au"
+    >
+      <img
+        alt="AU"
+        decoding="async"
+        loading="lazy"
+        width="24"
+        height="24"
+        src="https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_AU.png?v=1731584909"
+
+      ><span class="s-dropdown-menu-title-content">AU</span>
+    </a>
+    <a
+      href="https://de.crealityfalcon.com/"
+      class="s-dropdown-menu-item"
+      role="menuitem"
+      tabindex="-1"
+      data-menu-id="de"
+    >
+      <img
+        alt="DE"
+        decoding="async"
+        loading="lazy"
+        width="24"
+        height="24"
+        src="https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_DE.png?v=1731584909"
+
+      ><span class="s-dropdown-menu-title-content">DE</span>
+    </a>
+    <a
+      href="https://ca.crealityfalcon.com/"
+      class="s-dropdown-menu-item"
+      role="menuitem"
+      tabindex="-1"
+      data-menu-id="ca"
+    >
+      <img
+        alt="CA"
+        decoding="async"
+        loading="lazy"
+        width="24"
+        height="24"
+        src="https://cdn.shopify.com/s/files/1/0663/8275/8076/files/Property_1_CA.png?v=1731584909"
+
+      ><span class="s-dropdown-menu-title-content">CA</span>
+    </a>
+  </ul>
+</div>
+
+<script
+  defer
+>
+  document.addEventListener('DOMContentLoaded', function () {
+    // 初始化site-switch功能
+    const siteSwitchElements = document.querySelectorAll('.site-switch');
+
+    siteSwitchElements.forEach((siteSwitch) => {
+      // 获取dropdown列表
+      const dropdownList = siteSwitch.querySelector('.s-dropdown-menu-list');
+
+      // 默认隐藏dropdown列表
+      if (dropdownList) {
+        dropdownList.style.display = 'none';
+      }
+
+      // 定义一个函数来处理点击或触摸事件
+      const handleSwitchInteraction = function (event) {
+        // 阻止事件冒泡
+        event.stopImmediatePropagation();
+
+        // 如果点击的是列表项，则不切换显示状态
+        if (event.target.closest('.s-dropdown-menu-item')) {
+          return;
+        }
+
+        // 切换dropdown列表的显示状态
+        if (dropdownList) {
+          if (dropdownList.style.display === 'none' || !dropdownList.style.display) {
+            // 重置默认样式并隐藏
+            dropdownList.style.opacity = '0';
+            dropdownList.style.transform = 'scaleY(0.8)';
+            dropdownList.style.pointerEvents = 'none';
+            dropdownList.style.display = 'block';
+
+            // 调整位置确保在视窗内
+            adjustDropdownPosition(dropdownList);
+
+            // 添加一个小延迟以确保display和位置样式已经应用
+            requestAnimationFrame(() => {
+              requestAnimationFrame(() => {
+                // 重新启用过渡效果
+                dropdownList.style.transition = '';
+
+                // 应用显示动画
+                dropdownList.style.opacity = '1';
+                dropdownList.style.transform = 'scaleY(1)';
+                dropdownList.style.pointerEvents = 'auto';
+              });
+            });
+          } else {
+            // 应用关闭动画
+            dropdownList.style.opacity = '0';
+            dropdownList.style.transform = 'scaleY(0.8)';
+            dropdownList.style.pointerEvents = 'none';
+
+            // 等待过渡完成后再隐藏元素
+            setTimeout(() => {
+              dropdownList.style.display = 'none';
+            }, 250);
+          }
+        }
+      };
+
+      // 为site-switch添加点击事件
+      siteSwitch.addEventListener('click', handleSwitchInteraction);
+
+      // 为dropdown列表项添加点击事件
+      const dropdownItems = siteSwitch.querySelectorAll('.s-dropdown-menu-item');
+      dropdownItems.forEach((item) => {
+        // 定义一个函数来处理列表项点击或触摸事件
+        const handleItemInteraction = function (event) {
+          // 获取当前选中的国家/地区值
+          const imgSrc = this.querySelector('img').src;
+          const countryName = this.querySelector('.s-dropdown-menu-title-content').textContent;
+
+          // 更新site-switch-value内的内容
+          const switchValue = siteSwitch.querySelector('.site-switch-value');
+          if (switchValue) {
+            const valueImg = switchValue.querySelector('img');
+            const valueName = switchValue.querySelector('.site-value-name');
+
+            if (valueImg) {
+              valueImg.src = imgSrc;
+              valueImg.alt = countryName;
+            }
+
+            if (valueName) {
+              valueName.textContent = countryName;
+            }
+          }
+
+          // 隐藏dropdown列表
+          if (dropdownList) {
+            // 应用关闭动画
+            dropdownList.style.opacity = '0';
+            dropdownList.style.transform = 'scaleY(0.8)';
+            dropdownList.style.pointerEvents = 'none';
+
+            // 等待过渡完成后再隐藏元素
+            setTimeout(() => {
+              dropdownList.style.display = 'none';
+            }, 250);
+          }
+        };
+
+        // 添加点击和触摸事件
+        item.addEventListener('click', handleItemInteraction);
+      });
+    });
+
+    // 处理点击或触摸外部区域关闭下拉菜单
+    const handleOutsideClick = function (event) {
+      // 如果点击的不是site-switch或其子元素，则关闭所有dropdown列表
+      if (!event.target.closest('.site-switch')) {
+        document.querySelectorAll('.s-dropdown-menu-list').forEach((list) => {
+          // 应用关闭动画
+          list.style.opacity = '0';
+          list.style.transform = 'scaleY(0.8)';
+          list.style.pointerEvents = 'none';
+
+          // 等待过渡完成后再隐藏元素
+          setTimeout(() => {
+            list.style.display = 'none';
+          }, 250);
+        });
+      }
+    };
+
+    // 添加点击和触摸事件监听器到文档
+    document.addEventListener('click', handleOutsideClick);
+  });
+
+  // 添加一个函数来检查和调整下拉菜单的位置，确保它始终在视窗内
+  function adjustDropdownPosition(dropdown) {
+    // 先禁用过渡效果
+    dropdown.style.transition = 'none';
+
+    // 重置之前可能应用的位置样式
+    dropdown.style.top = '100%';
+    dropdown.style.bottom = 'auto';
+    dropdown.style.left = '0';
+    dropdown.style.right = 'auto';
+    dropdown.style.maxHeight = '80vh'; // 恢复默认最大高度
+
+    // 默认从顶部弹出
+    dropdown.style.transformOrigin = 'top center';
+
+    // 强制重新计算布局
+    void dropdown.offsetHeight;
+
+    // 获取下拉菜单的位置和尺寸信息
+    const dropdownRect = dropdown.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+    const viewportWidth = window.innerWidth;
+
+    // 检查下拉菜单是否超出视窗底部
+    if (dropdownRect.bottom > viewportHeight) {
+      // 计算剩余空间
+      const spaceBelow = viewportHeight - dropdownRect.top;
+      const spaceAbove = dropdownRect.top;
+
+      // 如果上方空间比下方大，就向上弹出
+      if (spaceAbove > spaceBelow) {
+        dropdown.style.top = 'auto';
+        dropdown.style.bottom = '100%';
+        dropdown.style.transformOrigin = 'bottom center'; // 从底部弹出
+      } else {
+        // 否则设置最大高度，允许滚动
+        dropdown.style.maxHeight = `${viewportHeight - dropdownRect.top - 20}px`;
+      }
+    }
+
+    // 检查下拉菜单是否超出视窗右侧
+    if (dropdownRect.right > viewportWidth) {
+      const overflowRight = dropdownRect.right - viewportWidth + 10; // 添加10px额外边距
+
+      // 计算是否有足够的空间向左偏移
+      if (dropdownRect.width < dropdownRect.left + overflowRight) {
+        // 如果有足够空间，向左偏移
+        dropdown.style.left = 'auto';
+        dropdown.style.right = '0';
+      } else {
+        // 没有足够空间，尽可能向左偏移
+        dropdown.style.left = `-${Math.min(overflowRight, dropdownRect.left)}px`;
+      }
+    }
+
+    // 检查下拉菜单是否超出视窗左侧
+    if (dropdownRect.left < 0) {
+      dropdown.style.left = '0px';
+    }
+  }
+
+  // 添加窗口大小变化事件监听，当窗口大小改变时，调整所有可见下拉菜单的位置
+  window.addEventListener('resize', function () {
+    document.querySelectorAll('.s-dropdown-menu-list').forEach((dropdown) => {
+      if (dropdown.style.display === 'block') {
+        adjustDropdownPosition(dropdown);
+      }
+    });
+  });
+</script>

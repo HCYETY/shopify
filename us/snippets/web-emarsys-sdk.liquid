@@ -1,0 +1,25 @@
+<script
+  type="text/javascript"
+  src="https://assets.emarsys.net/web-emarsys-sdk/4.5.0/web-emarsys-sdk.js"
+  async
+></script>
+<script type="text/javascript">
+  // initialization - start
+  var WebEmarsysSdk = WebEmarsysSdk || []
+  WebEmarsysSdk.push(['init', {
+      applicationCode: 'EMS64-90D51', // your Domain code obtained above
+      enableMacSafariVapid: true, // If true, enables VAPID instead of APNS for Safari on Mac
+      //safariWebsitePushID: 'web.com.yoursite.example',
+      defaultNotificationTitle: 'Your Default Title', // sets your default title for push notifications
+      defaultNotificationIcon: 'https://yoursite.com/img/your-logo.png', // URL to your notification icon
+      autoSubscribe: false, // If true, prompts a user to subscribe for pushes upon SDK initialization which is not recommended
+      enableLogging: true,
+      serviceWorker: {
+          url: 'apps/ems/web-emarsys-sdk/4.5.0/service-worker.js',
+          // url: {{ 'service-worker.js' | asset_url | json }},
+          applicationServerPublicKey: 'BOU64r1SKsMKvL8nKOmy0MjgYflN2B3ZVhKXvL3f5jKc4OghqnERpGBlxdswex4clfe893rUPnIvUjw5wCmUr_A'
+      }
+  }])
+  // initialization - end
+</script>
+<link rel="manifest" href="https://cdn.shopify.com/s/files/1/0624/2163/1028/files/manifest.json?v=1749179254">

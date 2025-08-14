@@ -1,0 +1,320 @@
+<link rel="stylesheet" href="{{ 'reset.css' | asset_url }}">
+<script src="{{ 'jquery.cart.min.js' | asset_url }}" async></script>
+{% style %}
+  :root  {
+    --fs: {{ section.settings.font_size }}px;
+    --sizeBtn: {{ section.settings.item_btn_text_size }}px;
+    --sizeCountDown: {{ section.settings.item_count_down_text_sieze }}px;
+  }
+
+  #shopify-section-{{ section.id }} {
+    top: 0;
+    position: sticky;
+
+    z-index: 999999;
+  }
+  .header-advertisement-{{ section.id }} {
+    background-color: {{ section.settings.item_bgcolor }};
+    width: 100%;
+    {% if section.settings.item_bgcolor_url %}
+      background-image: url("{{section.settings.item_bgcolor_url}}");
+    {% endif %}
+    background-size: cover;
+    /* 确保背景图像覆盖整个区域 */
+  }
+
+  .header-advertisement-box {
+    display: flex;
+    justify-content: {{ section.settings.item_position }};
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    gap: calc(var(--fs) - 2px);
+    padding: {{ section.settings.item_bgcolor_pd_tb }}px 0;
+  }
+
+  .header-advertisement-box-content {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--fs) - 2px);
+  }
+
+  .header-advertisement-box-content span:first-child {
+    font-size: var(--fs);
+    color: {{ section.settings.item_title_color }};
+  }
+
+  .header-advertisement-box-content span:nth-child(2) {
+    padding: {{ section.settings.item_btn_pdtb_size }}px {{ section.settings.item_btn_pdlr_size }}px;
+    margin-top: 1px;
+    border-radius: {{ section.settings.item_btn_brr_size }}px;
+    background-color: {{ section.settings.item_btn_bgcolor }};
+    font-size: var(--sizeBtn);
+    color: {{ section.settings.item_btn_color }};
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .header-advertisement-box-content span:nth-child(2):hover {
+    opacity: 0.8;
+  }
+  {% if section.settings.is_countDown %}
+    .header-advertisement-box-content span:last-child {
+      font-size: var(--sizeCountDown);
+      color: {{ section.settings.item_count_down_color }};
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    .header-advertisement-box-content span:last-child i {
+      font-weight: normal;
+      opacity: 0.8;
+      font-style: normal;
+    }
+  {% endif %}
+
+  @media screen and (max-width: 720px) {
+    .header-advertisement-box-content {
+      display: block;
+      width: 95%;
+      text-align: center;
+    }
+    .header-advertisement-box-content span {
+
+      margin-right: calc(var(--fs) - 2px);
+    }
+    .header-advertisement-box-content span:first-child {
+      line-height: calc(var(--fs) + 9px);
+      font-size: calc(var(--fs) - 2px) !important;
+    }
+    .header-advertisement-box-content span:nth-child(2) {
+      font-size: calc(var(--sizeBtn) - 2px) !important;
+    }
+    {% if section.settings.is_countDown %}
+      .header-advertisement-box-content span:last-child {
+        font-size: calc(var(--sizeCountDown) - 2px) !important;
+      }
+    {% endif %}
+
+  }
+{% endstyle %}
+
+<div id="qab_background" class="header-advertisement-{{section.id}}">
+  <div class="header-advertisement-box">
+    <div class="header-advertisement-box-content">
+      <span>{{ section.settings.item_title }}</span>
+      {% if section.settings.item_btn_url != blank %}
+        <span onclick="window.open('{{ section.settings.item_btn_url }}', '_blank')">{{ section.settings.item_btn_text }}</span>
+      {% endif %}
+      {% if section.settings.is_countDown %}
+        <span id="activityText-{{section.id}}" class="header-advertisement-box-countDown"></span>
+      {% endif %}
+
+    </div>
+
+
+  </div>
+</div>
+<script>
+    $(function () {
+      {% assign start_time_iso = section.settings.item_count_down_start | date: "%Y-%m-%dT%H:%M:%S" %}
+      {% assign end_time_iso = section.settings.item_count_down_end | date: "%Y-%m-%dT%H:%M:%S" %}
+      
+        countDown();
+      function countDown() {
+        const $activityText = $("#activityText-{{section.id}}");
+        const startTime = new Date("{{start_time_iso}}");
+        const endTime = new Date("{{end_time_iso}}");
+        const nowTime = new Date();
+        const beginDiff = Math.floor((startTime - nowTime) / 1000);
+        const endDiff = Math.floor((endTime - nowTime) / 1000);
+        const leftTime = beginDiff > 0 ? beginDiff : endDiff;
+  
+        let day = Math.floor(leftTime / (24 * 60 * 60));
+        let hour = Math.floor((leftTime / (60 * 60)) % 24);
+        let minute = Math.floor((leftTime / 60) % 60);
+        let second = Math.floor(leftTime % 60);
+  
+        day = addZero(day);
+        hour = addZero(hour);
+        minute = addZero(minute);
+        second = addZero(second);
+  
+        if (beginDiff > 0) {
+          $activityText.html(
+            `${day}<i>d：</i>${hour}<i>h：</i>${minute}<i>m：</i>${second}<i>s</i>`
+          );
+          setTimeout(countDown, 1000);
+        } else if (leftTime <= 0) {
+          $activityText.text("theEventHasEnded！");
+        } else {
+          $activityText.html(
+            `${day}<i>d：</i>${hour}<i>h：</i>${minute}<i>m：</i>${second}<i>s</i>`
+          );
+          setTimeout(countDown, 1000);
+        }
+      }
+      function addZero(i) {
+        return i < 10 ? "0" + i : i;
+      }
+    });
+</script>
+{% schema %}
+  {
+    "name": "header_advertisement",
+    "settings": [
+      {
+        "type": "color",
+        "id": "item_bgcolor",
+        "label": "背景颜色",
+        "default": "#000"
+      },
+      {
+        "type": "text",
+        "id": "item_bgcolor_url",
+        "label": "背景图片(有背景图片则不显示背景色)"
+      },
+      {
+        "type": "range",
+        "id": "font_size",
+        "label": "文字大小",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "default": 14
+      },
+      {
+        "type": "range",
+        "id": "item_bgcolor_pd_tb",
+        "label": "背景上下内边距",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "default": 12
+      }, {
+        "type": "text",
+        "id": "item_title",
+        "label": "文案标题",
+        "default": "🎉 Summer- Last Call! Falcon2 Pro Up to 35% Off✨"
+      }, {
+        "type": "color",
+        "id": "item_title_color",
+        "label": "文案标题颜色",
+        "default": "#ddaf30"
+      }, {
+        "type": "text",
+        "id": "item_btn_text",
+        "label": "按钮文案",
+        "default": "SHOP NOW"
+      }, {
+        "type": "text",
+        "id": "item_btn_url",
+        "label": "按钮超链接",
+        "default": "baidu.com"
+      }, {
+        "type": "color",
+        "id": "item_btn_color",
+        "label": "按钮文字颜色",
+        "default": "#FFF"
+      }, {
+        "type": "color",
+        "id": "item_btn_bgcolor",
+        "label": "按钮背景颜色",
+        "default": "#FF0000 "
+      }, {
+        "type": "range",
+        "id": "item_btn_brr_size",
+        "label": "按钮圆角",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "default": 3
+      }, {
+        "type": "range",
+        "id": "item_btn_pdlr_size",
+        "label": "按钮左右边距",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "default": 12
+      }, {
+        "type": "range",
+        "id": "item_btn_pdtb_size",
+        "label": "按钮上下边距",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "default": 4
+      }, {
+        "type": "range",
+        "id": "item_btn_text_size",
+        "label": "按钮文字大小",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "default": 12
+      }, {
+        "type": "select",
+        "id": "item_position",
+        "label": {
+          "en-US": "Text Position",
+          "zh-CN": "文案位置"
+        },
+        "options": [
+          {
+            "value": "let",
+            "label": "Let"
+          }, {
+            "value": "center",
+            "label": "Center"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      }, {
+        "type": "checkbox",
+        "id": "is_countDown",
+        "label": "是否使用倒计时",
+        "default": false
+      }, {
+        "type": "text",
+        "id": "item_count_down_start",
+        "label": "倒计时开始时间",
+        "default": "2024-8-28 00:00:00"
+      }, {
+        "type": "text",
+        "id": "item_count_down_end",
+        "label": "倒计时结束时间",
+        "default": "2024-8-29 23:59:59"
+      }, {
+        "type": "color",
+        "id": "item_count_down_color",
+        "label": "倒计时颜色",
+        "default": "#FFF "
+      }, {
+        "type": "range",
+        "id": "item_count_down_text_sieze",
+        "label": "倒计时文字大小",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "default": 12
+      }
+    ],
+    "blocks": [],
+    "presets": [
+      {
+        "name": "header_advertisement"
+      }
+    ]
+  }
+{% endschema %}

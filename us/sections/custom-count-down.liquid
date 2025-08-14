@@ -1,0 +1,682 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+<div id="container-{{ sid }}">
+  <div
+    class="cs-count-down "
+    style="--down-color:{{se_stts.down-color}};--down-bg:url({{se_stts.down-bg | image_url }})"
+  >
+    <div class="count-down-content main-content">
+      <div class="count-down-le">
+        <div
+          class="count-down-title"
+          style="
+            --down-title-fz:{{se_stts.down-title-fz}}px;--down-title-fw:{{se_stts.down-title-fw}};--down-title-color:{{se_stts.down-title-color}};--down-title-mb:{{se_stts.down-title-mb}}px;
+            --down-title-fz-mb:{{se_stts.down-title-fz-mb}}px;--down-title-fw-mb:{{se_stts.down-title-fw-mb}};--down-title-mb-mb:{{se_stts.down-title-mb-mb}}px;
+          "
+        >
+          {{ se_stts['down-title-text'] }}
+        </div>
+        <div
+          class="count-down-desc"
+          style="
+            --down-desc-fz:{{se_stts.down-desc-fz}}px;--down-desc-fw:{{se_stts.down-desc-fw}};--down-desc-color:{{se_stts.down-desc-color}};--down-desc-mb:{{se_stts.down-desc-mb}}px;
+            --down-desc-fz-mb:{{se_stts.down-desc-fz-mb}}px;--down-desc-fw-mb:{{se_stts.down-desc-fw-mb}};--down-desc-mb-mb:{{se_stts.down-desc-mb-mb}}px;
+          "
+        >
+          {{ se_stts['down-desc-text'] }}
+        </div>
+      </div>
+      <div
+        class="count-down-ri"
+        data-end-time="{{ se_stts.end-time}}"
+        style="
+          --down-name-fz:{{se_stts.down-name-fz}}px;--down-name-fw:{{se_stts.down-name-fw}};--down-name-color:{{se_stts.down-name-color}};--down-name-mb:{{se_stts.down-name-mb}}px;
+          --down-name-fz-mb:{{se_stts.down-name-fz-mb}}px;--down-name-fw-mb:{{se_stts.down-name-fw-mb}};--down-name-mb-mb:{{se_stts.down-name-mb-mb}}px;
+          --down-value-fz:{{se_stts.down-value-fz}}px;--down-value-fw:{{se_stts.down-value-fw}};--down-value-color:{{se_stts.down-value-color}};--down-value-mb:{{se_stts.down-value-mb}}px;
+            --down-value-fz-mb:{{se_stts.down-value-fz-mb}}px;--down-value-fw-mb:{{se_stts.down-value-fw-mb}};--down-value-mb-mb:{{se_stts.down-value-mb-mb}}px;
+        "
+      >
+        <div class="count-down-item">
+          <div class="down-item-content">
+            <div id="dowm-item-days" class="down-item-value">00</div>
+            <div class="down-item-name">Days</div>
+          </div>
+        </div>
+        <div class="count-down-item">
+          <div class="down-item-content">
+            <div id="dowm-item-hours" class="down-item-value">00</div>
+            <div class="down-item-name">Hours</div>
+          </div>
+        </div>
+        <div class="count-down-item">
+          <div class="down-item-content">
+            <div id="dowm-item-minutes" class="down-item-value">00</div>
+            <div class="down-item-name">Minutes</div>
+          </div>
+        </div>
+        <div class="count-down-item">
+          <div class="down-item-content">
+            <div id="dowm-item-seconds" class="down-item-value">00</div>
+            <div class="down-item-name">Seconds</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .main-content {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .cs-count-down {
+    width: 100%;
+    padding: 2vw 0;
+    {% if se_stts.down-bg %}
+      background: var(--down-bg) no-repeat center center;
+    {% else %}
+      background-color: var(--down-color);
+    {% endif %}
+  }
+  .cs-count-down .count-down-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cs-count-down .count-down-content .count-down-le {
+    width: 40%;
+  }
+  .cs-count-down .count-down-content .count-down-le .count-down-title {
+    font-weight: var(--down-title-fw);
+    font-family: Inter
+    , sans-serif;
+    line-height: 1.2em;
+    font-size: var(--down-title-fz);
+    color: var(--down-title-color);
+    margin-bottom: var(--down-title-mb);
+  }
+  .cs-count-down .count-down-content .count-down-le .count-down-desc {
+    font-weight: var(--down-desc-fz);
+    font-family: Inter
+    , sans-serif;
+    line-height: 1.4em;
+    font-size: var(--down-desc-fz);
+    color: var(--down-desc-color);
+    margin-bottom: var(--down-desc-mb);
+  }
+  .cs-count-down .count-down-content .count-down-ri {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+  }
+  .cs-count-down .count-down-content .count-down-ri .count-down-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7.125vw;
+    height: 7.125vw;
+    min-width: 100px;
+    min-width: 100px;
+    background-color: #fff;
+    text-align: center;
+  }
+  .cs-count-down .count-down-content .count-down-ri .count-down-item .down-item-value {
+    font-weight: var(--down-value-fw);
+    font-family: Inter
+    , sans-serif;
+    line-height: 1.1em;
+    font-size: var(--down-value-fz);
+    color: var(--down-value-color);
+    margin-bottom: var(--down-value-mb);
+  }
+  .cs-count-down .count-down-content .count-down-ri .count-down-item .down-item-name {
+    font-weight: var(--down-name-fw);
+    font-family: Inter
+    , sans-serif;
+    line-height: 1.4em;
+    font-size: var(--down-name-fz);
+    color: var(--down-name-color);
+  }
+
+  @media (max-width: 960px) {
+    .main-content {
+      width: 80%;
+    }
+    .cs-count-down {
+      padding: 10vw 0;
+    }
+    .cs-count-down .count-down-content {
+      flex-wrap: wrap;
+    }
+    .cs-count-down .count-down-content .count-down-le {
+      width: 100%;
+    }
+    .cs-count-down .count-down-content .count-down-le .count-down-title {
+      font-weight: var(--down-title-fw-mb);
+      font-family: Inter
+      , sans-serif;
+      line-height: 1.2em;
+      font-size: var(--down-title-fz-mb);
+      margin-bottom: var(--down-title-mb-mb);
+      text-align: center;
+    }
+    .cs-count-down .count-down-content .count-down-le .count-down-desc {
+      font-weight: var(--down-desc-fw-mb);
+      font-family: Inter
+      , sans-serif;
+      line-height: 1.4em;
+      font-size: var(--down-desc-fz-mb);
+      margin-bottom: var(--down-desc-mb-mb);
+      text-align: center;
+    }
+    .cs-count-down .count-down-content .count-down-ri {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
+    .cs-count-down .count-down-content .count-down-ri .count-down-item {
+      width: 70px;
+      height: 70px;
+              min-width: inherit;
+        min-height: inherit;
+      text-align: center;
+    }
+    .cs-count-down .count-down-content .count-down-ri .count-down-item .down-item-value {
+      font-weight: var(--down-value-fw-mb);
+      font-size: var(--down-value-fz-mb);
+      margin-bottom: var(--down-value-mb-mb);
+    }
+    .cs-count-down .count-down-content .count-down-ri .count-down-item .down-item-name {
+      font-weight: var(--down-name-fw-mb);
+      font-size: var(--down-name-fz-mb);
+      margin-bottom: var(--down-name-mb-mb);
+    }
+  }
+</style>
+
+{% javascript %}
+    $(document).ready(function() {
+      let $countDown = $('.cs-count-down');
+      let $days = $('#dowm-item-days');
+      let $hours = $('#dowm-item-hours');
+      let $minutes = $('#dowm-item-minutes');
+      let $seconds = $('#dowm-item-seconds');
+      let $timeDom = $('.count-down-ri');
+
+      function padZero(num) {
+        return num < 10
+          ? '0' + num
+          : num;
+      }
+
+      function updateCountdown() {
+        let time = $timeDom.attr('data-end-time')
+        const targetDate = new Date(time).getTime(); // 指定的目标日期
+        const now = new Date().getTime();
+        const timeRemaining = targetDate - now;
+
+        if (timeRemaining <= 0) {
+          $countDown.hide();
+        }
+
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        $days.text(days);
+        $hours.text(padZero(hours));
+        $minutes.text(padZero(minutes));
+        $seconds.text(padZero(seconds));
+      }
+
+  // 每秒更新一次倒计时
+      setInterval(updateCountdown, 1000);
+
+  // 页面加载时立即更新一次
+      updateCountdown();
+    });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Custom Count Down",
+  "settings": [
+    {
+      "type": "text",
+      "id": "end-time",
+      "label": "Cut-off time",
+      "info":"YYYY-MM-DD：例如 2023-10-01 YYYY-MM-DDTHH:mm:ss：例如 2023-10-01T12:00:00",
+      "default":"2024-12-15"
+    },
+    {
+      "type": "color",
+      "id": "down-color",
+      "label": "count down background",
+      "default": "#ba281c"
+    },
+    {
+      "type": "image_picker",
+      "label": "color background img",
+      "id": "down-bg"
+    },
+    {
+      "type": "header",
+      "content": "Count Down Title"
+    },
+    {
+      "type": "text",
+      "label": "title",
+      "id": "down-title-text",
+      "default": "Black Friday Laser Engraver Sale!"
+    }, {
+      "type": "range",
+      "id": "down-title-fz",
+      "label": "fontSize",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 48
+    }, {
+      "type": "select",
+      "id": "down-title-fw",
+      "label": "fontWeight",
+      "default": "800",
+      "options": [
+        {
+          "value": "400",
+          "label": "t:settings_schema.typography.settings.font_weight.options__1"
+        },
+        {
+          "value": "500",
+          "label": "t:settings_schema.typography.settings.font_weight.options__2"
+        },
+        {
+          "value": "600",
+          "label": "t:settings_schema.typography.settings.font_weight.options__3"
+        },
+        {
+          "value": "700",
+          "label": "t:settings_schema.typography.settings.font_weight.options__4"
+        }, {
+          "value": "800",
+          "label": "t:settings_schema.typography.settings.font_weight.options__5"
+        }, {
+          "value": "900",
+          "label": "t:settings_schema.typography.settings.font_weight.options__6"
+        }
+      ]
+    }, {
+      "type": "range",
+      "id": "down-title-mb",
+      "label": "margin bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 10
+    }, {
+      "type": "color",
+      "id": "down-title-color",
+      "label": "color",
+      "default": "#fff"
+    }, {
+      "type": "range",
+      "id": "down-title-fz-mb",
+      "label": "fontSize(mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 25
+    }, {
+      "type": "select",
+      "id": "down-title-fw-mb",
+      "label": "fontWeight(mobile)",
+      "default": "800",
+      "options": [
+        {
+          "value": "400",
+          "label": "t:settings_schema.typography.settings.font_weight.options__1"
+        },
+        {
+          "value": "500",
+          "label": "t:settings_schema.typography.settings.font_weight.options__2"
+        },
+        {
+          "value": "600",
+          "label": "t:settings_schema.typography.settings.font_weight.options__3"
+        },
+        {
+          "value": "700",
+          "label": "t:settings_schema.typography.settings.font_weight.options__4"
+        }, {
+          "value": "800",
+          "label": "t:settings_schema.typography.settings.font_weight.options__5"
+        }, {
+          "value": "900",
+          "label": "t:settings_schema.typography.settings.font_weight.options__6"
+        }
+      ]
+    }, {
+      "type": "range",
+      "id": "down-title-mb-mb",
+      "label": "margin bottom(mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 10
+    }, {
+      "type": "header",
+      "content": "Count Down Desc"
+    }, {
+      "type": "text",
+      "label": "Desc",
+      "id": "down-desc-text",
+      "default": "Hurry up! Save up to $960, with discounts up to 100%, and free gifts with every purchase! Deals endin"
+    }, {
+      "type": "range",
+      "id": "down-desc-fz",
+      "label": "fontSize",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 16
+    }, {
+      "type": "select",
+      "id": "down-desc-fw",
+      "label": "fontWeight",
+      "default": "400",
+      "options": [
+        {
+          "value": "400",
+          "label": "t:settings_schema.typography.settings.font_weight.options__1"
+        },
+        {
+          "value": "500",
+          "label": "t:settings_schema.typography.settings.font_weight.options__2"
+        },
+        {
+          "value": "600",
+          "label": "t:settings_schema.typography.settings.font_weight.options__3"
+        },
+        {
+          "value": "700",
+          "label": "t:settings_schema.typography.settings.font_weight.options__4"
+        }, {
+          "value": "800",
+          "label": "t:settings_schema.typography.settings.font_weight.options__5"
+        }, {
+          "value": "900",
+          "label": "t:settings_schema.typography.settings.font_weight.options__6"
+        }
+      ]
+    }, {
+      "type": "range",
+      "id": "down-desc-mb",
+      "label": "margin bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 10
+    }, {
+      "type": "color",
+      "id": "down-desc-color",
+      "label": "color",
+      "default": "#fff"
+    }, {
+      "type": "range",
+      "id": "down-desc-fz-mb",
+      "label": "fontSize(mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 12
+    }, {
+      "type": "select",
+      "id": "down-desc-fw-mb",
+      "label": "fontWeight(mobile)",
+      "default": "400",
+      "options": [
+        {
+          "value": "400",
+          "label": "t:settings_schema.typography.settings.font_weight.options__1"
+        },
+        {
+          "value": "500",
+          "label": "t:settings_schema.typography.settings.font_weight.options__2"
+        },
+        {
+          "value": "600",
+          "label": "t:settings_schema.typography.settings.font_weight.options__3"
+        },
+        {
+          "value": "700",
+          "label": "t:settings_schema.typography.settings.font_weight.options__4"
+        }, {
+          "value": "800",
+          "label": "t:settings_schema.typography.settings.font_weight.options__5"
+        }, {
+          "value": "900",
+          "label": "t:settings_schema.typography.settings.font_weight.options__6"
+        }
+      ]
+    }, {
+      "type": "range",
+      "id": "down-desc-mb-mb",
+      "label": "margin bottom(mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 10
+    }, {
+      "type": "header",
+      "content": "Time Name"
+    }, {
+      "type": "range",
+      "id": "down-name-fz",
+      "label": "fontSize",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 25
+    }, {
+      "type": "select",
+      "id": "down-name-fw",
+      "label": "fontWeight",
+      "default": "400",
+      "options": [
+        {
+          "value": "400",
+          "label": "t:settings_schema.typography.settings.font_weight.options__1"
+        },
+        {
+          "value": "500",
+          "label": "t:settings_schema.typography.settings.font_weight.options__2"
+        },
+        {
+          "value": "600",
+          "label": "t:settings_schema.typography.settings.font_weight.options__3"
+        },
+        {
+          "value": "700",
+          "label": "t:settings_schema.typography.settings.font_weight.options__4"
+        }, {
+          "value": "800",
+          "label": "t:settings_schema.typography.settings.font_weight.options__5"
+        }, {
+          "value": "900",
+          "label": "t:settings_schema.typography.settings.font_weight.options__6"
+        }
+      ]
+    }, {
+      "type": "color",
+      "id": "down-name-color",
+      "label": "color",
+      "default": "#555"
+    }, {
+      "type": "range",
+      "id": "down-name-mb",
+      "label": "margin bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 10
+    }, {
+      "type": "range",
+      "id": "down-name-fz-mb",
+      "label": "fontSize(mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 12
+    }, {
+      "type": "select",
+      "id": "down-name-fw-mb",
+      "label": "fontWeight(mobile)",
+      "default": "500",
+      "options": [
+        {
+          "value": "400",
+          "label": "t:settings_schema.typography.settings.font_weight.options__1"
+        },
+        {
+          "value": "500",
+          "label": "t:settings_schema.typography.settings.font_weight.options__2"
+        },
+        {
+          "value": "600",
+          "label": "t:settings_schema.typography.settings.font_weight.options__3"
+        },
+        {
+          "value": "700",
+          "label": "t:settings_schema.typography.settings.font_weight.options__4"
+        }, {
+          "value": "800",
+          "label": "t:settings_schema.typography.settings.font_weight.options__5"
+        }, {
+          "value": "900",
+          "label": "t:settings_schema.typography.settings.font_weight.options__6"
+        }
+      ]
+    }, {
+      "type": "range",
+      "id": "down-name-mb-mb",
+      "label": "margin bottom(mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 10
+    }, {
+      "type": "header",
+      "content": "Time Value"
+    }, {
+      "type": "range",
+      "id": "down-value-fz",
+      "label": "fontSize",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 56
+    }, {
+      "type": "select",
+      "id": "down-value-fw",
+      "label": "fontWeight",
+      "default": "600",
+      "options": [
+        {
+          "value": "400",
+          "label": "t:settings_schema.typography.settings.font_weight.options__1"
+        },
+        {
+          "value": "500",
+          "label": "t:settings_schema.typography.settings.font_weight.options__2"
+        },
+        {
+          "value": "600",
+          "label": "t:settings_schema.typography.settings.font_weight.options__3"
+        },
+        {
+          "value": "700",
+          "label": "t:settings_schema.typography.settings.font_weight.options__4"
+        }, {
+          "value": "800",
+          "label": "t:settings_schema.typography.settings.font_weight.options__5"
+        }, {
+          "value": "900",
+          "label": "t:settings_schema.typography.settings.font_weight.options__6"
+        }
+      ]
+    }, {
+      "type": "range",
+      "id": "down-value-mb",
+      "label": "margin bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 10
+    }, {
+      "type": "color",
+      "id": "down-value-color",
+      "label": "color",
+      "default": "#000"
+    }, {
+      "type": "range",
+      "id": "down-value-fz-mb",
+      "label": "fontSize(mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 25
+    }, {
+      "type": "select",
+      "id": "down-value-fw-mb",
+      "label": "fontWeight(mobile)",
+      "default": "500",
+      "options": [
+        {
+          "value": "400",
+          "label": "t:settings_schema.typography.settings.font_weight.options__1"
+        },
+        {
+          "value": "500",
+          "label": "t:settings_schema.typography.settings.font_weight.options__2"
+        },
+        {
+          "value": "600",
+          "label": "t:settings_schema.typography.settings.font_weight.options__3"
+        },
+        {
+          "value": "700",
+          "label": "t:settings_schema.typography.settings.font_weight.options__4"
+        }, {
+          "value": "800",
+          "label": "t:settings_schema.typography.settings.font_weight.options__5"
+        }, {
+          "value": "900",
+          "label": "t:settings_schema.typography.settings.font_weight.options__6"
+        }
+      ]
+    }, {
+      "type": "range",
+      "id": "down-value-mb-mb",
+      "label": "margin bottom(mobile)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 10
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Count Down"
+    }
+  ]
+}
+{% endschema %}

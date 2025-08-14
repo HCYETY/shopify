@@ -1,0 +1,734 @@
+ <style>
+   #shopify-section-{{section.id}} .more-collection-wrapper {
+        background-color: #ddf4ff;
+        padding: 4.69vw 0;
+        text-align: center;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper h2 {
+        font-size: 1.56vw;
+        margin-bottom: 0.39vw;
+        color: #333;
+        font-weight:bold;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper p {
+        font-size: 0.94vw;
+        margin-bottom: 0.78vw;
+        color: #333;
+        padding:0;
+      }
+    #shopify-section-{{section.id}} .button-ATC , #shopify-section-{{section.id}} .card-action .button {
+        text-transform: uppercase;
+        width: 10.94vw;
+        height: 2.34vw;
+        border-radius: 999px;
+        font-size: 0.78vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background: #14A9DE;
+        color: #fff;
+        border:none;
+}
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card {
+        width: 58.59vw;
+        height: 29.3vw;
+        background: #fff;
+        border-radius: 1.17vw;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 1.56vw auto;
+        display: flex;
+        overflow: hidden;
+        position: relative;
+      {% if section.settings.is_reverse %}
+         flex-direction: row-reverse
+      {% endif %}
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card img {
+        width: 44%;
+        object-fit: cover;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content {
+        width: 56%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 1.85vw;
+      }
+       #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .tag{
+          color:#fff;
+          padding:0.4vw 1.22vw;
+          border-radius:999px;
+          background:#14A9DE;
+          margon-bottom:0.25vw;
+       }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content h3 {
+        font-size: 1.17vw;
+        margin: 0.39vw 0;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .features {
+        width: 80%;
+        display: flex;
+        gap: 1.56vw;
+        column-gap: 0.78vw;
+        margin: 0.39vw 0;
+        flex-wrap: wrap;
+      }
+       #shopify-section-{{section.id}}  .sale-count {
+          width: fit-content;
+          position: absolute;
+          padding: 0.39vw;
+          border-radius: 0.31vw;
+          top: 0;
+          left: 1.17vw;
+          font-size: 0.78vw;
+          color: #fff;
+          background: #F8611F;
+         {% if section.settings.is_reverse %}
+            left: unset;
+            right：0；
+         {% endif %}
+        }
+        #shopify-section-{{section.id}} .sale-count .count-down {
+          font-size: 1.09vw;
+          font-weight: 800;
+        }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .features .item {
+        font-size: 0.7vw;
+        width: calc(33.33% - 1.37vw);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.39vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .features .item img {
+        width: 1.95vw;
+        height: 1.95vw;
+        object-fit: contain;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .price {
+        display: flex;
+        justify-content: center;
+        gap: 0.78vw;
+        align-items: start;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .price .old-price {
+        text-decoration: line-through;
+        color: #666;
+      }
+    #shopify-section-{{section.id}} .product-card .sale-count {
+          width: fit-content;
+           right:unset;
+          left: 1.2vw;
+          
+        }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .price .new-price {
+        font-size: 2.19vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .learn-btn,
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .buy-btn {
+        cursor: pointer;
+        background-color: #14A9DE;
+        color: #fff;
+        border: none;
+        border-radius: 0.2vw;
+        padding: 0.39vw 0.78vw;
+        margin: 0.39vw;
+        border-radius: 39.02vw;
+        height: 2.19vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .bottom-bar {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: auto;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .bottom-bar .price {
+        display: flex;
+        gap: 0.39vw;
+        flex-direction: column;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products {
+        width: 58.59vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        gap: 1.48vw;
+        margin-top: 2.34vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card {
+        width: calc(33.33% - 0.98vw);
+        height: 28.13vw;
+        background-color: #fff;
+        border-radius: 1.17vw;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position:relative;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .top {
+        padding: 0 1.95vw;
+        height: 46%;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .top img {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: contain;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom {
+        height: 54%;
+        width: 100%;
+        padding-top: 0.78vw;
+        background: #fff;
+        padding: 0.78vw 1.95vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .name {
+        font-size: 0.94vw;
+        font-weight: bold;
+          display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  }
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .price {
+        display: flex;
+        margin-left: auto;
+        align-items: end;
+        margin-top: 0.78vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .price .new-price {
+        font-weight: bold;
+        font-size: 1.76vw;
+        color: #14A9DE;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .price .old-price {
+        font-size: 0.78vw;
+        color: #666;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .info-desc {
+        font-size: 0.78vw;
+        color: #666;
+        margin: 0.55vw 0;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0.78vw;
+        gap: 0.94vw;
+      }
+      #shopify-section-{{section.id}}  .button-ATC , #shopify-section-{{section.id}} .card-action .button  {
+        width: 8.59vw;
+        height: 2.34vw;
+        border-radius: 999px;
+        font-size: 0.78vw;
+        border: 0.04vw solid #03678B;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:none;
+        cursor: pointer;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .btns .btn.learn {
+        color: #03678B;
+          font-size: 0.78vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .btns .btn.button-ATC {
+        background: #14A9DE;
+        color: #fff;
+        border: none;
+        font-size: 0.78vw;
+      }
+  #shopify-section-{{section.id}} .button-ATC{
+        background: #14a9de;
+        border: none;
+  }
+   @media(max-width:750px){
+    #shopify-section-{{section.id}} .more-collection-wrapper {
+        background-color: #ddf4ff;
+        padding: 16vw 0;
+        text-align: center;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper::-webkit-scrollbar {
+        display: none;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper h2 {
+        font-size: 5.33vw;
+        margin-bottom: 1.33vw;
+        color: #333;
+        padding: 0 6.67vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper p {
+        font-size: 3.2vw;
+        margin-bottom: 2.67vw;
+        padding:0;
+        color: #333;
+       
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card {
+        width: calc(100% - 13.33vw);
+        margin: 0 auto;
+        height: auto;
+        background: #fff;
+        border-radius: 4vw;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 5.33vw auto;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        position:relative;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card img {
+        width: 100%;
+        height: 64vw;
+        object-fit: cover;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 2.67vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .tag{
+          color:#fff;
+          padding:0.8vw 2.22vw;
+          border-radius:999px;
+          background:#14A9DE;
+          font-size:2.67;
+          margon-bottom:2.25vw;
+       }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content h3 {
+        font-size: 3.73vw;
+        margin: 1.33vw 0;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .features {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 5.33vw;
+        column-gap: 2.67vw;
+        margin: 1.33vw 0;
+        flex-wrap: wrap;
+        margin-top: 2.67vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .features .item {
+        font-size: 2.4vw;
+        width: calc(33.33% - 3.33vw);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.33vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .features .item img {
+        width: 6.67vw;
+        height: 6.67vw;
+        object-fit: contain;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .price {
+        display: flex;
+        align-items: start;
+        gap: 2.67vw;
+        margin-top: 5.33vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .price .old-price {
+        text-decoration: line-through;
+        color: #666;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .price .new-price {
+        font-size: 7.47vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .learn-btn,
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .buy-btn {
+        cursor: pointer;
+        background-color: #14A9DE;
+        color: #fff;
+        border: none;
+        border-radius: 0.67vw;
+        padding: 1.33vw 2.67vw;
+        margin: 1.33vw;
+        border-radius: 133.2vw;
+        height: 7.47vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .bottom-bar {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: auto;
+        flex-direction: column;
+        align-items: start;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .bottom-bar .price {
+        margin-top: 2.67vw;
+        display: flex;
+        justify-content: start;
+        gap: 1.33vw;
+        flex-direction: column;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        gap: 5.07vw;
+        margin-top: 8vw;
+        overflow-x: auto;
+        padding: 0 6.67vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products::-webkit-scrollbar {
+        display: none;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card {
+        width: 70%;
+        flex-shrink: 0;
+        height: 96vw;
+        background-color: #fff;
+        border-radius: 4vw;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position:relative;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .top {
+        padding: 0 6.67vw;
+        height: 46%;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .top img {
+        width: 80%;
+        aspect-ratio: 1;
+        object-fit: contain;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom {
+        height: 54%;
+        width: 100%;
+        padding-top: 2.67vw;
+        background: #fff;
+        padding: 2.67vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .name {
+        font-size: 3.2vw;
+        font-weight: bold;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .price {
+        display: flex;
+        margin-left: auto;
+        align-items: end;
+        margin-top: 2.67vw;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .price .new-price {
+        font-weight: bold;
+        font-size: 6vw;
+        color: #14A9DE;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .price .old-price {
+        font-size: 2.67vw;
+        color: #666;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .info-desc {
+        font-size: 2.67vw;
+        color: #666;
+        margin: 1.87vw 0;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2.67vw;
+        gap: 3.2vw;
+      }
+        #shopify-section-{{section.id}} .more-collection-wrapper .long-product-card .content .tag{
+         font-size:2.67vw;
+       }
+      #shopify-section-{{section.id}}  .button-ATC , #shopify-section-{{section.id}} .card-action .button {
+        width: 29.33vw;
+        height: 8vw;
+        border-radius: 999px;
+        font-size: 2.67vw;
+        border: 0.13vw solid #03678B;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border:none;
+      }
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .btns .btn.learn {
+         color: #03678B;
+         font-size: 2.67vw;
+      }
+  
+      #shopify-section-{{section.id}} .more-collection-wrapper .collection-products .product-card .bottom .btns .btn.buy {
+        background: #14A9DE;
+        color: #fff;
+        border: 0.13vw solid #14A9DE;
+          font-size: 2.67vw;
+      }
+        #shopify-section-{{section.id}}  .sale-count {
+          width: fit-content;
+          position: absolute;
+          padding: 1.33vw;
+          border-radius: 1.07vw;
+          top: 0;
+          left: 4vw;
+          font-size: 2.67vw;
+          color: #fff;
+          background: #F8611F;
+      
+        }
+         #shopify-section-{{section.id}}  .sale-count .count-down {
+          font-size: 3.73vw;
+          font-weight: 800;
+        }
+   }
+ </style>
+<div class="more-collection-wrapper" data-id="{{ section.settings.bind }}">
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.subheading }}</p>
+    <div class="long-product-card">
+        {% assign discount = section.settings.product.compare_at_price | minus: section.settings.product.price %}
+        {% if section.settings.product.compare_at_price > section.settings.product.price %}
+          <div class="sale-count">
+            Save
+            <div class="count-down">
+              <span>{{ discount | money | remove: '.00' }}</span>
+            </div>
+          </div>
+        {% endif %}
+        {% if section.settings.main_product_image %}
+            <img src="{{ section.settings.main_product_image | img_url: 'master' }}" alt="{{ section.settings.main_product_title }}">
+        {% else %}
+            <img src="./assets/icon/组 25.jpg" alt="">
+        {% endif %}
+        <div class="content">
+            <div class="tag">
+                {{ section.settings.tag }}
+            </div>
+            <h3>{{ section.settings.main_product_title }}</h3>
+            <p>{{ section.settings.main_product_specs }}</p>
+            <div class="features">
+                {% for block in section.blocks %}
+                    {% if block.type == 'feature' %}
+                        <div class="item">
+                            {% if block.settings.icon %}
+                                <img src="{{ block.settings.icon | img_url: 'master' }}" alt="">
+                            {% else %}
+                                <img src="./assets/icon/安全.png" alt="">
+                            {% endif %}
+                            {{ block.settings.text }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="bottom-bar">
+                <div class="price">
+                    <span class="new-price">{{ section.settings.product.price | money }}</span>
+                    {% if section.settings.product.compare_at_price > section.settings.product.price %}
+                              <s class="old-price">
+                                {{ section.settings.product.compare_at_price | money }}
+                              </s>
+                     {% endif %}
+                </div>
+                <div class="btns">
+                      {%- if settings.show_quick_view and settings.product_quick_view_type == 'default' -%}
+                                      <div class="card-quickview">
+                                          <button type="button" title="{{ 'products.product.quick_view' | t }}" class="quickview-button button" data-product-id="{{  section.settings.product.id }}" data-open-quick-view-popup data-product-handle="{{  section.settings.product.handle }}">{{ 'products.product.quick_view' | t }}</button>
+                                      </div>
+                                  {%- endif -%}
+                  
+                                  {%- if settings.show_action or settings.show_compare -%}
+                                      <div class="card-action has-compare{% if settings.show_product_marquee %} has-marquee{% endif %}">
+                                          {%- if settings.show_action -%}
+                                              {% render 'add-to-cart-form', product:  section.settings.product, id: 'form', position: position, sectionId: sectionId %}
+                                          {%- endif -%}
+                                          <div class="card-action-bottom">
+                                              {%- if settings.show_compare and settings.product_compare_type == 'default' -%}
+                                                  {% render 'product-compare', product:  section.settings.product, sectionId: sectionId, class: 'card-compare' %}
+                                              {%- endif -%}
+                                          </div>
+                                      </div>
+                                  {%- endif -%}
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="collection-products">
+        {% for block in section.blocks %}
+            {% if block.type == 'product' and block.settings.product %}
+                {% assign product = all_products[block.settings.product] %}
+                <div class="product-card">
+                  {% assign discount = product.compare_at_price | minus: product.price %}
+                    {% if product.compare_at_price > product.price %}
+                      <div class="sale-count">
+                        Save
+                        <div class="count-down">
+                          <span>{{ discount | money | remove: '.00' }}</span>
+                        </div>
+                      </div>
+                    {% endif %}
+                    <div class="top">
+                        <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
+                    </div>
+                    <div class="bottom">
+                        <div class="name">{{ product.title }}</div>
+                        <div class="info-desc">
+                            {% if block.settings.description != blank %}
+                                {{ block.settings.description }}
+                            {% else %}
+                                {{ product.description | strip_html | truncatewords: 15 }}
+                            {% endif %}
+                        </div>
+                        <div class="price">
+                            <div class="new-price">                            
+                                    {{ product.price | money }}           
+                            </div>
+                            {% if block.settings.compare_price != blank or product.compare_at_price > product.price %}
+                                <s class="old-price">
+                                     {{ product.compare_at_price | money }}
+                                </s>
+                            {% endif %}
+                        </div>
+                           
+                        <div class="btns">
+                              {%- if settings.show_quick_view and settings.product_quick_view_type == 'default' -%}
+                                      <div class="card-quickview">
+                                          <button type="button" title="{{ 'products.product.quick_view' | t }}" class="quickview-button button" data-product-id="{{ product.id }}" data-open-quick-view-popup data-product-handle="{{ product.handle }}">{{ 'products.product.quick_view' | t }}</button>
+                                      </div>
+                                  {%- endif -%}
+                  
+                                  {%- if settings.show_action or settings.show_compare -%}
+                                      <div class="card-action has-compare{% if settings.show_product_marquee %} has-marquee{% endif %}">
+                                          {%- if settings.show_action -%}
+                                              {% render 'add-to-cart-form', product: product, id: 'form', position: position, sectionId: sectionId %}
+                                          {%- endif -%}
+                                          <div class="card-action-bottom">
+                                              {%- if settings.show_compare and settings.product_compare_type == 'default' -%}
+                                                  {% render 'product-compare', product: product, sectionId: sectionId, class: 'card-compare' %}
+                                              {%- endif -%}
+                                          </div>
+                                      </div>
+                                  {%- endif -%}
+                  
+                                  {%- if settings.show_product_marquee -%}
+                                      {%- render 'product-card-marquee', product: product -%}     
+                                  {%- endif -%}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "long-collection-list",
+  "settings": [
+      {
+      "type": "text",
+      "id": "bind",
+      "label": "bind"
+    },
+    {
+      "type":"checkbox",
+      "id":"is_reverse",
+      "label":"reverse"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Work Smarter, Create Bigger"
+    },
+    
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Falcon 2 Series: Versatile 22W and 40W Laser Engravers for Passionate Creators."
+    },
+      {
+      "type": "text",
+      "id": "tag",
+      "label": "tag",
+      "default": "Top Picks"
+    },
+    {
+      "type": "text",
+      "id": "main_product_title",
+      "label": "Main Product Title",
+      "default": "Falcon2 22W Laser Engraver and Cutter"
+    },
+    {
+      "type": "text",
+      "id": "main_product_specs",
+      "label": "Main Product Specifications",
+      "default": "22W | 25000mm/min | New Integrated Air Assist"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_product_image",
+      "label": "Main Product Image"
+    },
+     {
+      "type": "product",
+      "id": "product",
+      "label": "product"
+    },
+   
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Feature Icon"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Feature Text",
+          "default": "Feature"
+        }
+      ]
+    },
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Custom Description",
+          "info": "Leave blank to use product description"
+        }
+      ]
+    }
+  ],
+  "presets": [{"name":"long-collection-list"}]
+}
+{% endschema %}

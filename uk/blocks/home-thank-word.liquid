@@ -1,0 +1,63 @@
+{% style %}
+  .b-thank-word {
+    width: 728px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .b-thank-word .thank-text {
+    color: #8d9095;
+    font-family: Montserrat;
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  .b-thank-word .author {
+    color: #1e1e1e;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  @media (max-width: 900px) {
+    .b-thank-word {
+      width: 100%;
+    }
+    .b-thank-word .thank-text {
+      font-size: 4.267vw;
+      margin-bottom: 6.4vw;
+    }
+    .b-thank-word .author {
+      font-size: 3.733vw;
+    }
+  }
+{% endstyle %}
+
+<div class="b-thank-word">
+  <p class="thank-text">{{ block.settings.thank_text }}</p>
+  <p class="author">{{ block.settings.author_name }}</p>
+</div>
+
+{% schema %}
+{
+  "name": "Home S Thank Word",
+  "class": "swiper-slide",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "thank_text",
+      "label": "感言内容",
+      "default": "\"My Falcon2 22W has allowed me tocreate a wide range of products,Crafting with new materials really getsmy design juices flowing.\""
+    },
+    {
+      "type": "text",
+      "id": "author_name",
+      "label": "用户名",
+      "default": "Daniel Taylor"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home S Thank Word"
+    }
+  ]
+}
+{% endschema %}

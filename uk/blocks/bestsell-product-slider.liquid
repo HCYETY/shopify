@@ -1,0 +1,665 @@
+<link rel="stylesheet" href="{{ 'swiper.css' | asset_url }}">
+<script src="{{ 'swiper.js' | asset_url }}" defer></script>
+
+{% style %}
+    .bestsell-product-slider-container {
+      width: fit-content;
+      position: relative;
+      margin: 0 auto;
+    }
+    .bestsell-product-slider {
+      width: 700px;
+      height: 365px;
+      overflow: hidden;
+    }
+    .bestsell-product-slider .swiper-slide {
+      width: 700px !important;
+      height: 365px !important;
+      border-radius: 10px;
+      user-select: none;
+      overflow: hidden;
+    }
+    .bestsell-product-slider .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .bestsell-product-card {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      background-color: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    #{{ block.id }}-swiper .bestsell-product-card {
+      flex-direction: {% if block.settings.card_layout_reverse %}row-reverse{% else %}row{% endif %};
+    }
+    .bestsell-product-card .bestsell-product-image {
+      width: 324px;
+      height: 100%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* 左侧产品图片样式 */
+    .bestsell-product-card .product-image-container {
+      position: relative;
+      width: 324px;
+    }
+
+    .bestsell-product-card .discount-badge {
+      position: absolute;
+      top: 0px;
+      left: 15px;
+      color: #000;
+      padding: 8px 10px;
+      font-size: 15px;
+      line-height: 18px;
+      font-weight: bold;
+      z-index: 1;
+      border-radius: 0px 0px 5px 5px;
+      background: linear-gradient(-28deg, #f9d231, #fffcbb, #d48d02);
+      text-align: center;
+    }
+    .bestsell-product-card .discount-badge.discount-badge-reverse {
+      right: 15px;
+      left: unset;
+    }
+
+    /* 右侧产品信息样式 */
+    .bestsell-product-card .product-info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 19px 23px 27.5px 22.5px;
+    }
+
+    .bestsell-product-card .level-badge {
+      background-color: #d68c00;
+      color: white;
+      width: fit-content;
+      padding: 5px 12px;
+      border-radius: 11px;
+      font-size: 10px;
+      line-height: 12px;
+      margin-bottom: 10px;
+    }
+
+    .bestsell-product-card .product-title {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+      line-height: 1;
+    }
+
+    .bestsell-product-card .product-description {
+      font-size: 10px;
+      color: #808080;
+      line-height: 1;
+      font-weight: 600;
+    }
+
+    .bestsell-product-card .sell-point-image {
+      width: 274px;
+      height: 124px;
+      margin: auto;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .bestsell-product-card .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    /* 价格样式 */
+    .bestsell-product-card .price-container {
+    }
+
+    .bestsell-product-card .original-price {
+      text-decoration: line-through;
+      color: #666;
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .bestsell-product-card .current-price {
+      font-size: 25px;
+      color: #333;
+      line-height: 1;
+      font-weight: 600;
+    }
+
+    /* 按钮样式 */
+    .bestsell-product-card .button-container {
+      display: flex;
+      gap: 10px;
+    }
+    .bestsell-product-card .button-container .card-action {
+      width: fit-content;
+    }
+
+    .bestsell-product-card .learn-more-btn,
+    .bestsell-product-card .button {
+      padding: 9px 12.5px !important;
+      border-radius: 14px;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+      font-size: 11px;
+      line-height: 1;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .bestsell-product-card .learn-more-btn {
+      outline: 1px solid #d48d02;
+      color: #d48d02;
+    }
+
+    .bestsell-product-card .button {
+      min-width: unset;
+      background: linear-gradient(-28deg, #f9d231, #fffcbb, #d48d02);
+      color: #000;
+      border: none;
+      cursor: pointer;
+    }
+    .bestsell-product-card .button:hover {
+      background: linear-gradient(-28deg, #f9d231, #fffcbb, #d48d02);
+      color: #000;
+      border: none;
+      box-shadow: none;
+    }
+    .bestsell-product-card .is-loading.button {
+      width: 90px;
+      height: 29px;
+    }
+    .bestsell-product-card .is-loading.button:hover {
+      background: none;
+    }
+    .bestsell-product-card .is-loading.button:before {
+      left: 40%;
+      transform: translateX(0);
+    }
+    .bestsell-product-slider-container .swiper-button-next,
+    .bestsell-product-slider-container .swiper-button-prev {
+      width: 31px;
+      height: 31px;
+      color: #fff;
+      background-color: #d48d02;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bestsell-product-slider-container .swiper-button-next:after,
+    .bestsell-product-slider-container .swiper-button-prev:after {
+      display: none;
+    }
+    .bestsell-product-slider-container .swiper-button-prev {
+      left: 0;
+      transform: translateX(calc(-100% - 12px));
+    }
+    .bestsell-product-slider-container .swiper-button-next {
+      right: 0;
+      transform: translateX(calc(100% + 12px));
+    }
+    .bestsell-product-slider-container .swiper-button-prev svg {
+      transform: translateX(-1px) scale(1.5);
+      transform-origin: center;
+    }
+    .bestsell-product-slider-container .swiper-button-next svg {
+      transform: translateX(1px) scale(1.5);
+      transform-origin: center;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 900px) {
+      /* 容器样式 */
+      .bestsell-product-slider-container {
+        width: 95%;
+        max-width: 700px;
+      }
+
+      .bestsell-product-slider {
+        width: 100%;
+        height: auto;
+      }
+
+      .bestsell-product-slider .swiper-slide {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      /* 卡片布局 */
+      #{{ block.id }}-swiper .bestsell-product-card {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .bestsell-product-card .product-image-container,
+      .bestsell-product-card .product-info {
+        width: 100%;
+      }
+
+      .bestsell-product-card .product-image-container {
+        height: 301.5px;
+      }
+
+      .bestsell-product-card .bestsell-product-image {
+        width: 100%;
+      }
+
+      /* 产品信息区域 */
+      .bestsell-product-card .product-info {
+        padding: 15px;
+      }
+
+      .bestsell-product-card .product-title {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .bestsell-product-card .current-price {
+        font-size: 20px;
+      }
+
+      .bestsell-product-card .sell-point-image {
+        width: 100%;
+        max-width: 274px;
+        height: 124px;
+        margin: 20px auto;
+      }
+
+      /* 底部容器 */
+      .bestsell-product-card .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .bestsell-product-card .price-container {
+        text-align: left;
+      }
+
+      /* 按钮样式 */
+      .bestsell-product-card .button-container {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      /* 隐藏滑动按钮 */
+      .bestsell-product-slider-container .swiper-button-next,
+      .bestsell-product-slider-container .swiper-button-prev {
+        display: none;
+      }
+    }
+
+    @media (min-width: 1920px) {
+      .bestsell-product-slider-container {
+        width: fit-content;
+        position: relative;
+        margin: 0 auto;
+      }
+      .bestsell-product-slider {
+        width: 54.6875vw;
+        height: 28.516vw;
+        overflow: hidden;
+      }
+      .bestsell-product-slider .swiper-slide {
+        width: 54.6875vw !important;
+        height: 28.516vw !important;
+        border-radius: 0.78125vw;
+        user-select: none;
+        overflow: hidden;
+      }
+      .bestsell-product-slider .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .bestsell-product-card {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-color: #ffffff;
+        border-radius: 0.9375vw;
+        overflow: hidden;
+      }
+      .bestsell-product-card .bestsell-product-image {
+        width: 25.3125vw;
+        height: 100%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* 左侧产品图片样式 */
+      .bestsell-product-card .product-image-container {
+        position: relative;
+        width: 25.3125vw;
+      }
+
+      .bestsell-product-card .discount-badge {
+        position: absolute;
+        top: 0vw;
+        left: 1.172vw;
+        color: #000;
+        padding: 0.625vw 0.78125vw;
+        font-size: 1.172vw;
+        line-height: 1.40625vw;
+        font-weight: bold;
+        z-index: 1;
+        border-radius: 0vw 0vw 0.391vw 0.391vw;
+        background: linear-gradient(-28deg, #f9d231, #fffcbb, #d48d02);
+        text-align: center;
+      }
+      .bestsell-product-card .discount-badge.discount-badge-reverse {
+        right: 1.172vw;
+        left: unset;
+      }
+
+      /* 右侧产品信息样式 */
+      .bestsell-product-card .product-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.484vw 1.797vw 2.148vw 1.758vw;
+      }
+
+      .bestsell-product-card .level-badge {
+        background-color: #d68c00;
+        color: white;
+        width: fit-content;
+        padding: 0.391vw 0.9375vw;
+        border-radius: 0.859vw;
+        font-size: 0.78125vw;
+        line-height: 0.9375vw;
+        margin-bottom: 0.78125vw;
+      }
+
+      .bestsell-product-card .product-title {
+        font-size: 1.172vw;
+        font-weight: bold;
+        margin-bottom: 0.78125vw;
+        color: #333;
+        line-height: 1;
+      }
+
+      .bestsell-product-card .product-description {
+        font-size: 0.78125vw;
+        color: #808080;
+        line-height: 1;
+        font-weight: 600;
+      }
+
+      .bestsell-product-card .sell-point-image {
+        width: 21.406vw;
+        height: 9.6875vw;
+        margin: auto;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .bestsell-product-card .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        flex-wrap: wrap;
+        gap: 0.78125vw;
+      }
+      /* 价格样式 */
+      .bestsell-product-card .price-container {
+      }
+
+      .bestsell-product-card .original-price {
+        text-decoration: line-through;
+        color: #666;
+        font-size: 0.9375vw;
+        line-height: 1;
+        font-weight: 600;
+        margin-bottom: 0.78125vw;
+      }
+
+      .bestsell-product-card .current-price {
+        font-size: 1.953vw;
+        color: #333;
+        line-height: 1;
+        font-weight: 600;
+      }
+
+      /* 按钮样式 */
+      .bestsell-product-card .button-container {
+        display: flex;
+        gap: 0.78125vw;
+      }
+
+      .bestsell-product-card .button-container .card-action {
+        width: fit-content;
+      }
+
+      .bestsell-product-card .learn-more-btn,
+      .bestsell-product-card .button {
+        padding: 0.703vw 0.977vw !important;
+        border-radius: 1.09375vw;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        font-size: 0.859vw;
+        line-height: 1;
+        white-space: nowrap;
+        width: fit-content;
+      }
+
+      .bestsell-product-card .learn-more-btn {
+        outline: 0.078vw solid #d48d02;
+        color: #d48d02;
+      }
+
+      .bestsell-product-card .button {
+        min-width: unset;
+        background: linear-gradient(-28deg, #f9d231, #fffcbb, #d48d02);
+        color: #000;
+        border: none;
+        cursor: pointer;
+      }
+      .bestsell-product-card .button:hover {
+        background: linear-gradient(-28deg, #f9d231, #fffcbb, #d48d02);
+        color: #000;
+        border: none;
+        box-shadow: none;
+      }
+      .bestsell-product-card .is-loading.button {
+        width: 7.03125vw;
+        height: 2.266vw;
+      }
+      .bestsell-product-card .is-loading.button:hover {
+        background: none;
+      }
+      .bestsell-product-card .is-loading.button:before {
+        left: 40%;
+        transform: translateX(0);
+      }
+
+      .bestsell-product-slider-container .swiper-button-next,
+      .bestsell-product-slider-container .swiper-button-prev {
+        width: 2.422vw;
+        height: 2.422vw;
+        color: #fff;
+        background-color: #d48d02;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .bestsell-product-slider-container .swiper-button-next:after,
+      .bestsell-product-slider-container .swiper-button-prev:after {
+        display: none;
+      }
+      .bestsell-product-slider-container .swiper-button-prev {
+        left: 0;
+        transform: translateX(calc(-100% - 0.9375vw));
+      }
+      .bestsell-product-slider-container .swiper-button-next {
+        right: 0;
+        transform: translateX(calc(100% + 0.9375vw));
+      }
+      .bestsell-product-slider-container .swiper-button-prev svg {
+        transform: translateX(-0.078vw) scale(1.5);
+        transform-origin: center;
+      }
+      .bestsell-product-slider-container .swiper-button-next svg {
+        transform: translateX(0.078vw) scale(1.5);
+        transform-origin: center;
+      }
+    }
+{% endstyle %}
+
+<div class="bestsell-product-slider-container">
+  <div id="{{ block.id }}-swiper" class="swiper bestsell-product-slider">
+    <div class="swiper-wrapper">
+      {% for product in block.settings.products %}
+        <div class="swiper-slide">
+          <div class="bestsell-product-card">
+            <!-- 左侧产品图片部分 -->
+            <div class="product-image-container">
+              {% if product.compare_at_price > product.price %}
+                <div class="discount-badge {% if block.settings.card_layout_reverse %}discount-badge-reverse{% endif %}">
+                  {% assign str = product.compare_at_price | minus: product.price | money %}
+                  {% assign size = str | size | minus: 3 %}
+                  {% assign removed_three = str | slice: 0, size %}
+                  <p class="discount-price">{{ removed_three }}</p>
+                  <p class="discount-text">OFF</p>
+                </div>
+              {% endif %}
+              <div
+                class="bestsell-product-image"
+                style="background-image: url('{{ product.featured_image | img_url: 'master' }}');"
+              ></div>
+            </div>
+
+            <!-- 右侧产品信息部分 -->
+            <div class="product-info">
+              <!-- 产品等级标签 -->
+              <div class="level-badge">{{ block.settings.product_level }}</div>
+
+              <!-- 产品标题和描述 -->
+              <p class="product-title">{{ product.title }}</p>
+              <p class="product-description">{{ product.metafields.custom.product_description }}</p>
+
+              <!-- 特点图标部分 -->
+              <div
+                class="sell-point-image"
+                style="background-image: url('{{ product.metafields.custom.sell_point_image | img_url: 'master' }}');"
+              ></div>
+
+              <div class="footer-container">
+                <!-- 价格信息 -->
+                <div class="price-container">
+                  <div class="original-price">{{ product.compare_at_price | money }}</div>
+                  <div class="current-price">{{ product.price | money }}</div>
+                </div>
+
+                <!-- 按钮区域 -->
+                <div class="button-container">
+                  <a href="{{ product.url }}" class="learn-more-btn">Learn More</a>
+                  {% comment %} {% form 'product', product %}
+                    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                    <button type="submit" class="buy-now-btn" id="add-to-cart-{{ product.id }}">Quick Add</button>
+                  {% endform %} {% endcomment %}
+                  <div class="card-action">
+                    {% render 'add-to-cart-form', product: product, id: 'form', position: position, sectionId: sectionId %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div id="{{ block.id }}-swiper-button-next" class="swiper-button-next">
+    <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 2L8 6L4 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+  </div>
+  <div id="{{ block.id }}-swiper-button-prev" class="swiper-button-prev">
+    <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 2L4 6L8 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+  </div>
+</div>
+
+<script defer>
+  function init() {
+    if (typeof Swiper !== 'undefined') {
+      swiper = new Swiper('#{{ block.id }}-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 18,
+        {% comment %} loop: true, {% endcomment %}
+        navigation: {
+          nextEl: '#{{ block.id }}-swiper-button-next',
+          prevEl: '#{{ block.id }}-swiper-button-prev',
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+      });
+    } else {
+      console.error('Swiper库未加载成功');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
+
+  // shopify block load
+  document.addEventListener('shopify:block:load', init);
+</script>
+
+{% schema %}
+{
+  "name": "畅销产品轮播图-大",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "产品"
+    },
+    {
+      "type": "product_list",
+      "id": "products",
+      "label": "产品列表"
+    },
+    {
+      "type": "text",
+      "id": "product_level",
+      "label": "产品徽标文字",
+      "default": "Beginner"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_layout_reverse",
+      "label": "卡片布局左右调换",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "畅销产品轮播图-大"
+    }
+  ]
+}
+{% endschema %}

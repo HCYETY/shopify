@@ -1,0 +1,563 @@
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+<div id="container-{{ sid }}">
+  <div
+    class="cs-concessionary-card"
+    style="--down-color:{{se_stts.down-color}};--down-bg:url({{se_stts.down-bg | image_url }});--card-gap:{{ se_stts.card-gap }}vw"
+  >
+    <div class="concessionary-card-list main-content">
+      {% for block in se_blocks %}
+        {% assign bl_stts = block.settings %}
+        <div
+          class="concessionary-card-item"
+          style="
+                     --card-bg-color:{{ bl_stts.card-bg-color }};--card-wi-mb:{{bl_stts.card-wi-mb }}vw;--card-wi:{{bl_stts.card-wi }}vw;--down-color:{{se_stts.down-color}};--card-fz:{{bl_stts.card-fz}}px;--card-fw:{{bl_stts.card-fw}};--card-color:{{bl_stts.card-color}};--card-mb:{{bl_stts.card-mb}}px;
+            --card-fz-mb:{{bl_stts.card-fz-mb}}px;--card-fw-mb:{{bl_stts.card-fw-mb}};--card-mb-mb:{{bl_stts.card-mb-mb}}px;
+             --card-title-fz:{{bl_stts.card-title-fz}}px;--card-title-fw:{{bl_stts.card-title-fw}};--card-title-color:{{bl_stts.card-title-color}};--card-title-mb:{{bl_stts.card-title-mb}}px;
+            --card-title-fz-mb:{{bl_stts.card-title-fz-mb}}px;--card-title-fw-mb:{{bl_stts.card-title-fw-mb}};--card-title-mb-mb:{{bl_stts.card-title-mb-mb}}px;
+            --card-desc-fz:{{bl_stts.card-desc-fz}}px;--card-desc-fw:{{bl_stts.card-desc-fw}};--card-desc-color:{{bl_stts.card-desc-color}};--card-desc-mb:{{bl_stts.card-desc-mb}}px;
+            --card-desc-fz-mb:{{bl_stts.card-desc-fz-mb}}px;--card-desc-fw-mb:{{bl_stts.card-desc-fw-mb}};--card-desc-mb-mb:{{bl_stts.card-desc-mb-mb}}px;
+          "
+        >
+          <div class="concessionary-user-type">{{ bl_stts['card-type'] }}</div>
+          <div class="concessionary-card-title">{{ bl_stts['card-title-type'] }}</div>
+          <div class="concessionary-card-desc">
+            {{ bl_stts['card-desc-type'] }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+    .main-content {
+      max-width: 1200px;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .cs-concessionary-card {
+      width: 100%;
+      padding: 2vw 0;
+      {% if se_stts.down-bg %}
+        background: var(--down-bg) no-repeat center center;
+      {% else %}
+        background-color: var(--down-color);
+      {% endif %}
+    }
+    .cs-concessionary-card .concessionary-card-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--card-gap);
+    }
+    .cs-concessionary-card .concessionary-card-list .concessionary-card-item {
+      position: relative;
+      width: var(--card-wi);
+      max-width: 300px;
+      padding: 1.25vw;
+      background-color: var(--card-bg-color);
+    }
+
+    .cs-concessionary-card .concessionary-card-list .concessionary-card-item:before {
+    background-image: radial-gradient(var(--down-color) 6px, transparent 6px);
+    background-repeat: repeat-y;
+    background-size: 20px 20px;
+    content: "";
+    display: block;
+    left: -8px;
+    position: absolute;
+    height: calc(100% - 6px);
+    top: 6px;
+    width: 20px;
+  }
+
+    .cs-concessionary-card .concessionary-card-list .concessionary-card-item .concessionary-user-type {
+      width: max-content;
+      font-weight: var(--card-fw);
+      font-family: Inter
+      , sans-serif;
+      line-height: 1em;
+      font-size: var(--card-fz);
+      padding: 5px 10px;
+      margin-bottom: var(--card-mb);
+      color: var(--card-color);
+      border: 1px solid #555;
+    }
+    .cs-concessionary-card .concessionary-card-list .concessionary-card-item .concessionary-card-title {
+      font-weight: var(--card-title-fw);
+      font-family: Inter
+      , sans-serif;
+      line-height: 1.4em;
+      font-size: var(--card-title-fz);
+      margin-bottom: var(--card-title-mb);
+      color: var(--card-title-color);
+    }
+    .cs-concessionary-card .concessionary-card-list .concessionary-card-item .concessionary-card-desc {
+      font-weight: var(--card-desc-fw);
+      font-family: Inter
+      , sans-serif;
+      line-height: 1.4em;
+      font-size: var(--card-desc-fz);
+      margin-bottom: var(--card-desc-mb);
+      color: var(--card-desc-color);
+    }
+
+    @media (max-width: 960px) {
+      .main-content {
+        width: 80%;
+      }
+
+      .cs-concessionary-card {
+        padding:10vw 0;
+      }
+
+      .cs-concessionary-card .concessionary-card-list {
+        flex-wrap: wrap;
+      }
+      .cs-concessionary-card .concessionary-card-list .concessionary-card-item {
+        width: var(--card-wi-mb);
+        max-width: inherit;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .cs-concessionary-card .concessionary-card-list .concessionary-card-item .concessionary-user-type {
+        width: max-content;
+        font-weight: var(--card-fw-mb);
+        font-size: var(--card-fz-mb);
+        padding: 5px 10px;
+        margin-bottom: var(--card-mb-mb);
+        border: 1px solid #555;
+      }
+      .cs-concessionary-card .concessionary-card-list .concessionary-card-item .concessionary-card-title {
+        font-weight: var(--card-title-fw-mb);
+        font-size: var(--card-title-fz-mb);
+        margin-bottom: var(--card-title-mb-mb);
+      }
+      .cs-concessionary-card .concessionary-card-list .concessionary-card-item .concessionary-card-desc {
+        font-weight: var(--card-desc-fw-mb);
+        font-size: var(--card-desc-fz-mb);
+        margin-bottom: var(--card-desc-mb-mb);
+      }
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Card List",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "color",
+      "id": "down-color",
+      "label": "count down background",
+      "default": "#ba281c"
+    },
+    {
+      "type": "image_picker",
+      "label": "color background img",
+      "id": "down-bg"
+    },
+    {
+      "type": "range",
+      "label": "gap",
+      "id": "card-gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 10
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Custom Card Item",
+
+      "settings": [
+        {
+      "type": "range",
+      "label": "width",
+      "id": "card-wi",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 20
+    },
+         {
+      "type": "range",
+      "label": "width(mobile)",
+      "id": "card-wi-mb",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 80
+    },
+            {
+      "type": "color",
+      "id": "card-bg-color",
+      "label": "card background",
+      "default": "#fff"
+    },
+        {
+          "type": "header",
+          "content": "Card User Type"
+        },
+        {
+          "type": "text",
+          "label": "title",
+          "id": "card-type",
+          "default": "All Customers"
+        },
+        {
+          "type": "range",
+          "id": "card-fz",
+          "label": "fontSize",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 16
+        },
+        {
+          "type": "select",
+          "id": "card-fw",
+          "label": "fontWeight",
+          "default": "800",
+          "options": [
+            {
+              "value": "400",
+              "label": "t:settings_schema.typography.settings.font_weight.options__1"
+            },
+            {
+              "value": "500",
+              "label": "t:settings_schema.typography.settings.font_weight.options__2"
+            },
+            {
+              "value": "600",
+              "label": "t:settings_schema.typography.settings.font_weight.options__3"
+            },
+            {
+              "value": "700",
+              "label": "t:settings_schema.typography.settings.font_weight.options__4"
+            },
+            {
+              "value": "800",
+              "label": "t:settings_schema.typography.settings.font_weight.options__5"
+            },
+            {
+              "value": "900",
+              "label": "t:settings_schema.typography.settings.font_weight.options__6"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "card-mb",
+          "label": "margin bottom",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 10
+        },
+        {
+          "type": "color",
+          "id": "card-color",
+          "label": "count down title",
+          "default": "#000"
+        },
+        {
+          "type": "range",
+          "id": "card-fz-mb",
+          "label": "fontSize(mobile)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 12
+        },
+        {
+          "type": "select",
+          "id": "card-fw-mb",
+          "label": "fontWeight(mobile)",
+          "default": "800",
+          "options": [
+            {
+              "value": "400",
+              "label": "t:settings_schema.typography.settings.font_weight.options__1"
+            },
+            {
+              "value": "500",
+              "label": "t:settings_schema.typography.settings.font_weight.options__2"
+            },
+            {
+              "value": "600",
+              "label": "t:settings_schema.typography.settings.font_weight.options__3"
+            },
+            {
+              "value": "700",
+              "label": "t:settings_schema.typography.settings.font_weight.options__4"
+            },
+            {
+              "value": "800",
+              "label": "t:settings_schema.typography.settings.font_weight.options__5"
+            },
+            {
+              "value": "900",
+              "label": "t:settings_schema.typography.settings.font_weight.options__6"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "card-mb-mb",
+          "label": "margin bottom(mobile)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 10
+        },
+        {
+          "type": "header",
+          "content": "Card Title"
+        },
+        {
+          "type": "text",
+          "label": "title",
+          "id": "card-title-type",
+          "default": "All Customers"
+        },
+        {
+          "type": "range",
+          "id": "card-title-fz",
+          "label": "fontSize",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 28
+        },
+        {
+          "type": "select",
+          "id": "card-title-fw",
+          "label": "fontWeight",
+          "default": "800",
+          "options": [
+            {
+              "value": "400",
+              "label": "t:settings_schema.typography.settings.font_weight.options__1"
+            },
+            {
+              "value": "500",
+              "label": "t:settings_schema.typography.settings.font_weight.options__2"
+            },
+            {
+              "value": "600",
+              "label": "t:settings_schema.typography.settings.font_weight.options__3"
+            },
+            {
+              "value": "700",
+              "label": "t:settings_schema.typography.settings.font_weight.options__4"
+            },
+            {
+              "value": "800",
+              "label": "t:settings_schema.typography.settings.font_weight.options__5"
+            },
+            {
+              "value": "900",
+              "label": "t:settings_schema.typography.settings.font_weight.options__6"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "card-title-mb",
+          "label": "margin bottom",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 10
+        },
+        {
+          "type": "color",
+          "id": "card-title-color",
+          "label": "count down title",
+          "default": "#000"
+        },
+        {
+          "type": "range",
+          "id": "card-title-fz-mb",
+          "label": "fontSize(mobile)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 16
+        },
+        {
+          "type": "select",
+          "id": "card-title-fw-mb",
+          "label": "fontWeight(mobile)",
+          "default": "800",
+          "options": [
+            {
+              "value": "400",
+              "label": "t:settings_schema.typography.settings.font_weight.options__1"
+            },
+            {
+              "value": "500",
+              "label": "t:settings_schema.typography.settings.font_weight.options__2"
+            },
+            {
+              "value": "600",
+              "label": "t:settings_schema.typography.settings.font_weight.options__3"
+            },
+            {
+              "value": "700",
+              "label": "t:settings_schema.typography.settings.font_weight.options__4"
+            },
+            {
+              "value": "800",
+              "label": "t:settings_schema.typography.settings.font_weight.options__5"
+            },
+            {
+              "value": "900",
+              "label": "t:settings_schema.typography.settings.font_weight.options__6"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "card-title-mb-mb",
+          "label": "margin bottom(mobile)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 10
+        },
+        {
+          "type": "header",
+          "content": "Card Description"
+        },
+        {
+          "type": "text",
+          "label": "title",
+          "id": "card-desc-type",
+          "default": "All Customers"
+        },
+        {
+          "type": "range",
+          "id": "card-desc-fz",
+          "label": "fontSize",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 28
+        },
+        {
+          "type": "select",
+          "id": "card-desc-fw",
+          "label": "fontWeight",
+          "default": "800",
+          "options": [
+            {
+              "value": "400",
+              "label": "t:settings_schema.typography.settings.font_weight.options__1"
+            },
+            {
+              "value": "500",
+              "label": "t:settings_schema.typography.settings.font_weight.options__2"
+            },
+            {
+              "value": "600",
+              "label": "t:settings_schema.typography.settings.font_weight.options__3"
+            },
+            {
+              "value": "700",
+              "label": "t:settings_schema.typography.settings.font_weight.options__4"
+            },
+            {
+              "value": "800",
+              "label": "t:settings_schema.typography.settings.font_weight.options__5"
+            },
+            {
+              "value": "900",
+              "label": "t:settings_schema.typography.settings.font_weight.options__6"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "card-desc-mb",
+          "label": "margin bottom",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 10
+        },
+        {
+          "type": "color",
+          "id": "card-desc-color",
+          "label": "count down title",
+          "default": "#000"
+        },
+        {
+          "type": "range",
+          "id": "card-desc-fz-mb",
+          "label": "fontSize(mobile)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 16
+        },
+        {
+          "type": "select",
+          "id": "card-desc-fw-mb",
+          "label": "fontWeight(mobile)",
+          "default": "800",
+          "options": [
+            {
+              "value": "400",
+              "label": "t:settings_schema.typography.settings.font_weight.options__1"
+            },
+            {
+              "value": "500",
+              "label": "t:settings_schema.typography.settings.font_weight.options__2"
+            },
+            {
+              "value": "600",
+              "label": "t:settings_schema.typography.settings.font_weight.options__3"
+            },
+            {
+              "value": "700",
+              "label": "t:settings_schema.typography.settings.font_weight.options__4"
+            },
+            {
+              "value": "800",
+              "label": "t:settings_schema.typography.settings.font_weight.options__5"
+            },
+            {
+              "value": "900",
+              "label": "t:settings_schema.typography.settings.font_weight.options__6"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "card-desc-mb-mb",
+          "label": "margin bottom(mobile)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 10
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Card List",
+
+    }
+  ]
+}
+{% endschema %}

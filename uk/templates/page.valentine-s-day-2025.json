@@ -1,0 +1,90 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "creality_2025_2_valentine_day_WPiKpp": {
+      "type": "creality_2025_2_valentine_day",
+      "blocks": {
+        "right_protection_ggHtP8": {
+          "type": "right-protection",
+          "settings": {
+            "rp_image": "shopify://shop_images/20250207-182332.png",
+            "rp_title": "Free SHIPPING over £49.99",
+            "rp_desc": "Delivery calculated per shipment"
+          }
+        },
+        "right_protection_PNW3UM": {
+          "type": "right-protection",
+          "settings": {
+            "rp_image": "shopify://shop_images/20250207-182349.png",
+            "rp_title": "14-Day Money Back Guarantee",
+            "rp_desc": "Hassle-free returns within 14 days."
+          }
+        },
+        "right_protection_hWUCHx": {
+          "type": "right-protection",
+          "settings": {
+            "rp_image": "shopify://shop_images/20250207-182342.png",
+            "rp_title": "100% Secure Payment",
+            "rp_desc": "Shop with confidence."
+          }
+        }
+      },
+      "block_order": [
+        "right_protection_ggHtP8",
+        "right_protection_PNW3UM",
+        "right_protection_hWUCHx"
+      ],
+      "settings": {
+        "header_title": "ENGRAVE LOVE",
+        "header_subTitle": "Up to <span style=\"text-decoration:underline\">50% OFF</span>",
+        "header_subTitle3": "Create Your Memories!",
+        "big_title": "Happy Valentine's Day!",
+        "big_image": "shopify://shop_images/20250207-180858.jpg",
+        "hot_product": "falcon2-pro-enclosed-laser-engraver-cutter",
+        "hot_title": "Deal of the days",
+        "hot_review": "(98 reviews)",
+        "countdown": "2025-02-17T00:00:00",
+        "hot_link": "Full details",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/e2c32189931c46c1ae4f151d088ff3ee.mp4#t=,",
+        "video_review": "Rated 4.9/5 by 167 of happy customers",
+        "section1_title": "Falcon2 Series Laser Engraver",
+        "section1_sub_title": "",
+        "section1_collection": "falcon2-engraver",
+        "section2_title": "Material Offer",
+        "section2_sub_title": "Want to make something special for Valentine’s Day? Check out our awesome range of materials!",
+        "section2_collection": "materials-for-laser-engraving",
+        "section2_collection_left_text": "Accessories for 22W/40W",
+        "section2_collection_left_subtitle": "",
+        "section2_collection_left": "accessories-for-12w-22w-40w-60w-laser-cutter",
+        "section2_collection_right_text": "Accessories for 5W/10W",
+        "section2_collection_right_subtitle": "",
+        "section2_collection_right": "accessories-for-5w-7-5w-10w-for-laser-engravers",
+        "section3_collection": "engraver-combo",
+        "section3_json": "",
+        "title": "",
+        "he-fz": 0,
+        "he-fz-mb": 0,
+        "form_title": "GET ON THE LIST",
+        "form_subTitle": "Create More in 2025 – Limited-Time Promos!",
+        "form_btn": "subscirbe"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "creality_2025_2_valentine_day_WPiKpp"
+  ]
+}

@@ -1,0 +1,538 @@
+<style>
+  .section-block-{{section.id}} {
+    line-height: normal;
+  }
+  .section-block-{{section.id}} .common-title {
+    position: relative;
+    font-size: 1.779vw;
+    font-weight: 600;
+    color: #65AB79;
+    text-align: center;
+    margin-bottom: 1.563vw;
+  }
+  .section-block-{{section.id}} .common-subtitle {
+    font-size: 1.042vw;
+    color: #65AB79;
+    font-weight: 500;
+    text-align: center;
+  }
+  .section-block-{{section.id}} .common-text {
+    font-size: 14px;
+    text-align: center;
+  }
+  .section-block-{{section.id}} .text-color {
+    color: #3F7149;
+  }
+  .section-block-{{section.id}} .color-block {
+    height: 5px;
+    width: 100px;
+    border-radius: 20px;
+    bottom: 6px;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FDDC7F;
+    position: absolute; 
+  }
+  .section-block-{{section.id}} .content { 
+    width: 62.500vw;
+    margin: 0 auto;
+  }
+  .section-block-{{section.id}} .section2 .tabs {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .section-block-{{section.id}} .section2 .tabs .tab-item {
+    position: relative;
+    font-size: 28px;
+    font-weight: 500;
+    color: #868686;
+    cursor: pointer;
+  }
+  .section-block-{{section.id}} .section2 .tabs .tab-item.active {
+    color: #3F7149;
+    font-weight: bold;
+  }
+  .section-block-{{section.id}} .section2 .tabs .table-line {
+    width: 2px;
+    height: 20px;
+    background-color: #FDDC7F;
+  }
+  .section-block-{{section.id}} .section2 .listing {
+    margin-top: 50px;
+    display: none;
+  }
+  .section-block-{{section.id}} .section2 .checked {
+    display: block;
+  }
+  .section-block-{{section.id}} .section2 .listing .img-item {
+    width: 1100px;
+    margin: 0 auto;
+  }
+  .section-block-{{section.id}} .section2 .listing .prize-listing {
+    padding: 30px 0;
+    background-color: #65AB79; 
+  }
+  .section-block-{{section.id}} .section2 .listing .prize-listing .prize-imgs {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .section-block-{{section.id}} .section2 .listing .prize-listing .prize-imgs .img-wrap {
+    flex-shrink: 0;
+    width: 330px;
+  }
+  .section-block-{{section.id}} .section2 .listing .prize-listing .prize-imgs .img-wrap:nth-child(2) {
+    width: 408px;
+  } 
+  .section-block-{{section.id}} .section2 .listing .prize-listing .prize-imgs .prize-img {
+    width: 100%;
+  }
+  /* .section-block-{{section.id}} .section2 .listing .prize-listing .prize-imgs .prize-img2 { */
+    /* width: 408px; */
+  /* } */
+  .section-block-{{section.id}} .section2 .listing .prize-listing .note {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  .section-block-{{section.id}} .section2 .listing .date-line {
+    margin-top: 50px;
+  }
+  .section-block-{{section.id}} .section2 .listing .down-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .section-block-{{section.id}} .section2 .listing .bottom-img {
+    width: 700px;
+    margin-left: 50%;
+    transform: translateX(-50%);  
+  }
+  .section-block-{{section.id}} .section2 .listing .input-box {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .section-block-{{section.id}} .section2 .listing .input-box .input-wrap {
+    width: 800px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 12%;
+  }
+  .section-block-{{section.id}} .section2 .listing .input-wrap .common-title {
+    color: #ffffff;
+    font-size: 2.5vw;
+  }
+  .form-control-input {
+    width: 100%;
+    height: 32px;
+    background-color: #97C6A4;
+  }
+  .section-block-{{section.id}} .section2 .listing .input-img {
+    width: 100%;
+  }
+  .section-block-{{section.id}} .section2 .listing .input-note {
+    font-size: 22px;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .section-block-{{section.id}} .section2 .listing .video-wrap {
+    width: 1200px;
+    border-radius: 20px;
+    margin: 60px auto;
+    padding: 30px 0;
+    background-color: #66AC7B;
+  }
+  .section-block-{{section.id}} .section2 .listing .video-wrap .common-title {
+    color: #ffffff;
+  }
+  .section-block-{{section.id}} .section2 .listing .video-item {
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+  .section-block-{{section.id}} .section3 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    z-index: 50;
+    background-color: #3E7148;
+  }
+  .section-block-{{section.id}} .section3 .content {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+  }
+  .section-block-{{section.id}} .section3 .share-text {
+    font-size: 22px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  .section-block-{{section.id}} .section3 .icon-img {
+    width: 20px;
+  }
+  .section-block-{{section.id}} .section3 .share-link {
+    display: flex;
+    align-items: center;
+  }
+  @media (min-width: 768px) {
+    .section-block-{{section.id}} .mb {
+      display: none;
+    }
+    .section-block-{{section.id}} .mt-60 {
+      margin-top: 60px; 
+    }
+    .section-block-{{section.id}} .mt-30 {
+      margin-top: 30px;
+    }
+    .section-block-{{section.id}} .vertical-center {
+      margin-top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  @media (max-width: 768px) {
+    .section-block-{{section.id}} .section3 {
+      bottom: 62px;
+    }
+    .section-block-{{section.id}} .mt-60 {
+      margin-top: 10.667vw;
+    }
+    .section-block-{{section.id}} .pc {
+      display: none;
+    }
+    .section-block-{{section.id}} .common-title {
+      font-size: 6.333vw;
+      margin-bottom: 8.6vw;
+    }
+    .section-block-{{section.id}} .common-subtitle {
+      font-size: 4.267vw;
+    }
+    .section-block-{{section.id}} .content {
+      width: 100%;
+      padding: 0 4.267vw;
+    }
+    .section-block-{{section.id}} .section2 .tabs {
+      width: 100%;
+      padding: 0 16px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .section-block-{{section.id}} .section2 .tabs .tab-item {
+      position: relative;
+      font-size: 14px;
+      font-weight: 500;
+      color: #868686;
+      cursor: pointer;
+    }
+    .section-block-{{section.id}} .color-block {
+      height: 5px;
+      width: 60px;
+      border-radius: 20px;
+      bottom: 0px;
+      z-index: -1;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #FDDC7F;
+      position: absolute;
+    }
+    .section-block-{{section.id}} .section2 .listing .prize-listing .prize-imgs {
+      width: 100%;
+      padding: 0 16px;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    .section-block-{{section.id}} .section2 .listing .prize-listing .prize-imgs .prize-img {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    .section-block-{{section.id}} .section2 .listing {
+      margin-top: 0px; 
+    }
+    .section-block-{{section.id}} .section2 .listing .prize-listing .prize-imgs .img-wrap {
+      flex-shrink: 0;
+      width: 100%;
+    }
+    .section-block-{{section.id}} .section2 .listing .prize-listing .prize-imgs .img-wrap:nth-child(2) {
+      width: 100%;
+    } 
+    .section-block-{{section.id}} .section2 .listing .bottom-img {
+      width: 95%;
+    }
+    .section-block-{{section.id}} .section3 .share-text {
+      font-size: 14px;
+    }
+    .section-block-{{section.id}}  .section2 .listing .input-box {
+      width: 100%;
+      padding: 0 16px;
+      margin-top: 60px;
+    }
+    .video-wrap-list {
+      width: 100%;
+      padding: 0 16px;
+    }
+    .section-block-{{section.id}} .section2 .listing .video-wrap {
+      width: 100%;
+    }
+    .section-block-{{section.id}} .section2 .listing .video-item {
+      width: 95%;
+      height: 58.667vw;
+      margin: 0 auto;
+      border-radius: 15px;
+    }
+    .section-block-{{section.id}}  .section2 .listing .input-note {
+    font-size: 13px;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+    .section-block-{{section.id}}  .section2 .listing .input-box .input-wrap {
+      width: 90%;
+      top: 0;
+    }
+    .section-block-{{section.id}} .section2 .listing .input-wrap .common-title {
+      color: #ffffff;
+      font-size: 5.5vw;
+      margin-bottom: 10px;
+    }
+  }
+  [data-token="NiXn0DDAtwnjp0vCbH1Joobw0EO8wZnT"] .form-control-input {
+    border-radius: 20px;
+    width: 100%;
+    height: 38px;
+    padding-left: 16px;
+    font-size: 20px;
+    border: none;
+    color: #ffffff;
+    background-color: #97C6A4;
+  }
+  [data-token="NiXn0DDAtwnjp0vCbH1Joobw0EO8wZnT"] .form-control-input::placeholder {
+    color: rgba(255, 255, 255, .7);
+    font-size: 16px;
+  }
+  [data-token="NiXn0DDAtwnjp0vCbH1Joobw0EO8wZnT"] .submit-button {
+    cursor: pointer;
+    border: none;
+    margin-left: 50%;
+    margin-top: 20px;
+    width: 200px;
+    transform: translateX(-50%);
+    background-color: #FFBC02;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    animation: scale .5s ease infinite ;
+  } 
+  @keyframes scale {
+    0% {
+      transform: translateX(-50%) scale(1);
+    }
+    50% {
+      transform: translateX(-50%) scale(1.08);
+    }
+    100% {
+      transform: translateX(-50%) scale(1);
+    }
+  }
+</style> 
+  <div id="container" class="section-block-{{section.id}}"> 
+    <div class="section1">
+      <a href="https://www.facebook.com/groups/falconlaserengraver" target="_blank">
+        <img 
+          data-srcset="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2024_04_community_mb.png 768w, https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2024_04_community_pc.png?v=1711941253.png"
+          data-sizes="100vw" class="lazyload" alt="Banner img" 
+        />
+      </a>
+    </div>
+    <div class="section2 mt-60">
+      <!-- <div class="content"> -->
+        <div class="tabs">
+          <div class="tab-item active" data-to="listing1">
+            <span>Contest Details</span>
+            <div class="color-block"></div>
+          </div>
+          <div class="table-line"></div>
+          <div class="tab-item"  data-to="listing2">
+            <span>Contest Rules</span>
+            <div class="color-block"></div>
+          </div>
+          <div class="table-line"></div>
+          <div class="tab-item"  data-to="listing3">
+            <span>Get Sample Files</span>
+            <div class="color-block"></div>
+          </div>
+        </div>
+        <div class="listing checked" data-listing="listing1">
+          <img class="img-item pc" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/21.png?v=1712029350" alt="" srcset="">
+          <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/26_f308c23e-2b3c-438e-95ad-5b984ecf2787.png?v=1712048971" alt="" class="item-img mb">
+          <div class="common-title">
+            <span>Contest Prizes</span>
+            <div class="color-block"></div>
+          </div>
+          <div class="prize-listing">
+            <div class="prize-imgs">
+              <div class="img-wrap">
+                <img class="prize-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/20240322-163525.png?v=1711957108" alt="">
+              </div>
+              <div class="img-wrap">
+                <img class="prize-img prize-img2" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/20240322-163442_2c842fe4-5755-42f8-876e-e5c9060b1718.png?v=1711957108" alt="">
+              </div>
+              <div class="img-wrap">
+               <img class="prize-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/20240322-163506.png?v=1711957108" alt="">
+              </div>
+            </div>
+            <div class="note">Note: <br class="pc"> all participants will get a special discount code <br class="pc"> via email after the competition ends</div>
+          </div>
+          <div class="date-line">
+            <div class="common-title">
+              <span>Contest Timeline</span>
+              <div class="color-block"></div>
+            </div>
+            <div class="common-subtitle">Submission Period</div>
+            <div class="common-text">April 3rd, 2024 - April 27th,2024</div>
+            <svg t="1711963571216" class="down-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1831" width="24" height="24"><path d="M493.504 558.144a31.904 31.904 0 0 0 45.28 0l308.352-308.352a31.968 31.968 0 1 0-45.248-45.248l-285.728 285.728-294.176-294.144a31.968 31.968 0 1 0-45.248 45.248l316.768 316.768z" p-id="1832"></path><path d="M801.888 460.576l-285.728 285.728-294.144-294.144a31.968 31.968 0 1 0-45.248 45.248l316.768 316.768a31.904 31.904 0 0 0 45.28 0l308.352-308.352a32 32 0 1 0-45.28-45.248z" p-id="1833"></path></svg>
+            <div class="common-subtitle">Review Period</div>
+            <div class="common-text">April 28th, 2024 - April 29th, 2024</div>
+            <svg t="1711963571216" class="down-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1831" width="24" height="24"><path d="M493.504 558.144a31.904 31.904 0 0 0 45.28 0l308.352-308.352a31.968 31.968 0 1 0-45.248-45.248l-285.728 285.728-294.176-294.144a31.968 31.968 0 1 0-45.248 45.248l316.768 316.768z" p-id="1832"></path><path d="M801.888 460.576l-285.728 285.728-294.144-294.144a31.968 31.968 0 1 0-45.248 45.248l316.768 316.768a31.904 31.904 0 0 0 45.28 0l308.352-308.352a32 32 0 1 0-45.28-45.248z" p-id="1833"></path></svg>
+            <div class="common-subtitle">Anouncement</div>
+            <div class="common-text">April 30th, 2024</div>
+          </div>
+          <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/Make_it_Spring_73c26d8b-56fd-43b8-802e-f2cfde0cc4a2.png?v=1712024575" alt="" class="bottom-img mt-30">
+        </div> 
+        <div class="listing" data-listing="listing2">
+          <img class="img-item pc" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/18_a50e1a2e-d9fe-4e8b-bb54-92ad11ef429a.png?v=1712026731" alt="" 
+          >
+          <img class="img-item mb" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/22_d75db2df-298c-4b3a-8536-c7f170e53ccd.png?v=1712112111" alt="">
+          <img class="img-item pc" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/20_8916cb47-f76d-469e-b844-708edef8552b.png?v=1712029424" alt="" 
+            srcset="">
+          <img class="img-item mb" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/23_723e6b08-3b7d-4fce-9499-28dd633dba99.png?v=1712112112" alt="">
+          <img class="img-item pc" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/19_5a038610-6041-40c9-a19c-edb4ed172378.png?v=1712029413" alt="" 
+            srcset="">
+          <img class="img-item mb" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/24_f67d59dd-b32f-4923-ab52-3cb7bc6234f9.png?v=1712112112" alt="">
+          <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/Make_it_Spring_73c26d8b-56fd-43b8-802e-f2cfde0cc4a2.png?v=1712024575" alt="" class="bottom-img">
+        </div>
+        <div class="listing" data-listing="listing3"> 
+          <div class="input-box"> 
+            <img class="input-img pc" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/108.png?v=1712038314" alt="">
+            <img class="input-img mb" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/20240403-180834.png?v=1712138906" alt="">
+            <div class="input-wrap">
+              <div class="common-title mt-30">
+                <span>Get Sample Files</span>
+              </div>
+              <div class="input-note">No ideas where to start? <br> Sign up to get free spring jewelry files to make your first step!</div>
+              <mag-form><div class="mag-form" data-token="NiXn0DDAtwnjp0vCbH1Joobw0EO8wZnT"></div></mag-form>
+            </div>
+          </div>
+          <div class="video-wrap-list">
+            <div class="video-wrap">
+              <div class="common-title">
+                <span>How-to Tutorials</span>
+                <div class="color-block"></div>
+              </div>
+              <iframe class="video-item" src="https://www.youtube.com/embed/NbFbN1AK_QM?si=5R-BjRauG0v4FQ0g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+          <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/Make_it_Spring_73c26d8b-56fd-43b8-802e-f2cfde0cc4a2.png?v=1712024575" alt="" class="bottom-img">
+        </div>
+      <!-- </div> -->
+    </div>
+    <div class="section3"> 
+      <div class="content">
+        <a target="_blank" class="share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://www.crealityfalcon.com/pages/creality-falcon-spring-laser-jewelry-making">
+          <span class="share-text">Share on <strong>Facebook</strong> & tag <strong>CrealityFalcon </strong> to win Surprise Prize</span>
+          <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/106.png?v=1712025917" alt="" class="icon-img">
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <script type="module">
+    (function() {
+      var iconItems = $(".section-block-{{section.id}} .tab-item")
+      iconItems.each(function(item,i) {
+        let _index = i;
+        $(this).click(function() {
+          var listing = $(this).attr("data-to");
+          $('.section-block-{{section.id}} .listing').each(function(ele,index){
+            $(this).removeClass("checked");
+          })
+          iconItems.each(function(){
+            $(this).removeClass("active");
+          })
+          $(this).addClass("active");
+          $(`.section-block-{{section.id}} [data-listing='${listing}']`).addClass('checked');
+        })
+      })
+       
+    }) ()
+    
+  </script>
+  
+  {% schema %}
+    {
+      "name": "creality 24 04 Community",
+      "settings": [
+      ],
+      "blocks": [
+        {
+          "type":"product",
+          "name": "product",
+          "settings": [
+            {
+              "type": "product",
+              "id": "product",
+              "label": "产品"
+            },
+            {
+              "type": "textarea",
+              "id": "bottom_text",
+              "label": "底部文案"
+            }
+          ]
+        },
+        {
+          "type":"rule_item",
+          "name": "FAQ",
+          "settings": [
+            {
+              "type": "text",
+              "id": "rule_title",
+              "label": "标题"
+            },
+            {
+              "type": "text",
+              "id": "rule_text",
+              "label": "正文"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "creality 24 04 Community"
+        }
+      ]
+    }
+  {% endschema %}

@@ -1,0 +1,3768 @@
+<script async type="text/javascript" src="{{ 'gsap.js' | asset_url }}"></script>
+<style>
+  .blur-up {
+    filter: blur(1.25rem);
+    transition: filter 0.4s, -webkit-filter 0.4s;
+}
+
+.blur-up.loaded {
+    filter: blur(0rem);
+}
+
+.new-year-activity .blur-up {
+  filter: blur(20px);
+  transition: filter 0.4s, -webkit-filter 0.4s;
+}
+
+.new-year-activity .blur-up.loaded {
+  filter: blur(0px);
+}
+
+@charset "UTF-8";
+body,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.fit_picture {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.fit_picture img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 0;
+}
+
+:root {
+  --themeStyle-color: rgba(181, 139, 50, 1);
+  --themeStyle-color2: rgba(181, 139, 50, 0.3);
+  --hover-themeStyle-color: #14b655;
+  --radius-x: 12px;
+  --radius-s: 8px;
+  --price-color: #b53333;
+  --oprice-color: rgba(181, 139, 50, 0.3);
+}
+.text-font-color{
+  color: #C63053;
+}
+h3{
+  color: #C63053;
+}
+.n-price-color{
+  color: var(--price-color) !important;
+}
+#send-btn{
+  font-size: .85vw;
+  cursor: pointer;
+}
+.new-year-activity {
+  font-family: HarmonyOS_Sans_SC_Regular;
+  background-color: #FFFBFF;
+  color: #C63053;
+}
+.new-year-activity .swiper-button-next, .new-year-activity .swiper-button-prev {
+  color: var(--themeStyle-color);
+  border: 0.16vw solid var(--themeStyle-color);
+  border-radius: 50%;
+  padding: 0 1.04vw;
+}
+.new-year-activity .swiper-button-next::after, .new-year-activity .swiper-button-prev::after {
+  font-size: 0.94vw;
+  font-weight: bold;
+}
+.new-year-activity .swiper-pagination {
+  bottom: 0.52vw;
+}
+.new-year-activity .swiper-pagination .swiper-pagination-bullet {
+  width: 0.52vw;
+  height: 0.52vw;
+  background-color: #9E2642;
+  opacity: 0.3;
+}
+.new-year-activity .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #9E2642;
+  opacity: 1;
+}
+.new-year-activity .swiper {
+  position: relative;
+  width: 29.43vw;
+  overflow: hidden;
+}
+.new-year-activity .swiper img {
+  border-radius: 0.52vw;
+}
+.new-year-activity .p-mark {
+  display: flex;
+  gap: 0.52vw;
+  margin-bottom: 1.04vw;
+  font-size: 0.73vw;
+}
+.new-year-activity .p-mark img {
+  width: 5.21vw;
+}
+.new-year-activity .go-link {
+  display: flex;
+  align-items: center;
+  font-size: 0.73vw;
+  margin-top: 1.04vw;
+  font-family: HarmonyOS_Sans_SC_Medium;
+}
+.new-year-activity .go-link span {
+  padding-right: 0.52vw;
+  text-decoration: underline;
+}
+.new-year-activity .divi-line {
+  border-color: #9E2642;
+  border-bottom-width: 1px;
+  border-style: dashed;
+  margin: 1.04vw 0;
+}
+.new-year-activity .fireworks {
+  pointer-events: none !important;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+.new-year-activity .section-common {
+  position: relative;
+}
+.new-year-activity .section-common .wrap {
+  padding: 3.13vw 18.75vw 0;
+}
+.new-year-activity .section-common .wrap .text-box {
+  margin-top: 4.17vw;
+}
+.new-year-activity .section-common .wrap .h1-t {
+  font-size: 5vw;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(93deg, #ffbdcd 0%, #d61b46 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.new-year-activity .section-common .wrap .h3-t {
+  font-size: 2.08vw;
+  font-family: HarmonyOS_Sans_SC_Bold;
+  font-weight: 900;
+  text-align: center;
+}
+  .new-year-activity .section-common .wrap .h3-t2 {
+  font-size: 1.28vw;
+  font-family: HarmonyOS_Sans_SC_Bold;
+  font-weight: 900;
+  text-align: center;
+}
+.new-year-activity .section-common .wrap .p-ds {
+  font-size: 2.08vw;
+  text-align: center;
+}
+.new-year-activity .section-common .wrap .product-tag {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0.52vw;
+  top: 0.52vw;
+}
+.new-year-activity .section-common .wrap .product-tag .product-tag-save {
+  align-self: flex-end;
+  font-size: 0.63vw;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
+  text-transform: capitalize;
+  box-shadow: 0px 0.21vw 0.52vw 0 rgba(0, 0, 0, 0.08);
+  color: #fff;
+  background-color: #b53333;
+  border-top-left-radius: 0.21vw;
+  border-bottom-left-radius: 0.21vw;
+  padding: 0.31vw 0.42vw 0.26vw 0.42vw;
+}
+.new-year-activity .section-common .wrap .product-tag .product-tag-save::before {
+  content: "";
+  border-right: 0.63vw solid transparent;
+  position: absolute;
+  border-top: 0.63vw solid #b53333;
+  left: 100%;
+  top: 0;
+  bottom: 0;
+  border-bottom: 0.63vw solid #b53333;
+}
+.new-year-activity .section-common .wrap .product-wrap {
+  margin-top: 2.08vw;
+}
+.new-year-activity .section-common .wrap .product-wrap h2 {
+  font-size: 3.33vw;
+}
+.new-year-activity .section-common .wrap .product-wrap .product-swiper {
+  position: relative;
+  padding: 0 0 3.13vw;
+  margin-top: 2.08vw;
+  border-radius: var(--radius-x);
+}
+.new-year-activity .section-common .wrap .product-wrap .product-swiper img {
+  border-radius: var(--radius-s);
+}
+.new-year-activity .section-common .wrap .product-wrap .n-price,
+.new-year-activity .section-common .wrap .product-wrap .o-price {
+  font-size: 0.73vw;
+  font-family: HarmonyOS_Sans_SC_Medium;
+}
+.new-year-activity .section-common .wrap .product-wrap .n-price {
+  font-size: 1.3vw;
+  color: #9E2642;
+  font-weight: bold;
+}
+.new-year-activity .section-common .wrap .product-wrap .o-price {
+  color: #cc9faa;
+  text-decoration: line-through;
+  margin-left: 0.31vw;
+}
+.new-year-activity .section-common .wrap .product-wrap .product-name {
+  font-size: 0.73vw;
+  margin-top: 0.52vw;
+}
+.new-year-activity .section-common .wrap .product-wrap .product-add-cart {
+  display: flex;
+  width: max-content;
+  bottom: 0.52vw;
+  font-size: 0.63vw;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.25em;
+  border-radius: 40px;
+  transition-duration: 400ms;
+  padding: 0.21vw 1.04vw 0.21vw 0.21vw;
+  backdrop-filter: blur(4px);
+  align-items: center;
+  cursor: pointer;
+  background-color: #9E2642;
+  color: #fff;
+}
+.new-year-activity .section-common .wrap .product-wrap .product-add-cart .add-cart-svg {
+  padding: 0.52vw;
+  /* background: #fff; */
+  border-radius: 50%;
+  margin-right: 0.52vw;
+}
+.new-year-activity .section-common .wrap .product-wrap .product-add-cart:hover {
+  color: #fff;
+  background-color: #3c3c3c;
+  border-style: none;
+}
+.new-year-activity .section-common .wrap .product-wrap .product-item:hover .product-add-cart {
+  opacity: 1;
+}
+.new-year-activity .section-common .wrap .add-cart-btn {
+  width: 100%;
+  font-weight: 700;
+  font-size: 0.73vw;
+  line-height: 1.3;
+  color: #fff;
+  background-color: #C63053;
+  border-radius: 40px;
+  padding: 0.83vw 1.3vw;
+  text-align: center;
+  cursor: pointer;
+}
+.new-year-activity .section-common .wrap .add-cart-btn:hover {
+  background-color: #242424;
+}
+.new-year-activity .cproduct-option{
+  border: 1px solid;
+  padding: 0.35vw;
+  margin: 0.35vw 0;
+}
+.new-year-activity .section-video {
+  padding: 5.21vw 0;
+  background: url('https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-UANFo10GtYbg-newsletter-2.png?v=1706494686') no-repeat scroll center center/cover #fff;
+}
+.new-year-activity .section-video p{
+  color: #C63053;
+}
+.new-year-activity .swiper-list {
+  padding: 0 0 3.13vw;
+}
+.new-year-activity .banner-image {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  min-height: 20.26vw;
+  padding-top: 2.6vw;
+}
+.new-year-activity .banner-image img {
+  position: absolute;
+  width: 26.04vw;
+}
+.new-year-activity .section-coupon {
+  margin-top: 4.17vw;
+}
+.new-year-activity .section-coupon .coupon-box {
+  display: flex;
+  gap: 1.04vw;
+}
+.new-year-activity .section-coupon .coupon-box .coupon-head-wrap {
+  border: 0.05vw solid #eeeeee;
+  border-radius: 1.04vw;
+  overflow: hidden;
+}
+.new-year-activity .section-coupon .coupon-box .coupon-head {
+  display: flex;
+  padding: 1.04vw;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #AB3551;
+  color: #fff;
+}
+.new-year-activity .section-coupon .coupon-box .coupon-head p {
+  font-size: 2.6vw;
+  font-family: HarmonyOS_Sans_SC_Bold;
+  color: #fff;
+}
+.new-year-activity .section-coupon .coupon-box .coupon-head p sup {
+  font-size: 1.25vw;
+  vertical-align: super;
+  left: 0.78vw;
+}
+.new-year-activity .section-coupon .coupon-box .coupon-head-title {
+  font-size: 1.25vw;
+  color: #fff;
+  font-family: HarmonyOS_Sans_SC_Medium;
+}
+.new-year-activity .section-coupon .coupon-box .coupon-card {
+  display: flex;
+  margin-top: 2.08vw;
+  padding: 0 1.82vw;
+  text-align: center;
+}
+.new-year-activity .section-coupon .coupon-box .coupon-card > div {
+  background-color: #F3E1AB;
+  border-radius: 0.63vw;
+  overflow: hidden;
+  color: #3c3c3c;
+}
+.new-year-activity .section-coupon .coupon-box .coupon-card-code {
+  position: relative;
+  flex: 25%;
+  display: flex;
+  padding: 1.04vw;
+}
+.new-year-activity .section-coupon .coupon-box .coupon-card-code::after {
+  content: "";
+  border: 0.05vw dashed #3c3c3c;
+  position: absolute;
+  top: 0.47vw;
+  bottom: 0.47vw;
+  left: 0;
+}
+.new-year-activity .section-coupon .coupon-box .coupon-card-desc {
+  flex: 75%;
+  padding: 1.04vw;
+  line-height: 1.3;
+}
+.new-year-activity .section-coupon .coupon-box .coupon-t1 {
+  font-size: 1.04vw;
+  font-weight: bold;
+  font-family: HarmonyOS_Sans_SC_Bold;
+}
+.new-year-activity .section-coupon .coupon-box .coupon-t2 {
+  font-size: 2.08vw;
+  font-weight: bold;
+  font-family: HarmonyOS_Sans_SC_Bold;
+}
+.new-year-activity .section-coupon .coupon-box .coupon-t3 {
+  font-size: 0.73vw;
+  font-family: HarmonyOS_Sans_SC_Medium;
+}
+.new-year-activity .section-hotSale {
+  margin-top: 4.17vw;
+}
+.new-year-activity .section-hotSale .hotSale-box {
+  display: flex;
+  position: relative;
+  border: 0.13vw solid #9E2642;
+  border-radius: 1.04vw;
+  padding: 3.39vw 2.86vw;
+}
+.new-year-activity .section-hotSale .hotSale-box .hotSale-title {
+  position: absolute;
+  top: 0;
+  left: 3.13vw;
+  padding: 0 1.04vw;
+  transform: translateY(-50%);
+  font-family: HarmonyOS_Sans_SC_Bold;
+  font-size: 2.08vw;
+  background-color: #FFFBFF;
+  color: #C63053;
+}
+.new-year-activity .section-hotSale .hotSale-box .hotSale-left {
+  width: 40%;
+  padding: 0.52vw;
+}
+.new-year-activity .section-hotSale .hotSale-box .hotSale-right {
+  width: 60%;
+  padding: 0.52vw 0.52vw 0.52vw 3.13vw;
+}
+.new-year-activity .section-hotSale .hotSale-box .product-title {
+  color: #000;
+  font-size: 1.67vw;
+  font-family: HarmonyOS_Sans_SC_Medium;
+  line-height: 1.3;
+}
+.new-year-activity .section-hotSale .hotSale-box .product-tips {
+  display: flex;
+  margin-top: 1.04vw;
+  font-size: 0.73vw;
+  font-family: HarmonyOS_Sans_SC_Medium;
+  column-gap: 1.04vw;
+  color: #000;
+}
+.new-year-activity .section-hotSale .hotSale-box .product-tips svg {
+  fill: none; 
+  stroke: none;
+}
+.new-year-activity .section-hotSale .hotSale-box .product-tips > div {
+  display: flex;
+  align-items: center;
+}
+.new-year-activity .section-hotSale .hotSale-box .product-tips > div span {
+  padding-left: 0.31vw;
+}
+.new-year-activity .section-hotSale .hotSale-box .product-price {
+  display: flex;
+  align-items: center;
+}
+.new-year-activity .section-hotSale .hotSale-box .product-price .n-price {
+  font-size: 1.67vw;
+  font-family: HarmonyOS_Sans_SC_Bold;
+  color: #9E2642 !important;
+  line-height: 1;
+}
+.new-year-activity .section-hotSale .hotSale-box .product-price .o-price {
+  font-size: 1.25vw;
+  font-family: HarmonyOS_Sans_SC_Medium;
+  color: #65656566;
+  text-decoration: line-through;
+  margin-left: 0.52vw;
+  line-height: 1;
+}
+.new-year-activity .section-hotSale .hotSale-box .product-option {
+  margin-top: 1.04vw;
+  flex-direction: column;
+}
+.new-year-activity .section-hotSale .hotSale-box .product-option h5 {
+  font-size: 0.63vw;
+  font-family: HarmonyOS_Sans_SC_Bold;
+}
+.new-year-activity .section-hotSale .hotSale-box .product-option .option-btn {
+  display: flex;
+  gap: 0.52vw;
+  flex-wrap: wrap;
+  margin-top: 0.52vw;
+}
+.new-year-activity .section-hotSale .hotSale-box .product-option .option-btn div {
+  font-size: 0.73vw;
+  font-family: "Outfit", sans-serif;
+  line-height: 1.3em;
+  font-weight: 600;
+  letter-spacing: 0px;
+  color: #9E2642;
+  background-color: rgba(255, 0, 0, 0);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #9E2642;
+  border-radius: 30px;
+  transition-duration: 300ms;
+  padding: 0.31vw 2.08vw;
+  cursor: pointer;
+}
+.new-year-activity .section-hotSale .hotSale-box .product-option .option-btn div:hover {
+  color: #fff;
+  background-color: #3c3c3c;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #3c3c3c;
+}
+.new-year-activity .section-hotSale .hotSale-box .product-option .option-btn .option-active {
+  color: #fff;
+  background-color: #dd6682;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dd6682;
+}
+.new-year-activity .section-hotSale .hotSale-box .product-tips.type2 {
+  justify-content: space-between;
+  font-size: 0.83vw;
+}
+.new-year-activity .section-hotSale .hotSale-box .count-down {
+  display: flex;
+  padding: 0.78vw;
+  margin: 0 1.82vw;
+  column-gap: 0.52vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #9E2642;
+  color: #fff;
+  border-radius: 1.25vw 1.25vw 0 0;
+}
+.new-year-activity .section-hotSale .hotSale-box .count-down .time-wrap {
+  display: flex;
+  gap: 0.21vw;
+  align-items: center;
+  font-size: 1.15vw;
+  font-family: HarmonyOS_Sans_SC_Bold;
+}
+.new-year-activity .section-hotSale .hotSale-box .swiper-thumbs {
+  margin-top: 0.52vw;
+}
+.new-year-activity .section-hotSale .hotSale-box .swiper-thumbs .swiper-slide {
+  opacity: 0.4;
+}
+.new-year-activity .section-hotSale .hotSale-box .swiper-thumbs .swiper-slide.swiper-slide-thumb-active {
+  opacity: 1;
+  border: 0.1vw solid #9E2642;
+  border-radius: 0.52vw;
+}
+.new-year-activity .ticker-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.new-year-activity .ticker-container .ticker {
+  display: flex;
+  white-space: nowrap;
+  width: 100vw;
+}
+.new-year-activity .ticker-container .ticker-item {
+  font-size: 5vw;
+  padding: 0 1.56vw;
+  font-family: HarmonyOS_Sans_SC_Bold;
+  font-weight: bold;
+}
+.new-year-activity .ticker-container .ticker-item:nth-child(2n+1) {
+  -webkit-text-stroke: 0.05vw #C63053;
+  color: transparent;
+}
+.new-year-activity .section-footer {
+  background: url('https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-UANFo10GtYbg-newsletter-2.png?v=1706494686') no-repeat scroll center center/cover #fff;
+  padding-bottom: 9.38vw;
+}
+.new-year-activity .swp-prev, .new-year-activity .swp-next svg{
+  width: initial;
+}
+.new-year-activity .swp-prev, .new-year-activity .swp-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  color: #fff;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-image: none;
+  transform: scale(1);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  transition: all 0.3s;
+  margin-left: 30px;
+  margin-right: 30px;
+  border: 2px solid #9E2642;
+  
+}
+.new-year-activity .swp-prev:hover, .new-year-activity .swp-next:hover {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  transform: scale(1.4);
+}
+.new-year-activity .swp-prev {
+  left: -10%;
+}
+.new-year-activity .swp-next {
+  right: -10%;
+}
+
+  .new-year-activity .countdown {
+  text-align: center;
+}
+.new-year-activity .countdown .decorate {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.new-year-activity .countdown .decorate img {
+  width: auto;
+}
+.new-year-activity .countdown .decorate img:nth-child(1) {
+  position: absolute;
+  left: 15%;
+}
+.new-year-activity .countdown .decorate img:nth-child(2) {
+  position: absolute;
+  right: 20%;
+}
+.new-year-activity .countdown h3 {
+  font-size: 2.04vw;
+  margin-top: 1vw;
+}
+.new-year-activity .countdown .countdown-time {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.04vw;
+}
+.new-year-activity .countdown .time-item {
+  padding: 0 0.52vw;
+}
+.new-year-activity .countdown .time-item > div {
+  text-align: center;
+  font-size: 1.35vw;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: "Montserrat", sans-serif;
+  width: 2.92vw;
+  height: 2.92vw;
+  min-height: 2.92vw;
+  color: #fff;
+  background-color: #C63053;
+  border-width: 0.16vw;
+  border-radius: 0.52vw;
+  margin-top: 0.63vw;
+  padding-top: 0.63vw;
+}
+.new-year-activity .countdown .time-item > p {
+  text-align: center;
+  font-size: 0.63vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+  color: #C63053;
+}
+@media (max-width: 900px) {
+  .new-year-activity .swiper-button-next::after, .new-year-activity .swiper-button-prev::after {
+    font-size: 5.33vmin;
+  }
+  .new-year-activity .p-mark {
+    gap: 2.67vmin;
+    margin-bottom: 5.33vmin;
+    font-size: 3.73vmin;
+  }
+  .new-year-activity .p-mark img {
+    width: 26.67vmin;
+  }
+  .new-year-activity .swiper {
+    width: initial;
+  }
+  .new-year-activity .swiper-pagination {
+    bottom: 2.67vmin;
+  }
+  .new-year-activity .swiper-pagination .swiper-pagination-bullet {
+    width: 2.67vmin;
+    height: 2.67vmin;
+  }
+  .new-year-activity .divi-line {
+    border-bottom-width: 0.27vmin;
+    border-style: dashed;
+    margin: 5.33vmin 0;
+  }
+  .new-year-activity .go-link {
+    font-size: 3.73vmin;
+    margin-top: 5.33vmin;
+  }
+  .new-year-activity .go-link span {
+    padding-right: 2.67vmin;
+  }
+  .new-year-activity .swiper img {
+    border-radius: 2.67vmin;
+  }
+  .new-year-activity .section-common .wrap {
+    padding: 4vmin;
+  }
+  .new-year-activity .section-common .wrap .h1-t {
+    font-size: 8vmin;
+  }
+  .new-year-activity .section-common .wrap .h3-t {
+    font-size: 6.67vmin;
+  }
+  .new-year-activity .section-common .wrap .h3-t2 {
+    font-size: 4.67vmin;
+  }
+  .new-year-activity .section-common .wrap .p-ds {
+    font-size: 5.33vmin;
+  }
+  .new-year-activity .section-common .wrap .add-cart-btn {
+    font-size: 3.73vmin;
+    border-radius: 40px;
+    padding: 4.27vmin 4vmin;
+    cursor: pointer;
+  }
+  .new-year-activity .section-common .wrap .add-cart-btn:hover {
+    background-color: #C63053;
+  }
+  .new-year-activity .section-common .wrap .product-wrap h2 {
+    font-size: 6.93vmin;
+  }
+  .new-year-activity .section-common .wrap .product-wrap .product-swiper {
+    padding: 10.67vmin 2.67vmin 16vmin;
+    border-radius: 4.27vmin;
+  }
+  .new-year-activity .section-common .wrap .product-wrap .product-swiper img {
+    border-radius: 4.27vmin;
+  }
+  .new-year-activity .section-common .wrap .product-wrap .n-price,
+  .new-year-activity .section-common .wrap .product-wrap .o-price {
+    font-size: 3.73vmin;
+  }
+  .new-year-activity .section-common .wrap .product-wrap .o-price {
+    margin-left: 1.6vmin;
+  }
+  .new-year-activity .section-common .wrap .product-wrap .product-name {
+    font-size: 3.73vmin;
+    margin-top: 2.67vmin;
+  }
+  .new-year-activity .section-common .wrap .product-wrap .product-tag-sale,
+  .new-year-activity .section-common .wrap .product-wrap .product-tag-save {
+    font-size: 3.2vmin;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 1.07vmin 2.67vmin 0 rgba(0, 0, 0, 0.08);
+    padding: 1.6vmin 2.13vmin 1.33vmin 2.13vmin;
+  }
+  .new-year-activity .section-common .wrap .product-wrap .product-add-cart {
+    opacity: 1;
+    bottom: 2.67vmin;
+    font-size: 3.2vmin;
+    padding: 1.07vmin 5.33vmin 1.07vmin 1.07vmin;
+    backdrop-filter: blur(4px);
+  }
+  .new-year-activity .section-common .wrap .product-wrap .product-add-cart .add-cart-svg {
+    padding: 2.67vmin;
+    margin-right: 2.67vmin;
+  }
+  .new-year-activity .section-common .wrap .product-wrap .image-viewport > img {
+    min-height: 72vmin;
+  }
+  .new-year-activity .section-common .wrap .product-tag .product-tag-save {
+    font-size: 3.2vmin;
+    box-shadow: 0px 1.07vmin 2.67vmin 0 rgba(0, 0, 0, 0.08);
+    border-top-left-radius: 1.07vmin;
+    border-bottom-left-radius: 1.07vmin;
+    padding: 1.6vmin 2.13vmin 1.33vmin 2.13vmin;
+  }
+  .new-year-activity .section-common .wrap .product-tag .product-tag-save::before {
+    content: "";
+    border-right: 3.2vmin solid transparent;
+    border-top: 3.2vmin solid #b53333;
+    border-bottom: 3.2vmin solid #b53333;
+  }
+  .new-year-activity .section-common .wrap .product-tag {
+    left: 2.67vmin;
+    top: 2.67vmin;
+  }
+  .new-year-activity .section-coupon .coupon-box {
+    flex-direction: column;
+    gap: 10.67vmin;
+  }
+  .new-year-activity .section-coupon .coupon-box .coupon-head-wrap {
+    border: 0.27vmin solid #eeeeee;
+    border-radius: 5.33vmin;
+  }
+  .new-year-activity .section-coupon .coupon-box .coupon-head {
+    padding: 5.33vmin 5.33vmin;
+  }
+  .new-year-activity .section-coupon .coupon-box .coupon-head p {
+    font-size: 10.67vmin;
+  }
+  .new-year-activity .section-coupon .coupon-box .coupon-head p sup {
+    font-size: 6.4vmin;
+    left: 2.67vmin;
+    vertical-align: middle;
+  }
+  .new-year-activity .section-coupon .coupon-box .coupon-head-title {
+    font-size: 4vmin;
+    line-height: 1.3;
+  }
+  .new-year-activity .section-coupon .coupon-box .coupon-card-desc {
+    flex: 75%;
+    padding: 5.33vmin;
+    line-height: 1.3;
+  }
+  .new-year-activity .section-coupon .coupon-box .coupon-t1 {
+    font-size: 4.27vmin;
+    font-weight: bold;
+    font-family: HarmonyOS_Sans_SC_Bold;
+  }
+  .new-year-activity .section-coupon .coupon-box .coupon-t2 {
+    font-size: 6.67vmin;
+    font-weight: bold;
+    font-family: HarmonyOS_Sans_SC_Bold;
+  }
+  .new-year-activity .section-coupon .coupon-box .coupon-t3 {
+    font-size: 3.73vmin;
+    font-family: HarmonyOS_Sans_SC_Medium;
+  }
+  .new-year-activity .section-coupon .coupon-box .coupon-card-code {
+    flex: 20%;
+    padding: 5.33vmin 4vmin;
+  }
+  .new-year-activity .section-coupon .coupon-box .coupon-card-code img {
+    object-fit: contain;
+  }
+  .new-year-activity .section-coupon .coupon-box .coupon-card {
+    margin-top: 5.33vmin;
+  }
+  .new-year-activity .section-coupon .coupon-box .coupon-card > div {
+    border-radius: 3.2vmin;
+  }
+  .new-year-activity .banner-image {
+    min-height: 72vmin;
+  }
+  .new-year-activity .banner-image img {
+    width: 100%;
+  }
+  .new-year-activity .section-hotSale .hotSale-box {
+    flex-direction: column-reverse;
+    border-radius: 5.33vmin;
+    padding: 13.33vmin 0;
+    border: 0.67vmin solid #BF9432;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .swiper {
+    width: 100%;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .hotSale-title {
+    left: 50%;
+    padding: 0 5.33vmin;
+    transform: translate(-50%, -50%);
+    font-size: 5.87vmin;
+    white-space: nowrap;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .hotSale-right, .new-year-activity .section-hotSale .hotSale-box .hotSale-left {
+    width: 100%;
+    padding: 4vmin;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .product-title {
+    font-size: 6.67vmin;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .product-tips {
+    font-size: 3.73vmin;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .product-price .n-price {
+    font-size: 8.53vmin;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .product-price .o-price {
+    font-size: 6.4vmin;
+    margin-left: 2.67vmin;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .product-option {
+    margin-top: 5.33vmin;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .product-option h5 {
+    font-size: 3.2vmin;
+    font-family: HarmonyOS_Sans_SC_Bold;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .product-option .option-btn {
+    gap: 2.67vmin;
+    margin-top: 2.67vmin;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .product-option .option-btn div {
+    font-size: 3.73vmin;
+    padding: 1.6vmin 4vmin;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .product-tips.type2 {
+    font-size: 4.27vmin;
+    margin-top: 5.33vmin;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .count-down {
+    display: flex;
+    padding: 2.67vmin;
+    margin: 0 2.67vmin;
+    column-gap: 2.67vmin;
+    border-radius: 6.4vmin 6.4vmin 0 0;
+    flex-direction: column;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .count-down .time-wrap {
+    gap: 1.07vmin;
+    font-size: 4.8vmin;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .swiper-thumbs {
+    margin-top: 2.67vmin;
+  }
+  .new-year-activity .section-hotSale .hotSale-box .swiper-thumbs .swiper-slide.swiper-slide-thumb-active {
+    border: 0.53vmin solid #9E2642;
+    border-radius: 2.67vmin;
+  }
+  .new-year-activity .section-video {
+    padding: 21.33vmin 0;
+  }
+  .new-year-activity .ticker-container .ticker-item {
+    font-size: 13.33vmin;
+    padding: 0 5.33vmin;
+  }
+  #send-btn{
+    font-size: 4.65vmin;
+  }
+}
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+
+.absolute {
+  position: absolute !important;
+}
+
+.relative {
+  position: relative !important;
+}
+
+.right-0 {
+  right: 0px !important;
+}
+
+.right-\[2\.6667vw\] {
+  right: 2.6667vw !important;
+}
+
+.top-\[2\.6667vw\] {
+  top: 2.6667vw !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-\[10\.6667vw\] {
+  margin-top: 10.6667vw !important;
+  margin-bottom: 10.6667vw !important;
+}
+
+.mt-\[1\.0417vw\] {
+  margin-top: 1.0417vw !important;
+}
+
+.mt-\[1\.5625vw\] {
+  margin-top: 1.5625vw !important;
+}
+
+.mt-\[2\.0833vw\] {
+  margin-top: 2.0833vw !important;
+}
+
+.mt-\[2\.6667vw\] {
+  margin-top: 2.6667vw !important;
+}
+
+.mt-\[3\.125vw\] {
+  margin-top: 3.125vw !important;
+}
+
+.mt-\[5\.3333vw\] {
+  margin-top: 5.3333vw !important;
+}
+
+.mt-\[8vw\] {
+  margin-top: 8vw !important;
+}
+
+.inline-block {
+  display: inline-block !important;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.grid {
+  display: grid !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.w-\[13\.3333vw\] {
+  width: 13.3333vw !important;
+}
+
+.w-\[26\.6667vw\] {
+  width: 26.6667vw !important;
+}
+
+.w-full {
+  width: 100% !important;
+}
+
+.flex-1 {
+  flex: 1 1 0% !important;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+}
+
+.flex-col {
+  flex-direction: column !important;
+}
+
+.items-center {
+  align-items: center !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.gap-\[1\.0417vw\] {
+  gap: 1.0417vw !important;
+}
+
+.gap-\[2\.6667vw\] {
+  gap: 2.6667vw !important;
+}
+
+.gap-\[5\.3333vw\] {
+  gap: 5.3333vw !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.rounded-2xl {
+  border-radius: 1rem !important;
+}
+
+.rounded-\[80px\] {
+  border-radius: 80px !important;
+}
+
+.rounded-full {
+  border-radius: 9999px !important;
+}
+
+.border {
+  border-width: 1px !important;
+}
+
+.border-\[\#9E2642\] {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(181 139 50 / var(--tw-border-opacity, 1)) !important;
+}
+
+.bg-\[\#C63053\] {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(32 46 127 / var(--tw-bg-opacity, 1)) !important;
+}
+
+.bg-deep-theme-color {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(181 139 50 / var(--tw-bg-opacity, 1)) !important;
+}
+
+.bg-theme-color {
+  --tw-bg-opacity: 1 !important;
+  background-color: #fbeded;
+}
+
+.bg-white {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
+}
+
+.object-contain {
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+
+.p-\[3\.4667vw\] {
+  padding: 3.4667vw !important;
+}
+
+.p-\[4\.2667vw\] {
+  padding: 4.2667vw !important;
+}
+
+.p-\[5\.3333vw\] {
+  padding: 5.3333vw !important;
+}
+
+.p-\[6\.4vw\] {
+  padding: 6.4vw !important;
+}
+
+.px-\[5\.3333vw\] {
+  padding-left: 5.3333vw !important;
+  padding-right: 5.3333vw !important;
+}
+
+.px-\[8vw\] {
+  padding-left: 8vw !important;
+  padding-right: 8vw !important;
+}
+
+.py-\[1\.6vw\] {
+  padding-top: 1.6vw !important;
+  padding-bottom: 1.6vw !important;
+}
+
+.py-\[16vw\] {
+  padding-top: 16vw !important;
+  padding-bottom: 16vw !important;
+}
+
+.py-\[2\.6667vw\] {
+  padding-top: 2.6667vw !important;
+  padding-bottom: 2.6667vw !important;
+}
+
+.py-\[3\.125vw\] {
+  padding-top: 3.125vw !important;
+  padding-bottom: 3.125vw !important;
+}
+
+.pl-\[5\.3333vw\] {
+  padding-left: 5.3333vw !important;
+}
+
+.pr-\[34\.6667vw\] {
+  padding-right: 34.6667vw !important;
+}
+
+.pt-\[2\.0833vw\] {
+  padding-top: 2.0833vw !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.font-HM_Bold {
+  font-family: HarmonyOS_Sans_SC_Bold !important;
+}
+
+.font-HM_Light {
+  font-family: HarmonyOS_Sans_SC_Light !important;
+}
+
+.font-HM_Medium {
+  font-family: HarmonyOS_Sans_SC_Medium !important;
+}
+
+.font-HM_Regular {
+  font-family: HarmonyOS_Sans_SC_Regular !important;
+}
+
+.text-\[3\.7333vw\] {
+  font-size: 3.7333vw !important;
+}
+
+.text-\[4\.2667vw\] {
+  font-size: 4.2667vw !important;
+}
+
+.text-\[5\.3333vw\] {
+  font-size: 5.3333vw !important;
+}
+
+.text-\[6\.4vw\] {
+  font-size: 6.4vw !important;
+}
+
+.font-bold {
+  font-weight: 700 !important;
+}
+
+.leading-tight {
+  line-height: 1.25 !important;
+}
+
+.text-\[\#C63053\] {
+  --tw-text-opacity: 1 !important;
+  color: rgb(32 46 127 / var(--tw-text-opacity, 1)) !important;
+}
+
+.text-\[\#fff\] {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
+}
+
+.text-deep-theme-color {
+  --tw-text-opacity: 1 !important;
+  color: rgb(181 139 50 / var(--tw-text-opacity, 1)) !important;
+}
+
+.text-theme-color {
+  --tw-text-opacity: 1 !important;
+  color: rgb(243 225 171 / var(--tw-text-opacity, 1)) !important;
+}
+
+.text-white {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
+}
+
+.blur {
+  --tw-blur: blur(8px) !important;
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
+
+.transition {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter !important;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter !important;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 150ms !important;
+}
+
+@media (min-width: 900px) {
+  .lg900\:right-\[\.2604vw\] {
+    right: .2604vw !important;
+  }
+
+  .lg900\:top-\[\.2604vw\] {
+    top: .2604vw !important;
+  }
+
+  .lg900\:my-\[1\.5625vw\] {
+    margin-top: 1.5625vw !important;
+    margin-bottom: 1.5625vw !important;
+  }
+
+  .lg900\:mt-\[\.5208vw\] {
+    margin-top: .5208vw !important;
+  }
+
+  .lg900\:mt-\[1\.0417vw\] {
+    margin-top: 1.0417vw !important;
+  }
+
+  .lg900\:mt-\[1\.5625vw\] {
+    margin-top: 1.5625vw !important;
+  }
+
+  .lg900\:block {
+    display: block !important;
+  }
+
+  .lg900\:w-\[18\.2292vw\] {
+    width: 18.2292vw !important;
+  }
+
+  .lg900\:w-\[2\.6042vw\] {
+    width: 2.6042vw !important;
+  }
+  
+  .lg900\:w-\[3\.6042vw\] {
+    width: 3.6042vw !important;
+  }
+
+  .lg900\:w-\[22\.3958vw\] {
+    width: 22.3958vw !important;
+  }
+
+  .lg900\:w-\[32\.8125vw\] {
+    width: 32.8125vw !important;
+  }
+
+  .lg900\:w-\[41\.6667vw\] {
+    width: 41.6667vw !important;
+  }
+
+  .lg900\:w-\[5\.2083vw\] {
+    width: 5.2083vw !important;
+  }
+  .lg900\:gap-\[5\.2083vw\] {
+    gap: 5.2083vw !important;
+  }
+
+  .lg900\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .lg900\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .lg900\:gap-\[\.5208vw\] {
+    gap: .5208vw !important;
+  }
+
+  .lg900\:gap-\[1\.0417vw\] {
+    gap: 1.0417vw !important;
+  }
+
+  .lg900\:rounded-\[2\.0833vw\] {
+    border-radius: 2.0833vw !important;
+  }
+
+  .lg900\:p-\[\.5208vw\] {
+    padding: .5208vw !important;
+  }
+
+  .lg900\:p-\[\.8333vw\] {
+    padding: .8333vw !important;
+  }
+
+  .lg900\:p-\[1\.875vw\] {
+    padding: 1.875vw !important;
+  }
+
+  .lg900\:px-\[1\.0417vw\] {
+    padding-left: 1.0417vw !important;
+    padding-right: 1.0417vw !important;
+  }
+
+  .lg900\:px-\[1\.3021vw\] {
+    padding-left: 1.3021vw !important;
+    padding-right: 1.3021vw !important;
+  }
+
+  .lg900\:px-\[1\.5625vw\] {
+    padding-left: 1.5625vw !important;
+    padding-right: 1.5625vw !important;
+  }
+
+  .lg900\:px-\[2\.0833vw\] {
+    padding-left: 2.0833vw !important;
+    padding-right: 2.0833vw !important;
+  }
+
+  .lg900\:py-\[\.5208vw\] {
+    padding-top: .5208vw !important;
+    padding-bottom: .5208vw !important;
+  }
+
+  .lg900\:py-\[1\.875vw\] {
+    padding-top: 1.875vw !important;
+    padding-bottom: 1.875vw !important;
+  }
+
+  .lg900\:pb-\[1\.0417vw\] {
+    padding-bottom: 1.0417vw !important;
+  }
+
+  .lg900\:pl-\[1\.3021vw\] {
+    padding-left: 1.3021vw !important;
+  }
+
+  .lg900\:pr-\[5\.2083vw\] {
+    padding-right: 5.2083vw !important;
+  }
+
+  .lg900\:text-\[\.7292vw\] {
+    font-size: .7292vw !important;
+  }
+
+  .lg900\:text-\[\.8333vw\] {
+    font-size: .8333vw !important;
+  }
+
+  .lg900\:text-\[1\.0417vw\] {
+    font-size: 1.0417vw !important;
+  }
+
+  .lg900\:text-\[1\.875vw\] {
+    font-size: 1.875vw !important;
+  }
+
+  .lg900\:text-\[2\.0833vw\] {
+    font-size: 2.0833vw !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:px-\[15\.625vw\] {
+    padding-left: 15.625vw !important;
+    padding-right: 15.625vw !important;
+  }
+
+  .lg\:py-\[2\.0833vw\] {
+    padding-top: 2.0833vw !important;
+    padding-bottom: 2.0833vw !important;
+  }
+}
+  #send-btn:not(.active) {
+    opacity: 0.8
+  }
+
+
+.new-year-activity .section-snow {
+  position: fixed;
+  pointer-events: none;
+  top: -1.82vw;
+  z-index: 1000;
+}
+.new-year-activity .section-snow .snowflake {
+  position: absolute;
+  width: 1.82vw;
+  height: 1.82vw;
+  background: linear-gradient(white, white);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 6px rgb(255, 128, 187));
+  background-image: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M512 212.584c88.84-92.952 266.524-92.952 355.368-16.58s88.844 229.116 0 381.864c-57.608 106.116-199.072 212.232-325.528 288a58.316 58.316 0 0 1-59.684 0c-126.456-75.768-267.92-181.884-325.524-288-88.844-152.748-88.844-305.492 0-381.864 88.84-76.372 266.524-76.372 355.368 16.58z' fill='%23FF4B6A'%3E%3C/path%3E%3Cpath d='M294.02 231.816c19.712 15.076 20.472 47.248 1.696 71.796-18.776 24.552-50.024 32.244-69.736 17.168-19.712-15.076-20.472-47.248-1.696-71.796 18.776-24.552 50.02-32.244 69.736-17.168z' fill='%23FFFFFF' fill-opacity='.2'%3E%3C/path%3E%3Cpath d='M855.472 186.608a185.496 185.496 0 0 1 11.896 9.396c88.844 76.372 88.844 229.116 0 381.864-57.608 106.116-199.072 212.232-325.528 288a58.316 58.316 0 0 1-59.684 0c-92.188-55.236-192.352-126.6-262.188-202.34 65.276 60.656 146.424 116.948 222.188 162.34a58.316 58.316 0 0 0 59.684 0c126.456-75.768 267.92-181.884 325.528-288 78.2-134.448 87.568-268.892 28.104-351.26z' fill-opacity='.1'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover !important;
+}
+  
+.snowflake:nth-child(1) {
+  opacity: 0.25;
+  transform: translate(55.266vw, 110vh) scale(0.44);
+  animation: rise-1 18s 3.2s linear infinite;
+}
+
+@keyframes rise-1 {
+  0% {
+    transform: translate(55.266vw, 110vh) scale(0.44);
+  }
+  25% {
+    transform: translate(calc(55.266vw + 0.5vw), 80vh) scale(0.89) rotate(340.75deg);
+  }
+  50% {
+    transform: translate(calc(55.266vw + 1vw), 41vh) scale(0.215) rotate(408.5deg);
+  }
+  75% {
+    transform: translate(calc(55.266vw - 0.3vw), 40vh) scale(0.8) rotate(476.25deg);
+  }
+  100% {
+    transform: translate(calc(55.266vw - 1vw), -0.8008vw) scale(0.44) rotate(544deg);
+  }
+}
+.snowflake:nth-child(2) {
+  opacity: 0.75;
+  transform: translate(98.557vw, 110vh) scale(1.26);
+  animation: rise-2 13s 4.2s linear infinite;
+}
+
+@keyframes rise-2 {
+  0% {
+    transform: translate(98.557vw, 110vh) scale(1.26);
+  }
+  25% {
+    transform: translate(calc(98.557vw + 0.75vw), 80vh) scale(1.5) rotate(342.25deg);
+  }
+  50% {
+    transform: translate(calc(98.557vw + 1.5vw), 46vh) scale(1.14) rotate(400.5deg);
+  }
+  75% {
+    transform: translate(calc(98.557vw - 0.45vw), 40vh) scale(1.452) rotate(458.75deg);
+  }
+  100% {
+    transform: translate(calc(98.557vw - 1.5vw), -2.2932vw) scale(1.26) rotate(517deg);
+  }
+}
+.snowflake:nth-child(3) {
+  opacity: 0.71;
+  transform: translate(31.837vw, 110vh) scale(0.44);
+  animation: rise-3 17s 4.7s linear infinite;
+}
+
+@keyframes rise-3 {
+  0% {
+    transform: translate(31.837vw, 110vh) scale(0.44);
+  }
+  25% {
+    transform: translate(calc(31.837vw + 2.2vw), 80vh) scale(0.83) rotate(198.5deg);
+  }
+  50% {
+    transform: translate(calc(31.837vw + 4.4vw), 31vh) scale(0.245) rotate(277deg);
+  }
+  75% {
+    transform: translate(calc(31.837vw - 1.32vw), 40vh) scale(0.752) rotate(355.5deg);
+  }
+  100% {
+    transform: translate(calc(31.837vw - 4.4vw), -0.8008vw) scale(0.44) rotate(434deg);
+  }
+}
+.snowflake:nth-child(4) {
+  opacity: 0.27;
+  transform: translate(38.673vw, 110vh) scale(1.27);
+  animation: rise-4 17s 4.8s linear infinite;
+}
+
+@keyframes rise-4 {
+  0% {
+    transform: translate(38.673vw, 110vh) scale(1.27);
+  }
+  25% {
+    transform: translate(calc(38.673vw + 0.7vw), 80vh) scale(1.7) rotate(174.25deg);
+  }
+  50% {
+    transform: translate(calc(38.673vw + 1.4vw), 58vh) scale(1.055) rotate(250.5deg);
+  }
+  75% {
+    transform: translate(calc(38.673vw - 0.42vw), 40vh) scale(1.614) rotate(326.75deg);
+  }
+  100% {
+    transform: translate(calc(38.673vw - 1.4vw), -2.3114vw) scale(1.27) rotate(403deg);
+  }
+}
+.snowflake:nth-child(5) {
+  opacity: 0.86;
+  transform: translate(23.943vw, 110vh) scale(0.62);
+  animation: rise-5 19s 1.3s linear infinite;
+}
+
+@keyframes rise-5 {
+  0% {
+    transform: translate(23.943vw, 110vh) scale(0.62);
+  }
+  25% {
+    transform: translate(calc(23.943vw + 1.65vw), 80vh) scale(0.9) rotate(241.25deg);
+  }
+  50% {
+    transform: translate(calc(23.943vw + 3.3vw), 56vh) scale(0.48) rotate(374.5deg);
+  }
+  75% {
+    transform: translate(calc(23.943vw - 0.99vw), 40vh) scale(0.844) rotate(507.75deg);
+  }
+  100% {
+    transform: translate(calc(23.943vw - 3.3vw), -1.1284vw) scale(0.62) rotate(641deg);
+  }
+}
+.snowflake:nth-child(6) {
+  opacity: 0.66;
+  transform: translate(21.913vw, 110vh) scale(0.57);
+  animation: rise-6 12s 3.6s linear infinite;
+}
+
+@keyframes rise-6 {
+  0% {
+    transform: translate(21.913vw, 110vh) scale(0.57);
+  }
+  25% {
+    transform: translate(calc(21.913vw + 1.7vw), 80vh) scale(0.93) rotate(367.75deg);
+  }
+  50% {
+    transform: translate(calc(21.913vw + 3.4vw), 31vh) scale(0.39) rotate(413.5deg);
+  }
+  75% {
+    transform: translate(calc(21.913vw - 1.02vw), 40vh) scale(0.858) rotate(459.25deg);
+  }
+  100% {
+    transform: translate(calc(21.913vw - 3.4vw), -1.0374vw) scale(0.57) rotate(505deg);
+  }
+}
+.snowflake:nth-child(7) {
+  opacity: 0.33;
+  transform: translate(34.602vw, 110vh) scale(1.35);
+  animation: rise-7 15s 5s linear infinite;
+}
+
+@keyframes rise-7 {
+  0% {
+    transform: translate(34.602vw, 110vh) scale(1.35);
+  }
+  25% {
+    transform: translate(calc(34.602vw + 1.75vw), 80vh) scale(1.8) rotate(396.75deg);
+  }
+  50% {
+    transform: translate(calc(34.602vw + 3.5vw), 35vh) scale(1.125) rotate(485.5deg);
+  }
+  75% {
+    transform: translate(calc(34.602vw - 1.05vw), 40vh) scale(1.71) rotate(574.25deg);
+  }
+  100% {
+    transform: translate(calc(34.602vw - 3.5vw), -2.457vw) scale(1.35) rotate(663deg);
+  }
+}
+.snowflake:nth-child(8) {
+  opacity: 0.12;
+  transform: translate(39.956vw, 110vh) scale(0.86);
+  animation: rise-8 12s 3.4s linear infinite;
+}
+
+@keyframes rise-8 {
+  0% {
+    transform: translate(39.956vw, 110vh) scale(0.86);
+  }
+  25% {
+    transform: translate(calc(39.956vw + 1.7vw), 80vh) scale(1.12) rotate(145.25deg);
+  }
+  50% {
+    transform: translate(calc(39.956vw + 3.4vw), 51vh) scale(0.73) rotate(256.5deg);
+  }
+  75% {
+    transform: translate(calc(39.956vw - 1.02vw), 40vh) scale(1.068) rotate(367.75deg);
+  }
+  100% {
+    transform: translate(calc(39.956vw - 3.4vw), -1.5652vw) scale(0.86) rotate(479deg);
+  }
+}
+.snowflake:nth-child(9) {
+  opacity: 0.89;
+  transform: translate(51.843vw, 110vh) scale(0.71);
+  animation: rise-9 13s 1.2s linear infinite;
+}
+
+@keyframes rise-9 {
+  0% {
+    transform: translate(51.843vw, 110vh) scale(0.71);
+  }
+  25% {
+    transform: translate(calc(51.843vw + 0.65vw), 80vh) scale(1.07) rotate(412.5deg);
+  }
+  50% {
+    transform: translate(calc(51.843vw + 1.3vw), 53vh) scale(0.53) rotate(540deg);
+  }
+  75% {
+    transform: translate(calc(51.843vw - 0.39vw), 40vh) scale(0.998) rotate(667.5deg);
+  }
+  100% {
+    transform: translate(calc(51.843vw - 1.3vw), -1.2922vw) scale(0.71) rotate(795deg);
+  }
+}
+.snowflake:nth-child(10) {
+  opacity: 0.21;
+  transform: translate(7.916vw, 110vh) scale(0.69);
+  animation: rise-10 11s 6.4s linear infinite;
+}
+
+@keyframes rise-10 {
+  0% {
+    transform: translate(7.916vw, 110vh) scale(0.69);
+  }
+  25% {
+    transform: translate(calc(7.916vw + 1.05vw), 80vh) scale(0.93) rotate(310.25deg);
+  }
+  50% {
+    transform: translate(calc(7.916vw + 2.1vw), 40vh) scale(0.57) rotate(362.5deg);
+  }
+  75% {
+    transform: translate(calc(7.916vw - 0.63vw), 40vh) scale(0.882) rotate(414.75deg);
+  }
+  100% {
+    transform: translate(calc(7.916vw - 2.1vw), -1.2558vw) scale(0.69) rotate(467deg);
+  }
+}
+.snowflake:nth-child(11) {
+  opacity: 0.61;
+  transform: translate(18.25vw, 110vh) scale(1.07);
+  animation: rise-11 16s 1.3s linear infinite;
+}
+
+@keyframes rise-11 {
+  0% {
+    transform: translate(18.25vw, 110vh) scale(1.07);
+  }
+  25% {
+    transform: translate(calc(18.25vw + 0.55vw), 80vh) scale(1.38) rotate(235.75deg);
+  }
+  50% {
+    transform: translate(calc(18.25vw + 1.1vw), 58vh) scale(0.915) rotate(290.5deg);
+  }
+  75% {
+    transform: translate(calc(18.25vw - 0.33vw), 40vh) scale(1.318) rotate(345.25deg);
+  }
+  100% {
+    transform: translate(calc(18.25vw - 1.1vw), -1.9474vw) scale(1.07) rotate(400deg);
+  }
+}
+.snowflake:nth-child(12) {
+  opacity: 0.62;
+  transform: translate(54.667vw, 110vh) scale(0.75);
+  animation: rise-12 18s 4.5s linear infinite;
+}
+
+@keyframes rise-12 {
+  0% {
+    transform: translate(54.667vw, 110vh) scale(0.75);
+  }
+  25% {
+    transform: translate(calc(54.667vw + 1.2vw), 80vh) scale(1.02) rotate(154.25deg);
+  }
+  50% {
+    transform: translate(calc(54.667vw + 2.4vw), 42vh) scale(0.615) rotate(202.5deg);
+  }
+  75% {
+    transform: translate(calc(54.667vw - 0.72vw), 40vh) scale(0.966) rotate(250.75deg);
+  }
+  100% {
+    transform: translate(calc(54.667vw - 2.4vw), -1.365vw) scale(0.75) rotate(299deg);
+  }
+}
+.snowflake:nth-child(13) {
+  opacity: 0.2;
+  transform: translate(88.927vw, 110vh) scale(0.88);
+  animation: rise-13 13s 5.7s linear infinite;
+}
+
+@keyframes rise-13 {
+  0% {
+    transform: translate(88.927vw, 110vh) scale(0.88);
+  }
+  25% {
+    transform: translate(calc(88.927vw + 2.4vw), 80vh) scale(1.14) rotate(330.25deg);
+  }
+  50% {
+    transform: translate(calc(88.927vw + 4.8vw), 55vh) scale(0.75) rotate(460.5deg);
+  }
+  75% {
+    transform: translate(calc(88.927vw - 1.44vw), 40vh) scale(1.088) rotate(590.75deg);
+  }
+  100% {
+    transform: translate(calc(88.927vw - 4.8vw), -1.6016vw) scale(0.88) rotate(721deg);
+  }
+}
+.snowflake:nth-child(14) {
+  opacity: 1;
+  transform: translate(62.8vw, 110vh) scale(1.36);
+  animation: rise-14 18s 3.4s linear infinite;
+}
+
+@keyframes rise-14 {
+  0% {
+    transform: translate(62.8vw, 110vh) scale(1.36);
+  }
+  25% {
+    transform: translate(calc(62.8vw + 0.1vw), 80vh) scale(1.57) rotate(127.75deg);
+  }
+  50% {
+    transform: translate(calc(62.8vw + 0.2vw), 56vh) scale(1.255) rotate(201.5deg);
+  }
+  75% {
+    transform: translate(calc(62.8vw - 0.06vw), 40vh) scale(1.528) rotate(275.25deg);
+  }
+  100% {
+    transform: translate(calc(62.8vw - 0.2vw), -2.4752vw) scale(1.36) rotate(349deg);
+  }
+}
+.snowflake:nth-child(15) {
+  opacity: 0.1;
+  transform: translate(89.781vw, 110vh) scale(1.08);
+  animation: rise-15 11s 1.6s linear infinite;
+}
+
+@keyframes rise-15 {
+  0% {
+    transform: translate(89.781vw, 110vh) scale(1.08);
+  }
+  25% {
+    transform: translate(calc(89.781vw + 1.05vw), 80vh) scale(1.39) rotate(368.75deg);
+  }
+  50% {
+    transform: translate(calc(89.781vw + 2.1vw), 32vh) scale(0.925) rotate(483.5deg);
+  }
+  75% {
+    transform: translate(calc(89.781vw - 0.63vw), 40vh) scale(1.328) rotate(598.25deg);
+  }
+  100% {
+    transform: translate(calc(89.781vw - 2.1vw), -1.9656vw) scale(1.08) rotate(713deg);
+  }
+}
+.snowflake:nth-child(16) {
+  opacity: 0.73;
+  transform: translate(79.661vw, 110vh) scale(0.89);
+  animation: rise-16 18s 1.5s linear infinite;
+}
+
+@keyframes rise-16 {
+  0% {
+    transform: translate(79.661vw, 110vh) scale(0.89);
+  }
+  25% {
+    transform: translate(calc(79.661vw + 1.65vw), 80vh) scale(1.15) rotate(359.5deg);
+  }
+  50% {
+    transform: translate(calc(79.661vw + 3.3vw), 31vh) scale(0.76) rotate(464deg);
+  }
+  75% {
+    transform: translate(calc(79.661vw - 0.99vw), 40vh) scale(1.098) rotate(568.5deg);
+  }
+  100% {
+    transform: translate(calc(79.661vw - 3.3vw), -1.6198vw) scale(0.89) rotate(673deg);
+  }
+}
+.snowflake:nth-child(17) {
+  opacity: 0.09;
+  transform: translate(58.195vw, 110vh) scale(1.4);
+  animation: rise-17 16s 2.3s linear infinite;
+}
+
+@keyframes rise-17 {
+  0% {
+    transform: translate(58.195vw, 110vh) scale(1.4);
+  }
+  25% {
+    transform: translate(calc(58.195vw + 1.9vw), 80vh) scale(1.7) rotate(48.5deg);
+  }
+  50% {
+    transform: translate(calc(58.195vw + 3.8vw), 38vh) scale(1.25) rotate(95deg);
+  }
+  75% {
+    transform: translate(calc(58.195vw - 1.14vw), 40vh) scale(1.64) rotate(141.5deg);
+  }
+  100% {
+    transform: translate(calc(58.195vw - 3.8vw), -2.548vw) scale(1.4) rotate(188deg);
+  }
+}
+.snowflake:nth-child(18) {
+  opacity: 0.66;
+  transform: translate(18.238vw, 110vh) scale(0.43);
+  animation: rise-18 20s 8s linear infinite;
+}
+
+@keyframes rise-18 {
+  0% {
+    transform: translate(18.238vw, 110vh) scale(0.43);
+  }
+  25% {
+    transform: translate(calc(18.238vw + 2.1vw), 80vh) scale(0.87) rotate(130.25deg);
+  }
+  50% {
+    transform: translate(calc(18.238vw + 4.2vw), 51vh) scale(0.21) rotate(200.5deg);
+  }
+  75% {
+    transform: translate(calc(18.238vw - 1.26vw), 40vh) scale(0.782) rotate(270.75deg);
+  }
+  100% {
+    transform: translate(calc(18.238vw - 4.2vw), -0.7826vw) scale(0.43) rotate(341deg);
+  }
+}
+.snowflake:nth-child(19) {
+  opacity: 0.46;
+  transform: translate(4.102vw, 110vh) scale(1.12);
+  animation: rise-19 11s 4.8s linear infinite;
+}
+
+@keyframes rise-19 {
+  0% {
+    transform: translate(4.102vw, 110vh) scale(1.12);
+  }
+  25% {
+    transform: translate(calc(4.102vw + 1.4vw), 80vh) scale(1.37) rotate(420.25deg);
+  }
+  50% {
+    transform: translate(calc(4.102vw + 2.8vw), 39vh) scale(0.995) rotate(501.5deg);
+  }
+  75% {
+    transform: translate(calc(4.102vw - 0.84vw), 40vh) scale(1.32) rotate(582.75deg);
+  }
+  100% {
+    transform: translate(calc(4.102vw - 2.8vw), -2.0384vw) scale(1.12) rotate(664deg);
+  }
+}
+.snowflake:nth-child(20) {
+  opacity: 0.92;
+  transform: translate(18.487vw, 110vh) scale(0.46);
+  animation: rise-20 13s 1.7s linear infinite;
+}
+
+@keyframes rise-20 {
+  0% {
+    transform: translate(18.487vw, 110vh) scale(0.46);
+  }
+  25% {
+    transform: translate(calc(18.487vw + 1.6vw), 80vh) scale(0.73) rotate(304.25deg);
+  }
+  50% {
+    transform: translate(calc(18.487vw + 3.2vw), 31vh) scale(0.325) rotate(370.5deg);
+  }
+  75% {
+    transform: translate(calc(18.487vw - 0.96vw), 40vh) scale(0.676) rotate(436.75deg);
+  }
+  100% {
+    transform: translate(calc(18.487vw - 3.2vw), -0.8372vw) scale(0.46) rotate(503deg);
+  }
+}
+  .new-year-activity .section-banner{
+    width: 100%;
+  }
+  .new-year-activity .section-banner .wrap{
+    background: url('https://cdn.shopify.com/s/files/1/0799/8714/7049/files/20250206-101730.jpg?v=1738829261') no-repeat center center; 
+    background-size: cover;
+    padding: 3.13vw 4.75vw 8vw;
+  }
+  .text-left{
+    text-align: left !important;
+  }
+</style>
+
+<div class="new-year-activity font-HM_Regular">
+  <div class="section-snow">
+    {% assign flakes = 20 %}
+    {% for i in (1..flakes) %}
+      <div class="snowflake"></div>
+    {% endfor %}
+  </div>
+  <div class="section-common section-banner" >
+      <div class="wrap">
+          <div class="text-box">
+              <h1 class="h1-t font-HM_Bold text-left" style="color: #fff">{{ section.settings.header_title }}</h1>
+              <p class="p-ds font-HM_Bold text-left" style="color: #fff">{{ section.settings.header_subTitle }}</p>
+              <h3 class="font-HM_Medium text-left" style="color: #fff">{{ section.settings.header_subTitle3 }}</h3>
+          </div>
+          
+      </div>
+    <div class="countdown">
+        <h3>Hurry! Time is Running Out! Ends in:</h3>
+        <div class="countdown-time">
+          <div class="time-item">
+              <p>DAYS</p>
+              <div class="days">0</div>
+          </div>
+          <div class="time-item">
+              <p>HOURS</p>
+              <div class="hours">0</div>
+          </div>
+          <div class="time-item">
+              <p>MINS</p>
+              <div class="minutes">0</div>
+          </div>
+          <div class="time-item">
+              <p>SECS</p>
+              <div class="seconds">0</div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-common section-coupon">
+      <div class="wrap">
+          <div class="coupon-box grid lg900:grid-cols-3 grid-cols-1">
+              {% for block in section.blocks %}
+                {% if block.type == 'card-rule' %}
+                   <div class="coupon-item">
+                      <div class="coupon-head-wrap">
+                          <div class="coupon-head">
+                              <h4 class="coupon-head-title">{{ block.settings.card_content }}</h4>
+                            {% assign currency_symbol = shop.money_format | replace: '{{amount}}', '' | strip %}
+                              <p> <sup>{{ currency_symbol  }}</sup> {{ block.settings.card_price }}</p>
+                          </div>
+                          <div class="coupon-image">
+                            {% if block.settings.card_image %}
+                              {{ block.settings.card_image | image_url: width: 345 | image_tag }}
+                            {% else %}
+                              <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-yLxWCWdshAbn-christ-1.png?v=1701652005" alt="ecom-no-replace-yLxWCWdshAbn-christ-1.png?v=1701652005">
+                            {% endif %}
+                          </div>
+                      </div>
+                      
+                            <div class="coupon-card">
+                                <div class="coupon-card-desc">
+                                    <p class="coupon-t1">{{ block.settings.coupon_title }}</p>
+                                    <p class="coupon-t2">{{ block.settings.coupon_rule }}</p>
+                                    <p class="coupon-t3">{{ block.settings.coupon_desc }}</p>
+                                </div>
+                              
+                          <div class="coupon-card-code">
+                              <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-yyi6Aj6cyKb-w.png?v=1701933473" alt="ecom-no-replace-yyi6Aj6cyKb-w.png?v=1701933473">
+                          </div>
+                      </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+          </div>
+      </div>
+  </div>
+
+  <div class="section-common section-hotSale">
+      <div class="wrap">
+          <div class="hotSale-box">
+              
+              <h3 class="hotSale-title">{{ section.settings.hot_title }}</h3>
+              <div class="hotSale-left">
+                  <div class="p-mark">
+                      <img loading="lazy" class="object-contain" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/ecom-no-replace-9TPZylTlHgFrame_20.png?v=1730366132" alt="ecom-no-replace-9TPZylTlHgFrame_20.png?v=1730366132">
+                      <span>{{ section.settings.hot_review }}</span>
+                  </div>
+                  <h4 class="product-title">{{ section.settings.hot_product.title }}</h4>
+                  <div class="product-tips">
+                      <div>
+                          <svg width="16" height="18" viewBox="0 0 16 18" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M0 11C0 9.25 0.416667 7.69167 1.25 6.325C2.08333 4.95833 3 3.80833 4 2.875C5 1.94167 5.91667 1.229 6.75 0.737L8 0V3.3C8 3.91667 8.20833 4.404 8.625 4.762C9.04167 5.12 9.50833 5.29933 10.025 5.3C10.3083 5.3 10.5793 5.24167 10.838 5.125C11.0967 5.00833 11.334 4.81667 11.55 4.55L12 4C13.2 4.7 14.1667 5.67067 14.9 6.912C15.6333 8.15333 16 9.516 16 11C16 12.4667 15.6417 13.8043 14.925 15.013C14.2083 16.2217 13.2667 17.1753 12.1 17.874C12.3833 17.474 12.6043 17.0363 12.763 16.561C12.9217 16.0857 13.0007 15.582 13 15.05C13 14.3833 12.875 13.754 12.625 13.162C12.375 12.57 12.0167 12.041 11.55 11.575L8 8.1L4.475 11.575C3.99167 12.0583 3.625 12.5917 3.375 13.175C3.125 13.7583 3 14.3833 3 15.05C3 15.5833 3.07933 16.0877 3.238 16.563C3.39667 17.0383 3.61733 17.4757 3.9 17.875C2.73333 17.175 1.79167 16.2207 1.075 15.012C0.358333 13.8033 0 12.466 0 11ZM8 10.9L10.125 12.975C10.4083 13.2583 10.625 13.575 10.775 13.925C10.925 14.275 11 14.65 11 15.05C11 15.8667 10.7083 16.5623 10.125 17.137C9.54167 17.7117 8.83333 17.9993 8 18C7.16667 18 6.45833 17.7123 5.875 17.137C5.29167 16.5617 5 15.866 5 15.05C5 14.6667 5.075 14.2957 5.225 13.937C5.375 13.5783 5.59167 13.2577 5.875 12.975L8 10.9Z" fill="#000"></path></svg>
+                          <span>Free Shipping</span>
+                      </div>
+                      <div>
+                          <svg t="1735117119747" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4281" width="24" height="24"><path d="M919.2 355.2L531.2 77.6c-11.2-8-26.4-8-36.8 0L104 355.2c-12.8 8.8-6.4 28.8 9.6 28.8H192v496c0 8.8 7.2 16 16 16h608c8.8 0 16-7.2 16-16V384h78.4c15.2 0 21.6-20 8.8-28.8zM448 768H320V640h128v128z m0-320h128v128H448V448z m256 320H576V640h128v128z" p-id="4282" fill="#000"></path></svg>
+                          <span ><span id="inventory">0</span> items left in stock</span>
+                      </div>
+                  </div>
+                  <div class="divi-line"></div>
+                  <div class="product-price">
+                      <p class="n-price-color n-price hot-np">{{ section.settings.hot_product.price | money }}</p>
+                      <p class="o-price hot-op">{{ section.settings.hot_product.compare_at_price | money }}</p>
+                  </div>
+                  <div class="product-option">
+                    {% if section.settings.hot_product.options.size > 0 %}
+                      {% for option in section.settings.hot_product.options %}
+                         <h5>{{ option }}</h5>
+                      {% endfor %}
+                    {% endif %}
+                    <div class="option-btn">
+                      {% for variants in section.settings.hot_product.variants %}
+                            <div data-variant-quantity="{{ variants.inventory_quantity  }}" data-variant-id="{{ variants.id }}" data-variant-imageid="{{ variants.featured_image.id }}" data-variant-price="{{ variants.price | money }}" data-variant-title="{{ variants.title }}" data-variant-oprice="{{ variants.compare_at_price | money}}">{{ variants.title }}</div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                  <div class="product-tips type2">
+                      <div>
+                          <span>Ship from UK warehouse</span>
+                      </div>
+                      <div>
+                          <span>14-Day Returns*</span>
+                      </div>
+                  </div>
+                  <div class="divi-line"></div>
+
+                {% form 'product', section.settings.hot_product %}
+                  <input id="hot-inp" type="hidden" name="id" value={{ product.variants.first.id }}>
+                  <button type="submit" name="add" data-btn-addtocart="" class="add-cart-btn" >
+                    ADD TO CART
+                  </button>
+                {% endform %}
+                    <a class="go-link" href="{{ section.settings.hot_product.url }}">
+                        <span>Full details</span>
+                        <svg width="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z"></path></svg>
+                    </a>
+              </div>
+              <div class="hotSale-right">
+                  <div class="count-down">
+                      <div class="flex items-center gap-[1.0417vw]">
+                          <svg width="23" height="22" viewBox="0 0 23 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.7291 9.2681e-06C14.274 1.25292e-05 16.7402 0.88243 18.7074 2.49691C20.6747 4.11139 22.0212 6.35803 22.5177 8.85405C23.0142 11.3501 22.6299 13.941 21.4302 16.1854C20.2305 18.4298 18.2897 20.1888 15.9385 21.1627C13.5873 22.1366 10.9712 22.2651 8.53588 21.5263C6.10056 20.7876 3.99673 19.2272 2.58287 17.1112C1.16901 14.9952 0.532593 12.4544 0.782059 9.92173C1.03152 7.38907 2.15144 5.02127 3.95098 3.22176C4.97129 2.19881 6.1837 1.38758 7.51853 0.834686C8.85335 0.28179 10.2843 -0.00186911 11.7291 9.2681e-06ZM19.0212 3.70787C17.3342 2.0208 15.1143 0.97089 12.74 0.737015C10.3656 0.503139 7.98363 1.09977 5.99986 2.42526C4.01609 3.75075 2.55328 5.72307 1.86068 8.00618C1.16808 10.2893 1.28854 12.7419 2.20154 14.9462C3.11454 17.1504 4.76358 18.9699 6.8677 20.0946C8.97181 21.2193 11.4008 21.5796 13.7408 21.1142C16.0808 20.6488 18.1871 19.3864 19.7007 17.5421C21.2143 15.6979 22.0415 13.3859 22.0416 11C22.0434 9.64547 21.7774 8.30395 21.2591 7.05252C20.7408 5.80109 19.9802 4.66443 19.0212 3.70787ZM16.0869 9.20786C16.1325 9.15919 16.1629 9.09823 16.1743 9.0325C16.1857 8.96677 16.1776 8.89914 16.1511 8.83794C16.1245 8.77674 16.0807 8.72464 16.0249 8.68807C15.9691 8.65149 15.9038 8.63203 15.8371 8.63208V8.63032H13.0247L15.4138 4.41887C15.4434 4.36672 15.4588 4.30773 15.4584 4.24778C15.4581 4.18782 15.442 4.129 15.4119 4.07719C15.3817 4.02538 15.3385 3.98239 15.2865 3.9525C15.2345 3.92261 15.1756 3.90687 15.1157 3.90685V3.90587H11.8644C11.801 3.90585 11.7389 3.92336 11.6848 3.95645C11.6308 3.98954 11.5869 4.03693 11.5581 4.09338L7.34065 11.2047C7.30987 11.2568 7.29341 11.3161 7.29296 11.3767C7.2925 11.4372 7.30806 11.4967 7.33806 11.5493C7.36805 11.6019 7.41142 11.6456 7.46376 11.676C7.51609 11.7064 7.57554 11.7224 7.63606 11.7224V11.723H10.2664L7.31496 17.5971C7.27762 17.6718 7.26891 17.7576 7.29046 17.8384C7.31201 17.9191 7.36233 17.9891 7.43195 18.0353C7.50157 18.0815 7.58567 18.1006 7.66842 18.0891C7.75117 18.0776 7.82685 18.0362 7.8812 17.9728L16.0869 9.20786Z"></path></svg>
+                          <span class="font-HM_Medium font-bold">Sale end in</span>
+                      </div>
+                      <div class="time-wrap">
+                          <div class="days">0</div>
+                          <div class="hours">0</div>
+                          <div class="minutes">0</div>
+                          <div class="seconds">0</div>
+                      </div>
+                  </div>
+                  <div class="product-swiper-wrap">
+                      <div class="swiper-main">
+                          <div class="swiper product-swiper">
+                              <div class="swiper-wrapper">
+                                  {% for image in section.settings.hot_product.images %}
+                                    <div class="swiper-slide" data-variants-id="{{ image.id }}">
+                                      <img loading="lazy" src="{{ image | img_url:'large' }}" alt="{{ section.settings.hot_product.title }}">
+                                    </div>
+                                  {% endfor %}
+                              </div>
+                          </div>
+                      </div>
+                      <div class="swiper-thumbs">
+                          <div class="swiper product-swiper-thumbs">
+                              <div class="swiper-wrapper">
+                                  {% for image in section.settings.hot_product.images %}
+                                    <div class="swiper-slide" data-variants-id="{{ image.id }}">
+                                      <img loading="lazy" src="{{ image | img_url }}" alt="{{ section.settings.hot_product.title }}">
+                                    </div>
+                                  {% endfor %}
+                              </div>
+                              <!-- <div class="swiper-button-next"></div>
+                              <div class="swiper-button-prev"></div> -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="section-common section-video">
+      <div class="wrap flex flex-col lg900:gap-[1.0417vw] gap-[5.3333vw] items-center text-center">
+          <video class="rounded-2xl lg900:w-[41.6667vw]" src="{{ section.settings.video_url }}" controls=""></video>
+          <div class="flex justify-center items-center gap-[1.0417vw]">
+            <img loading="lazy" class="lg900:w-[5.2083vw] w-[26.6667vw]" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/ecom-no-replace-9TPZylTlHgFrame_20.png?v=1730366132" alt="ecom-no-replace-9TPZylTlHgFrame_20.png?v=1730366132">  
+            <p class="font-HM_Medium">{{ section.settings.video_review }}</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- <div class="section-common">
+      <div class="wrap">
+          <div class="grid grid-cols-1 lg900:grid-cols-2 gap-[1.0417vw] mt-[2.0833vw]">
+              <div class="rounded-2xl overflow-hidden bg-theme-color">
+                  <img src="https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-ZTiogKaaDAbn-n-1.png?v=1701996134" alt="ecom-no-replace-ZTiogKaaDAbn-n-1.png?v=1701996134">
+                  <div class="lg900:p-[1.875vw] p-[6.4vw] text-center text-[#C63053]">
+                      <h4 class="lg900:text-[.8333vw] text-[3.7333vw] font-bold font-HM_Bold">SALE UP to 30% OFF</h4>
+                      <p class="lg900:text-[2.0833vw] text-[6.4vw] leading-tight font-bold">Soft curves meet feel <br> good comfort</p>
+                      <a href="javascript:void(0);" class="inline-block px-[8vw] py-[2.6667vw] mt-[5.3333vw] rounded-[80px] lg900:px-[1.5625vw] lg900:py-[.5208vw] lg900:mt-[1.0417vw] lg900:rounded-[2.0833vw] bg-deep-theme-color text-[#fff]">shop now</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+ -->
+  <div class="section-common">
+      <div class="wrap">
+          <div class="product-wrap text-center delay-fadein">
+              <h3 class="h3-t text-font-color">{{ section.settings.section1_title }}</h3>
+              <h3 class="font-HM_Medium">{{ section.settings.section1_sub_title }}</h3>
+            
+              <div class="product-swiper">
+                  <div class="swiper1 overflow-hidden">
+                      <div class="swiper-wrapper">
+                        {% for product in section.settings.section1_collection.products %}
+                          {% assign price = product.price %}
+                          {% assign original_price = product.compare_at_price %}
+                          {% assign discount_amount = original_price | minus: price %}
+                          {% assign title = product.title %}
+                          {% assign discount_percentage = discount_amount | times: 100 | divided_by: product.compare_at_price %}
+                          {% if original_price and original_price > price %} {% assign has_discount = true %} {% else %} {% assign has_discount = false %} {% endif %}
+                          <div class="swiper-slide">
+                              <div class="product-item relative">
+                                  <div class="image-viewport relative">
+                                      <div class="product-tag">
+                                          {% if has_discount %}
+                                            <span class="product-tag-save">Save {{ discount_percentage }}%</span>
+                                          {% endif %}
+                                      </div>
+                                     <img loading="lazy" width=300 height=300 src="{{ product.featured_image| image_url }}" alt="{{ title }}">
+                                  </div>
+                                  <div class="flex justify-center lg900:mt-[.5208vw] mt-[5.3333vw]">
+                                      {% form 'product', product %}
+                                          <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                                          <button type="submit" name="add" data-btn-addtocart="" class="product-add-cart" >
+                                              <div class="add-cart-svg">
+                                                  <svg width="22" height="18" viewBox="0 0 22 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8769 15.2783C10.0556 15.2784 10.2326 15.3137 10.3976 15.3822C10.5627 15.4506 10.7127 15.551 10.839 15.6774C10.9653 15.8038 11.0654 15.9539 11.1337 16.119C11.202 16.2842 11.2372 16.4611 11.2371 16.6398C11.237 16.8185 11.2017 16.9955 11.1332 17.1606C11.0647 17.3256 10.9644 17.4756 10.838 17.6019C10.7116 17.7282 10.5615 17.8284 10.3964 17.8967C10.2312 17.965 10.0543 18.0001 9.87555 18C9.51463 17.9998 9.16857 17.8563 8.91349 17.6009C8.65841 17.3456 8.51521 16.9994 8.51539 16.6385C8.51557 16.2776 8.65911 15.9315 8.91445 15.6764C9.16978 15.4213 9.51599 15.2781 9.8769 15.2783ZM15.793 15.2783C15.9717 15.2784 16.1487 15.3137 16.3138 15.3822C16.4788 15.4506 16.6288 15.551 16.7551 15.6774C16.8814 15.8038 16.9816 15.9539 17.0499 16.119C17.1182 16.2842 17.1533 16.4611 17.1532 16.6398C17.1531 16.8185 17.1178 16.9955 17.0493 17.1606C16.9809 17.3256 16.8806 17.4756 16.7541 17.6019C16.6277 17.7282 16.4776 17.8284 16.3125 17.8967C16.1474 17.965 15.9704 18.0001 15.7917 18C15.4308 17.9998 15.0847 17.8563 14.8296 17.6009C14.5745 17.3456 14.4313 16.9994 14.4315 16.6385C14.4317 16.2776 14.5752 15.9315 14.8306 15.6764C15.0859 15.4213 15.4321 15.2781 15.793 15.2783ZM0.845451 1.6909H2.76699C2.94938 1.69083 3.12676 1.75061 3.27191 1.86106C3.41705 1.97151 3.52195 2.12653 3.57051 2.30233L6.26649 12.0061C6.41492 12.5407 6.73443 13.012 7.17612 13.3478C7.61782 13.6835 8.15737 13.8654 8.71221 13.8654H16.9246C17.491 13.8655 18.0412 13.6761 18.4876 13.3274C18.9339 12.9787 19.2509 12.4908 19.3879 11.9412L21.0964 5.10856C21.1275 4.9839 21.1299 4.85379 21.1032 4.7281C21.0765 4.60241 21.0215 4.48446 20.9424 4.3832C20.8634 4.28194 20.7622 4.20004 20.6467 4.14372C20.5312 4.0874 20.4044 4.05814 20.276 4.05817H8.51674C8.29251 4.05817 8.07747 4.14724 7.91892 4.30579C7.76036 4.46435 7.67129 4.67939 7.67129 4.90362C7.67129 5.12785 7.76036 5.34289 7.91892 5.50144C8.07747 5.66 8.29251 5.74907 8.51674 5.74907H19.1931L17.747 11.5326C17.7012 11.716 17.5953 11.8788 17.4463 11.9951C17.2973 12.1114 17.1136 12.1746 16.9246 12.1745H8.71221C8.52692 12.1744 8.34676 12.1136 8.19923 12.0015C8.05171 11.8894 7.94492 11.7321 7.89516 11.5536L5.19919 1.84917C5.05173 1.31741 4.73403 0.848647 4.29475 0.514665C3.85547 0.180684 3.31882 -9.99932e-05 2.76699 4.14924e-08H0.845451C0.621224 4.14924e-08 0.40618 0.0890741 0.247627 0.247627C0.0890741 0.40618 0 0.621224 0 0.845451C0 1.06968 0.0890741 1.28472 0.247627 1.44328C0.40618 1.60183 0.621224 1.6909 0.845451 1.6909Z">
+                                                      </path>
+                                                  </svg>
+                                              </div>
+                                              <span>
+                                                  ADD TO CART
+                                              </span>
+                                          </button>
+                                        {% endform %}
+                                  </div>
+                                  <p class="product-name font-HM_Medium">{{ title }}</p>
+                                    <p><span class="n-price n-price-color">{{ price | money }}</span><span class="o-price">{{ original_price | money }}</span></p>
+                              </div>
+                          </div>
+                        {% endfor %}
+                      </div>
+                      <div class="swiper-pagination"></div>
+                  </div>
+                  <div class="swp-prev swp1-prev">
+                      <svg class="" width="12" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m9.131 15.263 1.132-1.132-6-6 6-6L9.13 1 2 8.131l7.131 7.132z" fill="#9E2642" stroke="#9E2642" stroke-width="1"></path>
+                      </svg>
+                  </div>
+                  <div class="swp-next swp1-next">
+                      <svg class="" width="12" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.131 15.263 2 14.13l6-6-6-6L3.131 1l7.132 7.131-7.132 7.132z" fill="#9E2642" stroke="#9E2642" stroke-width="1"></path>
+                      </svg>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <div class="section-common">
+      <div class="wrap">
+          <div class="product-wrap text-center delay-fadein">
+              <h3 class="h3-t text-font-color">{{ section.settings.section2_title }}</h3>
+              <h3 class="font-HM_Medium">{{ section.settings.section2_sub_title }}</h3>
+            
+              <div class="product-swiper">
+                  <div class="swiper2 overflow-hidden">
+                      <div class="swiper-wrapper">
+                        {% for product in section.settings.section2_collection.products %}
+                          {% assign price = product.price %}
+                          {% assign original_price = product.compare_at_price %}
+                          {% assign discount_amount = original_price | minus: price %}
+                          {% assign title = product.title %}
+                          {% assign discount_percentage = discount_amount | times: 100 | divided_by: product.compare_at_price %}
+                          {% if original_price and original_price > price %} {% assign has_discount = true %} {% else %} {% assign has_discount = false %} {% endif %}
+                          <div class="swiper-slide">
+                              <div class="product-item relative">
+                                  <div class="image-viewport relative">
+                                      <div class="product-tag">
+                                          {% if has_discount %}
+                                            <span class="product-tag-save">Save {{ discount_percentage }}%</span>
+                                          {% endif %}
+                                      </div>
+                                     <img loading="lazy" width=300 height=300 src="{{ product.featured_image| image_url }}" alt="{{ title }}">
+                                  </div>
+                                  <div class="flex justify-center lg900:mt-[.5208vw] mt-[5.3333vw]">
+                                      {% form 'product', product %}
+                                          <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                                          <button type="submit" name="add" data-btn-addtocart="" class="product-add-cart" >
+                                              <div class="add-cart-svg">
+                                                  <svg width="22" height="18" viewBox="0 0 22 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8769 15.2783C10.0556 15.2784 10.2326 15.3137 10.3976 15.3822C10.5627 15.4506 10.7127 15.551 10.839 15.6774C10.9653 15.8038 11.0654 15.9539 11.1337 16.119C11.202 16.2842 11.2372 16.4611 11.2371 16.6398C11.237 16.8185 11.2017 16.9955 11.1332 17.1606C11.0647 17.3256 10.9644 17.4756 10.838 17.6019C10.7116 17.7282 10.5615 17.8284 10.3964 17.8967C10.2312 17.965 10.0543 18.0001 9.87555 18C9.51463 17.9998 9.16857 17.8563 8.91349 17.6009C8.65841 17.3456 8.51521 16.9994 8.51539 16.6385C8.51557 16.2776 8.65911 15.9315 8.91445 15.6764C9.16978 15.4213 9.51599 15.2781 9.8769 15.2783ZM15.793 15.2783C15.9717 15.2784 16.1487 15.3137 16.3138 15.3822C16.4788 15.4506 16.6288 15.551 16.7551 15.6774C16.8814 15.8038 16.9816 15.9539 17.0499 16.119C17.1182 16.2842 17.1533 16.4611 17.1532 16.6398C17.1531 16.8185 17.1178 16.9955 17.0493 17.1606C16.9809 17.3256 16.8806 17.4756 16.7541 17.6019C16.6277 17.7282 16.4776 17.8284 16.3125 17.8967C16.1474 17.965 15.9704 18.0001 15.7917 18C15.4308 17.9998 15.0847 17.8563 14.8296 17.6009C14.5745 17.3456 14.4313 16.9994 14.4315 16.6385C14.4317 16.2776 14.5752 15.9315 14.8306 15.6764C15.0859 15.4213 15.4321 15.2781 15.793 15.2783ZM0.845451 1.6909H2.76699C2.94938 1.69083 3.12676 1.75061 3.27191 1.86106C3.41705 1.97151 3.52195 2.12653 3.57051 2.30233L6.26649 12.0061C6.41492 12.5407 6.73443 13.012 7.17612 13.3478C7.61782 13.6835 8.15737 13.8654 8.71221 13.8654H16.9246C17.491 13.8655 18.0412 13.6761 18.4876 13.3274C18.9339 12.9787 19.2509 12.4908 19.3879 11.9412L21.0964 5.10856C21.1275 4.9839 21.1299 4.85379 21.1032 4.7281C21.0765 4.60241 21.0215 4.48446 20.9424 4.3832C20.8634 4.28194 20.7622 4.20004 20.6467 4.14372C20.5312 4.0874 20.4044 4.05814 20.276 4.05817H8.51674C8.29251 4.05817 8.07747 4.14724 7.91892 4.30579C7.76036 4.46435 7.67129 4.67939 7.67129 4.90362C7.67129 5.12785 7.76036 5.34289 7.91892 5.50144C8.07747 5.66 8.29251 5.74907 8.51674 5.74907H19.1931L17.747 11.5326C17.7012 11.716 17.5953 11.8788 17.4463 11.9951C17.2973 12.1114 17.1136 12.1746 16.9246 12.1745H8.71221C8.52692 12.1744 8.34676 12.1136 8.19923 12.0015C8.05171 11.8894 7.94492 11.7321 7.89516 11.5536L5.19919 1.84917C5.05173 1.31741 4.73403 0.848647 4.29475 0.514665C3.85547 0.180684 3.31882 -9.99932e-05 2.76699 4.14924e-08H0.845451C0.621224 4.14924e-08 0.40618 0.0890741 0.247627 0.247627C0.0890741 0.40618 0 0.621224 0 0.845451C0 1.06968 0.0890741 1.28472 0.247627 1.44328C0.40618 1.60183 0.621224 1.6909 0.845451 1.6909Z">
+                                                      </path>
+                                                  </svg>
+                                              </div>
+                                              <span>
+                                                  ADD TO CART
+                                              </span>
+                                          </button>
+                                        {% endform %}
+                                  </div>
+                                  <p class="product-name font-HM_Medium">{{ title }}</p>
+                                    <p><span class="n-price n-price-color">{{ price | money }}</span><span class="o-price">{{ original_price | money }}</span></p>
+                              </div>
+                          </div>
+                        {% endfor %}
+                      </div>
+                      <div class="swiper-pagination"></div>
+                  </div>
+                  <div class="swp-prev swp2-prev">
+                      <svg class="" width="12" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m9.131 15.263 1.132-1.132-6-6 6-6L9.13 1 2 8.131l7.131 7.132z" fill="#9E2642" stroke="#9E2642" stroke-width="1"></path>
+                      </svg>
+                  </div>
+                  <div class="swp-next swp2-next">
+                      <svg class="" width="12" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.131 15.263 2 14.13l6-6-6-6L3.131 1l7.132 7.131-7.132 7.132z" fill="#9E2642" stroke="#9E2642" stroke-width="1"></path>
+                      </svg>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="section-common">
+    <div class="wrap">
+        <div class="product-wrap lg900:grid-cols-2 grid grid-cols-1 lg900:gap-[5.2083vw] text-center">
+          <div class="product-swiper">
+            <h3 class="h3-t2 text-font-color ">{{ section.settings.section2_collection_left_text }}</h3>
+            <h3 class="font-HM_Medium">{{ section.settings.section2_collection_left_subtitle }}</h3>
+            
+            <div class="swiper-l overflow-hidden lg900:mt-[.5208vw] mt-[5.3333vw]">
+              <div class="swiper-wrapper">
+                {% for product in section.settings.section2_collection_left.products %}
+                  {% assign price = product.price %}
+                  {% assign original_price = product.compare_at_price %}
+                  {% assign discount_amount = original_price | minus: price %}
+                  {% assign title = product.title %}
+                  {% assign discount_percentage = discount_amount | times: 100 | divided_by: product.compare_at_price %}
+                  {% if original_price and original_price > price %} {% assign has_discount = true %} {% else %} {% assign has_discount = false %} {% endif %}
+                  <div class="swiper-slide">
+                      <div class="product-item relative">
+                          <div class="image-viewport relative">
+                              <div class="product-tag">
+                                  {% if has_discount %}
+                                    <span class="product-tag-save">Save {{ discount_percentage }}%</span>
+                                  {% endif %}
+                              </div>
+                             <img loading="lazy" width=300 height=300 src="{{ product.featured_image| image_url }}" alt="{{ title }}">
+                          </div>
+                          <div class="flex justify-center lg900:mt-[.5208vw] mt-[5.3333vw]">
+                              {% form 'product', product %}
+                                  <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                                  <button type="submit" name="add" data-btn-addtocart="" class="product-add-cart" >
+                                      <div class="add-cart-svg">
+                                          <svg width="22" height="18" viewBox="0 0 22 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8769 15.2783C10.0556 15.2784 10.2326 15.3137 10.3976 15.3822C10.5627 15.4506 10.7127 15.551 10.839 15.6774C10.9653 15.8038 11.0654 15.9539 11.1337 16.119C11.202 16.2842 11.2372 16.4611 11.2371 16.6398C11.237 16.8185 11.2017 16.9955 11.1332 17.1606C11.0647 17.3256 10.9644 17.4756 10.838 17.6019C10.7116 17.7282 10.5615 17.8284 10.3964 17.8967C10.2312 17.965 10.0543 18.0001 9.87555 18C9.51463 17.9998 9.16857 17.8563 8.91349 17.6009C8.65841 17.3456 8.51521 16.9994 8.51539 16.6385C8.51557 16.2776 8.65911 15.9315 8.91445 15.6764C9.16978 15.4213 9.51599 15.2781 9.8769 15.2783ZM15.793 15.2783C15.9717 15.2784 16.1487 15.3137 16.3138 15.3822C16.4788 15.4506 16.6288 15.551 16.7551 15.6774C16.8814 15.8038 16.9816 15.9539 17.0499 16.119C17.1182 16.2842 17.1533 16.4611 17.1532 16.6398C17.1531 16.8185 17.1178 16.9955 17.0493 17.1606C16.9809 17.3256 16.8806 17.4756 16.7541 17.6019C16.6277 17.7282 16.4776 17.8284 16.3125 17.8967C16.1474 17.965 15.9704 18.0001 15.7917 18C15.4308 17.9998 15.0847 17.8563 14.8296 17.6009C14.5745 17.3456 14.4313 16.9994 14.4315 16.6385C14.4317 16.2776 14.5752 15.9315 14.8306 15.6764C15.0859 15.4213 15.4321 15.2781 15.793 15.2783ZM0.845451 1.6909H2.76699C2.94938 1.69083 3.12676 1.75061 3.27191 1.86106C3.41705 1.97151 3.52195 2.12653 3.57051 2.30233L6.26649 12.0061C6.41492 12.5407 6.73443 13.012 7.17612 13.3478C7.61782 13.6835 8.15737 13.8654 8.71221 13.8654H16.9246C17.491 13.8655 18.0412 13.6761 18.4876 13.3274C18.9339 12.9787 19.2509 12.4908 19.3879 11.9412L21.0964 5.10856C21.1275 4.9839 21.1299 4.85379 21.1032 4.7281C21.0765 4.60241 21.0215 4.48446 20.9424 4.3832C20.8634 4.28194 20.7622 4.20004 20.6467 4.14372C20.5312 4.0874 20.4044 4.05814 20.276 4.05817H8.51674C8.29251 4.05817 8.07747 4.14724 7.91892 4.30579C7.76036 4.46435 7.67129 4.67939 7.67129 4.90362C7.67129 5.12785 7.76036 5.34289 7.91892 5.50144C8.07747 5.66 8.29251 5.74907 8.51674 5.74907H19.1931L17.747 11.5326C17.7012 11.716 17.5953 11.8788 17.4463 11.9951C17.2973 12.1114 17.1136 12.1746 16.9246 12.1745H8.71221C8.52692 12.1744 8.34676 12.1136 8.19923 12.0015C8.05171 11.8894 7.94492 11.7321 7.89516 11.5536L5.19919 1.84917C5.05173 1.31741 4.73403 0.848647 4.29475 0.514665C3.85547 0.180684 3.31882 -9.99932e-05 2.76699 4.14924e-08H0.845451C0.621224 4.14924e-08 0.40618 0.0890741 0.247627 0.247627C0.0890741 0.40618 0 0.621224 0 0.845451C0 1.06968 0.0890741 1.28472 0.247627 1.44328C0.40618 1.60183 0.621224 1.6909 0.845451 1.6909Z">
+                                              </path>
+                                          </svg>
+                                      </div>
+                                      <span>
+                                          ADD TO CART
+                                      </span>
+                                  </button>
+                                {% endform %}
+                          </div>
+                          <p class="product-name font-HM_Medium">{{ title }}</p>
+                            <p><span class="n-price n-price-color">{{ price | money }}</span><span class="o-price">{{ original_price | money }}</span></p>
+                      </div>
+                  </div>
+                {% endfor %}
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="swp-prev swpl-prev">
+              <svg class="" width="12" height="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="m9.131 15.263 1.132-1.132-6-6 6-6L9.13 1 2 8.131l7.131 7.132z" fill="#9E2642" stroke="#9E2642" stroke-width="1"></path>
+              </svg>
+            </div>
+            <div class="swp-next swpl-next">
+              <svg class="" width="12" height="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.131 15.263 2 14.13l6-6-6-6L3.131 1l7.132 7.131-7.132 7.132z" fill="#9E2642" stroke="#9E2642" stroke-width="1"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="product-swiper">
+            <h3 class="h3-t2 text-font-color">{{ section.settings.section2_collection_right_text }}</h3>
+            <h3 class="font-HM_Medium">{{ section.settings.section2_collection_right_subtitle }}</h3>
+            
+            <div class="swiper-r overflow-hidden lg900:mt-[.5208vw] mt-[5.3333vw]">
+              <div class="swiper-wrapper">
+                {% for product in section.settings.section2_collection_right.products %}
+                  {% assign price = product.price %}
+                  {% assign original_price = product.compare_at_price %}
+                  {% assign discount_amount = original_price | minus: price %}
+                  {% assign title = product.title %}
+                  {% assign discount_percentage = discount_amount | times: 100 | divided_by: product.compare_at_price %}
+                  {% if original_price and original_price > price %} {% assign has_discount = true %} {% else %} {% assign has_discount = false %} {% endif %}
+                  <div class="swiper-slide">
+                      <div class="product-item relative">
+                          <div class="image-viewport relative">
+                              <div class="product-tag">
+                                  {% if has_discount %}
+                                    <span class="product-tag-save">Save {{ discount_percentage }}%</span>
+                                  {% endif %}
+                              </div>
+                             <img loading="lazy" width=300 height=300 src="{{ product.featured_image| image_url }}" alt="{{ title }}">
+                          </div>
+                          <div class="flex justify-center lg900:mt-[.5208vw] mt-[5.3333vw]">
+                              {% form 'product', product %}
+                                  <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                                  <button type="submit" name="add" data-btn-addtocart="" class="product-add-cart" >
+                                      <div class="add-cart-svg">
+                                          <svg width="22" height="18" viewBox="0 0 22 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.8769 15.2783C10.0556 15.2784 10.2326 15.3137 10.3976 15.3822C10.5627 15.4506 10.7127 15.551 10.839 15.6774C10.9653 15.8038 11.0654 15.9539 11.1337 16.119C11.202 16.2842 11.2372 16.4611 11.2371 16.6398C11.237 16.8185 11.2017 16.9955 11.1332 17.1606C11.0647 17.3256 10.9644 17.4756 10.838 17.6019C10.7116 17.7282 10.5615 17.8284 10.3964 17.8967C10.2312 17.965 10.0543 18.0001 9.87555 18C9.51463 17.9998 9.16857 17.8563 8.91349 17.6009C8.65841 17.3456 8.51521 16.9994 8.51539 16.6385C8.51557 16.2776 8.65911 15.9315 8.91445 15.6764C9.16978 15.4213 9.51599 15.2781 9.8769 15.2783ZM15.793 15.2783C15.9717 15.2784 16.1487 15.3137 16.3138 15.3822C16.4788 15.4506 16.6288 15.551 16.7551 15.6774C16.8814 15.8038 16.9816 15.9539 17.0499 16.119C17.1182 16.2842 17.1533 16.4611 17.1532 16.6398C17.1531 16.8185 17.1178 16.9955 17.0493 17.1606C16.9809 17.3256 16.8806 17.4756 16.7541 17.6019C16.6277 17.7282 16.4776 17.8284 16.3125 17.8967C16.1474 17.965 15.9704 18.0001 15.7917 18C15.4308 17.9998 15.0847 17.8563 14.8296 17.6009C14.5745 17.3456 14.4313 16.9994 14.4315 16.6385C14.4317 16.2776 14.5752 15.9315 14.8306 15.6764C15.0859 15.4213 15.4321 15.2781 15.793 15.2783ZM0.845451 1.6909H2.76699C2.94938 1.69083 3.12676 1.75061 3.27191 1.86106C3.41705 1.97151 3.52195 2.12653 3.57051 2.30233L6.26649 12.0061C6.41492 12.5407 6.73443 13.012 7.17612 13.3478C7.61782 13.6835 8.15737 13.8654 8.71221 13.8654H16.9246C17.491 13.8655 18.0412 13.6761 18.4876 13.3274C18.9339 12.9787 19.2509 12.4908 19.3879 11.9412L21.0964 5.10856C21.1275 4.9839 21.1299 4.85379 21.1032 4.7281C21.0765 4.60241 21.0215 4.48446 20.9424 4.3832C20.8634 4.28194 20.7622 4.20004 20.6467 4.14372C20.5312 4.0874 20.4044 4.05814 20.276 4.05817H8.51674C8.29251 4.05817 8.07747 4.14724 7.91892 4.30579C7.76036 4.46435 7.67129 4.67939 7.67129 4.90362C7.67129 5.12785 7.76036 5.34289 7.91892 5.50144C8.07747 5.66 8.29251 5.74907 8.51674 5.74907H19.1931L17.747 11.5326C17.7012 11.716 17.5953 11.8788 17.4463 11.9951C17.2973 12.1114 17.1136 12.1746 16.9246 12.1745H8.71221C8.52692 12.1744 8.34676 12.1136 8.19923 12.0015C8.05171 11.8894 7.94492 11.7321 7.89516 11.5536L5.19919 1.84917C5.05173 1.31741 4.73403 0.848647 4.29475 0.514665C3.85547 0.180684 3.31882 -9.99932e-05 2.76699 4.14924e-08H0.845451C0.621224 4.14924e-08 0.40618 0.0890741 0.247627 0.247627C0.0890741 0.40618 0 0.621224 0 0.845451C0 1.06968 0.0890741 1.28472 0.247627 1.44328C0.40618 1.60183 0.621224 1.6909 0.845451 1.6909Z">
+                                              </path>
+                                          </svg>
+                                      </div>
+                                      <span>
+                                          ADD TO CART
+                                      </span>
+                                  </button>
+                                {% endform %}
+                          </div>
+                          <p class="product-name font-HM_Medium">{{ title }}</p>
+                            <p><span class="n-price n-price-color">{{ price | money }}</span><span class="o-price">{{ original_price | money }}</span></p>
+                      </div>
+                  </div>
+                {% endfor %}
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="swp-prev swpr-prev">
+              <svg class="" width="12" height="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="m9.131 15.263 1.132-1.132-6-6 6-6L9.13 1 2 8.131l7.131 7.132z" fill="#9E2642" stroke="#9E2642" stroke-width="1"></path>
+              </svg>
+            </div>
+            <div class="swp-next swpr-next">
+              <svg class="" width="12" height="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.131 15.263 2 14.13l6-6-6-6L3.131 1l7.132 7.131-7.132 7.132z" fill="#9E2642" stroke="#9E2642" stroke-width="1"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  
+  <div class="section-common">
+      <div class="wrap mt-[3.125vw]">
+          <div class="grid lg900:grid-cols-3 grid-cols-1 lg900:gap-[1.0417vw] gap-[2.6667vw]">
+            {% for block in section.blocks %}
+                {% if block.type == 'right-protection' %}
+                  <div class="lg900:px-[2.0833vw] lg900:py-[1.875vw] p-[5.3333vw] border rounded-2xl text-center" style="border: 1px solid;">
+                      <figure class="flex justify-center">
+                          <!-- <img class="lg900:w-[2.6042vw] w-[13.3333vw]" src="https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-3gQfrlzP5bft-icon-1.png?v=1702010268" alt="ecom-no-replace-3gQfrlzP5bft-icon-1.png?v=1702010268"> -->
+                          <img loading="lazy" class="lg900:w-[3.6042vw] w-[13.3333vw]" src="{{ block.settings.rp_image | image_url }}" alt="ecom-no-replace-3gQfrlzP5bft-icon-1.png?v=1702010268">
+                      </figure>
+                      <h4 class="lg900:text-[1.0417vw] lg900:mt-[1.5625vw] text-[4.2667vw] mt-[5.3333vw] font-bold text-font-color">{{ block.settings.rp_title }}</h4>
+                      <p class="lg900:text-[.8333vw] text-[4.2667vw] lg900:mt-[1.5625vw] mt-[2.6667vw]">{{ block.settings.rp_desc }}</p>
+                  </div>
+                {% endif %}
+            {% endfor %}
+          </div>
+      </div>
+  </div>
+
+  <div class="section-common">
+      <div class="wrap">
+          <h3 class="h3-t text-font-color">{{ section.settings.big_title }}</h3>
+          <div class="mt-[1.0417vw] rounded-2xl overflow-hidden">
+              <img loading="lazy" src="{{ section.settings.big_image | image_url}}" alt="ecom-no-replace-LnwHu95rPebg-img-pin.jpg?v=1702010644">
+              <!-- <img src="https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-LnwHu95rPebg-img-pin.jpg?v=1702010644" alt="ecom-no-replace-LnwHu95rPebg-img-pin.jpg?v=1702010644"> -->
+          </div>
+      </div>
+      <div class="ticker-container mt-[2.0833vw] bg-theme-color">
+          <div class="ticker">
+            <div class="ticker-item">BIG SALE</div>
+            <div class="ticker-item">BIG SALE</div>
+          </div>
+      </div>
+  </div>
+
+  <div class="section-common bg-theme-color">
+      <div class="wrap lg:px-[15.625vw] lg:py-[2.0833vw] py-[16vw]">
+          <div class="relative py-[3.125vw]">
+              <div class="swiper swiper-list w-full ">
+                  <div class="swiper-wrapper">
+                    {% for product in section.settings.section3_collection.products %}
+                          {% assign price = product.price %}
+                          {% assign original_price = product.compare_at_price %}
+                          {% assign discount_amount = original_price | minus: price %}
+                          {% assign title = product.title %}
+                          {% assign discount_percentage = discount_amount | times: 100 | divided_by: product.compare_at_price %}
+                          {% if original_price and original_price > price %} {% assign has_discount = true %} {% else %} {% assign has_discount = false %} {% endif %}
+                    
+                      <div class="swiper-slide" data-title="{{ title }}">
+                          <div class="relative lg900:p-[.5208vw] lg900:pb-[1.0417vw] p-[3.4667vw] bg-white rounded-2xl">
+                              <div class="product-tag">
+                                 {% if has_discount %}
+                                    <span class="product-tag-save">Save {{ discount_percentage }}%</span>
+                                  {% endif %}
+                              </div>
+                              <img loading="lazy" width="400" height="300" src="{{ product.featured_image| image_url }}" alt="{{ title }}">
+
+                              <div class="lg900:px-[1.0417vw] px-[5.3333vw] mt-[1.5625vw] flex flex-col justify-center text-center">
+                                  <div class=" p-mark justify-center">
+                                      <img loading="lazy" class="object-contain" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/ecom-no-replace-9TPZylTlHgFrame_20.png?v=1730366132" alt="ecom-no-replace-9TPZylTlHgFrame_20.png?v=1730366132">
+                                      <span class="cpd-review"></span>
+                                  </div>
+                                  <h4 class="lg900:text-[.7292vw] text-[3.7333vw] font-HM_Bold">{{ title }}</h4>
+                                  <p class="lg900:text-[.7292vw] text-[3.7333vw] lg900:px-[1.5625vw] px-[5.3333vw] lg900:mt-[1.0417vw] mt-[5.3333vw] cpd-desc"></p>
+                                  <div>
+                                    {% for option in product.options_with_values %}
+                                      <label for="option-{{ product.id }}-{{ option.name | handleize }}" style="visibility: hidden; position: absolute;">{{ option.name }}</label>
+                                      <select class="cproduct-option product-option" data-product-id="{{ product.id }}" data-option-index="{{ forloop.index0 }}" style="width: 100%">
+                                        {% for value in option.values %}
+                                          <option value="{{ value }}">{{ value }}</option>
+                                        {% endfor %}
+                                      </select>
+                                    {% endfor %}
+                              
+                                    <script type="application/json" id="variants-{{ product.id }}">
+                                      {{ product.variants | json }}
+                                    </script>
+                                  </div>
+                                  <div class="flex justify-center lg900:gap-[.5208vw] gap-[2.6667vw]">
+                                      <span class="lg900:text-[1.875vw] text-[5.3333vw] font-HM_Bold  n-price-color" id="price-{{ product.id }}">{{ product.variants.first.price | money }}</span>
+                                      <span class="lg900:text-[1.875vw] text-[5.3333vw] font-HM_Light" style="color: #9e264266"><del id="compare-price-{{ product.id }}">{{ product.variants.first.compare_at_price | money }}</del></span>
+                                  </div>
+                                  <div class="divi-line lg900:my-[1.5625vw] my-[10.6667vw]"></div>
+                                  <!-- <div class="add-cart-btn">ADD TO CART</div> -->
+                                  {% form 'product', product %}
+                                    <input type="hidden" name="id" id="selected-variant-{{ product.id }}" value="{{ product.variants.first.id }}">
+                                    <button type="submit" class="add-cart-btn" id="add-to-cart-{{ product.id }}">
+                                      ADD TO CART
+                                    </button>
+                                  {% endform %}
+                                  <a class="go-link justify-center" href="{{ product.url }}">
+                                      <span>Full details</span>
+                                      <svg width="11" height="11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z"></path></svg>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                    {% endfor %}
+                  </div>
+                  <div class="swiper-pagination"></div>
+              </div>
+              <div class="swp-prev swp3-prev">
+                  <svg class="" width="12" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m9.131 15.263 1.132-1.132-6-6 6-6L9.13 1 2 8.131l7.131 7.132z" fill="#00982b" stroke="#9E2642" stroke-width="1"></path>
+                  </svg>
+              </div>
+              <div class="swp-next swp3-next">
+                  <svg class="" width="12" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.131 15.263 2 14.13l6-6-6-6L3.131 1l7.132 7.131-7.132 7.132z" fill="#00982b" stroke="#9E2642" stroke-width="1"></path>
+                  </svg>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="section-common section-footer">
+    {% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+<div id="container-{{ sid }}">
+  <div class="cs-reputation-swiper main-content">
+    <div class="cs-reputation-title" style="--he-fz:{{ se_stts.he-fz }}px;--he-fz-mb:{{ se_stts.he-fz-mb }}px">
+      {{ se_stts.title }}
+    </div>
+
+    <div class="swiper swiper-container reputation-swiper fadein" style="width: auto">
+      <div class="swiper-wrapper">
+        {% for block in se_blocks %}
+          {% if block.type == 'review' %}
+          {% assign bk_stts = block.settings %}
+          <div class="swiper-slide ">
+            <div class="reputation-content">
+              <div class="reputation-info">
+                <img
+                  loading="lazy"
+                  class="reputation-good"
+                  src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/ecom-no-replace-9TPZylTlHgFrame_20.png?v=1730366132"
+                  alt="reputation-good"
+                >
+                <div class="reputation-title">
+                  {{ bk_stts['reputation-title'] }}
+                </div>
+                <div class="reputation-text">
+                  {{ bk_stts['reputation-text'] }}
+                </div>
+                <div class="reputation-foot">
+                  <div class="reputation-user-info">
+                    <div class="reputation-author">
+                      {{ bk_stts['reputation-author'] }}
+                    </div>
+                    <div class="reputation-address">
+                      {{ bk_stts['reputation-address'] }}
+                    </div>
+                  </div>
+                  <div class="reputation-user-img">
+                    <img loading="lazy" width="50" height="50" src="{{bk_stts['avatar'] | img_url: 'medium'}}" alt="avatar">
+                  </div>
+                </div>
+              </div>
+              <div class="reputation-product">
+                <div class="reputation-product-info">
+                  <div class="reputation-product-img">
+                    <img
+                      width="58"
+                      height="58"
+                      loading="lazy"
+                      class="product-img"
+                      srcset="
+                        {%- if bk_stts.reputation-product.featured_image.width >= 533 -%}
+                            {{ bk_stts.reputation-product.featured_image | img_url: '533x' }} 533w,
+                        {%- endif -%}
+                        {%- if bk_stts.reputation-product.featured_image.width >= 534 -%}
+                            {{ bk_stts.reputation-product.featured_image | img_url: '534x' }} 534w,
+                        {%- endif -%}
+                        {%- if bk_stts.reputation-product.featured_image.width >= 720 -%}
+                            {{ bk_stts.reputation-product.featured_image | img_url: '720x' }} 720w,
+                        {%- endif -%}
+                        {%- if bk_stts.reputation-product.featured_image.width >= 940 -%}
+                            {{ bk_stts.reputation-product.featured_image | img_url: '940x' }} 940w,
+                        {%- endif -%}
+                        {%- if bk_stts.reputation-product.featured_image.width >= 1066 -%}
+                            {{ bk_stts.reputation-product.featured_image | img_url: '1066x' }} 1066w
+                        {%- endif -%}
+                      "
+                      src="{{ bk_stts.reputation-product.featured_image | img_url: '533x' }}"
+                      sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                      alt="{{ bk_stts.reputation-product.featured_image.alt | escape }} {{bk_stts.reputation-product.featured_image.width}}"
+                      loading="lazy"
+                      class="motion-reduce"
+                    >
+                  </div>
+                  <div class="reputation-product-con">
+                    <div class="reputation-product-title">
+                      <a href="{{ bk_stts['reputation-product'].url }}">{{ bk_stts['reputation-product'].title }}</a>
+                    </div>
+                    <div class="reputation-product-price">
+                      {% assign compare_at_price = bk_stts['reputation-product'].compare_at_price %}
+                      {% assign price = bk_stts['reputation-product'].price %}
+                      {% if compare_at_price > price %}
+                        <span class="compare"> {{ bk_stts['reputation-product'].price | money }}</span>
+                        <span class="price"> {{ bk_stts['reputation-product'].compare_at_price | money }}</span>
+                      {% else %}
+                        <span>{{ bk_stts['reputation-product'].price | money }}</span>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+                <div class="reputation-product-btn">
+                  <form
+                    method="post"
+                    action="/cart/add"
+                    id="product-form-{{ bk_stts['reputation-product'].variants[0].id }}"
+                    accept-charset="UTF-8"
+                    class="event-wrap"
+                    enctype="multipart/form-data"
+                    novalidate="novalidate"
+                    data-type="add-to-cart-form"
+                  >
+                    <input
+                      type="hidden"
+                      name="id"
+                      value="{{ bk_stts['reputation-product'].variants[0].id }}"
+                    >
+                    <button
+                      type="submit"
+                      name="add"
+                      data-btn-addtocart=""
+                      data-inventory-quantity="13"
+                      data-available="false"
+                      class=""
+                      id="product-add-to-cart"
+                    >
+                      <svg
+                        t="1730367881734"
+                        class="icon btn-icon"
+                        viewBox="0 0 1028 1024"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        p-id="4338"
+                      >
+                        <path
+                            d="M332.8 790.528q19.456 0 36.864 7.168t30.208 19.968 20.48 30.208 7.68 36.864-7.68 36.864-20.48 30.208-30.208 20.48-36.864 7.68q-20.48 0-37.888-7.68t-30.208-20.48-20.48-30.208-7.68-36.864 7.68-36.864 20.48-30.208 30.208-19.968 37.888-7.168zM758.784 792.576q19.456 0 37.376 7.168t30.72 19.968 20.48 30.208 7.68 36.864-7.68 36.864-20.48 30.208-30.72 20.48-37.376 7.68-36.864-7.68-30.208-20.48-20.48-30.208-7.68-36.864 7.68-36.864 20.48-30.208 30.208-19.968 36.864-7.168zM930.816 210.944q28.672 0 44.544 7.68t22.528 18.944 6.144 24.064-3.584 22.016-13.312 37.888-22.016 62.976-23.552 68.096-18.944 53.248q-13.312 40.96-33.28 56.832t-49.664 15.872l-35.84 0-65.536 0-86.016 0-96.256 0-253.952 0 14.336 92.16 517.12 0q49.152 0 49.152 41.984 0 20.48-9.728 35.84t-38.4 14.336l-49.152 0-94.208 0-118.784 0-119.808 0-99.328 0-55.296 0q-20.48 0-34.304-9.216t-23.04-24.064-14.848-32.256-8.704-32.768q-1.024-6.144-5.632-29.696t-11.264-58.88-14.848-78.848-16.384-87.552q-19.456-103.424-44.032-230.4l-76.8 0q-15.36 0-25.6-7.68t-16.896-18.432-9.216-23.04-2.56-22.528q0-20.48 13.824-33.792t37.376-12.288l103.424 0q20.48 0 32.768 6.144t19.456 15.36 10.24 18.944 5.12 16.896q2.048 8.192 4.096 23.04t4.096 30.208q3.072 18.432 6.144 38.912l700.416 0zM892.928 302.08l-641.024-2.048 35.84 185.344 535.552 1.024z"
+                            p-id="4339"></path>
+                      </svg>
+                      <svg
+                        t="1730367881734"
+                        class="icon hover-icon"
+                        viewBox="0 0 1028 1024"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        p-id="4338"
+                      >
+                        <path
+                            d="M332.8 790.528q19.456 0 36.864 7.168t30.208 19.968 20.48 30.208 7.68 36.864-7.68 36.864-20.48 30.208-30.208 20.48-36.864 7.68q-20.48 0-37.888-7.68t-30.208-20.48-20.48-30.208-7.68-36.864 7.68-36.864 20.48-30.208 30.208-19.968 37.888-7.168zM758.784 792.576q19.456 0 37.376 7.168t30.72 19.968 20.48 30.208 7.68 36.864-7.68 36.864-20.48 30.208-30.72 20.48-37.376 7.68-36.864-7.68-30.208-20.48-20.48-30.208-7.68-36.864 7.68-36.864 20.48-30.208 30.208-19.968 36.864-7.168zM930.816 210.944q28.672 0 44.544 7.68t22.528 18.944 6.144 24.064-3.584 22.016-13.312 37.888-22.016 62.976-23.552 68.096-18.944 53.248q-13.312 40.96-33.28 56.832t-49.664 15.872l-35.84 0-65.536 0-86.016 0-96.256 0-253.952 0 14.336 92.16 517.12 0q49.152 0 49.152 41.984 0 20.48-9.728 35.84t-38.4 14.336l-49.152 0-94.208 0-118.784 0-119.808 0-99.328 0-55.296 0q-20.48 0-34.304-9.216t-23.04-24.064-14.848-32.256-8.704-32.768q-1.024-6.144-5.632-29.696t-11.264-58.88-14.848-78.848-16.384-87.552q-19.456-103.424-44.032-230.4l-76.8 0q-15.36 0-25.6-7.68t-16.896-18.432-9.216-23.04-2.56-22.528q0-20.48 13.824-33.792t37.376-12.288l103.424 0q20.48 0 32.768 6.144t19.456 15.36 10.24 18.944 5.12 16.896q2.048 8.192 4.096 23.04t4.096 30.208q3.072 18.432 6.144 38.912l700.416 0zM892.928 302.08l-641.024-2.048 35.84 185.344 535.552 1.024z"
+                            p-id="4339" fill="#ffffff"></path>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+            
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .main-content {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .cs-reputation-swiper {
+    padding: 6vw 0;
+  }
+  .cs-reputation-swiper .cs-reputation-title {
+    font-weight: 600;
+    line-height: 1.25em;
+    letter-spacing: -1.2px;
+    font-size: var(--he-fz);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .cs-reputation-swiper .reputation-content {
+    height: 26vw;
+    min-height: 400px;
+    padding: 2vw;
+    border-radius: 1.2vw;
+    border: 1px solid #f2f2f2;
+    background-color: #fff;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 70%;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-good {
+    width: 40%;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.25em;
+    letter-spacing: 0px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-text {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.6em;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0px;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-info .reputation-product-con {
+    flex: 1;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-author {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.4em;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0px;
+    margin-bottom: 10px;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-address {
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.4em;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0px;
+    color: #999;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-info {
+    display: flex;
+    width: 80%;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-info .reputation-product-img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-info .reputation-product-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-info .reputation-product-title {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: none;
+    text-decoration: none;
+    line-height: 1.4em;
+    letter-spacing: 0px;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-info .reputation-product-price {
+    display: flex;
+    font-size: 13px;
+    line-height: 1.25em;
+    font-weight: 600;
+    font-family: 'Albert Sans', sans-serif;
+    letter-spacing: 0px;
+    text-transform: none;
+    text-decoration: none;
+  }
+
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-foot .reputation-user-img {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #f2f2f2;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-info .reputation-foot .reputation-user-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .cs-reputation-swiper
+    .reputation-content
+    .reputation-product
+    .reputation-product-info
+    .reputation-product-price
+    .compare {
+    color: #ee1818;
+    margin-right: 10px;
+  }
+  .cs-reputation-swiper
+    .reputation-content
+    .reputation-product
+    .reputation-product-info
+    .reputation-product-price
+    .price {
+    text-decoration: line-through;
+    color: #cacaca;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #000;
+    cursor: pointer;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn .icon {
+    width: 60%;
+    height: 60%;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn .hover-icon {
+    display: none;
+  }
+
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn form {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn form button {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn:hover {
+    background-color: #000;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn:hover .btn-icon {
+    display: none;
+  }
+  .cs-reputation-swiper .reputation-content .reputation-product .reputation-product-btn:hover .hover-icon {
+    display: block;
+  }
+
+  .swiper-container .swiper-slide {
+    width:30%;
+    margin-right:20px;
+  }
+
+  @media (max-width: 960px) {
+    .cs-reputation-swiper .cs-reputation-title {
+      font-size: var(--he-fz-mb);
+    }
+
+    .swiper-container .swiper-slide {
+      width:100%;
+      margin-right:0px;
+    }
+  }
+</style>
+
+{% javascript %}
+  $(function () {
+    const docWidth = document.documentElement.clientWidth;
+    const docHeight = document.documentElement.clientHeight;
+    const vw = docWidth / 100;
+    const vh = docHeight / 100;
+    let spaceBetween = 1.3 * vw;
+
+    let spaceNum = docWidth > 960 ? 0.012 : 0.05;
+
+    let ScreenwidthShow = false;
+    function checkScreenWidth() {
+      ScreenwidthShow = window.innerWidth < 960;
+    }
+
+    // 初始化时调用一次
+    checkScreenWidth();
+
+    let reputationSwiper = new Swiper('.reputation-swiper', {
+      spaceBetween: docWidth * spaceNum,
+      slidesPerView: 'auto',
+      loop: true,
+      autoplay: {
+        delay: 3000, // 自动轮播的间隔时间（毫秒）
+        disableOnInteraction: false, // 用户操作后是否停止自动轮播
+      },
+      normalizeSlideIndex: false, //关闭标准化的Slide 索引
+      slidesPerView: ScreenwidthShow ? 1 : 3,
+    });
+  });
+{% endjavascript %}
+      <div class="divi-line"></div>
+      <div class="wrap">
+          <div class="text-center pt-[2.0833vw]" style="background: url('https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-FHYASMVaribg-newsletter.png?v=1706494710') no-repeat scroll top center/auto;">
+              <h3 class="lg900:text-[2.0833vw] text-[6.4vw] font-HM_Bold ">{{ section.settings.form_title }}</h3>
+              <p class="lg900:text-[.8333vw] text-[4.2667vw]">{{ section.settings.form_subTitle }}</p>
+
+              <div class="relative lg900:w-[32.8125vw] lg900:mt-[1.0417vw] mt-[8vw] mx-auto rounded-full overflow-hidden">
+                  <input id="g-email" class="bg-theme-color w-full lg900:p-[.8333vw] p-[4.2667vw] lg900:pl-[1.3021vw] pl-[5.3333vw] lg900:pr-[5.2083vw] pr-[34.6667vw] lg900:text-[.8333vw] text-[4.2667vw]" placeholder="Your Email" type="text">
+                  <div id="send-btn" style="background-color: #C63053" class="absolute lg900:right-[.2604vw] right-[2.6667vw] lg900:top-[.2604vw] top-[2.6667vw] lg900:px-[1.3021vw] px-[5.3333vw] lg900:py-[.5208vw] py-[1.6vw] text-white rounded-full">{{ section.settings.form_btn }}</div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script>
+$(function () {
+
+let pdJson = {{ section.settings.section3_json | json }};
+pdJson = JSON.parse(pdJson);
+console.log(pdJson)
+$('.swiper-list .swiper-slide').each(function(){
+  let key = $(this).data("title");
+  if(pdJson?.key) {
+    $(this).find('.cpd-desc').text(pdJson[key]?.desc ?? "");
+    $(this).find('.cpd-review').text(pdJson[key]?.review ?? "");
+  };
+})
+  
+gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger)
+const delay = function (timer) {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      res()
+    }, timer)
+  })
+}
+
+const docWidth = document.documentElement.clientWidth;
+const docHeight = document.documentElement.clientHeight;
+const vw = docWidth / 100;
+const vh = docHeight / 100;
+let spaceBetween = 1.3 * vw;
+
+let spaceNum = docWidth > 960 ? 0.012 : 0.05
+
+$('.faq-answer').first().slideDown();
+
+$('.faq-question').click(function () {
+    var answer = $(this).next('.faq-answer');
+
+    if (!answer.is(':visible')) {
+        $('.faq-answer').not(answer).slideUp();
+
+        answer.slideDown();
+    }
+});
+
+new Swiper(".swiper1", {
+  slidesPerView: docWidth > 960 ? 4 : 1.2,
+  spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  navigation: {
+    nextEl: ".swp1-next",
+    prevEl: ".swp1-prev",
+  },
+});
+  new Swiper(".swiper2", {
+  slidesPerView: docWidth > 960 ? 4 : 1.2,
+  spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  navigation: {
+    nextEl: ".swp2-next",
+    prevEl: ".swp2-prev",
+  },
+});
+new Swiper(".swiper-l", {
+  slidesPerView: docWidth > 960 ? 2 : 1,
+  spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  navigation: {
+    nextEl: ".swpl-next",
+    prevEl: ".swpl-prev",
+  },
+  autoplay: {
+    delay: 5000, 
+    disableOnInteraction: false, 
+  },
+});
+new Swiper(".swiper-r", {
+  slidesPerView: docWidth > 960 ? 2 : 1,
+  spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  navigation: {
+    nextEl: ".swpr-next",
+    prevEl: ".swpr-prev",
+  },
+  autoplay: {
+    delay: 5000, 
+    disableOnInteraction: false,
+  },
+});
+
+let swiper2 = new Swiper(".product-swiper-thumbs",{
+  slidesPerView: docWidth > 960 ? 5 : 3,
+  loopAdditionalSlides: 3,
+  spaceBetween: 10,
+  watchSlidesProgress: true,
+  loop:true,
+  
+})
+let swiper1 = new Swiper(".product-swiper",{
+  slidesPerView: 1,
+  loopAdditionalSlides: 3,
+  thumbs: {
+    swiper: swiper2,
+  },
+  loop:true,
+  on:{
+    slideChange: function(event){
+      let imgId = $(event.slides[event.activeIndex]).data('variants-id');
+      $('.option-btn div').each(function(){
+        if($(this).data('variant-imageid') == imgId){
+          $(this).click();
+        }
+      })
+    }
+  }
+})
+
+let swiper3 = new Swiper(".swiper-list",{
+  slidesPerView: docWidth > 960 ? 3 : 1,
+  spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  navigation: {
+    nextEl: ".swp3-next",
+    prevEl: ".swp3-prev",
+  },
+})
+
+ 
+
+// 倒计时
+
+  var targetDate = new Date("{{ section.settings.countdown }}").getTime();
+  function updateCountdown() {
+    var now = new Date().getTime();
+    var timeLeft = targetDate - now;
+    var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    $(".count-down .days").text(
+      days + "D:"
+    );
+    $(".count-down .hours").text(
+      hours + "H:"
+    );
+    $(".count-down .minutes").text(
+      minutes + "M:"
+    );
+    $(".count-down .seconds").text(
+      seconds + "S"
+    );
+
+    $('.countdown .days').text(days)
+    $('.countdown .hours').text(hours)
+    $('.countdown .minutes').text(minutes)
+    $('.countdown .seconds').text(seconds)
+    if (timeLeft < 0) {
+      clearInterval(countdownInterval);
+      $(".count-down .days").text(
+        "0"
+      );
+      $(".count-down .hours").text(
+        "0"
+      );
+      $(".count-down .minutes").text(
+        "0"
+      );
+      $(".count-down .seconds").text(
+        "0 "
+      );
+    }
+  }
+  
+  var countdownInterval = setInterval(updateCountdown, 1000);
+
+
+
+var fadeInListen = function () {
+  var fadeIn = $('.main-contain').find('.fadein');
+
+  fadeIn.each(function () {
+    let element = this;
+    let {
+      scrub,
+      reverse,
+      duration,
+      actions,
+      fn
+    } = $(this).data()
+
+    gsap.set(element, {
+      opacity: 0,
+      y: 30
+    });
+    let toggleActions = "play none none none";
+    let start = $(this).data('start') || 80;
+    duration ? '' : duration = 0.8
+    let tl = gsap.to(element, {
+      opacity: 1,
+      y: 0,
+      duration
+    });
+    if (reverse) {
+      toggleActions = "play none none reverse"
+    }
+
+    ScrollTrigger.create({
+      animation: tl,
+      trigger: element,
+      toggleActions,
+      start: `top ${start}%`, // 调整触发点，视情况而定
+      onEnter: function () {
+
+      },
+      once: true // 只触发一次
+    });
+  });
+
+  var delayFadeIn = $('.delay-fadein');
+  delayFadeIn.each(function () {
+    let element = this;
+    let {
+      parent,
+      el,
+      scrub,
+      reverse,
+      duration,
+      actions,
+      fn
+    } = $(this).data()
+    let parentEl = $(parent);
+    parentEl.length ? '' : parentEl = $(element)
+    let delayEl = [];
+    if (el) {
+      el.split(',').forEach((selector) => delayEl.push(...parentEl.find(
+        selector)))
+    } else {
+      delayEl = parentEl.children();
+    }
+
+    let toggleActions = "play none none none";
+    scrub ? scrub = true : scrub = false;
+
+    duration ? '' : duration = 0.8
+    console.log(duration)
+    let start = $(this).data('start') || 80;
+    let stagger = $(this).data('delay') || 0.3;
+
+
+    gsap.set(delayEl, {
+      opacity: 0,
+      y: 30
+    });
+
+    let tl = gsap.timeline();
+    tl.to(delayEl, {
+      stagger,
+      opacity: 1,
+      y: 0,
+      duration
+    })
+    if (fn) {
+      console.log(fn)
+      tl = k1c_tl[fn](tl)
+    }
+    if (reverse) {
+      toggleActions = "play none none reverse"
+      gsap.set(element, {
+        opacity: 0,
+        y: 30
+      });
+      let t2 = gsap.to(element, {
+        opacity: 1,
+        y: 0,
+        duration
+      })
+      ScrollTrigger.create({
+        animation: t2,
+        toggleActions,
+        trigger: element,
+        scrub,
+        start: `top ${start}%`, // 调整触发点，视情况而定
+      });
+    }
+    actions ? toggleActions = actions : ''
+
+
+    ScrollTrigger.create({
+      animation: tl,
+      toggleActions,
+      trigger: element,
+      scrub,
+      start: `top ${start}%`, // 调整触发点，视情况而定
+      // marker: true
+      // once: true // 只触发一次
+    });
+  });
+}
+function CRalert(text){
+  let alEL = $(`<div class="CRalert-text" style="position: fixed;
+            z-index: 1000;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,.75);
+            color: #fff;
+            padding: .5vw 1vw;
+            border-radius: 1vw;
+          ">
+            ${text}
+    </div>`);
+    alEL.fadeIn();
+    $('body').append(alEL);
+    setTimeout(function() {
+      alEL.fadeOut(function() {
+        alEL.remove(); // 从 DOM 中移除弹窗
+      });
+  }, 1500);
+}
+
+function isValidEmailStrict(email) {
+  const strictEmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}$/;
+  return strictEmailRegex.test(email);
+}
+
+const container = document.querySelector('.ticker');
+const items = gsap.utils.toArray('.ticker-item');
+const totalWidth = items.reduce((acc, item) => acc + item.offsetWidth + 20, 0);
+const containerWidth = container.offsetWidth;
+const clonesNeeded = Math.ceil(containerWidth / totalWidth) + 1;
+for (let i = 0; i < clonesNeeded; i++) {
+  items.forEach(item => {
+    const clone = item.cloneNode(true);
+    container.appendChild(clone);
+  });
+}
+
+gsap.to(container, {
+  x: `-=${totalWidth}`, // 滚动一整个列表宽度
+  duration: 120, // 滚动时间
+  ease: "none",
+  repeat: -1, // 无限循环
+  modifiers: {
+    x: gsap.utils.unitize(value => parseFloat(value) % totalWidth), // 将 x 值限制在总宽度范围
+  },
+});
+
+// 淡入淡出 初始化
+fadeInListen();
+
+  $(".option-btn div").click(function () {
+      let _this = $(this);
+      let pimg_list = $('.product-swiper .swiper-slide')
+    
+      $(this).addClass("option-active").siblings().removeClass("option-active");
+      $(".hot-np").text($(this).data("variant-price"));
+      $(".hot-op").text($(this).data("variant-oprice"));
+      $("#hot-inp").val($(this).data("variant-id"));
+      $("#inventory").text($(this).data("variant-quantity"));
+
+      $(".product-swiper .swiper-slide").each(function(index) {
+          if ($(this).data("variants-id") == _this.data("variant-imageid")) {
+            swiper1[0].slideTo(index);
+            return false; 
+          }
+      });
+  });
+  $(".option-btn div").first().click();
+
+  $('.product-option').on('change', function () {
+    const productId = $(this).data('product-id'); // 获取当前产品 ID
+    const options = getSelectedOptions(productId); // 获取当前选项值
+    const variantsData = $(`#variants-${productId}`).text(); // 获取隐藏的变体数据
+    const variants = JSON.parse(variantsData); // 解析变体数据
+
+    // 匹配选中的变体
+    const matchingVariant = variants.find(variant =>
+      variant.options.every((option, index) => option === options[index])
+    );
+
+    // 更新价格和隐藏字段的变体 ID
+    const $priceElement = $(`#price-${productId}`);
+    const $comparePriceElement = $(`#compare-price-${productId}`);
+    const $hiddenInput = $(`#selected-variant-${productId}`);
+    const $addToCartButton = $(`#add-to-cart-${productId}`);
+    if (matchingVariant) {
+      // 更新现价
+      $priceElement.text(formatMoney(matchingVariant.price));
+
+      // 更新原价（如有折扣）
+      if (matchingVariant.compare_at_price && matchingVariant.compare_at_price > matchingVariant.price) {
+        $comparePriceElement.text(formatMoney(matchingVariant.compare_at_price)).show();
+        $priceElement.addClass('discounted-price');
+      } else {
+        $comparePriceElement.hide();
+        $priceElement.removeClass('discounted-price');
+      }
+
+      // 更新隐藏字段
+      $hiddenInput.val(matchingVariant.id);
+      $addToCartButton.prop('disabled', false); // 启用按钮
+    } else {
+      $priceElement.text('Unavailable');
+      $comparePriceElement.hide();
+      $hiddenInput.val(''); // 清空变体 ID，避免无效提交
+      $addToCartButton.prop('disabled', true); // 禁用按钮
+    }
+  });
+
+  // 获取当前选项值
+  function getSelectedOptions(productId) {
+    return $(`.product-option[data-product-id="${productId}"]`)
+      .map(function () {
+        return $(this).val();
+      })
+      .get(); // 返回数组
+  }
+
+  // 格式化价格
+  function formatMoney(cents) {
+    return (cents / 100).toLocaleString('en-US', {
+      style: 'currency',
+      currency: 'GBP',
+    });
+  }
+
+  const saveNewYearEmail = async (email, site) => {
+    const url = "https://testmembership.creality.com/personal-center/newYearActivity/saveNewYearEmail";
+  
+    const body = {
+      email,
+      site,
+    };
+  
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        // mode: 'no-cors',
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+      });
+  
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status}`);
+      }
+  
+      const data = await response.json();
+      console.log("Response:", data);
+      
+      return data;
+    } catch (error) {
+      console.error("Error while sending POST request:", error);
+      throw error;
+    }
+  };
+  $('#send-btn').click(async ()=>{
+    if(!isValidEmailStrict($('#g-email').val())){
+      CRalert("Email format is incorrect.")
+      return;
+    }
+    const data = await saveNewYearEmail($('#g-email').val(), 'UK');
+    
+    if(data.code == 200){
+      CRalert("Subscribe successfully, thank you for subscribing")
+    }else if(data.code == 10001){
+      CRalert("This email has been subscribed before. Please fill in another one.")
+    }else{
+      CRalert("server 500")
+    }
+  })
+
+  $('#g-email').on('input', function () {
+    if ($(this).val().trim() !== '') {
+      $('#send-btn').prop('disabled', false).addClass('active');
+    } else {
+      $('#send-btn').prop('disabled', true).removeClass('active');
+    }
+  });
+});
+
+  
+</script>
+
+{% schema %}
+  {
+    "name": "2025-valentine-day",
+    "blocks": [
+      {
+        "type": "card-rule",
+        "name": "优惠卡片",
+        "limit": 6,
+        "settings":[
+          {
+            "type": "image_picker",
+            "id": "card_image",
+            "label": "卡片 图片"
+          },
+          {
+            "type": "html",
+            "id": "card_content",
+            "label": "卡片 信息",
+            "default": "Bedding <br> Basics from :"
+          },
+          {
+            "type": "text",
+            "id": "card_price",
+            "label": "卡片 价格",
+            "default": "102"
+          },
+          {
+             "type": "text",
+              "id": "coupon_title",
+              "label": "优惠券 标题",
+              "default": "VOUCHER"
+          },
+          {
+            "type": "text",
+            "id": "coupon_rule",
+            "label": "优惠券 规则",
+            "default": "10% OFF",
+          },
+          {
+            "type": "inline_richtext",
+            "id": "coupon_desc",
+            "label": "优惠券 描述",
+            "default": "<u>Get it now</u>",
+          }
+        ]
+      },
+      {
+        "type": "right-protection",
+        "name": "权益保障",
+        "limit": 3,
+        "settings": [
+          {
+            "type":"image_picker",
+            "id": "rp_image",
+            "label": "图标",
+          },
+          {
+            "type":"text",
+            "id": "rp_title",
+            "label": "标题",
+            "default": "Free SHIPPING over $49.99"
+          },
+          {
+            "type":"text",
+            "id": "rp_desc",
+            "label": "描述",
+            "default": "Delivery calculated per shipment"
+          }
+        ]
+      },
+      {
+      "type": "review",
+      "name": "Reputation Swiper Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "avatar",
+          "id": "avatar"
+        },
+        {
+          "type": "text",
+          "id": "reputation-title",
+          "label": "Title",
+          "default": "Hear from Our Happy Customers"
+        },
+        {
+          "type": "text",
+          "id": "reputation-text",
+          "label": "Text",
+          "default": "Hear from Our Happy Customers"
+        },
+        {
+          "type": "text",
+          "id": "reputation-author",
+          "label": "Author",
+          "default": "Hear from Our Happy Customers"
+        },
+        {
+          "type": "text",
+          "id": "reputation-address",
+          "label": "Address",
+          "default": "Hear from Our Happy Customers"
+        },
+        {
+          "type": "product",
+          "id": "reputation-product",
+          "label": "Product"
+        }
+      ]
+    }
+    ],
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "header_title",
+        "label": "标题",
+        "default": "End of year sale"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "header_subTitle",
+        "label": "子标题",
+        "default":"SALE UP to <u>57% OFF</u>"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "header_subTitle3",
+        "label": "三级标题",
+        "default":"SALE UP to <u>57% OFF</u>"
+      },
+      {
+        "type":"text",
+        "id": "big_title",
+        "label": "大图标题",
+        "default": "SHOP THE LOOK"
+      },
+      {
+        "type":"image_picker",
+        "id": "big_image",
+        "label": "大图",
+      },
+      {
+        "type": "header",
+        "content": "热卖产品"
+      },
+      {
+        "type": "product",
+        "id": "hot_product",
+        "label": "产品"
+      },
+      {
+        "type": "text",
+        "id": "hot_title",
+        "label": "标题",
+        "default": "Deal of the days"
+      },
+      {
+        "type": "text",
+        "id": "hot_review",
+        "label": "评论信息",
+        "default": "(1298 reviews)"
+      },
+      {
+        "type": "text",
+        "id": "countdown",
+        "label": "倒计时",
+        "default": "2025-01-25T00:00:00",
+        "info": "格式:2024-12-25T00:00:00"
+      },
+      {
+        "type": "text",
+        "id": "hot_link",
+        "label": "跳转链接",
+        "default": "Full details"
+      },
+      {
+        "type": "header",
+        "content": "宣传视频"
+      },
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "视频链接",
+        "default": "https://cdn.shopify.com/videos/c/o/v/e2c32189931c46c1ae4f151d088ff3ee.mp4#t=,"
+      },
+      {
+        "type": "text",
+        "id": "video_review",
+        "label": "视频评论信息",
+        "default": "Rated 4.9/5 by 167 of happy customers"
+      },
+      {
+        "type": "header",
+        "content": "商品轮播"
+      },
+      {
+        "type": "text",
+        "id": "section1_title",
+        "label":"商品模块一 标题",
+        "default": "Don't miss out sale !"
+      },
+      {
+        "type": "text",
+        "id": "section1_sub_title",
+        "label":"商品模块一 子标题",
+        "default": "this is a subtitle"
+      },
+      {
+        "type": "collection",
+        "id": "section1_collection",
+        "label": "商品模块一 产品列表",
+      },
+      {
+        "type": "text",
+        "id": "section2_title",
+        "label":"商品模块二 标题",
+        "default": "Don't miss out sale !"
+      },
+      {
+        "type": "text",
+        "id": "section2_sub_title",
+        "label":"商品模块二 子标题",
+        "default": "this is a subtitle"
+      },
+      {
+        "type": "collection",
+        "id": "section2_collection",
+        "label": "商品模块二 产品列表",
+      },
+      {
+        "type": "text",
+        "id": "section2_collection_left_text",
+        "label": "商品模块二 副[左边] 标题",
+      },
+      {
+        "type": "text",
+        "id": "section2_collection_left_subtitle",
+        "label": "商品模块二 副[左边] 子标题",
+      },
+      {
+        "type": "collection",
+        "id": "section2_collection_left",
+        "label": "商品模块二 副[左边] 产品列表",
+      },
+      {
+        "type": "text",
+        "id": "section2_collection_right_text",
+        "label": "商品模块二 副[右边] 标题",
+      },
+      {
+        "type": "text",
+        "id": "section2_collection_right_subtitle",
+        "label": "商品模块二 副[右边] 子标题",
+      },
+      {
+        "type": "collection",
+        "id": "section2_collection_right",
+        "label": "商品模块二 副[右边] 产品列表",
+      },
+      {
+        "type": "collection",
+        "id": "section3_collection",
+        "label": "商品模块三 产品列表",
+      },
+      {
+        "type": "liquid",
+        "id": "section3_json",
+        "label": "商品模块三 自定义数据",
+        "info": "{'商品标题':{'review': '评论数', 'desc': '产品描述'}"
+      },
+      {
+        "type": "header",
+        "content": "评论设置"
+      },
+      {
+      "type": "text",
+      "id": "title",
+      "label": "title",
+      "default": "Hear from Our Happy Customers"
+    },
+    {
+      "type": "range",
+      "label": "fontSize",
+      "id": "he-fz",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "label": "fontSize(mobile)",
+      "id": "he-fz-mb",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 28
+    },
+    {
+      "type": "header",
+      "content": "表单设置",
+    },
+      {
+        "type": "text",
+        "id": "form_title",
+        "label":"标题",
+        "default": "GET ON THE LIST"
+      },
+      {
+        "type": "text",
+        "id": "form_subTitle",
+        "label":"二级标题",
+        "default": "Create More in 2025 – Limited-Time Promos!"
+      },
+      {
+        "type": "text",
+        "id": "form_btn",
+        "label":"按钮文字",
+        "default": "subscirbe"
+      },
+    ],
+    "presets": [
+      {
+        "name": "2025--valentine-day-page",
+        "blocks": [
+          {
+            "type": "card-rule",
+            "settings": {
+              "card_content": "Bedding <br> Basics from :",
+              "card_price": "100",
+              "coupon_title": "VOUCHER",
+              "coupon_rule": "10% OFF",
+              "coupon_desc": "<u>Get it now</u>"
+            }
+          },
+          {
+            "type": "right-protection",
+            "settings": {
+              "rp_title": "Free SHIPPING over $49.99",
+              "rp_desc": "Delivery calculated per shipment"
+            }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

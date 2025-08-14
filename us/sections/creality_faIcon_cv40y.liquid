@@ -1,0 +1,2129 @@
+<style>
+  .blur-up {
+    filter: blur(1.25rem);
+    transition: filter 0.4s, -webkit-filter 0.4s;
+  }
+
+  .blur-up.loaded {
+    filter: blur(0rem);
+  }
+
+  .CV40-yure .blur-up {
+    filter: blur(20px);
+    transition: filter 0.4s, -webkit-filter 0.4s;
+  }
+
+  .CV40-yure .blur-up.loaded {
+    filter: blur(0px);
+  }
+  .CV40-yure .fit_picture {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .CV40-yure .fit_picture img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+    object-fit: contain;
+  }
+
+  @media (min-width: 0px) {
+    .CV40-yure .fit_picture .placeholderTag {
+      display: none;
+    }
+    .CV40-yure .fit_picture ._xmedium {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1921px) {
+    .CV40-yure .fit_picture .placeholderTag {
+      display: none;
+    }
+    .CV40-yure .fit_picture ._xlarge {
+      display: block;
+    }
+  }
+
+  @media (max-width: 960px) {
+    .CV40-yure .fit_picture .placeholderTag {
+      display: none;
+    }
+    .CV40-yure .fit_picture ._xsmall {
+      display: block;
+    }
+  }
+  body,
+  html,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  input {
+    outline: none;
+  }
+
+  body.no-scroll {
+    overflow-y: hidden;
+    /* 禁止页面垂直滚动 */
+  }
+
+  img,
+  picture {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 0.42vw;
+  }
+
+  :root {
+    --themeStyle-color: #18883f;
+    --border-radius: 12px;
+  }
+
+  body {
+    letter-spacing: 0;
+    /* 使用相对单位 */
+    font-kerning: normal;
+    /* 确保字距调整正常 */
+    text-rendering: optimizeLegibility;
+    /* 优化文本渲染 */
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    /* 仅针对 Safari 浏览器 */
+    body {
+      letter-spacing: 0;
+      /* 调整字间距 */
+    }
+  }
+  .CV40-y h1, .CV40-y h2,.CV40-y h3 {
+    line-height: 1;
+  }
+  .CV40-y {
+    background-color: #fcfbfc;
+    font-family: HarmonyOS_Sans_SC_Medium;
+  }
+  .CV40-y button[disabled] {
+    opacity: 0.6;
+  }
+  .CV40-y video {
+    border-radius: 0.42vw;
+  }
+  .CV40-y .sec-12 .sec-12-mk {
+    opacity: 0;
+  }
+  @keyframes textFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .CV40-y .textFadeIn {
+    animation: textFadeIn 1s ease-in-out 0.5s forwards;
+  }
+  .CV40-y .pc-show {
+    display: block;
+  }
+  .CV40-y .mb-show {
+    display: none;
+  }
+  .CV40-y .gsap-anchor6 .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list-desc .cl-swiper--nav-item {
+    font-size: 0.94vw;
+  }
+  .CV40-y .software-active {
+    background-color: #525252 !important;
+    padding: 1.56vw 1.04vw !important;
+    font-size: 1.56vw;
+    font-family: 'HarmonyOS_Sans_SC_bold';
+  }
+  .CV40-y .bg-black {
+    color: #fff;
+    background-color: #000;
+  }
+  .CV40-y .mb-show {
+    display: none !important;
+  }
+  .CV40-y .pc-show {
+    display: block !important;
+  }
+  .CV40-y .pc-flexShow {
+    display: flex !important;
+  }
+  .CV40-y .abs {
+    display: flex;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  .CV40-y .swiper-wrap {
+    margin-top: 1.04vw;
+  }
+  .CV40-y .swiper2 ~ .cl-swiper-nav-containe {
+    width: 60vw;
+  }
+  .CV40-y .swiper-wrap2 .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list .cl-swiper--nav-item {
+    font-size: 1.15vw;
+  }
+  .CV40-y .section-common {
+    position: relative;
+  }
+  .CV40-y .section-common .a-link {
+    display: inline-block;
+    color: #fff;
+    border-radius: 40px;
+    background-color: var(--themeStyle-color);
+    font-size: 1.2vw;
+    padding: 0.73vw 1.15vw;
+  }
+  .CV40-y .section-common .wrap {
+    margin: 0 21.88vw;
+    padding: 5.21vw 0 3.13vw;
+    text-align: center;
+  }
+  .CV40-y .section-common .wrap .h1-t {
+    font-size: 3.02vw;
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-weight: bold;
+  }
+  .CV40-y .section-common .wrap .h2-t {
+    font-size: 3.33vw;
+    font-weight: bold;
+  }
+  .CV40-y .section-common .wrap .h3-t {
+    font-size: 3.54vw;
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-weight: bold;
+  }
+  .CV40-y .section-common .wrap .h3-t2 {
+    font-size: 1.98vw;
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-weight: bold;
+  }
+  .CV40-y .section-common .wrap .h4-t {
+    font-size: 1.98vw;
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-weight: bold;
+    color: #f67e3c;
+  }
+  .CV40-y .section-common .wrap .h4-t2 {
+    font-size: 1.67vw;
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-weight: bold;
+  }
+  .CV40-y .section-common .wrap .h4-t3 {
+    font-size: 1.25vw;
+    font-family: HarmonyOS_Sans_SC_Medium;
+    font-weight: bold;
+  }
+  .CV40-y .section-common .wrap .p-desc {
+    font-size: 0.94vw;
+    font-family: HarmonyOS_Sans_SC_Light;
+    margin-top: 1.04vw;
+  }
+  .CV40-y .section-common .wrap .p-desc2 {
+    font-size: 1.25vw;
+    font-family: HarmonyOS_Sans_SC_Light;
+    margin-top: 1.04vw;
+  }
+  .CV40-y .section-common .wrap .text-box .text1 {
+    font-family: HarmonyOS_Sans_SC_Medium;
+    font-size: 1.51vw;
+  }
+  .CV40-y .section-form .g-email {
+    width: 100%;
+    border: 2px solid #d9d9d9;
+    padding: 0.52vw 1.04vw;
+  }
+  .CV40-y .section-form .form-btn {
+    background-color: #f67e3c;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 0.63vw 0;
+    font-size: 1.25vw;
+  }
+  .CV40-y .s-banner .wrap .text-box {
+    margin-top: 1.35vw;
+    text-align: left;
+  }
+  .CV40-y .s-banner .a-link {
+    margin-top: 2.29vw;
+  }
+  .CV40-y .s-scene .wrap {
+    justify-content: center;
+  }
+  .CV40-y .s-scene .scene-list {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+    display: flex;
+    justify-content: center;
+    gap: 1.04vw;
+    margin: 2.08vw 2.08vw 0;
+  }
+  .CV40-y .s-scene .scene-list .scene-item {
+    flex: 1;
+    text-align: center;
+  }
+  .CV40-y .s-scene .scene-list .scene-item img {
+    object-fit: cover;
+    border-radius: var(--border-radius);
+  }
+  .CV40-y .s-scene .scene-list .scene-item .scene-title {
+    font-size: 1.04vw;
+    margin-top: 0.52vw;
+  }
+  .CV40-y .section-plate .wrap {
+    color: #fff;
+    text-align: left;
+    align-items: center;
+  }
+  .CV40-y .section-sequence-layout .wrap {
+    text-align: left;
+  }
+  .CV40-y .section-sequence-layout .wrap .p-desc {
+    font-size: 1.25vw;
+  }
+  .CV40-y .section-sequence-layout .image-viewport {
+    margin-top: 2.08vw;
+  }
+  .CV40-y .section-sequence-layout .video-viewport {
+    position: relative;
+    margin-top: 2.08vw;
+  }
+  .CV40-y .section-sequence-layout .video-viewport .video-btn {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--themeStyle-color);
+    padding: 0.52vw 1.04vw;
+    border-radius: 2.08vw;
+  }
+  .CV40-y .cl-swiper {
+    overflow: hidden;
+  }
+  .CV40-y .cl-swiper .swiper-slide {
+    opacity: 0.6;
+    transition: all 0.35s;
+  }
+  .CV40-y .cl-swiper .swiper-slide img {
+    width: 100%;
+  }
+  .CV40-y .cl-swiper .swiper-slide-active {
+    opacity: 1;
+  }
+  .CV40-y .cl-swiper .cl-swiper-nav-containe {
+    margin: 2.08vw auto 0;
+  }
+  .CV40-y .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list,
+  .CV40-y .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list-desc {
+    display: flex;
+    justify-content: space-between;
+  }
+  .CV40-y .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list .cl-swiper--nav-item,
+  .CV40-y .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list-desc .cl-swiper--nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 0.52vw 1.25vw;
+    color: #fff;
+    transition: all 0.35s;
+    cursor: pointer;
+    font-size: 1.25vw;
+    opacity: 0.3;
+  }
+  .CV40-y .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list .cl-swiper-active,
+  .CV40-y .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list-desc .cl-swiper-active {
+    color: #fff;
+    opacity: 1;
+  }
+  .CV40-y .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-progress-line {
+    position: relative;
+    height: 0.16vw;
+    background-color: #525252;
+    border-radius: 0.31vw;
+    overflow: hidden;
+  }
+  .CV40-y .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-progress-line .cl-swiper-nav-scrollbar-drag {
+    height: 0.16vw;
+    background-color: #fff;
+    transition: all 0.35s;
+  }
+  .CV40-y .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list-desc .cl-swiper--nav-item {
+    font-size: 1.04vw;
+    opacity: 0;
+    pointer-events: all;
+    cursor: default;
+    padding: 1.04vw 0vw 0;
+  }
+  .CV40-y .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list-desc .cl-swiper-desc-active {
+    opacity: 1;
+  }
+  .CV40-y .swiper-wrap.light .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list .cl-swiper-active {
+    color: #000;
+  }
+  .CV40-y .swiper-wrap.light .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list .cl-swiper--nav-item {
+    color: #000;
+    font-size: 1.35vw;
+  }
+  .CV40-y
+    .swiper-wrap.light
+    .cl-swiper
+    .cl-swiper-nav-containe
+    .cl-swiper-nav-progress-line
+    .cl-swiper-nav-scrollbar-drag {
+    background-color: #000;
+  }
+  .CV40-y .swiper-wrap.light .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-progress-line {
+    background-color: #bdbdbd;
+  }
+  .CV40-y .swiper-wrap.light .cl-swiper-nav-list-desc .cl-swiper--nav-item {
+    color: #000;
+  }
+  .CV40-y .section-material {
+    padding-bottom: 5.21vw;
+    overflow: hidden;
+  }
+  .CV40-y .section-material .image-viewport {
+    margin-top: 2.08vw;
+  }
+  .CV40-y .section-material .swiper-material {
+    margin-top: 1.04vw;
+  }
+  .CV40-y .section-material .material-wrap {
+    display: flex;
+  }
+  .CV40-y .section-material .material-wrap picture {
+    width: 11.25vw;
+    height: 9.38vw;
+  }
+  .CV40-y .image-hover-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.04vw;
+    text-align: left;
+    margin-top: 3.13vw;
+  }
+  .CV40-y .image-hover-container .image-hover {
+    position: relative;
+    transition: all 0.35s;
+    flex: 1;
+    overflow: hidden;
+    border-radius: 0.63vw;
+  }
+  .CV40-y .image-hover-container .image-hover .text {
+    position: absolute;
+    left: 1.04vw;
+    bottom: 2.08vw;
+  }
+  .CV40-y .image-hover-container .image-hover .text p {
+    font-size: 1.04vw;
+  }
+  .CV40-y .image-hover-container .image-hover img {
+    width: 100%;
+    height: 18.23vw;
+    object-fit: cover;
+  }
+  .CV40-y .image-hover-container .act {
+    flex: 2.5;
+  }
+  .CV40-y .sec-14 .sec-icon img {
+    width: 2.29vw;
+    height: 2.29vw;
+  }
+  .CV40-y .sec-14 .sec-icon p {
+    font-size: 0.83vw;
+  }
+  .CV40-y .sec-16 .wrap .desc {
+    font-size: 1.25vw;
+    margin-top: 0.52vw;
+  }
+  .CV40-y .sec-16 .wrap .s-16-box {
+    gap: 1.04vw;
+    font-size: 0.83vw;
+    padding: 1.04vw;
+  }
+  .CV40-y .sec-16 .wrap .s-16-box .software-item {
+    padding: 1.04vw;
+  }
+  .CV40-y .sec-16 .wrap .software-video {
+    display: none;
+  }
+  .CV40-y .sec-16 .wrap .software-video-active {
+    display: block;
+  }
+  .CV40-y .sec-17 .cl-swiper .cl-swiper-nav-containe {
+    width: 70vw;
+  }
+  .CV40-y .section-specifications {
+    margin-top: 4.17vw;
+    padding: 0 18.4vw 5vw;
+  }
+  .CV40-y .section-specifications p.title {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    text-align: left;
+    font-size: 2.34vw;
+  }
+  .CV40-y .section-specifications .table_wrap {
+    margin-top: 2vw;
+  }
+  .CV40-y .section-specifications .table_wrap .row-item {
+    display: flex;
+  }
+  .CV40-y .section-specifications .table_wrap .row-item .param-name {
+    display: flex;
+    align-items: center;
+    width: 12vw;
+    flex-shrink: 0;
+    font-family: HarmonyOS_Sans_SC_Medium;
+    font-size: 0.86vw;
+    color: #000000;
+  }
+  .CV40-y .section-specifications .table_wrap .row-item .param-name.first {
+    font-size: 1.17vw;
+  }
+  .CV40-y .section-specifications .table_wrap .row-item .value-wrap {
+    flex: 1;
+    display: flex;
+    gap: 5vw;
+  }
+  .CV40-y .section-specifications .table_wrap .row-item .value-wrap .value-item {
+    flex: 1;
+    font-family: 'HarmonyOS_Sans_SC_Light';
+    font-size: 0.86vw;
+    color: #000000;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    word-break: break-all;
+  }
+  .CV40-y .section-specifications .table_wrap .row-item .value-wrap .value-item .product-name {
+    font-family: 'HarmonyOS_Sans_SC_Medium';
+    font-size: 1.17vw;
+    color: #000000;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 2.5vw;
+  }
+  .CV40-y .section-specifications .table_wrap .row-item .value-wrap .value-item .fit_picture {
+    width: 100%;
+  }
+  .CV40-y .section-specifications .table_wrap .row-item .item-wrap {
+    display: flex;
+    flex: 1;
+    border-bottom: 0.0625rem solid #ddd;
+    padding: 1vw 0;
+  }
+  @media (max-width: 960px) {
+    .CV40-y .pc-show {
+      display: none !important;
+    }
+    .CV40-y .pc-flexShow {
+      display: none !important;
+    }
+    .CV40-y .mb-show {
+      display: block !important;
+    }
+    .CV40-y .swiper-wrap.light .cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list .cl-swiper--nav-item {
+      font-size: 2.13vmin;
+    }
+    .CV40-y .section-common .wrap {
+      margin: 0 2.67vmin;
+      padding: 10.67vmin 0 2.67vmin;
+    }
+    .CV40-y .section-common .wrap .h2-t {
+      font-size: 5.33vmin;
+    }
+    .CV40-y .section-common .wrap .h3-t2 {
+      font-size: 4.27vmin;
+    }
+    .CV40-y .section-common .wrap .h4-t {
+      font-size: 4.27vmin;
+    }
+    .CV40-y .section-common .wrap .h4-t3 {
+      font-size: 3.2vmin;
+    }
+    .CV40-y .section-common .wrap .text-box .text1 {
+      font-size: 1.87vmin;
+    }
+    .CV40-y .section-common .wrap .text-box .text2 {
+      font-size: 3.73vmin;
+      margin-top: 4vmin;
+    }
+    .CV40-y .section-common .wrap .p-desc {
+      font-size: 2.4vmin;
+    }
+    .CV40-y .section-sequence-layout .wrap {
+      text-align: center;
+    }
+    .CV40-y .section-sequence-layout .wrap .h4-t {
+      font-size: 4.27vmin;
+    }
+    .CV40-y .section-sequence-layout .wrap .p-desc {
+      font-size: 2.67vmin;
+    }
+    .CV40-y .section-sequence-layout .video-viewport {
+      margin-top: 5.33vmin;
+    }
+    .CV40-y .section-sequence-layout .image-viewport {
+      margin-top: 5.33vmin;
+    }
+    .CV40-y .section-material .wrap .h3-t2 {
+      font-size: 3.73vmin;
+    }
+    .CV40-y .section-material .wrap .p-desc2 {
+      font-size: 2.13vmin;
+    }
+    .CV40-y .section-material .image-viewport {
+      margin-top: 5.33vmin;
+    }
+    .CV40-y .section-material .swiper-material {
+      margin-top: 8vmin;
+    }
+    .CV40-y .section-material .swiper-material .swiper-wrapper {
+      flex-wrap: wrap;
+      gap: 1.33vmin;
+      justify-content: space-around;
+    }
+    .CV40-y .section-material .swiper-material .swiper-wrapper .swiper-slide {
+      flex: 0 0 calc(33.33% - 1.33vmin);
+    }
+    .CV40-y .section-material .swiper-material .swiper-wrapper .slide-title {
+      font-size: 2.67vmin;
+      padding-top: 0.8vmin;
+    }
+    .CV40-y .s-banner .wrap {
+      justify-content: center;
+    }
+    .CV40-y .s-banner .wrap .h1-t {
+      font-size: 7.47vmin;
+    }
+    .CV40-y .s-banner .wrap .text-box {
+      text-align: center;
+      margin-top: 5.33vmin;
+    }
+    .CV40-y .s-banner .wrap .text-box .text1 {
+      font-size: 4vmin;
+    }
+    .CV40-y .s-banner .wrap .text-box .a-link {
+      font-size: 2.4vmin;
+      padding: 1.33vmin 2.67vmin;
+    }
+    .CV40-y .s-scene {
+      z-index: 1;
+      margin-bottom: initial;
+    }
+    .CV40-y .s-scene .wrap {
+      padding-top: 13.33vmin;
+    }
+    .CV40-y .s-scene .image-viewport {
+      padding: 10.67vmin 0 5.33vmin;
+    }
+    .CV40-y .section-plate .wrap .h3-t {
+      font-size: 5.33vmin;
+      padding-left: 5.33vmin;
+      margin-top: 8vmin;
+    }
+    .CV40-y .sec-4 .image-viewport {
+      padding: 18.67vmin 0 10.67vmin;
+    }
+    .CV40-y .sec-10 .wrap .h3-t {
+      font-size: 4vmin;
+      margin-top: 2.67vmin;
+    }
+    .CV40-y .sec-11 .wrap .h4-t2 {
+      font-size: 2.93vmin;
+      line-height: 1.2;
+    }
+    .CV40-y .sec-11 .wrap p {
+      line-height: 1.2;
+    }
+    .CV40-y .sec-12 .wrap .h3-t2 {
+      font-size: 4.27vmin;
+    }
+    .CV40-y .sec-12 .sec-12-mk {
+      opacity: 0;
+    }
+    .CV40-y .sec-13 .wrap .h3-t2 {
+      font-size: 4.27vmin;
+    }
+    .CV40-y .sec-13 .wrap .h4-t3 {
+      font-size: 3.47vmin;
+    }
+    .CV40-y .sec-13 .wrap p {
+      font-size: 2.13vmin;
+    }
+    .CV40-y .sec-13 .wrap .swiper-wrapper {
+      flex-wrap: wrap;
+      gap: 2.67vmin;
+    }
+    .CV40-y .sec-13 .wrap .cl-swiper .swiper-slide {
+      opacity: 1;
+    }
+    .CV40-y .sec-14 .wrap {
+      padding-bottom: 10.67vmin;
+    }
+    .CV40-y .sec-14 .sec-icon img {
+      width: 9.07vmin;
+      height: 6vmin;
+    }
+    .CV40-y .sec-14 .sec-icon .h4-t3 {
+      font-size: 2.67vmin;
+    }
+    .CV40-y .sec-14 .sec-icon > div {
+      background-color: #eee;
+      padding: 2.67vmin 2.67vmin;
+      border-radius: 2.13vmin;
+    }
+    .CV40-y .sec-14 .sec-icon p {
+      font-size: 2.13vmin;
+    }
+    .CV40-y .sec-15 .wrap .h4-t2 {
+      font-size: 3.2vmin;
+    }
+    .CV40-y .sec-16 .wrap {
+      padding-top: 10.67vmin;
+    }
+    .CV40-y .sec-16 .wrap .h4-t {
+      font-size: 4.27vmin;
+    }
+    .CV40-y .sec-16 .wrap .desc {
+      font-size: 2.67vmin;
+      margin-top: 1.33vmin;
+    }
+    .CV40-y .sec-16 .wrap .s-16-box {
+      gap: 2.67vmin;
+      font-size: 2.13vmin;
+      padding: 2.67vmin;
+    }
+    .CV40-y .sec-16 .wrap .s-16-box .software-item {
+      padding: 0.67vmin 2.67vmin;
+      font-size: 3.2vmin;
+      font-family: 'HarmonyOS_Sans_SC_Light';
+    }
+    .CV40-y .sec-16 .wrap .s-16-box .software-active {
+      font-family: 'HarmonyOS_Sans_SC_Bold';
+      background-color: #525252 !important;
+      padding: 2.67vmin 2.67vmin !important;
+      font-size: 3.2vmin;
+    }
+    .CV40-y .sec-17 .wrap .h3-t2 {
+      font-size: 4.27vmin;
+    }
+    .CV40-y .sec-17 .wrap .swiper-wrap {
+      margin-top: 5.33vmin;
+    }
+    .CV40-y .sec-17 .cl-swiper .cl-swiper-nav-containe {
+      width: 70vmin;
+    }
+    .CV40-y .sec-18 .wrap .h3-t2 {
+      font-size: 4.27vmin;
+    }
+    .CV40-y .sec-18 .wrap .prd {
+      flex: 1;
+    }
+    .CV40-y .sec-18 .wrap .prd-by {
+      position: absolute;
+      left: 5.33vmin;
+      top: 8vmin;
+    }
+    .CV40-y .sec-arg .wrap .h3-t2 {
+      font-size: 3.73vmin;
+    }
+    .CV40-y .sec-setup .wrap .h3-t2 {
+      font-size: 3.73vmin;
+    }
+    .CV40-y .sec-setup .wrap .desc {
+      font-size: 2.67vmin;
+    }
+    .CV40-y .image-hover-container {
+      flex-direction: column;
+    }
+    .CV40-y .image-hover-container .image-hover img {
+      height: auto;
+    }
+    .CV40-y .image-hover-container .image-hover .text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 2.67vmin;
+      right: 2.67vmin;
+      gap: 0.8vmin;
+    }
+    .CV40-y .image-hover-container .image-hover .text p,
+    .CV40-y .image-hover-container .image-hover .text h4 {
+      font-weight: 600;
+      font-size: 3.47vmin;
+    }
+    .CV40-y .image-hover-container .act {
+      flex: 1;
+    }
+    .CV40-y .section-specifications {
+      margin-top: 8vmin;
+      padding: 0 5.33vmin 10.67vmin;
+    }
+    .CV40-y .section-specifications p.title {
+      text-align: left;
+      font-size: 8vmin;
+      font-family: HarmonyOS_Sans_SC_Bold;
+      font-weight: bold;
+    }
+    .CV40-y .section-specifications .table_wrap .row-item {
+      flex-direction: column;
+    }
+    .CV40-y .section-specifications .table_wrap .row-item .item-wrap {
+      align-items: center;
+      padding: 2.67vmin 0;
+    }
+    .CV40-y .section-specifications .table_wrap .row-item .item-wrap .param-name {
+      font-size: 4.27vmin;
+      flex-basis: 35%;
+    }
+    .CV40-y .section-specifications .table_wrap .row-item .item-wrap .value-item {
+      font-size: 4.27vmin !important;
+    }
+    .CV40-y .section-form .g-email {
+      padding: 1.33vmin 2.67vmin;
+    }
+    .CV40-y .section-form .form-btn {
+      padding: 1.6vmin 0;
+      font-size: 3.2vmin;
+    }
+  }
+  [hidden]:where(:not([hidden='until-found'])) {
+    display: none;
+  }
+
+  .absolute {
+    position: absolute !important;
+  }
+
+  .relative {
+    position: relative !important;
+  }
+
+  .m-auto {
+    margin: auto !important;
+  }
+
+  .mt-2 {
+    margin-top: 0.5rem !important;
+  }
+
+  .mt-6 {
+    margin-top: 1.5rem !important;
+  }
+
+  .mt-\[-3\.6458vw\] {
+    margin-top: -3.6458vw !important;
+  }
+
+  .mt-\[1\.5625vw\] {
+    margin-top: 1.5625vw !important;
+  }
+
+  .mt-\[2\.6667vw\] {
+    margin-top: 2.6667vw !important;
+  }
+
+  .mt-\[5\.3333vw\] {
+    margin-top: 5.3333vw !important;
+  }
+
+  .mt-\[8vw\] {
+    margin-top: 8vw !important;
+  }
+
+  .inline-block {
+    display: inline-block !important;
+  }
+
+  .flex {
+    display: flex !important;
+  }
+
+  .w-full {
+    width: 100% !important;
+  }
+
+  .flex-1 {
+    flex: 1 1 0% !important;
+  }
+
+  .flex-col {
+    flex-direction: column !important;
+  }
+
+  .items-center {
+    align-items: center !important;
+  }
+
+  .justify-between {
+    justify-content: space-between !important;
+  }
+
+  .justify-around {
+    justify-content: space-around !important;
+  }
+
+  .gap-5 {
+    gap: 1.25rem !important;
+  }
+
+  .gap-\[1\.0417vw\] {
+    gap: 1.0417vw !important;
+  }
+
+  .gap-\[5px\] {
+    gap: 5px !important;
+  }
+
+  .rounded-full {
+    border-radius: 9999px !important;
+  }
+
+  .bg-\[\#F67E3C\] {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(246 126 60 / var(--tw-bg-opacity, 1)) !important;
+  }
+
+  .bg-black {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1)) !important;
+  }
+
+  .bg-custom-gray {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(38 38 38 / var(--tw-bg-opacity, 1)) !important;
+  }
+
+  .bg-white {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
+  }
+
+  .object-cover {
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+  }
+
+  .p-0 {
+    padding: 0px !important;
+  }
+
+  .px-20 {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+  }
+
+  .py-3 {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+
+  .pb-\[5\.3333vw\] {
+    padding-bottom: 5.3333vw !important;
+  }
+
+  .pt-0 {
+    padding-top: 0px !important;
+  }
+
+  .text-left {
+    text-align: left !important;
+  }
+
+  .text-center {
+    text-align: center !important;
+  }
+
+  .font-HM_Bold {
+    font-family: HarmonyOS_Sans_SC_Bold !important;
+  }
+
+  .font-HM_Light {
+    font-family: HarmonyOS_Sans_SC_Light !important;
+  }
+
+  .font-HM_Regular {
+    font-family: HarmonyOS_Sans_SC_Regular !important;
+  }
+
+  .text-\[1\.1979vw\] {
+    font-size: 1.1979vw !important;
+  }
+
+  .text-\[1\.6667vw\] {
+    font-size: 1.6667vw !important;
+  }
+
+  .text-\[2\.5vw\] {
+    font-size: 2.5vw !important;
+  }
+
+  .text-\[2\.6667vw\] {
+    font-size: 2.6667vw !important;
+  }
+
+  .text-\[3\.65vw\] {
+    font-size: 3.65vw !important;
+  }
+
+  .font-bold {
+    font-weight: 700 !important;
+  }
+
+  .text-\[\#686868\] {
+    --tw-text-opacity: 1 !important;
+    color: rgb(104 104 104 / var(--tw-text-opacity, 1)) !important;
+  }
+
+  .text-\[black\] {
+    --tw-text-opacity: 1 !important;
+    color: rgb(0 0 0 / var(--tw-text-opacity, 1)) !important;
+  }
+
+  .text-custom-orange {
+    --tw-text-opacity: 1 !important;
+    color: rgb(246 126 60 / var(--tw-text-opacity, 1)) !important;
+  }
+
+  .text-white {
+    --tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
+  }
+
+  .blur {
+    --tw-blur: blur(8px) !important;
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate)
+      var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+  }
+
+  .filter {
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate)
+      var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+  }
+
+  .transition {
+    transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter,
+      -webkit-text-decoration-color, -webkit-backdrop-filter !important;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
+      transform, filter, backdrop-filter !important;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
+      transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter !important;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition-duration: 150ms !important;
+  }
+
+  @media (min-width: 960px) {
+    .lg960\:mt-\[1\.0417vw\] {
+      margin-top: 1.0417vw !important;
+    }
+
+    .lg960\:mt-\[1\.5625vw\] {
+      margin-top: 1.5625vw !important;
+    }
+
+    .lg960\:mt-\[2\.0833vw\] {
+      margin-top: 2.0833vw !important;
+    }
+
+    .lg960\:mt-\[2\.6042vw\] {
+      margin-top: 2.6042vw !important;
+    }
+
+    .lg960\:mt-\[2\.6667vw\] {
+      margin-top: 2.6667vw !important;
+    }
+
+    .lg960\:mt-\[4\.1667vw\] {
+      margin-top: 4.1667vw !important;
+    }
+
+    .lg960\:mt-\[5\.2083vw\] {
+      margin-top: 5.2083vw !important;
+    }
+
+    .lg960\:h-\[16\.6667vw\] {
+      height: 16.6667vw !important;
+    }
+
+    .lg960\:w-\[17\.7083vw\] {
+      width: 17.7083vw !important;
+    }
+
+    .lg960\:w-\[46\.875vw\] {
+      width: 46.875vw !important;
+    }
+
+    .lg960\:gap-\[\.5208vw\] {
+      gap: 0.5208vw !important;
+    }
+
+    .lg960\:pb-\[1\.0417vw\] {
+      padding-bottom: 1.0417vw !important;
+    }
+
+    .lg960\:pl-\[1\.0417vw\] {
+      padding-left: 1.0417vw !important;
+    }
+
+    .lg960\:pt-\[2\.0833vw\] {
+      padding-top: 2.0833vw !important;
+    }
+
+    .lg960\:text-\[\.625vw\] {
+      font-size: 0.625vw !important;
+    }
+
+    .lg960\:text-\[\.8333vw\] {
+      font-size: 0.8333vw !important;
+    }
+
+    .lg960\:text-\[\.8854vw\] {
+      font-size: 0.8854vw !important;
+    }
+
+    .lg960\:text-\[\.9375vw\] {
+      font-size: 0.9375vw !important;
+    }
+
+    .lg960\:text-\[1\.0417vw\] {
+      font-size: 1.0417vw !important;
+    }
+
+    .lg960\:text-\[1\.25vw\] {
+      font-size: 1.25vw !important;
+    }
+
+    .lg960\:text-\[1\.4583vw\] {
+      font-size: 1.4583vw !important;
+    }
+
+    .lg960\:opacity-60 {
+      opacity: 0.6 !important;
+    }
+  }
+</style>
+<div class="CV40-y main-contain">
+  <div class="section-common s-banner">
+    <div class="wrap abs">
+      <div>
+        <div class="text-box">
+          <h1 class="h1-t">Creality FaIcon A1</h1>
+          <p class="text1">Smarter Camera, Craft Easier</p>
+          <!-- <a href="javascript:;" class="a-link">Learn More</a> -->
+        </div>
+      </div>
+    </div>
+    <div class="image-viewport">
+      <picture>
+        <source
+          srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-banner-m.png"
+          media="(max-width: 960px)"
+        >
+        <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-banner.png" alt="">
+      </picture>
+    </div>
+  </div>
+  <div>
+    <picture>
+      <source
+        srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-time-line-m.jpg"
+        media="(max-width: 960px)"
+      >
+      <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-time-line.jpg" alt="">
+    </picture>
+  </div>
+  <div class="section-common section-form bg-white mt-[-3.6458vw]">
+    <div class="wrap  pt-0">
+      <div class="lg960:w-[46.875vw] m-auto text-left w-full">
+        <p class="lg960:text-[1.25vw] text-[3.65vw] lg960:mt-[1.5625vw] text-[#686868]">Email Address</p>
+        <div class="flex gap-5 mt-2">
+          <input
+            type="text"
+            class="g-email rounded-full"
+            id="g-email"
+            placeholder="Enter your email address"
+          >
+          <button class="form-btn rounded-full" id="send-btn">Subscribe Now</button>
+        </div>
+        <p class="lg960:text-[.9375vw] text-[2.5vw] text-[#686868] mt-2">
+          *Subscribe today for exclusive updates and be the first to know when it's available!.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-common s-scene">
+    <div class="wrap abs">
+      <div class="text-box">
+        <h2 class="h2-t">New Features for Your Easy Craft</h2>
+      </div>
+    </div>
+    <div class="image-viewport bg-white">
+      <picture>
+        <source
+          srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-Beauty-m.png"
+          media="(max-width: 960px)"
+        >
+        <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-Beauty.png" alt="">
+      </picture>
+    </div>
+  </div>
+
+  <div class="bg-black">
+    <div class="section-common section-plate sec-4">
+      <div class="wrap abs">
+        <div class="text-box">
+          <h3 class="h3-t text-white">
+            Easy Craft 1: <br>
+            Smart Camera
+          </h3>
+        </div>
+      </div>
+      <div class="image-viewport ">
+        <picture>
+          <source
+            srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-plate-material-m.png"
+            media="(max-width: 960px)"
+          >
+          <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-plate-material.png" alt="">
+        </picture>
+      </div>
+    </div>
+
+    <div class="section-common section-material">
+      <div class="swiper-wrap2 pc-show gsap-anchor7">
+        <div class="section-common">
+          <div class="wrap">
+            <div class="text-box text-left">
+              <h3 class="h3-t2 text-custom-orange">Smart Camera, Easy Operations</h3>
+              <p class="p-desc2">
+                The full-frame view and pre-calibrated high-definition camera simplifies the entire process, making
+                every step of operation easy and intuitive from the start, taking the complexity out of manual
+                adjustments.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cl-swiper">
+          <div class="swiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <video
+                  preload="auto"
+                  class="auto-video"
+                  src="https://cdn.shopify.com/videos/c/o/v/ad64f18fefb845dd9205b60e04e32646.mp4"
+                  muted
+                  loop
+                ></video>
+              </div>
+              <div class="swiper-slide">
+                <video
+                  preload="auto"
+                  class="auto-video"
+                  src="https://cdn.shopify.com/videos/c/o/v/c66f956314984fee95fb8f0d8e793698.mp4"
+                  muted
+                  loop
+                ></video>
+              </div>
+              <div class="swiper-slide">
+                <video
+                  preload="auto"
+                  class="auto-video"
+                  src="https://cdn.shopify.com/videos/c/o/v/40bf7859a44847539281575724ab0f82.mp4"
+                  muted
+                  loop
+                ></video>
+              </div>
+            </div>
+          </div>
+
+          <div class="cl-swiper-nav-containe ">
+            <div class="cl-swiper-nav-list">
+              <div class="cl-swiper--nav-item cl-swiper-active" data-index="0">Live Camera Preview</div>
+              <div class="cl-swiper--nav-item" data-index="1">One-click Batch Fill for Efficiency</div>
+              <div class="cl-swiper--nav-item" data-index="2">Graphic Outline Extraction</div>
+            </div>
+            <div class="cl-swiper-nav-progress-line">
+              <div class="cl-swiper-nav-scrollbar-drag"></div>
+            </div>
+            <div class="cl-swiper-nav-list-desc">
+              <p class="cl-swiper--nav-item cl-swiper-desc-active">
+                You can directly see the entire working area through the camera,just drag & drop designs exactly where
+                you want them.
+              </p>
+              <p class="cl-swiper--nav-item">
+                The smart camera can achieve auto positioning and auto batch filling, less time for higher productivity.
+              </p>
+              <p class="cl-swiper--nav-item">
+                Falcon A1 traces the contours of your designs, capturing creative patterns with the help of an HD
+                camera, making every piece uniquely yours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-show">
+        <div class="section-common section-sequence-layout">
+          <div class="wrap">
+            <div class="title-box">
+              <h4 class="h4-t">Smart Camera, Easy Operations</h4>
+              <p class="p-desc">
+                The full-frame view and pre-calibrated high-definition camera simplifies the entire process making every
+                step operation easy and intuitive from the start,taking the complexity out of manual adjustments.
+              </p>
+            </div>
+
+            <div class="image-viewport">
+              <video
+                preload="none"
+                class="auto-video"
+                src="https://cdn.shopify.com/videos/c/o/v/872e38f5e29f4b4c95b61430c6720059.mp4"
+                muted
+                loop
+              ></video>
+            </div>
+          </div>
+        </div>
+        <div class="section-common section-sequence-layout">
+          <div class="wrap">
+            <div class="title-box">
+              <h4 class="h4-t">Live Camera Preview</h4>
+              <p class="p-desc">
+                Preview your workspace in real-time using the built-in camera. Just drag and <br>
+                drop your design to the desired location-what you see is what you get.
+              </p>
+            </div>
+
+            <div class="image-viewport">
+              <video
+                preload="none"
+                class="auto-video"
+                src="https://cdn.shopify.com/videos/c/o/v/ad64f18fefb845dd9205b60e04e32646.mp4"
+                muted
+                loop
+              ></video>
+            </div>
+          </div>
+        </div>
+        <div class="section-common section-sequence-layout">
+          <div class="wrap">
+            <div class="title-box">
+              <h4 class="h4-t">One-click Batch Fill for Efficiency.</h4>
+              <p class="p-desc">
+                The smart camera can achieve auto positioning and <br>
+                auto batch filling, less time for higher productivity.
+              </p>
+            </div>
+
+            <div class="image-viewport">
+              <video
+                preload="none"
+                class="auto-video"
+                src="https://cdn.shopify.com/videos/c/o/v/c66f956314984fee95fb8f0d8e793698.mp4"
+                muted
+                loop
+              ></video>
+            </div>
+          </div>
+        </div>
+        <div class="section-common section-sequence-layout">
+          <div class="wrap">
+            <div class="title-box">
+              <h4 class="h4-t">Graphic Outline Extraction</h4>
+              <p class="p-desc">
+                Falcon A1 traces the contours of your designs, capturing creative patterns <br>
+                with the help of an HD camera, making every piece uniquely yours
+              </p>
+            </div>
+
+            <div class="image-viewport">
+              <video
+                preload="none"
+                class="auto-video"
+                src="https://cdn.shopify.com/videos/c/o/v/40bf7859a44847539281575724ab0f82.mp4"
+                muted
+                loop
+              ></video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-common section-sequence-layout gsap-anchor4">
+      <div class="wrap p-0">
+        <div class="title-box">
+          <h4 class="h4-t">Easy Craft 2: Materials Auto Recognized</h4>
+          <p class="p-desc">
+            The camera digitally encodes to recognize and instantly load the ideal engraving&cutting
+            <br class="pc-show">
+            settings. No more testings needed, designed to work perfectly with Falcon machines!
+          </p>
+        </div>
+
+        <div class="video-viewport">
+          <video
+            preload="none"
+            class="auto-video"
+            src="https://cdn.shopify.com/videos/c/o/v/15d1fa50b68043adb0625d61ae5b789a.mp4"
+            muted
+            loop
+          ></video>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-common section-sequence-layout gsap-anchor4">
+      <div class="wrap">
+        <div class="title-box">
+          <h4 class="h4-t">Getting Optimal Preset Parameters</h4>
+          <p class="p-desc">
+            One-click to set optimal parameters, you can skip the trials and jump straight to success.
+          </p>
+        </div>
+
+        <div class="lg960:mt-[2.6042vw] mt-[2.6667vw]">
+          <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-sec-4-1.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="section-common sec-arg gsap-anchor2">
+      <div class="wrap">
+        <h3 class="h3-t2 text-white pc-show">Easy Craft 3: Game-changing CoreXY Motion System</h3>
+        <div
+          class="pc-flexShow flex justify-between lg960:gap-[.5208vw] lg960:mt-[4.1667vw]  flex-col text-center "
+        >
+          <div class=" lg960:pl-[1.0417vw] lg960:pt-[2.0833vw] lg960:pb-[1.0417vw] bg-custom-gray">
+            <h4 class="font-bold text-[1.1979vw] font-HM_Bold text-white">
+              CoreXY for up to
+              <span class="text-custom-orange">600mm/s</span>
+            </h4>
+            <p class="mt-2 font-HM_Light lg960:text-[1.0417vw]">
+              The X and Y-axes of Falcon A1 are rigged together, with two powerful motors for fast and stable working.
+              <br class="pc-show">
+              The speed is 3X faster than others.
+            </p>
+            <div class="flex justify-around lg960:mt-[2.6042vw]">
+              <div class="flex-1">
+                <video
+                  class="lg960:w-[17.7083vw] lg960:h-[16.6667vw] object-cover m-auto"
+                  muted
+                  autoplay
+                  loop
+                  width="100%"
+                  preload="none"
+                >
+                  <source
+                    src="https://cdn.shopify.com/videos/c/o/v/33c1a83a9e0a4a3ebb666026b330f76a.mp4"
+                    type="video/mp4"
+                  >
+                  Your browser does not support the video tag.
+                </video>
+                <p>A1</p>
+              </div>
+              <div class="flex-1">
+                <video
+                  class="lg960:w-[17.7083vw] lg960:h-[16.6667vw] object-cover m-auto"
+                  muted
+                  autoplay
+                  loop
+                  width="100%"
+                  preload="none"
+                >
+                  <source
+                    src="https://cdn.shopify.com/videos/c/o/v/a0502f30958d49e68c9d0363fd62a077.mp4"
+                    type="video/mp4"
+                  >
+                  Your browser does not support the video tag.
+                </video>
+                <p>Others</p>
+              </div>
+            </div>
+            <div class="font-HM_Light text-center lg960:opacity-60">
+              <p class="lg960:text-[.8854vw]">0.03s* 0 to 600mm/s</p>
+              <p class="lg960:text-[.625vw]">*Data from Creality Lab.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-show pb-[5.3333vw]">
+          <div class="section-common section-sequence-layout">
+            <div class="wrap">
+              <div class="title-box">
+                <h4 class="h4-t text-custom-orange">
+                  Game-changing CoreXY Motion System <br>
+                  <span class="text-white">CoreXY for up to </span>600mm/s
+                </h4>
+                <p class="p-desc">
+                  The X and Y-axis of Falcon Al are rigged together, <br>
+                  with two powerful motors for fast and stable working.
+                </p>
+              </div>
+
+              <div class="flex justify-around mt-[2.6667vw]">
+                <div>
+                  <video
+                    class="lg960:w-[17.7083vw] lg960:h-[16.6667vw] object-cover"
+                    muted
+                    autoplay
+                    loop
+                    width="100%"
+                    preload="none"
+                  >
+                    <source
+                      src="https://cdn.shopify.com/videos/c/o/v/33c1a83a9e0a4a3ebb666026b330f76a.mp4"
+                      type="video/mp4"
+                    >
+                    Your browser does not support the video tag.
+                  </video>
+                  <p>A1</p>
+                </div>
+                <div>
+                  <video
+                    class="lg960:w-[17.7083vw] lg960:h-[16.6667vw] object-cover"
+                    muted
+                    autoplay
+                    loop
+                    width="100%"
+                    preload="none"
+                  >
+                    <source
+                      src="https://cdn.shopify.com/videos/c/o/v/a0502f30958d49e68c9d0363fd62a077.mp4"
+                      type="video/mp4"
+                    >
+                    Your browser does not support the video tag.
+                  </video>
+                  <p>others</p>
+                </div>
+              </div>
+
+              <div class="text-[2.6667vw] font-HM_Regular  mt-[2.6667vw]">
+                0.03s* 0 to 600mm/s*Data from Creality Lab.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-common section-sequence-layout gsap-anchor5">
+      <div class="wrap text-center">
+        <div class="title-box">
+          <h4 class="h4-t text-white">Easy Craft 4: Plug and Play</h4>
+          <p class=" lg960:text-[1.4583vw] text-[2.6667vw]">
+            Ready to use straight out of the box, just unpack and start.
+          </p>
+          <p class="p-desc">
+            Creality Falcon A1 Preparation Time <span class="text-custom-orange font-HM_Bold">95% Time Saving</span>
+          </p>
+        </div>
+
+        <div class="image-viewport mt-[5.3333vw] lg960:mt-[2.6667vw]">
+          <picture>
+            <source
+              srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-unpack-end-m.png"
+              media="(max-width: 960px)"
+            >
+            <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-unpack-end.png" alt="">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-common">
+    <div class="wrap">
+      <div class="title-box">
+        <h4 class="h4-t">A Laser for Everyone</h4>
+      </div>
+      <div class="flex gap-[5px] lg960:mt-[1.0417vw] mt-6 lg960:text-[.8333vw] text-[1.6667vw]">
+        <div class="flex items-center flex-col">
+          <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-1.DIY_Hobby.png" alt="">
+          <p>DIY Hobby</p>
+        </div>
+        <div class="flex items-center flex-col">
+          <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-2.Crafter.png" alt="">
+          <p>Crafter</p>
+        </div>
+        <div class="flex items-center flex-col">
+          <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-3.Designer.png" alt="">
+          <p>Designer</p>
+        </div>
+        <div class="flex items-center flex-col">
+          <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-4.Side_Hustle.png" alt="">
+          <p>Side Hustle</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-common section-material">
+    <div class="wrap">
+      <div class="text-box text-left">
+        <h3 class="h3-t2 text-custom-orange">A World of Possibilities All Around You</h3>
+        <p class="p-desc2">
+          Rich material selection, you can interpret your imagination freely, hundreds of materials
+          <br>
+          can be cut or engraved. Inspire All Your Creative Sparks.
+        </p>
+      </div>
+      <div class="image-viewport">
+        <picture>
+          <source
+            srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-plate-material-master-m.png"
+            media="(max-width: 960px)"
+          >
+          <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-plate-material-master.png" alt="">
+        </picture>
+      </div>
+
+      <div class="swiper-material">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide-item">
+              <img loading="lazy" class="" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-wood.jpg" alt="">
+              <div class="slide-title">Wood</div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-item">
+              <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-Acrylic.jpg" alt="">
+              <div class="slide-title">Acrylic</div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-item">
+              <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-Glass.png" alt="">
+              <div class="slide-title">Glass</div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-item">
+              <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-Metal.jpg" alt="">
+              <div class="slide-title">Metal</div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-item">
+              <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-PU.jpg" alt="">
+              <div class="slide-title">PU</div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-item">
+              <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-Jewelry.png" alt="">
+              <div class="slide-title">Jewelry</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-common">
+    <div class="wrap">
+      <h4 class="h4-t text-[black]">Share, Discuss, and Inspire at Falcon A1 Community</h4>
+      <a
+        target="_blank"
+        href="https://www.facebook.com/groups/falcona1"
+        class="bg-[#F67E3C] px-20 py-3 rounded-full text-white lg960:text-[1.25vw] text-[2.6667vw] mt-6 inline-block"
+        >Join In Us</a
+      >
+      <div class="flex gap-[1.0417vw] lg960:mt-[2.0833vw] mt-6">
+        <div class="relative flex items-center flex-col">
+          <picture>
+            <source
+              srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-social_media-1-m.jpg"
+              media="(max-width: 960px)"
+            >
+            <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-social_media-1.jpg" alt="">
+          </picture>
+          <h4 class="absolute lg960:mt-[5.2083vw] lg960:text-[1.25vw] text-[2.6667vw] mt-[8vw]">
+            Share your creations
+          </h4>
+        </div>
+        <div class="relative flex items-center flex-col">
+          <picture>
+            <source
+              srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-social_media-2-m.jpg"
+              media="(max-width: 960px)"
+            >
+            <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-social_media-2.jpg" alt="">
+          </picture>
+          <h4 class="absolute lg960:mt-[5.2083vw] lg960:text-[1.25vw] text-[2.6667vw] mt-[8vw]">
+            Discuss your questions
+          </h4>
+        </div>
+        <div class="relative flex items-center flex-col">
+          <picture>
+            <source
+              srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-social_media-3-m.jpg"
+              media="(max-width: 960px)"
+            >
+            <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/cv40y-social_media-3.jpg" alt="">
+          </picture>
+          <h4 class="absolute lg960:mt-[5.2083vw] lg960:text-[1.25vw] text-[2.6667vw] mt-[8vw]">
+            Explore Diverse Event
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-common section-form">
+    <div class="wrap">
+      <div class="lg960:w-[46.875vw] m-auto text-left w-full">
+        <p class="lg960:text-[1.25vw] text-[3.65vw] lg960: mt-[1.5625vw] text-[#686868]">Email Address</p>
+        <div class="flex gap-5  mt-2">
+          <input
+            type="text"
+            class="g-email rounded-full"
+            id="g-email2"
+            placeholder="Enter your email address"
+          >
+          <button class="form-btn rounded-full" id="send-btn2">Subscribe Now</button>
+        </div>
+        <p class="lg960:text-[.9375vw] text-[2.5vw] text-[#686868] mt-2">
+          *Subscribe today for exclusive updates and be the first to know when it's available!.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  gsap.registerPlugin(ScrollToPlugin);
+  gsap.registerPlugin(ScrollTrigger);
+  const delay = function (timer) {
+    return new Promise((res, rej) => {
+      setTimeout(() => {
+        res();
+      }, timer);
+    });
+  };
+
+  const docWidth = document.documentElement.clientWidth;
+  const docHeight = document.documentElement.clientHeight;
+  const vw = docWidth / 100;
+  const vh = docHeight / 100;
+  let spaceBetween = 1.3 * vw;
+
+  let spaceNum = docWidth > 960 ? 0.012 : 0.05;
+
+  var fadeInListen = function () {
+    var fadeIn = $('.main-contain').find('.fadein');
+
+    fadeIn.each(function () {
+      let element = this;
+      let { scrub, reverse, duration, actions, fn } = $(this).data();
+
+      gsap.set(element, {
+        opacity: 0,
+        y: 30,
+      });
+      let toggleActions = 'play none none none';
+      let start = $(this).data('start') || 80;
+      duration ? '' : (duration = 0.8);
+      let tl = gsap.to(element, {
+        opacity: 1,
+        y: 0,
+        duration,
+      });
+      if (reverse) {
+        toggleActions = 'play none none reverse';
+      }
+
+      ScrollTrigger.create({
+        animation: tl,
+        trigger: element,
+        toggleActions,
+        start: `top ${start}%`, // 调整触发点，视情况而定
+        onEnter: function () {},
+        once: true, // 只触发一次
+      });
+    });
+
+    var delayFadeIn = $('.delay-fadein');
+    delayFadeIn.each(function () {
+      let element = this;
+      let { parent, el, scrub, reverse, duration, actions, fn } = $(this).data();
+      let parentEl = $(parent);
+      parentEl.length ? '' : (parentEl = $(element));
+      let delayEl = [];
+      if (el) {
+        el.split(',').forEach((selector) => delayEl.push(...parentEl.find(selector)));
+      } else {
+        delayEl = parentEl.children();
+      }
+
+      let toggleActions = 'play none none none';
+      scrub ? (scrub = true) : (scrub = false);
+
+      duration ? '' : (duration = 0.8);
+      console.log(duration);
+      let start = $(this).data('start') || 80;
+      let stagger = $(this).data('delay') || 0.3;
+
+      gsap.set(delayEl, {
+        opacity: 0,
+        y: 30,
+      });
+
+      let tl = gsap.timeline();
+      tl.to(delayEl, {
+        stagger,
+        opacity: 1,
+        y: 0,
+        duration,
+      });
+      if (fn) {
+        console.log(fn);
+        tl = k1c_tl[fn](tl);
+      }
+      if (reverse) {
+        toggleActions = 'play none none reverse';
+        gsap.set(element, {
+          opacity: 0,
+          y: 30,
+        });
+        let t2 = gsap.to(element, {
+          opacity: 1,
+          y: 0,
+          duration,
+        });
+        ScrollTrigger.create({
+          animation: t2,
+          toggleActions,
+          trigger: element,
+          scrub,
+          start: `top ${start}%`, // 调整触发点，视情况而定
+        });
+      }
+      actions ? (toggleActions = actions) : '';
+
+      ScrollTrigger.create({
+        animation: tl,
+        toggleActions,
+        trigger: element,
+        scrub,
+        start: `top ${start}%`, // 调整触发点，视情况而定
+        // marker: true
+        // once: true // 只触发一次
+      });
+    });
+  };
+
+  class NavSwiper {
+    constructor(selector, options) {
+      let _this = this;
+      this.swiper = new Swiper(selector, {
+        ...(docWidth < 960 ? { slidesPerView: 1 } : { slidesPerView: 1.85 }),
+        spaceBetween: 60,
+        centeredSlides: true,
+        centeredSlides: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        on: {
+          slideChange: function () {
+            let selectEl = _this.parent.find('.cl-swiper--nav-item')[this.activeIndex % _this.ListLength];
+            let descEl = _this.parent.find('.cl-swiper-nav-list-desc .cl-swiper--nav-item')[
+              this.activeIndex % _this.ListLength
+            ];
+            $(selectEl).addClass('cl-swiper-active').siblings().removeClass('cl-swiper-active');
+            descEl && $(descEl).addClass('cl-swiper-desc-active').siblings().removeClass('cl-swiper-desc-active');
+            _this.active = _this.parent.find('.cl-swiper-active');
+            _this.drag.css({
+              width: _this.active.innerWidth() + 'px',
+              transform: `translateX(${_this.active.position().left - _this.mgLeft}px)`,
+            });
+          },
+        },
+        ...options,
+      });
+
+      this.parent = $(selector).parent();
+      this.active = this.parent.find('.cl-swiper-active');
+      this.activeSwiperIndex = 0;
+      this.mgLeft = this.active.position().left;
+      this.drag = this.parent.find('.cl-swiper-nav-scrollbar-drag');
+      this.ListLength = this.parent.find('.cl-swiper--nav-item').length;
+      setTimeout(() => {
+        this.active.click();
+      });
+      this.init();
+    }
+
+    init() {
+      this.drag.css({ width: this.active.innerWidth() + 'px' });
+      this.parent.find('.cl-swiper-nav-list').on('click', (e) => {
+        // debugger
+        if (e.target.classList.contains('cl-swiper--nav-item')) {
+          this.active = $(e.target);
+          this.activeSwiperIndex = this.active.data('index');
+          this.active.addClass('cl-swiper-active').siblings().removeClass('cl-swiper-active');
+          this.drag.css({
+            width: this.active.innerWidth() + 'px',
+            transform: `translateX(${this.active.position().left - this.mgLeft}px)`,
+          });
+          this.swiper.slideTo(this.activeSwiperIndex);
+        }
+      });
+    }
+
+    resize() {
+      this.mgLeft = $('.cl-swiper-nav-list').position().left;
+      this.drag.css({
+        width: this.active.innerWidth() + 'px',
+        transform: `translateX(${this.active.position().left - this.mgLeft}px)`,
+      });
+    }
+  }
+
+  let ns2 = new NavSwiper('.swiper2');
+  var materialSwiper = new Swiper('.swiper-material', {
+    slidesPerView: docWidth > 960 ? 4.5 : 3,
+    spaceBetween: docWidth > 960 ? 10 : 0,
+    ...(docWidth < 960 ? { allowTouchMove: false } : {}),
+  });
+  const videos = $('.auto-video');
+
+  const observerOptions = {
+    root: null, // 使用视口作为根
+    rootMargin: '0px', // 无额外边距
+    threshold: 0.5, // 当 50% 的元素进入视口时触发
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const video = entry.target;
+
+      if (entry.isIntersecting) {
+        video.play();
+
+        if (video.hasAttribute('play-one')) {
+          video.addEventListener(
+            'ended',
+            () => {
+              observer.unobserve(video);
+            },
+            { once: true } // 确保事件只触发一次
+          );
+        }
+      } else {
+        video.pause();
+        video.currentTime = 0; // 重置视频到开头
+      }
+    });
+  }, observerOptions);
+
+  videos.each(function () {
+    observer.observe(this);
+  });
+
+  gsap.set('.curtain-content', { x: '-100%' });
+
+  // 动画：从左向右展开
+  gsap.to('.curtain-content', {
+    x: '0%', // 移动到原始位置
+    duration: 2, // 动画时长
+    ease: 'power3.out', // 缓动效果
+  });
+
+  let video = $('#text-video')[0];
+  let animationTriggered = false;
+
+  $(video).on('timeupdate', function () {
+    const progress = (video.currentTime / video.duration) * 100;
+
+    if (progress >= 70 && !animationTriggered) {
+      animationTriggered = true;
+      $('.sec-12-mk').addClass('textFadeIn');
+    }
+  });
+
+  function CRalert(text) {
+    let alEL = $(`<div class="CRalert-text" style="position: fixed;
+            z-index: 1000;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,.75);
+            color: #fff;
+            padding: .5vw 1vw;
+            border-radius: 1vw;
+          ">
+            ${text}
+    </div>`);
+    alEL.fadeIn();
+    $('body').append(alEL);
+    setTimeout(function () {
+      alEL.fadeOut(function () {
+        alEL.remove(); // 从 DOM 中移除弹窗
+      });
+    }, 1500);
+  }
+
+  function isValidEmailStrict(email) {
+    const strictEmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}$/;
+    return strictEmailRegex.test(email);
+  }
+  const saveNewYearEmail = async (email) => {
+    const url = 'https://testmembership.creality.com/personal-center/creality/activity/emailCollect';
+
+    const body = {
+      email,
+      site: 'USA',
+      activityName: 'CV40-预热页',
+      platform: 'faIcon',
+    };
+
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        // mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log('Response:', data);
+
+      return data;
+    } catch (error) {
+      console.error('Error while sending POST request:', error);
+      throw error;
+    }
+  };
+  $('#send-btn').click(async () => {
+    if (!isValidEmailStrict($('#g-email').val())) {
+      CRalert('Email format is incorrect.');
+      return;
+    }
+    const data = await saveNewYearEmail($('#g-email').val());
+
+    if (data.code == 200) {
+      CRalert('Subscribe successfully, thank you for subscribing');
+    } else if (data.code == 10010) {
+      CRalert('This email has been subscribed before. Please fill in another one.');
+    } else {
+      CRalert('server 500');
+    }
+  });
+
+  $('#g-email').on('input', function () {
+    if ($(this).val().trim() !== '') {
+      $('#send-btn').prop('disabled', false).addClass('active');
+    } else {
+      $('#send-btn').prop('disabled', true).removeClass('active');
+    }
+  });
+
+  $('#send-btn2').click(async () => {
+    if (!isValidEmailStrict($('#g-email2').val())) {
+      CRalert('Email format is incorrect.');
+      return;
+    }
+    const data = await saveNewYearEmail($('#g-email2').val());
+    
+    if (data.code == 200) {
+      CRalert('Subscribe successfully, thank you for subscribing');
+    } else if (data.code == 10010) {
+      CRalert('This email has been subscribed before. Please fill in another one.');
+    } else {
+      CRalert('server 500');
+    }
+  });
+
+  $('#g-email2').on('input', function () {
+    if ($(this).val().trim() !== '') {
+      $('#send-btn2').prop('disabled', false).addClass('active');
+    } else {
+      $('#send-btn2').prop('disabled', true).removeClass('active');
+    }
+  });
+
+  // 淡入淡出 初始化
+  fadeInListen();
+
+  // <!-- lazy load -->
+  const picture_observer = lozad('.fit_picture,.lazy-video', {
+    rootMargin: '1500px 0px', // syntax similar to that of CSS Margin
+    load: function (el) {
+      // console.log(el)
+      if (el.tagName === 'PICTURE' || el.tagName === 'IMG') {
+        let image = el.tagName === 'IMG' ? el : el.querySelector('img');
+        if (el.tagName === 'IMG') image = el;
+
+        image.onload = function () {
+          this.classList.add('loaded');
+        };
+        el.querySelectorAll('source').forEach((source) => {
+          let srcset = source.getAttribute('data-srcset');
+          srcset ? source.setAttribute('srcset', srcset) : '';
+        });
+      } else if (el.tagName === 'VIDEO') {
+        el.onloadeddata = function () {
+          console.log('loaded...');
+          this.classList.add('loaded');
+        };
+        const poster = el.getAttribute('data-poster');
+        if (poster) el.setAttribute('poster', poster);
+
+        el.querySelectorAll('source').forEach((source) => {
+          const src = source.getAttribute('data-src');
+          if (src) {
+            source.setAttribute('src', src);
+            el.load();
+          }
+        });
+      }
+    },
+  });
+  picture_observer.observe();
+</script>
+
+{% schema %}
+{
+  "name": "creality_CV40_预热页面",
+  "settings": [],
+  "presets": [
+    {
+      "name": "creality_CV40_预热页面"
+    }
+  ]
+}
+{% endschema %}

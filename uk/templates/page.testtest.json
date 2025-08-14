@@ -1,0 +1,87 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "creality_2025_1_new_year_kieUM4": {
+      "type": "creality_2025_1_newYear",
+      "blocks": {
+        "card_rule_tj6dEa": {
+          "type": "card-rule",
+          "settings": {
+            "card_content": "Bedding <br> Basics from :",
+            "card_price": "100",
+            "coupon_title": "VOUCHER",
+            "coupon_rule": "10% OFF",
+            "coupon_desc": "<u>Get it now</u>"
+          }
+        },
+        "right_protection_iAHfQi": {
+          "type": "right-protection",
+          "settings": {
+            "rp_title": "Free SHIPPING over $49.99",
+            "rp_desc": "Delivery calculated per shipment"
+          }
+        }
+      },
+      "block_order": [
+        "card_rule_tj6dEa",
+        "right_protection_iAHfQi"
+      ],
+      "disabled": true,
+      "settings": {
+        "header_title": "End of year sale",
+        "header_subTitle": "SALE UP to <u>57% OFF</u>",
+        "header_subTitle3": "",
+        "big_title": "SHOP THE LOOK",
+        "hot_product": "",
+        "hot_title": "Deal of the days",
+        "hot_review": "(1298 reviews)",
+        "countdown": "2025-01-25T00:00:00",
+        "hot_link": "Full details",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/e2c32189931c46c1ae4f151d088ff3ee.mp4#t=,",
+        "video_review": "Rated 4.9/5 by 167 of happy customers",
+        "section1_title": "Don't miss out sale !",
+        "section1_sub_title": "this is a subtitle",
+        "section1_collection": "",
+        "section2_title": "Don't miss out sale !",
+        "section2_sub_title": "this is a subtitle",
+        "section2_collection": "",
+        "section2_collection_left_text": "",
+        "section2_collection_left_subtitle": "",
+        "section2_collection_left": "",
+        "section2_collection_right_text": "",
+        "section2_collection_right_subtitle": "",
+        "section2_collection_right": "",
+        "section3_collection": "",
+        "section3_json": "",
+        "title": "Hear from Our Happy Customers",
+        "he-fz": 40,
+        "he-fz-mb": 28,
+        "form_title": "GET ON THE LIST",
+        "form_subTitle": "Create More in 2025 – Limited-Time Promos!",
+        "form_btn": "subscirbe"
+      }
+    },
+    "creality_cv40y_hrpFWr": {
+      "type": "creality_CV40y",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "creality_2025_1_new_year_kieUM4",
+    "creality_cv40y_hrpFWr"
+  ]
+}

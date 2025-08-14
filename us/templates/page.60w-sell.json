@@ -1,0 +1,244 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "60w_activlity_JJ4WLJ": {
+      "type": "60w_activlity",
+      "settings": {}
+    },
+    "brand_slider_fNLXH6": {
+      "type": "brand-slider",
+      "blocks": {
+        "image_gjLbWK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative01.png",
+            "title": "",
+            "color_text": "#000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "image_7HeDUD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative02.png",
+            "title": "",
+            "color_text": "#000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "image_KyCH4K": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative03.png",
+            "title": "",
+            "color_text": "#000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "image_VFjLpV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative04.png",
+            "title": "",
+            "color_text": "#000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "image_bNig9K": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative05.png",
+            "title": "",
+            "color_text": "#000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "image_J9LTHD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative06_0112182d-1e82-4f79-a0d6-5a5392ceb621.png",
+            "title": "",
+            "color_text": "#000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_gjLbWK",
+        "image_7HeDUD",
+        "image_KyCH4K",
+        "image_VFjLpV",
+        "image_bNig9K",
+        "image_J9LTHD"
+      ],
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "brands_block_style": "style_1",
+        "brand_layout": "infinite",
+        "scroll_from": "ltr",
+        "brand_scroll_time": "25",
+        "display_brand_border": true,
+        "brand_bg": "#f5f5f5",
+        "brand_bg_gradient": "",
+        "title_align": "center",
+        "brand_title": "",
+        "color_title": "#232323",
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "mg_bottom_title": 12,
+        "enable_background_title": false,
+        "enable_border_title": false,
+        "border_color_title": "#051c42",
+        "brand_des": "",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "mg_bottom_des": 0,
+        "view_all": "",
+        "view_all_fs": 12,
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 0,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "icon_view_all": "",
+        "color_view_all_icon": "#eb492f",
+        "view_all_icon_side": "left",
+        "btn_text": "",
+        "fontsize_btn": 12,
+        "btn_spacing_top": 15,
+        "btn_color": "#828282",
+        "btn_link": "",
+        "enable_autoplay": false,
+        "brand_speed": "3000",
+        "brand_rows": "5",
+        "enable_arrows": true,
+        "enable_dots": false,
+        "enable_center_mode": false,
+        "style_position_arrows": "none",
+        "position_horizontal_arrow": 15,
+        "color_arrow": "",
+        "arrow_background": "",
+        "arrow_background_gradient": "",
+        "arrow_border": "",
+        "color_arrow_hover": "",
+        "arrow_background_hover": "",
+        "arrow_background_gradient_hover": "",
+        "arrow_border_hover": "",
+        "brand_rows_mb": "1",
+        "brand_image_ratio": "square",
+        "item_distance": 15,
+        "margin_bottom_image": 0,
+        "brand_item_border": "none",
+        "border_radius": 0,
+        "border_color": "#e2e5e7",
+        "border_color_hover": "#2d2d2d",
+        "hover_effect": "zoom",
+        "color_underline_image_hover": "#000",
+        "fontsize_text": 16,
+        "fontsize_text_mb": 13,
+        "font_weight_title": "400",
+        "margin_bottom_title": 0,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
+    "faqs_nXaUaR": {
+      "type": "faqs",
+      "blocks": {
+        "question_item_xeAApY": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q1：How Can I get all the free gifts during this event?",
+            "unswer_text": "If your order meets the requirements of our promotion, the free gifts will be automatically added to your shopping cart until you reach the checkout page. If you don't see it, please contact our customer service for assistance.  support@crealityfalcon.com",
+            "is_open": true
+          }
+        },
+        "question_item_QHMgjW": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q2：What payment methods do you accept?",
+            "unswer_text": "We accept a variety of payment methods including credit cards, shop pay, PayPal and more. You can choose the payment method that works best for you at checkout.",
+            "is_open": false
+          }
+        },
+        "question_item_3p4JEJ": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q3：How long does shipment normally take?",
+            "unswer_text": "A：Due to high order volume, we typically ship packages within 48 hours.",
+            "is_open": false
+          }
+        },
+        "question_item_WV4xzT": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q4：Can I engrave on reflective/transparent materials such as ceramic/glass?",
+            "unswer_text": "A：Yes, but you need to coat the surface of the material with anti-reflective material before engraving to ensure the engraving effect and prevent the reflected light from damaging the laser module.",
+            "is_open": false
+          }
+        }
+      },
+      "block_order": [
+        "question_item_xeAApY",
+        "question_item_QHMgjW",
+        "question_item_3p4JEJ",
+        "question_item_WV4xzT"
+      ],
+      "settings": {
+        "ques_background_color": "#E7F6E9",
+        "ques_title": "Event FAQs"
+      }
+    },
+    "tips_text_NzVAfJ": {
+      "type": "tips_text",
+      "settings": {
+        "tips_background_color": "#C2EAD1",
+        "tips_title": "Event Details and Terms:",
+        "tips_text": "1. New Launch Falcon2 pro 60W enclosed engraver and cutter - Only 200 Units First Batch Available Worldwide!\n<br><br>2. The first 100 customers to purchase the new product will receive a $199 Father's Day gift set from time May 24th to June 15th; Limited to 1 per person.\n\n<br><br>3. During the event, one lucky winner will be selected for a 100% refund reward. (Winner will be randomly chosen from all orders of the new product - announcement will be made on crealityfalcon.com, Official Facebook, and Newsletter channels)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "60w_activlity_JJ4WLJ",
+    "brand_slider_fNLXH6",
+    "faqs_nXaUaR",
+    "tips_text_NzVAfJ"
+  ]
+}

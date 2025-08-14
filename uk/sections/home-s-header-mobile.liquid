@@ -1,0 +1,970 @@
+<style>
+  .shopify-section.shopify-section-group-header-group.home-s-header-wrap-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+  }
+
+  .header-mobile {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .header-mobile {
+      display: block;
+
+      --color-dark: #1e1e1e;
+      --color-light: #fff;
+      --color-gray: #f5f6f7;
+      --color-red: #f13a3a;
+      --color-brand: #0bb3fb;
+    }
+
+    .header {
+      height: 12.8vw;
+      /* margin-top: -1px; */
+      padding: 2.1333333333vw 0;
+      -webkit-transition: all;
+      transition: all;
+      width: 100%;
+      z-index: 110;
+    }
+
+    .header .header-wrap {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: inherit;
+    }
+
+    .header,
+    .header .container {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .header.header-theme-light {
+      background-color: var(--color-light);
+      border-bottom: 0.0520833333vw solid #f5f6f7;
+    }
+
+    .header .header-left {
+      column-gap: 2.1333333333vw;
+    }
+
+    .header .header-left .header-menu-wrap {
+      display: none;
+    }
+
+    .header .header-wrap .btn-nav {
+      display: block;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+      z-index: 99;
+    }
+
+    .header .header-wrap .btn-nav:focus {
+      outline: 0;
+    }
+
+    .header .header-wrap .btn-nav .icon-bar {
+      background-color: #1e1e1e;
+      display: block;
+      height: 0.5333333333vw;
+      margin: 1.0666666667vw 0;
+      width: 4.2666666667vw;
+    }
+
+    .header .header-wrap .btn-nav .middle {
+      margin: 0 auto;
+    }
+
+    .header .header-wrap .btn-nav .icon-bar {
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+    }
+
+    .header .header-wrap .animated .top {
+      -webkit-transform: translateY(1.6vw) rotate(45deg);
+      transform: translateY(1.6vw) rotate(45deg);
+    }
+
+    .header .header-wrap .animated .bottom {
+      -webkit-transform: translateY(-1.6vw) rotate(-45deg);
+      transform: translateY(-1.6vw) rotate(-45deg);
+    }
+
+    .header .header-wrap .animated .middle {
+      width: 0;
+    }
+
+    .header .header-ctas {
+      -webkit-column-gap: 4.2666666667vw;
+      -moz-column-gap: 4.2666666667vw;
+      column-gap: 4.2666666667vw;
+    }
+
+    .header .header-ctas .cart {
+      position: relative;
+    }
+
+    .header .header-ctas .cart .count {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      background-color: var(--color-brand);
+      border-radius: 50%;
+      color: var(--color-light);
+      font-size: 2.133vw;
+      height: 4.533vw;
+      justify-content: center;
+      position: absolute;
+      right: -0.533vw;
+      top: -0.533vw;
+      width: 4.533vw;
+    }
+
+    .header .header-menu-mobile .header-menu-block {
+      background-color: var(--color-light);
+      height: 0;
+      left: 0;
+      overflow-y: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+      z-index: -1;
+    }
+
+    .header .header-menu-mobile .header-menu-block.open {
+      height: 100vh;
+    }
+
+    .header .header-menu-mobile .header-menu-wrap {
+      height: 100%;
+      margin-top: calc(var(--s-header-m-height));
+      overflow-y: auto;
+    }
+
+    .header .header-menu-mobile .accordion-section .accordion-content {
+      height: 0;
+      overflow: hidden;
+    }
+    .header .header-menu-mobile .accordion-section .accordion-content {
+      color: #000;
+      text-decoration: none;
+    }
+     .header .header-menu-mobile .accordion-section .accordion-content  .saleWrap-item{
+        display: inline-table;
+        margin-right: 2.1333333333vw;
+        width: 59.7333333333vw;
+    }
+        .header .header-menu-mobile .accordion-section .saleWrap-image {
+        border-radius: 2.1333333333vw;
+        min-height: 30.4vw;
+        overflow: hidden;
+    }
+    .header .header-menu-mobile .accordion-section .saleWrap-image img {
+        max-height: 30.4vw;
+        -o-object-fit: cover;
+        object-fit: cover;
+        width: 100%;
+    }
+    .header .header-menu-mobile .accordion-section .saleWrap-text {
+        margin-top: 4.2666666667vw;
+        text-align: center;
+    }
+    .header .header-menu-mobile .accordion-section .saleWrap-text h3 {
+        font-family: HarmonyOS_Sans_Bold;
+        font-size: 3.7333333333vw;
+        font-weight: 700;
+    }
+    .header .header-menu-mobile .accordion-section .saleWrap-text p {
+        font-family: HarmonyOS_Sans_Medium;
+        font-size: 3.2vw;
+        font-weight: 500;
+        white-space: normal;
+    }
+    .header .header-menu-mobile .accordion-section .accordion-column {
+      margin-right: 4.2666666667vw;
+    }
+
+    .header .header-menu-mobile .accordion-section .accordion-column-button {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 4.2666666667vw 0;
+      background-color: var(--color-light);
+    }
+
+    .header .header-menu-mobile .accordion-section .accordion-column-button svg {
+      height: 5.3333333333vw;
+      -webkit-transition: -webkit-transform 0.35s ease;
+      transition: -webkit-transform 0.35s ease;
+      transition: transform 0.35s ease;
+      transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+      width: 5.3333333333vw;
+      stroke: none;
+      fill: none;
+    }
+
+    .header .header-menu-mobile .accordion-section .accordion-name {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      font-family: Montserrat;
+      font-weight: 500;
+      position: relative;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .header .header-menu-mobile .accordion-section .accordion-name .header-item-tag {
+      padding-left: 2.1333333333vw;
+      position: relative;
+      display: none;
+    }
+
+    .header .header-menu-mobile .accordion-section .accordion-name .header-item-tag span {
+      background-color: var(--color-red);
+      border-radius: 1.0666666667vw;
+      color: var(--color-light);
+      font-family: Montserrat;
+      font-size: 2.1333333333vw;
+      font-weight: 700;
+      padding: 0.5333333333vw 1.0666666667vw;
+      position: relative;
+    }
+
+    .header .header-menu-mobile .accordion-section .accordion-name .header-item-tag span svg {
+      left: 0;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(-85%, -50%) !important;
+      transform: translate(-85%, -50%) !important;
+      width: 0.8vw;
+      stroke: none;
+    }
+
+    .header .header-menu-mobile .accordion-section .menu-item-hotTag {
+      background: #f13a3a;
+      border-radius: 1.0666666667vw;
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 3.2vw;
+      height: 3.2vw;
+      margin-left: 1.0666666667vw;
+      padding: 0.2666666667vw 1.6vw;
+    }
+
+    .header .header-menu-mobile .accordion-section .textLink-item-wrap {
+      margin: 0 4.2666666667vw;
+    }
+
+    .header .header-menu-mobile .accordion-section .textLink-item {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding-top: 6.4vw;
+    }
+
+    .header .header-menu-mobile .accordion-section .textLink-item svg {
+      height: 5.3333333333vw;
+      -webkit-transition: -webkit-transform 0.35s ease;
+      transition: -webkit-transform 0.35s ease;
+      transition: transform 0.35s ease;
+      transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+      width: 5.3333333333vw;
+    }
+
+    .header .header-menu-mobile .accordion-section .product-group-wrap {
+      display: grid;
+      grid-auto-flow: column;
+      overflow-y: auto;
+      position: relative;
+      scrollbar-width: none;
+      white-space: nowrap;
+      width: 100%;
+      -ms-overflow-style: none;
+    }
+
+    .header .header-menu-mobile .accordion-section .product-group-wrap ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .header .header-menu-mobile .accordion-section .product-group-item {
+      position: relative;
+      background-color: #f5f6f7;
+      border-radius: 2.1333333333vw;
+      cursor: pointer;
+      display: inline-table;
+      height: 100%;
+      margin-right: 1.0666666667vw;
+      padding: 6.4vw 6.4vw 3.2vw;
+      text-align: center;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+      width: 34.1333333333vw;
+    }
+
+    .header .header-menu-mobile .accordion-section .product-group-item:hover {
+      background-color: #eaebed;
+    }
+
+    .header .header-menu-mobile .accordion-section .product-item-image {
+      max-height: 21.3333333333vw;
+      min-height: 21.3333333333vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header .header-menu-mobile .accordion-section .product-item-image img {
+      max-height: 21.3333333333vw;
+      -o-object-fit: contain;
+      object-fit: contain;
+      width: auto;
+    }
+
+    .header .header-menu-mobile .accordion-section .product-item-text {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      margin-top: 1.0666666667vw;
+    }
+    
+    .header .header-menu-mobile .accordion-section .product-item-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 10px;
+      padding: 2px 10px;
+      border-radius: 14px;
+      color: var(--custom-badge-color);
+      background-color: var(--custom-badge-bg);
+    }
+
+    .header .header-menu-mobile .accordion-section .collection-item-badge {
+      font-size: 10px;
+      padding: 2px 10px;
+      border-radius: 14px;
+      color: var(--custom-badge-color);
+      background-color: var(--custom-badge-bg);
+    }
+
+    .header .header-menu-mobile .accordion-section .product-item-tag {
+      color: #f13a3a;
+      font-size: 2.6666666667vw;
+      height: 4vw;
+    }
+
+    .header .header-menu-mobile .accordion-section .product-item-name {
+      display: -webkit-box;
+      font-size: 2.6666666667vw;
+      line-height: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+
+    .header .header-menu-mobile .accordion-section .product-item-link {
+      color: var(--color-light-grey);
+      font-size: 3.2vw;
+      margin-top: 2.1333333333vw;
+    }
+
+    .header .header-menu-mobile .accordion-section .product-item-link a {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .header .header-menu-mobile .accordion-section .product-item-link a svg {
+      stroke: none;
+      fill: none;
+    }
+
+    .header .header-menu-mobile .accordion-section .accordionSubMenu-container {
+      font-size: 3.7333333333vw;
+      padding-left: 6.4vw;
+    }
+
+    .header .header-menu-mobile .accordion-section .accordionSubMenu-container .accordionSubMenu-container {
+      font-size: 3.2vw;
+      padding-left: 4.2666666667vw;
+    }
+
+    .header .header-menu-mobile .accordion-section .accordionSubMenu-button {
+      border-bottom: 0.2666666667vw solid #f5f6f7;
+    }
+
+    .header .header-menu-mobile .accordion-section .globalNav-submenu-saleWrap {
+      margin-top: 2.1333333333vw;
+      overflow-x: auto;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .header .header-menu-mobile .accordion-section .saleWrap-item {
+      display: inline-table;
+      margin-right: 2.1333333333vw;
+      width: 59.7333333333vw;
+    }
+
+    .header .header-menu-mobile .accordion-section .saleWrap-image {
+      border-radius: 2.1333333333vw;
+      min-height: 30.4vw;
+      overflow: hidden;
+    }
+
+    .header .header-menu-mobile .accordion-section .saleWrap-image img {
+      max-height: 30.4vw;
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .header .header-menu-mobile .accordion-section .saleWrap-text {
+      margin-top: 4.2666666667vw;
+      text-align: center;
+    }
+
+    .header .header-menu-mobile .accordion-section .saleWrap-text h3 {
+      font-family: Montserrat;
+      font-size: 3.7333333333vw;
+    }
+
+    .header .header-menu-mobile .accordion-section .saleWrap-text p {
+      font-family: Montserrat;
+      font-size: 3.2vw;
+      white-space: normal;
+    }
+
+    .header .header-menu-mobile .header-menu-site-switch {
+      border-bottom: 0.2666666667vw solid #f5f6f7;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 0 6.4vw;
+      padding: 5.3333333333vw 0;
+    }
+  }
+</style>
+{% assign sale_link_title_one = section.settings.sale_page_one%}
+{% assign sale_link_title_two = section.settings.sale_page_two%}
+{% assign sale_link_title_three = section.settings.sale_page_three%}
+
+<header id="home-s-header-mobile" class="header header-theme-light header-mobile">
+  <div class="header-wrap">
+    <div class="container">
+      <div class="header-left">
+        <button class="btn-nav btn-nav-mobile">
+          <span class="icon-bar top"></span><span class="icon-bar middle"></span><span class="icon-bar bottom"></span>
+        </button>
+
+        <a data-discover="true" class="active" href="/" style="font-weight: bold;" aria-current="page">
+          <img
+            alt="falcon"
+            decoding="async"
+            loading="eager"
+            src="{{ section.settings.logo | img_url: 'master' }}"
+            width="146"
+            height="24"
+          >
+        </a>
+      </div>
+      <nav class="header-ctas" role="navigation">
+        {%- if shop.customer_accounts_enabled -%}
+          {% if routes.account_login_url contains '/account/login' %}
+            {% assign is_contained = true %}
+          {% else %}
+            {% assign is_contained = false %}
+          {% endif %}
+          <!-- customer TODO multipass -->
+          <a
+            href="{{ routes.account_login_url }}"
+            class=""
+            {% if is_contained %}
+              data-open-auth-sidebar
+            {% endif %}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8836 5.6C13.4126 5.6 14.65 6.83585 14.65 8.38001C14.65 9.80162 13.5864 10.9703 12.2092 11.1311C12.094 11.1271 11.9782 11.125 11.8617 11.125C11.7569 11.125 11.6525 11.1267 11.5487 11.13C10.1693 10.9637 9.1 9.78442 9.1 8.38001C9.1 6.85908 10.351 5.6 11.8836 5.6ZM8.91318 11.5889C8.0446 10.7889 7.5 9.64472 7.5 8.38001C7.5 5.97746 9.46534 4 11.8836 4C14.3018 4 16.25 5.95769 16.25 8.38001C16.25 9.65267 15.7078 10.7987 14.8404 11.5976C17.7183 12.5512 19.75 14.8443 19.75 17.52C19.75 21.0505 16.2038 21.625 11.8706 21.625C7.53735 21.625 4 21.0505 4 17.52C4 14.8361 6.02879 12.5372 8.91318 11.5889ZM11.4932 12.7328C7.91197 12.8849 5.6 15.242 5.6 17.52C5.6 18.1226 5.74563 18.4772 5.91542 18.7112C6.09447 18.9579 6.3974 19.2028 6.91754 19.4161C8.02357 19.8698 9.70535 20.025 11.8706 20.025C14.0356 20.025 15.7201 19.8699 16.8288 19.4158C17.3505 19.2022 17.6545 18.9569 17.8341 18.7099C18.0043 18.4759 18.15 18.1217 18.15 17.52C18.15 15.254 15.8327 12.8979 12.2598 12.7341C12.1358 12.7446 12.0103 12.75 11.8836 12.75C11.752 12.75 11.6218 12.7442 11.4932 12.7328Z" fill="#1E1E1E"></path>
+            </svg>
+          </a>
+        {%- endif -%}
+        <div class="search" data-search-mobile>
+          <svg width="16" height="18" viewBox="0 0 16 18" fill="none">
+            <circle cx="7.5" cy="7.5" r="6.7" stroke="#1E1E1E" stroke-width="1.6"></circle><path d="M11.3933 13.1536L14.774 16.5343" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round"></path>
+          </svg>
+        </div>
+        <a
+          href="{{ routes.cart_url }}"
+          class="cart"
+          {% if settings.show_quick_cart %}
+            data-cart-sidebar
+          {% endif %}
+        >
+          {% if cart.item_count > 0 %}
+            <span class="count">
+              {%- if cart.item_count < 100 %} {{ cart.item_count }} {% else %} 99+ {% endif -%}
+            </span>
+          {% endif %}
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.66837 7.3C9.66837 5.80883 10.8772 4.6 12.3684 4.6C13.8595 4.6 15.0684 5.80883 15.0684 7.3H9.66837ZM8.06837 7.3C8.06837 4.92518 9.99355 3 12.3684 3C14.7432 3 16.6684 4.92518 16.6684 7.3H18.7362C19.9792 7.3 20.9212 8.42194 20.706 9.64621L19.1022 18.7712C18.9341 19.7276 18.1034 20.425 17.1324 20.425H7.60433C6.63333 20.425 5.80261 19.7276 5.63452 18.7712L4.03074 9.64621C3.81556 8.42194 4.7575 7.3 6.00054 7.3H8.06837ZM5.60658 9.36924C5.56355 9.12439 5.75194 8.9 6.00054 8.9H18.7362C18.9848 8.9 19.1732 9.12439 19.1302 9.36924L17.5264 18.4942C17.4928 18.6855 17.3266 18.825 17.1324 18.825H7.60433C7.41013 18.825 7.24399 18.6855 7.21037 18.4942L5.60658 9.36924Z" fill="#1E1E1E"></path>
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="header-menu-mobile">
+    <div class="header-menu-block">
+      <div class="header-menu-wrap">
+        <div class="accordion-section">
+          {% for link in section.settings.menu.links %}
+            <div class="accordionSubMenu-container">
+              <div class="accordion-column accordionSubMenu-button">
+                <a
+                  class="accordion-column-button"
+                  {% if link.links.size == 0 and link.title != sale_link_title_one and link.title != sale_link_title_two and link.title != sale_link_title_three %}
+                    href="{{ link.url }}"
+                  {% endif %}
+                >
+                  <div class="accordion-name">
+                    <span>
+                      {{ link.title }}
+                    </span>
+                  </div>
+                  {% if link.links.size > 0  or link.title == sale_link_title_one or link.title == sale_link_title_two or link.title == sale_link_title_three%}
+                    <div style="translate: none; rotate: none; scale: none; transform: rotate(90deg);">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M10 17L15 12L10 7" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  {% endif %}
+                </a>
+              </div>
+              <div class="accordion-content" style="overflow: hidden; height: 0px;">
+                {% for childlink in link.links %}
+                  <div class="accordionSubMenu-container">
+                    <div class="accordion-column ">
+                      <a
+                        class="accordion-column-button"
+                        {% if childlink.object.products == blank %}
+                          href="{{ childlink.url }}"
+                        {% endif %}
+                      >
+                        <div class="accordion-name">
+                          <span>
+                            {{ childlink.title }}
+                            {% if childlink.type == 'collection_link' %}
+                              {% assign collection = childlink.object %}
+                              {% if collection.metafields.custom.product_badge_text != blank %}
+                                <span class="collection-item-badge">
+                                  {{ collection.metafields.custom.product_badge_text }}
+                                </span>
+                              {% endif %}
+                            {% endif %}                            
+                          </span>
+                        </div>
+                        {% if childlink.object.products.size > 0 %}
+                          <div style="translate: none; rotate: none; scale: none; transform: rotate(90deg);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M10 17L15 12L10 7" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </div>
+                        {% endif %}
+                      </a>
+                    </div>
+                    <div class="accordion-content" style="overflow: hidden; height: 0px;">
+                      <div class="product-group-wrap">
+                        {% for product in childlink.object.products %}
+                          <a class="" href="{{ product.url }}">
+                            <div class="product-group-item">
+                              <div class="product-item-image">
+                                <img
+                                  alt=""
+                                  decoding="async"
+                                  loading="lazy"
+                                  src="{{ product.featured_image | img_url: 'master' }}"
+                                  width="100%"
+                                  height="100%"
+                                >
+                              </div>
+                              <div class="product-item-text">
+                                <p class="product-item-tag"></p>
+                                <p class="product-item-name" title="{{ product.metafields.custom.short_title |default:product.title | default:"" }}">
+                                  {% if product.metafields.custom.short_title != blank %}
+                                    {{ product.metafields.custom.short_title }}
+                                  {% else %}
+                                    {{ product.title }}
+                                  {% endif -%}
+                                </p>
+                              </div>
+                              {% if product.metafields.custom.product_badge_text != blank %}
+                                <div class="product-item-badge">
+                                  {{ product.metafields.custom.product_badge_text }}
+                                </div>
+                              {% endif %}                              
+                            </div>
+                          </a>
+                        {% endfor %}
+                      </div>
+                      {% if childlink.object.products.size > 0 %}
+                        <div class="product-item-link">
+                          <a class="" href="{{ childlink.url }}"
+                            >View All
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M10 17L15 12L10 7" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                {% endfor %}
+                {% if section.blocks.size != 0 and link.title == sale_link_title_one %}
+                  <div class="accordion-section">
+                    {% for block in section.blocks %}
+                      {% if block.type == 'custom_block_one' %}
+                        <a
+                          aria-label="{{block.settings.option_subtitle_one}}"
+                          class=""
+                          href="{{ block.settings.option_link_one}}"
+                        >
+                          <div class="saleWrap-item">
+                            <div class="saleWrap-image">
+                              <img
+                                alt=""
+                                decoding="async"
+                                loading="lazy"
+                                src="{{ block.settings.option_image_one | img_url:'master' }}"
+                                height="100%"
+                                width="100%"
+                              >
+                            </div>
+                            <div class="saleWrap-text">
+                              <h3>{{ block.settings.option_title_one }}</h3>
+                              <p>{{ block.settings.option_subtitle_one }}</p>
+                            </div>
+                          </div>
+                        </a>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                {% endif %}
+             {% if section.blocks.size != 0 and link.title == sale_link_title_two %}
+                  <div class="accordion-section">
+                    {% for block in section.blocks %}
+                      {% if block.type == 'custom_block_two' %}
+                        <a
+                          aria-label="{{block.settings.option_subtitle_two}}"
+                          class=""
+                          href="{{ block.settings.option_link_two}}"
+                        >
+                          <div class="saleWrap-item">
+                            <div class="saleWrap-image">
+                              <img
+                                alt=""
+                                decoding="async"
+                                loading="lazy"
+                                src="{{ block.settings.option_image_two | img_url:'master' }}"
+                                height="100%"
+                                width="100%"
+                              >
+                            </div>
+                            <div class="saleWrap-text">
+                              <h3>{{ block.settings.option_title_two }}</h3>
+                              <p>{{ block.settings.option_subtitle_two }}</p>
+                            </div>
+                          </div>
+                        </a>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                {% endif %}
+             {% if section.blocks.size != 0 and link.title == sale_link_title_three %}
+                  <div class="accordion-section">
+                    {% for block in section.blocks %}
+                      {% if block.type == 'custom_block_three' %}
+                        <a
+                          aria-label="{{block.settings.option_subtitle_three}}"
+                          class=""
+                          href="{{ block.settings.option_link_three}}"
+                        >
+                          <div class="saleWrap-item">
+                            <div class="saleWrap-image">
+                              <img
+                                alt=""
+                                decoding="async"
+                                loading="lazy"
+                                src="{{ block.settings.option_image_three | img_url:'master' }}"
+                                height="100%"
+                                width="100%"
+                              >
+                            </div>
+                            <div class="saleWrap-text">
+                              <h3>{{ block.settings.option_title_three }}</h3>
+                              <p>{{ block.settings.option_subtitle_three }}</p>
+                            </div>
+                          </div>
+                        </a>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="header-menu-site-switch">
+          {% render 'site-switch' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script
+  defer
+>
+  document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('#home-s-header-mobile');
+    const headerSection = header.closest('.shopify-section.shopify-section-group-header-group');
+    if (headerSection) {
+      headerSection.classList.add('home-s-header-wrap-sticky');
+    }
+
+    // 获取header高度和距离顶部距离
+    function updateHeaderVars() {
+      const headerHeight = document.querySelector('#home-s-header-mobile').offsetHeight;
+      const headerTop = document.querySelector('#home-s-header-mobile').getBoundingClientRect().top + window.scrollY;
+
+      const headerMobile = document.querySelector('.header-mobile');
+      if (headerMobile) {
+        headerMobile.style.setProperty('--s-header-m-height', `${headerHeight}px`);
+        headerMobile.style.setProperty('--activity-bar-m-height', `${headerTop}px`);
+      }
+    }
+
+    // 初始设置
+    updateHeaderVars();
+
+    // 监听窗口大小变化
+    window.addEventListener('resize', updateHeaderVars);
+  });
+</script>
+
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    const accordionButtons = document.querySelectorAll('.accordion-column-button');
+
+    accordionButtons.forEach((button) => {
+      button.addEventListener('click', function () {
+        // 找到最近的accordionSubMenu-container
+        const container = this.closest('.accordionSubMenu-container');
+        if (!container) return;
+
+        // 找到当前container内的直接子accordion-content
+        const content = container.querySelector(':scope > .accordion-content');
+        if (!content) return;
+
+        // 找到同一层级的其他accordionSubMenu-container内的accordion-content
+        const parentContainer = container.parentElement;
+        const siblingContainers = parentContainer.querySelectorAll(':scope > .accordionSubMenu-container');
+
+        // 关闭同级的其他accordion-content
+        siblingContainers.forEach((siblingContainer) => {
+          if (siblingContainer !== container) {
+            const siblingContent = siblingContainer.querySelector(':scope > .accordion-content');
+            if (siblingContent) {
+              siblingContent.style.height = '0px';
+            }
+          }
+        });
+
+        // 切换当前content的高度
+        if (content.style.height === '0px' || content.style.height === '') {
+          content.style.height = 'auto';
+        } else {
+          content.style.height = '0px';
+        }
+      });
+    });
+
+    // 初始化所有accordion-content为关闭状态
+    document.querySelectorAll('.accordion-content').forEach((content) => {
+      content.style.height = '0px';
+    });
+  });
+</script>
+
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navButton = document.querySelector('#home-s-header-mobile .btn-nav-mobile');
+    const menuBlock = document.querySelector('#home-s-header-mobile .header-menu-mobile .header-menu-block');
+
+    // if(navButton && menuBlock) {
+    navButton.addEventListener('click', function () {
+      console.log('navButton clicked');
+      menuBlock.classList.toggle('open');
+      // 切换按钮动画效果
+      navButton.classList.toggle('animated');
+    });
+    // }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Home S Header",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "导航菜单",
+      "info": "请选择一个导航菜单"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },{
+  "type": "text",
+  "id": "sale_page_one",
+  "label": "Salepage One",
+},{
+  "type": "text",
+  "id": "sale_page_two",
+  "label": "Salepage Two",
+},{
+  "type": "text",
+  "id": "sale_page_three",
+  "label": "Salepage Three",
+}
+  ],
+  "blocks": [
+    {
+      "type": "custom_block_one",
+      "name": "活动页配置项一",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "option_image_one",
+          "label": "图片"
+        },
+        {
+          "type": "text",
+          "id": "option_title_one",
+          "label": "标题"
+        },
+        {
+          "type": "text",
+          "id": "option_subtitle_one",
+          "label": "副标题"
+        },
+        {
+          "type": "text",
+          "id": "option_link_one",
+          "label": "链接"
+        }
+      ]
+    }, {
+      "type": "custom_block_two",
+      "name": "活动页配置项二",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "option_image_two",
+          "label": "图片"
+        },
+        {
+          "type": "text",
+          "id": "option_title_two",
+          "label": "标题"
+        },
+        {
+          "type": "text",
+          "id": "option_subtitle_two",
+          "label": "副标题"
+        },
+        {
+          "type": "text",
+          "id": "option_link_two",
+          "label": "链接"
+        }
+      ]
+    },{
+      "type": "custom_block_three",
+      "name": "活动页配置项三",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "option_image_three",
+          "label": "图片"
+        },
+        {
+          "type": "text",
+          "id": "option_title_three",
+          "label": "标题"
+        },
+        {
+          "type": "text",
+          "id": "option_subtitle_three",
+          "label": "副标题"
+        },
+        {
+          "type": "text",
+          "id": "option_link_three",
+          "label": "链接"
+        }
+      ]
+    }
+    
+    
+  ],
+  "presets": [
+    {
+      "name": "Home S Header 顶部导航栏"
+    }
+  ]
+}
+{% endschema %}

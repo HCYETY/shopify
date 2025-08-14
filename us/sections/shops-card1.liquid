@@ -1,0 +1,295 @@
+<style>
+  #container-{{section.id}} * {
+      box-sizing: border-box;
+  }
+
+  #container-{{section.id}} img {
+      width: 100%;
+      height: auto;
+  }
+
+  #container-{{section.id}} .title {
+      font-family: HarmonyOS_Sans_SC_Bold;
+      font-weight: 900;
+      font-size: 2.13vw;
+      /* 可修改 */
+      color: #fff;
+      text-align: center;
+      line-height: 1.2;
+  }
+
+  #container-{{section.id}} .desc {
+      text-align: center;
+      font-family: HarmonyOS_Sans_SC_Regular;
+      font-weight: 400;
+      font-size: 1.06vw;
+      /* 可修改 */
+      color: #fff;
+      line-height: 1.2;
+      margin-top: 1.2vw;
+  }
+
+  #container-{{section.id}} .section5 {
+      padding: 6vw 18.5vw;
+      /* 可修改 */
+
+  }
+
+  #container-{{section.id}} .section5 .product-mylist {
+      display: flex;
+      margin-top: 2.6vw;
+      gap: 0.9vw;
+      height: 30.8vw;
+  }
+
+  #container-{{section.id}} .section5 .product-mylist .product-item2 {
+      height: 100%;
+      flex: 1;
+      border-radius: 24px;
+      overflow: hidden;
+      background-color: #fff;
+  }
+
+  #container-{{section.id}} .section5 .product-mylist .product-item2 .price-myinfo {
+      background-color: #14a9de;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3.2vw;
+      font-family: HarmonyOS_Sans_SC_Bold;
+      font-weight: bold;
+      font-size: 1.28vw;
+      color: #ffffff;
+  }
+
+  #container-{{section.id}} .section5 .product-mylist .product-item2 .product-myinfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 1.2vw;
+  }
+
+  #container-{{section.id}} .section5 .product-mylist .product-item2 .product-myinfo .product-img {
+      width: 13.2vw;
+      margin-top: 2vw;
+  }
+
+  #container-{{section.id}} .section5 .product-mylist .product-item2 .product-myinfo .price-text {
+      margin-top: 1.3vw;
+      font-weight: 900;
+      font-size: 2.13vw;
+      color: #000000;
+  }
+
+  #container-{{section.id}} .section5 .product-mylist .product-item2 .product-myinfo .product-desc {
+      margin-top: 1vw;
+      font-weight: 400;
+      font-size: 1.06vw;
+      color: #000000;
+      opacity: 0.7;
+      line-height: 1.2;
+  }
+
+  @media (max-width: 769px) {
+      #container-{{section.id}} .section5 {
+          padding: 5vw 4.4vw;
+      }
+
+      #container-{{section.id}} .title {
+          font-size: 5vw;
+      }
+
+      #container-{{section.id}} .desc {
+          font-size: 2.96vw;
+          margin-top: 2vw;
+      }
+
+      #container-{{section.id}} .section5 .product-mylist {
+          display: flex;
+          flex-direction: column;
+          margin-top: 5.6vw;
+          gap: 1vw;
+          height: auto;
+      }
+
+      #container-{{section.id}} .section5 .product-mylist .product-item2 {
+          height: 36vw;
+          flex: 1;
+          border-radius: 8px;
+          width: 100%;
+          position: relative;
+      }
+
+      #container-{{section.id}} .section5 .product-mylist .product-item2 .price-myinfo {
+          position: absolute;
+          top: 0;
+          left: 53vw;
+          width: 24vw;
+          height: 5vw;
+          font-size: 2.96vw;
+      }
+
+      #container-{{section.id}} .section5 .product-mylist .product-item2 .product-myinfo {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          text-align: center;
+          padding: 0 0 0 6.5vw;
+          height: 30vw;
+          gap: 5vw;
+      }
+
+      #container-{{section.id}} .section5 .product-mylist .product-item2 .product-myinfo .product-img {
+          width: 22vw;
+          margin-top: 0;
+          flex-shrink: 0;
+      }
+
+      #container-{{section.id}} .section5 .product-mylist .product-item2 .product-myinfo .price-text {
+          margin-top: 0;
+          font-size: 4.4vw;
+      }
+
+      #container-{{section.id}} .section5 .product-mylist .product-item2 .product-myinfo .product-desc {
+          margin-top: 2vw;
+          font-size: 2.96vw;
+      }
+
+  }
+</style>
+{%- liquid 
+  assign card_background_color = section.settings.card_background_color
+  assign card_title = section.settings.card_title
+  assign card_text = section.settings.card_text
+  assign card_title_color = section.settings.card_title_color
+  assign notice_text = section.settings.notice_text
+-%}
+
+<div id="container-{{section.id}}">
+  <div class="section5" style="background: {{card_background_color}};">
+      <div class="title" style="color: {{card_title_color}};">
+          {{card_title}}
+      </div>
+      <div class="desc" style="color: {{card_title_color}};">
+          {{card_text}}
+      </div>
+      <div class="product-mylist">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'gifts-lists'-%}
+            <div class="product-item2">
+                <div class="price-myinfo">≥ {{block.settings.price_text1}}</div>
+                <div class="product-myinfo">
+                    <div class="product-img">
+                        <img src="{{block.settings.item_image_link}}"
+                            alt="">
+                    </div>
+                    <div class="info-wrap">
+                        <div class="price-text fontBold">
+                            {{block.settings.card_text2}}
+                        </div>
+                        <div class="product-desc">
+                            {{block.settings.item_desc1}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}  
+      </div>
+      <div class="desc">
+          {{notice_text}}
+      </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "shops-card1",
+    "settings": [
+      {
+        "type": "text",
+        "id": "card_background_color",
+        "label": "背景颜色",
+        "default": "linear-gradient(15deg, #fff, #0A188C)"
+      },
+      {
+        "type": "text",
+        "id": "card_title",
+        "label": "标题",
+        "default": "Shop In-Store and Enjoy Tier Gifts"
+      },
+      {
+        "type": "textarea",
+        "id": "card_text",
+        "label": "文本",
+        "default": "Experience Our Budget-friendly Engravers for Easy Operation!"
+      },
+      {
+        "type": "color",
+        "id": "card_title_color",
+        "label": "标题及文本颜色",
+        "default": "#fff"
+      },
+      {
+        "type": "textarea",
+        "id": "notice_text",
+        "label": "文本",
+        "default": "Notice: While supplies last <br class='mb'>(gifts may be adjusted based on actual inventory)"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "gifts-lists",
+        "name": {
+          "en-US": "gifts-lists",
+          "zh-CN": "产品列表-gifts"
+        },
+        "settings": [
+          {
+              "type": "text",
+              "id": "item_image_link",
+              "label": {
+                "en-US": "gifts image link",
+                "zh-CN": "gifts图片链接"
+              },
+              "default": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864"
+          },
+          {
+              "type": "text",
+              "id": "price_text1",
+              "label": {
+                "en-US": "price text1",
+                "zh-CN": "价格文本1"
+              },
+              "default": "$499"
+          },
+          {
+              "type": "textarea",
+              "id": "card_text2",
+              "label": {
+                "en-US": "text2",
+                "zh-CN": "文本2"
+              },
+              "default": "<span style=\"color: #000000;\">Value</span> <span style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">$25.99</span>"
+          },
+          {
+              "type": "text",
+              "id": "item_desc1",
+              "label": {
+                "en-US": "gifts desc",
+                "zh-CN": "gifts描述"
+              },
+              "default": "Better Heat Dissipation"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "shops-card1"
+      }
+    ]
+  }
+{% endschema %}

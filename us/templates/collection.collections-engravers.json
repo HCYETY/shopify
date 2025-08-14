@@ -1,0 +1,332 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "description_RKk6Bg": {
+          "type": "description",
+          "settings": {
+            "show_collection_description": true,
+            "show_read_more_read_less": false,
+            "collection_description_position": "relative",
+            "collection_description_align_tb": "center",
+            "collection_description_align": "center",
+            "maxwidth_collection_description": 70,
+            "collection_description_color": "#232323",
+            "collection_description_bg": "rgba(0,0,0,0)",
+            "collection_description_bg_gradient": "",
+            "show_sub_collection": false,
+            "sub_collection_layout": "grid",
+            "maxheight_sub_collection": 90,
+            "sub_collection_description_position": "relative",
+            "sub_collection_type": "all",
+            "colors_bg": "#fafafa",
+            "colors_bg_gradient": "",
+            "all_sub_collection_padding_top": 10,
+            "all_sub_collection_padding_bottom": 10,
+            "sub_collection_title": "Jump To",
+            "sub_collection_title_color": "#000000",
+            "fontsize_sub_collection": 12,
+            "fontweight_sub_collection": "500",
+            "sub_collection_text_transform": "uppercase",
+            "show_sub_collection_image": false,
+            "sub_collection_padding_top": 10,
+            "sub_collection_padding_bottom": 10,
+            "sub_collection_grid_gap": 15,
+            "color_sub_collection": "#ffffff",
+            "sub_collection_background": "#232323",
+            "sub_collection_background_gradient": "",
+            "sub_collection_border": "#232323",
+            "sub_collection_color_hover": "#232323",
+            "sub_collection_background_hover": "#ffffff",
+            "sub_collection_background_gradient_hover": "",
+            "sub_collection_border_hover": "#232323",
+            "sub_collection_mg_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "description_RKk6Bg"
+      ],
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_color": "#999999",
+        "breadcrumb_bg": "rgba(0,0,0,0)",
+        "breadcrumb_gradient": "",
+        "breadcrumb_color_mb": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "center",
+        "container": "default",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "layout": "1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "filter_y6jp4r": {
+          "type": "filter",
+          "settings": {
+            "heading": "Filter Title",
+            "list_tags": "Price"
+          }
+        }
+      },
+      "block_order": [
+        "filter_y6jp4r"
+      ],
+      "settings": {
+        "colors_bg": "rgba(0,0,0,0)",
+        "colors_bg_gradient": "",
+        "container": "1170",
+        "mg_top_desktop": 20,
+        "mg_top_tablet": 20,
+        "mg_top_mobile": 20,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "show_sidebar": true,
+        "show_sidebar_collapse": false,
+        "enable_sticky": false,
+        "sidebar_layout": "layout_1",
+        "sidebar_collapse_default": "expand",
+        "sidebar_type": "vertical",
+        "sidebar_position": "left",
+        "sidebar_heading_font": "font_1",
+        "sidebar_heading_font_size": 14,
+        "sidebar_heading_font_weight": "400",
+        "sidebar_heading_text_transform": "capitalize",
+        "show_filter": true,
+        "filter_swatch": "Color",
+        "filter_swatch_type": "color",
+        "filter_rectangle": "Size",
+        "filter_display_type": "show-more",
+        "max_item_per_filter": 10,
+        "filter_label_all": "",
+        "filter_hidden_tag_list": "",
+        "show_toolbar": true,
+        "show_sorting": true,
+        "show_item_per_page": false,
+        "show_view_as": false,
+        "products_per_page": "20",
+        "layout": "4",
+        "show_infinite_scrolling": "show_more",
+        "show_banner": false,
+        "show_banner_1": false,
+        "banner_position_1": "1",
+        "link_banner_1": "shopify://products/laser-engraver-cutter-falcon2-40w-engraving-machine",
+        "show_banner_2": false,
+        "banner_position_2": "3",
+        "link_banner_2": "shopify://products/falcon-2-pro-40w-enclosed-laser-engraver-and-cutter",
+        "show_banner_3": false,
+        "banner_position_3": "12",
+        "link_banner_3": ""
+      }
+    },
+    "collapsible_content_GfPCXK": {
+      "type": "collapsible-content",
+      "blocks": {
+        "content_PC9FrK": {
+          "type": "content",
+          "settings": {
+            "heading": "Which laser engraver is right for me? What are the differences between models?",
+            "content": "<p>The best laser engraver for you depends on your specific needs—such as the materials you plan to work with, the thickness you want to cut, the level of detail required, and whether portability, power, or automation matters most to you.</p><ul><li>If you're a beginner or hobbyist working with wood, leather, or paper, a compact diode laser like the Falcon CR 5W may be ideal.</li><li>For faster speed and deeper cutting (e.g., thicker wood, acrylic), the Falcon A1 10W offers more power and precision.</li><li>If you're looking for advanced performance, automation features, and cutting of thicker materials (up to 22mm wood or 30mm acrylic), the Falcon2 Pro 60W is a top-tier choice.</li></ul><p>Still not sure? Our <a href=\"https://www.crealityfalcon.com/pages/contact-us\" target=\"_blank\" title=\"contact support team\"><strong>support team</strong></a> is always here to help! Feel free to reach out—we’re happy to recommend the best model based on your goals and budget.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "content_XkVLwP": {
+          "type": "content",
+          "settings": {
+            "heading": "What materials can the machine engrave or cut?",
+            "content": "<p>The types of materials a laser engraver can process depend on the laser type, power output, and the material’s properties. As diode laser engravers, the Falcon series machines are ideal for working with a wide range of non-metal and coated metal materials. Here's a breakdown by model:</p><p><strong>Falcon CR Series</strong></p><p>Engraving: Cardboard, wood, bamboo, rubber, leather, fabric, acrylic, painted/coated metals, plastics, etc.</p><p>Cutting: Cardboard, wood, bamboo, leather, fabric, acrylic (excluding transparent acrylic), plastics, etc.</p><p><strong>Falcon A1 Series</strong></p><p>Engraving: Cardboard, wood, bamboo, rubber, leather, fabric, acrylic, painted/coated metals, plastics, etc.</p><p>Cutting: Cardboard, wood (6mm), bamboo, leather, fabric, acrylic (excluding transparent acrylic)(9.6mm), plastics, etc.</p><p><strong>Falcon2 Series</strong></p><p>Engraving: Paper, wood, bamboo, leather, fabric, acrylic, painted/coated metal, plastic, etc. </p><p>Cutting: Paper, wood (20mm), bamboo, leather, fabric, non-transparent acrylic (clear acrylic cannot be cut)(30mm), plastic, etc.</p><p><strong>Falcon2 Pro Series</strong></p><p>Engraving: Paper, wood, bamboo, leather, fabric, acrylic, painted/coated metal, plastic, etc.</p><p>Cutting: Paper, wood (22mm), bamboo, leather, fabric, non-transparent acrylic (clear acrylic cannot be cut)(30mm), plastic, etc.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "content_TkkeWV": {
+          "type": "content",
+          "settings": {
+            "heading": "Which machine can engrave or cut metal?",
+            "content": "<p>All Falcon Series machines use diode lasers, which are suitable for engraving coated or painted metals, such as anodized aluminum or powder-coated surfaces. However, they cannot cut metal or engrave directly on bare (uncoated) metal surfaces.</p>",
+            "page": ""
+          }
+        },
+        "content_kdKLLB": {
+          "type": "content",
+          "settings": {
+            "heading": "What is the working area of the machine? What size materials can it handle?",
+            "content": "<p>The working area of Creality’s Falcon Series laser engravers varies by model, and directly impacts the maximum material size you can work with. </p><p>Here's a detailed breakdown: </p><p>Falcon CR Series: 400 × 415 mm</p><p>Falcon A1 Series: 305 × 381mm</p><p>Falcon2 Series: 400 × 415mm</p><p>Falcon2 Pro Series: 400 × 400mm<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "content_TBGXUi": {
+          "type": "content",
+          "settings": {
+            "heading": "How precise is the laser engraver?",
+            "content": "<p>The Falcon Series laser engravers are highly precise, with motion accuracy of ±0.01 mm and laser spot sizes as small as 0.06 × 0.06 mm, allowing for detailed engraving and clean cuts.</p>",
+            "page": ""
+          }
+        },
+        "content_neKLPC": {
+          "type": "content",
+          "settings": {
+            "heading": "Can I use a laser engraver at home? How much space does it take? Is it noisy or smoky?",
+            "content": "<p>Yes, you can use a laser engraver at home.</p><p>Many models—especially enclosed ones like the Creality Falcon A1 or Falcon2 Pro—are built with home safety and convenience in mind. They're beginner-friendly, Class 1 laser-safe, and ideal for indoor use with proper ventilation.</p><p><strong>Space Requirements</strong>: Occupies around 0.5–1 square meter. Compact enough to fit on a desk or workbench, making it easy to integrate into a home office or creative workspace.</p><p><strong>Noise Level</strong>: Runs quietly, with only light sounds from fans and motors. Suitable for indoor use without disturbing your household.</p><p><strong>Smoke Management:</strong> Yes, it generates smoke when cutting certain materials. To ensure clean air, use it near a window, and pair it with an exhaust fan or air purifier for better ventilation.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "content_Q6UrDh": {
+          "type": "content",
+          "settings": {
+            "heading": "Is it profitable to buy a laser engraver or cutter?",
+            "content": "<p>Yes, investing in a laser engraver or cutter can be highly profitable — especially for custom products, small businesses, or craft sales. Explore<a href=\"https://www.crealityfalcon.com/blogs/industry-insights-and-customer-stories\" target=\"_blank\" title=\"discover real success stories with Falcon Lasers\"><strong> real success stories</strong></a> from Falcon users and see how they turned creativity into income. </p>",
+            "page": ""
+          }
+        },
+        "content_3XXKhe": {
+          "type": "content",
+          "settings": {
+            "heading": "Is laser engraving or cutting difficult to learn for beginners?",
+            "content": "<p>Not at all — laser engraving and cutting is easy to learn, especially with beginner-friendly machines like the Falcon Series! </p><p>Just head over to the <a href=\"https://www.youtube.com/@FalconLaserOfficial\" target=\"_blank\" title=\"Visit Falcon YouTube channel\"><strong>official Falcon YouTube channel</strong></a> for step-by-step video tutorials that’ll help you get started in no time.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "content_8VhcRp": {
+          "type": "content",
+          "settings": {
+            "heading": "Do I need prior experience or design skills to use it?",
+            "content": "<p>No worries if you’re new — you don’t need any experience or design skills to get started! The software is super beginner-friendly, and you’ll find thousands of ready-made designs online to explore.<br/><br/>To make things even easier, we invite you to join our <a href=\"https://crealityfalcon-laser.com/fbg\" target=\"_blank\" title=\"Join Falcon Laser Fackbook Group\"><strong>Falcon Laser Engravers Facebook Group</strong></a> — a welcoming community where experienced users and laser pros are always happy to share tips, troubleshoot problems, and inspire your creative journey.</p>",
+            "page": ""
+          }
+        },
+        "content_MzkCWx": {
+          "type": "content",
+          "settings": {
+            "heading": "What software is compatible with the machine? Do I need to pay for it?",
+            "content": "<p>The Falcon Laser is compatible with both third-party and official software:</p><p>1. Third-Party Software</p><p>LaserGRBL (Free) </p><p>– Windows only, real-time engraving, great for beginners.</p><p>LightBurn (Paid, with a 30-day free trial)</p><p> – Supports real-time and offline engraving. Offers advanced design tools. Available on Windows, macOS, and Linux.</p><p>2. Official SoftwareFalcon </p><p><a href=\"https://webapp.craftseek.com/#/download\" target=\"_blank\" title=\"visit Falcon Design Space download page\"><strong>Falcon Design Space</strong></a> (Free) – A user-friendly platform developed specifically for Falcon users. Ideal for beginners and quick projects.</p><p>Note: For real-time engraving, your computer must stay awake and responsive during operation (no sleep mode, no screen lock), or engraving might be interrupted.<br/><br/></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_PC9FrK",
+        "content_XkVLwP",
+        "content_TkkeWV",
+        "content_kdKLLB",
+        "content_TBGXUi",
+        "content_neKLPC",
+        "content_Q6UrDh",
+        "content_3XXKhe",
+        "content_8VhcRp",
+        "content_MzkCWx"
+      ],
+      "name": "t:sections.collapsible_content.settings.collapsible_row",
+      "settings": {
+        "id_section": "",
+        "container": "container",
+        "padding_full_width": 0,
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "collapsible_bg": "#ffffff",
+        "collapsible_bg_gradient": "",
+        "collapsible_title": "FAQs About Falcon Laser Engravers & Cutters",
+        "color_title": "#232323",
+        "fontsize_title": 32,
+        "fontsize_title_mb": 24,
+        "collapsible_des": "New to Falcon or laser engraving in general? Don’t worry — we’ve got you covered! Here are answers to some of the most common questions from creators like you. Let’s get you engraving with confidence.",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "fontsize_des_mb": 12,
+        "max_width_des": 700,
+        "title_align": "left",
+        "enable_image_right": false,
+        "bg_content_color": "#ffffff",
+        "title_color": "#232323",
+        "content_color": "#232323",
+        "icon_color": "#232323",
+        "border_color": "#232323"
+      }
+    },
+    "product-recently-viewed": {
+      "type": "product-recently-viewed",
+      "settings": {
+        "display_product_recently_viewed": true,
+        "product_recently_viewed_container": "1170",
+        "padding_full_width": 0,
+        "enable_border_top": true,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "border_style": "container",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "product_recently_viewed_layout": "slider",
+        "product_bg": "#ffffff",
+        "product_bg_gradient": "",
+        "style_block_header": "style1",
+        "product_recently_viewed_title": "Highly Recommended Products",
+        "enable_border_title": false,
+        "mg_top_title": 26,
+        "mg_bottom_title": 3,
+        "fontsize_title": 18,
+        "fontsize_title_mb": 18,
+        "border_color_title": "#232323",
+        "color_title": "#232323",
+        "product_recently_viewed_title_align": "center",
+        "product_recently_viewed_limit": 10,
+        "product_recently_viewed_image_ratio": "adapt",
+        "grid_gap": 30,
+        "product_recently_viewed_per_row": "5",
+        "product_recently_viewed_swipe_on_mobile": true,
+        "product_recently_viewed_dots": false,
+        "product_recently_viewed_dots_mb": true,
+        "product_recently_viewed_arrows": true,
+        "product_recently_viewed_arrows_mb": false,
+        "product_recently_viewed_show": "5",
+        "product_block_per_view": "5",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_hover_drag_icon": true,
+        "enable_layout_special": false,
+        "bg_card": "#ffffff",
+        "padding_card": 15,
+        "border_radius_card": 5,
+        "border_layout_card": "full",
+        "border_width_card": 5,
+        "border_color_card": "#f0f1f4"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "collapsible_content_GfPCXK",
+    "product-recently-viewed"
+  ]
+}

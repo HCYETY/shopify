@@ -1,0 +1,131 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "creality_2024_12_christmas_Byd6cE": {
+      "type": "creality_2024_12_christmas",
+      "blocks": {
+        "gift_rule_fJzYDw": {
+          "type": "gift-rule",
+          "settings": {
+            "gift_rule_title": "Free Laser Carved Coloured Paper",
+            "gift_rule_desc": "for all orders"
+          }
+        },
+        "gift_rule_zHVned": {
+          "type": "gift-rule",
+          "settings": {
+            "gift_rule_title": "Free Plywood Sheets",
+            "gift_rule_desc": "for orders £299+"
+          }
+        },
+        "gift_rule_Rbept9": {
+          "type": "gift-rule",
+          "settings": {
+            "gift_rule_title": "Free Plywood Sheets*2",
+            "gift_rule_desc": "for orders £699+"
+          }
+        },
+        "gift_rule_kCbCTD": {
+          "type": "gift-rule",
+          "settings": {
+            "gift_rule_title": "Free Electric Screwdriver",
+            "gift_rule_desc": "for orders £1099+"
+          }
+        },
+        "faq_item_ERWJTi": {
+          "type": "faq-item",
+          "settings": {
+            "faq_question": "1: How Can I get all the free gifts during Christmas Sale?",
+            "faq_answer": "If your order meets the requirements of our promotion, the free gifts will be automatically added to your shopping cart until you reach the checkout page. If you don't see it, please contact our customer service for assistance. Please email to: uk.support@crealityfalcon.com"
+          }
+        },
+        "faq_item_ijAnAn": {
+          "type": "faq-item",
+          "settings": {
+            "faq_question": "2: What payment methods do you accept?",
+            "faq_answer": "We accept a variety of payment methods including credit cards, shop pay, PayPal and more. You can choose the payment method that works best for you at checkout."
+          }
+        },
+        "faq_item_QaMVQB": {
+          "type": "faq-item",
+          "settings": {
+            "faq_question": "3: How long does a shipment normally take?",
+            "faq_answer": "Due to high order volume, we typically ship packages within 1-2 working days. Estimated delivery time is 3-5 working days. Please wait patiently for delivery. Thanks."
+          }
+        },
+        "faq_item_T4qUre": {
+          "type": "faq-item",
+          "settings": {
+            "faq_question": "4: Can I engrave on reflective/transparent materials such as ceramic/glass?",
+            "faq_answer": "Yes, but you need to coat the surface of the material with anti-reflective material before engraving to ensure the engraving effect and prevent the reflected light from damaging the laser module."
+          }
+        }
+      },
+      "block_order": [
+        "gift_rule_fJzYDw",
+        "gift_rule_zHVned",
+        "gift_rule_Rbept9",
+        "gift_rule_kCbCTD",
+        "faq_item_ERWJTi",
+        "faq_item_ijAnAn",
+        "faq_item_QaMVQB",
+        "faq_item_T4qUre"
+      ],
+      "settings": {
+        "show_banner": false,
+        "banner_title": "It's time <br> for Santa deals",
+        "banner_desc": "Christmas Décor - Up to 30% Off",
+        "banner_btn_link": "",
+        "banner_image": "shopify://shop_images/1880_x_600-_Falcon_Logo_18dc9935-a424-459b-8879-8cbfd4e81135.jpg",
+        "banner_mb_image": "shopify://shop_images/957_x_1350-_Falcon_Logo_f7e85750-853b-4c46-9fef-e694017913ed.jpg",
+        "countdown_title": "Hurry up! Christmas Deals end in",
+        "countdown": "2024-12-26T10:00:00",
+        "section1_title": "🎄Huge Saving on Best-Seller",
+        "section1_sub_title": "Falcon2 22W",
+        "section1_collection": "22w-combo",
+        "section2_title": "Falcon2 Pro Enclosed Laser Cutter: Up to 60W",
+        "section2_sub_title": "FDA Class 1 Laser Safety Certification",
+        "section2_collection": "falcon2-pro-engraver",
+        "discount_code": [
+          "1"
+        ],
+        "section_product_list_title": "DIY Christmas Gift!",
+        "section_product_list": [
+          "personalized-brown-leather-coasters-holder-4-6pcs-for-falcon-home-laser-engraving",
+          "personalised-leather-passport-holder-luggage-tag-set",
+          "titanium-steel-pet-tags-metal-charms-for-engraving"
+        ],
+        "section3_title": "More Creative Materials!",
+        "section3_sub_title": "",
+        "section3_collection": "materials-for-laser-engraving",
+        "section4_title": "Best Accessories Deals for you!",
+        "section4_sub_title": "",
+        "section4_collection": "accessories",
+        "introduce_block_title": "Get ready for Xmas",
+        "introduce_block_desc": "Skip the holiday shopping madness and make something special for your loved ones this Christmas! \nJust order the engraver before December 18th to make sure it arrives on time. You'll have plenty of time to create the perfect gift!",
+        "introduce_block_list": "Quick Delivery: Get it in 2-5 days,12-Month Warranty: Full year of coverage.,24/7 Support: Help anytime.,Tons of Materials: Fuel your creativity with options.",
+        "introduce_block_img2": "shopify://shop_images/Chrismas_Creality_Falcon_2.jpg",
+        "introduce_block_link": "",
+        "section_gift_rule": "Christmas Gift",
+        "section_faq_title": "FAQ"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "creality_2024_12_christmas_Byd6cE"
+  ]
+}

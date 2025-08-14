@@ -1,0 +1,284 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "slide_show_wrEU44": {
+      "type": "slide-show",
+      "blocks": {
+        "image_4NLVTb": {
+          "type": "image",
+          "settings": {
+            "image_slide": "shopify://shop_images/1880_600.png",
+            "image_slide_mb": "shopify://shop_images/960_1200.png",
+            "alignment": "left",
+            "enable_custom_position": false,
+            "custom_horizontal": "",
+            "custom_vertical": "",
+            "custom_horizontal_mobile": "50",
+            "custom_vertical_mobile": "50",
+            "enable_position_outside_image": false,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "enable_border_line": false,
+            "padding_vertical": 30,
+            "content_width": 475,
+            "bg_color_content": "",
+            "border_color_content": "",
+            "profile_name": "",
+            "profile_name_color": "",
+            "profile_name_fs": 20,
+            "profile_name_fs_mb": 20,
+            "profile_name_fw": "normal",
+            "profile_title": "",
+            "profile_title_color": "",
+            "profile_title_fs": 20,
+            "profile_title_fs_mb": 20,
+            "profile_title_fw": "normal",
+            "profile_spacing_bottom": 50,
+            "sub_heading": "",
+            "letter_spacing_sub_title": "",
+            "font_size_sub_heading": 30,
+            "sub_heading_spacing_bottom": 20,
+            "font_weight_sub_heading": "400",
+            "border_sub_heading": "none",
+            "sub_title_position": "sub_title_above",
+            "color_sub_heading": "#ffffff",
+            "heading": "",
+            "letter_spacing_heading": "",
+            "enable_border_heading": false,
+            "font_style_heading": "normal",
+            "font_size_heading": 40,
+            "line_height_heading": 40,
+            "heading_spacing_bottom": 8,
+            "color_heading": "#232323",
+            "slide-des": "",
+            "font_size_des": 12,
+            "des_spacing_bottom": 35,
+            "color_des": "#232323",
+            "sub_heading_mb": "",
+            "font_size_sub_heading_mb": 20,
+            "sub_heading_spacing_bottom_mb": 20,
+            "font_weight_sub_heading_mb": "400",
+            "border_sub_heading_mb": "none",
+            "color_sub_heading_mb": "#ffffff",
+            "heading_mb": "",
+            "font_style_heading_mb": "normal",
+            "font_size_heading_mb": 24,
+            "line_height_heading_mb": 24,
+            "heading_spacing_bottom_mb": 8,
+            "color_heading_mb": "#ffffff",
+            "slide-des-mb": "",
+            "font_size_des_mb": 12,
+            "des_spacing_bottom_mb": 35,
+            "color_des_mb": "#ffffff",
+            "enable_icon_button": false,
+            "enable_button_link": false,
+            "enable_underline": true,
+            "font_size_link": 36,
+            "button_slide": "",
+            "link": "",
+            "button_style": "button_1",
+            "button_slide_2": "",
+            "link_2": "",
+            "min_width_banner_button": 270,
+            "color_button": "#ffffff",
+            "border_button": "#232323",
+            "bg_button": "#232323",
+            "bg_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_button_hover": "#232323",
+            "bg_button_hover": "#232323",
+            "bg_button_gradient_hover": "",
+            "lb_product_1": "",
+            "horizontal_pos_1": 0,
+            "vertical_pos_1": 0,
+            "lookbook_pos_1": "right",
+            "lb_product_2": "",
+            "horizontal_pos_2": 0,
+            "vertical_pos_2": 0,
+            "lookbook_pos_2": "right",
+            "lb_product_3": "",
+            "horizontal_pos_3": 0,
+            "vertical_pos_3": 0,
+            "lookbook_pos_3": "right"
+          }
+        }
+      },
+      "block_order": [
+        "image_4NLVTb"
+      ],
+      "name": "t:sections.slide-show.presets.name",
+      "settings": {
+        "container": "fullwidth",
+        "padding_full_width": 0,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "slideshow_background": "",
+        "slideshow_background_gradient": "",
+        "autoplay": true,
+        "slideshow_speed": "5000",
+        "slideshow_transition": "true",
+        "dots": "shape",
+        "dots_color": "#707979",
+        "dots_border_color": "#707979",
+        "dots_active_color": "rgba(0,0,0,0)",
+        "dots_active_border_color": "#505656",
+        "dots_direction": "bottom",
+        "dots_shape": "disc",
+        "position_slick_dots": "34px",
+        "dots_opacity": false,
+        "arrow_active": true,
+        "enable_custom_arrow": false,
+        "arrow_width": 35,
+        "arrow_height": 35,
+        "arrow_size_icon": 17,
+        "arrow_color": "#666d6d",
+        "arrow_border_color": "#666d6d",
+        "arrow_bg_color": "#ffffff",
+        "arrow_color_hover": "",
+        "arrow_border_color_hover": "",
+        "arrow_bg_color_hover": "",
+        "position_slick_arrow": "10%",
+        "position_vertical_slick_arrow": "50%",
+        "image_behavior": "none",
+        "video_height": "41.7%",
+        "video_height_mb": "41.7%",
+        "auto_playvideo": true,
+        "enable_categories": false,
+        "text_categories": "Shop by categories",
+        "title_color": "#ffffff",
+        "bg_title": "#fd6506",
+        "text_icon_color": "#202020",
+        "menu_category": "",
+        "enable_banner": false,
+        "lookbook_style": "1",
+        "enable_lookbook_width": false,
+        "lookbook_width": 250,
+        "dot_desktop_size": 24,
+        "dot_mobile_size": 16,
+        "dot_shadow_color": "#ffffff80",
+        "dot_outer_color": "#ffffff",
+        "show_dot_number": false,
+        "show_dot_number_mobile": false,
+        "show_plus_icon": false,
+        "dot_inner_color": "#000000",
+        "number_desktop_size": 24,
+        "number_mobile_size": 16,
+        "lookbook_truncate": "1"
+      }
+    },
+    "may2025_activities_mHGpMR": {
+      "type": "may2025-activities",
+      "blocks": {
+        "gift_card_mVWywG": {
+          "type": "GiftCard",
+          "settings": {
+            "sec1_price": "100",
+            "sec1_url": "https://uk.crealityfalcon.com/products/creality-falcon-gift-card-1?variant=51875958817138"
+          }
+        },
+        "gift_card_7nm8jx": {
+          "type": "GiftCard",
+          "settings": {
+            "sec1_price": "200",
+            "sec1_url": "https://uk.crealityfalcon.com/products/creality-falcon-gift-card-1?variant=51875971760498"
+          }
+        },
+        "gift_card_4L7EyP": {
+          "type": "GiftCard",
+          "settings": {
+            "sec1_price": "300",
+            "sec1_url": "https://uk.crealityfalcon.com/products/creality-falcon-gift-card-1?variant=51951214723442"
+          }
+        },
+        "gift_card_FTbfBV": {
+          "type": "GiftCard",
+          "settings": {
+            "sec1_price": "500",
+            "sec1_url": "https://uk.crealityfalcon.com/products/creality-falcon-gift-card-1?variant=51940701208946"
+          }
+        },
+        "gift_card_Wqrcd9": {
+          "type": "GiftCard",
+          "settings": {
+            "sec1_price": "1000",
+            "sec1_url": "https://uk.crealityfalcon.com/products/creality-falcon-gift-card-1?variant=51940701241714"
+          }
+        },
+        "recommend_gift_V6Jb3r": {
+          "type": "RecommendGift",
+          "settings": {
+            "sec2_title": "Recommend Gift",
+            "sec2_product": [
+              "bundle-10w-falcon-laser-engraver-basic-kits",
+              "bundle-falcon2-22w-laser-engraver-basic-kits",
+              "bundle-falcon2-40w-laser-cutter-basic-kits",
+              "a4-gold-silver-scratch-paper-for-laser-engraving"
+            ],
+            "sec3_title": "Hot-selling Products",
+            "sec3_product": [
+              "cr-laser-falcon-engraver-10w-low-wattage",
+              "falcon2-22w-laser-engraver-cutter",
+              "falcon2-pro-enclosed-laser-engraver-cutter",
+              "falcon2-40w-laser-engraver-and-cutter"
+            ],
+            "sec4_title": "Clearance Area",
+            "sec4_product": [
+              "4-packs-500ml-stainless-steel-cup-personalized-tumbler-with-leather-case-for-laser-engraving",
+              "16pcs-multicolor-bottle-opener-keychain-beer-beverage-can-openers-key-chain-for-men-party-favor",
+              "unique-women-gift-set-for-mothers-day-birthday-christmas",
+              "cordless-electric-screwdriver",
+              "frosted-colorful-acrylic-for-laser-engraving-and-cutting",
+              "14pcs-wooden-rubber-stamps-with-7-color-ink-pad-set",
+              "6pcs-leather-jewelry-storage-bag-travel-bag-makeup-cosmetic-pouch-wedding-party-gift-bags",
+              "2pcs-envelope-love-letter-necklace-for-women-men-stainless-steel-engraved-locket-pendant-gift",
+              "5-pairs-strong-magnetic-earrings-hypoallergenic-fake-clip-non-pierced-studs-8mm-for-men-women",
+              "personalised-leather-passport-holder-luggage-tag-set",
+              "laser-carved-coloured-paper-ceramic-stone"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "gift_card_mVWywG",
+        "gift_card_7nm8jx",
+        "gift_card_4L7EyP",
+        "gift_card_FTbfBV",
+        "gift_card_Wqrcd9",
+        "recommend_gift_V6Jb3r"
+      ],
+      "name": "may2025-activities",
+      "settings": {}
+    },
+    "custom_liquid_GNy6im": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<a class=\"e-widget no-button\" href=\"https://gleam.io/3qZ0f/creality-falcon-mothers-day-giveaway\" rel=\"nofollow\">\n  Creality Falcon Mother's Day Giveaway\n</a>\n<script type=\"text/javascript\" src=\"https://widget.gleamjs.io/e.js\" async=\"true\"></script>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slide_show_wrEU44",
+    "may2025_activities_mHGpMR",
+    "custom_liquid_GNy6im"
+  ]
+}

@@ -1,0 +1,572 @@
+{% style %}
+  .countdown-section-s2 {
+    position: relative;
+    width: 100%;
+    padding: 30px 0;
+    background: linear-gradient(180deg, #fff0cd, #ffe0cc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .countdown-container-s2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-section-s2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 13px;
+    width: 100%;
+  }
+
+  .logo-left-s2-container,
+  .logo-right-s2-container {
+    flex-shrink: 0;
+    width: 30px;
+    height: 41px;
+  }
+
+  .logo-left-s2-container img,
+  .logo-right-s2-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .countdown-headline-s2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #ecaa0a;
+    margin: 0 7px;
+    line-height: 1;
+    margin-bottom: 2px;
+    text-align: center;
+  }
+
+  .countdown-subheadline-s2 {
+    font-size: 14px;
+    margin-bottom: 23px;
+    font-weight: 600;
+    color: #333;
+    max-width: 800px;
+    line-height: 1;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .countdown-timer-s2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 23px;
+  }
+
+  .countdown-item-s2 {
+    display: flex;
+    align-items: end;
+    gap: 4px;
+  }
+
+  .countdown-value-s2 {
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 600;
+    min-width: 22px;
+    width: 22px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #d48d02;
+  }
+
+  .countdown-label-s2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+    color: #333;
+  }
+
+  .commendations-section-s2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .cta-section-s2 {
+    background-color: #fff;
+    border-radius: 31px;
+    height: 36px;
+    position: relative;
+    margin: 42px 0 22px;
+    /* display: flex; */
+    align-items: center;
+    width: 90%;
+    max-width: 430px;
+  }
+
+  .cta-text-s2 {
+    width: 100%;
+    height: 36px;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-right: 128px;
+    
+  }
+  .cta-text-s2:placeholder {
+    color: #999;
+    font-size: 12px;
+  }
+
+  .cta-button-s2 {
+    background-color: #ffbd3c;
+    border-radius: 31px;
+    height: 36px;
+    padding: 0 18px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .cta-button-s2 span {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* 移动端响应式样式 (小于900px) */
+  @media screen and (max-width: 900px) {
+    .countdown-section-s2 {
+      padding: 20px 0;
+    }
+
+    .logo-left-s2-container,
+    .logo-right-s2-container {
+      width: 25px;
+      height: 34px;
+    }
+
+    .header-section-s2 {
+      padding: 0 24px;
+    }
+    .countdown-headline-s2 {
+      font-size: 20px;
+      margin: 0 5px;
+    }
+
+    .countdown-subheadline-s2 {
+      font-size: 10px;
+      margin-bottom: 18px;
+      padding: 0 20px;
+      line-height: 1;
+    }
+
+    .countdown-timer-s2 {
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .countdown-value-s2 {
+      font-size: 16px;
+      min-width: 20px;
+      width: 20px;
+    }
+
+    .countdown-label-s2 {
+      font-size: 10px;
+    }
+
+    .cta-section-s2 {
+      width: 85%;
+      max-width: 350px;
+      margin: 30px 0 18px;
+    }
+
+    .cta-text-s2 {
+      padding-right: 80px;
+      font-size: 10px;
+    }
+
+    .cta-button-s2 {
+      padding: 0 12px;
+    }
+
+    .cta-button-s2 span {
+      font-size: 11px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .countdown-section-s2 {
+    position: relative;
+    width: 100%;
+    padding: 2.34375vw 0;
+    background: linear-gradient(180deg, #fff0cd, #ffe0cc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .countdown-container-s2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-section-s2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 1.016vw;
+    width: 100%;
+  }
+
+  .logo-left-s2-container,
+  .logo-right-s2-container {
+    flex-shrink: 0;
+    width: 2.34375vw;
+    height: 3.203vw;
+  }
+
+  .logo-left-s2-container img,
+  .logo-right-s2-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .countdown-headline-s2 {
+    font-size: 1.953vw;
+    font-weight: 600;
+    color: #ecaa0a;
+    margin: 0 0.547vw;
+    line-height: 1;
+    margin-bottom: 0.15625vw;
+    text-align: center;
+  }
+
+  .countdown-subheadline-s2 {
+    font-size: 1.09375vw;
+    margin-bottom: 1.797vw;
+    font-weight: 600;
+    color: #333;
+    max-width: 62.5vw;
+    line-height: 1;
+    text-align: center;
+    padding: 0 1.172vw;
+  }
+
+  .countdown-timer-s2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.328vw;
+    margin-bottom: 1.797vw;
+  }
+
+  .countdown-item-s2 {
+    display: flex;
+    align-items: end;
+    gap: 0.3125vw;
+  }
+
+  .countdown-value-s2 {
+    font-size: 1.40625vw;
+    line-height: 1;
+    font-weight: 600;
+    min-width: 1.719vw;
+    width: 1.719vw;
+    box-sizing: border-box;
+    text-align: center;
+    color: #d48d02;
+  }
+
+  .countdown-label-s2 {
+    font-size: 0.9375vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+    color: #333;
+  }
+
+  .commendations-section-s2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.016vw;
+  }
+
+  .cta-section-s2 {
+    background-color: #fff;
+    border-radius: 2.422vw;
+    height: 2.8125vw;
+    position: relative;
+    margin: 3.28125vw 0 1.719vw;
+    /* display: flex; */
+    align-items: center;
+    width: 90%;
+    max-width: 33.594vw;
+  }
+
+  .cta-text-s2 {
+    width: 100%;
+    height: 2.8125vw;
+    color: #333;
+    font-size: 0.9375vw;
+    font-weight: 600;
+    padding-left: 1.5625vw;
+    padding-right: 10vw;
+    
+  }
+  .cta-text-s2:placeholder {
+    color: #999;
+    font-size: 0.9375vw;
+  }
+
+  .cta-button-s2 {
+    background-color: #ffbd3c;
+    border-radius: 2.422vw;
+    height: 2.8125vw;
+    padding: 0 1.40625vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .cta-button-s2 span {
+    color: #fff;
+    font-size: 0.9375vw;
+    font-weight: 600;
+  }
+  }
+{% endstyle %}
+
+<div class="countdown-section-s2">
+  <div class="countdown-container-s2">
+    <div class="header-section-s2">
+      {% if section.settings.logo_left != blank %}
+        <div class="logo-left-s2-container">
+          <img
+            class="logo-left-s2"
+            src="{{ section.settings.logo_left | img_url: 'master' }}"
+            alt="{{ section.settings.headline }}"
+            width="100%"
+            height="100%"
+          >
+        </div>
+      {% endif %}
+      {% if section.settings.headline != blank %}
+        <h2 class="countdown-headline-s2">{{ section.settings.headline }}</h2>
+      {% endif %}
+      {% if section.settings.logo_right != blank %}
+        <div class="logo-right-s2-container">
+          <img
+            class="logo-right-s2"
+            src="{{ section.settings.logo_right | img_url: 'master' }}"
+            alt="{{ section.settings.headline }}"
+            width="100%"
+            height="100%"
+          >
+        </div>
+      {% endif %}
+    </div>
+
+    {% if section.settings.subheadline != blank %}
+      <p class="countdown-subheadline-s2">{{ section.settings.subheadline }}</p>
+    {% endif %}
+
+    {% if section.settings.countdown_end_date != blank %}
+      <div class="countdown-timer-s2" data-end-date-s2="{{ section.settings.countdown_end_date }}">
+        <div class="countdown-item-s2">
+          <span class="countdown-value-s2 days-s2">00</span>
+          <span class="countdown-label-s2">{{ section.settings.days_text }}</span>
+        </div>
+
+        <div class="countdown-item-s2">
+          <span class="countdown-value-s2 hours-s2">00</span>
+          <span class="countdown-label-s2">{{ section.settings.hours_text }}</span>
+        </div>
+
+        <div class="countdown-item-s2">
+          <span class="countdown-value-s2 minutes-s2">00</span>
+          <span class="countdown-label-s2">{{ section.settings.minutes_text }}</span>
+        </div>
+
+        <div class="countdown-item-s2">
+          <span class="countdown-value-s2 seconds-s2">00</span>
+          <span class="countdown-label-s2">{{ section.settings.seconds_text }}</span>
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="commendations-section-s2">
+      {% content_for 'blocks' %}
+    </div>
+
+    {% if section.settings.cta_text != blank %}
+      <div class="cta-section-s2">
+        {%- form 'customer' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <div class="input-box">
+            <input
+              id="NewsletterForm--{{ section.id }}"
+              type="email"
+              name="contact[email]"
+              class="cta-text-s2"
+              value="{{ form.email }}"
+              aria-required="true"
+              autocorrect="off"
+              autocapitalize="off"
+              autocomplete="email"
+              {% if form.errors %}
+                autofocus aria-invalid="true" aria-describedby="ContactFooter-error"
+              {% elsif form.posted_successfully? %}
+                aria-describedby="ContactFooter-success"
+              {% endif %}
+              placeholder="{{ section.settings.cta_text }}"
+              required="required"
+            >
+            <button
+              type="submit"
+              class="cta-button-s2"
+              name="commit"
+              id="Subscribe-{{ section.id }}"
+              aria-label="{{ section.settings.cta_button_text }}"
+            >
+              <span>{{ section.settings.cta_button_text }}</span>
+            </button>
+          </div>
+          {%- if form.errors -%}
+            <div
+              class="newsletter-form__message newsletter-form__message--error form__message"
+              id="ContactFooter-error"
+            >
+              {% render 'icon-error' -%}
+              {{- form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}
+            </div>
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<script src="{{ '2025-3-27-s2.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "2025-周年庆-s2",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo_left",
+      "label": "左侧标志"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "主标题",
+      "default": "Win Your Ultimate 11th Anniversary Wishlist"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_right",
+      "label": "右侧标志"
+    },
+    {
+      "type": "textarea",
+      "id": "subheadline",
+      "label": "副标题",
+      "default": "Sign up now to share your heartfelt wishes for Anniversary and stand a chance to win fantastic products!"
+    },
+    {
+      "type": "header",
+      "content": "倒计时设置"
+    },
+    {
+      "type": "text",
+      "id": "countdown_end_date",
+      "label": "倒计时结束日期",
+      "info": "设置促销活动的结束时间，格式为：YYYY-MM-DD hh:mm:ss，例如：2023-12-31 23:59:59",
+      "placeholder": "2023-12-31 23:59:59",
+      "default": "2024-12-31 23:59:59"
+    },
+    {
+      "type": "header",
+      "content": "倒计时文字设置"
+    },
+    {
+      "type": "text",
+      "id": "days_text",
+      "label": "天数文字",
+      "default": "DAYS"
+    },
+    {
+      "type": "text",
+      "id": "hours_text",
+      "label": "小时文字",
+      "default": "HOURS"
+    },
+    {
+      "type": "text",
+      "id": "minutes_text",
+      "label": "分钟文字",
+      "default": "MINUTES"
+    },
+    {
+      "type": "text",
+      "id": "seconds_text",
+      "label": "秒数文字",
+      "default": "SECONDS"
+    },
+    {
+      "type": "header",
+      "content": "按钮设置"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "提示文本",
+      "default": "Sign up and write your Anniversary wishes"
+    },
+    {
+      "type": "text",
+      "id": "cta_button_text",
+      "label": "按钮文本",
+      "default": "Sign Up"
+    }
+  ],
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "presets": [
+    {
+      "name": "2025-周年庆-s2",
+      "category": "周年庆",
+      "blocks": [
+        {
+          "type": "ticker"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

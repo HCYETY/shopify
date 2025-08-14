@@ -1,0 +1,614 @@
+<link rel="stylesheet" href="{{ 'reset.css' | asset_url }}">
+<script src="{{ 'jquery.cart.min.js' | asset_url }}"></script>
+{% style %}
+.compareCards .pc {
+  display: block;
+}
+
+.compareCards .md {
+  display: none;
+}
+
+.compareCards-header {
+  overflow: hidden;
+  position: relative;
+}
+
+.compareCards-header-title {
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  transform: translateY(-50%);
+  aspect-ratio: 5/3;
+  width: 23vw;
+}
+
+.compareCards-header-title p:first-child {
+  font-size: 2vw;
+  font-weight: bold;
+  line-height: 2.3vw;
+}
+
+.compareCards-header-title p:last-child {
+  margin-top: 1vw;
+  font-weight: 400;
+  font-size: 1.3vw;
+  line-height: 1.5vw;
+  display: flex;
+  flex-flow: column;
+}
+
+.compareCards-header-img {
+  aspect-ratio: 5/1;
+  height: 20vw;
+}
+
+.compareCards-header-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.compareCards-main {
+  overflow: hidden;
+}
+
+.compareCards-main .titleactiver p svg {
+  transform: rotate(-90deg) !important;
+}
+
+.compareCards-main-title {
+  background-color: {{section.settings.star_color}};
+  color: #fff;
+  width: 100%;
+  border-radius: 0;
+  text-align: center;
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 0px 15px;
+  cursor: pointer;
+}
+
+.compareCards-main-title p:last-child {
+  margin-right: 20px;
+}
+
+.compareCards-main-title p:last-child svg {
+  transform: rotate(0deg);
+  transition: 0.3s all;
+}
+
+.compareCards-main-box {
+  padding: 15px;
+  display: none;
+}
+
+.compareCards-main-box-table {
+  padding: 10px;
+  font-weight: 400;
+  line-height: 28px;
+  font-size: 18px;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  overflow-x: auto;
+  text-align: left;
+  border: 1px solid #dededf;
+}
+
+.compareCards-main-box-table table {
+  width: 100%;
+  background-color: #fff;
+}
+
+.compareCards-main-box-table table th {
+  background: #f9fafb;
+  font-weight: 700;
+}
+
+.compareCards-main-box-table table th,
+.compareCards-main-box-table table td {
+  min-width: 50px;
+  padding: 10px 15px;
+  text-align: inherit;
+  text-align: center;
+  align-content: center;
+}
+
+.compareCards-main-box-table table tr {
+  transition: 0.3s all;
+  border-bottom: 1px solid #dcdddd;
+  background: white;
+}
+
+.compareCards-main-box-table table tr:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.compareCards-main-box-table table td span {
+  color: #1f0000;
+}
+
+@media screen and (max-width: 1024px) {
+  .pc {
+    display: none !important;
+  }
+  .md {
+    display: block !important;
+  }
+  .compareCards-header-title {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    aspect-ratio: 5/3;
+    width: 70vw;
+  }
+  .compareCards-header-title p {
+    text-align: center;
+  }
+  .compareCards-header-title p:first-child {
+    font-size: 9vw;
+    font-weight: 400;
+    line-height: 10vw;
+  }
+  .compareCards-header-title p:last-child {
+    margin-top: 1vw;
+    font-weight: 100;
+    font-size: 3vw;
+    line-height: 4vw;
+  }
+  .compareCards-header-img {
+    height: auto !important;
+    aspect-ratio: 3/4 !important;
+  }
+  .compareCards-header-img img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 524px) {
+  .compareCards-header-title p:first-child {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 45px;
+  }
+  .compareCards-header-title p:last-child {
+    margin-top: 1vw;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .compareCards-header-img {
+    height: auto !important;
+    aspect-ratio: 3/4 !important;
+  }
+  .compareCards-header-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .compareCards-main-title {
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .compareCards-header-title p:first-child {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45px;
+  }
+  .compareCards-header-title p:last-child {
+    margin-top: 1vw;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .compareCards-header-img {
+    height: auto !important;
+    aspect-ratio: 3/4 !important;
+  }
+  .compareCards-header-img img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+{% endstyle %}
+<div class="compareCards">
+  <div class="compareCards-header">
+    <div class="compareCards-header-title">
+      <p>{{section.settings.img_title}}</p>
+      <p>
+        {{section.settings.img_subtitle}}
+      </p>
+    </div>
+    <div class="compareCards-header-img">
+      <img class="pc" src="{{section.settings.image_pc}}" />
+      <img class="md" src="{{section.settings.image_md}}" />
+    </div>
+  </div>
+  <div class="compareCards-main">
+    <div class="compareCards-main-title">
+      <p></p>
+      <p>{{section.settings.title}}</p>
+      <p>
+        <svg
+          t="1721638477025"
+          class="icon"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="4252"
+          width="20"
+          height="20"
+        >
+          <path
+            d="M185.884 327.55 146.3 367.133 512.021 732.779 877.7 367.133 838.117 327.55 511.997 653.676Z"
+            p-id="4253"
+          ></path>
+        </svg>
+      </p>
+    </div>
+    <div class="compareCards-main-box">
+      <div class="compareCards-main-box-table">
+        <table class="pf-inner-table">
+          <tbody>
+            <tr>
+              <th class="A1"><span>Type</span></th>
+              {% for block in section.blocks %}
+                <th ><span style="cursor: pointer;" onclick="location.href='{{block.settings.item_hyperlink}}';">{{block.settings.item_title}}</span></th>
+              {% endfor %}
+            
+            </tr>
+            <tr>
+              <td class="A2"><span>Key Point</span></td>
+              {% for block in section.blocks %}
+                <td >
+                <span>{{block.settings.key_point}}<br /></span>
+              </td>
+              {% endfor %}
+             
+            </tr>
+            <tr>
+              <td class="A3"><span>Laser type</span></td>
+              {% for block in section.blocks %}
+                <td ><span>{{block.settings.laser_type}}</span></td>
+              {% endfor %}
+            
+            </tr>
+            <tr>
+              <td class="A4"><span>Optical Power</span></td>
+              {% for block in section.blocks %}
+                <td >
+                  <span>{{block.settings.optical_power}}</span>
+                </td>
+              {% endfor %}
+              
+            </tr>
+            <tr>
+              <td class="A5"><span>Engraving Accuracy</span></td>
+              {% for block in section.blocks %}
+                <td >
+                  <span>{{block.settings.engraving_accuracy}}</span>
+                </td>
+              {% endfor %}
+             
+            </tr>
+            <tr>
+              <td class="A6"><span>Engraving Area</span></td>
+              {% for block in section.blocks %}
+                <td >
+                  <span>{{block.settings.engraving_area}}</span>
+                </td>
+              {% endfor %}
+              
+            </tr>
+            <tr>
+              <td class="A7">
+                <span>One-cut Capability(Basswood)<br /></span>
+              </td>
+              {% for block in section.blocks %}
+                <td >
+                  <span>{{block.settings.basswood}}</span>
+                </td>
+              {% endfor %}
+            </tr>
+            <tr>
+              <td class="A8"><span>One-cut Capability(Transparent Acrylic)</span></td>
+              {% for block in section.blocks %}
+                <td >
+                  <span>{{block.settings.transparent_acrylic}}</span>
+                </td>
+              {% endfor %}
+            </tr>
+            <tr>
+              <td class="A9"><span>AI camera</span></td>
+              {% for block in section.blocks %}
+                <td >
+                  <span>{{block.settings.ai_camera}}</span>
+                </td>
+              {% endfor %}
+            </tr>
+            <tr>
+              <td class="A10"><span>Enclosed</span></td>
+              {% for block in section.blocks %}
+                <td >
+                  <span>{{block.settings.enclosed}}</span>
+                </td>
+              {% endfor %}
+            </tr>
+            <tr>
+              <td class="A10"><span>Laser Wavelength</span></td>
+              {% for block in section.blocks %}
+                <td >
+                  <span>{{block.settings.laser_wavelength}}</span>
+                </td>
+              {% endfor %}
+            </tr>
+            <tr>
+              <td class="A10"><span>Laser Class</span></td>
+              {% for block in section.blocks %}
+                <td >
+                  <span>{{block.settings.laser_class}}</span>
+                </td>
+              {% endfor %}
+            </tr>
+            <tr>
+              <td class="A10"><span>Cuttable Materials</span></td>
+              {% for block in section.blocks %}
+                <td >
+                  <span>{{block.settings.cuttable_materials}}</span>
+                </td>
+              {% endfor %}
+            </tr>
+            <tr>
+              <td class="A10"><span>Cngravable Materials</span></td>
+              {% for block in section.blocks %}
+                <td >
+                  <span>{{block.settings.cngravable_materials}}</span>
+                </td>
+              {% endfor %}
+            </tr>
+            <tr>
+              <td class="A10"><span>Eertifications</span></td>
+              {% for block in section.blocks %}
+                <td >
+                  <span>{{block.settings.eertifications}}</span>
+                </td>
+              {% endfor %}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(function () {
+    $(".compareCards-main-title").on("click", function () {
+      if ($(this).attr("class").includes("titleactiver")) {
+        $(this).removeClass("titleactiver");
+        $(".compareCards-main-box").slideUp();
+      } else {
+        $(this).addClass("titleactiver");
+        $(".compareCards-main-box").slideDown();
+      }
+    });
+  });
+</script>
+{% schema %}
+  {
+    "name": "compare_cards",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "对比标题",
+        "default": "Full Comparison"
+      }, 
+      {
+        "type": "text",
+        "id": "img_title",
+        "label": "图片上的标题",
+        "default": "Compare xTool Machines"
+      },
+      {
+        "type": "text",
+        "id": "img_subtitle",
+        "label": "图片上的副标题",
+        "default": " <span> Still wondering which one to pick? </span><span>See the full machine comparisons or take aquiz so we can betterhelp you.</span>"
+      },
+      {
+        "type": "text",
+        "id": "img_pc",
+        "label": "pc背景图片",
+        "default": "1"
+      }, {
+        "type": "text",
+        "id": "img_md",
+        "label": "移动端背景图片",
+        "default": "1 "
+      }, {
+        "type": "color",
+        "id": "star_color",
+        "label": "对比标题的背景色",
+        "default": "#00b485"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "products-tcontrast",
+        "name": {
+          "en-US": "products-tcontrast",
+          "zh-CN": "products-tcontrast"
+        },
+        "settings": [
+          {
+            "type": "text",
+            "id": "item_hyperlink",
+            "label": {
+              "en-US": "detailsButton",
+              "zh-CN": "detailsButton"
+            },
+            "default": "https://www.crealityfalcon.com/products/creality-falcon-2-pro-enclosed-laser-engraver?variant=47669864562985"
+          },
+          {
+            "type": "text",
+            "id": "item_title",
+            "label": {
+              "en-US": "tcontrast title text",
+              "zh-CN": "accessory标题"
+            },
+            "default": "Creality Falcon2 Pro"
+          },
+          {
+            "type": "text",
+            "id": "key_point",
+            "label": {
+              "en-US": "key_point",
+              "zh-CN": "key_point"
+            },
+            "default": "Efficient Work, Safety First"
+          },
+          {
+            "type": "text",
+            "id": "laser_type",
+            "label": {
+              "en-US": "laser_type",
+              "zh-CN": "laser_type"
+            },
+            "default": "Diode Laser"
+          }, 
+          {
+            "type": "text",
+            "id": "optical_power",
+            "label": {
+              "en-US": "optical_power",
+              "zh-CN": "optical_power"
+            },
+            "default": "22W"
+          }, 
+          {
+            "type": "text",
+            "id": "engraving_accuracy",
+            "label": {
+              "en-US": "engraving_accuracy",
+              "zh-CN": "engraving_accuracy"
+            },
+            "default": "0.08*0.1mm"
+          }, 
+          {
+            "type": "text",
+            "id": "engraving_area",
+            "label": {
+              "en-US": "engraving_area",
+              "zh-CN": "engraving_area"
+            },
+            "default": "400mm*415mm"
+          }
+          , 
+          {
+            "type": "text",
+            "id": "basswood",
+            "label": {
+              "en-US": "basswood",
+              "zh-CN": "basswood"
+            },
+            "default": "10mm"
+          }
+          , 
+          {
+            "type": "text",
+            "id": "transparent_acrylic",
+            "label": {
+              "en-US": "transparent_acrylic",
+              "zh-CN": "transparent_acrylic"
+            },
+            "default": "10mm"
+          }
+          , 
+          {
+            "type": "text",
+            "id": "ai_camera",
+            "label": {
+              "en-US": "ai_camera",
+              "zh-CN": "ai_camera"
+            },
+            "default": "√"
+          }
+          
+          , 
+          {
+            "type": "text",
+            "id": "enclosed",
+            "label": {
+              "en-US": "enclosed",
+              "zh-CN": "enclosed"
+            },
+            "default": "√"
+          }
+          , 
+          {
+            "type": "text",
+            "id": "laser_wavelength",
+            "label": {
+              "en-US": "enclosed",
+              "zh-CN": "enclosed"
+            },
+            "default": "455±5nm"
+          }
+          , 
+          {
+            "type": "text",
+            "id": "laser_class",
+            "label": {
+              "en-US": "laser_class",
+              "zh-CN": "laser_class"
+            },
+            "default": "Class 1(FDA)"
+          }
+          , 
+          {
+            "type": "text",
+            "id": "cuttable_materials",
+            "label": {
+              "en-US": "cuttable_materials",
+              "zh-CN": "cuttable_materials"
+            },
+            "default": "IEC60825、FDA、CE、ROHS、FCC、UKCA、UL Report、PSE"
+          }
+          , 
+          {
+            "type": "text",
+            "id": "cngravable_materials",
+            "label": {
+              "en-US": "cngravable_materials",
+              "zh-CN": "cngravable_materials"
+            },
+            "default": "Paper, Wood, Leather, MDF, Felt, Some dark opaque acrylic"
+          }
+          , 
+          {
+            "type": "text",
+            "id": "eertifications",
+            "label": {
+              "en-US": "eertifications",
+              "zh-CN": "eertifications"
+            },
+            "default": "Paper, Wood, Leather, MDF, Stainless steel, Some dark opaque acrylic, Bamboo, Fabric, Dark glass, Ceramic, Jade, Marble, Shale, Cement, Brick, Plated metal, Painted metal"
+          }
+        ]
+      }
+   
+    ],
+    "presets": [
+      {
+        "name": "compare_cards"
+      }
+    ]
+  }
+{% endschema %}

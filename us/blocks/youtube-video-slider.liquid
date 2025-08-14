@@ -1,0 +1,433 @@
+<link rel="stylesheet" href="{{ 'swiper.css' | asset_url }}">
+<script src="{{ 'swiper.js' | asset_url }}" defer></script>
+
+{% style %}
+  :root {
+    --slide-width: 320px;
+    --slide-gap: 11px;
+  }
+  .youtube-video-slider-container {
+    max-width: 100%;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+  }
+  #{{ block.id }}-swiper {
+    width: 100%;
+  }
+  .youtube-video-slider {
+    height: fit-content;
+    overflow: hidden;
+  }
+  .youtube-video-slider .swiper-slide {
+    width: var(--slide-width) !important;
+    height: calc(var(--slide-width) * 9 / 16) !important;
+    border-radius: 10px;
+    user-select: none;
+    overflow: hidden;
+  }
+
+  /* navigation button */
+  .youtube-video-slider-container .swiper-button-next,
+  .youtube-video-slider-container .swiper-button-prev {
+    width: 31px;
+    height: 31px;
+    color: #fff;
+    background-color: #d48d02;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    margin: 0 8px;
+  }
+  .youtube-video-slider-container .swiper-button-next:after,
+  .youtube-video-slider-container .swiper-button-prev:after {
+    display: none;
+  }
+  .youtube-video-slider-container .swiper-button-prev svg {
+    transform: translateX(-1px) scale(1.5);
+    transform-origin: center;
+  }
+  .youtube-video-slider-container .swiper-button-next svg {
+    transform: translateX(1px) scale(1.5);
+    transform-origin: center;
+  }
+
+  /* scrollbar styles */
+  .youtube-video-slider-container .swiper-scrollbar {
+    height: 6px;
+    background-color: rgba(212, 141, 2, 0.1);
+    border-radius: 3px;
+    position: relative;
+    margin-top: 15px;
+  }
+  .youtube-video-slider-container .swiper-scrollbar-drag {
+    height: 100%;
+    background-color: #d48d02;
+    border-radius: 3px;
+    position: relative;
+  }
+  
+  /* 导航按钮容器样式 */
+  .navigation-buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+  }
+
+  @media (min-width: 1920px) {
+    :root {
+      --slide-width: 25vw;
+      --slide-gap: 0.859vw;
+    }
+
+    .youtube-video-slider .swiper-slide {
+      width: var(--slide-width) !important;
+      height: calc(var(--slide-width) * 9 / 16) !important;
+      border-radius: 0.78125vw;
+      user-select: none;
+      overflow: hidden;
+    }
+
+    /* navigation button */
+    .youtube-video-slider-container .swiper-button-next,
+    .youtube-video-slider-container .swiper-button-prev {
+      width: 2.422vw;
+      height: 2.422vw;
+      color: #fff;
+      background-color: #d48d02;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: static;
+      margin: 0 0.625vw;
+    }
+
+    .youtube-video-slider-container .swiper-button-prev svg {
+      transform: translateX(-0.078vw) scale(1.5);
+      transform-origin: center;
+    }
+    .youtube-video-slider-container .swiper-button-next svg {
+      transform: translateX(0.078vw) scale(1.5);
+      transform-origin: center;
+    }
+
+    /* scrollbar styles */
+    .youtube-video-slider-container .swiper-scrollbar {
+      height: 0.46875vw;
+      background-color: rgba(212, 141, 2, 0.1);
+      border-radius: 0.234vw;
+      position: relative;
+      margin-top: 1.172vw;
+    }
+    .youtube-video-slider-container .swiper-scrollbar-drag {
+      height: 100%;
+      background-color: #d48d02;
+      border-radius: 0.234vw;
+      position: relative;
+    }
+    
+    /* 导航按钮容器样式 */
+    .navigation-buttons-container {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0.9375vw;
+    }
+  }
+{% endstyle %}
+
+<div class="youtube-video-slider-container">
+  <div id="{{ block.id }}-swiper" class="swiper youtube-video-slider">
+    <div class="swiper-wrapper">
+      {% content_for 'blocks' %}
+    </div>
+    <!-- 添加滚动条 -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+  
+  <!-- 导航按钮容器 -->
+  <div class="navigation-buttons-container">
+    <div id="{{ block.id }}-swiper-button-prev" class="swiper-button-prev">
+      <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 2L4 6L8 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+    <div id="{{ block.id }}-swiper-button-next" class="swiper-button-next">
+      <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 2L8 6L4 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<script src="https://www.youtube.com/iframe_api" defer></script>
+<script defer>
+  function init() {
+    let players = []; // 全局播放器数组，确保在不同函数间共享
+    let isAnyVideoPlaying = false; // 跟踪是否有视频正在播放
+    let isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0; // 检测是否为触摸设备
+    let autoplayEnabled = {% if block.settings.autoplay %}true{% else %}false{% endif %}; // 获取自动轮播设置
+    
+    if (typeof Swiper !== 'undefined') {
+      const swiper = new Swiper('#{{ block.id }}-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 11,
+        // loop: true,
+        // centeredSlides: true,
+        navigation: {
+          nextEl: '#{{ block.id }}-swiper-button-next',
+          prevEl: '#{{ block.id }}-swiper-button-prev',
+        },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          draggable: true,
+          hide: false
+        },
+        // 根据设置决定是否启用自动轮播
+        autoplay: autoplayEnabled ? {
+          delay: 3000,
+          disableOnInteraction: false, // 我们自己处理交互
+          pauseOnMouseEnter: false, // 我们自己处理鼠标悬停
+        } : false,
+        on: {
+          // 监听事件必须放在初始化时设置
+          autoplayStart: function() {
+            console.log("自动轮播开始");
+          },
+          autoplayStop: function() {
+            console.log("自动轮播停止");
+          },
+          // 监听触摸事件（移动端）
+          touchStart: function() {
+            console.log("触摸开始");
+            // 如果轮播正在运行，则暂停
+            if (swiper.autoplay && swiper.autoplay.running) {
+              console.log("因触摸暂停轮播");
+              swiper.autoplay.stop();
+            }
+          },
+          touchEnd: function() {
+            console.log("触摸结束");
+            // 如果启用了自动轮播且没有视频在播放，恢复轮播
+            if (autoplayEnabled && !isAnyVideoPlaying && swiper.autoplay && !swiper.autoplay.running) {
+              console.log("触摸结束，恢复轮播");
+              swiper.autoplay.start();
+            }
+          }
+        }
+      });
+      
+      // 辅助函数：尝试恢复轮播（如果条件满足）
+      function tryResumeAutoplay() {
+        if (!autoplayEnabled) return; // 如果未启用自动轮播，直接返回
+        
+        if (!isAnyVideoPlaying && swiper.autoplay && !swiper.autoplay.running) {
+          console.log("恢复轮播");
+          swiper.autoplay.start();
+        } else {
+          console.log("有视频正在播放或轮播本来就已停止，不恢复轮播");
+        }
+      }
+      
+      // 自定义实现pauseOnMouseEnter（桌面端）
+      const swiperContainer = document.getElementById('{{ block.id }}-swiper');
+      
+      if (swiperContainer) {
+        // 只在非触摸设备上添加鼠标事件
+        if (!isTouchDevice) {
+          // 鼠标进入时暂停轮播
+          swiperContainer.addEventListener('mouseenter', function() {
+            console.log("鼠标进入轮播区域");
+            // 如果轮播正在运行，则暂停
+            if (swiper.autoplay && swiper.autoplay.running) {
+              console.log("暂停轮播");
+              swiper.autoplay.stop();
+            }
+          });
+          
+          // 鼠标离开时恢复轮播（如果没有视频在播放）
+          swiperContainer.addEventListener('mouseleave', function() {
+            console.log("鼠标离开轮播区域");
+            // 尝试恢复自动轮播
+            tryResumeAutoplay();
+          });
+        }
+      }
+      
+      // 添加YouTube API监听代码
+      if (window.YT && YT.Player) {
+        console.log("YouTube API已加载，初始化播放器");
+        setupYouTubeAPIListeners();
+      } else {        
+        // 当YouTube API准备好时
+        console.log("等待YouTube API加载");
+        window.onYouTubeIframeAPIReady = function() {
+          console.log("YouTube API已加载完成");
+          setupYouTubeAPIListeners();
+        };
+      }
+      
+      function setupYouTubeAPIListeners() {
+        // 获取所有YouTube播放器
+        const iframes = document.querySelectorAll('#{{ block.id }}-swiper iframe.youtube-player');
+        console.log("找到YouTube播放器:", iframes.length);
+        
+        // 清空全局数组并重新初始化所有播放器
+        players = [];
+        
+        // 为每个播放器初始化API
+        iframes.forEach((iframe) => {
+          try {
+            console.log("初始化播放器:", iframe.id);
+            const player = new YT.Player(iframe.id, {
+              events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+              }
+            });
+            players.push(player);
+          } catch (error) {
+            console.error("初始化播放器失败:", error);
+          }
+        });
+        
+        // 播放器准备就绪
+        function onPlayerReady(event) {
+          console.log("播放器就绪:", event.target.getIframe().id);
+        }
+        
+        // 监听播放器状态变化
+        function onPlayerStateChange(event) {
+          console.log("播放器状态变化:", event.data, event.target.getIframe().id);
+          
+          // 更新视频播放状态
+          updateVideoPlayingStatus();
+          
+          // 当视频开始播放 (状态1)
+          if (event.data === YT.PlayerState.PLAYING) {
+            console.log("视频开始播放，停止轮播");
+            // 停止自动轮播
+            if (swiper && swiper.autoplay && swiper.autoplay.running) {
+              swiper.autoplay.stop();
+            }
+          }
+          // 当视频暂停或结束 (状态2是暂停，状态0是结束)
+          else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
+            console.log("视频暂停或结束，检查是否恢复轮播");
+            
+            // 检查是否有其他视频正在播放
+            const isAnyOtherVideoPlaying = players.some(p => {
+              if (p && p !== event.target && typeof p.getPlayerState === 'function') {
+                try {
+                  return p.getPlayerState() === YT.PlayerState.PLAYING;
+                } catch (error) {
+                  return false;
+                }
+              }
+              return false;
+            });
+            
+            // 只有当没有其他视频播放时才考虑恢复轮播
+            if (!isAnyOtherVideoPlaying) {
+              let shouldResumeAutoplay = true;
+              
+              // 在桌面设备上，还需检查鼠标是否在轮播区域内
+              if (!isTouchDevice) {
+                const isMouseOver = isMouseOverElement(swiperContainer);
+                if (isMouseOver) {
+                  console.log("鼠标仍在轮播区域，不恢复轮播");
+                  shouldResumeAutoplay = false;
+                }
+              }
+              
+              if (shouldResumeAutoplay && autoplayEnabled) {
+                console.log("没有其他视频播放，恢复轮播");
+                // 重新启动自动轮播
+                if (swiper && swiper.autoplay && !swiper.autoplay.running) {
+                  swiper.autoplay.start();
+                }
+              }
+            } else {
+              console.log("其他视频仍在播放，不恢复轮播");
+            }
+          }
+        }
+        
+        // 更新所有视频的播放状态
+        function updateVideoPlayingStatus() {
+          isAnyVideoPlaying = players.some(player => {
+            if (player && typeof player.getPlayerState === 'function') {
+              try {
+                const status = player.getPlayerState();
+                return status === YT.PlayerState.PLAYING || status === YT.PlayerState.BUFFERING;
+              } catch (error) {
+                console.error("获取播放器状态失败:", error);
+                return false;
+              }
+            }
+            return false;
+          });
+        }
+      }
+      
+      // 辅助函数：检查鼠标是否在元素上 (仅桌面设备)
+      function isMouseOverElement(element) {
+        if (isTouchDevice) return false; // 触摸设备不适用此函数
+        
+        if (!element || !window.event) return false;
+        
+        const rect = element.getBoundingClientRect();
+        const mouseX = window.event.clientX;
+        const mouseY = window.event.clientY;
+        
+        return (
+          mouseX >= rect.left &&
+          mouseX <= rect.right &&
+          mouseY >= rect.top &&
+          mouseY <= rect.bottom
+        );
+      }
+    } else {
+      console.error('Swiper库未加载成功');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
+
+  // shopify block load
+  document.addEventListener('shopify:block:load', init);
+</script>
+
+{% schema %}
+{
+  "name": "YouTube视频轮播图",
+  "tag": null,
+  "blocks": [{ "type": "@theme" }],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "自动轮播",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "YouTube视频轮播图",
+      "blocks": [
+        {
+          "type": "youtube-video-card"
+        },
+        {
+          "type": "youtube-video-card"
+        },
+        {
+          "type": "youtube-video-card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

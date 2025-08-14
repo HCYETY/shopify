@@ -1,0 +1,199 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "header-mobile": {
+      "type": "header-mobile",
+      "blocks": {
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944": {
+          "type": "menu",
+          "settings": {
+            "color": "#232323"
+          }
+        },
+        "550fbd21-75fb-4051-9dee-77d91b5239f0": {
+          "type": "logo",
+          "settings": {
+            "logo_mobile": "shopify://shop_images/Untitled_design_1.png",
+            "logo_width_mobile": 100,
+            "logo_text": "",
+            "logo_font_size": 20,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#232323"
+          }
+        },
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53": {
+          "type": "search",
+          "settings": {
+            "color": "#232323"
+          }
+        },
+        "20dae707-64c0-4ea3-a05e-561cae9836d8": {
+          "type": "customer",
+          "settings": {
+            "icon": "1",
+            "color": "#232323"
+          }
+        },
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d": {
+          "type": "cart",
+          "settings": {
+            "icon": "4",
+            "color": "#232323",
+            "color_bubble": "#ffffff",
+            "bg_bubble": "#232323"
+          }
+        },
+        "megamenu_style_6_g9XkpP": {
+          "type": "megamenu_style_6",
+          "settings": {
+            "item_bgcolor": "#060606",
+            "item_bgcolor_url": "",
+            "font_size": 14,
+            "item_bgcolor_pd_tb": 12,
+            "item_title": "$9.9 Materials Flash Deal",
+            "item_title_color": "#ffffff",
+            "item_btn_text": "Hurry Up",
+            "item_btn_url": "https://www.crealityfalcon.com/collections/materials",
+            "item_btn_color": "#ffffff",
+            "item_btn_bgcolor": "#14a9de",
+            "item_btn_brr_size": 3,
+            "item_btn_pdlr_size": 12,
+            "item_btn_pdtb_size": 4,
+            "item_btn_text_size": 12,
+            "item_position": "center",
+            "is_countDown": false,
+            "item_count_down_start": "2025-02-08 00:00:00",
+            "item_count_down_end": "2025-02-15 00:00:00",
+            "item_count_down_color": "#ffffff",
+            "item_count_down_text_sieze": 12
+          }
+        }
+      },
+      "block_order": [
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944",
+        "550fbd21-75fb-4051-9dee-77d91b5239f0",
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53",
+        "20dae707-64c0-4ea3-a05e-561cae9836d8",
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d",
+        "megamenu_style_6_g9XkpP"
+      ],
+      "disabled": true,
+      "settings": {
+        "background": "#ffffff",
+        "gradient": "",
+        "sticky_header_type": "on_scroll",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "item_rotatingBroadcast_color_md": "#ffffff",
+        "item_rotatingBroadcast_size_md": 1,
+        "is_rotatingBroadcast_md": false
+      }
+    },
+    "announcement_bar_9RMKxD": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_8gedGD": {
+          "type": "announcement",
+          "settings": {
+            "text": "<a href=\"https://www.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver\" style=\"color: #ff4d00; font-weight: bold;\">\n  ⏰ Falcon A1 Pro Dual Laser Engraver Available Now – $879\n</a>",
+            "btn_color": "#232323",
+            "btn_border_color": "#ffffff",
+            "btn_bg_color": "#ffffff",
+            "btn_bg_color_gradient": ""
+          }
+        },
+        "announcement_HWTQYW": {
+          "type": "announcement",
+          "settings": {
+            "text": "<a href=\"https://www.crealityfalcon.com/products/laser-engraver-cutter-falcon2-40w-engraving-machine\" style=\"color: #ff4d00; font-weight: bold;\">\n  🔥 Clearance Deal: Falcon2 40W Only $719 — Limited Stock!\n</a>",
+            "btn_color": "#f84248",
+            "btn_border_color": "#ffffff",
+            "btn_bg_color": "#ffffff",
+            "btn_bg_color_gradient": ""
+          }
+        },
+        "announcement_qN4JNE": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "<a href=\"https://www.crealityfalcon.com/collections/engraver-combo-packages\" style=\"text-decoration: none; color: inherit;\">\n  🎁 <strong style=\"color: rgb(255, 42, 0);\">Shop smart, create more</strong> – all in one go!\n</a>",
+            "btn_color": "#232323",
+            "btn_border_color": "#ffffff",
+            "btn_bg_color": "#ffffff",
+            "btn_bg_color_gradient": ""
+          }
+        },
+        "announcement_tXfqAF": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "🔥 Just Launched! Falcon A1 Workbench Available &amp; Ready to Ship | \n  <a href=\"https://www.crealityfalcon.com/products/460-346mm-honeycomb-workbench-for-creality-falcon-a1\" style=\"color: #ff2a00; font-weight: bold; text-decoration: none;\">Shop Now →</a>",
+            "btn_color": "#232323",
+            "btn_border_color": "#ffffff",
+            "btn_bg_color": "#ffffff",
+            "btn_bg_color_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_8gedGD",
+        "announcement_HWTQYW",
+        "announcement_qN4JNE",
+        "announcement_tXfqAF"
+      ],
+      "settings": {
+        "enable_announcement": true,
+        "layout": "slider",
+        "enable_close": false,
+        "color_text": "#232323",
+        "bg_color_text": "#f5f6f7",
+        "bg_color_text_gradient": "",
+        "font_size_text": 14,
+        "font_style_text": "normal",
+        "font_weight_text": "500",
+        "arrow_active": true,
+        "content_max_width": 50,
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    },
+    "home_s_header_JQEMgD": {
+      "type": "home-s-header",
+      "settings": {
+        "menu": "main-menu",
+        "logo": "shopify://shop_images/crealityfalcon-logo-png_bf4d7a0b-e65e-4317-979a-8b68524e3052.png",
+        "sale_page_one": "",
+        "sale_page_two": "",
+        "sale_page_three": ""
+      }
+    },
+    "home_s_header_mobile_niFEx3": {
+      "type": "home-s-header-mobile",
+      "name": "Home S Header 顶部导航栏",
+      "settings": {
+        "menu": "main-menu",
+        "logo": "shopify://shop_images/crealityfalcon-logo-png_bf4d7a0b-e65e-4317-979a-8b68524e3052.png",
+        "sale_page_one": "",
+        "sale_page_two": "",
+        "sale_page_three": ""
+      }
+    }
+  },
+  "order": [
+    "header-mobile",
+    "announcement_bar_9RMKxD",
+    "home_s_header_JQEMgD",
+    "home_s_header_mobile_niFEx3"
+  ]
+}

@@ -1,0 +1,311 @@
+{% assign title = section.settings.title %}
+{% assign jump_id = section.settings.jump_id %}
+<style>
+  #container-{{section.id}} {
+    width: 1200px;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+  #container-{{section.id}} .icon-download {
+    width: 20px;
+    height: 20px;
+  }
+  #container-{{section.id}} .main-heading  {
+    font-family: "Montserrat-Bold";
+    font-weight: bold;
+    font-size:32px;
+    line-height:39.01px; 
+    color: rgba(0, 0, 0, 1);
+  } 
+  #container-{{section.id}} .list-unstyled {
+    margin: 0; 
+    padding: 0;
+    list-style: none;
+  }
+  #container-{{section.id}} .popular-products__wrapper { 
+    display: grid;
+    gap: 0.8rem;
+    margin-top: 1.6rem;
+    margin-bottom: 30px;
+  } 
+  #container-{{section.id}} .popular-products__item.show {
+    display: block;
+  }
+  #container-{{section.id}} .popular-products__item { 
+    display: none;
+    border-radius: 0.6rem;
+    background-color: #F5F5F5;
+  }
+  #container-{{section.id}} .popular-products__item .card-horizontal-wrapper {
+    height: 100%;
+  } 
+  #container-{{section.id}} .card-horizontal-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.6rem;
+    border-radius: 0.6rem;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    overflow: hidden;
+  } 
+  #container-{{section.id}} .popular-products__item:hover .card-horizontal__title {
+    color: #3565e0;
+  }
+  #container-{{section.id}} .card-horizontal__image {
+    position: relative;
+    flex-shrink: 0;
+    min-width: 6rem;
+    max-width: 6rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+  }
+  #container-{{section.id}} .media--transparent {
+    background-color: transparent;
+  }
+  #container-{{section.id}} .media {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(var(--color-foreground),.3);
+    position: relative;
+    overflow: hidden;
+  }
+  #container-{{section.id}} .popular-products__item .card-horizontal__information {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem 1.6rem;
+  }
+  #container-{{section.id}} .card-horizontal__information {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+    flex-grow: 1;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  #container-{{section.id}} .card-horizontal__information-group {
+    flex-grow: 1;
+  }
+  #container-{{section.id}} .popular-products__item .card-horizontal__information .subtitle {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #717171;
+    font-weight: 500;
+  }
+  #container-{{section.id}} .card-horizontal__title {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    margin: 0;
+    color: #000000; 
+    transition: all .2s;
+    font-weight: 600; 
+  }
+  #container-{{section.id}} .card-horizontal__title a:hover {
+    color: #3565e0;
+  }
+  #container-{{section.id}} .popular-products__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 3.2rem;
+    list-style: none;
+  }
+  #container-{{section.id}} .filters__item {
+    display: block;
+    padding: 10px 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: #3565e0;
+    border-radius: 0.4rem;
+    border: 0.2rem solid #E0E3EE;
+    transition: border-color .25s;
+    outline: 0;
+    box-shadow: none;
+  }
+  #container-{{section.id}} .filters__item_active {
+    border-color: #3565e0;
+  }
+  #container-{{section.id}} .filters__item:hover {
+    border-color: #3565e0;
+  }
+  
+  @media screen and (max-width: 768px) { 
+    #container-{{section.id}} .filters__item {
+      display: block;
+      padding: 6px 8px;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 1.5;
+      text-decoration: none;
+      color: #3565e0;
+      border-radius: 0.4rem;
+      border: 0.2rem solid #E0E3EE;
+      transition: border-color .25s;
+      outline: 0;
+      box-shadow: none;
+    }
+    #container-{{section.id}} {
+      width: 100%;
+      margin: 0 auto; 
+    }
+    #container-{{section.id}} .popular-products__wrapper--4 {
+      grid-template-columns: repeat(1,1fr);
+    } 
+    .download-support-{{section.id}} .download-support-heading {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    #container-{{section.id}} .card-horizontal__title {
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (min-width: 1080px) and (max-width: 1359px) {
+    #container-{{section.id}} .popular-products__wrapper--4 {
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  @media screen and (min-width: 1360px) {
+    #container-{{section.id}} .popular-products__wrapper--4 {
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+</style>
+
+<div id="container-{{section.id}}">
+  <div id="{{jump_id}}"></div>
+  <div class="main-heading tw-mb-6 md:tw-mb-5">{{title}}</div>
+  <ul class="popular-products__filters filters no-js-hidden">
+      <li>
+        <button class="filters__item filters__item_active" data-filter-target="AllProducts">All</button>
+      </li>
+      {% for item in section.settings.collection_list %}
+        <li>
+          <button class="filters__item" data-filter-target="{{item.title}}">{{item.title}}</button>
+        </li>
+      {% endfor %}
+  </ul>
+  <ul class="popular-products__wrapper popular-products__wrapper--4 list-unstyled" data-limit="12">
+    {% for item in section.settings.collection_list %}
+      {% for product in collections[item.handle].products %}
+        <li 
+          data-filter="[{{item.title}},AllProducts]" 
+          class="popular-products__item collection-popular-card quickview--hover show"
+        >
+          <div class="card-horizontal-wrapper">
+            <div class="card-horizontal__image" tabindex="-1">
+              <div class="media media--transparent media--hover-effect">
+              <a href="{{product.url}}" aria-label="Product link">
+                {%- capture sizes -%}
+                  {%- if stacked -%}
+                    (max-width: 699px) calc(100vw / {{ section.settings.products_per_row_mobile }} - 40px), (max-width: 1200px) calc(100vw / {{ 3 | at_most: section.settings.products_per_row_desktop }} - 64px), calc((100vw - 96px) / {{ section.settings.products_per_row_desktop }} - (24px / {{ section.settings.products_per_row_desktop }} * {{ section.settings.products_per_row_desktop | minus: 1 }}))
+                  {%- else -%}
+                    (max-width: 699px) 74vw, (max-width: 999px) 38vw, calc((100vw - 96px) / {{ section.settings.products_per_row_desktop }} - (24px / {{ section.settings.products_per_row_desktop }} * {{ section.settings.products_per_row_desktop | minus: 1 }}))
+                  {%- endif -%}
+                {%- endcapture -%}
+                {%- capture main_image_classes -%}product-card__image product-card__image--primary {% if settings.product_image_aspect_ratio contains 'crop' %}object-fill-safe{% endif %} aspect-{{ settings.product_image_aspect_ratio | split: '_' | first }}{%- endcapture -%}
+                {{- product.featured_media | image_url: width: product.featured_media.width | image_tag: loading: 'lazy', sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', class: main_image_classes -}}
+              </a> 
+              </div>
+            </div>
+            <div class="card-horizontal__information">
+              <div class="card-horizontal__information-group">
+                <h3 class="card-horizontal__title">
+                  <a href="{{product.url}}" aria-label="Product link">
+                    {{product.title}}
+                  </a> 
+                </h3>
+                {% if product.metafields.custom.download_link %}
+                  <div class="down-file tw-mt-2 tw-flex tw-items-center tw-font-medium">
+                    <span class="tw-text-[14px] tw-pr-4">Download the file</span>
+                    <a href="{{product.metafields.custom.download_link}}" target="_blank">
+                      <svg t="1712460968714" class="icon-download tw-cursor-pointer" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10981" width="32" height="32">
+                        <path d="M921.6 882.688H142.336c-24.576 0-44.032 19.456-44.032 44.032s19.456 44.032 44.032 44.032H921.6c24.576 0 44.032-19.456 44.032-44.032 0-23.552-19.456-44.032-44.032-44.032zM502.784 806.912c8.192 8.192 19.456 12.288 29.696 11.264 10.24 0 21.504-3.072 29.696-11.264l266.24-266.24c15.36-15.36 15.36-40.96 0-56.32s-40.96-15.36-56.32 0L570.368 686.08V89.088c0-21.504-17.408-39.936-39.936-39.936s-39.936 17.408-39.936 39.936v592.896L292.864 484.352c-15.36-15.36-40.96-15.36-56.32 0s-15.36 40.96 0 56.32l266.24 266.24z" fill="#515151" p-id="10982"></path>
+                      </svg>
+                    </a>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="module">
+  var filtersNodes = $(".filters__item");
+  var products = $(".popular-products__item");
+  $(".filters__item").click(function() {
+    var filter = $(this).attr('data-filter-target');
+    products.each(function(item,i) {
+      var productItem = $(this);
+      if(productItem.attr('data-filter').includes(filter)) {
+        productItem.addClass('show');
+      } else {
+        productItem.removeClass('show');
+      }
+    })
+    filtersNodes.each(function(item,i){
+      $(this).removeClass('filters__item_active');
+    })
+    $(this).addClass('filters__item_active')
+  })
+</script>
+
+{% schema %}
+{
+  "name":"creality products list",
+  "settings": [
+    {
+      "type": "text",
+      "id": "jump_id",
+      "label": {
+        "en-US": "Jump ID",
+        "zh-CN": "跳转ID"
+      }
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "en-US": "title",
+        "zh-CN": "标题"
+      }
+    },
+    {
+      "type": "collection_list",
+      "id": "collection_list",
+      "label": "Collections",
+      "limit": 8
+    }
+  ],
+  "blocks": [ ],
+  "presets": [
+    {
+      "name": "creality products list",
+      "category": {
+        "en-US": "Product",
+        "zh-CN": "商品"
+      },
+      "blocks": [
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,341 @@
+{% style %}
+  .newsletter {
+    padding: 40px 0 120px;
+  }
+
+  .newsletter .container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .newsletter .container .block-left {
+    flex: 1 1 50%;
+  }
+  
+  .newsletter .container .block-left img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .newsletter .container .block-right {
+    flex: 1 1 50%;
+    background-color: #fff;
+    display: flex;
+    padding: 0 108px;
+    align-items: center;
+  }
+
+  .newsletter .container .block-right .title {
+    margin-bottom: 12px;
+  }
+
+  .newsletter .container .block-right .title p {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #1e1e1e;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  /* .newsletter .container .block-right .title .icon {
+    background: url(/assets/newsletter-icon-SGCBBZF2-B207CddE.png) no-repeat 50% / cover;
+    display: block;
+    height: 43px;
+    margin-left: 5px;
+    width: 88px;
+  } */
+
+  .newsletter .container .block-right .desc {
+    color: #8d9095;
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 16px;
+  }
+
+  /* cta输入框 */
+  .newsletter .cta-section-s2 {
+    background-color: #fff;
+    border-radius: 66px;
+    height: 44px;
+    position: relative;
+  }
+
+  .newsletter .cta-text-s2 {
+    width: 100%;
+    height: 44px;
+    color: #1e1e1e;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 16px;
+    padding-right: 48px;
+
+    border-radius: 66px;
+    background: #f5f6f7;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d9d9d9;
+  }
+  .newsletter .cta-text-s2:hover,
+  .newsletter .cta-text-s2:focus {
+    border-color: #0bb3fb;
+  }
+  .newsletter .cta-text-s2:placeholder {
+    color: #bec0c2;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .newsletter .cta-button-s2 {
+    background-color: #1e1e1e;
+    border-radius: 0 66px 66px 0;
+    width: 48px;
+    height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  .newsletter .cta-button-s2:hover {
+    background-color: #51545a;
+  }
+
+  .newsletter .cta-button-s2 svg {
+    fill: none;
+    stroke: #fff;
+  }
+
+  @media (max-width: 900px) {
+    .newsletter {
+      padding: 10.6666666667vw 6.4vw 21.3333333333vw;
+    }
+
+    .newsletter .container {
+      flex-direction: column;
+      border-radius: 4.2666666667vw;
+      overflow: hidden;
+      padding: 0 !important;
+    }
+
+    .newsletter .container .block-left {
+      flex: 0 0 auto;
+    }
+
+    .newsletter .title {
+      margin-bottom: 3.2vw;
+    }
+
+    .newsletter .container .block-right .title p {
+      font-size: 6.4vw;
+    }
+
+    /* .newsletter .title .icon {
+      background: url(/assets/newsletter-icon-SGCBBZF2-B207CddE.png) no-repeat 50% / cover;
+      display: block;
+      height: 11.7333333333vw;
+      width: 23.7333333333vw;
+    } */
+
+    .newsletter .container .block-right {
+      padding: 6.4vw 4.2666666667vw 10.6666666667vw;
+    }
+
+    .newsletter .desc {
+      color: #8d9095;
+      font-size: 3.7333333333vw;
+      line-height: 150%;
+      margin-bottom: 3.7333333333vw;
+    }
+
+    .newsletter .cta-section-s2 {
+      border-radius: 17.6vw;
+      height: 11.733vw;
+    }
+    .newsletter .cta-text-s2 {
+      height: 11.733vw;
+      font-size: 3.733vw;
+      padding-left: 4.267vw;
+      padding-right: 12.8vw;
+      border-radius: 17.6vw;
+      border-width: 0.267vw;
+    }
+    .newsletter .cta-text-s2:placeholder {
+      font-size: 3.733vw;
+    }
+    .newsletter .cta-button-s2 {
+      border-radius: 0 17.6vw 17.6vw 0;
+      width: 12.8vw;
+      height: 11.733vw;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .newsletter {
+      padding: 2.083vw 0 6.25vw;
+    }
+    .newsletter .container {
+      border-radius: 0.833vw;
+    }
+    .newsletter .container .block-right {
+      padding: 0 5.625vw;
+    }
+    .newsletter .container .block-right .title {
+      margin-bottom: 0.625vw;
+    }
+    .newsletter .container .block-right .title p {
+      font-size: 1.667vw;
+      font-size: 1.667vw;
+    }
+    .newsletter .container .block-right .desc {
+      font-size: 0.729vw;
+      margin-bottom: 0.833vw;
+    }
+    .newsletter .cta-section-s2 {
+      border-radius: 3.438vw;
+      height: 2.292vw;
+    }
+    .newsletter .cta-text-s2 {
+      height: 2.292vw;
+      font-size: 0.729vw;
+      padding-left: 0.833vw;
+      padding-right: 2.5vw;
+      border-radius: 3.438vw;
+      border-width: 0.052vw;
+    }
+    .newsletter .cta-text-s2:placeholder {
+      font-size: 0.729vw;
+    }
+    .newsletter .cta-button-s2 {
+      border-radius: 0 3.438vw 3.438vw 0;
+      width: 2.5vw;
+      height: 2.292vw;
+    }
+  }
+{% endstyle %}
+
+<div class="newsletter">
+  <div class="container bg-white">
+    <div class="block-left">
+      <img
+        alt="newsletter"
+        decoding="async"
+        loading="lazy"
+        src="{{ section.settings.image | img_url: 'master' }}"
+        width="100%"
+        height="auto"
+      >
+    </div>
+    <div class="block-right">
+      <div class="right-content">
+        <div class="title">
+          <p>
+            {{ section.settings.title }}
+          </p>
+        </div>
+        <p class="desc">
+          {{ section.settings.desc }}
+        </p>
+        {% comment %} TODO: 添加表单 {% endcomment %}
+        <div class="cta-section-s2">
+          {%- form 'customer' -%}
+            <input type="hidden" name="contact[tags]" value="newsletter">
+            <div class="input-box">
+              <input
+                id="NewsletterForm--{{ section.id }}"
+                type="email"
+                name="contact[email]"
+                class="cta-text-s2"
+                value="{{ form.email }}"
+                aria-required="true"
+                autocorrect="off"
+                autocapitalize="off"
+                autocomplete="email"
+                spellcheck="false"
+                {% if form.errors %}
+                  autofocus aria-invalid="true" aria-describedby="ContactFooter-error"
+                {% elsif form.posted_successfully? %}
+                  aria-describedby="ContactFooter-success"
+                {% endif %}
+                placeholder="{{ section.settings.cta_text }}"
+                required="required"
+              >
+              <button
+                type="submit"
+                class="cta-button-s2"
+                name="commit"
+                id="Subscribe-{{ section.id }}"
+                aria-label="subscribe to newsletter"
+              >
+                <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 11.5L6 6.5L0.999999 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+            </div>
+            {%- if form.errors -%}
+              <div
+                class="newsletter-form__message newsletter-form__message--error form__message"
+                id="ContactFooter-error"
+              >
+                {% render 'icon-error' -%}
+                {{- form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email }}
+              </div>
+            {%- endif -%}
+          {%- endform -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Home S Newsletter",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "Be the first to know"
+    },
+    {
+      "type": "textarea",
+      "id": "desc",
+      "label": "描述",
+      "default": "Subscribe to our newsletter and get an extra 5% discount coupon for your first order!"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "图片"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "输入框提示文本",
+      "default": "Enter your email"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home S Newsletter"
+    }
+  ]
+}
+{% endschema %}

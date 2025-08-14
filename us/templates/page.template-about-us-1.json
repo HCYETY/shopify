@@ -1,0 +1,231 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-about-1-page",
+      "disabled": true,
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "center",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "center",
+        "container": "1170",
+        "side_padding_full_width": 0,
+        "mg_top_desktop": 25,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 30,
+        "mg_bottom_tablet": 20,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "creality_about_us_8CUkNJ": {
+      "type": "creality_about_us",
+      "settings": {
+        "link1": "shopify://collections/low-wattage-laser-engraver-for-beginner",
+        "link2": "shopify://collections/falcon2-laser-engraver-and-cutter",
+        "link3": "shopify://collections/falcon2-pro-laser-engraver-and-cutter",
+        "link4": "shopify://collections/engraving-machine-craft-materials"
+      }
+    },
+    "instagram_fppVRy": {
+      "type": "instagram",
+      "blocks": {
+        "instagram_ERA7xp": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/candle_holer1-Jonas.jpg",
+            "link": ""
+          }
+        },
+        "instagram_9brzrC": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Doriane_Louin-rose.jpg",
+            "link": ""
+          }
+        },
+        "instagram_jDfUdE": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/candle_holer7-Jonas.jpg",
+            "link": ""
+          }
+        },
+        "instagram_efnEmg": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/clock-Graham_Green1.jpg",
+            "link": ""
+          }
+        },
+        "instagram_VQiPLp": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Rafal_Rucinski-nike_collection.jpg",
+            "link": ""
+          }
+        },
+        "instagram_DGBhCb": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Henry_Dandi-merry-man_cbdd13a3-4bca-4b24-8b22-8967ef2636af.jpg",
+            "link": ""
+          }
+        },
+        "instagram_wdTjHb": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/leather_engrave-Bruce_Osterman.jpg",
+            "link": ""
+          }
+        },
+        "instagram_Ca4YCH": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Sophie_Smith-baby_plate_gift2.jpg",
+            "link": ""
+          }
+        },
+        "instagram_yJ9MeD": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Barry_Maxwell-dragon.jpg",
+            "link": ""
+          }
+        },
+        "instagram_LVytNe": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/3_e8597c22-2a57-42a4-bf38-e86353956592.png",
+            "link": ""
+          }
+        },
+        "instagram_Jdmxjz": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/disc_mdf-Gary_Rodriguez_Contreras.jpg",
+            "link": ""
+          }
+        },
+        "instagram_YQHmdx": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Cobey_Schmidt-1.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "instagram_ERA7xp",
+        "instagram_9brzrC",
+        "instagram_jDfUdE",
+        "instagram_efnEmg",
+        "instagram_VQiPLp",
+        "instagram_DGBhCb",
+        "instagram_wdTjHb",
+        "instagram_Ca4YCH",
+        "instagram_yJ9MeD",
+        "instagram_LVytNe",
+        "instagram_Jdmxjz",
+        "instagram_YQHmdx"
+      ],
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "type_instagram": "default",
+        "block_layout": "infinite",
+        "scroll_from": "rtl",
+        "scroll_time": "30",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "enable_border_instagram": false,
+        "instagram_border_color": "#e6e6e6",
+        "instagram_bg": "#fafafa",
+        "instagram_bg_gradient": "",
+        "instagram_title": "\"Stunning Laser Creations\"",
+        "enable_border_title": false,
+        "border_color_title": "#3c3c3c",
+        "color_title": "#3c3c3c",
+        "mg_bottom_title": 15,
+        "fontsize_title": 25,
+        "fontsize_title_mb": 20,
+        "instagram_des": "Get Inspired: Explore Unique Laser Engraving Projects by Our Talented Users",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "margin_bottom_des": 35,
+        "content_width": 375,
+        "title_align": "center",
+        "view_all": "",
+        "view_all_fs": 12,
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "display_instagram_button": true,
+        "instagram_button_text": "View Gallery",
+        "type_button_more": "load",
+        "instagram_button_link": "",
+        "enable_underline_button": false,
+        "color_button": "#ffffff",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "#232323",
+        "border_color_button_hover": "#232323",
+        "bg_color_button_hover": "#ffffff",
+        "bg_color_gradient_button_hover": "",
+        "maxwidth_button": 230,
+        "mg_top_button": 30,
+        "embed_code": "",
+        "type_instagram_by_gallery": "popup_image",
+        "images_per_row": "5",
+        "instagram_item_limit": 5,
+        "grid_gap": 5,
+        "enable_hide_portion": false,
+        "slide_ins": "default_ins",
+        "display_arrow": true,
+        "icon_for_image": "",
+        "icon_style": "style_1",
+        "effects_bg": "",
+        "effects_opacity": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "creality_about_us_8CUkNJ",
+    "instagram_fppVRy"
+  ]
+}

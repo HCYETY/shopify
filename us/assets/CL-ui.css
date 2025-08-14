@@ -1,0 +1,45 @@
+.cl-swiper .swiper-slide {
+  opacity: 0.6;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.cl-swiper .swiper-slide img {
+  width: 100%;
+}
+.cl-swiper .swiper-slide-active {
+  opacity: 1;
+}
+.cl-swiper .cl-swiper-nav-containe {
+  width: 60vw;
+  margin: auto;
+}
+.cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list .cl-swiper--nav-item {
+  padding: 10px 24px;
+  color: #cccccc;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  cursor: pointer;
+}
+.cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-list .cl-swiper-active {
+  color: #030303;
+}
+.cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-progress-line {
+  position: relative;
+  height: 2px;
+  background-color: #cccccc;
+}
+.cl-swiper .cl-swiper-nav-containe .cl-swiper-nav-progress-line .cl-swiper-nav-scrollbar-drag {
+  height: 2px;
+  margin-top: -1px;
+  background-color: #030303;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}

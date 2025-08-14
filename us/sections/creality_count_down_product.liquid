@@ -1,0 +1,830 @@
+<style>
+    #app-{{section.id}} {
+      padding-top: {{section.settings.pc_top}}px;
+      padding-bottom: {{section.settings.pc_bottom}}px;
+    }
+    #app-{{section.id}} .content {
+      width: 62.5vw;
+      margin: 0 auto;
+    }
+    #app-{{section.id}} .section {
+      position: relative;
+      padding: 3.125vw 0;
+    }
+    #app-{{section.id}} .common-title {
+      text-align: center;
+      font-weight: 800;
+      font-size: 2.083vw;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+      font-family: "Plus_Jakarta_Sans,sans-serif";
+    }
+    #app-{{section.id}} .section .content .common-subtitle {
+      margin-top: 1.042vw;
+      text-align: center;
+      font-size: 0.833vw;
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      line-height: 1.2em;
+    }
+    #app-{{section.id}} .section {
+      position: relative;
+      padding: 3.125vw 0;
+    }
+    #app-{{section.id}} .section .content {
+      position: relative;
+      border: 0.104vw solid #c1c1c1;
+      padding: 1.042vw;
+    }
+    #app-{{section.id}} .section .content .left-title {
+      background-color: #ffffff;
+      position: absolute;
+      top: 0;
+      transform: translateY(-50%);
+      left: 5.208vw;
+      padding: 0 1.042vw;
+      font-weight: 500;
+      font-size: 1.25vw;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+      font-family: "Outfit";
+      text-transform: uppercase;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+    }
+    #app-{{section.id}} .section .content .small-count-down {
+      position: absolute;
+      right: 2.604vw;
+      top: 0;
+      transform: translateY(-50%);
+      display: flex;
+      padding: 0 1.042vw;
+      background-color: #ffffff;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+    }
+    #app-{{section.id}} .section .content .small-count-down .time-item {
+      color: #DE1D1D;
+      font-size: 1.25vw;
+      font-weight: 600;
+    }
+    #app-{{section.id}} .section .content .small-count-down .time-item::after {
+      content: ":";
+      margin-right: 0.521vw;
+    }
+    #app-{{section.id}} .section .content .small-count-down .time-item:last-child::after {
+      display: none;
+    }
+    #app-{{section.id}} .section .content .shop-list {
+      margin-top: 1.5625vw;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.083vw;
+      grid-row: auto;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item {
+      position: relative;
+      border-radius: 0.78125vw;
+      overflow: hidden;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .star-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .star-list .comment {
+      font-size: 0.833vw;
+      color: #333333;
+      font-weight: 600;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .star-list .star-wrap {
+      display: flex;
+      width: 6.771vw;
+      justify-content: space-between;
+      margin-right: 0.833vw;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .star-list .star-wrap .star-img {
+      width: 0.9375vw;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .slod-out-tag {
+      position: absolute;
+      left: 1.042vw;
+      top: 1.042vw;
+      padding: 0.26vw 1.042vw;
+      text-align: center;
+      background-color: #000000;
+      clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
+      color: #ffffff;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-img {
+      width: 100%;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info {
+      border-radius: 0 0 0.78125vw 0.78125vw;
+      background-color: #ffffff;
+      padding: 1.042vw;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .shop-title {
+      margin: 0.625vw 0 0.833vw 0;
+      font-size: 1.1vw;
+      font-family: "Outfit";
+      font-weight: 600;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+      text-transform: none;
+      font-style: normal;
+      text-decoration: none;
+          display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .price {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .price .now-price {
+      margin-right: 1.25vw;
+      color: #e61515;
+      font-size: 1.2vw;
+      line-height: 1.25em;
+      font-weight: 600;
+      font-family: "Outfit";
+      font-style: normal;
+      letter-spacing: 0vw;
+      text-decoration: none;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .shipping {
+      font-size: 13px;
+      font-weight: 500;
+      text-align: center;
+      padding: 5px 0;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .price .old-price {
+      color: #999;
+      font-size: 0.833vw;
+      font-weight: 600;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+      font-family: "Outfit";
+      font-style: normal;
+      text-decoration: line-through;
+      text-transform: none;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap {
+      margin-top: 0.521vw;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap .add-cart, #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap .buy-out {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0vw;
+      font-style: normal;
+      font-size: 0.833vw;
+      text-decoration: none;
+      font-family: Poppins;
+      line-height: 1.4em;
+      box-shadow: 0 0 rgba(0, 0, 0, 0.3019607843) inset;
+      width: 100%;
+      height: 2.917vw;
+      min-height: 2.917vw;
+      background-color: var(--jg_color);
+      color: var(--jg_text_color);
+      border-style: solid;
+      border-width: 0.104vw;
+      border-color: transparent;
+      border-radius: 1.042vw;
+      transition-duration: 0.3s;
+      padding: 0.521vw 1.667vw;
+      margin: 0;
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap .add-cart:hover {
+      /* color: #db3737;
+      background-color: #fff; */
+    }
+    #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap .buy-out {
+      display: none;
+      background-color: #d5d3d3;
+    }
+    .progress-bar {
+    max-width: 100%;
+    border: 1px solid #F28585;
+    background-color: #EDEDED;
+    border-radius: 30px;
+    margin: 10px 0px 4px 0px;
+    padding: 0px;
+    overflow: hidden;
+  }
+  .progress-bar .progress-bar-con {
+    height: 10px;
+    --ecom-inventory-max-height: 10px;
+    background-color: #F28585;
+    border-radius: 30px;
+  }
+  p {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.6em;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 0px;
+  }
+    @media (max-width: 767px) {
+      #app-{{section.id}} {
+        padding-top: {{section.settings.md_top}}px;
+        padding-bottom: {{section.settings.md_bottom}}px;
+      }
+      #app-{{section.id}} .content {
+        width: 100%;
+        padding: 0 16px;
+      }
+      #app-{{section.id}} .section {
+        padding: 16vw 0;
+      }
+      #app-{{section.id}} .section .content .common-subtitle {
+        margin-top: 1.042vw;
+        text-align: center;
+        font-size: 3.733vw;
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        line-height: 1.2em;
+      }
+      #app-{{section.id}} .section .content .ecom-list {
+        margin-bottom: 8vw;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2.667vw;
+      }
+      #app-{{section.id}} .section {
+        position: relative;
+        padding: 16vw 4.267vw;
+        padding-top: 26.667vw;
+      }
+      #app-{{section.id}} .section .content {
+        position: relative;
+        border: 0.533vw solid #c1c1c1;
+        padding: 5.333vw;
+      }
+      #app-{{section.id}} .section .content .left-title {
+        text-align: center;
+        width: 100%;
+        background-color: #ffffff;
+        position: absolute;
+        top: -13.333vw;
+        left: 0;
+        padding: 0;
+        font-size: 5.333vw;
+        line-height: 1.25em;
+        letter-spacing: 0vw;
+        font-weight: 700;
+      }
+      #app-{{section.id}} .section .content .small-count-down {
+        position: absolute;
+        right: 12vw;
+        top: 0;
+        transform: translateY(-50%);
+        display: flex;
+        padding: 0 5.333vw;
+        background-color: #ffffff;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+      }
+      #app-{{section.id}} .section .content .small-count-down .time-item {
+        font-size: 4.8vw;
+      }
+      #app-{{section.id}} .section .content .small-count-down .time-item::after {
+        content: ":";
+        margin-right: 2.667vw;
+      }
+      #app-{{section.id}} .section .content .small-count-down .time-item:last-child::after {
+        display: none;
+      }
+      #app-{{section.id}} .section .content .shop-list {
+        margin-top: 8vw;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10.667vw;
+        grid-row: auto;
+      }
+      #app-{{section.id}} .section .content .shop-list .shop-item {
+        position: relative;
+        border-radius: 4vw;
+        overflow: hidden;
+      }
+      #app-{{section.id}} .section .content .shop-list .shop-item .star-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #app-{{section.id}} .section .content .shop-list .shop-item .star-list .comment {
+        font-size: 3.733vw;
+        color: #333333;
+        font-weight: 600;
+      }
+      #app-{{section.id}} .section .content .shop-list .shop-item .star-list .star-wrap {
+        display: flex;
+        width: 34.667vw;
+        justify-content: space-between;
+        margin-right: 4.267vw;
+      }
+      #app-{{section.id}} .section .content .shop-list .shop-item .star-list .star-wrap .star-img {
+        width: 4.8vw;
+      }
+      #app-{{section.id}} .section .content .shop-list .shop-item .slod-out-tag {
+        position: absolute;
+        left: 5.333vw;
+        top: 5.333vw;
+        padding: 1.333vw 5.333vw;
+        text-align: center;
+        background-color: #000000;
+        clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
+        color: #ffffff;
+      }
+      #app-{{section.id}} .section .content .shop-list .shop-item .shop-img {
+        width: 100%;
+      }
+      #app-{{section.id}} .section .content .shop-list .shop-item .shop-info {
+        border-radius: 0 0 4vw 4vw;
+        background-color: #ffffff;
+        padding: 5.333vw;
+      }
+      #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .shop-title {
+        margin: 3.2vw 0 4.267vw 0;
+        font-size: 4.8vw;
+        font-family: "Outfit";
+        font-weight: 600;
+        line-height: 1.25em;
+        letter-spacing: 0vw;
+        text-transform: none;
+        font-style: normal;
+        text-decoration: none;
+             text-decoration: none;
+          display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      }
+      #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .price {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+
+      #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .price .now-price {
+        margin-right: 6.4vw;
+        color: #e61515;
+        font-size: 5.333vw;
+        line-height: 1.25em;
+        font-weight: 600;
+        font-family: "Outfit";
+        font-style: normal;
+        letter-spacing: 0vw;
+        text-decoration: none;
+      }
+      #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .price .old-price {
+        color: #999;
+        font-size: 4.267vw;
+        font-weight: 600;
+        line-height: 1.25em;
+        letter-spacing: 0vw;
+        font-family: "Outfit";
+        font-style: normal;
+        text-decoration: line-through;
+        text-transform: none;
+      }
+      #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap {
+        margin-top: 2.667vw;
+      }
+      #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap .add-cart, #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap .buy-out {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0vw;
+        font-style: normal;
+        font-size: 4.267vw;
+        text-decoration: none;
+        font-family: Poppins;
+        line-height: 1.4em;
+        box-shadow: 0 0 rgba(0, 0, 0, 0.3019607843) inset;
+        width: 100%;
+        height: 14.933vw;
+        min-height: 14.933vw;
+       /* background-color: #fff;
+        color: #db3737; */
+        border-style: solid;
+        border-width: 0.533vw;
+        /* border-color: #000; */
+        border-radius: 5.333vw;
+        transition-duration: 0.3s;
+        padding: 2.667vw 8.533vw;
+        margin: 0;
+      }
+      #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap .add-cart:hover {
+
+        /* color: white;
+        background-color: black; */
+      }
+      #app-{{section.id}} .section .content .shop-list .shop-item .shop-info .btn-wrap .buy-out {
+        display: none;
+        background-color: #d5d3d3;
+      }
+    }
+</style>
+
+<div id="app-{{section.id}}">
+  <div class="section">
+    <div class="content">
+      <div class="small-count-down">
+        <div class="time-item "><span class="date">00</span><span>D</span></div>
+        <div class="time-item "><span class="date">00</span><span>H</span></div>
+        <div class="time-item "><span class="date">00</span><span>M</span></div>
+        <div class="time-item "><span class="date">00</span><span>S</span></div>
+      </div>
+      <div class="left-title">{{ section.settings.title }}</div>
+      <div class="shop-list">
+        {% for block in section.blocks %}
+          {% assign product = all_products[block.settings.product] %}
+          <div class="shop-item">
+            {% assign original_price = product.price %}
+            {% assign discount_price = product.compare_at_price %}
+            {% if discount_price and discount_price > original_price %}
+              {% assign discount_amount = discount_price | minus: original_price %}
+              {% assign discount_percentage = discount_amount | times: 100.0 | divided_by: discount_price %}
+            {% endif %}
+            <div class="slod-out-tag">{{ discount_percentage | round | append: '%' }} OFF</div>
+            <img
+              class="shop-img"
+              srcset="
+                {%- if block.settings.product.featured_image.width >= 533 -%}
+                    {{ block.settings.product.featured_image | img_url: '533x' }} 533w,
+                {%- endif -%}
+                {%- if block.settings.product.featured_image.width >= 534 -%}
+                    {{ block.settings.product.featured_image | img_url: '534x' }} 534w,
+                {%- endif -%}
+                {%- if block.settings.product.featured_image.width >= 720 -%}
+                    {{ block.settings.product.featured_image | img_url: '720x' }} 720w,
+                {%- endif -%}
+                {%- if block.settings.product.featured_image.width >= 940 -%}
+                    {{ block.settings.product.featured_image | img_url: '940x' }} 940w,
+                {%- endif -%}
+                {%- if block.settings.product.featured_image.width >= 1066 -%}
+                    {{ block.settings.product.featured_image | img_url: '1066x' }} 1066w
+                {%- endif -%}
+              "
+              src="{{ product.featured_image | img_url: '533x' }}"
+              sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+              alt="{{ block.settings.product.featured_image.alt | escape }} {{block.settings.product.featured_image.width}}"
+              loading="lazy"
+              class="motion-reduce"
+            >
+            <div class="shop-info">
+              <div class="star-list">
+                <div class="star-wrap">
+                  {% for i in (1..block.settings.star) %}
+                    <img
+                      class="star-img"
+                      src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/ZS.png?v=1726196712"
+                      alt=""
+                    >
+                  {% endfor %}
+                  {% assign gray = 5 | minus: block.settings.star %}
+                  {% for i in (1..gray) %}
+                    <img
+                      class="star-img"
+                      src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/ZS_1.png?v=1726196712"
+                      alt=""
+                    >
+                  {% endfor %}
+                </div>
+                <div class="comment">({{ block.settings.comment }})</div>
+              </div>
+              <a href="{{product.url}}" target="_blank" rel="noopener noreferrer">
+                <div class="shop-title">{{ product.title }}</div>
+              </a>
+              <div class="price">
+                <div class="now-price">{{ product.price | money }}</div>
+                <del class="old-price">{{ product.compare_at_price | money }}</del>
+              </div>
+              {% assign quantity = product.variants[0].inventory_quantity %}
+              {% if quantity > 0 %}
+                {% assign quantity = quantity %}
+              {% else %}
+                {% assign quantity = 0 %}
+              {% endif %}
+
+              <div class="progress-bar">
+                <div
+                  class="progress-bar-con"
+                  style="width:{{ quantity | times: 1.0 | divided_by: block.settings.products_quantity_base | times: 100 | append: '%' }}"
+                ></div>
+              </div>
+              <p>
+                Instock: <strong>{{ quantity }}</strong>
+              </p>
+              {% if block.settings.dom %}
+                <div class="shipping">{{ block.settings.jg_p_text }}</div>
+                <div>{{ block.settings.dom }}</div>
+              {% endif %}
+              <div
+                class="btn-wrap"
+                style="--jg_color:{{ block.settings.jg_color }};--jg_text_color:{{ block.settings.jg_text_color }}"
+              >
+                {% if product.available %}
+                  {% comment %} <div class="add-cart" data-id="{{product.variants[0].id}}">ADD TO CART</div> {% endcomment %}
+                  {%- assign product_form_id = 'product-quick-view-form-' | append: product.id -%}
+                  {%- form 'product',
+                    product,
+                    id: product_form_id,
+                    class: 'form productView-action',
+                    novalidate: 'novalidate',
+                    data-type: 'add-to-cart-form'
+                  -%}
+                    <div class="productView-group">
+                      <div class="productView-groupTop">
+                        <div class="productView-action">
+                          <input
+                            type="hidden"
+                            name="id"
+                            value="{{ product.variants[0].id }}"
+                          >
+                          <div class="product-form__buttons">
+                            <button
+                              type="submit"
+                              name="add"
+                              data-btn-addToCart
+                              class="add-cart button"
+                              id="product-quick-shop-add-to-cart"
+                            >
+                              {{ block.settings.jg_text }}
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  {%- endform -%}
+                {% else %}
+
+                {% endif %}
+                <div class="buy-out">sold out</div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script
+  type="module"
+>
+  $(function() {
+    function fadeInListen () { 
+      var fadeIn = $('#container-{{section.id}}').find('.fadein');
+      fadeIn.each(function () {
+        let element = this;
+        let {
+          scrub,
+          reverse,
+          duration,
+          actions,
+          fn
+        } = $(this).data()
+
+        gsap.set(element, { 
+          opacity: 0,
+          y: 20
+        });
+        let toggleActions = "play none none none";
+        let start = $(this).data('start') || 70; 
+        duration ? '' : duration = 0.8
+        let tl = gsap.to(element, {
+          opacity: 1,
+          y: 0,
+          duration
+        });
+        if (reverse) {
+          toggleActions = "play none none reverse"
+        }
+
+        ScrollTrigger.create({
+          animation: tl,
+          trigger: element,
+          toggleActions,
+          start: `top ${start}%`, // 调整触发点，视情况而定
+          onEnter: function () {
+
+          },
+          once: true // 只触发一次
+        });
+      });
+    }
+    fadeInListen();
+    const count_down = {{ section.settings.count_down | json }};
+    
+    (function() {
+      if (!count_down) return;
+    
+      const [dateStr, timeStr] = count_down.split(" ");
+      const [year, month, day] = dateStr.split("-").map(Number);
+      const [hour, minute, second] = timeStr.split(":").map(Number);
+      
+      if (year && month && day && hour !== undefined && minute !== undefined && second !== undefined) {
+          let timer = setInterval(() => {
+              // 使用北京时间
+              const futureDate = new Date(year, month - 1, day, hour, minute, second);
+              const now = new Date();
+              const beijingNow = new Date(now.getTime() + now.getTimezoneOffset() * 60000 + 8 * 3600000); // 北京时间调整
+
+              const timeDifference = futureDate - beijingNow;
+
+              if (timeDifference < 1000) {
+                  document.querySelector(".count-down").style.display = "none";
+                  clearInterval(timer);
+                  return;
+              }
+
+              const allSecond = Math.floor(timeDifference / 1000);
+
+              const days = formatTime(Math.floor(allSecond / 3600 / 24));
+              const hours = formatTime(Math.floor((allSecond % (3600 * 24)) / 3600));
+              const minutes = formatTime(Math.floor((allSecond % 3600) / 60));
+              const seconds = formatTime(allSecond % 60);
+
+              const dateNodes = document.querySelectorAll(".date");
+              dateNodes[0].textContent = days;
+              dateNodes[1].textContent = hours;
+              dateNodes[2].textContent = minutes;
+              dateNodes[3].textContent = seconds;
+          }, 1000);
+      }
+    })();
+    // 检查倒计时设置是否存在
+    
+
+    function formatTime(num) {
+        return num < 10 ? '0' + num : num;
+    }
+  })
+</script>
+
+{% schema %}
+{
+  "name": "creality promotion 2",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "text",
+      "id": "count_down",
+      "label": "倒计时",
+      "default": "2024-12-01 10:00:00",
+      "info": "格式：2024-12-01 10:00:00"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "range",
+      "id": "pc_top",
+      "label": {
+        "en-US": "PC top spacing",
+        "zh-CN": "PC上边距"
+      },
+      "default": 30,
+      "unit":"px",
+      "step": 1,
+      "max": 100,
+      "min": 0
+    },
+    {
+      "type": "range",
+      "id": "pc_bottom",
+      "label": {
+        "en-US": "PC bottom spacing",
+        "zh-CN": "PC端下边距"
+      },
+      "default": 30,
+      "unit":"px",
+      "step": 1,
+      "max": 100,
+      "min": 0
+    },
+    {
+      "type": "range",
+      "id": "md_top",
+      "label": {
+        "en-US": "Mobile top spacing",
+        "zh-CN": "移动端上边距"
+      },
+      "default": 30,
+      "unit":"%",
+      "step": 1,
+      "max": 100,
+      "min": 0
+    },
+    {
+      "type": "range",
+      "id": "md_bottom",
+      "label": {
+        "en-US": "Mobile bottom spacing",
+        "zh-CN": "移动端下边距"
+      },
+      "default": 30,
+      "unit":"px",
+      "step": 1,
+      "max": 100,
+      "min": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type":"product1",
+      "name": "产品",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "产品"
+        },
+        {
+          "type": "range",
+          "id": "star",
+          "label": "推荐星级",
+          "default": 5,
+          "step": 1,
+          "min": 1,
+          "max": 5
+        },
+        {
+          "type": "text",
+          "id": "comment",
+          "label": "评论数",
+          "default": "300"
+        },
+            {
+      "type": "number",
+      "id": "products_quantity_base",
+      "label": "产品库存基数",
+      "default": 100
+    },
+            {
+      "type": "text",
+      "id": "jg_text",
+      "label": "加购按钮文案",
+      "default": "Add To Cart"
+    },
+    {
+      "type": "color",
+      "id": "jg_color",
+      "label": "加购按钮背景色",
+      "default": "#E9600A"
+    },
+    {
+      "type": "color",
+      "id": "jg_text_color",
+      "label": "加购按钮字体颜色",
+      "default": "#ffffff"
+    },
+        {
+          "type": "textarea",
+          "id": "dom",
+          "label": "dom代码"
+        },
+            {
+      "type": "text",
+      "id": "jg_p_text",
+      "label": "购买须知",
+      "default": "Free Shipping & 14-Day Money Back Guarantee"
+    },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "creality promotion 2"
+    }
+  ]
+}
+{% endschema %}

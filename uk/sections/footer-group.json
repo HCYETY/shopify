@@ -1,0 +1,35 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "home_s_footer_bMCkUn": {
+      "type": "home-s-footer",
+      "name": "Home S Footer",
+      "settings": {
+        "menu": "new-home-footer",
+        "address": "Company Address: Room 1808, Jinxiu Hongdu Building, Meilong Avenue, Xinniu Community, Minzhi Street, Longhua District, Shenzhen (office address)",
+        "phone": "+86 400-613-3882",
+        "email": "support@crealityfalcon.com",
+        "copyright": "© CrealityFalcon The United Kingdom Official Store. All Rights Reserved.",
+        "instagram_link": "https://www.instagram.com/falconlaser.official/",
+        "pinterest_link": "https://www.pinterest.com/falconlaserofficial/",
+        "tiktok_link": "https://www.tiktok.com/@falconlaserofficial",
+        "facebook_link": "https://www.facebook.com/CrealityFalconOfficial",
+        "youtube_link": "https://www.youtube.com/@FalconLaserOfficial",
+        "twitter_link": "https://x.com/CrealityFalcon"
+      }
+    }
+  },
+  "order": [
+    "home_s_footer_bMCkUn"
+  ]
+}

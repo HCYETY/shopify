@@ -1,0 +1,202 @@
+{% style %}
+  .anniversary-2025-s6 {
+    width: 100%;
+    background: linear-gradient(180deg, #fff0cd, #ffe0cc);
+    padding: 37px 0 77px;
+  }
+  .anniversary-2025-s6 .s6-headline-container {
+    margin: 0 auto;
+    color: #333;
+    text-align: center;
+  }
+  .anniversary-2025-s6 .s6-headline {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .anniversary-2025-s6 .s6-subheadline {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  .anniversary-2025-s6 .s6-products-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 33.5px auto 0;
+  }
+  .anniversary-2025-s6 .s6-accessories-container {
+    display: flex;
+    gap: 29px;
+    margin-top: 110px;
+    /* width: 100%;
+    max-width: 700px; */
+  }
+  .anniversary-2025-s6 .block1,
+  .anniversary-2025-s6 .block2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 34.5px;
+    align-items: center;
+  }
+
+  .anniversary-2025-s6 .s6-accessories-headline {
+    color: #333;
+    line-height: 1;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  @media (max-width: 900px) {
+    .anniversary-2025-s6 .s6-accessories-container {
+      width: 100%;
+      flex-direction: column;
+      gap: 82.5px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .anniversary-2025-s6 {
+    width: 100%;
+    background: linear-gradient(180deg, #fff0cd, #ffe0cc);
+    padding: 2.891vw 0 6.016vw;
+  }
+  .anniversary-2025-s6 .s6-headline-container {
+    margin: 0 auto;
+    color: #333;
+    text-align: center;
+  }
+  .anniversary-2025-s6 .s6-headline {
+    font-size: 1.5625vw;
+    font-weight: 600;
+  }
+  .anniversary-2025-s6 .s6-subheadline {
+    font-size: 0.9375vw;
+    font-weight: 600;
+    margin-top: 0.78125vw;
+  }
+
+  .anniversary-2025-s6 .s6-products-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2.617vw auto 0;
+  }
+  .anniversary-2025-s6 .s6-accessories-container {
+    display: flex;
+    gap: 2.266vw;
+    margin-top: 8.59375vw;
+    /* width: 100%;
+    max-width: 54.6875vw; */
+  }
+  .anniversary-2025-s6 .block1,
+  .anniversary-2025-s6 .block2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.695vw;
+    align-items: center;
+  }
+
+  .anniversary-2025-s6 .s6-accessories-headline {
+    color: #333;
+    line-height: 1;
+    font-size: 1.5625vw;
+    font-weight: 600;
+  }
+  }
+{% endstyle %}
+
+<div class="anniversary-2025-s6">
+  <div class="s6-headline-container">
+    <p class="s6-headline">{{ section.settings.headline }}</p>
+    <p class="s6-subheadline">{{ section.settings.subheadline }}</p>
+  </div>
+  <div class="s6-products-container">
+    {% content_for 'block', type: 'offsell-product-variant-small-slider', id: 'offsell-product-variant-small-slider' %}
+    <div class="s6-accessories-container">
+      <div class="block1">
+        <p class="s6-accessories-headline">{{ section.settings.accessories_headline1 }}</p>
+        {% content_for 'block',
+          type: 'offsell-product-variant-small-slider',
+          id: 'offsell-product-variant-small-slider-accessories-1'
+        %}
+      </div>
+      <div class="block2">
+        <p class="s6-accessories-headline">{{ section.settings.accessories_headline2 }}</p>
+        {% content_for 'block',
+          type: 'offsell-product-variant-small-slider',
+          id: 'offsell-product-variant-small-slider-accessories-2'
+        %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "2025-周年庆-s6",
+  "blocks": [{ "type": "@theme" }],
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "主标题",
+      "default": "Materials for All Laser Engravers"
+    },
+    {
+      "type": "text",
+      "id": "subheadline",
+      "label": "副标题",
+      "default": "Elevate your engraving experience with our top-notch art and craft materials."
+    },
+    {
+      "type": "text",
+      "id": "accessories_headline1",
+      "label": "配件标题1",
+      "default": "Accessories for 22W/40W/60W"
+    },
+    {
+      "type": "text",
+      "id": "accessories_headline2",
+      "label": "配件标题2",
+      "default": "Accessories for 5W/10W"
+    }
+  ],
+  "presets": [
+    {
+      "name": "2025-周年庆-s6",
+      "category": "周年庆",
+      "blocks": [
+        {
+          "type": "offsell-product-variant-small-slider",
+          "id": "offsell-product-variant-small-slider",
+          "settings": {
+            "per_view_count": 4
+          },
+          "static": true
+        },
+        {
+          "type": "offsell-product-variant-small-slider",
+          "id": "offsell-product-variant-small-slider-accessories-1",
+          "settings": {
+            "per_view_count": 2,
+            "navigation_position": "inside"
+          },
+          "static": true
+        },
+        {
+          "type": "offsell-product-variant-small-slider",
+          "id": "offsell-product-variant-small-slider-accessories-2",
+          "settings": {
+            "per_view_count": 2,
+            "navigation_position": "inside"
+          },
+          "static": true
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

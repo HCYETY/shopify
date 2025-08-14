@@ -1,0 +1,53 @@
+<style>
+  #{{ section.id }}.cr-section-banner{
+    background: url("{{ section.settings.banner-image | img_url: "original" }}") no-repeat  center center/cover;
+    padding: {% render 'tovw', px: 100.0 %}vw 0;
+  }
+  @media (max-width: 960px) {
+    #{{ section.id }}.cr-section-banner{
+      background: url("{{ section.settings.banner-image-mb | img_url: "original" }}") no-repeat  center center/cover;
+    }
+  }
+</style>
+
+<div class="cr-common cr-section-banner cr-section-row" id="{{ section.id }}">
+    <div class="cr-section-column">
+        <h3>{{ section.settings.banner-title }}</h3>
+        <p>{{ section.settings.banner-title }}</p>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "cr-banner",
+    "settings": [
+      {
+        "type": "text",
+        "id": "banner-title",
+        "label": "主标题",
+        "default": "title"
+      },
+      {
+        "type": "html",
+        "id": "banner-desc",
+        "label": "描述",
+        "default": "desc"
+      },
+      {
+        "type": "image_picker",
+        "id": "banner-image",
+        "label": "网页端背景图片"
+      }      ,
+      {
+        "type": "image_picker",
+        "id": "banner-image-mb",
+        "label": "移动端背景图片"
+      }
+    ],
+    "presets": [
+      {
+        "name": "cr-banner-default"
+      }
+    ]
+  }
+{% endschema %}

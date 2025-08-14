@@ -1,0 +1,544 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "creality_halloween_activity_Bii3yr": {
+      "type": "creality_halloween_activity",
+      "blocks": {
+        "free_gifts_TCXrLp": {
+          "type": "FreeGifts",
+          "settings": {
+            "FreeGifts_product": [
+              "a4-scratch-art-paper-for-engraving",
+              "halloween-diy-materials-for-laser-engraving",
+              "200-200-walnut-plywood-sheets-bundle"
+            ],
+            "FreeGifts_title1": "Scratch Art Paper",
+            "FreeGifts_title_btn_max1": "Free <span>{{'1823' |  money}}</span>",
+            "FreeGifts_title_btn_min1": "Spend over <span>{{'29900' |  money}}</span>",
+            "FreeGifts_title2": "Crafting Material Kit 1",
+            "FreeGifts_title_btn_max2": "Free <span>{{'4300' |  money}}</span>",
+            "FreeGifts_title_btn_min2": "Spend over <span>{{'69900' |  money}}</span>",
+            "FreeGifts_title3": "Crafting Material Kit 2",
+            "FreeGifts_title_btn_max3": "Free <span>{{'10099' |  money}}</span>",
+            "FreeGifts_title_btn_min3": "Spend over <span>{{'109900' |  money}}</span>",
+            "FreeGifts_title4": "Basswood Sheets 6 Pieces",
+            "FreeGifts_title_btn_max4": "Free <span>{{'3999' |  money}}</span>",
+            "FreeGifts_title_btn_min4": "Spend over <span>{{'3999' |  money}}</span>"
+          }
+        },
+        "on_sale_cYaMNm": {
+          "type": "OnSale",
+          "settings": {
+            "OnSale_product": [
+              "falcon2-22w-laser-engraver-cutter",
+              "bundle-falcon2-22w-laser-engraver-basic-kits",
+              "laser-cutter-22w-combo-sale-falcon2-all-in-one-kits",
+              "falcon2-40w-laser-engraver-and-cutter",
+              "falcon2-40w-laser-engraver-and-cutter-complete-crafting-engraver-set",
+              "laser-engraver-40w-combo-sale-falcon2-all-in-one-kits"
+            ],
+            "OnSale_table": "Falcon2",
+            "OnSale_video": "https://cdn.shopify.com/videos/c/o/v/d99977e561a348d9987d4aaa03347e4c.mp4",
+            "OnSale_title": "Falcon2 22W/40W：Experience Next-Level Precision and Versatility in Laser Engraving for All Your Creative Projects.",
+            "OnSale_num1": "99",
+            "OnSale_num2": "99",
+            "OnSale_num3": "99",
+            "OnSale_num4": "99",
+            "OnSale_num5": "99",
+            "OnSale_num6": "99"
+          }
+        },
+        "on_sale_w83anW": {
+          "type": "OnSale",
+          "settings": {
+            "OnSale_product": [
+              "falcon2-pro-enclosed-laser-engraver-cutter",
+              "falcon2-pro-22w-extension-kits-combo-sale-laser-cutter",
+              "rotary-kit-pro-and-risers-4-surface-creation-kit-for-falcon-laser-engraver",
+              "falcon2-pro-60w-enclosed-laser-engraver-and-cutter",
+              "halloween-crafting-pack-2-for-laser-engraving-cutting-machine",
+              "crafting-pack-for-laser-engraving-cutting-machine"
+            ],
+            "OnSale_table": "Falcon2 pro",
+            "OnSale_video": "https://cdn.shopify.com/videos/c/o/v/5d34ee4360864070865bbf43dc33918d.mp4",
+            "OnSale_title": "Falcon2 Pro 22W/40W/60W：Powerful Laser Engraving at 25000mm/min, Safe and Versatile. Class 1 Safety, 360° Visibility.",
+            "OnSale_num1": "99",
+            "OnSale_num2": "76",
+            "OnSale_num3": "54",
+            "OnSale_num4": "32",
+            "OnSale_num5": "34",
+            "OnSale_num6": "99"
+          }
+        },
+        "on_sale_XicFKy": {
+          "type": "OnSale",
+          "settings": {
+            "OnSale_product": [
+              "cr-laser-falcon-engraver-10w-low-wattage",
+              "bundle-10w-falcon-laser-engraver-basic-kits",
+              "basic-kit-for-falcon-10w-7-5w-laser-engraver",
+              "laser-engraver-falcon-pro-10w-low-wattage",
+              "enclosure-pro-and-honeycomb-workbench",
+              "halloween-crafting-pack-2-for-laser-engraving-cutting-machine"
+            ],
+            "OnSale_table": "CR-Laser Falcon",
+            "OnSale_video": "https://cdn.shopify.com/videos/c/o/v/14a4fe234af04642895762e24af2387a.mp4",
+            "OnSale_title": "CR-Laser falcon 5W/10W: Budget-friendly, entry-level laser for hobbyists and beginners.",
+            "OnSale_num1": "99",
+            "OnSale_num2": "99",
+            "OnSale_num3": "99",
+            "OnSale_num4": "99",
+            "OnSale_num5": "99",
+            "OnSale_num6": "99"
+          }
+        },
+        "bundle_discount_Y7PC8t": {
+          "type": "BundleDiscount",
+          "settings": {
+            "BundleDiscount_product": "materials-for-laser-engraving",
+            "BundleDiscount_table": "Materials",
+            "BundleDiscount_title": "Crafting Materials Buy 2 Get 10%Off, Buy 3 Get15% Off!",
+            "BundleDiscount_num": "99,90,90,90,90"
+          }
+        },
+        "bundle_discount_JmHGmd": {
+          "type": "BundleDiscount",
+          "settings": {
+            "BundleDiscount_product": "accessories",
+            "BundleDiscount_table": "Accessories",
+            "BundleDiscount_title": "Crafting accessoriy Buy 2 Get 10%Off, Buy 3 Get15% Off!",
+            "BundleDiscount_num": "99,90,90,90,90"
+          }
+        },
+        "super_recommended_DJY8X9": {
+          "type": "SuperRecommended",
+          "settings": {
+            "SuperRecommended_product": [
+              "falcon2-pro-enclosed-laser-engraver-cutter"
+            ],
+            "SuperRecommended_video": "https://cdn.shopify.com/videos/c/o/v/14a4fe234af04642895762e24af2387a.mp4"
+          }
+        },
+        "magic_ideas_nrmHMw": {
+          "type": "MagicIdeas",
+          "settings": {
+            "BundleDiscount_img": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Halloween_decoration_with_laser_engraver_2.jpg?v=1728526585"
+          }
+        },
+        "magic_ideas_RtqPjm": {
+          "type": "MagicIdeas",
+          "settings": {
+            "BundleDiscount_img": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Halloween_calendar_with_laser_engraver_2.jpg?v=1728526585"
+          }
+        },
+        "magic_ideas_7hATWT": {
+          "type": "MagicIdeas",
+          "settings": {
+            "BundleDiscount_img": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Halloween_bookend_with_laser_engraver.jpg?v=1728526585"
+          }
+        },
+        "magic_ideas_FMrVKp": {
+          "type": "MagicIdeas",
+          "settings": {
+            "BundleDiscount_img": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Halloween_ruler_with_laser_engraver.jpg?v=1728526585"
+          }
+        },
+        "magic_ideas_tHQeQW": {
+          "type": "MagicIdeas",
+          "settings": {
+            "BundleDiscount_img": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Halloween_wood_Sign_with_laser_engraver_2.jpg?v=1728526585"
+          }
+        },
+        "magic_ideas_BBG6LU": {
+          "type": "MagicIdeas",
+          "settings": {
+            "BundleDiscount_img": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Bat_Halloween_Candlestick_with_laser_engraver_2.jpg?v=1728526585"
+          }
+        },
+        "magic_ideas_yeRNMF": {
+          "type": "MagicIdeas",
+          "settings": {
+            "BundleDiscount_img": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Halloween_candy_box_with_laser_engraver.jpg?v=1728526585"
+          }
+        },
+        "magic_ideas_GhmGjq": {
+          "type": "MagicIdeas",
+          "settings": {
+            "BundleDiscount_img": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Halloween_candy_box_with_laser_engraver_2.jpg?v=1728526585"
+          }
+        },
+        "magic_ideas_4mD9ma": {
+          "type": "MagicIdeas",
+          "settings": {
+            "BundleDiscount_img": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Halloween_decoration_with_laser_engraver_3.jpg?v=1728526585"
+          }
+        },
+        "magic_ideas_FPxjfm": {
+          "type": "MagicIdeas",
+          "settings": {
+            "BundleDiscount_img": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Halloween_candle_holder_with_laser_engraver.jpg?v=1728526585"
+          }
+        },
+        "magic_ideas_BkCEhe": {
+          "type": "MagicIdeas",
+          "settings": {
+            "BundleDiscount_img": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Halloween_candle_holder_with_laser_engraver.jpg?v=1728526585"
+          }
+        },
+        "magic_ideas_VFQPwK": {
+          "type": "MagicIdeas",
+          "settings": {
+            "BundleDiscount_img": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/Halloween_pumpkin_candle_holder_with_laser_engraver.jpg?v=1728526585"
+          }
+        },
+        "event_fa_qs_4fkV4P": {
+          "type": "EventFAQs",
+          "settings": {
+            "EventFAQs_title1": "Q1: How can I get all the free gifts during the Halloween 2024 event?",
+            "EventFAQs_text1": "If your order qualifies for our Halloween 2024 promotion, the free spooky gifts will be automatically added to your cart at checkout. If you don't see them, contact our customer service team for help. Email: uk.support@crealityfalcon.com.",
+            "EventFAQs_title2": "Q2: What payment methods do you accept?",
+            "EventFAQs_text2": "We accept multiple payment options, including credit cards, Shop Pay, PayPal, Klarna, and more. Choose the payment method that suits you best during checkout.",
+            "EventFAQs_title3": "Q3: How long does shipping take?",
+            "EventFAQs_text3": "Due to the Halloween 2024 event rush, we ship orders within 48 hours. Delivery from our UK warehouse typically takes 3-5 working days.",
+            "EventFAQs_title4": "Q4: Will Falcon provide free Halloween 2024 laser engraving files?",
+            "EventFAQs_text4": "Yes! Download free Halloween 2024 laser engraving files from the \"Laser Software\" section in the navigation bar. Ideal for spooky decorations and custom projects with your Falcon laser engraver.",
+            "EventFAQs_title5": "Q5: How do I create Halloween 2024 designs with a laser engraver?",
+            "EventFAQs_text5": "Use our free, easy-to-use laser engraving software—simpler than Lightburn. Follow the steps to craft Halloween 2024 designs like pumpkins, ghosts, and more using your Falcon laser engraver."
+          }
+        },
+        "setting_ALMfFD": {
+          "type": "Setting",
+          "settings": {
+            "Setting_title1": true,
+            "Setting_title2": true,
+            "Setting_title3": true,
+            "Setting_title4": true,
+            "Setting_title5": true,
+            "Setting_title6": false,
+            "Setting_title7": true,
+            "Setting_title8": true
+          }
+        },
+        "icon_text_wtQiC6": {
+          "type": "iconText",
+          "settings": {
+            "iconText_title1": "Free shipping Over {{4999 |  money}} <br><span>Fast shipping with local delivery</span>",
+            "iconText_title2": "14-Day Money-Back Guarantee<br><span>Support a return within 14 natural days</span>",
+            "iconText_title3": "12-Month Warranty Offer<br><span>Up to 1-year warranty</span>",
+            "iconText_title4": "Payment Flexibility<br><span>10 secure payment methods& install- ment payments.</span>",
+            "iconText_title5": "24/7 Expert Service<br><span>E-mail us at: uk.support @crealityfalcon.com</span>"
+          }
+        },
+        "halloween_offers_Tx9HFE": {
+          "type": "HalloweenOffers",
+          "settings": {
+            "HalloweenOffers_title1": "Free Gifts Auto-add",
+            "HalloweenOffers_title2": "Extra 5% Off for New Subscribers",
+            "HalloweenOffers_title3": "Save-Up to 48% Of",
+            "HalloweenOffers_title4": "Free SpookyCraft Files",
+            "HalloweenOffers_title5": "Affiliate Program"
+          }
+        }
+      },
+      "block_order": [
+        "free_gifts_TCXrLp",
+        "on_sale_cYaMNm",
+        "on_sale_w83anW",
+        "on_sale_XicFKy",
+        "bundle_discount_Y7PC8t",
+        "bundle_discount_JmHGmd",
+        "super_recommended_DJY8X9",
+        "magic_ideas_nrmHMw",
+        "magic_ideas_RtqPjm",
+        "magic_ideas_7hATWT",
+        "magic_ideas_FMrVKp",
+        "magic_ideas_tHQeQW",
+        "magic_ideas_BBG6LU",
+        "magic_ideas_yeRNMF",
+        "magic_ideas_GhmGjq",
+        "magic_ideas_4mD9ma",
+        "magic_ideas_FPxjfm",
+        "magic_ideas_BkCEhe",
+        "magic_ideas_VFQPwK",
+        "event_fa_qs_4fkV4P",
+        "setting_ALMfFD",
+        "icon_text_wtQiC6",
+        "halloween_offers_Tx9HFE"
+      ],
+      "settings": {
+        "pc_image": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/creality_falcon_laser_engraver_Halloween_sale.png?v=1729492861",
+        "mb_image": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/creality_falcon_laser_engraver_Halloween_sale2.png?v=1729492861",
+        "countDown": "2024-11-02T18:00:00",
+        "FreeGifts_todo": "Free Tier Gift By CrealityFalcon",
+        "FreeGifts_h2": "Free Gifts",
+        "FreeGifts_h3": "Buy a Falcon Engraver and receive an exclusive gift package (crafting materials or accessories) – perfect for your creative projects.Notice：Shopping cart reaches the relative amount, the gift will be added to the shopping cart automatically.",
+        "OnSale_todo": "Falcon Laser Engraver is on sale",
+        "OnSale_h2": "On Sale",
+        "OnSale_h3": "Up to 48%off，down to ￡269;  Come and explore most popular falcon2 laser engraver、super high speed falcon2 pro laser engraver，Budget-friendly CR -Laser falcon engraver!",
+        "SuperRecommended_todo": "Super High-Speed Engraving",
+        "SuperRecommended_h2": "Super Recommended",
+        "BundleDiscount_todo": "Bulk discounts for materials and Falcon accessories",
+        "BundleDiscount_h2": "Bundle Discount",
+        "HalloweenOffers_todo": "Halloween Offers",
+        "HalloweenOffers_h2": "Halloween Offers",
+        "MagicIdeas_todo": "Magic Halloween ideas for laser engarving and cutting",
+        "MagicIdeas_h2": "Magic Ideas",
+        "youtobeID": "TzTsrBPQgNo"
+      }
+    },
+    "spotlight_block_TRb7mF": {
+      "type": "spotlight-block",
+      "blocks": {
+        "image_pwdqU9": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/falcon_Halloween_giveaway_3.png",
+            "title_align": "center",
+            "enable_absolute": false,
+            "align_items": "center",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "10W LASER ENGRAVER*1",
+            "color_title": "#232323",
+            "fontsize_title": 20,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "Shuabur Chowdhury",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "",
+            "link": "",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#232323",
+            "bg_color_button": "#232323",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#232323",
+            "bg_color_button_hover": "#232323",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        },
+        "image_AaAEVV": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/falcon_Halloween_giveaway.png",
+            "title_align": "center",
+            "enable_absolute": false,
+            "align_items": "center",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "PROTECTIVE COVER*2",
+            "color_title": "#232323",
+            "fontsize_title": 20,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "Stephanie Mcquillan\n<br>Charlene Morgans",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "",
+            "link": "",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#232323",
+            "bg_color_button": "#232323",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#232323",
+            "bg_color_button_hover": "#232323",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        },
+        "image_dekDMY": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/falcon_Halloween_giveaway_2.png",
+            "title_align": "center",
+            "enable_absolute": false,
+            "align_items": "center",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "CRAFT MATERIALS SET*3",
+            "color_title": "#232323",
+            "fontsize_title": 20,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "Shane Dimmelow\n<br>Alan Kent\n<br>rashasalama@xxx.com",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "",
+            "link": "",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#232323",
+            "bg_color_button": "#232323",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#232323",
+            "bg_color_button_hover": "#232323",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_pwdqU9",
+        "image_AaAEVV",
+        "image_dekDMY"
+      ],
+      "settings": {
+        "container": "1200",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "mg_minus_desktop": 0,
+        "block_layout": "grid",
+        "spotlight_block_swipe_on_mobile": "slider",
+        "column": "3",
+        "column_mb": "1",
+        "enable_arrows": true,
+        "enable_arrows_mb": false,
+        "position_horizontal_slick_arrow": "0",
+        "enable_dots": false,
+        "enable_dots_mb": true,
+        "display_border_bottom": false,
+        "border_color": "#e3e3e3",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "spotlight_bg": "#ffffff",
+        "spotlight_bg_gradient": "",
+        "spotlight_block_title": "Halloween giveaway lucky guys",
+        "enable_border_title": true,
+        "color_title": "#232323",
+        "fontsize_title": 16,
+        "fontsize_title_mb": 22,
+        "margin_bottom_title": 45,
+        "spotlight_block_des": "",
+        "color_des": "#3c3c3c",
+        "margin_bottom_des": 30,
+        "fontsize_des": 16,
+        "title_align": "center",
+        "item_distance": 15,
+        "item_radius": 0,
+        "view_all": "",
+        "view_all_fs": 12,
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "display_spotlight_button": false,
+        "spotlight_button_text": "",
+        "spotlight_button_link": "",
+        "color_button": "#ffffff",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "#232323",
+        "border_color_button_hover": "#ffffff",
+        "bg_color_button_hover": "#ffffff",
+        "bg_color_gradient_button_hover": "",
+        "maxwidth_button": 230,
+        "mg_top_button": 30,
+        "enable_shadow": false,
+        "shadow_horizontal_length": 0,
+        "shadow_vertical_length": 0,
+        "shadow_blur_radius": 0,
+        "shadow_spread": 0,
+        "shadow_color": "transparent",
+        "shadow_inset": "no",
+        "enable_plus_icon": false,
+        "color_plus_icon": "#ffffff",
+        "enable_content_border": false,
+        "content_border_color": "#e2e2e2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "creality_halloween_activity_Bii3yr",
+    "spotlight_block_TRb7mF"
+  ]
+}

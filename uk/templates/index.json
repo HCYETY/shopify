@@ -1,0 +1,834 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "home_s_banners_rWDdyd": {
+      "type": "home-s-banners",
+      "blocks": {
+        "v_slider_pLEqtx": {
+          "type": "v-slider",
+          "settings": {
+            "autoplay": true,
+            "delay": 3000,
+            "loop": true,
+            "show_nav": true,
+            "nav_position": "inside",
+            "show_pagination": true,
+            "pagination_position": "inside",
+            "show_scrollbar": true
+          },
+          "blocks": {
+            "home_banner_card_big_n6yPKx": {
+              "type": "home-banner-card-big",
+              "name": "Home Banner Card Big",
+              "settings": {
+                "image": "shopify://shop_images/20250806-100210.jpg",
+                "image_mobile": "shopify://shop_images/20250806-100203.jpg",
+                "link": "shopify://products/falcon-a1-pro-20w-dual-laser-engraver",
+                "subtitle": "Go Pro, Go Smart, Go Earn",
+                "subtitle_color": "#f96d32",
+                "subtitle_color_mobile": "#f96d32",
+                "title": "Falcon A1 PRO",
+                "title_color": "#ffffff",
+                "title_color_mobile": "#ffffff",
+                "desc": "New Arrival Only £847",
+                "desc_color": "#ffffff",
+                "desc_color_mobile": "#ffffff",
+                "btn_text": "Learn More"
+              },
+              "blocks": {}
+            },
+            "home_banner_card_big_dargAH": {
+              "type": "home-banner-card-big",
+              "settings": {
+                "image": "shopify://shop_images/20250324-180118.png",
+                "image_mobile": "shopify://shop_images/20250324-180124.png",
+                "link": "shopify://products/creality-falcon-a1-laser-engraver-cutter",
+                "subtitle": "",
+                "subtitle_color": "#f96d32",
+                "subtitle_color_mobile": "#f96d32",
+                "title": "Falcon A1",
+                "title_color": "#1e1e1e",
+                "title_color_mobile": "#1e1e1e",
+                "desc": "Smarter Camera, Craft Easier",
+                "desc_color": "#1e1e1e",
+                "desc_color_mobile": "#1e1e1e",
+                "btn_text": "Shop Now"
+              },
+              "blocks": {}
+            },
+            "home_banner_card_big_UfCy7i": {
+              "type": "home-banner-card-big",
+              "settings": {
+                "image": "shopify://shop_images/falcon2_pro_1880-600_1.webp",
+                "image_mobile": "shopify://shop_images/crealityfalcon-falcon2-pro-40w-wap.webp",
+                "link": "shopify://products/falcon2-pro-enclosed-laser-engraver-cutter",
+                "subtitle": "",
+                "subtitle_color": "#f96d32",
+                "subtitle_color_mobile": "#f96d32",
+                "title": "Falcon2 Pro",
+                "title_color": "#1e1e1e",
+                "title_color_mobile": "#1e1e1e",
+                "desc": "Innovations for All Passions",
+                "desc_color": "#000000",
+                "desc_color_mobile": "#000000",
+                "btn_text": "Shop Now"
+              },
+              "blocks": {}
+            },
+            "home_banner_card_big_9DChDp": {
+              "type": "home-banner-card-big",
+              "settings": {
+                "image": "shopify://shop_images/falcon2-laser-engraver-series-1880x600_0081a4b3-e2fd-4375-87a2-15adea7f5d57.webp",
+                "image_mobile": "shopify://shop_images/Crafting-giveway-675x975_63631d18-3de0-41f2-8f1d-21b01c561beb.jpg",
+                "link": "shopify://products/falcon2-22w-laser-engraver-and-cutter-2",
+                "subtitle": "",
+                "subtitle_color": "#f96d32",
+                "subtitle_color_mobile": "#f96d32",
+                "title": "Falcon 2",
+                "title_color": "#1e1e1e",
+                "title_color_mobile": "#1e1e1e",
+                "desc": "Power Up Your Creativity",
+                "desc_color": "#1e1e1e",
+                "desc_color_mobile": "#1e1e1e",
+                "btn_text": "Shop Now"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "home_banner_card_big_n6yPKx",
+            "home_banner_card_big_dargAH",
+            "home_banner_card_big_UfCy7i",
+            "home_banner_card_big_9DChDp"
+          ]
+        }
+      },
+      "block_order": [
+        "v_slider_pLEqtx"
+      ],
+      "name": "Home S Banners",
+      "settings": {}
+    },
+    "home_s_best_sell_pTcBJi": {
+      "type": "home-s-best-sell",
+      "name": "Home S Best Sell",
+      "settings": {
+        "products": [
+          "falcon2-pro-enclosed-laser-engraver-cutter",
+          "creality-falcon-a1-laser-engraver-cutter",
+          "cr-laser-falcon-engraver-10w-low-wattage",
+          "falcon2-22w-laser-engraver-cutter"
+        ],
+        "title": "Best Selling Products"
+      }
+    },
+    "home_s_why_store_dQz93j": {
+      "type": "home-s-why-store",
+      "name": "Home S Why Store",
+      "settings": {
+        "title": "Why Shop at the CREALITY Falcon?",
+        "multi_power_image": "shopify://shop_images/Early_Access_to_New_Products.webp",
+        "multi_power_title": "Early Access to New Products",
+        "multi_power_description": "",
+        "multi_power_link": "",
+        "pay_later_image": "shopify://shop_images/20250604-111852.jpg",
+        "pay_later_title": "Buy Now Pay Later Financing",
+        "pay_later_description": "",
+        "pay_later_link": "",
+        "return_guarantee_image": "shopify://shop_images/Frame-return-guarantee.webp",
+        "return_guarantee_title": "14-day Return Guarantee",
+        "return_guarantee_description": "",
+        "return_guarantee_link": "",
+        "design_space_image": "shopify://shop_images/Frame-design-space.webp",
+        "design_space_title": "Falcon Design Space",
+        "design_space_description": "",
+        "design_space_link": "",
+        "faster_speed_image": "shopify://shop_images/20250618-100345.jpg",
+        "faster_speed_title": "Machine Compare",
+        "faster_speed_description": "",
+        "faster_speed_link": "https://uk.crealityfalcon.com/pages/compare",
+        "secure_payment_image": "shopify://shop_images/20250609-173835.jpg",
+        "secure_payment_title": "100% Secure Paymen",
+        "secure_payment_description": "",
+        "secure_payment_link": "",
+        "free_shipping_image": "shopify://shop_images/20250604-111844_fc893743-ce3d-4872-ac3d-202c6c27d804.jpg",
+        "free_shipping_title": "Free UK Shipping Over $49.99",
+        "free_shipping_description": "",
+        "free_shipping_link": "",
+        "precision_meets_art_image": "shopify://shop_images/Lifetime_Customer_Support.webp",
+        "precision_meets_art_title": "Customer Support",
+        "precision_meets_art_description": "",
+        "precision_meets_art_link": ""
+      }
+    },
+    "home_s_product_list_F4cWrR": {
+      "type": "home-s-product-list",
+      "blocks": {
+        "v_slider_nhMpbU": {
+          "type": "v-slider",
+          "settings": {
+            "autoplay": true,
+            "delay": 3000,
+            "loop": false,
+            "show_nav": false,
+            "nav_position": "inside",
+            "show_pagination": false,
+            "pagination_position": "outside",
+            "show_scrollbar": false
+          },
+          "blocks": {
+            "home_banner_card_medium_fFg9FQ": {
+              "type": "home-banner-card-medium",
+              "settings": {
+                "image": "shopify://shop_images/20250813-114612.jpg",
+                "image_mobile": "shopify://shop_images/laser_family_banner_m.png",
+                "title": "Create Freely with Falcon Laser in Every Field",
+                "title_color": "#1e1e1e",
+                "title_color_mobile": "#1e1e1e",
+                "desc": "Empowering  Dreamers Across Every Field",
+                "desc_color": "#232323",
+                "desc_color_mobile": "#8d9095",
+                "btn_text": "Buy Now",
+                "link": "shopify://collections/engraver",
+                "show_compare_btn": false,
+                "compare_btn_text": "",
+                "compare_link": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "home_banner_card_medium_fFg9FQ"
+          ]
+        },
+        "home_product_list_tabs_zipFpK": {
+          "type": "home-product-list-tabs",
+          "settings": {
+            "menu": "cutter-menu"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "v_slider_nhMpbU",
+        "home_product_list_tabs_zipFpK"
+      ],
+      "name": "Home S Product List",
+      "settings": {
+        "title": "Pro-Level Results, Hobbyist Budget"
+      }
+    },
+    "home_s_product_list_LRR9en": {
+      "type": "home-s-product-list",
+      "blocks": {
+        "v_slider_MYGn8C": {
+          "type": "v-slider",
+          "settings": {
+            "autoplay": true,
+            "delay": 3000,
+            "loop": false,
+            "show_nav": false,
+            "nav_position": "inside",
+            "show_pagination": false,
+            "pagination_position": "outside",
+            "show_scrollbar": false
+          },
+          "blocks": {
+            "home_banner_card_medium_PFd8pU": {
+              "type": "home-banner-card-medium",
+              "name": "Home Banner Card Medium",
+              "settings": {
+                "image": "shopify://shop_images/accessory-for-engravers-and-cutters-by-crealityfalcon-web_efcb62e2-c06d-40cf-950c-8ea02927f4d7.webp",
+                "image_mobile": "shopify://shop_images/accessories-for-laser-engraver-cutter-975x1305_2.webp",
+                "title": "Enhance Performance",
+                "title_color": "#ffffff",
+                "title_color_mobile": "#1e1e1e",
+                "desc": "",
+                "desc_color": "#8d9095",
+                "desc_color_mobile": "#8d9095",
+                "btn_text": "Buy Now",
+                "link": "https://uk.crealityfalcon.com/collections/accessories",
+                "show_compare_btn": false,
+                "compare_btn_text": "",
+                "compare_link": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "home_banner_card_medium_PFd8pU"
+          ]
+        },
+        "home_product_list_tabs_z8C9RP": {
+          "type": "home-product-list-tabs",
+          "name": "Home Product List Tabs",
+          "settings": {
+            "menu": "accessories-test-home-product-list-tabs-menu"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "v_slider_MYGn8C",
+        "home_product_list_tabs_z8C9RP"
+      ],
+      "name": "Home S Product List",
+      "settings": {
+        "title": "Accessories"
+      }
+    },
+    "home_s_product_list_gzaQDM": {
+      "type": "home-s-product-list",
+      "blocks": {
+        "v_slider_eDMQ9e": {
+          "type": "v-slider",
+          "settings": {
+            "autoplay": true,
+            "delay": 3000,
+            "loop": false,
+            "show_nav": false,
+            "nav_position": "inside",
+            "show_pagination": false,
+            "pagination_position": "outside",
+            "show_scrollbar": false
+          },
+          "blocks": {
+            "home_banner_card_medium_7CPeEX": {
+              "type": "home-banner-card-medium",
+              "settings": {
+                "image": "shopify://shop_images/material_banner.webp",
+                "image_mobile": "shopify://shop_images/crealityfalcon-materials-for-engravers-03.webp",
+                "title": "Increase Inspiration",
+                "title_color": "#232323",
+                "title_color_mobile": "#232323",
+                "desc": "",
+                "desc_color": "#8d9095",
+                "desc_color_mobile": "#8d9095",
+                "btn_text": "Buy Now",
+                "link": "https://uk.crealityfalcon.com/pages/materials-sale-for-laser-engraver",
+                "show_compare_btn": false,
+                "compare_btn_text": "",
+                "compare_link": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "home_banner_card_medium_7CPeEX"
+          ]
+        },
+        "home_product_list_tabs_jQ4tcp": {
+          "type": "home-product-list-tabs",
+          "settings": {
+            "menu": "material"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "v_slider_eDMQ9e",
+        "home_product_list_tabs_jQ4tcp"
+      ],
+      "name": "Home S Product List",
+      "settings": {
+        "title": "Meterials"
+      }
+    },
+    "spotlight_block_J3X9hL": {
+      "type": "spotlight-block",
+      "blocks": {
+        "image_78pdDG": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/20241022-144459_640x_a9c9de84-84e1-48d0-9139-f551b95aa80c.webp",
+            "title_align": "left",
+            "enable_absolute": false,
+            "align_items": "top",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "#e8e8e8",
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "700",
+            "mg_bottom_sub_title": 10,
+            "title": "1. Design",
+            "color_title": "#232323",
+            "fontsize_title": 20,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "700",
+            "enable_style_italic": false,
+            "border_title": "border_s3",
+            "border_color_title": "#e8e8e8",
+            "des": "Design your idea from scratch or find inspiration in CraftSeek",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 15,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "",
+            "link": "",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#232323",
+            "bg_color_button": "#232323",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#232323",
+            "bg_color_button_hover": "#232323",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        },
+        "image_6WyMCC": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/20241022-144511_940x_f6669b3c-fa09-4fe6-bc76-37754a33a38e.webp",
+            "title_align": "left",
+            "enable_absolute": false,
+            "align_items": "top",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "2. Set Up and Process",
+            "color_title": "#232323",
+            "fontsize_title": 20,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "700",
+            "enable_style_italic": false,
+            "border_title": "border_s3",
+            "border_color_title": "#e8e8e8",
+            "des": "Get your materials and settings ready and\nlet the machine work, making every piece\nof your project with intricacy & precision",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "",
+            "link": "",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#232323",
+            "bg_color_button": "#232323",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#232323",
+            "bg_color_button_hover": "#232323",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        },
+        "image_j98tWN": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/20241022-144505_940x_0ea9c157-8b91-4843-bc27-b5c7cd7212ec.webp",
+            "title_align": "left",
+            "enable_absolute": false,
+            "align_items": "top",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "3. Witness the Magic",
+            "color_title": "#232323",
+            "fontsize_title": 20,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "700",
+            "enable_style_italic": false,
+            "border_title": "border_s3",
+            "border_color_title": "#e8e8e8",
+            "des": "Admire your work! Now comes the\nhardest part: Decide to keep it for\nyourself or gift it to someone you love.",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "",
+            "link": "",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#232323",
+            "bg_color_button": "#232323",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#232323",
+            "bg_color_button_hover": "#232323",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_78pdDG",
+        "image_6WyMCC",
+        "image_j98tWN"
+      ],
+      "name": "t:sections.spotlight_block.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "mg_minus_desktop": 0,
+        "block_layout": "grid",
+        "spotlight_block_swipe_on_mobile": "slider",
+        "column": "3",
+        "column_mb": "1",
+        "enable_arrows": true,
+        "enable_arrows_mb": false,
+        "position_horizontal_slick_arrow": "0",
+        "enable_dots": false,
+        "enable_dots_mb": true,
+        "display_border_bottom": false,
+        "border_color": "#e3e3e3",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "spotlight_bg": "#ffffff",
+        "spotlight_bg_gradient": "",
+        "spotlight_block_title": "It's easy to start a laser journey with Creality Falcon!",
+        "enable_border_title": true,
+        "color_title": "#232323",
+        "fontsize_title": 16,
+        "fontsize_title_mb": 22,
+        "margin_bottom_title": 45,
+        "spotlight_block_des": "",
+        "color_des": "#3c3c3c",
+        "margin_bottom_des": 30,
+        "fontsize_des": 16,
+        "title_align": "center",
+        "item_distance": 15,
+        "item_radius": 0,
+        "view_all": "",
+        "view_all_fs": 12,
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "display_spotlight_button": false,
+        "spotlight_button_text": "",
+        "spotlight_button_link": "",
+        "color_button": "#ffffff",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "#232323",
+        "border_color_button_hover": "#ffffff",
+        "bg_color_button_hover": "#ffffff",
+        "bg_color_gradient_button_hover": "",
+        "maxwidth_button": 230,
+        "mg_top_button": 30,
+        "enable_shadow": false,
+        "shadow_horizontal_length": 0,
+        "shadow_vertical_length": 0,
+        "shadow_blur_radius": 0,
+        "shadow_spread": 0,
+        "shadow_color": "transparent",
+        "shadow_inset": "no",
+        "enable_plus_icon": false,
+        "color_plus_icon": "#ffffff",
+        "enable_content_border": false,
+        "content_border_color": "#e2e2e2"
+      }
+    },
+    "home_s_gallery_cWbBri": {
+      "type": "home-s-gallery",
+      "blocks": {
+        "home_section_title_WUaj6x": {
+          "type": "home-section-title",
+          "settings": {
+            "layout": "left",
+            "title": "",
+            "sub_title": "From Hobby To Small Business",
+            "margin_top": 48,
+            "margin_bottom": 32
+          },
+          "blocks": {}
+        },
+        "ticker_H7dCGw": {
+          "type": "ticker",
+          "settings": {
+            "is_reverse": false,
+            "offset": 0,
+            "duration": 30,
+            "gap": 16
+          },
+          "blocks": {
+            "home_gallery_card_6KHrBf": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/Fab_Thiaw-Woaye-_1_1abde0d8-431d-4a40-bdc4-92d487f0f44a.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_NFMJMq": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/DSC04923.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_nHxBHK": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/be3ec300e6ea4d0fda5dd382e11c3280.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_YzwKQf": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/DSC00559.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_nBm4en": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/disc_mdf-Gary_Rodriguez_Contreras2.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_9cCRRp": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/Graham_Green-puzzle_falcon_10W.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_RwMgLQ": {
+              "type": "home-gallery-card",
+              "name": "Home Gallery Card 作品卡片",
+              "settings": {
+                "image": "shopify://shop_images/Joshua_Godbee-_3_d176c261-a95a-40dd-8059-2f65c3dc6682.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_FwyFGB": {
+              "type": "home-gallery-card",
+              "name": "Home Gallery Card 作品卡片",
+              "settings": {
+                "image": "shopify://shop_images/4_7b5f9888-c650-4fbb-aa5d-94309c3f9d26.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_mxi9Ag": {
+              "type": "home-gallery-card",
+              "name": "Home Gallery Card 作品卡片",
+              "settings": {
+                "image": "shopify://shop_images/DSC04989.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "home_gallery_card_6KHrBf",
+            "home_gallery_card_NFMJMq",
+            "home_gallery_card_nHxBHK",
+            "home_gallery_card_YzwKQf",
+            "home_gallery_card_nBm4en",
+            "home_gallery_card_9cCRRp",
+            "home_gallery_card_RwMgLQ",
+            "home_gallery_card_FwyFGB",
+            "home_gallery_card_mxi9Ag"
+          ]
+        },
+        "ticker_TjhQ3L": {
+          "type": "ticker",
+          "settings": {
+            "is_reverse": true,
+            "offset": 0,
+            "duration": 30,
+            "gap": 16
+          },
+          "blocks": {
+            "home_gallery_card_EJBU97": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/halloween-candy-box.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_mwgGPp": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/bat-halloween-Candlestick.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_P6zhBC": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/halloween-decoration.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_6KBkTG": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/halloween-candle-holder.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_Cg6EqX": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/halloween-calendar.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_38Y68i": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/Halloween_pumpkin_candle_holder_with_laser_engraver.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_hMfJPk": {
+              "type": "home-gallery-card",
+              "name": "Home Gallery Card 作品卡片",
+              "settings": {
+                "image": "shopify://shop_images/Halloween_decoration_with_laser_engraver_3.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_fjjxed": {
+              "type": "home-gallery-card",
+              "name": "Home Gallery Card 作品卡片",
+              "settings": {
+                "image": "shopify://shop_images/Halloween_ruler_with_laser_engraver.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "home_gallery_card_EJBU97",
+            "home_gallery_card_mwgGPp",
+            "home_gallery_card_P6zhBC",
+            "home_gallery_card_6KBkTG",
+            "home_gallery_card_Cg6EqX",
+            "home_gallery_card_38Y68i",
+            "home_gallery_card_hMfJPk",
+            "home_gallery_card_fjjxed"
+          ]
+        }
+      },
+      "block_order": [
+        "home_section_title_WUaj6x",
+        "ticker_H7dCGw",
+        "ticker_TjhQ3L"
+      ],
+      "name": "Home S Gallery",
+      "settings": {
+        "mode": "gallery"
+      }
+    },
+    "join_facebook_button_shopify_iqx9gc": {
+      "type": "join_facebook_button_shopify",
+      "name": "join_facebook_button",
+      "settings": {
+        "join_facebook_group_url": "https://www.facebook.com/groups/falconlaser.uk",
+        "join_facebook_group_url_new": "https://www.facebook.com/groups/falconlaser.uk",
+        "join_facebook_group_url_v3": "https://www.facebook.com/groups/falconlaser.uk?utm_source=Website&utm_medium=UKFalcon",
+        "join_facebook_group_title": "Join Our Facebook Group",
+        "join_facebook_group_desc": "Join the active Creality Falcon Facebook community, a vibrant hub for sharing ideas,<br class=\"pc\">discovering the latest updates, and engaging with real users.",
+        "pc_margin_top": 60,
+        "pc_margin_bottom": 60,
+        "mobile_margin_top": 30,
+        "mobile_margin_bottom": 30
+      }
+    },
+    "home_s_newsletter_pkCmna": {
+      "type": "home-s-newsletter",
+      "name": "Home S Newsletter",
+      "settings": {
+        "title": "Be the first to know",
+        "desc": "Subscribe to our newsletter and get an extra 5% discount coupon for your first order!",
+        "image": "shopify://shop_images/Falcon_A1_newsletter-left_M.png",
+        "cta_text": "Enter your email"
+      }
+    },
+    "17542951406b2ababa": {
+      "type": "_blocks",
+      "settings": {}
+    }
+  },
+  "order": [
+    "home_s_banners_rWDdyd",
+    "home_s_best_sell_pTcBJi",
+    "home_s_why_store_dQz93j",
+    "home_s_product_list_F4cWrR",
+    "home_s_product_list_LRR9en",
+    "home_s_product_list_gzaQDM",
+    "spotlight_block_J3X9hL",
+    "home_s_gallery_cWbBri",
+    "join_facebook_button_shopify_iqx9gc",
+    "home_s_newsletter_pkCmna",
+    "17542951406b2ababa"
+  ]
+}

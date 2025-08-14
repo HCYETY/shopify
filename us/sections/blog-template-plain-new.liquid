@@ -1,0 +1,23 @@
+{{ article.content }}
+
+<script>
+  let url = window.location.href;
+  let pinterestEl = document.querySelector('#pinterestShare');
+  let facebookEl = document.querySelector('#facebookShare');
+  let emailEl = document.querySelector('#emailShare');
+  pinterestEl.href += `url=${url}&media={{ article.image | img_url: 'large' | url_escape }}&description={{ article.title | url_escape }}`;
+  facebookEl.href += `u=${url}` 
+  emailEl.href += `subject={{ article.title | url_escape }}&body=Check out this article:${url}`
+  
+</script>
+{% schema %}
+{
+  "name": "blog-template-plain-new",
+  "settings": [],
+  "presets": [
+    {
+      "name": "blog-template-plain-new"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,1519 @@
+<style>
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #1e1e1e;
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+  }
+
+  .shopify-section.shopify-section-group-header-group.home-s-header-wrap-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+  }
+
+  header.header {
+    -webkit-animation-duration: 0.35s;
+    animation-duration: 0.35s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+
+  .header {
+    --color-dark: #1e1e1e;
+    --color-light: #fff;
+    --color-gray: #f5f6f7;
+    --color-red: #f13a3a;
+    --color-brand: #0bb3fb;
+
+    background-color: #fff;
+    border-bottom: 1px solid #f5f6f7;
+    height: 64px;
+    /* margin-top: -1px; */
+    position: relative;
+    z-index: 110;
+  }
+
+  .header > .header-wrap > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    position: initial;
+  }
+
+  .header .header-left {
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+    height: inherit;
+  }
+
+  .header .header-left .btn-nav {
+    display: none;
+  }
+
+  .header .header-left img {
+    width: 146px;
+  }
+
+  .header .header-left .header-menu-wrap {
+    height: inherit;
+  }
+
+  .header .header-menu-desktop {
+    display: flex;
+    align-items: center;
+    height: inherit;
+  }
+
+  .header .header-menu-desktop .header-menu-item {
+    color: var(--color-dark);
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    height: inherit;
+    line-height: 64px;
+    padding: 0 16px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .header .header-menu-desktop .header-menu-item svg {
+    width: initial;
+    height: initial;
+    stroke: none;
+  }
+
+  .header .header-menu-desktop .header-menu-item .header-item-tag {
+    padding-left: 8px;
+    position: relative;
+    display: none;
+  }
+
+  .header .header-menu-desktop .header-menu-item .header-item-tag span {
+    background-color: var(--color-red);
+    border-radius: 4px;
+    color: var(--color-light);
+    font-family: Montserrat;
+    font-size: 8px;
+    font-weight: 700;
+    padding: 2px 4px;
+    position: relative;
+  }
+
+  .header .header-menu-desktop .header-menu-item .header-item-tag span svg {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-85%, -50%);
+    transform: translate(-85%, -50%);
+    width: 3px;
+    stroke: none;
+  }
+
+  .header .header-left .menu-progress-line-scrollbar {
+    background-color: var(--color-brand);
+    bottom: 0;
+    height: 2px;
+    pointer-events: none;
+    position: absolute;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    opacity: 0;
+  }
+
+  /* 头部右侧 */
+  .header .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .header .header-ctas {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-column-gap: 16px;
+    -moz-column-gap: 16px;
+    column-gap: 16px;
+  }
+
+  .header .header-ctas > a,
+  .header .header-ctas > div {
+    height: 24px;
+    width: 24px;
+  }
+
+  .header .header-ctas > a svg,
+  .header .header-ctas > div svg {
+    height: 100%;
+    width: 100%;
+    stroke: none;
+    fill: none;
+  }
+
+  .header .header-ctas > .search {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+  }
+  .header .header-ctas > .search svg {
+    height: 18px;
+    margin: auto;
+    width: 16px;
+  }
+
+  .header .header-ctas .cart {
+    position: relative;
+  }
+
+  .header .header-ctas .cart .count {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    background-color: var(--color-brand);
+    border-radius: 50%;
+    color: var(--color-light);
+    font-size: 8px;
+    height: 17px;
+    justify-content: center;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    width: 17px;
+  }
+
+  /* menu panel */
+  .header .header-left .submenu-wrap {
+    background-color: var(--color-light);
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-align: start;
+    top: calc(var(--header-height));
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
+
+  .header .header-left .submenu-wrap.active,
+  .header .header-left .submenu-wrap[style*='display: block'] {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .header .header-left .header-mask {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    top: calc(var(--header-height) + var(--activity-bar-height));
+  }
+
+  .header .header-left .header-mask.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .header .header-left .submenu-wrap-content {
+    margin: auto;
+    padding: 40px 0;
+    width: 1200px;
+    overflow: hidden;
+    -webkit-transition: all 0.35s cubic-bezier(0.4, 0, 0.6, 1);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.6, 1);
+  }
+
+  .header .header-left .globalNav-submenu-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .header-left .globalNav-submenu-sidebar {
+    position: relative;
+    width: 240px;
+    flex: 0 0 auto;
+    max-width: 240px;
+  }
+
+  .header .header-left .submenu-sidebar-scrollbar {
+    background-color: #0000000a;
+    border-radius: 8px;
+    height: 53px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+    width: 100%;
+  }
+
+  .header .header-left .submenu-sidebar-list {
+    font-size: 14px;
+  }
+
+  .header .header-left .submenu-sidebar-list ul li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 16px 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .header .header-left .submenu-sidebar-list ul li svg {
+    height: 18px;
+    width: 18px;
+    stroke: none;
+    fill: none;
+  }
+
+  .header .header-left .globalNav-submenu-viewport {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-left: 36px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .header .header-left .submenu-viewport-product {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .header .header-left .viewport-product-header {
+    font-family: Montserrat;
+    font-size: 16px;
+  }
+
+  .header .header-left .submenu-viewport-events {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .header .header-left .submenu-viewport-events a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .header .header-left .submenu-viewport-events p {
+    color: #8d9095;
+    font-size: 14px;
+    margin-right: 4px;
+  }
+
+  .header .header-left .submenu-viewport-events svg {
+    height: 16px;
+    width: 16px;
+    fill: none;
+  }
+
+  .header .header-left .submenu-viewport-events svg path {
+    stroke: #8d9095;
+  }
+
+  .header .header-left .submenu-viewport-events :after {
+    background-color: #8d9095;
+    bottom: 3px;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    -webkit-transition: width 0.15s ease;
+    transition: width 0.15s ease;
+    width: 0;
+  }
+
+  .header .header-left .submenu-viewport-events:hover :after {
+    width: 92%;
+  }
+
+  .header .header-left .viewport-product-group {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    margin-top: 16px;
+    /* 最多两行 */
+    overflow: auto;
+    max-height: 455px;
+  }
+
+  .header .header-left .product-group-item {
+    position: relative;
+    background-color: #f5f6f7;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 100%;
+    padding: 22px 16px;
+    text-align: center;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+
+  .header .header-left .product-group-item:hover {
+    background-color: #eaebed;
+  }
+
+  .header .header-left .product-item-image {
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header .header-left .product-item-image img {
+    max-height: 110px;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+  .header .header-left .product-item-text {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    margin-top: 16px;
+  }
+
+  .header .header-left .product-item-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    padding: 2px 10px;
+    border-radius: 14px;
+    color: var(--custom-badge-color);
+    background-color: var(--custom-badge-bg);
+  }
+
+  .header .header-left .collection-item-badge {
+    font-size: 10px;
+    padding: 2px 10px;
+    border-radius: 14px;
+    color: var(--custom-badge-color);
+    background-color: var(--custom-badge-bg);
+  }
+
+  .header .header-left .product-item-tag {
+    color: #f13a3a;
+    font-size: 10px;
+    height: 15px;
+  }
+
+  .header .header-left .product-item-name {
+    display: -webkit-box;
+    font-size: 12px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  /* sale type */
+  .header .header-left .globalNav-submenu-saleWrap {
+    -webkit-column-gap: 16px;
+    -moz-column-gap: 16px;
+    column-gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .header .header-left .globalNav-submenu-saleWrap a {
+    color: #000;
+    text-decoration: none;
+  }
+  .header .header-left .saleWrap-item:hover > .saleWrap-image {
+    -webkit-box-shadow: 0 4px 24px #1416201a;
+    box-shadow: 0 4px 24px #1416201a;
+  }
+
+  .header .header-left .saleWrap-image {
+    border-radius: 8px;
+    overflow: hidden;
+    -webkit-transition: -webkit-box-shadow 0.35s ease;
+    transition: -webkit-box-shadow 0.35s ease;
+    transition: box-shadow 0.35s ease;
+    transition: box-shadow 0.35s ease, -webkit-box-shadow 0.35s ease;
+  }
+
+  .header .header-left .saleWrap-image img {
+    max-height: 200px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .header .header-left .saleWrap-text {
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  .header .header-left .saleWrap-text h3 {
+    font-family: Montserrat;
+    font-size: 16px;
+  }
+
+  .header .header-left .saleWrap-text p {
+    font-family: Montserrat;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .home-s-search-modal {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .home-s-search-modal.open {
+    opacity: 1;
+    pointer-events: auto;
+    padding: 0 0 10vh;
+    background: rgba(35, 35, 35, 0.8);
+    animation: animateMenuOpen 0.3s ease;
+  }
+  .home-s-search-modal .search-modal__content {
+    background-color: #fff;
+    padding: 20px 0;
+  }
+  .home-s-search-modal .search-modal__form {
+    background-color: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    max-width: 100%;
+    display: block;
+  }
+  .home-s-search-modal .home-s-search-modal__close-button {
+  }
+  .home-s-search-modal .home-s-search-modal__close-button-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .home-s-search-modal .home-s-search__input {
+    padding: 7px 10px 7px 0;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .home-s-search-modal .search__button {
+    min-width: inherit;
+    text-overflow: unset;
+    padding: 1px 10px 4px;
+    border-radius: 0;
+    min-height: 30px;
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+  }
+
+  .home-s-search-modal .home-s-search-modal__close-button svg,
+  .home-s-search-modal .search__button svg {
+    width: 20px;
+    height: 20px;
+    fill: #1e1e1e;
+  }
+
+  .home-s-search-modal .quickSearchResultsWrap {
+    right: 0;
+    left: 0;
+    top: calc(100% + 1px);
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .home-s-search-modal .search-modal__content .search-modal__close-button {
+    min-width: initial;
+  }
+
+  @media (max-width: 900px) {
+    #home-s-header {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 901px) and (max-width: 1920px) {
+    .container {
+      margin: 0 auto;
+      max-width: 1200px;
+      width: 1200px;
+    }
+    {% comment %} new {% endcomment %}
+         .header .header-left .globalNav-submenu-saleWrap {
+        -webkit-column-gap: 16px;
+        -moz-column-gap: 16px;
+        column-gap: 16px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .header .header-left .saleWrap-image {
+      border-radius: 8px;
+      overflow: hidden;
+      -webkit-transition: -webkit-box-shadow 0.35s ease;
+      transition: -webkit-box-shadow 0.35s ease;
+      transition: box-shadow 0.35s ease;
+      transition: box-shadow 0.35s ease, -webkit-box-shadow 0.35s ease;
+    }
+    .header .header-left .saleWrap-text {
+      margin-top: 16px;
+      text-align: center;
+    }
+    .header .header-left .saleWrap-text h3 {
+        font-family: HarmonyOS_Sans_Bold;
+        font-size: 16px;
+        font-weight: 700;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .header {
+      border-bottom: 0.052vw solid #f5f6f7;
+      height: 3.333vw;
+    }
+    .header .header-left {
+      column-gap: 2.5vw;
+    }
+    .header .header-left img {
+      width: 7.604vw;
+    }
+    .header .header-menu-desktop .header-menu-item {
+      font-size: 0.729vw;
+      line-height: 3.333vw;
+      padding: 0 0.833vw;
+    }
+    .header .header-menu-desktop .header-menu-item .header-item-tag {
+      padding-left: 0.417vw;
+    }
+    .header .header-menu-desktop .header-menu-item .header-item-tag span {
+      border-radius: 0.208vw;
+      font-size: 0.417vw;
+      padding: 0.104vw 0.208vw;
+    }
+    .header .header-menu-desktop .header-menu-item .header-item-tag span svg {
+      width: 0.156vw;
+    }
+    .header .header-left .menu-progress-line-scrollbar {
+      height: 0.104vw;
+    }
+    .header .header-right {
+      gap: 0.833vw;
+    }
+    .header .header-ctas {
+      -webkit-column-gap: 0.833vw;
+      -moz-column-gap: 0.833vw;
+      column-gap: 0.833vw;
+    }
+    .header .header-ctas a,
+    .header .header-ctas div {
+      height: 1.25vw;
+      width: 1.25vw;
+    }
+    .header .header-ctas .search svg {
+      height: 0.938vw;
+      width: 0.833vw;
+    }
+    .header .header-left .submenu-wrap {
+      transform: translateY(-0.521vw);
+    }
+    .header .header-left .header-mask {
+    }
+    .header .header-left .submenu-wrap-content {
+      padding: 2.083vw 0;
+      width: 62.5vw;
+    }
+    .header .header-left .globalNav-submenu-sidebar {
+      width: 12.5vw;
+      max-width: 12.5vw;
+    }
+    .header .header-left .submenu-sidebar-scrollbar {
+      border-radius: 0.417vw;
+      height: 2.76vw;
+    }
+    .header .header-left .submenu-sidebar-list {
+      font-size: 0.729vw;
+    }
+    .header .header-left .submenu-sidebar-list ul li {
+      padding: 0.833vw 1.25vw;
+    }
+    .header .header-left .submenu-sidebar-list ul li svg {
+      height: 0.938vw;
+      width: 0.938vw;
+    }
+    .header .header-left .globalNav-submenu-viewport {
+      margin-left: 1.875vw;
+    }
+    .header .header-left .viewport-product-header {
+      font-size: 0.833vw;
+    }
+    .header .header-left .submenu-viewport-events p {
+      font-size: 0.729vw;
+      margin-right: 0.208vw;
+    }
+    .header .header-left .submenu-viewport-events svg {
+      height: 0.833vw;
+      width: 0.833vw;
+    }
+    .header .header-left .submenu-viewport-events :after {
+      bottom: 0.156vw;
+      height: 0.052vw;
+    }
+    .header .header-left .viewport-product-group {
+      grid-gap: 0.26vw;
+      margin-top: 0.833vw;
+      max-height: 23.698vw;
+    }
+    .header .header-left .product-group-item {
+      border-radius: 0.417vw;
+      padding: 1.146vw 0.833vw;
+    }
+    .header .header-left .product-item-image {
+      min-height: 5.729vw;
+    }
+    .header .header-left .product-item-image img {
+      max-height: 5.729vw;
+    }
+    .header .header-left .product-item-text {
+      margin-top: 0.833vw;
+    }
+    .header .header-left .product-item-tag {
+      font-size: 0.521vw;
+      height: 0.781vw;
+    }
+    .header .header-left .product-item-name {
+      font-size: 0.625vw;
+      height: 2.083vw;
+    }
+    .header .header-left .globalNav-submenu-saleWrap {
+      -webkit-column-gap: 0.833vw;
+      -moz-column-gap: 0.833vw;
+      column-gap: 0.833vw;
+    }
+    .header .header-left .saleWrap-item:hover > .saleWrap-image {
+      -webkit-box-shadow: 0 0.208vw 1.25vw #1416201a;
+      box-shadow: 0 0.208vw 1.25vw #1416201a;
+    }
+    .header .header-left .saleWrap-image {
+      border-radius: 0.417vw;
+    }
+    .header .header-left .saleWrap-image img {
+      max-height: 10.417vw;
+    }
+    .header .header-left .saleWrap-text {
+      margin-top: 0.833vw;
+    }
+    .header .header-left .saleWrap-text h3 {
+      font-size: 0.833vw;
+    }
+    .header .header-left .saleWrap-text p {
+      font-size: 0.625vw;
+      margin-top: 0.208vw;
+    }
+  }
+</style>
+{% assign sale_link_title_one = section.settings.sale_page_one %}
+{% assign sale_link_title_two = section.settings.sale_page_two %}
+{% assign sale_link_title_three = section.settings.sale_page_three %}
+
+<header id="home-s-header" class="header header-theme-light">
+  <div class="header-wrap">
+    <div class="container">
+      <div class="header-left">
+        <button class="btn-nav btn-nav-mobile">
+          <span class="icon-bar top"></span><span class="icon-bar middle"></span><span class="icon-bar bottom"></span>
+        </button>
+
+        <a data-discover="true" class="active" href="/" style="font-weight: bold;" aria-current="page">
+          <img
+            alt="falcon"
+            decoding="async"
+            loading="eager"
+            src="{{ section.settings.logo | img_url: 'master' }}"
+            width="146"
+            height="24"
+          >
+        </a>
+        <div class="header-menu-wrap">
+          <div>
+            <nav class="header-menu-desktop" role="navigation">
+              {% for link in section.settings.menu.links %}
+                <a
+                  data-discover="true"
+                  class="header-menu-item {% if link.links.size > 0 %}header-menu-item-has-children{% else %}sale-menu-item{% endif %}"
+                  href="{{ link.url }}"
+                >
+                  <div>{{ link.title }}</div>
+                </a>
+              {% endfor %}
+            </nav>
+            <div class="menu-progress-line-scrollbar" style="width: 0px;"></div>
+          </div>
+          <div class="header-mask"></div>
+          <div class="submenu-wrap">
+            <div class="submenu-wrap-content">
+              {% for link in section.settings.menu.links %}
+                {% if link.links.size > 0 %}
+                  <div style="display: none;">
+                    <div class="globalNav-submenu-content">
+                      <div class="globalNav-submenu-sidebar">
+                        <div class="submenu-sidebar-list">
+                          <ul>
+                            {% for childlink in link.links %}
+                              <a href="{{ childlink.url }}"> 
+                                <li>
+                                  {{ childlink.title }}
+                                  {% if childlink.type == 'collection_link' %}
+                                    {% assign collection = childlink.object %}
+                                    {% if collection.metafields.custom.product_badge_text != blank %}
+                                      <span class="collection-item-badge">
+                                        {{ collection.metafields.custom.product_badge_text }}
+                                      </span>
+                                    {% endif %}
+                                  {% endif %}
+                                </li>
+                              </a>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                        <div class="submenu-sidebar-scrollbar" style="transform: translateY(0px);"></div>
+                      </div>
+                      <div style="width: 100%;">
+                        {% for childlink in link.links %}
+                          <div class="globalNav-submenu-viewport" style="display: block;">
+                            <div class="submenu-viewport-product">
+                              <div class="viewport-product-header">{{ childlink.title }}</div>
+                              <div class="submenu-viewport-events">
+                                <a
+                                  data-discover="true"
+                                  class="flex items-center"
+                                  href="{{ childlink.url }}"
+                                  target="_blank"
+                                >
+                                  <p>View All</p>
+                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M10 17L15 12L10 7" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                            <div class="viewport-product-group">
+                              {% for product in childlink.object.products %}
+                                <a data-discover="true" class="" href="{{ product.url }}">
+                                  <div class="product-group-item">
+                                    <div class="product-item-image">
+                                      <img
+                                        alt=""
+                                        decoding="async"
+                                        loading="lazy"
+                                        src="{{ product.featured_image | img_url: 'master' }}"
+                                        width="100%"
+                                        height="100%"
+                                      >
+                                    </div>
+                                    <div class="product-item-text">
+                                      <p class="product-item-tag"></p>
+                                      <p
+                                        class="product-item-name"
+                                        title="{{ product.metafields.custom.short_title |default:product.title | default:"" }}"
+                                      >
+                                        {% if product.metafields.custom.short_title != blank %}
+                                          {{ product.metafields.custom.short_title }}
+                                        {% else %}
+                                          {{ product.title }}
+                                        {% endif -%}
+                                      </p>
+                                    </div>
+                                    {% if product.metafields.custom.product_badge_text != blank %}
+                                      <div class="product-item-badge">
+                                        {{ product.metafields.custom.product_badge_text }}
+                                      </div>
+                                    {% endif %}
+                                  </div>
+                                </a>
+                              {% endfor %}
+                            </div>
+                          </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+
+                {% if link.title == sale_link_title_one %}
+                  <div class="sale-event-page-one" style="display:none">
+                    <div
+                      class="globalNav-submenu-saleWrap"
+                    >
+                      {% for block in section.blocks %}
+                        {% if block.type == 'custom_block_one' %}
+                          <a
+                            aria-label="{{block.settings.option_subtitle_one}}"
+                            class=""
+                            href="{{ block.settings.option_link_one}}"
+                          >
+                            <div class="saleWrap-item">
+                              <div class="saleWrap-image">
+                                <img
+                                  alt=""
+                                  decoding="async"
+                                  loading="eager"
+                                  src="{{ block.settings.option_image_one | img_url:'master' }}"
+                                  width="100%"
+                                  height="100%"
+                                >
+                              </div>
+                              <div class="saleWrap-text">
+                                <h3>{{ block.settings.option_title_one }}</h3>
+                                <p>{{ block.settings.option_subtitle_one }}</p>
+                              </div>
+                            </div>
+                          </a>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                  </div>
+                {% endif %}
+
+                {% if link.title == sale_link_title_two %}
+                  <div class="sale-event-page-two" style="display:none">
+                    <div
+                      class="globalNav-submenu-saleWrap"
+                    >
+                      {% for block in section.blocks %}
+                        {% if block.type == 'custom_block_two' %}
+                          <a
+                            aria-label="{{block.settings.option_subtitle_two}}"
+                            class=""
+                            href="{{ block.settings.option_link_two}}"
+                          >
+                            <div class="saleWrap-item">
+                              <div class="saleWrap-image">
+                                <img
+                                  alt=""
+                                  decoding="async"
+                                  loading="eager"
+                                  src="{{ block.settings.option_image_two | img_url:'master' }}"
+                                  width="100%"
+                                  height="100%"
+                                >
+                              </div>
+                              <div class="saleWrap-text">
+                                <h3>{{ block.settings.option_title_two }}</h3>
+                                <p>{{ block.settings.option_subtitle_two }}</p>
+                              </div>
+                            </div>
+                          </a>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                  </div>
+                {% endif %}
+
+                {% if link.title == sale_link_title_three %}
+                  <div class="sale-event-page-three" style="display:none">
+                    <div
+                      class="globalNav-submenu-saleWrap"
+                    >
+                      {% for block in section.blocks %}
+                        {% if block.type == 'custom_block_three' %}
+                          <a
+                            aria-label="{{block.settings.option_subtitle_three}}"
+                            class=""
+                            href="{{ block.settings.option_link_three}}"
+                          >
+                            <div class="saleWrap-item">
+                              <div class="saleWrap-image">
+                                <img
+                                  alt=""
+                                  decoding="async"
+                                  loading="eager"
+                                  src="{{ block.settings.option_image_three | img_url:'master' }}"
+                                  width="100%"
+                                  height="100%"
+                                >
+                              </div>
+                              <div class="saleWrap-text">
+                                <h3>{{ block.settings.option_title_three }}</h3>
+                                <p>{{ block.settings.option_subtitle_three }}</p>
+                              </div>
+                            </div>
+                          </a>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-right">
+        {% render 'site-switch' %}
+        <nav class="header-ctas" role="navigation">
+          {%- if shop.customer_accounts_enabled -%}
+            {% if routes.account_login_url contains '/account/login' %}
+              {% assign is_contained = true %}
+            {% else %}
+              {% assign is_contained = false %}
+            {% endif %}
+            <!-- customer -->
+            <a
+              href="{{ routes.account_login_url }}"
+              class=""
+              {% if is_contained and customer %}
+                data-open-auth-sidebar
+              {% endif %}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8836 5.6C13.4126 5.6 14.65 6.83585 14.65 8.38001C14.65 9.80162 13.5864 10.9703 12.2092 11.1311C12.094 11.1271 11.9782 11.125 11.8617 11.125C11.7569 11.125 11.6525 11.1267 11.5487 11.13C10.1693 10.9637 9.1 9.78442 9.1 8.38001C9.1 6.85908 10.351 5.6 11.8836 5.6ZM8.91318 11.5889C8.0446 10.7889 7.5 9.64472 7.5 8.38001C7.5 5.97746 9.46534 4 11.8836 4C14.3018 4 16.25 5.95769 16.25 8.38001C16.25 9.65267 15.7078 10.7987 14.8404 11.5976C17.7183 12.5512 19.75 14.8443 19.75 17.52C19.75 21.0505 16.2038 21.625 11.8706 21.625C7.53735 21.625 4 21.0505 4 17.52C4 14.8361 6.02879 12.5372 8.91318 11.5889ZM11.4932 12.7328C7.91197 12.8849 5.6 15.242 5.6 17.52C5.6 18.1226 5.74563 18.4772 5.91542 18.7112C6.09447 18.9579 6.3974 19.2028 6.91754 19.4161C8.02357 19.8698 9.70535 20.025 11.8706 20.025C14.0356 20.025 15.7201 19.8699 16.8288 19.4158C17.3505 19.2022 17.6545 18.9569 17.8341 18.7099C18.0043 18.4759 18.15 18.1217 18.15 17.52C18.15 15.254 15.8327 12.8979 12.2598 12.7341C12.1358 12.7446 12.0103 12.75 11.8836 12.75C11.752 12.75 11.6218 12.7442 11.4932 12.7328Z" fill="#1E1E1E"></path>
+              </svg>
+            </a>
+          {%- endif -%}
+
+          <div class="search">
+            <svg width="16" height="18" viewBox="0 0 16 18" fill="none">
+              <circle cx="7.5" cy="7.5" r="6.7" stroke="#1E1E1E" stroke-width="1.6"></circle><path d="M11.3933 13.1536L14.774 16.5343" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round"></path>
+            </svg>
+          </div>
+
+          <a
+            href="{{ routes.cart_url }}"
+            class="cart"
+            {% if settings.show_quick_cart %}
+              data-cart-sidebar
+            {% endif %}
+          >
+            {% if cart.item_count > 0 %}
+              <span class="count">
+                {%- if cart.item_count < 100 %} {{ cart.item_count }} {% else %} 99+ {% endif -%}
+              </span>
+            {% endif %}
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.66837 7.3C9.66837 5.80883 10.8772 4.6 12.3684 4.6C13.8595 4.6 15.0684 5.80883 15.0684 7.3H9.66837ZM8.06837 7.3C8.06837 4.92518 9.99355 3 12.3684 3C14.7432 3 16.6684 4.92518 16.6684 7.3H18.7362C19.9792 7.3 20.9212 8.42194 20.706 9.64621L19.1022 18.7712C18.9341 19.7276 18.1034 20.425 17.1324 20.425H7.60433C6.63333 20.425 5.80261 19.7276 5.63452 18.7712L4.03074 9.64621C3.81556 8.42194 4.7575 7.3 6.00054 7.3H8.06837ZM5.60658 9.36924C5.56355 9.12439 5.75194 8.9 6.00054 8.9H18.7362C18.9848 8.9 19.1732 9.12439 19.1302 9.36924L17.5264 18.4942C17.4928 18.6855 17.3266 18.825 17.1324 18.825H7.60433C7.41013 18.825 7.24399 18.6855 7.21037 18.4942L5.60658 9.36924Z" fill="#1E1E1E"></path>
+            </svg>
+          </a>
+        </nav>
+
+        <div
+          class="search-modal modal__content p-fixed top-0 bottom-0 left-0 right-0 w-100 h-100v m-zero zi-101 quickSearch home-s-search-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-label="{{ 'general.search.search' | t }}"
+        >
+          <div
+            class="search-modal__content search-modal__content-bottom d-block p-relative maw-100 text-center"
+            tabindex="-1"
+          >
+            <div class="container">
+              <div class="home-s-search-modal__close-button-wrap">
+                <button
+                  type="button"
+                  class="header-search-close button-effect search-modal__close-button link--text focus-inset d-block p-zero home-s-search-modal__close-button"
+                  aria-label="{{ 'accessibility.close' | t }}"
+                >
+                  {% render 'icon-close', class: 'icon icon-close' %}
+                </button>
+              </div>
+              {%- if settings.show_quick_search -%}
+                <predictive-search
+                  class="search-modal__form w-100"
+                  data-loading-text="{{ 'accessibility.loading' | t }}"
+                  data-product-to-show="{{ settings.quick_search_to_show }}"
+                >
+              {%- endif -%}
+              <form
+                action="{{ routes.search_url }}"
+                method="get"
+                role="search"
+                class="search search-modal__form w-100"
+              >
+                <div class="field">
+                  <input
+                    class="search__input field__input form-input-placeholder home-s-search__input"
+                    id="Search-In-Modal-Menu-Utility"
+                    type="search"
+                    name="q"
+                    value="{{ search.terms | escape }}"
+                    placeholder="{{ 'general.search.search' | t }}"
+                    autocomplete="off"
+                    {%- if settings.show_quick_search -%}
+                      role="combobox" aria-expanded="false" aria-owns="predictive-search-results-list"
+                      aria-controls="predictive-search-results-list" aria-haspopup="listbox" aria-autocomplete="list"
+                      autocorrect="off" autocomplete="off" autocapitalize="off"
+                      spellcheck="false"
+                    {%- endif -%}
+                  >
+                  <input type="hidden" name="options[prefix]" value="last">
+                  <input type="hidden" name="type" value="product">
+                  <label class="field__label hiddenLabels" for="Search-In-Modal-Menu-Utility">
+                    {{- 'general.search.search' | t -}}
+                  </label>
+                  <button
+                    class="button search__button field__button focus-inset pr-0 text-right"
+                    aria-label="{{ 'general.search.search' | t }}"
+                  >
+                    {% render 'icon-search' %}
+                  </button>
+                </div>
+                {%- if settings.show_quick_search -%}
+                  {%- if settings.show_search_trending or settings.show_search_product -%}
+                    {%- render 'quick-searching-trending-products', sectionId: 'nav-utility-list-result' -%}
+                  {%- endif -%}
+                  {%- render 'predictive-search-results' -%}
+                {%- endif -%}
+              </form>
+              {%- if settings.show_quick_search -%}
+                </predictive-search>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script
+  defer
+>
+  const sale_link_title_one = '{{ sale_link_title_one }}';
+  const sale_link_title_two = '{{ sale_link_title_two }}';
+  const sale_link_title_three = '{{ sale_link_title_three }}';
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('#home-s-header');
+    const headerSection = header.closest('.shopify-section.shopify-section-group-header-group');
+    if (headerSection) {
+      headerSection.classList.add('home-s-header-wrap-sticky');
+    }
+    function updateHeaderVars() {
+      // 获取header高度和距离顶部距离
+      const headerHeight = document.querySelector('#home-s-header').offsetHeight;
+      const headerTop = document.querySelector('#home-s-header').getBoundingClientRect().top + window.scrollY;
+
+      // 设置CSS变量到.header-mobile元素
+      if (header) {
+        header.style.setProperty('--header-height', `${headerHeight}px`);
+        header.style.setProperty('--activity-bar-height', `${headerTop}px`);
+      }
+    }
+
+    // 初始设置
+    updateHeaderVars();
+
+    // 监听窗口大小变化
+    window.addEventListener('resize', updateHeaderVars);
+  });
+
+  // 指示条
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuItems = document.querySelectorAll('.header-menu-desktop .header-menu-item');
+    const progressLine = document.querySelector('.header-menu-wrap .menu-progress-line-scrollbar');
+    if (progressLine) {
+      // 初始状态隐藏指示条
+      progressLine.style.width = '0';
+    }
+
+    // 添加鼠标悬停事件
+    menuItems.forEach((item, index) => {
+      item.addEventListener('mouseenter', function () {
+        // 设置指示条样式
+        const bounds = this.getBoundingClientRect();
+
+        // 获取菜单项的padding
+        const computedStyle = window.getComputedStyle(this);
+        const paddingLeft = parseFloat(computedStyle.paddingLeft);
+        const paddingRight = parseFloat(computedStyle.paddingRight);
+
+        // 设置指示条的位置和宽度，剔除padding值
+        const width = bounds.width - paddingLeft - paddingRight;
+
+        if (progressLine) {
+          progressLine.style.width = width + 'px';
+          progressLine.style.left = bounds.left + paddingLeft + 'px';
+          progressLine.style.opacity = '1';
+        }
+      });
+    });
+
+    // 鼠标离开指示条隐藏
+    const headerMenu = document.querySelector('.header-menu-desktop');
+    headerMenu.addEventListener('mouseleave', function () {
+      if (progressLine) {
+        progressLine.style.width = '0';
+        progressLine.style.opacity = '0';
+      }
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuItems = document.querySelectorAll('.header-menu-desktop .header-menu-item-has-children');
+    const noMenuItems = document.querySelectorAll('.header-menu-desktop .sale-menu-item');
+    const submenuContent = document.querySelector('.submenu-wrap-content');
+   const submenuItems = document.querySelectorAll('.submenu-wrap-content > div:not(.sale-event-page-one):not(.sale-event-page-two):not(.sale-event-page-three)');
+    const headerMask = document.querySelector('.header-mask');
+    const submenuWrap = document.querySelector('.submenu-wrap');
+    const saleEventPageOne = document.querySelector('.sale-event-page-one');
+    const saleEventPageTwo = document.querySelector('.sale-event-page-two');
+    const saleEventPageThree = document.querySelector('.sale-event-page-three');
+    
+const salePages = [
+  {
+    title: sale_link_title_one.trim(),
+    element: saleEventPageOne
+  },
+  {
+    title: sale_link_title_two.trim(),
+    element: saleEventPageTwo
+  },
+  {
+    title: sale_link_title_three.trim(),
+    element: saleEventPageThree
+  }
+];
+    // 确保初始状态下所有子菜单都处于隐藏状态
+    submenuItems.forEach((item) => {
+      item.style.display = 'none';
+    });
+    //没有子菜单的选项悬停事件
+    noMenuItems.forEach((item, index) => {
+      item.addEventListener('mouseenter', function () {
+        submenuItems.forEach((item) => {
+          item.style.display = 'none';
+        });
+        
+       salePages.forEach(page => {
+           page.element.style.display = 'none';
+  if (page.title === item.textContent.trim()) {
+    page.element.style.display = 'block';
+    submenuWrap.classList.add('active');
+    headerMask.classList.add('active');
+  }
+});
+      
+      });
+       item.addEventListener('mouseleave', function () {
+        submenuWrap.classList.remove('active');
+        headerMask.classList.remove('active');
+      });
+    });
+    // 添加鼠标悬停事件
+    menuItems.forEach((item, index) => {
+      item.addEventListener('mouseenter', function () {
+        // 只有当有对应的子菜单时才显示
+        if (index < submenuItems.length) {
+          // 隐藏所有子菜单
+          submenuItems.forEach((submenu) => {
+            submenu.style.display = 'none';
+          });
+        
+salePages.forEach(page => {
+  if(page && page.element) page.element.style.display = 'none';
+});
+          // 显示当前菜单对应的子菜单
+          submenuItems[index].style.display = 'block';
+          // 显示子菜单容器和遮罩
+          submenuWrap.classList.add('active');
+          headerMask.classList.add('active');
+        } else {
+          // 如果没有对应子菜单，则隐藏整个子菜单区域
+          submenuWrap.classList.remove('active');
+          headerMask.classList.remove('active');
+        }
+      });
+      item.addEventListener('mouseleave', function () {
+        submenuWrap.classList.remove('active');
+        headerMask.classList.remove('active');
+      });
+    });
+
+    // 鼠标离开指示条隐藏
+    const headerMenu = document.querySelector('.header-menu-desktop');
+    headerMenu.addEventListener('mouseleave', function () {
+      submenuWrap.classList.remove('active');
+      headerMask.classList.remove('active');
+    });
+
+    // 鼠标进入子菜单区域时保持显示
+    submenuWrap.addEventListener('mouseenter', function () {
+      submenuWrap.classList.add('active');
+      headerMask.classList.add('active');
+    });
+
+    // 鼠标离开整个菜单区域时隐藏子菜单
+    submenuWrap.addEventListener('mouseleave', function () {
+      submenuWrap.classList.remove('active');
+      headerMask.classList.remove('active');
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // 获取搜索按钮和搜索模态框元素
+    const searchBtn = document.querySelector('#home-s-header .header-ctas .search');
+    const searchModal = document.querySelector('#home-s-header .home-s-search-modal');
+
+    // 添加点击事件监听
+    if (searchBtn && searchModal) {
+      searchBtn.addEventListener('click', function () {
+        searchModal.classList.add('open');
+      });
+    }
+
+    const searchCloseBtn = document.querySelector(
+      '#home-s-header .home-s-search-modal .home-s-search-modal__close-button'
+    );
+    if (searchCloseBtn) {
+      searchCloseBtn.addEventListener('click', function () {
+        searchModal.classList.remove('open');
+      });
+    }
+
+    const homeSSearchModal = document.querySelector('#home-s-header .home-s-search-modal');
+    if (homeSSearchModal) {
+      homeSSearchModal.addEventListener('click', function (e) {
+        if (e.target === homeSSearchModal) {
+          homeSSearchModal.classList.remove('open');
+        }
+      });
+    }
+  });
+</script>
+
+<script
+  defer
+>
+  document.addEventListener('DOMContentLoaded', function () {
+    // 获取所有的submenu-sidebar-list容器
+    const sidebarLists = document.querySelectorAll('.submenu-sidebar-list');
+
+    sidebarLists.forEach(function (sidebarList) {
+      // 获取所有li元素
+      const listItems = sidebarList.querySelectorAll('li');
+      // 获取对应的滚动条元素
+      const scrollbar = sidebarList.closest('.globalNav-submenu-sidebar').querySelector('.submenu-sidebar-scrollbar');
+      // 获取对应的内容视图容器
+      const submenuContent = sidebarList.closest('.globalNav-submenu-content');
+      const viewports = submenuContent ? submenuContent.querySelectorAll('.globalNav-submenu-viewport') : [];
+
+      if (!scrollbar || viewports.length === 0) return;
+
+      // 初始化显示第一个viewport
+      if (viewports.length > 0) {
+        viewports.forEach(function (viewport, i) {
+          viewport.style.display = i === 0 ? 'block' : 'none';
+        });
+      }
+
+      // 为每个li添加鼠标悬停事件
+      listItems.forEach(function (item, index) {
+        item.addEventListener('mouseenter', function () {
+          // 设置scrollbar的transform
+          const itemHeight = item.offsetHeight;
+          const translateY = index * itemHeight;
+          scrollbar.style.transform = `translateY(${translateY}px)`;
+
+          // 切换对应的viewport显示
+          viewports.forEach(function (viewport, i) {
+            viewport.style.display = i === index ? 'block' : 'none';
+          });
+        });
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Home S Header",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "导航菜单",
+      "info": "请选择一个导航菜单"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+  "type": "text",
+  "id": "sale_page_one",
+  "label": "Salepage One",
+},
+      {
+  "type": "text",
+  "id": "sale_page_two",
+  "label": "Salepage Two",
+},
+      {
+  "type": "text",
+  "id": "sale_page_three",
+  "label": "Salepage Tree",
+}
+  ],
+  "blocks": [
+    {
+      "type": "custom_block_one",
+      "name": "活动页配置项一",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "option_image_one",
+          "label": "配置项图片"
+        },
+        {
+          "type": "text",
+          "id": "option_title_one",
+          "label": "配置项标题"
+        },
+        {
+          "type": "text",
+          "id": "option_subtitle_one",
+          "label": "配置项副标题"
+        },
+        {
+          "type": "text",
+          "id": "option_link_one",
+          "label": "配置项链接"
+        }
+      ]
+    },
+    {
+      "type": "custom_block_two",
+      "name": "活动页配置项二",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "option_image_two",
+          "label": "配置项图片"
+        },
+        {
+          "type": "text",
+          "id": "option_title_two",
+          "label": "配置项标题"
+        },
+        {
+          "type": "text",
+          "id": "option_subtitle_two",
+          "label": "配置项副标题"
+        },
+        {
+          "type": "text",
+          "id": "option_link_two",
+          "label": "配置项链接"
+        }
+      ]
+    },{
+      "type": "custom_block_three",
+      "name": "活动页配置项三",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "option_image_three",
+          "label": "配置项图片"
+        },
+        {
+          "type": "text",
+          "id": "option_title_three",
+          "label": "配置项标题"
+        },
+        {
+          "type": "text",
+          "id": "option_subtitle_three",
+          "label": "配置项副标题"
+        },
+        {
+          "type": "text",
+          "id": "option_link_three",
+          "label": "配置项链接"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home S Header 顶部导航栏"
+    }
+  ]
+}
+{% endschema %}

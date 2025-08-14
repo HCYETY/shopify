@@ -1,0 +1,594 @@
+{{ 'swiper.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<style>
+  #container-{{ sid }} .main-content {
+    max-width: 1200px;
+    width: 90%;
+    margin: 1.6vw auto 2.4vw;
+  }
+
+  .consumer-products-list {
+    margin: 1.6vw 0 2.4vw;
+  }
+
+  .consumer-products-list .consumer-products-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6vw;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 0;
+    margin-bottom:1.25vw;
+    color: #262629;
+  }
+  .consumer-products-list .consumer-products-title .consumer-product-navigation {
+    display: flex;
+    align-content: center;
+  }
+  .consumer-products-list .consumer-products-title .consumer-product-navigation div{
+    padding: 0.5vw;
+    border: 2px solid #14a9de;
+    border-radius: 50%;
+    margin-right: 0.3vw;
+  }
+  .consumer-products-list .consumer-products-title .consumer-product-navigation .consumer-button-prev svg {
+    transform: rotate(180deg);
+  }
+  .consumer-products-list .consumer-products-title .consumer-product-navigation .consumer-button-next,
+  .consumer-products-list .consumer-products-title .consumer-product-navigation .consumer-button-prev {
+    cursor: pointer;
+  }
+  .consumer-products-list .consumer-products-title .consumer-product-navigation .disabled {
+    opacity: 0.6;
+  }
+  .consumer-products-list .consumer-product-list {
+    padding-left: calc((100% - 1200px) / 2);
+  }
+  .consumer-products-list .consumer-product-list .consumer-product-item {
+    position: relative;
+    width: 100%;
+    height: 21vw;
+    min-height: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  }
+  .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+  }
+  .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-info {
+    position: absolute;
+    bottom: 1.28vw;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 0 1.28vw;
+    z-index: 6;
+  }
+  .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-info .consumer-item-subtitle {
+    color: var(--sb_color);
+    font-size: var(--sb_fz);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-info .consumer-item-title {
+    margin-top: 8px;
+    font-size: var(--t_fz);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--t_color);
+  }
+  .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-info .consumer-item-description {
+    width:65%;
+    font-size: var(--des_fz);
+    font-weight: 400;
+    height: 36px;
+    line-height: 18px;
+    color: var(--des_color);
+    margin-bottom: 8px;
+    margin-top: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-info .consumer-item-content {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
+  .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-info .consumer-item-content .consumer-item-info {
+    width:65%;
+    font-size: var(--con_fz);
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--con_color);
+  }
+  .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-info .consumer-item-content .consumer-item-price .original-price {
+    color: #a1a1aa;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: line-through;
+  }
+  .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-info .consumer-item-content .consumer-item-btn {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 12px 20px;
+    transition: 0.3s ease;
+    border-radius: 100px;
+    height: 40px;
+    color: var(--btn_color_text);
+    background-color: var(--btn_color_bg);
+    cursor: pointer;
+  }
+  .consumer-products-list .consumer-product-list .in-consumer-play .consumer-product-img {
+    z-index: 4;
+  }
+  .consumer-products-list .consumer-product-list .in-consumer-play .consumer-product-video {
+    z-index: 5;
+  }
+
+  .consumer-product-swiper .swiper-slide {
+    width:30%;
+    margin-right:15px;
+  }
+
+  @media (max-width: 1340px) {
+    .consumer-products-list .consumer-product-list {
+      padding-left:5%;
+    }
+  }
+  
+  @media (max-width: 960px) {
+    .consumer-products-list .consumer-products-title {
+      font-size: 20px;
+    }
+    .consumer-products-list .consumer-product-list {
+      padding-left: 24px;
+    }
+    .consumer-products-list .consumer-product-list .consumer-product-item {
+      width: 100%;
+      height: 400px;
+      border-radius: 16px;
+    }
+    .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-info {
+      bottom: 24px;
+      padding: 0 24px;
+    }
+    .consumer-products-list .consumer-products-title .consumer-product-navigation div{
+      padding: 2.5vw;
+      border: 2px solid #14a9de;
+      border-radius: 50%;
+      margin-right: 1vw;
+    }
+    .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-info .consumer-item-subtitle {
+      font-size: var(--sb_fz_mb);
+    }
+    .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-info .consumer-item-title {
+      font-size: var(--t_fz_mb);
+    }
+    .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-info .consumer-item-description {
+      font-size: var(--des_fz_mb);
+    }
+    .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-info .consumer-item-content .consumer-item-info {
+      font-size: var(--con_fz_mb);
+    }
+    .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-info .consumer-item-content .consumer-item-price .original-price {
+      color: #a1a1aa;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      text-decoration: line-through;
+    }
+    .consumer-products-list .consumer-product-list .consumer-product-item .consumer-product-info .consumer-item-content .consumer-item-btn {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 12px 20px;
+      transition: 0.3s ease;
+      border-radius: 100px;
+      height: 40px;
+      background-color: #fff;
+      cursor: pointer;
+    }
+  }
+</style>
+
+<div id="container-{{ sid }} animate--slide-in" style="--animation-order: 3;">
+  <div class="consumer-products-list">
+    <div class="consumer-products-title main-content">
+      <h2 class="animate--slide-in">{{ se_stts.c_p_title }}</h2>
+
+      <div class="consumer-product-navigation">
+        <div class="consumer-button-prev">
+          <svg t="1732070560064" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5273" width="200" height="200"><path d="M769.216 511.936c0-3.712-1.152-7.232-1.856-10.88-0.64-2.368-0.64-4.8-1.408-7.04a50.56 50.56 0 0 0-11.136-17.344l-417.28-417.28a48.96 48.96 0 0 0-68.992-0.96 48.832 48.832 0 0 0 1.024 68.864L654.208 512l-384.64 384.768a48.768 48.768 0 0 0-1.024 68.8 48.768 48.768 0 0 0 68.864-0.96l417.28-417.344a51.2 51.2 0 0 0 11.136-17.344c0.896-2.304 0.896-4.736 1.472-7.04 0.768-3.648 1.92-7.232 1.92-10.944z" fill="#14a9de" p-id="5274"></path></svg>
+        </div>
+        <div class="consumer-button-next">
+          <svg t="1732070560064" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5273" width="200" height="200"><path d="M769.216 511.936c0-3.712-1.152-7.232-1.856-10.88-0.64-2.368-0.64-4.8-1.408-7.04a50.56 50.56 0 0 0-11.136-17.344l-417.28-417.28a48.96 48.96 0 0 0-68.992-0.96 48.832 48.832 0 0 0 1.024 68.864L654.208 512l-384.64 384.768a48.768 48.768 0 0 0-1.024 68.8 48.768 48.768 0 0 0 68.864-0.96l417.28-417.344a51.2 51.2 0 0 0 11.136-17.344c0.896-2.304 0.896-4.736 1.472-7.04 0.768-3.648 1.92-7.232 1.92-10.944z" fill="#14a9de" p-id="5274"></path></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="consumer-product-list">
+      <div class="consumer-product-swiper swiper-container">
+        <div class="swiper-wrapper">
+          {% for block in se_blocks %}
+            {% assign bl_stts = block.settings %}
+            <div class="swiper-slide animate--slide-in" style="--animation-order: 3;">
+              <div class="consumer-product-item" style="--sb_fz:{{ bl_stts.sb_fz }}px;--sb_color:{{ bl_stts.sb_color }};--sb_fz_mb:{{ bl_stts.sb_fz_mb }}px;--t_fz:{{ bl_stts.t_fz }}px;--t_color:{{ bl_stts.t_color }};--t_fz_mb:{{ bl_stts.t_fz_mb }}px;--des_fz:{{ bl_stts.des_fz }}px;--des_color:{{ bl_stts.des_color }};--des_fz_mb:{{ bl_stts.des_fz_mb }}px;--con_fz:{{ bl_stts.con_fz }}px;--con_color:{{ bl_stts.con_color }};--con_fz_mb:{{ bl_stts.con_fz_mb }}px;--btn_color_bg:{{ bl_stts.btn_color_bg }};--btn_color_text:{{ bl_stts.btn_color_text }};">
+                <div class="consumer-product-img">
+                  <img
+                    srcset="
+                    {%- if bl_stts.video_image.width >= 533 -%}
+                        {{ bl_stts.video_image | img_url: '533x' }} 533w,
+                    {%- endif -%}
+                    {%- if bl_stts.video_image.width >= 534 -%}
+                        {{ bl_stts.video_image | img_url: '534x' }} 534w,
+                    {%- endif -%}
+                    {%- if bl_stts.video_image.width >= 720 -%}
+                        {{ bl_stts.video_image | img_url: '720x' }} 720w,
+                    {%- endif -%}
+                    {%- if bl_stts.video_image.width >= 940 -%}
+                        {{ bl_stts.video_image | img_url: '940x' }} 940w,
+                    {%- endif -%}
+                    {%- if bl_stts.video_image.width >= 1066 -%}
+                        {{ bl_stts.video_image | img_url: '1066x' }} 1066w
+                    {%- endif -%}
+                  "
+                    src="{{ bl_stts.video_image | img_url: '533x' }}"
+                    sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                    alt="{{ bl_stts.video_image.alt | escape }} {{bl_stts.video_image.width}}"
+                    loading="lazy"
+                    class="fit_picture">
+                </div>
+                <div class="consumer-product-video">
+                  <video
+                    muted
+                    preload="auto"
+                    class="video-player">
+                    <source src="{{ bl_stts.video_url }}" type="video/mp4">
+                    Your browser does not support the video TAB, please upgrade your browser.
+                  </video>
+                </div>
+                <div class="consumer-product-info">
+                  <div class="consumer-item-subtitle">{{ bl_stts.sb_text }}</div>
+                  <div class="consumer-item-title">{{ bl_stts.t_text }}</div>
+                  <div class="consumer-item-description">{{ bl_stts.des_text }}</div>
+                  <div class="consumer-item-content">
+                    <div class="consumer-item-info">
+                      {{ bl_stts.con_text }}
+                    </div>
+                    <a href="{{ bl_stts.btn_link }}" class="consumer-item-btn">
+                      {{ bl_stts.btn_text }}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% javascript %}
+        $(function () {
+            const docWidth = document.documentElement.clientWidth;
+            const docHeight = document.documentElement.clientHeight;
+            const vw = docWidth / 100;
+            const vh = docHeight / 100;
+            let spaceBetween = 1.3 * vw;
+
+            let spaceNum = docWidth > 960 ? 0.012 : 0.05
+            let moblieShow = $(window).width() < 960
+            const $consumerSwiper = $('.consumer-product-swiper');
+            const $consumerItem = $consumerSwiper.find('.consumer-product-item');
+            const consumerLength = $consumerItem.length;
+            const $nextBtn = $('.consumer-button-next');
+            const $prevBtn = $('.consumer-button-prev');
+            const swiperOptions = {
+                spaceBetween: docWidth * spaceNum,
+                slidesPerGroup: 1,
+                navigation: {
+                    nextEl: '.consumer-button-next',
+                    prevEl: '.consumer-button-prev'
+                }
+            };
+
+            function handleInPlay(_this) {
+                let $this = _this;
+                let $video = $this.find('.video-player')[0]
+                $this.addClass('in-consumer-play')
+                $video.play()
+
+                // 绑定 ended 事件
+                $video.addEventListener('ended', function () {
+                    $this.removeClass('in-consumer-play');
+                    $video.currentTime = 0;
+                });
+            }
+
+            function updateNavigationButtons(activeIndex) {
+                if (consumerSwiper.isBeginning) {
+                    $prevBtn.addClass('disabled');
+                } else {
+                    $prevBtn.removeClass('disabled');
+                }
+
+                if (consumerSwiper.isEnd) {
+                    $nextBtn.addClass('disabled');
+                } else {
+                    $nextBtn.removeClass('disabled');
+                }
+            }
+
+            if (moblieShow) {
+                swiperOptions.slidesPerView = "auto";
+                swiperOptions.normalizeSlideIndex = false;
+                swiperOptions.slidesPerView = 1.2;
+                swiperOptions.on = {
+                    slideChangeTransitionEnd: function () {
+                        $consumerItem.removeClass('in-consumer-play');
+                        updateNavigationButtons(this.activeIndex);
+                        const $this = $consumerItem.eq(this.activeIndex);
+                        handleInPlay($this);
+                    },
+                };
+
+                handleInPlay($consumerItem.eq(0));
+            } else {
+                swiperOptions.slidesPerView = 3;
+                swiperOptions.on = {
+                    slideChangeTransitionEnd: function () {
+                        updateNavigationButtons(this.activeIndex);
+                    },
+                };
+
+                $consumerItem.on('mouseenter', function () {
+                    handleInPlay($(this))
+                })
+
+                $consumerItem.mouseleave(function () {
+                    $consumerItem.removeClass('in-consumer-play');
+                    const $video = $(this).find('.video-player')[0];
+                    if ($video) {
+                        $video.pause();
+                        $video.currentTime = 0;
+                    }
+                });
+            }
+
+            const consumerSwiper = new Swiper('.consumer-product-swiper', swiperOptions);
+            updateNavigationButtons(0, consumerLength)
+        })
+
+
+{% endjavascript %}
+
+{% schema %}
+  {
+    "name": "Consumer Products List",
+    "settings": [
+      {
+        "id": "c_p_title",
+        "type": "text",
+        "label": "Title",
+        "default": "Consumer Products"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "consumer_products_block",
+        "name": "Consumer Products Block",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Subtitle"
+          },
+          {
+            "id": "sb_text",
+            "type": "text",
+            "label": "Subtitle",
+            "default": "Subtitle"
+          },
+          {
+            "type": "range",
+            "id": "sb_fz",
+            "label": "Subtitle fontSize",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 16
+          },
+          {
+            "type": "color",
+            "id": "sb_color",
+            "label": "Subtitle Color",
+            "default": "#000"
+          }, {
+            "type": "range",
+            "id": "sb_fz_mb",
+            "label": "Subtitle fontSize(mobile)",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 16
+          }, {
+            "type": "header",
+            "content": "Title"
+          }, {
+            "id": "t_text",
+            "type": "text",
+            "label": "Title",
+            "default": "Title"
+          }, {
+            "type": "range",
+            "id": "t_fz",
+            "label": "Title fontSize",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 16
+          }, {
+            "type": "color",
+            "id": "t_color",
+            "label": "Title Color",
+            "default": "#000"
+          }, {
+            "type": "range",
+            "id": "t_fz_mb",
+            "label": "Subtitle fontSize(mobile)",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 16
+          }, {
+            "type": "header",
+            "content": "Description"
+          }, {
+            "id": "des_text",
+            "type": "text",
+            "label": "Description",
+            "default": "Description"
+          }, {
+            "type": "range",
+            "id": "des_fz",
+            "label": "Description fontSize",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 16
+          }, {
+            "type": "color",
+            "id": "des_color",
+            "label": "Description Color",
+            "default": "#000"
+          }, {
+            "type": "range",
+            "id": "des_fz_mb",
+            "label": "Description fontSize(mobile)",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 16
+          }, {
+            "type": "header",
+            "content": "Content"
+          }, {
+            "id": "con_text",
+            "type": "text",
+            "label": "Content",
+            "default": "Content"
+          }, {
+            "type": "range",
+            "id": "con_fz",
+            "label": "Content fontSize",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 16
+          }, {
+            "type": "color",
+            "id": "con_color",
+            "label": "Content Color",
+            "default": "#000"
+          }, {
+            "type": "range",
+            "id": "con_fz_mb",
+            "label": "Content fontSize(mobile)",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 16
+          }, {
+            "type": "header",
+            "content": "Button"
+          }, {
+            "id": "btn_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Button Text"
+          }, {
+            "id": "btn_color_bg",
+            "type": "color",
+            "label": "Button Background Color",
+            "default": "#000"
+          }, {
+            "id": "btn_color_text",
+            "type": "color",
+            "label": "Button Text Color",
+            "default": "#fff"
+          }, {
+            "id": "btn_link",
+            "type": "url",
+            "label": "Button link"
+          }, {
+            "type": "header",
+            "content": "Video"
+          }, {
+            "id": "video_url",
+            "type": "text",
+            "label": "Video URL"
+          }, {
+            "id": "video_image",
+            "type": "image_picker",
+            "label": "Video Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Consumer Products List",
+        "blocks": [
+          {
+            "type": "consumer_products_block"
+          }, {
+            "type": "consumer_products_block"
+          }, {
+            "type": "consumer_products_block"
+          }, {
+            "type": "consumer_products_block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

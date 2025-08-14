@@ -1,0 +1,817 @@
+<link rel="stylesheet" href="{{ 'swiper.css' | asset_url }}">
+<script src="{{ 'swiper.js' | asset_url }}" defer></script>
+
+{% stylesheet %}
+  /* @font-face {
+    font-display: swap;
+    font-family: HarmonyOS_Sans_Bold;
+    font-style: normal;
+    font-weight: 700;
+    src: url(/assets/HarmonyOS_Sans_Bold-A3WLQTVY-BsXoMN6r.woff2) format('woff2'),
+      url(/assets/HarmonyOS_Sans_Bold-KJWYU5R5-7KndVL3J.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: HarmonyOS_Sans_Regular;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/HarmonyOS_Sans_Regular-EQFZLBME-B8g6ZOTm.woff2) format('woff2'),
+      url(/assets/HarmonyOS_Sans_Regular-ZUR42BO6-BHHgWLDZ.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: HarmonyOS_Sans_Medium;
+    font-style: normal;
+    font-weight: 500;
+    src: url(/assets/HarmonyOS_Sans_Medium-B46WIMUV-CtTBqMz4.woff2) format('woff2'),
+      url(/assets/HarmonyOS_Sans_Medium-EA4QGASB-CON-sWCv.ttf) format('ttf');
+  } */
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: var(--color-dark);
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper-body {
+    background-color: #f5f6f7;
+  }
+  .swiper:hover [class*='swiper-button'] {
+    /* opacity: 1; */
+    visibility: visible;
+  }
+
+  [class*='swiper-button'] {
+    /* background: url(/assets/arrows-left-UPM6G7MO-CcPXxOwt.png) no-repeat 50% / cover; */
+    /* opacity: 0; */
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    visibility: hidden;
+    background-color: #1e1e1e;
+    border-radius: 50%;
+  }
+
+  .swiper-button-prev svg,
+  .swiper-button-next svg {
+    fill: none;
+    stroke: #fff;
+  }
+
+  [class*='swiper-button']:after,
+  [class*='swiper-button']:before {
+    display: none;
+  }
+
+  [class*='swiper-button'] .swiper-button-next {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  [class*='swiper-button'].swiper-button-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: auto;
+  }
+  .line-clamp-2 {
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  @media (min-width: 1920px) {
+    .container {
+      margin: 0 auto !important;
+      max-width: 62.5vw !important;
+      width: 62.5vw !important;
+      padding: 0;
+    }
+  }
+  @media (min-width: 901px) and (max-width: 1920px) {
+    .container {
+      padding: 0;
+    }
+  }
+  @media (max-width: 900px) {
+    .container {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      max-width: 100% !important;
+      padding-left: 6.4vw;
+      padding-right: 6.4vw;
+      width: 100% !important;
+    }
+  }
+
+  @media (min-width: 901px) and (max-width: 1920px) {
+    .swiper-list {
+      margin: 48px 0;
+    }
+    .swiper-list .container {
+      padding: 0;
+    }
+
+    .swiper-list .list-wrapper {
+      margin: auto;
+      width: 1200px;
+    }
+
+    .swiper-list .title {
+      font-family: Montserrat;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 120%;
+    }
+
+    .swiper-list [class*='swiper-button'] {
+      height: 56px;
+      width: 56px;
+    }
+
+    .swiper-list .swiper-button-next {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+
+    /* .swiper-list.offset .list-wrapper {
+      margin: 0;
+      width: auto;
+    }
+
+    .swiper-list.offset .swiper {
+      padding: 0 var(--container-margin-left);
+      --swiper-navigation-sides-offset: 2.083vw;
+    } */
+
+    .swiper-list .swiper-wrapper {
+      padding: 24px 0;
+    }
+
+    .swiper-list .swiper-slide {
+      border-radius: 16px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: auto;
+      margin-right: 16px;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+
+    .swiper-list .swiper-slide a {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+    }
+
+    .swiper-list .swiper-slide:last-child {
+      margin-right: 0;
+    }
+
+    .swiper-list .swiper-slide:hover {
+      -webkit-box-shadow: 0 4px 24px #1416201a;
+      box-shadow: 0 4px 24px #1416201a;
+    }
+
+    .swiper-list .swiper-item {
+      background-color: #fff;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 16px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 416px;
+      overflow: hidden;
+      position: relative;
+      width: 288px;
+    }
+
+    .swiper-list .swiper-item .discount-badge {
+      position: absolute;
+      top: 15px;
+      left: 0;
+      padding: 5px 6px 5px 8px;
+      font-size: 12px;
+      line-height: 1;
+      font-weight: bold;
+      z-index: 1;
+      background-color: #fa4f47;
+      text-align: center;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .swiper-list .swiper-item .discount-badge .discount-text {
+      color: #fff;
+    }
+
+    .swiper-list .swiper-item .item-content {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      height: 130px;
+      margin-top: auto;
+      padding: 16px 24px 16px;
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+      -webkit-backdrop-filter: blur(1px);
+      backdrop-filter: blur(1px);
+    }
+
+    .swiper-list .swiper-item .item-title {
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+    }
+
+    .swiper-list .swiper-item .item-desc {
+      color: #bec0c2;
+      font-size: 12px;
+    }
+
+    .swiper-list .swiper-item .money-wrapper {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: auto;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .swiper-list .swiper-item .money-wrapper .product-price-on-sale {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .swiper-list .swiper-item .money-wrapper s {
+      color: #ffffff;
+      font-size: 12px;
+      opacity: 0.6;
+      text-decoration: line-through;
+    }
+
+    .swiper-list .swiper-item .money-wrapper span {
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    .swiper-list .swiper-item .money-wrapper .btn {
+      background-color: #fff;
+      border-radius: 44px;
+      color: #1e1e1e;
+      display: block;
+      font-family: Montserrat;
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 9px;
+      padding: 10px 16px;
+      text-align: center;
+      -webkit-box-flex: 0;
+      -webkit-flex: none;
+      -ms-flex: none;
+      flex: none;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .swiper-list {
+      margin: 6.4vw 0;
+    }
+
+    .swiper-list .container {
+      padding-left: 6.4vw;
+      padding-right: 6.4vw;
+    }
+
+    .swiper-list .title {
+      font-family: Montserrat;
+      font-size: 6.4vw;
+      font-weight: 700;
+    }
+
+    .swiper-list .nav {
+      margin-bottom: 4.2666666667vw;
+    }
+
+    .swiper-list .money {
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .swiper-list .money,
+    .swiper-list .product-price {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .swiper-list .product-price {
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center;
+    }
+
+    .swiper-list .product-price span {
+      color: #ffffff;
+      font-family: Montserrat;
+      font-size: 3.7333333333vw;
+    }
+
+    .swiper-list .product-price .product-price-on-sale {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .swiper-list .product-price .compareAtPrice {
+      color: #ffffff;
+      font-family: Montserrat;
+      font-size: 3.2vw;
+      opacity: 0.6;
+    }
+
+    .swiper-list .blog-image img {
+      height: 48vw;
+      width: 100%;
+    }
+
+    .swiper-list .swiper {
+      padding-left: 6.4vw;
+      padding-right: 6.4vw;
+    }
+
+    .swiper-list .swiper .swiper-slide {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: auto;
+      margin-right: 4.2666666667vw;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+
+    .swiper-list .swiper .swiper-slide:last-child {
+      margin-right: 0;
+    }
+
+    .swiper-list .swiper .swiper-slide a {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+    }
+
+    .swiper-list .swiper .swiper-item {
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 4.2666666667vw;
+      height: 109.8666666667vw;
+      overflow: hidden;
+      width: 76.8vw;
+    }
+
+    .swiper-list .swiper-item .discount-badge {
+      position: absolute;
+      top: 4vw;
+      left: 0;
+      padding: 1.333vw 1.6vw 1.333vw 2.133vw;
+      font-size: 3.2vw;
+      line-height: 1;
+      font-weight: bold;
+      z-index: 1;
+      background-color: #fa4f47;
+      text-align: center;
+      border-radius: 0 0.533vw 0.533vw 0;
+    }
+    .swiper-list .swiper-item .discount-badge .discount-text {
+      color: #fff;
+    }
+
+    .swiper-list .swiper .swiper-item,
+    .swiper-list .swiper .swiper-item .item-content {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .swiper-list .swiper .swiper-item .item-content {
+      height: 40vw;
+      margin-top: auto;
+      padding: 4.2666666667vw 6.4vw;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+      -webkit-backdrop-filter: blur(1px);
+      backdrop-filter: blur(1px);
+    }
+
+    .swiper-list .swiper .swiper-item .item-title {
+      color: #ffffff;
+      font-family: Montserrat;
+      font-size: 5.3333333333vw;
+      margin-bottom: 1.3333333333vw;
+      font-weight: 700;
+    }
+
+    .swiper-list .swiper .swiper-item .item-desc {
+      color: #ffffff;
+      font-size: 3.2vw;
+      margin-bottom: auto;
+    }
+
+    .swiper-list .swiper .swiper-item .money-wrapper {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+
+    .swiper-list .swiper .swiper-item .money-wrapper a {
+      -webkit-box-flex: 0;
+      -webkit-flex: none;
+      -ms-flex: none;
+      flex: none;
+    }
+
+    .swiper-list .swiper .swiper-item .money-wrapper .btn {
+      background-color: #ffffff;
+      border-radius: 11.7333333333vw;
+      color: #1e1e1e;
+      font-family: Montserrat;
+      font-size: 3.2vw;
+      padding: 2.6666666667vw 6.4vw;
+      font-weight: 700;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .swiper-list {
+      margin: 2.5vw 0;
+    }
+
+    .swiper-list .title {
+      font-family: Montserrat;
+      font-size: 1.6666666667vw;
+      line-height: 120%;
+      font-weight: 700;
+    }
+
+    .swiper-list [class*='swiper-button'] {
+      height: 2.9166666667vw;
+      width: 2.9166666667vw;
+    }
+
+    .swiper-list .swiper-button-next {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+
+    .swiper-list .swiper-wrapper {
+      padding: 1.25vw 0;
+    }
+
+    .swiper-list .list-wrapper {
+      margin: auto;
+      width: 62.5vw;
+    }
+
+    /* .swiper-list.offset .list-wrapper {
+        margin: 0;
+        width: auto
+    }
+
+    .swiper-list.offset .swiper {
+        padding: 0 var(--container-margin-left);
+        --swiper-navigation-sides-offset: 2.083vw
+    } */
+
+    .swiper-list .swiper-slide {
+      border-radius: 0.8333333333vw;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: auto;
+      margin-right: 0.8333333333vw;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+
+    .swiper-list .swiper-slide a {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+    }
+
+    .swiper-list .swiper-slide:last-child {
+      margin-right: 0;
+    }
+
+    .swiper-list .swiper-slide:hover {
+      -webkit-box-shadow: 0 0.2083333333vw 1.25vw #1416201a;
+      box-shadow: 0 0.2083333333vw 1.25vw #1416201a;
+    }
+
+    .swiper-list .swiper-item {
+      background-color: #fff;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 0.8333333333vw;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 21.6666666667vw;
+      overflow: hidden;
+      position: relative;
+      width: 15vw;
+    }
+
+    .swiper-list .swiper-item .discount-badge {
+      position: absolute;
+      top: 1.172vw;
+      left: 0;
+      padding: 0.391vw 0.46875vw 0.391vw 0.625vw;
+      font-size: 0.9375vw;
+      border-radius: 0 0.104vw 0.104vw 0;
+      line-height: 1;
+      font-weight: bold;
+      z-index: 1;
+      background-color: #fa4f47;
+      text-align: center;
+    }
+
+    .swiper-list .swiper-item .discount-badge .discount-text {
+      color: #fff;
+    }
+
+    .swiper-list .swiper-item .item-content {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      height: 6.7708333333vw;
+      margin-top: auto;
+      padding: 0.8333333333vw 1.25vw 0.8333333333vw;
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+      -webkit-backdrop-filter: blur(1px);
+      backdrop-filter: blur(1px);
+    }
+
+    .swiper-list .swiper-item .item-title {
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 1.0416666667vw;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+    }
+
+    .swiper-list .swiper-item .item-desc {
+      color: #bec0c2;
+      font-size: 0.625vw;
+    }
+
+    .swiper-list .swiper-item .money-wrapper {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: auto;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .swiper-list .swiper-item .money-wrapper .product-price-on-sale {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .swiper-list .swiper-item .money-wrapper s {
+      color: #ffffff;
+      font-size: 0.625vw;
+      opacity: 0.6;
+      text-decoration: line-through;
+    }
+
+    .swiper-list .swiper-item .money-wrapper span {
+      color: #ffffff;
+      font-size: 0.7291666667vw;
+    }
+
+    .swiper-list .swiper-item .money-wrapper .btn {
+      background-color: #fff;
+      border-radius: 2.2916666667vw;
+      color: #1e1e1e;
+      display: block;
+      font-family: Montserrat;
+      font-size: 0.625vw;
+      font-weight: 700;
+      margin-top: 0.46875vw;
+      padding: 0.5208333333vw 0.8333333333vw;
+      text-align: center;
+      -webkit-box-flex: 0;
+      -webkit-flex: none;
+      -ms-flex: none;
+      flex: none;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+  }
+{% endstylesheet %}
+
+<div id="{{ section.id }}" class="swiper-list">
+  <div class="container">
+    <h2 class="title nav">{{ section.settings.title }}</h2>
+  </div>
+  <div class="list-wrapper">
+    <div class="swiper" id="{{ section.id }}-swiper">
+      <div class="swiper-wrapper">
+        {% for product in section.settings.products %}
+          <div class="swiper-slide">
+            <div
+              class="swiper-item"
+              style="background-image: url({{ product.metafields.custom.home_s_best_sell_image | img_url: 'master' }});"
+            >
+              <div class="item-content">
+                <p class="item-title line-clamp-2">
+                  {% if product.metafields.custom.short_title != blank %}
+                    {{ product.metafields.custom.short_title }}
+                  {% else %}
+                    {{ product.title }}
+                  {% endif -%}
+                </p>
+                <p class="item-desc line-clamp-2">{{ product.metafields.custom.product_description }}</p>
+                <div class="money-wrapper">
+                  <div class="money">
+                    <div class="product-price">
+                      {% if product.compare_at_price > product.price %}
+                        <div class="product-price-on-sale">
+                          <s class="compareAtPrice">{{ product.compare_at_price | money }}</s>
+                          <span class="price">{{ product.price | money }}</span>
+                        </div>
+                      {% else %}
+                        <span class="price">{{ product.price | money }}</span>
+                      {% endif %}
+                    </div>
+                  </div>
+                  <a data-discover="true" class="btn" href="{{ product.url }}">Buy Now</a>
+                </div>
+              </div>
+              {% comment %}
+                {% if product.compare_at_price > product.price %}
+                  <div class="discount-badge">
+                    {% assign discount_amount = product.compare_at_price | minus: product.price %}
+                    {% assign discount_percentage = discount_amount | times: 100 | divided_by: product.compare_at_price %}
+                    <p class="discount-text">-{{ discount_percentage }}%</p>
+                  </div>
+                {% endif %}
+              {% endcomment %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div id="{{ section.id }}-swiper-button-prev" class="swiper-button-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M12.9165 3.3335L6.24984 10.0002L12.9165 16.6668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div id="{{ section.id }}-swiper-button-next" class="swiper-button-next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M12.9165 3.3335L6.24984 10.0002L12.9165 16.6668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script defer>
+  function init() {
+    if (typeof Swiper !== 'undefined') {
+      swiper = new Swiper('#{{ section.id }}-swiper', {
+        slidesPerView: 'auto',
+        navigation: {
+          nextEl: '#{{ section.id }}-swiper-button-next',
+          prevEl: '#{{ section.id }}-swiper-button-prev',
+        },
+      });
+    } else {
+      console.error('Swiper库未加载成功');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
+
+  // shopify block load
+  document.addEventListener('shopify:block:load', init);
+</script>
+
+{% schema %}
+{
+  "name": "Home S Best Sell",
+  "settings": [
+    {
+      "type": "product_list",
+      "id": "products",
+      "label": "产品列表"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "Best Selling Products"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home S Best Sell"
+    }
+  ]
+}
+{% endschema %}

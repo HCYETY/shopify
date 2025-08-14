@@ -1,0 +1,139 @@
+{% render 'blog-category' %} 
+
+{% schema %}
+{
+  "name": "Blog classification",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:settings_schema.general.name"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_pc",
+      "label": "pc端主图"
+    },
+		{
+      "type": "image_picker",
+      "id": "banner_mb",
+      "label": "移动端主图"
+    },
+    {
+      "type": "text",
+      "id": "study_link",
+      "label": "链接1"
+    },
+    {
+      "type": "text",
+      "id": "study_link2",
+      "label": "链接2"
+    },
+    {
+      "type": "text",
+      "id": "study_link3",
+      "label": "链接3"
+    },
+    {
+      "type": "text",
+      "id": "study_link4",
+      "label": "链接4"
+    },
+    {
+      "type": "text",
+      "id": "study_link5",
+      "label": "链接5"
+    },
+    {
+      "type": "text",
+      "id": "study_link6",
+      "label": "链接6"
+    },
+    {
+      "type": "collection",
+      "id": "hot_sale_collection",
+      "label": "热销商品专辑"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.layout.margin_top"
+    },
+    {
+      "type": "range",
+      "id": "mg_top_desktop",
+      "label": "t:sections.layout.mg_desktop.label",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mg_top_tablet",
+      "label": "t:sections.layout.mg_tablet.label",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mg_top_mobile",
+      "label": "t:sections.layout.mg_mobile.label",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:sections.layout.margin_bottom"
+    },
+    {
+      "type": "range",
+      "id": "mg_bottom_desktop",
+      "label": "t:sections.layout.mg_desktop.label",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mg_bottom_tablet",
+      "label": "t:sections.layout.mg_tablet.label",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mg_bottom_mobile",
+      "label": "t:sections.layout.mg_mobile.label",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "t:sections.layout.mg_desktop.unit",
+      "default": 0 
+    }
+  ],
+  "blocks": [
+    {
+      "name": "博客数据",
+      "type": "blog",
+      "settings": [
+        {
+          "type": "text",
+          "id": "blog_name",
+          "label": "博客名称"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

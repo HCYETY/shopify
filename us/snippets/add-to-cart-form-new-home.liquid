@@ -1,0 +1,100 @@
+{%- liquid
+    assign sold_out = false
+    if product.available == false
+        assign sold_out = true
+    endif
+
+    assign variantCount = product.variants | size
+    assign option_name = product.options_with_values[0].name | downcase
+    assign product_swatch_option = settings.swatch | downcase
+
+    assign has_popup = false
+
+    if product.options_with_values.size == 1 and product_swatch_option contains option_name and settings.quick_shop_type == '1'
+        if settings.show_swatch
+            assign has_popup = false
+        else
+            assign has_popup = true
+        endif
+    else
+        assign has_popup = true
+    endif
+-%}
+<form action="{{ routes.cart_url }}/add" method="post" class="variants" id="{{ id }}-{{ product.id }}-{{ sectionId }}{% if check %}-list{% endif %}" data-product-id="{{ product.id }}" enctype="multipart/form-data">
+    {%- if sold_out -%}
+        {%- if settings.show_notify_form -%}
+            <a class="button button-ATC is-notify-me" href="{{ product.url }}" data-btn-addToCart>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.66837 7.3C9.66837 5.80883 10.8772 4.6 12.3684 4.6C13.8595 4.6 15.0684 5.80883 15.0684 7.3H9.66837ZM8.06837 7.3C8.06837 4.92518 9.99355 3 12.3684 3C14.7432 3 16.6684 4.92518 16.6684 7.3H18.7362C19.9792 7.3 20.9212 8.42194 20.706 9.64621L19.1022 18.7712C18.9341 19.7276 18.1034 20.425 17.1324 20.425H7.60433C6.63333 20.425 5.80261 19.7276 5.63452 18.7712L4.03074 9.64621C3.81556 8.42194 4.7575 7.3 6.00054 7.3H8.06837ZM5.60658 9.36924C5.56355 9.12439 5.75194 8.9 6.00054 8.9H18.7362C18.9848 8.9 19.1732 9.12439 19.1302 9.36924L17.5264 18.4942C17.4928 18.6855 17.3266 18.825 17.1324 18.825H7.60433C7.41013 18.825 7.24399 18.6855 7.21037 18.4942L5.60658 9.36924Z" fill="#1E1E1E"></path>
+              </svg>
+            </a>
+        {%- else -%}
+            <a class="button button-ATC" href="{{ product.url }}" disabled="disabled">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.66837 7.3C9.66837 5.80883 10.8772 4.6 12.3684 4.6C13.8595 4.6 15.0684 5.80883 15.0684 7.3H9.66837ZM8.06837 7.3C8.06837 4.92518 9.99355 3 12.3684 3C14.7432 3 16.6684 4.92518 16.6684 7.3H18.7362C19.9792 7.3 20.9212 8.42194 20.706 9.64621L19.1022 18.7712C18.9341 19.7276 18.1034 20.425 17.1324 20.425H7.60433C6.63333 20.425 5.80261 19.7276 5.63452 18.7712L4.03074 9.64621C3.81556 8.42194 4.7575 7.3 6.00054 7.3H8.06837ZM5.60658 9.36924C5.56355 9.12439 5.75194 8.9 6.00054 8.9H18.7362C18.9848 8.9 19.1732 9.12439 19.1302 9.36924L17.5264 18.4942C17.4928 18.6855 17.3266 18.825 17.1324 18.825H7.60433C7.41013 18.825 7.24399 18.6855 7.21037 18.4942L5.60658 9.36924Z" fill="#1E1E1E"></path>
+              </svg>
+            </a>
+        {%- endif -%}
+    {%- else -%}
+        {%- if variantCount > 1 and product.variants.first.title != 'Default Title' -%}
+           {%- if settings.show_quick_shop -%}
+                {%- if product.options_with_values.size == 1 and product_swatch_option contains option_name and settings.quick_shop_type == '1' -%}
+                    <input type="hidden" name="id" value="{{ product.variants[0].id }}" />
+                    <input type="hidden" name="quantity" value="1" />
+                    <button class="button button-ATC" type="submit" data-form-id="#{{ id }}-{{ product.id }}-{{ sectionId }}" data-btn-addToCart>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.66837 7.3C9.66837 5.80883 10.8772 4.6 12.3684 4.6C13.8595 4.6 15.0684 5.80883 15.0684 7.3H9.66837ZM8.06837 7.3C8.06837 4.92518 9.99355 3 12.3684 3C14.7432 3 16.6684 4.92518 16.6684 7.3H18.7362C19.9792 7.3 20.9212 8.42194 20.706 9.64621L19.1022 18.7712C18.9341 19.7276 18.1034 20.425 17.1324 20.425H7.60433C6.63333 20.425 5.80261 19.7276 5.63452 18.7712L4.03074 9.64621C3.81556 8.42194 4.7575 7.3 6.00054 7.3H8.06837ZM5.60658 9.36924C5.56355 9.12439 5.75194 8.9 6.00054 8.9H18.7362C18.9848 8.9 19.1732 9.12439 19.1302 9.36924L17.5264 18.4942C17.4928 18.6855 17.3266 18.825 17.1324 18.825H7.60433C7.41013 18.825 7.24399 18.6855 7.21037 18.4942L5.60658 9.36924Z" fill="#1E1E1E"></path>
+                      </svg>
+                    </button>
+                {%- else -%}
+                    <a class="button button-ATC" href="{{ product.url }}" data-quickshop-popup data-product-handle="{{ product.handle }}">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.66837 7.3C9.66837 5.80883 10.8772 4.6 12.3684 4.6C13.8595 4.6 15.0684 5.80883 15.0684 7.3H9.66837ZM8.06837 7.3C8.06837 4.92518 9.99355 3 12.3684 3C14.7432 3 16.6684 4.92518 16.6684 7.3H18.7362C19.9792 7.3 20.9212 8.42194 20.706 9.64621L19.1022 18.7712C18.9341 19.7276 18.1034 20.425 17.1324 20.425H7.60433C6.63333 20.425 5.80261 19.7276 5.63452 18.7712L4.03074 9.64621C3.81556 8.42194 4.7575 7.3 6.00054 7.3H8.06837ZM5.60658 9.36924C5.56355 9.12439 5.75194 8.9 6.00054 8.9H18.7362C18.9848 8.9 19.1732 9.12439 19.1302 9.36924L17.5264 18.4942C17.4928 18.6855 17.3266 18.825 17.1324 18.825H7.60433C7.41013 18.825 7.24399 18.6855 7.21037 18.4942L5.60658 9.36924Z" fill="#1E1E1E"></path>
+                      </svg>
+                    </a>
+                  {%- endif -%}
+            {%- else -%}
+                <a class="button button-ATC" href="{{ product.url }}">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.66837 7.3C9.66837 5.80883 10.8772 4.6 12.3684 4.6C13.8595 4.6 15.0684 5.80883 15.0684 7.3H9.66837ZM8.06837 7.3C8.06837 4.92518 9.99355 3 12.3684 3C14.7432 3 16.6684 4.92518 16.6684 7.3H18.7362C19.9792 7.3 20.9212 8.42194 20.706 9.64621L19.1022 18.7712C18.9341 19.7276 18.1034 20.425 17.1324 20.425H7.60433C6.63333 20.425 5.80261 19.7276 5.63452 18.7712L4.03074 9.64621C3.81556 8.42194 4.7575 7.3 6.00054 7.3H8.06837ZM5.60658 9.36924C5.56355 9.12439 5.75194 8.9 6.00054 8.9H18.7362C18.9848 8.9 19.1732 9.12439 19.1302 9.36924L17.5264 18.4942C17.4928 18.6855 17.3266 18.825 17.1324 18.825H7.60433C7.41013 18.825 7.24399 18.6855 7.21037 18.4942L5.60658 9.36924Z" fill="#1E1E1E"></path>
+                  </svg>
+                </a>
+            {%- endif -%}
+        {%- else -%}
+            <input type="hidden" name="id" value="{{ product.variants[0].id }}" />
+            <input type="hidden" name="quantity" value="1" />
+            {%- liquid
+                assign current_variant_grid = product.selected_or_first_available_variant
+                assign first_inventory_grid = current_variant_grid.inventory_quantity
+            -%}
+            {%- if current_variant_grid.inventory_management -%}
+                <button type="submit" name="add" data-btn-addToCart data-available="{{ allowOutStockSale }}" class="product-form__submit button" id="product-add-to-cart">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.66837 7.3C9.66837 5.80883 10.8772 4.6 12.3684 4.6C13.8595 4.6 15.0684 5.80883 15.0684 7.3H9.66837ZM8.06837 7.3C8.06837 4.92518 9.99355 3 12.3684 3C14.7432 3 16.6684 4.92518 16.6684 7.3H18.7362C19.9792 7.3 20.9212 8.42194 20.706 9.64621L19.1022 18.7712C18.9341 19.7276 18.1034 20.425 17.1324 20.425H7.60433C6.63333 20.425 5.80261 19.7276 5.63452 18.7712L4.03074 9.64621C3.81556 8.42194 4.7575 7.3 6.00054 7.3H8.06837ZM5.60658 9.36924C5.56355 9.12439 5.75194 8.9 6.00054 8.9H18.7362C18.9848 8.9 19.1732 9.12439 19.1302 9.36924L17.5264 18.4942C17.4928 18.6855 17.3266 18.825 17.1324 18.825H7.60433C7.41013 18.825 7.24399 18.6855 7.21037 18.4942L5.60658 9.36924Z" fill="#1E1E1E"></path>
+                  </svg>
+                </button>
+            {%- else -%}
+                <button type="submit" name="add" data-btn-addToCart class="product-form__submit button" id="product-add-to-cart">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.66837 7.3C9.66837 5.80883 10.8772 4.6 12.3684 4.6C13.8595 4.6 15.0684 5.80883 15.0684 7.3H9.66837ZM8.06837 7.3C8.06837 4.92518 9.99355 3 12.3684 3C14.7432 3 16.6684 4.92518 16.6684 7.3H18.7362C19.9792 7.3 20.9212 8.42194 20.706 9.64621L19.1022 18.7712C18.9341 19.7276 18.1034 20.425 17.1324 20.425H7.60433C6.63333 20.425 5.80261 19.7276 5.63452 18.7712L4.03074 9.64621C3.81556 8.42194 4.7575 7.3 6.00054 7.3H8.06837ZM5.60658 9.36924C5.56355 9.12439 5.75194 8.9 6.00054 8.9H18.7362C18.9848 8.9 19.1732 9.12439 19.1302 9.36924L17.5264 18.4942C17.4928 18.6855 17.3266 18.825 17.1324 18.825H7.60433C7.41013 18.825 7.24399 18.6855 7.21037 18.4942L5.60658 9.36924Z" fill="#1E1E1E"></path>
+                  </svg>
+                </button>
+            {%- endif -%}
+{%- endif -%}
+    {%- endif -%}
+</form>
+{%- if settings.show_quick_shop and product.available -%}
+    {%- if variantCount > 1 and product.variants.first.title != 'Default Title' -%}
+        {%- if has_popup -%}
+            <div class="variants-popup custom-scrollbar">
+                {% render 'product-quick-shop-popup',
+                    product: product,
+                    id: id,
+                    list: list,
+                    position: position,
+                    sectionId: sectionId 
+                %}
+            </div>
+        {%- endif -%}
+    {%- endif -%}
+{%- endif -%}

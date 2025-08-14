@@ -1,0 +1,1087 @@
+<style>
+  @charset "UTF-8";
+  img {
+    vertical-align: middle;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .common-title {
+    text-align: center;
+    font-size: 1.667vw;
+    color: #FF4200;
+    font-weight: 600;
+    margin-bottom: 0.833vw;
+  }
+
+  .common-subtitle {
+    font-size: 1.25vw;
+    color: #666666;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .content {
+    width: 62.5vw;
+    margin: 0 auto;
+  }
+
+  .section1 .banner-img {
+    width: 100%;
+    vertical-align: middle;
+  }
+
+  .seciont2 {
+    background-color: #FFD0AB;
+    padding: 4.167vw 0 3.125vw 0;
+  }
+
+  .section3 {
+    background-color: #FFE1C8;
+    padding: 3.125vw 0;
+  }
+  .section3 .content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 72.917vw;
+    margin: 0 auto;
+  }
+  .section3 .content .title {
+    font-size: 1.458vw;
+    font-weight: 600;
+    padding-left: 0.521vw;
+    margin-bottom: 0.833vw;
+  }
+  .section3 .content .left-box {
+    padding-right: 1.042vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26.042vw;
+  }
+  .section3 .content .right-box {
+    width: 46.875vw;
+  }
+  .section3 .content .right-box .swiper-banners {
+    padding-bottom: 1.302vw;
+  }
+  .section3 .content .right-box .swiper-banners .slide-img {
+    width: 100%;
+  }
+  .section3 .content .right-box .swiper-banners .swiper-pagination {
+    bottom: 0;
+  }
+  .section3 .content .right-box .swiper-banners .swiper-pagination-bullet {
+    width: 0.625vw;
+    height: 0.625vw;
+    text-align: center;
+    color: #000;
+    opacity: 1;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+  .section3 .content .right-box .swiper-banners .swiper-pagination-bullet-active {
+    width: 2.344vw;
+    color: #ffffff;
+    background: #FF4E00;
+    border-radius: 1.042vw;
+    -webkit-border-radius: 1.042vw;
+    -moz-border-radius: 1.042vw;
+    -ms-border-radius: 1.042vw;
+    -o-border-radius: 1.042vw;
+  }
+  .section3 .content .b-box {
+    margin-top: 1.563vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .section3 .content .b-box .b-item:first-child {
+    margin-right: 1.563vw;
+  }
+  .section3 .content .b-box .b-item {
+    flex: 1;
+  }
+  .section3 .content .b-box .b-item .b-img {
+    width: 100%;
+  }
+
+  .section4 {
+    padding: 3.125vw 0;
+    background: linear-gradient(to bottom, #FFD1AB, #FFB0AF);
+  }
+  .section4 .card-list-one .title {
+    min-height: 1.563vw;
+    position: relative;
+  }
+  .section4 .card-list-one .title .item-title {
+    position: absolute;
+    top: 0vw;
+    left: 0;
+    font-size: 1.458vw;
+    font-weight: bold;
+    z-index: 10;
+  }
+  .section4 .card-list-one .title:after {
+    content: "";
+    position: absolute;
+    bottom: -0.26vw;
+    left: 0;
+    width: 5.208vw;
+    height: 0.625vw;
+    z-index: 0;
+    background-color: #FF4200;
+    border-radius: 0.521vw;
+    -webkit-border-radius: 0.521vw;
+    -moz-border-radius: 0.521vw;
+    -ms-border-radius: 0.521vw;
+    -o-border-radius: 0.521vw;
+  }
+  .section4 .card-list-one .title2 {
+    margin-top: 1.042vw;
+    min-height: 1.563vw;
+    position: relative;
+  }
+  .section4 .card-list-one .title2 .item-title {
+    position: absolute;
+    top: 0vw;
+    right: 0;
+    font-size: 1.458vw;
+    font-weight: bold;
+    z-index: 10;
+  }
+  .section4 .card-list-one .title2:after {
+    content: "";
+    position: absolute;
+    bottom: -0.26vw;
+    right: 0;
+    width: 5.208vw;
+    height: 0.625vw;
+    z-index: 0;
+    background-color: #FF4200;
+    border-radius: 0.521vw;
+    -webkit-border-radius: 0.521vw;
+    -moz-border-radius: 0.521vw;
+    -ms-border-radius: 0.521vw;
+    -o-border-radius: 0.521vw;
+  }
+  .section4 .card-list-one .listing {
+    display: flex;
+    margin-top: 2.083vw;
+  }
+  .section4 .card-list-one .listing .listing-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 1.563vw;
+  }
+  .section4 .card-list-one .listing .listing-item:last-child {
+    margin-right: 0;
+  }
+  .section4 .card-list-one .listing .listing-item .card-title {
+    text-align: center;
+    font-size: 0.938vw;
+    font-weight: bold;
+    margin-bottom: 1.042vw;
+  }
+  .section4 .card-list-one .listing .listing-item .img-wrap {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    overflow: hidden;
+    border-radius: 0.781vw;
+    -webkit-border-radius: 0.781vw;
+    -moz-border-radius: 0.781vw;
+    -ms-border-radius: 0.781vw;
+    -o-border-radius: 0.781vw;
+  }
+  .section4 .card-list-one .listing .listing-item .img-wrap .card-img {
+    width: 100%;
+  }
+  .section4 .card-list-one .listing .listing-item .img-wrap .card-describe {
+    font-size: 0.833vw;
+    flex: 1;
+    background-color: #ffffff;
+    padding: 1.042vw;
+  }
+  .section4 .card-list-tow {
+    margin-top: 3.125vw;
+  }
+  .section4 .card-list-tow .item-title {
+    font-size: 1.458vw;
+    font-weight: 500;
+  }
+  .section4 .card-list-tow .item-title2 {
+    font-size: 1.458vw;
+    font-weight: 500;
+    text-align: right;
+  }
+  .section4 .card-list-tow .swiper-shop1, .section4 .card-list-tow .swiper-shop2 {
+    margin-top: 1.042vw;
+  }
+  .section4 .card-list-tow .shop-item {
+    position: relative;
+    border-radius: 0.521vw;
+    overflow: hidden;
+  }
+  .section4 .card-list-tow .shop-item:last-child {
+    margin-right: 0;
+  }
+  .section4 .card-list-tow .shop-item .shop-img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .section4 .card-list-tow .shop-item .discount {
+    position: absolute;
+    top: 0;
+    left: 0.833vw;
+  }
+  .section4 .card-list-tow .shop-item .discount .discount-img {
+    width: 2.865vw;
+  }
+  .section4 .card-list-tow .shop-item .discount .save-box {
+    text-align: center;
+    padding: 0 0.26vw;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .section4 .card-list-tow .shop-item .discount .save-box .discount-rate {
+    font-size: 0.938vw;
+    font-weight: 600;
+    margin-bottom: 0.208vw;
+  }
+  .section4 .card-list-tow .shop-item .discount .save-box .off {
+    font-size: 0.833vw;
+  }
+  .section4 .card-list-tow .shop-item .shop-info {
+    color: #737373;
+    padding: 0.521vw 0.833vw;
+    background-color: #ffffff;
+  }
+  .section4 .card-list-tow .shop-item .shop-info .shop-title {
+    font-size: 1.25vw;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 限制文本行数 */
+    -webkit-box-orient: vertical;
+  }
+  .section4 .card-list-tow .shop-item .shop-info .buying-point {
+    margin-top: 0.26vw;
+    font-size: 0.938vw;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 限制文本行数 */
+    -webkit-box-orient: vertical;
+  }
+  .section4 .card-list-tow .shop-item .shop-info .price {
+    margin: 0.521vw 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .section4 .card-list-tow .shop-item .shop-info .price .now-price {
+    font-size: 1.25vw;
+    font-weight: 600;
+    color: #FF4200;
+  }
+  .section4 .card-list-tow .shop-item .shop-info .price .old-price {
+    font-size: 0.938vw;
+  }
+  .section4 .card-list-tow .shop-item .shop-info .buy-wrap {
+    cursor: pointer;
+    display: flex;
+    border-radius: 5.208vw;
+    border: 0.104vw solid #FF4200;
+    overflow: hidden;
+  }
+  .section4 .card-list-tow .shop-item .shop-info .buy-wrap .icon {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.146vw;
+    font-weight: 600;
+    position: relative;
+    background-color: #ffffff;
+    color: #FF4200;
+    height: 2.5vw;
+  }
+  .section4 .card-list-tow .shop-item .shop-info .buy-wrap .buy-btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5vw;
+    background-color: #FF4200;
+    color: #ffffff;
+    font-size: 1.146vw;
+    font-weight: 600;
+  }
+
+  @media (min-width: 768px) {
+    #app-{{section.id}} .pc {
+      display: block;
+    }
+    #app-{{section.id}} .mb {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    #app-{{section.id}} .pc {
+      display: none;
+    }
+    #app-{{section.id}} .mb {
+      display: block;
+    }
+    .common-title {
+      padding: 0 4.267vw;
+      text-align: center;
+      font-size: 5.467vw;
+      color: #000000;
+      font-weight: 600;
+      margin-bottom: 4.267vw;
+    }
+    .common-subtitle {
+      padding: 0 4.267vw;
+      font-size: 3.733vw;
+      color: #666666;
+      font-weight: 400;
+      text-align: center;
+    }
+    .content {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 4.267vw;
+      box-sizing: border-box;
+    }
+    .section1 .banner-img {
+      width: 100%;
+      vertical-align: middle;
+    }
+    .seciont2 {
+      background-color: #FFD0AB;
+      padding: 21.333vw 0 16vw 0;
+    }
+    .section3 {
+      background-color: #FFE1C8;
+      padding: 8vw 0;
+    }
+    .section3 .content {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .section3 .content .title {
+      font-size: 4.8vw;
+      font-weight: 600;
+      padding-left: 2.667vw;
+      margin-bottom: 2.667vw;
+      margin-top: 2.667vw;
+    }
+    .section3 .content .left-box {
+      padding-right: 5.333vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .section3 .content .right-box {
+      width: 100%;
+    }
+    .section3 .content .right-box .swiper-banners {
+      padding-bottom: 6.667vw;
+    }
+    .section3 .content .right-box .swiper-banners .slide-img {
+      width: 100%;
+    }
+    .section3 .content .right-box .swiper-banners .swiper-pagination {
+      bottom: 0;
+    }
+    .section3 .content .right-box .swiper-banners .swiper-pagination-bullet {
+      width: 3.2vw;
+      height: 3.2vw;
+      text-align: center;
+      color: #000;
+      opacity: 1;
+      background: #ffffff;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+    }
+    .section3 .content .right-box .swiper-banners .swiper-pagination-bullet-active {
+      width: 12vw;
+      color: #ffffff;
+      background: #FF4E00;
+      border-radius: 5.333vw;
+      -webkit-border-radius: 5.333vw;
+      -moz-border-radius: 5.333vw;
+      -ms-border-radius: 5.333vw;
+      -o-border-radius: 5.333vw;
+    }
+    .section3 .content .b-box {
+      margin-top: 2.667vw;
+      display: block;
+    }
+    .section3 .content .b-box .b-item:first-child {
+      margin-right: 0vw;
+    }
+    .section3 .content .b-box .b-item {
+      width: 100%;
+    }
+    .section3 .content .b-box .b-item .b-img {
+      width: 100%;
+    }
+    .section4 {
+      padding: 8vw 0;
+      background: linear-gradient(to bottom, #FFD1AB, #FFB0AF);
+    }
+    .section4 .card-list-one .title {
+      min-height: 5.333vw;
+      position: relative;
+    }
+    .section4 .card-list-one .title .item-title {
+      position: absolute;
+      top: 0vw;
+      left: 0;
+      font-size: 4.8vw;
+      font-weight: bold;
+      z-index: 10;
+    }
+    .section4 .card-list-one .title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 21.333vw;
+      height: 2.133vw;
+      z-index: 0;
+      background-color: #FF4200;
+      border-radius: 2.667vw;
+      -webkit-border-radius: 2.667vw;
+      -moz-border-radius: 2.667vw;
+      -ms-border-radius: 2.667vw;
+      -o-border-radius: 2.667vw;
+    }
+    .section4 .card-list-one .title2 {
+      margin-top: 5.333vw;
+      min-height: 8vw;
+      position: relative;
+    }
+    .section4 .card-list-one .title2 .item-title {
+      position: absolute;
+      top: 0vw;
+      right: 0;
+      font-size: 4.8vw;
+      font-weight: bold;
+      z-index: 10;
+    }
+    .section4 .card-list-one .title2:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 21.333vw;
+      height: 2.133vw;
+      z-index: 0;
+      background-color: #FF4200;
+      border-radius: 2.667vw;
+      -webkit-border-radius: 2.667vw;
+      -moz-border-radius: 2.667vw;
+      -ms-border-radius: 2.667vw;
+      -o-border-radius: 2.667vw;
+    }
+    .section4 .card-list-one .listing {
+      display: block;
+      margin-top: 5.333vw;
+    }
+    .section4 .card-list-one .listing .listing-item {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      margin-right: 0vw;
+      margin-bottom: 5.333vw;
+    }
+    .section4 .card-list-one .listing .listing-item:last-child {
+      margin-right: 0;
+    }
+    .section4 .card-list-one .listing .listing-item .card-title {
+      text-align: left;
+      font-size: 4.267vw;
+      font-weight: 500;
+      margin-bottom: 1.6vw;
+    }
+    .section4 .card-list-one .listing .listing-item .img-wrap {
+      display: flex;
+      flex-direction: row;
+      border-radius: 2.667vw;
+      overflow: hidden;
+    }
+    .section4 .card-list-one .listing .listing-item .img-wrap .card-img {
+      width: 34.667vw;
+      object-fit: cover;
+    }
+    .section4 .card-list-one .listing .listing-item .img-wrap .card-describe {
+      display: flex;
+      align-items: center;
+      font-size: 3.2vw;
+      background-color: #ffffff;
+      padding: 2.133vw;
+    }
+    .section4 .card-list-tow {
+      margin-top: 16vw;
+    }
+    .section4 .card-list-tow .item-title {
+      font-size: 5.333vw;
+      font-weight: 500;
+    }
+    .section4 .card-list-tow .item-title2 {
+      font-size: 5.333vw;
+      font-weight: 500;
+      text-align: right;
+    }
+    .section4 .card-list-tow .shop-item {
+      flex: 1;
+      margin-bottom: 2.667vw;
+      position: relative;
+      border-radius: 2.667vw;
+      overflow: hidden;
+    }
+    .section4 .card-list-tow .shop-item:last-child {
+      margin-right: 0;
+    }
+    .section4 .card-list-tow .shop-item .shop-img {
+      width: 100%;
+      object-fit: cover;
+    }
+    .section4 .card-list-tow .shop-item .discount {
+      position: absolute;
+      top: 0;
+      left: 4.267vw;
+    }
+    .section4 .card-list-tow .shop-item .discount .discount-img {
+      width: 10.667vw;
+    }
+    .section4 .card-list-tow .shop-item .discount .save-box {
+      text-align: center;
+      padding: 0 1.333vw;
+      color: #ffffff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    .section4 .card-list-tow .shop-item .discount .save-box .discount-rate {
+      font-size: 4.267vw;
+      font-weight: 600;
+      margin-bottom: 0.533vw;
+    }
+    .section4 .card-list-tow .shop-item .discount .save-box .off {
+      font-size: 3.467vw;
+    }
+    .section4 .card-list-tow .shop-item .shop-info {
+      color: #737373;
+      padding: 1.067vw 2.667vw;
+      background-color: #ffffff;
+    }
+    .section4 .card-list-tow .shop-item .shop-info .shop-title {
+      font-size: 4.267vw;
+      font-weight: 600;
+    }
+    .section4 .card-list-tow .shop-item .shop-info .buying-point {
+      margin-top: 1.333vw;
+      font-size: 3.733vw;
+      font-weight: 500;
+    }
+    .section4 .card-list-tow .shop-item .shop-info .price {
+      margin: 2.667vw 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+    }
+    .section4 .card-list-tow .shop-item .shop-info .price .now-price {
+      font-size: 4.267vw;
+      font-weight: 600;
+      color: #FF4200;
+    }
+    .section4 .card-list-tow .shop-item .shop-info .price .old-price {
+      font-size: 3.733vw;
+    }
+    .section4 .card-list-tow .shop-item .shop-info .buy-wrap {
+      cursor: pointer;
+      display: flex;
+      border-radius: 26.667vw;
+      border: 0.533vw solid #FF4200;
+      overflow: hidden;
+    }
+    .section4 .card-list-tow .shop-item .shop-info .buy-wrap .icon {
+      position: relative;
+      width: 10.667vw;
+      background-color: #ffffff;
+      height: 9.067vw;
+      font-size: 3.233vw;
+    }
+    .section4 .card-list-tow .shop-item .shop-info .buy-wrap .buy-btn {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 9.067vw;
+      background-color: #FF4200;
+      color: #ffffff;
+      font-size: 3.233vw;
+      font-weight: 600;
+    }
+    .section4 .card-list-tow .swiper-pagination2, .section4 .card-list-tow .swiper-pagination1 {
+      text-align: center;
+    }
+    .section4 .card-list-tow .swiper-pagination-bullet {
+      width: 3.2vw;
+      height: 3.2vw;
+      text-align: center;
+      color: #000;
+      opacity: 1;
+      background: #ffffff;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+    }
+    .section4 .card-list-tow .swiper-pagination-bullet-active {
+      width: 12vw;
+      color: #ffffff;
+      background: #FF4E00;
+      border-radius: 5.333vw;
+      -webkit-border-radius: 5.333vw;
+      -moz-border-radius: 5.333vw;
+      -ms-border-radius: 5.333vw;
+      -o-border-radius: 5.333vw;
+    }
+  }
+</style>
+
+<div id="app-{{section.id}}" class="container-wrap">
+  <div class="section1">
+    <img class="banner-img pc" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/kv.png?v=1718865789" alt="Banner">
+    <img class="banner-img mb" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/kv_mb.png?v=1719209751" alt="Banner">
+  </div>
+  <div class="seciont2">
+    <div class="content">
+      <div class="common-title fadein">Customize & make the moment</div>
+      <div class="common-subtitle fadein">Make every little detail uniquely yours.</div>
+    </div>
+  </div>
+  <div class="section3">
+    <div class="content">
+      <div class="left-box">
+        <div class="common-subtitle fadein">We can make every special day even more memorable with customization. Make it, decor it, celebrate it in your way</div>
+      </div>
+      <div class="right-box">
+        <div class="swiper-wrap">
+          <div class="swiper swiper-banners">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="title">Wedding Decor</div>
+                <img class="slide-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1_7ab2fd7b-401f-415e-9dc0-d5250e8051c4.png?v=1718937678" alt="slide-img">
+              </div>
+              <div class="swiper-slide">
+                <div class="title">Wedding Invitation</div>
+                <img class="slide-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2_279bb95f-4602-4cd8-aff9-42b4fee197d2.png?v=1718938100" alt="slide-img">
+              </div>
+              <div class="swiper-slide">
+                <div class="title">Wedding Party </div>
+                <img class="slide-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/3_756f914c-84e9-4044-9c69-885e96c48ebd.png?v=1718938100" alt="slide-img">
+              </div>
+              <div class="swiper-slide">
+                <div class="title">Wedding Gifts</div>
+                <img class="slide-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/4_063f79ab-93fb-405a-8595-388c194d595d.png?v=1718938100" alt="slide-img">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="b-box">
+        <div class="b-item fadein">
+          <div class="title">Theme Party Decor</div>
+          <img class="b-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/Theme_Party_Decor.png?v=1718941850" alt="Theme Party Decor">
+        </div>
+        <div class="b-item fadein">
+          <div class="title">Big Day Decor</div>
+          <img class="b-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/Big_Day_Decor.png?v=1718941849" alt="Big Day Decor">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section4">
+    <div class="content">
+      <div class="common-title">Why Falcon Laser Make Sense</div>
+      <div class="card-list-one">
+        <div class="title">
+          <div class="item-title">For Event Planner Business Owner</div>
+        </div>
+        <div class="listing fadein">
+          <div class="listing-item">
+            <div class="card-title"> Cost-Effective Solutions</div>
+            <div class="img-wrap">
+              <img class="card-img pc" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/44.png?v=1718954902" alt="card-img">
+              <img class="card-img mb" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/50_d524e1d9-6809-4e02-8719-a61c5dccc78f.png?v=1719211738" alt="card-img">
+              <div class="card-describe">Investing in our Falcon Lasers reduces the need for outsourcing, cutting down costs and offering competitive pricing to your clients. It's not just an expense—it's a long-term investment in growing your business and enhancing your service offerings.</div>
+            </div>
+          </div>
+          <div class="listing-item">
+            <div class="card-title">Versatile Material Compatibility</div>
+            <div class="img-wrap">
+              <img class="card-img pc" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/46.png?v=1718963301" alt="card-img">
+              <img class="card-img mb" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2_27.png?v=1719279883" alt="card-img">
+              <div class="card-describe">Our Falcon Laser works with a variety of materials, including wood, acrylic, fabric, paper, and even metal. This versatility opens up endless possibilities for event decor, enabling you to design unique elements that stand out.</div>
+            </div>
+          </div>
+          <div class="listing-item">
+            <div class="card-title">Efficiency Meets Quality</div>
+            <div class="img-wrap">
+              <img class="card-img pc" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/48.png?v=1718963307" alt="card-img">
+              <img class="card-img mb" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/55.png?v=1719279882" alt="card-img">
+              <div class="card-describe">Speed without compromise. Our Falcon Laser not only delivers high-quality finishes but also does so quickly, ensuring you can meet client demands even in high volumes, perfect for large-scale events.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-list-tow">
+        <div class="item-title">Find Your Machine Match</div>
+        <div class="swiper swiper-shop1 fadein">
+          <div class="swiper-wrapper">
+            {% for item in section.blocks %}
+              {% if item.type == 'swiper_item1' %}
+                {% assign product = all_products[item.settings.product] %}
+                <div class="swiper-slide">
+                  <div class="shop-item">
+                    <div class="discount">
+                      <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/3_77592706-8fc8-4734-b60b-bd77b237dcd5.png?v=1719193736" alt="discount img" class="discount-img">
+                      <div class="save-box">
+                        {% assign discount_percentage = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round %}
+                        <div class="discount-rate">{{discount_percentage}}%</div>
+                        <div class="off">OFF</div> 
+                      </div>
+                    </div>
+                    <img class="shop-img" srcset="
+                      {%- if product.featured_media.width >= 533 -%}
+                          {{ product.featured_media | img_url: '533x' }} 533w, 
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 534 -%}
+                          {{ product.featured_media | img_url: '534x' }} 534w,
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 720 -%}
+                          {{ product.featured_media | img_url: '720x' }} 720w,
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 940 -%}
+                          {{ product.featured_media | img_url: '940x' }} 940w,
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 1066 -%}
+                          {{ product.featured_media | img_url: '1066x' }} 1066w
+                      {%- endif -%}"
+                      src="{{ product.images[2] | img_url: '533x' }}"
+                      sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                      alt="{{ product.featured_media.alt | escape }} {{product.featured_media.width}}"
+                      loading="lazy"
+                      class="motion-reduce"
+                    >
+                    <div class="shop-info">
+                      <div class="shop-title">{{product.title}}</div>
+                      <div class="buying-point">{{item.settings.buying_point}}</div> 
+                      <div class="price">
+                        <div class="now-price">{{product.price | money}}</div>
+                        <del class="old-price">{{product.compare_at_price | money}}</del>
+                      </div>
+                      <div class="buy-wrap">
+                        <a class="icon" href="{{product.url}}" target="_blank">learn more</a>
+                        <div class="buy-btn" data-id="{{product.variants[0].id}}">Buy Now</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination1 mb"></div>
+        </div>
+      </div>
+      <div class="card-list-one">
+        <div class="title2">
+          <div class="item-title">For DIY Lover</div>
+        </div>
+        <div class="listing fadein">
+          <div class="listing-item">
+            <div class="card-title">Customization is so Easy</div>
+            <div class="img-wrap">
+              <img class="card-img pc" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/61.png?v=1719200707" alt="card-img">
+              <img class="card-img mb" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/51_5866f40d-9ba2-43e6-b99b-ffa5a1e13968.png?v=1719280094" alt="card-img">
+              <div class="card-describe">Customization  has been so easy with a Falcon Laser. Get inspired, design it, make it, done!</div>
+            </div>
+          </div>
+          <div class="listing-item">
+            <div class="card-title">Turn Your Creativity into Reality</div>
+            <div class="img-wrap">
+              <img class="card-img pc" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/64.png?v=1719200707" alt="card-img">
+              <img class="card-img mb" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/53_f8179c38-0f27-4f67-832b-502a311c8242.png?v=1719280094" alt="card-img">
+              <div class="card-describe">Bring your ideas to life with Falcon Laser! Showcase your unique style by turning creativity into personalized masterpieces.</div>
+            </div> 
+          </div>
+          <div class="listing-item">
+            <div class="card-title">Make & Save on Daily</div>
+            <div class="img-wrap">
+              <img class="card-img pc" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/65.png?v=1719200707" alt="card-img">
+              <img class="card-img mb" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/55_d45fdc76-d473-446d-9537-48698403e559.png?v=1719280094" alt="card-img">
+              <div class="card-describe">With Falcon Laser, you can save big all year round by tackling your own projects! Dive into DIY and turn your creative ideas into reality, cutting costs without cutting corners.</div>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="card-list-tow">
+        <div class="item-title2">Find Your Machine Match</div>
+        <div class="swiper swiper-shop2 fadein">
+          <div class="swiper-wrapper">
+            {% for item in section.blocks %}
+              {% if item.type == 'swiper_item2' %}
+                {% assign product = all_products[item.settings.product] %}
+                <div class="swiper-slide">
+                  <div class="shop-item">
+                    <div class="discount">
+                      <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/3_77592706-8fc8-4734-b60b-bd77b237dcd5.png?v=1719193736" alt="discount img" class="discount-img">
+                      <div class="save-box">
+                        {% assign discount_percentage = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round %}
+                        <div class="discount-rate">{{discount_percentage}}%</div>
+                        <div class="off">OFF</div>
+                      </div>
+                    </div>
+                    <img class="shop-img" srcset="
+                      {%- if product.featured_media.width >= 533 -%}
+                          {{ product.featured_media | img_url: '533x' }} 533w,
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 534 -%}
+                          {{ product.featured_media | img_url: '534x' }} 534w,
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 720 -%}
+                          {{ product.featured_media | img_url: '720x' }} 720w,
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 940 -%}
+                          {{ product.featured_media | img_url: '940x' }} 940w,
+                      {%- endif -%}
+                      {%- if product.featured_media.width >= 1066 -%}
+                          {{ product.featured_media | img_url: '1066x' }} 1066w
+                      {%- endif -%}"
+                      src="{{ product.images[2] | img_url: '533x' }}"
+                      sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                      alt="{{ product.featured_media.alt | escape }} {{product.featured_media.width}}"
+                      loading="lazy"
+                      class="motion-reduce"
+                    >
+                    <div class="shop-info">
+                      <div class="shop-title">{{product.title}}</div>
+                      <div class="buying-point">{{item.settings.buying_point}}</div> 
+                      <div class="price">
+                        <div class="now-price">{{product.price | money}}</div>
+                        <del class="old-price">{{product.compare_at_price | money}}</del>
+                      </div>
+                      <div class="buy-wrap">
+                        <a class="icon" href="{{product.url}}" target="_blank">learn more</a>
+                        <div class="buy-btn" data-id="{{product.variants[0].id}}">Buy Now</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination2 mb"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  $(function () {
+    function isMobileDevice() {
+      return window.innerWidth <= 768; // 768px 常见的移动设备宽度阈值
+    }
+    // console.log(isMobile,'isMobile');
+    new Swiper('.swiper-banners', {
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      }
+    });
+
+    new Swiper('.swiper-shop1', {
+      slidesPerView: isMobileDevice() ? 2 : 3,
+      // slidesPerView: 2,
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination1',
+        clickable: true,
+      },
+      // loop: false,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      }
+    });
+
+    new Swiper('.swiper-shop2', {
+      slidesPerView: isMobileDevice() ? 2 : 3,
+      // slidesPerView: 2,
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination2',
+        clickable: true,
+      },
+      // loop: false,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      }
+    });
+       // 购买按钮事件
+  $(".buy-btn").click(function(e) {
+    var productId = $(this).attr("data-id");
+    let productData;
+    $.ajax({
+      type: "POST",
+      url: "/cart/clear.js",
+      data: {},
+      dataType: "json",
+      success: function() { 
+        $.ajax({
+          type: "POST",
+          url: "/cart/add.js",
+          data: {
+            quantity: 1,
+            id: productId
+          },
+          dataType: "json",
+          success: function() { 
+            window.location.href = "/checkout";
+          }
+        });
+      }
+    });
+  })
+    // 监听滚动
+    function fadeInListen() {
+      var fadeIn = $('.container-wrap').find('.fadein');
+      fadeIn.each(function () {
+        let element = this;
+        let {
+          scrub,
+          reverse,
+          duration,
+          actions,
+          fn
+        } = $(this).data()
+
+        gsap.set(element, {
+          opacity: 0,
+          y: 20
+        });
+        let toggleActions = "play none none none";
+        let start = $(this).data('start') || 70;
+        duration ? '' : duration = 0.8
+        let tl = gsap.to(element, {
+          opacity: 1,
+          y: 0,
+          duration
+        });
+        if (reverse) {
+          toggleActions = "play none none reverse"
+        }
+
+        ScrollTrigger.create({
+          animation: tl,
+          trigger: element,
+          toggleActions,
+          start: `top ${start}%`, // 调整触发点，视情况而定
+          onEnter: function () {
+
+          },
+          once: true // 只触发一次
+        });
+      });
+    }
+    fadeInListen();
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Wedding Season",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "轮播专辑"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "swiper_item1",
+        "name": "轮播产品1",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product", 
+            "label": "产品"
+          },
+          {
+            "type": "text",
+            "id": "buying_point",
+            "label": "产品买点"
+          }
+        ]
+      },
+      {
+        "type": "swiper_item2",
+        "name": "轮播产品2",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product", 
+            "label": "产品"
+          },
+          {
+            "type": "text",
+            "id": "buying_point",
+            "label": "产品买点"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Wedding Season"
+      }
+    ]
+  }
+{% endschema %}

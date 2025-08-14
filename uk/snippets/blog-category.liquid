@@ -1,0 +1,538 @@
+
+{%- liquid
+    assign padding_top = section.settings.mg_top_desktop | append: 'px'
+    assign padding_bottom = section.settings.mg_bottom_desktop | append: 'px'
+    assign padding_top_tablet = section.settings.mg_top_tablet | append: 'px'
+    assign padding_bottom_tablet = section.settings.mg_bottom_tablet | append: 'px'
+    assign padding_top_mobile = section.settings.mg_top_mobile | append: 'px'
+    assign padding_bottom_mobile = section.settings.mg_bottom_mobile | append: 'px'
+    assign show_breadcrumb = section.settings.show_breadcrumb
+    assign breadcrumb_alignment = section.settings.breadcrumb_alignment
+    assign breadcrumb_bg = section.settings.breadcrumb_bg
+    assign breadcrumb_gradient = section.settings.breadcrumb_gradient
+    assign breadcrumb_bg_mb = section.settings.breadcrumb_bg_mb
+    assign breadcrumb_gradient_mb = section.settings.breadcrumb_gradient_mb
+    assign container = section.settings.container
+-%}
+ 
+<style type="text/css" media="screen">
+	#BlogSection-{{ section.id }}{
+		padding-top: {{ padding_top }};
+		padding-bottom: {{ padding_bottom }};
+	}
+	#BlogSection-{{ section.id }} .banner-img { 
+		width: 100%;
+	}
+	#BlogSection-{{ section.id }} .section {
+		width: 75.000vw;
+		margin: 0 auto; 
+		margin-top: 7.813vw;
+	} 
+	#BlogSection-{{ section.id }} .section:first-child {
+		margin-top: 2.604vw;
+	}
+	#BlogSection-{{ section.id }} .common-title { 
+		font-family: "Rubik";
+		font-size: 1.458vw;
+		font-weight: bold;
+		margin-bottom: 0.833vw;
+	}
+	#BlogSection-{{ section.id }} .blog-block-wrap {
+		display: grid;
+		grid-template-columns: 20.833vw 20.833vw 20.833vw;
+		grid-gap: 0 6.250vw;  
+		grid-auto-rows: 1; 
+	} 
+	#BlogSection-{{ section.id }} .blog-block-wrap .blog-title {
+		font-size: 0.938vw;
+		font-weight: 600;
+		text-transform: capitalize;
+		color: #000000;
+		text-align: center;
+	} 
+	#BlogSection-{{ section.id }} .blog-block-wrap .date {
+		margin-top: 0.521vw;
+		font-size: 0.729vw;
+		font-weight: 600; 
+		text-transform: capitalize;
+		color: #8F8C8C; 
+		text-align: center;
+	}
+	#BlogSection-{{ section.id }} .course-block-wrap {
+		display: grid;
+		grid-template-columns: 20.833vw 20.833vw 20.833vw; 
+		grid-gap: 4.167vw 6.250vw;
+		grid-auto-rows: 2;
+	}
+	#BlogSection-{{ section.id }} .blog-block-wrap .item .preview-img {
+		width: 100%;
+	} 
+	#BlogSection-{{ section.id }} .blog-block-wrap .item:last-child {
+		margin-right: 0;
+	}
+	#BlogSection-{{ section.id }} .common-img {
+		width: 100%;
+		height: auto;
+	}
+	#BlogSection-{{ section.id }} .product-list { 
+		display: grid;
+		grid-template-columns: 17.969vw 17.969vw 17.969vw 17.969vw;
+		grid-gap: 1.042vw;
+		grid-row: auto;
+	}
+	#BlogSection-{{ section.id }} .shop-item {
+    position: relative;
+    border-radius: 0.521vw;
+    overflow: hidden;
+		border: 0.052vw solid #f5f5f5;
+		transition: all 0.3s ease-in-out; 
+  }
+	#BlogSection-{{ section.id }} .shop-item:hover { 
+		box-shadow: 0 0 0.260vw #00000026;
+	} 
+	#BlogSection-{{ section.id }} .shop-item .shop-img:hover { 
+		transform: scale(1.05);
+	}
+  #BlogSection-{{ section.id }} .shop-item:last-child {
+    margin-right: 0;
+  }
+  #BlogSection-{{ section.id }} .shop-item .shop-img {
+    width: 100%;
+    object-fit: cover;
+		transition: all 0.5s ease-in-out;
+  }
+  #BlogSection-{{ section.id }} .shop-item .discount {
+    position: absolute;
+    top: 0;
+    left: 0.833vw;
+		z-index: 10;
+  }
+  #BlogSection-{{ section.id }} .shop-item .discount .discount-img {
+    width: 2.865vw;
+  }
+  #BlogSection-{{ section.id }} .shop-item .discount .save-box {
+    text-align: center;
+    padding: 0 0.26vw;
+    color: #ffffff;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  #BlogSection-{{ section.id }} .shop-item .discount .save-box .discount-rate {
+    font-size: 0.938vw;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  #BlogSection-{{ section.id }} .shop-item .discount .save-box .off {
+    font-size: 0.833vw;
+  }
+  #BlogSection-{{ section.id }} .shop-item .shop-info {
+    color: #737373;
+    padding: 0.521vw 0.833vw;
+    background-color: #ffffff;
+  }
+  #BlogSection-{{ section.id }} .shop-item .shop-info .shop-title {
+    font-size: 1.25vw;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 限制文本行数 */
+    -webkit-box-orient: vertical;
+  }
+  #BlogSection-{{ section.id }} .shop-item .shop-info .buying-point {
+    margin-top: 0.26vw;
+    font-size: 0.938vw;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 限制文本行数 */
+    -webkit-box-orient: vertical;
+  }
+  #BlogSection-{{ section.id }} .shop-item .shop-info .price {
+    margin: 0.521vw 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  #BlogSection-{{ section.id }} .shop-item .shop-info .price .now-price {
+    font-size: 1.25vw;
+    font-weight: 600;
+    color: #FF4200;
+  }
+  #BlogSection-{{ section.id }} .shop-item .shop-info .price .old-price {
+    font-size: 0.938vw;
+  }
+  #BlogSection-{{ section.id }} .shop-item .shop-info .buy-wrap {
+    cursor: pointer;
+    display: flex;
+    border-radius: 5.208vw;
+    border: 0.104vw solid #FF4200;
+    overflow: hidden;
+  }
+  #BlogSection-{{ section.id }} .shop-item .shop-info .buy-wrap .icon {
+    position: relative;
+    width: 4.167vw;
+    background-color: #ffffff; 
+    height: 2.5vw;
+  }
+  #BlogSection-{{ section.id }} .shop-item .shop-info .buy-wrap .icon:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 1.563vw;
+    height: 1.563vw;
+    background-image: url("https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1_8.png?v=1719198750");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #BlogSection-{{ section.id }} .shop-item .shop-info .buy-wrap .buy-btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5vw;
+    background-color: #FF4200;
+    color: #ffffff;
+    font-size: 1.146vw;
+    font-weight: 600;
+  }
+	@media (max-width: 1024px) {
+		#BlogSection-{{ section.id }}{
+			padding-top: {{ padding_top_tablet }};
+			padding-bottom: {{ padding_bottom_tablet }};
+		}
+
+		#BlogSection-{{ section.id }} .breadcrumb {
+			background: {% if breadcrumb_gradient_mb != blank and breadcrumb_gradient_mb != 'rgba(0,0,0,0)' %}{{ breadcrumb_gradient_mb }}{% elsif breadcrumb_bg_mb != blank and breadcrumb_bg_mb != 'rgba(0,0,0,0)' %}{{ breadcrumb_bg_mb }}{% endif %};
+		}
+	}
+
+	@media (max-width: 768px) { 
+		#BlogSection-{{ section.id }}{ 
+			padding-top: {{ padding_top_mobile }};
+			padding-bottom: {{ padding_bottom_mobile }};
+		} 
+		#BlogSection-{{ section.id }} .section { 
+			width: 100%;
+			margin: 0 auto; 
+			margin-top: 13.333vw;
+		} 
+		#BlogSection-{{ section.id }} .section:first-child {
+			margin-top: 8.000vw;
+		}
+		#BlogSection-{{ section.id }} .common-title { 
+			padding: 0 4.267vw;
+			font-family: "Rubik";
+			font-size: 6.400vw;
+			font-weight: bold;
+			margin-bottom: 4.267vw;
+		}
+		#BlogSection-{{ section.id }} .blog-block-wrap .blog-title {
+			font-size: 3.733vw;
+			font-weight: 600;
+			text-transform: capitalize;
+			color: #000000;
+			text-align: center;
+		} 
+		#BlogSection-{{ section.id }} .blog-block-wrap .date {
+			margin-top: 2.667vw;
+			font-size: 3.200vw;
+			font-weight: 600; 
+			text-transform: capitalize;
+			color: #8F8C8C; 
+			text-align: center;
+		}
+		#BlogSection-{{ section.id }} .product-wrap {
+			padding: 0 4.267vw; 
+		}
+		#BlogSection-{{ section.id }} .blog-block-wrap {
+			padding: 0 4.267vw; 
+			display: grid;
+			grid-template-columns: 49% 49%;
+			grid-gap: 4.267vw 2%;  
+			grid-auto-rows: auto; 
+		} 
+		#BlogSection-{{ section.id }} .course-block-wrap {
+			padding: 0 4.267vw; 
+			display: grid;
+			grid-template-columns: 49% 49%;
+			grid-gap: 4.267vw 2%;  
+			grid-auto-rows: auto; 
+		}  
+		#BlogSection-{{ section.id }} .product-list { 
+			padding: 0 4.267vw; 
+			display: grid;
+			grid-template-columns: 49% 49%;
+			grid-gap: 4.267vw 2%;  
+			grid-auto-rows: auto; 
+		}
+		#BlogSection-{{ section.id }} .shop-item {
+      margin-bottom: 2.667vw;
+      position: relative;
+      border-radius: 2.667vw;
+      overflow: hidden;
+    }
+    #BlogSection-{{ section.id }} .shop-item:last-child {
+      margin-right: 0;
+    }
+    #BlogSection-{{ section.id }} .shop-item .shop-img {
+      width: 100%;
+      object-fit: cover;
+    }
+    #BlogSection-{{ section.id }} .shop-item .discount {
+      position: absolute;
+      top: 0;
+      left: 4.267vw;
+    }
+    #BlogSection-{{ section.id }} .shop-item .discount .discount-img {
+      width: 10.667vw;
+    }
+    #BlogSection-{{ section.id }} .shop-item .discount .save-box {
+      text-align: center;
+      padding: 0 1.333vw;
+      color: #ffffff;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    #BlogSection-{{ section.id }} .shop-item .discount .save-box .discount-rate {
+      font-size: 3.567vw;
+      font-weight: 600;
+    }
+    #BlogSection-{{ section.id }} .shop-item .discount .save-box .off {
+      font-size: 3.067vw;
+    }
+    #BlogSection-{{ section.id }} .shop-item .shop-info {
+      color: #737373;
+      padding: 1.067vw 2.667vw;
+      background-color: #ffffff;
+    }
+    #BlogSection-{{ section.id }} .shop-item .shop-info .shop-title {
+      font-size: 4.267vw;
+      font-weight: 600;
+    }
+    #BlogSection-{{ section.id }} .shop-item .shop-info .buying-point {
+      margin-top: 1.333vw;
+      font-size: 3.733vw;
+      font-weight: 500;
+    }
+    #BlogSection-{{ section.id }} .shop-item .shop-info .price {
+      margin: 2.667vw 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+    }
+    #BlogSection-{{ section.id }} .shop-item .shop-info .price .now-price {
+      font-size: 4.267vw;
+      font-weight: 600;
+      color: #FF4200;
+    }
+    #BlogSection-{{ section.id }} .shop-item .shop-info .price .old-price {
+      font-size: 3.733vw;
+    }
+    #BlogSection-{{ section.id }} .shop-item .shop-info .buy-wrap {
+      cursor: pointer;
+      display: flex;
+      border-radius: 26.667vw;
+      border: 0.533vw solid #FF4200;
+      overflow: hidden;
+    }
+    #BlogSection-{{ section.id }} .shop-item .shop-info .buy-wrap .icon {
+      position: relative;
+      width: 10.667vw;
+      background-color: #ffffff;
+      height: 9.067vw;
+    }
+    #BlogSection-{{ section.id }} .shop-item .shop-info .buy-wrap .icon:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 4.8vw;
+      height: 4.8vw;
+      background-image: url("https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1_8.png?v=1719198750");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    #BlogSection-{{ section.id }} .shop-item .shop-info .buy-wrap .buy-btn {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 9.067vw;
+      background-color: #FF4200;
+      color: #ffffff;
+      font-size: 4.533vw;
+      font-weight: 600;
+    }
+	}
+</style> 
+ 
+<div data-section-id="{{ section.id }}" data-section-type="blog-layout-simple" id="BlogSection-{{ section.id }}" data-section="{{ section.id }}" class="main-blog-block blog-layout-simple">
+	<div class="banner-wrap">
+		<img 
+			class="banner-img lazyload"
+			srcset="{{ section.settings.banner_mb | img_url: '1024x' }} 768w, {{ section.settings.banner_pc | img_url: '2048x' }}" 
+			alt="blog banner"
+			loading="lazy"
+		>
+	</div>
+	<div class="halo-blog">
+		<div class="halo-blog-content">   
+			{% assign all_articles = '' | split: ',' %}
+			{% for block in section.blocks %}
+				{% assign blog_name = block.settings.blog_name | handleize %}
+				{% assign variable = blogs[blog_name] |  map: 'articles' %}
+				{% assign all_articles = all_articles | concat: variable %}
+			{% endfor %} 
+			<div class="section blog-content">
+				<div class="common-title">Latest Post</div>
+				<div class="blog-block-wrap  animate--slide-in">  
+					{%- for article in all_articles -%}
+						{% if article.metafields.custom.blog_tag == 'Latest Post' %}
+							<div class="item scroll-trigger" style="--animation-order: {{ forloop.index }};">
+								<a href="{{ article.url }}" target="_blank">
+									<img class="common-img" src="{{ article.image | img_url: '1024x' }}" alt="{{ article.title }}">
+								</a>
+								<div class="blog-info"> 
+									<div class="blog-title">{{ article.title }}</div> 
+									<div class="date">{{ article.published_at | date: '%B %D, %Y' }}</div> 
+								</div> 
+							</div>
+						{% endif %}
+					{%- endfor -%} 
+				</div>
+			</div>
+			<div class="section course-list">
+				<div class="common-title">How-to Tutorial</div>
+				<div class="course-block-wrap">
+					<a href="{{section.settings.study_link}}" target="_blank">
+						<img class="common-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/20240715-173805.png?v=1721036351" alt="text-img">
+					</a>
+					<a href="#">
+						<img class="common-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/20240715-173801.png?v=1721036351" alt="text-img">
+					</a>
+					<a href="#">
+						<img class="common-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/20240715-173758.png?v=1721036350" alt="text-img">
+					</a>
+					<a href="#">
+						<img class="common-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/6_13d0d08b-1260-4ad4-a659-bd4ce32ea8c0.png?v=1721036830" alt="text-img">
+					</a>
+					<a href="#">
+						<img class="common-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/5_e07873ad-c31f-431d-ae8a-d3263b4a2c72.png?v=1721036830" alt="text-img"> 
+					</a>
+					<a href="#">
+						<img class="common-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/4_2f0d3eaf-1d34-4eba-b59e-aa9d42223e0a.png?v=1721036830" alt="text-img">
+					</a>
+				</div>
+			</div>
+			<div class="section blog-content">
+				<div class="common-title">User Stories</div>
+				<div class="blog-block-wrap scroll-trigger animate--slide-in">   
+					{%- for article in all_articles -%}  
+						{% if article.metafields.custom.blog_tag == 'User Stories' %}
+							<div class="item" style="--animation-order: {{ forloop.index }};">
+								<a href="{{ article.url }}" target="_blank">
+									<img class="common-img" src="{{ article.image | img_url: '1024x' }}" alt="{{ article.title }}">
+								</a>
+								<div class="blog-info"> 
+									<div class="blog-title">{{ article.title }}</div> 
+									<div class="date">{{ article.published_at | date: '%B %D, %Y' }}</div> 
+								</div> 
+							</div>
+						{% endif %}
+					{%- endfor -%} 
+				</div>
+			</div>
+			<div class="section product-wrap">
+				<div class="common-title">Hot Products</div>
+				<div class="product-list">
+					{% assign products = section.settings.hot_sale_collection.products %}
+					{%- for product in products -%}
+						<div class="shop-item">
+							<div class="discount">
+								<img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/3_77592706-8fc8-4734-b60b-bd77b237dcd5.png?v=1719193736" alt="discount img" class="discount-img">
+								<div class="save-box">
+									{% assign discount_percentage = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round %}
+									<div class="discount-rate">{{discount_percentage}}%</div>
+									<div class="off">OFF</div> 
+								</div>
+							</div>
+							<img class="shop-img" srcset="
+								{%- if product.featured_media.width >= 533 -%}
+										{{ product.featured_media | img_url: '533x' }} 533w, 
+								{%- endif -%}
+								{%- if product.featured_media.width >= 534 -%}
+										{{ product.featured_media | img_url: '534x' }} 534w,
+								{%- endif -%}
+								{%- if product.featured_media.width >= 720 -%}
+										{{ product.featured_media | img_url: '720x' }} 720w,
+								{%- endif -%}
+								{%- if product.featured_media.width >= 940 -%}
+										{{ product.featured_media | img_url: '940x' }} 940w,
+								{%- endif -%}
+								{%- if product.featured_media.width >= 1066 -%}
+										{{ product.featured_media | img_url: '1066x' }} 1066w
+								{%- endif -%}"
+								src="{{ product.images[2] | img_url: '533x' }}"
+								sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+								alt="{{ product.featured_media.alt | escape }} {{product.featured_media.width}}"
+								loading="lazy"
+								class="motion-reduce lazyload"
+							>
+							<div class="shop-info">
+								<div class="shop-title">{{product.title}}</div>
+								<div class="buying-point">{{item.settings.buying_point}}</div> 
+								<div class="price">
+									<div class="now-price">{{product.price | money}}</div>
+									<del class="old-price">{{product.compare_at_price | money}}</del>
+								</div>
+								<div class="buy-wrap">
+									<div class="icon"></div>
+									<div class="buy-btn" data-id="{{product.variants[0].id}}">Buy Now</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="module">
+$(function() {
+		// 购买按钮事件
+		$(".buy-btn").click(function(e) { 
+    var productId = $(this).attr("data-id");
+    let productData;
+    $.ajax({
+      type: "POST",
+      url: "/cart/clear.js",
+      data: {},
+      dataType: "json",
+      success: function() { 
+        $.ajax({
+          type: "POST",
+          url: "/cart/add.js",
+          data: {
+            quantity: 1,
+            id: productId
+          },
+          dataType: "json",
+          success: function() { 
+            window.location.href = "/checkout";
+          }
+        });
+      }
+    });
+  })
+})
+</script>

@@ -1,0 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "creality_union_iHWyKN": {
+      "type": "creality_union",
+      "settings": {}
+    },
+    "collabs": {
+      "type": "apps",
+      "blocks": {
+        "d9627bf3-9a55-4bec-8c16-b7e6295c2268": {
+          "type": "shopify://apps/collabs/blocks/application-page/54758706-9f25-4fa9-a553-64720a4c998b",
+          "settings": {
+            "heading": "Join the CrealityFalcon community",
+            "show_square_logo": true,
+            "show_partnership_info": true,
+            "button_text": "Apply now",
+            "number_of_images": "4",
+            "logo_position": "above",
+            "corner_style": "square",
+            "button_background_color": "#000000",
+            "button_label_color": "#ffffff",
+            "link_color": "#2c6ecb"
+          }
+        }
+      },
+      "block_order": [
+        "d9627bf3-9a55-4bec-8c16-b7e6295c2268"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    }
+  },
+  "order": [
+    "creality_union_iHWyKN",
+    "collabs"
+  ]
+}

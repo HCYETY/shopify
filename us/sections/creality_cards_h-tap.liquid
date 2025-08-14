@@ -1,0 +1,121 @@
+{% if section.settings.is_enable %}
+  <style>
+    #{{ section.id }} .cr-h-tag{
+        font-size: {% render 'tovw', px: section.settings.heading_font_size %}vw;
+        color: {{ section.settings.heading_color }};
+    }
+    @media (max-width: 960px) {
+      #{{ section.id }} .cr-h-tag{
+        font-size: {% render 'tovw', px: section.settings.heading_font_size, design_width: 750.0%}vmin;
+      }
+    }
+  </style>
+{% endif %}
+
+
+{% if section.settings.heading_text != blank %}
+<div class="cr-common cr-section-column" id="{{ section.id }}">
+    <{{ section.settings.heading_tag }} 
+      class="cr-h-tag {{ section.settings.heading_class }}" 
+      id="{{ section.id }}-h {{ section.settings.heading_id }}" 
+      style="text-align: {{ section.settings.alignment }}"
+  >
+      {{ section.settings.heading_text }}
+  </{{ section.settings.heading_tag }}>
+</div>
+{% endif %}
+{% schema %}
+{
+  "name": "H Tag",
+  "settings": [
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading Tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "This is a custom heading"
+    },
+    {
+      "type": "text",
+      "id": "heading_class",
+      "label": "Heading Class",
+      "default": "custom-heading"
+    },
+    {
+      "type": "text",
+      "id": "heading_id",
+      "label": "Heading ID",
+      "default": "custom-heading-1",
+      "info": "请确保每个模块的 ID 唯一（例如：custom-heading-1、custom-heading-2）。"
+    },
+    {
+     "type": "text_alignment",
+     "id": "alignment",
+     "label": "Text alignment",
+     "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "自定义属性"
+    },
+    {
+      "type": "checkbox",
+      "label": "是否启用自定义属性",
+      "id": "is_enable",
+      "info": "启动后将覆盖默认样式"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size",
+      "min": 12.0,
+      "max": 72.0,
+      "step": 1.0,
+      "unit": "px",
+      "default": 24.0
+    }
+  ],
+  "presets": [
+    {
+      "name": "cr-h-tag",
+    }
+  ]
+}
+{% endschema %}
