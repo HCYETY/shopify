@@ -152,6 +152,7 @@
         "announcement_qN4JNE",
         "announcement_tXfqAF"
       ],
+      "disabled": true,
       "settings": {
         "enable_announcement": true,
         "layout": "slider",
