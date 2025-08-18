@@ -73,7 +73,7 @@
     "product_title_text_transform": "capitalize",
     "product_title_line_height": 24,
     "product_title_letter_spacing": "0",
-    "product_title_line_text": "2",
+    "product_title_line_text": "full",
     "product_title_margin_bottom": 12,
     "product_vendor_font_size": 12,
     "product_vendor_font_weight": "500",
@@ -202,6 +202,7 @@
     "type_arrow_size_icon": 17,
     "position_horizontal_slick_arrow": "-5%",
     "pagination_style": "2",
+    "pagination_align": "center",
     "trust_image_product_1": "shopify://shop_images/security-image-1.png",
     "trust_image_product_2": "shopify://shop_images/security-image-2.png",
     "trust_image_product_3": "shopify://shop_images/security-image-3.png",
@@ -235,20 +236,20 @@
     "show_quick_view": true,
     "show_quick_view_mb": true,
     "product_quick_view_type": "default",
-    "group_quickview_wishlist": "right",
+    "group_quickview_wishlist": "left",
     "product_content_text_align": "left",
     "show_badge": true,
     "badge_postion": "left",
-    "show_new_badge": true,
+    "show_new_badge": false,
     "new_badge_type": "manual",
     "new_badge_time": 20,
     "new_badge_limit": 100,
     "show_sale_badge": true,
     "sale_badge_type": "discount",
-    "show_sold_out_badge": false,
+    "show_sold_out_badge": true,
     "show_swatch": false,
     "point_product_swatch_custom": "30px",
-    "show_action": false,
+    "show_action": true,
     "show_quick_shop": true,
     "quick_shop_type": "3",
     "show_product_marquee": false,
@@ -878,49 +879,6 @@
         "disabled": false,
         "settings": {}
       },
-      "15549472988515247997": {
-        "type": "shopify://apps/beans-id-verification/blocks/banner/5c736972-c385-431c-8cbb-05726b7a1739",
-        "disabled": true,
-        "settings": {}
-      },
-      "15820462083712392141": {
-        "type": "shopify://apps/beans-id-verification/blocks/discount-redeem/5c736972-c385-431c-8cbb-05726b7a1739",
-        "disabled": true,
-        "settings": {}
-      },
-      "18121446316682264196": {
-        "type": "shopify://apps/beans-id-verification/blocks/fab-embed/5c736972-c385-431c-8cbb-05726b7a1739",
-        "disabled": true,
-        "settings": {}
-      },
-      "14305174654594977286": {
-        "type": "shopify://apps/beans-id-verification/blocks/discount-hub/5c736972-c385-431c-8cbb-05726b7a1739",
-        "disabled": true,
-        "settings": {
-          "header_toggle": true,
-          "page_title": "Unlock exclusive discounts",
-          "sub_heading_text": "We’ve teamed up with Beans iD to offer exclusive discounts. Click through to verify and receive your discount for free!",
-          "background_color": "#f6f6f7",
-          "text_color": "#202223",
-          "heading_text_size_desktop": 42,
-          "heading_text_size_mobile": 32,
-          "body_text_size_desktop": 16,
-          "body_text_size_mobile": 12,
-          "cta_background_colour": "#ffffff",
-          "cta_text_colour": "#000000",
-          "card_title_text_size_desktop": 26,
-          "card_title_text_size_mobile": 21,
-          "card_conditions_text_size": 14
-        }
-      },
-      "449199394124024797": {
-        "type": "shopify://apps/beans-id-verification/blocks/modern-discount-hub/5c736972-c385-431c-8cbb-05726b7a1739",
-        "disabled": true,
-        "settings": {
-          "page_title": "Unlock exclusive discounts",
-          "sub_heading_text": "We’ve teamed up with Beans ID to offer exclusive discounts. Click through to verify and receive your discount for free!"
-        }
-      },
       "6588702529468458379": {
         "type": "shopify://apps/ecomposer-builder/blocks/app-embed/a0fc26e1-7741-4773-8b27-39389b4fb4a0",
         "disabled": false,
@@ -955,6 +913,52 @@
       },
       "7147999719060634790": {
         "type": "shopify://apps/gsc-countdown-timer/blocks/countdown-bar/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
+        "disabled": true,
+        "settings": {}
+      },
+      "14305174654594977286": {
+        "type": "shopify://apps/beans-id-verification/blocks/discount-hub/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": true,
+        "settings": {
+          "header_toggle": true,
+          "page_title": "Unlock exclusive discounts",
+          "sub_heading_text": "We’ve teamed up with Beans iD to offer exclusive discounts. Click through to verify and receive your discount for free!",
+          "hero_image": "shopify://shop_images/falcon_design_space_e1051b92-e74b-4c6c-b320-8711f110ffb9.png",
+          "background_color": "#f6f6f7",
+          "text_color": "#202223",
+          "heading_text_size_desktop": 42,
+          "heading_text_size_mobile": 32,
+          "body_text_size_desktop": 16,
+          "body_text_size_mobile": 12,
+          "cta_background_colour": "#ffffff",
+          "cta_text_colour": "#000000",
+          "card_title_text_size_desktop": 26,
+          "card_title_text_size_mobile": 21,
+          "card_conditions_text_size": 14
+        }
+      },
+      "15820462083712392141": {
+        "type": "shopify://apps/beans-id-verification/blocks/discount-redeem/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": true,
+        "settings": {}
+      },
+      "449199394124024797": {
+        "type": "shopify://apps/beans-id-verification/blocks/modern-discount-hub/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": true,
+        "settings": {
+          "page_title": "Unlock exclusive discounts",
+          "sub_heading_text": "We’ve teamed up with Beans ID to offer exclusive discounts. Click through to verify and receive your discount for free!",
+          "hero_image": "shopify://shop_images/falcon_design_space_55dd45b6-faaa-4158-8a7f-6c053fdd2cf1.png",
+          "mobile_hero_image": "shopify://shop_images/falcon_design_space_55dd45b6-faaa-4158-8a7f-6c053fdd2cf1.png"
+        }
+      },
+      "18121446316682264196": {
+        "type": "shopify://apps/beans-id-verification/blocks/fab-embed/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": true,
+        "settings": {}
+      },
+      "15549472988515247997": {
+        "type": "shopify://apps/beans-id-verification/blocks/banner/5c736972-c385-431c-8cbb-05726b7a1739",
         "disabled": true,
         "settings": {}
       }

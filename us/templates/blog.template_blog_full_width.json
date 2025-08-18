@@ -26,26 +26,13 @@
           "settings": {
             "show_block": true,
             "heading": "RECENT ARTICLES",
-            "number": 3
-          }
-        },
-        "6543713f-63f0-4882-ad34-5a2cdf3308dd": {
-          "type": "product_block",
-          "settings": {
-            "show_block": true,
-            "heading": "Featured Products",
-            "product_block_collection": "engravers",
-            "product_block_layout": "grid",
-            "product_block_limit": 4,
-            "product_block_dots": false,
-            "product_block_arrows": false
+            "number": 5
           }
         }
       },
       "block_order": [
         "category_BxMy7i",
-        "55c8959f-8115-4017-bf9e-6937d51df687",
-        "6543713f-63f0-4882-ad34-5a2cdf3308dd"
+        "55c8959f-8115-4017-bf9e-6937d51df687"
       ],
       "settings": {
         "show_breadcrumb": true,
@@ -68,7 +55,7 @@
         "enable_sticky": false,
         "sidebar_layout": "layout_1",
         "sidebar_collapse_default": "expand",
-        "sidebar_position": "left",
+        "sidebar_position": "right",
         "sidebar_heading_font": "font_1",
         "sidebar_heading_font_size": 14,
         "sidebar_heading_font_weight": "700",

@@ -231,7 +231,8 @@
             "collection": "flash-sale",
             "per_view_count": 8,
             "navigation_position": "outside"
-          }
+          },
+          "blocks": {}
         },
         "offsell-product-variant-small-slider-accessories-1": {
           "type": "offsell-product-variant-small-slider",
@@ -241,7 +242,8 @@
             "collection": "accessories-for-falcon-laser-engraver",
             "per_view_count": 2,
             "navigation_position": "inside"
-          }
+          },
+          "blocks": {}
         },
         "offsell-product-variant-small-slider-accessories-2": {
           "type": "offsell-product-variant-small-slider",
@@ -251,7 +253,8 @@
             "collection": "accessories-for-cr-laser-falcon-engravers",
             "per_view_count": 2,
             "navigation_position": "inside"
-          }
+          },
+          "blocks": {}
         }
       },
       "settings": {
@@ -274,14 +277,16 @@
             ],
             "product_level": "Beginner",
             "card_layout_reverse": false
-          }
+          },
+          "blocks": {}
         },
         "offsell-product-small-slider-beginner": {
           "type": "offsell-product-small-slider",
           "static": true,
           "settings": {
             "collection": "accessories-for-cr-laser-falcon-engravers"
-          }
+          },
+          "blocks": {}
         },
         "bestsell-product-slider-passionate-creator": {
           "type": "bestsell-product-slider",
@@ -292,14 +297,16 @@
             ],
             "product_level": "Advanced",
             "card_layout_reverse": false
-          }
+          },
+          "blocks": {}
         },
         "offsell-product-small-slider-passionate-creator": {
           "type": "offsell-product-small-slider",
           "static": true,
           "settings": {
             "collection": "accessories-for-falcon2-laser-engravers-cutters"
-          }
+          },
+          "blocks": {}
         },
         "bestsell-product-slider-professional": {
           "type": "bestsell-product-slider",
@@ -310,7 +317,8 @@
             ],
             "product_level": "Pro",
             "card_layout_reverse": false
-          }
+          },
+          "blocks": {}
         },
         "offsell-product-small-slider-professional": {
           "type": "offsell-product-small-slider",
@@ -318,7 +326,8 @@
           "static": true,
           "settings": {
             "collection": "accessories-for-falcon2-laser-engravers-cutters"
-          }
+          },
+          "blocks": {}
         }
       },
       "settings": {
@@ -345,35 +354,40 @@
               "settings": {
                 "video_url": "https://www.youtube.com/watch?v=vn4q9RACK2E",
                 "autoplay": false
-              }
+              },
+              "blocks": {}
             },
             "youtube_video_card_BnYewH": {
               "type": "youtube-video-card",
               "settings": {
                 "video_url": "https://www.youtube.com/watch?v=mviPc5Ermag",
                 "autoplay": false
-              }
+              },
+              "blocks": {}
             },
             "youtube_video_card_ic3qt4": {
               "type": "youtube-video-card",
               "settings": {
                 "video_url": "https://www.youtube.com/watch?v=XWV6yWgFkG8",
                 "autoplay": false
-              }
+              },
+              "blocks": {}
             },
             "youtube_video_card_7Q3egL": {
               "type": "youtube-video-card",
               "settings": {
                 "video_url": "https://www.youtube.com/watch?v=2Z9vYQ2EM2c&t",
                 "autoplay": false
-              }
+              },
+              "blocks": {}
             },
             "youtube_video_card_jwxPUG": {
               "type": "youtube-video-card",
               "settings": {
                 "video_url": "https://www.youtube.com/watch?v=fKk562Nl8kM",
                 "autoplay": false
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [

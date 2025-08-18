@@ -19,10 +19,11 @@
       "blocks": {
         "products_tcontrast_K34MqA": {
           "type": "products-tcontrast",
+          "name": "Pro 60W",
           "settings": {
             "item_hyperlink": "https://www.crealityfalcon.com/products/falcon2-pro-60w-enclosed-laser-cutter-and-engraver",
             "item_image": "https://www.crealityfalcon.com/cdn/shop/files/60W_png.png?v=1752910879",
-            "item_title": "Falcon2 Pro",
+            "item_title": "Falcon2 Pro 60W",
             "item_id": "44872797913247",
             "price_currency": "$",
             "key_point": "<li>Efficient Work, Safety First</li>",
@@ -52,6 +53,7 @@
         },
         "products_tcontrast_AHzi7x": {
           "type": "products-tcontrast",
+          "name": "Pro 40W",
           "settings": {
             "item_hyperlink": "https://www.crealityfalcon.com/products/falcon2-pro-40w-enclosed-laser-engraver-and-cutter-basic-kits-for-wood-engraving",
             "item_image": "https://www.crealityfalcon.com/cdn/shop/files/pro_40W_png.png?v=1752910879",
@@ -395,6 +397,7 @@
         "products_tcontrast_LV7da9",
         "products_tcontrast_GdGPay"
       ],
+      "name": "产品对比",
       "settings": {
         "is_support_accessories": false,
         "default_input1": "8950819553577",
