@@ -74,7 +74,7 @@
           "settings": {
             "text": "",
             "text_icon": "",
-            "text_description": "<b>⏰Aug 8, 3:00 PM – Aug 18, 3:00 PM (BST)</b><br><br>\n1.20W Blue / 2W IR Laser Modules (purchased separately), Work with 350+ Materials<br>\n2.Smart Camera for Auto Focus <0.012\" Precision<br>\n3.App Control: Real-time Monitoring\n8 Safety Shields, 3X Faster<br>\n4.Smart Touch Screen: Convenient Working<br>\n5.Compact All-in-One Modular Design<br>\n6.All-New Smart Workflow<br><br>\n\n● Official Free Knowledge-sharing Platform 👉: \n<a href=\"https://wiki.creality.com/en/laser-engraver/falcon-a1-pro\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Creality Wiki</strong></a><br>\n● Download Free Software👉: \n<a href=\"https://webapp.craftseek.com/#/download\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Falcon Design Space</strong></a><br>\n●<b>✅VAT Included<br>\n●📦UK Stock – Fast local dispatch<br>\n●⏱ Ships in 2 Working Days(excl. pre-sale)<br></b>",
+            "text_description": "<b>⏰Aug 8, 3:00 PM – Aug 18, 3:00 PM (BST)</b><br><br>\n1.20W Blue / 2W IR Laser Modules <b>(purchased separately)</b>, Work with 350+ Materials<br>\n2.Smart Camera for Auto Focus <0.012\" Precision<br>\n3.App Control: Real-time Monitoring\n8 Safety Shields, 3X Faster<br>\n4.Smart Touch Screen: Convenient Working<br>\n5.Compact All-in-One Modular Design<br>\n6.All-New Smart Workflow<br><br>\n\n● Official Free Knowledge-sharing Platform 👉: \n<a href=\"https://wiki.creality.com/en/laser-engraver/falcon-a1-pro\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Creality Wiki</strong></a><br>\n● Download Free Software👉: \n<a href=\"https://webapp.craftseek.com/#/download\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Falcon Design Space</strong></a><br>\n●<b>✅VAT Included<br>\n●📦UK Stock – Fast local dispatch<br>\n●⏱ Ships in 2 Working Days(excl. pre-sale)<br></b>",
             "fontsize_text": 14,
             "content_spacing": 25,
             "custom_block_align": "left",
@@ -83,13 +83,6 @@
             "background_gradient_color_block": "",
             "spacing_top": 0,
             "spacing_bottom": 0
-          }
-        },
-        "xboost_bundle_checkbox_upsell_ymXhEw": {
-          "type": "shopify://apps/xboost-bundle/blocks/checkbox_upsell/8707ef23-ba0e-4d63-a83a-1460e9bac021",
-          "settings": {
-            "product": "",
-            "marginY": 16
           }
         },
         "4f95b592-8369-4ab0-b30d-24e463fb6890": {
@@ -183,7 +176,6 @@
         "judge_me_reviews_preview_badge_7JjqMP",
         "4e59f24a-8859-4579-a80a-d70e6f1bf66b",
         "product_text_eTPXKg",
-        "xboost_bundle_checkbox_upsell_ymXhEw",
         "4f95b592-8369-4ab0-b30d-24e463fb6890",
         "klarna_on_site_messaging_app_block_BqMHf9",
         "faa2b3e6-c0a1-4269-baa6-d2605efe4c05",
@@ -520,7 +512,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_cjzCiA": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

@@ -1,0 +1,447 @@
+{% doc %}
+  @prompt
+    Create a two-column section where the left side displays a large square featured image with a "Shop Now" button below it, and the right side shows a grid of four smaller product images, each with its own add to cart button underneath. Include section width settings and background color customization options so the merchant can adjust the overall section width and background color
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-featured-products-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.section_padding }}px 0;
+  }
+
+  .ai-featured-products-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.section_width }}px;
+    margin: 0 auto;padding: 0 20px;
+  }
+
+  .ai-featured-products-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.column_gap }}px;
+    align-items: start;
+  }
+
+  .ai-featured-left-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ai-featured-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-featured-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-featured-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-featured-image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    color: #ccc;
+  }
+
+  .ai-featured-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-shop-now-button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    background-color: {{ block.settings.shop_button_color }};
+    color: {{ block.settings.shop_button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;border: none;
+    cursor: pointer;width: fit-content;
+  }
+
+  .ai-shop-now-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.shop_button_hover_color }};
+  }
+
+  .ai-products-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.product_gap }}px;
+  }
+
+  .ai-product-item-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ai-product-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: {{ block.settings.product_image_border_radius }}px;
+  }
+
+  .ai-product-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-product-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-product-image-placeholder-{{ ai_gen_id }} svg {
+    width: 50%;
+    height: 50%;
+    color: #ccc;
+  }
+
+  .ai-add-to-cart-button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    background-color: {{ block.settings.cart_button_color }};
+    color: {{ block.settings.cart_button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .ai-add-to-cart-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.cart_button_hover_color }};
+  }
+
+  .ai-product-empty-state-{{ ai_gen_id }} {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    font-style: italic;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-featured-products-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .ai-featured-products-container-{{ ai_gen_id }} {
+      padding: 0 15px;
+    }
+
+    .ai-products-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ai-products-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+  }
+{% endstyle %}<div class="ai-featured-products-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-featured-products-container-{{ ai_gen_id }}">
+    <div class="ai-featured-products-grid-{{ ai_gen_id }}">
+      <div class="ai-featured-left-{{ ai_gen_id }}">
+        <div class="ai-featured-image-wrapper-{{ ai_gen_id }}">
+          {% if block.settings.featured_image %}
+            <img
+              src="{{ block.settings.featured_image | image_url: width: 800 }}"
+              alt="{{ block.settings.featured_image.alt | escape }}"
+              class="ai-featured-image-{{ ai_gen_id }}"loading="lazy"
+              width="800"
+              height="800"
+            >
+          {% else %}
+            <div class="ai-featured-image-placeholder-{{ ai_gen_id }}">
+              {{ 'hero-apparel-1' | placeholder_svg_tag }}<div class="ai-featured-empty-state-{{ ai_gen_id }}">
+                Add a featured image
+              </div>
+            </div>
+          {% endif %}
+        </div>
+        
+        {% if block.settings.shop_now_link %}
+          <a href="{{ block.settings.shop_now_link }}" class="ai-shop-now-button-{{ ai_gen_id }}">
+            {{ block.settings.shop_now_text }}
+          </a>
+        {% else %}
+          <button class="ai-shop-now-button-{{ ai_gen_id }}" disabled>
+            {{ block.settings.shop_now_text }}
+          </button>
+        {% endif %}
+      </div>
+
+      <div class="ai-products-grid-{{ ai_gen_id }}">
+        {% for i in (1..4) %}
+          {% liquid
+            assign product_key = 'product_' | append: i
+            assign product = block.settings[product_key]%}
+          
+          <div class="ai-product-item-{{ ai_gen_id }}"><div class="ai-product-image-wrapper-{{ ai_gen_id }}">
+              {% if product and product.featured_image %}
+                <img
+                  src="{{ product.featured_image | image_url: width: 400 }}"
+                  alt="{{ product.featured_image.alt | escape }}"
+                  class="ai-product-image-{{ ai_gen_id }}"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                >
+              {% else %}
+                <div class="ai-product-image-placeholder-{{ ai_gen_id }}">
+                  {{ 'product-apparel-1' | placeholder_svg_tag }}
+                </div>
+              {% endif %}
+            </div>
+            
+            {% if product and product.available %}
+              <form action="/cart/add" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                <button type="submit" class="ai-add-to-cart-button-{{ ai_gen_id }}">
+                  {{ block.settings.add_to_cart_text }}
+                </button>
+              </form>
+            {% elsif product %}
+              <button class="ai-add-to-cart-button-{{ ai_gen_id }}" disabled>
+                Sold out
+              </button>
+            {% else %}
+              <div class="ai-product-empty-state-{{ ai_gen_id }}">
+                Select a product
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Featured products grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section layout"
+    },
+    {
+      "type": "range",
+      "id": "section_width",
+      "min": 1000,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "label": "Section width",
+      "default": 1200
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Gap between columns",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Featured image"
+    },
+    {
+      "type": "image_picker",
+      "id": "featured_image",
+      "label": "Featured image"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Shop now button"
+    },
+    {
+      "type": "text",
+      "id": "shop_now_text",
+      "label": "Button text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "shop_now_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "shop_button_color",
+      "label": "Button color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "shop_button_hover_color",
+      "label": "Button hover color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "shop_button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Products"
+    },
+    {
+      "type": "product",
+      "id": "product_1",
+      "label": "Product 1"
+    },
+    {
+      "type": "product",
+      "id": "product_2",
+      "label": "Product 2"
+    },
+    {
+      "type": "product",
+      "id": "product_3",
+      "label": "Product 3"
+    },
+    {
+      "type": "product",
+      "id": "product_4",
+      "label": "Product 4"
+    },
+    {
+      "type": "range",
+      "id": "product_gap",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between products",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "product_image_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Product image border radius",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Add to cart buttons"
+    },
+    {
+      "type": "text",
+      "id": "add_to_cart_text",
+      "label": "Button text",
+      "default": "Add to Cart"
+    },
+    {
+      "type": "color",
+      "id": "cart_button_color",
+      "label": "Button color",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "cart_button_hover_color",
+      "label": "Button hover color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "cart_button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured products grid"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

@@ -288,6 +288,7 @@
     },
     "video_block_fEcPRj": {
       "type": "video-block",
+      "disabled": true,
       "settings": {
         "container": "1170",
         "mg_top_desktop": 50,
@@ -312,7 +313,7 @@
         "video_height": "50",
         "style_video": "youtube",
         "video_url": "https://www.youtube.com/watch?v=AfdlU2La7bc",
-        "url_mp4": "",
+        "url_mp4": "https://www.youtube.com/watch?v=AfdlU2La7bc",
         "description": "",
         "full_width": false
       }
@@ -393,7 +394,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_VnfX8t": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

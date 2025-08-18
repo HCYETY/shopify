@@ -19,6 +19,7 @@
     },
     "creality_2024_header_advertisement_Pe89VM": {
       "type": "creality_2024_header_advertisement",
+      "disabled": true,
       "settings": {
         "item_bgcolor": "#000000",
         "item_bgcolor_url": "",

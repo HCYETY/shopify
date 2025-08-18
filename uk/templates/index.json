@@ -147,7 +147,7 @@
         "return_guarantee_title": "14-day Return Guarantee",
         "return_guarantee_description": "",
         "return_guarantee_link": "",
-        "design_space_image": "shopify://shop_images/Frame-design-space.webp",
+        "design_space_image": "shopify://shop_images/20250818-105821.png",
         "design_space_title": "Falcon Design Space",
         "design_space_description": "",
         "design_space_link": "",
@@ -815,6 +815,7 @@
     },
     "17542951406b2ababa": {
       "type": "_blocks",
+      "disabled": true,
       "settings": {}
     }
   },

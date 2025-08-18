@@ -1,0 +1,471 @@
+{% doc %}
+  @prompt
+    Create a two-column section with equal heights where the left side displays a big square product image with a product title and "Shop Now" button below it, and the right side shows a grid of four smaller product images, each with its own add to cart button and product title underneath. Include section width settings, background color customization options, and section title settings so the merchant can adjust the overall section width, background color, and add a customizable section title. Ensure both left and right columns maintain the same height
+
+{% enddoc %}
+{% assign ai_gen_id = section.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-product-showcase-{{ ai_gen_id }} {
+    background-color: {{ section.settings.background_color }};
+    padding:60px 0;}
+
+  .ai-product-showcase-container-{{ ai_gen_id }} {
+    max-width: {% if section.settings.section_width == 'full' %}100%{% elsif section.settings.section_width == 'narrow' %}1200px{% else %}1400px{% endif %};
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-product-showcase-title-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: {{ section.settings.title_size }}px;
+    color: {{ section.settings.title_color }};
+    font-weight: 600;
+  }
+
+  .ai-product-showcase-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: stretch;
+  }
+
+  .ai-product-showcase-featured-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .ai-product-showcase-featured-image-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 1;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .ai-product-showcase-featured-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-product-showcase-featured-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-product-showcase-featured-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .ai-product-showcase-featured-empty-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+  }
+
+  .ai-product-showcase-featured-content-{{ ai_gen_id }} {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .ai-product-showcase-featured-title-{{ ai_gen_id }} {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: {{ section.settings.text_color }};
+  }
+
+  .ai-product-showcase-featured-button-{{ ai_gen_id }} {
+    background-color: {{ section.settings.button_color }};
+    color: {{ section.settings.button_text_color }};
+    padding: 15px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    align-self: flex-start;
+  }
+
+  .ai-product-showcase-featured-button-{{ ai_gen_id }}:hover {
+    background-color: {{ section.settings.button_hover_color }};
+  }
+
+  .ai-product-showcase-grid-products-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 100%;
+  }
+
+  .ai-product-showcase-product-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ai-product-showcase-product-image-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 1;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+
+  .ai-product-showcase-product-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-product-showcase-product-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-product-showcase-product-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+  }
+
+  .ai-product-showcase-product-empty-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+  }
+
+  .ai-product-showcase-product-title-{{ ai_gen_id }} {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: {{ section.settings.text_color }};
+    line-height: 1.3;
+  }
+
+  .ai-product-showcase-product-button-{{ ai_gen_id }} {
+    background-color: {{ section.settings.secondary_button_color }};
+    color: {{ section.settings.secondary_button_text_color }};
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: auto;
+  }
+
+  .ai-product-showcase-product-button-{{ ai_gen_id }}:hover {
+    background-color: {{ section.settings.secondary_button_hover_color }};
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-product-showcase-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;gap: 30px;
+    }
+
+    .ai-product-showcase-featured-title-{{ ai_gen_id }} {
+      font-size: 20px;
+    }
+
+    .ai-product-showcase-title-{{ ai_gen_id }} {
+      font-size: {{ section.settings.title_size | times: 0.8 }}px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ai-product-showcase-grid-products-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-product-showcase-{{ ai_gen_id }}" {{ section.shopify_attributes }}>
+  <div class="ai-product-showcase-container-{{ ai_gen_id }}">
+    {% if section.settings.section_title != blank %}
+      <h2 class="ai-product-showcase-title-{{ ai_gen_id }}">{{ section.settings.section_title }}</h2>
+    {% endif %}
+
+    <div class="ai-product-showcase-grid-{{ ai_gen_id }}">
+      <div class="ai-product-showcase-featured-{{ ai_gen_id }}"><div class="ai-product-showcase-featured-image-{{ ai_gen_id }}">
+          {% if section.settings.featured_product and section.settings.featured_product.featured_image %}
+            <img
+              src="{{ section.settings.featured_product.featured_image | image_url: width: 600}}"
+              alt="{{ section.settings.featured_product.featured_image.alt | escape }}"
+              loading="lazy"
+              width="600"
+              height="600"
+            >
+          {% else %}
+            <div class="ai-product-showcase-featured-placeholder-{{ ai_gen_id }}">
+              {{ 'product-1' | placeholder_svg_tag }}
+              <div class="ai-product-showcase-featured-empty-{{ ai_gen_id }}">
+                Add a featured product
+              </div>
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="ai-product-showcase-featured-content-{{ ai_gen_id }}">
+          <h3 class="ai-product-showcase-featured-title-{{ ai_gen_id }}">
+            {% if section.settings.featured_product %}
+              {{ section.settings.featured_product.title }}
+            {% else %}
+              Featured Product Title
+            {% endif %}
+          </h3>
+
+          <a
+            href="{% if section.settings.featured_product %}{{ section.settings.featured_product.url }}{% else %}#{% endif %}"
+            class="ai-product-showcase-featured-button-{{ ai_gen_id }}"
+          >
+            {{ section.settings.featured_button_text }}
+          </a>
+        </div>
+      </div>
+
+      <div class="ai-product-showcase-grid-products-{{ ai_gen_id }}">
+        {% for i in (1..4) %}
+          {% assign product_key = 'grid_product_' | append: i %}
+          {% assign product = section.settings[product_key] %}
+
+          <div class="ai-product-showcase-product-{{ ai_gen_id }}">
+            <div class="ai-product-showcase-product-image-{{ ai_gen_id }}">
+              {% if product and product.featured_image %}
+                <img
+                  src="{{ product.featured_image | image_url: width: 300 }}"
+                  alt="{{ product.featured_image.alt | escape }}"
+                  loading="lazy"
+                  width="300"
+                  height="300"
+                >
+              {% else %}
+                <div class="ai-product-showcase-product-placeholder-{{ ai_gen_id }}">
+                  {{ 'product-1' | placeholder_svg_tag }}
+                  <div class="ai-product-showcase-product-empty-{{ ai_gen_id }}">
+                    Add product {{ i }}
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+
+            <h4 class="ai-product-showcase-product-title-{{ ai_gen_id }}">
+              {% if product %}
+                {{ product.title }}
+              {% else %}
+                Product {{ i }} Title
+              {% endif %}
+            </h4>
+
+            {% if product %}
+              {% form 'product', product %}<input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                <button
+                  type="submit"
+                  class="ai-product-showcase-product-button-{{ ai_gen_id }}"{% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}
+                >
+                  {% if product.selected_or_first_available_variant.available %}
+                    {{ section.settings.grid_button_text }}
+                  {% else %}
+                    Sold out
+                  {% endif %}
+                </button>
+              {% endform %}
+            {% else %}
+              <button class="ai-product-showcase-product-button-{{ ai_gen_id }}" disabled>
+                {{ section.settings.grid_button_text }}
+              </button>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product showcase",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section title"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title",
+      "default": "Featured Products"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "options": [
+        {
+          "value": "narrow",
+          "label": "Narrow"
+        },
+        {
+          "value": "standard",
+          "label": "Standard"
+        },
+        {
+          "value": "full",
+          "label": "Full width"
+        }
+      ],
+      "default": "standard"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Featured product"
+    },
+    {
+      "type": "product",
+      "id": "featured_product",
+      "label": "Featured product"
+    },
+    {
+      "type": "text",
+      "id": "featured_button_text",
+      "label": "Featured button text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Featured button color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Featured button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Featured button hover color",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Grid products"
+    },
+    {
+      "type": "product",
+      "id": "grid_product_1",
+      "label": "Grid product 1"
+    },
+    {
+      "type": "product",
+      "id": "grid_product_2",
+      "label": "Grid product 2"
+    },
+    {
+      "type": "product",
+      "id": "grid_product_3",
+      "label": "Grid product 3"
+    },
+    {
+      "type": "product",
+      "id": "grid_product_4",
+      "label": "Grid product 4"
+    },
+    {
+      "type": "text",
+      "id": "grid_button_text",
+      "label": "Grid button text",
+      "default": "Add to Cart"
+    },
+    {
+      "type": "color",
+      "id": "secondary_button_color",
+      "label": "Grid button color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "secondary_button_text_color",
+      "label": "Grid button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "secondary_button_hover_color",
+      "label": "Grid button hover color",
+      "default": "#333333"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product showcase"
+    }
+  ]
+}
+{% endschema %}
