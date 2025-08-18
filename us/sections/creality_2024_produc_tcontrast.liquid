@@ -150,10 +150,10 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  z-index: 999;
-  top: 0px;
+  z-index: 50;
+  top: calc(var(--header-height));
   left: 0;
-  // position: sticky;
+  position: sticky;
 }
 
 .contrast-header-box {
@@ -174,6 +174,7 @@
   height: 48px;
   width: 220px;
   cursor: pointer;
+  z-index: auto; /* 不限制层级 */
 }
 
 .contrast-header-box-input input {
@@ -262,11 +263,11 @@
 }
 
 .contrast-header-box-input ul li p:hover {
-  color: #28be44;
+  color: #14A9DE;
 }
 
 .contrast-header-box-input ul li .activep {
-  color: #28be44;
+  color: #14A9DE;
 }
 
 .contrast-header-box .active svg {
@@ -274,7 +275,7 @@
 }
 
 .contrast-header-box .active input {
-  border: 1px solid #28be44;
+  border: 1px solid #14A9DE;
   padding-right: 30px;
 }
 
@@ -366,7 +367,7 @@
 .contrast-main-box-btn button {
   width: 50%;
   height: 36px;
-  background-color: #28be44;
+  background-color: #14A9DE;
   border-radius: 15px;
   border: none;
   color: #fff;
@@ -383,7 +384,7 @@
   top: 50%;
   transform: translateY(-50%);
   display: flex;
-  z-index: 999;
+  z-index: 49;
 }
 
 .contrast-nav .strip {
@@ -398,7 +399,7 @@
   height: 10%;
   top: 0%;
   transition: all 0.6s;
-  border: 1px solid #28be44;
+  border: 1px solid #14A9DE;
 }
 
 .contrast-nav-box {
@@ -610,10 +611,10 @@
     margin: 30px auto;
     padding-top: 20px;
     position: sticky !important;
-    top: 64px;
+    top: calc(var(--header-height)) + 80px;
     padding-bottom: 20px;
     background-color: #fff;
-    z-index: 99;
+    z-index: 49;
     transform: translateY(0) !important;
   }
   .contrast-nav .strip {
@@ -981,6 +982,21 @@
     });
   {% endfor %}
 
+let navHeight = 0;
+$(document).ready(function () {
+  // 获取顶部导航栏的高度
+  navHeight = $("#MainContent").offset().top;
+
+  // 设置 contrast-header 的 top 值
+  $(".contrast-header").css({
+    top: `${navHeight}px`,
+  });
+
+  // 设置 contrast-nav 的 top 值
+  $(".contrast-nav").css({
+    top: `${navHeight + 80}px`, // 假设 contrast-nav 需要比 contrast-header 高 80px
+  });
+});
 
 
 
@@ -999,7 +1015,7 @@
   return acc;
 }, []);
   dropDownTitle.forEach(item => {
-  const powerList = item.optical_power.map(i => `<p>${item.item_title}(${i})</p>`).join('');
+  const powerList = item.optical_power.map(i => `<p>${item.item_title} ${i.split('+')[0]}</p>`).join('');
   $(".contrast-header-box-input ul").append(`
     <li>
       <h4>${item.item_title}</h4>
@@ -1062,7 +1078,7 @@ $(function () {
 let inputSelectArr = [{}, {}, {}]; // 初始化为三个空对象，分别对应三个输入框);
 function inputSelect($input, num) {
   const inputValue = $input.val();
-  const matchedItem = blocksData.find(item => `${item.item_title}(${item.optical_power})` === inputValue);
+  const matchedItem = blocksData.find(item => `${item.item_title} ${item.optical_power.split('+')[0]}` === inputValue);
   if (matchedItem) {
     inputSelectArr[num - 1] = matchedItem; // 更新对应输入框的数据
   }
@@ -1078,7 +1094,7 @@ default_input.forEach((id, index) => {
   let found = false; // 标志位
   blocksData.forEach((item) => {
     if (item.item_id == id) {
-      $(`#inputValue${index+1} input`).val(`${item.item_title}(${item.optical_power})`);
+      $(`#inputValue${index+1} input`).val(`${item.item_title} ${item.optical_power.split('+')[0]}`);
       found = true; // 找到匹配项
     }
   });
@@ -1500,12 +1516,12 @@ $(function () {
 
     } else {
       $("#MainContent").css({
-       //  overflow: "hidden",
+      overflow: "hidden",
       });
     //  $(".scrolled-past-header").show();
      // $(".contrast-nav").hide();
     }
-    let h=80
+    let h=80+navHeight
     let ht=0
     if ($("#qab_background").length) {
       ht=$("#qab_background").height()
@@ -1520,7 +1536,7 @@ $(function () {
     } else {
       $(".contrast-nav").removeClass("navactive");
       $(".contrast-header").css({
-        // boxShadow: "0px 5px 5px #f1eeee",
+        boxShadow: "0px 5px 5px #f1eeee",
       });
     }
     if (headerTop > ht) {
