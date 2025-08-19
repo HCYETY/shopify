@@ -1,0 +1,1213 @@
+{% doc %}
+  @prompt
+    Create a clearance products section that displays products in a responsive grid layout. On mobile, show 2x2 grid (4 products total). On desktop, show 2x4 grid (8 products total). Each product should have a quick "add to cart" button for immediate purchasing. Include a "View All" button that links to the complete clearance collection. Add horizontal shaking animation for promotional messaging to highlight special offers and limited-time deals. Make the section highly customizable with options for colors, text, spacing, and layout adjustments. The section should have a clearance/sale vibe with appropriate styling.
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-clearance-section-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_padding_top }}px 20px {{ block.settings.section_padding_bottom }}px;
+    background-color: {{ block.settings.section_background_color }};
+  }
+
+  .ai-clearance-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-clearance-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: {{ block.settings.header_margin_bottom }}px;
+  }
+
+  .ai-clearance-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_font_size }}px;
+    font-weight: {{ block.settings.title_font_weight }};
+    color: {{ block.settings.title_color }};
+    margin: 0 0 {{ block.settings.title_margin_bottom }}px;
+    text-transform: {{ block.settings.title_text_transform }};
+  }
+
+  .ai-clearance-promo-{{ ai_gen_id }} {
+    display: inline-block;
+    background-color: {{ block.settings.promo_bg_color }};
+    color: {{ block.settings.promo_text_color }};
+    padding: {{ block.settings.promo_padding_vertical }}px {{ block.settings.promo_padding_horizontal }}px;
+    border-radius: {{ block.settings.promo_border_radius }}px;
+    font-size: {{ block.settings.promo_font_size }}px;
+    font-weight: {{ block.settings.promo_font_weight }};
+    text-transform: {{ block.settings.promo_text_transform }};
+    margin-bottom: {{ block.settings.promo_margin_bottom }}px;
+    {% if block.settings.enable_shake_animation %}
+      animation: ai-clearance-shake-{{ ai_gen_id }} 0.5s ease-in-out infinite alternate;
+    {% endif %}
+  }
+
+  @keyframes ai-clearance-shake-{{ ai_gen_id }} {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-1px); }
+    100% { transform: translateX(1px); }
+  }
+
+  .ai-clearance-subtitle-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtitle_font_size }}px;
+    color: {{ block.settings.subtitle_color }};
+    margin: 0;
+  }
+
+  .ai-clearance-products-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: {{ block.settings.product_gap }}px;
+    margin-bottom: {{ block.settings.grid_margin_bottom }}px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .ai-clearance-products-grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .ai-clearance-product-card-{{ ai_gen_id }} {
+    background-color: {{ block.settings.card_background_color }};
+    border-radius: {{ block.settings.card_border_radius }}px;
+    overflow: hidden;
+    box-shadow: {{ block.settings.card_shadow_horizontal }}px {{ block.settings.card_shadow_vertical }}px {{ block.settings.card_shadow_blur }}px rgba(0, 0, 0, {{ block.settings.card_shadow_opacity }});
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: {{ block.settings.card_border_width }}px solid {{ block.settings.card_border_color }};
+  }
+
+  .ai-clearance-product-card-{{ ai_gen_id }}:hover {
+    transform: translateY(-{{ block.settings.card_hover_lift }}px);
+    box-shadow: {{ block.settings.card_shadow_horizontal }}px {{ block.settings.card_shadow_vertical | plus: 5 }}px {{ block.settings.card_shadow_blur | plus: 10 }}px rgba(0, 0, 0, {{ block.settings.card_shadow_opacity | plus: 0.1 }});
+  }
+
+  .ai-clearance-product-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: {{ block.settings.product_image_height }}px;
+    overflow: hidden;
+  }
+
+  .ai-clearance-product-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-clearance-product-card-{{ ai_gen_id }}:hover .ai-clearance-product-image-{{ ai_gen_id }} {
+    transform: scale(1.05);
+  }
+
+  .ai-clearance-product-badge-{{ ai_gen_id }} {
+    position: absolute;
+    top: {{ block.settings.badge_top_position }}px;
+    left: {{ block.settings.badge_left_position }}px;
+    background-color: {{ block.settings.badge_bg_color }};
+    color: {{ block.settings.badge_text_color }};
+    padding: {{ block.settings.badge_padding_vertical }}px {{ block.settings.badge_padding_horizontal }}px;
+    border-radius: {{ block.settings.badge_border_radius }}px;
+    font-size: {{ block.settings.badge_font_size }}px;
+    font-weight: {{ block.settings.badge_font_weight }};
+    text-transform: {{ block.settings.badge_text_transform }};
+  }
+
+  .ai-clearance-product-info-{{ ai_gen_id }} {
+    padding: {{ block.settings.card_padding }}px;
+  }
+
+  .ai-clearance-product-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.product_title_font_size }}px;
+    font-weight: {{ block.settings.product_title_font_weight }};
+    color: {{ block.settings.product_title_color }};
+    margin: 0 0 {{ block.settings.product_title_margin_bottom }}px;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .ai-clearance-product-price-{{ ai_gen_id }} {
+    margin-bottom: {{ block.settings.product_price_margin_bottom }}px;
+  }
+
+  .ai-clearance-price-current-{{ ai_gen_id }} {
+    font-size: {{ block.settings.price_font_size }}px;
+    font-weight: {{ block.settings.price_font_weight }};
+    color: {{ block.settings.sale_price_color }};
+  }
+
+  .ai-clearance-price-original-{{ ai_gen_id }} {
+    font-size: {{ block.settings.original_price_font_size }}px;
+    color: {{ block.settings.original_price_color }};
+    text-decoration: line-through;
+    margin-left: 8px;
+  }
+
+  .ai-clearance-add-to-cart-{{ ai_gen_id }} {
+    width: 100%;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.add_to_cart_bg_color }};
+    color: {{ block.settings.add_to_cart_text_color }};
+    border: {{ block.settings.button_border_width }}px solid {{ block.settings.button_border_color }};
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_font_size }}px;
+    font-weight: {{ block.settings.button_font_weight }};
+    text-transform: {{ block.settings.button_text_transform }};
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .ai-clearance-add-to-cart-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.add_to_cart_hover_bg_color }};
+    color: {{ block.settings.add_to_cart_hover_text_color }};
+    border-color: {{ block.settings.button_hover_border_color }};
+  }
+
+  .ai-clearance-add-to-cart-{{ ai_gen_id }}:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .ai-clearance-view-all-wrapper-{{ ai_gen_id }} {
+    text-align: center;
+  }
+
+  .ai-clearance-view-all-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: {{ block.settings.view_all_padding_vertical }}px {{ block.settings.view_all_padding_horizontal }}px;
+    background-color: {{ block.settings.view_all_bg_color }};
+    color: {{ block.settings.view_all_text_color }};
+    border: {{ block.settings.view_all_border_width }}px solid {{ block.settings.view_all_border_color }};
+    border-radius: {{ block.settings.view_all_border_radius }}px;
+    font-size: {{ block.settings.view_all_font_size }}px;
+    font-weight: {{ block.settings.view_all_font_weight }};
+    text-transform: {{ block.settings.view_all_text_transform }};
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .ai-clearance-view-all-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.view_all_hover_bg_color }};
+    color: {{ block.settings.view_all_hover_text_color }};
+    border-color: {{ block.settings.view_all_hover_border_color }};
+  }
+
+  .ai-clearance-empty-state-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+  }
+
+  .ai-clearance-empty-state-{{ ai_gen_id }} svg {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+  }
+
+  .ai-clearance-loading-{{ ai_gen_id }} {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+{% endstyle %}
+
+<clearance-products-{{ ai_gen_id }}
+  class="ai-clearance-section-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-clearance-container-{{ ai_gen_id }}">
+    <div class="ai-clearance-header-{{ ai_gen_id }}">
+      {% if block.settings.section_title != blank %}
+        <h2 class="ai-clearance-title-{{ ai_gen_id }}">{{ block.settings.section_title }}</h2>
+      {% endif %}
+      
+      {% if block.settings.promo_text != blank %}
+        <div class="ai-clearance-promo-{{ ai_gen_id }}">{{ block.settings.promo_text }}</div>
+      {% endif %}
+      
+      {% if block.settings.section_subtitle != blank %}
+        <p class="ai-clearance-subtitle-{{ ai_gen_id }}">{{ block.settings.section_subtitle }}</p>
+      {% endif %}
+    </div>
+
+    {% if block.settings.clearance_collection != blank %}
+      <div class="ai-clearance-products-grid-{{ ai_gen_id }}" id="ai-clearance-grid-{{ ai_gen_id }}">
+        {% for product in block.settings.clearance_collection.products limit: 8 %}
+          <div class="ai-clearance-product-card-{{ ai_gen_id }}">
+            <div class="ai-clearance-product-image-wrapper-{{ ai_gen_id }}">
+              {% if product.featured_image %}
+                <img
+                  src="{{ product.featured_image | image_url: width: 400 }}"
+                  alt="{{ product.featured_image.alt | escape }}"
+                  class="ai-clearance-product-image-{{ ai_gen_id }}"
+                  loading="lazy"
+                  width="400"
+                  height="{{ block.settings.product_image_height }}"
+                >
+              {% else %}
+                <div class="ai-clearance-product-image-placeholder-{{ ai_gen_id }}">
+                  {{ 'product-apparel-1' | placeholder_svg_tag }}
+                </div>
+              {% endif %}
+              
+              {% if product.compare_at_price > product.price %}
+                {% assign discount_percentage = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price %}
+                <div class="ai-clearance-product-badge-{{ ai_gen_id }}">
+                  {{ discount_percentage }}% OFF
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="ai-clearance-product-info-{{ ai_gen_id }}">
+              <h3 class="ai-clearance-product-title-{{ ai_gen_id }}">
+                <a href="{{ product.url }}">{{ product.title }}</a>
+              </h3>
+              
+              <div class="ai-clearance-product-price-{{ ai_gen_id }}">
+                <span class="ai-clearance-price-current-{{ ai_gen_id }}">{{ product.price | money }}</span>
+                {% if product.compare_at_price > product.price %}
+                  <span class="ai-clearance-price-original-{{ ai_gen_id }}">{{ product.compare_at_price | money }}</span>
+                {% endif %}
+              </div>
+
+              {% if product.available %}
+                <button
+                  class="ai-clearance-add-to-cart-{{ ai_gen_id }}"
+                  data-product-id="{{ product.id }}"
+                  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+                >
+                  {{ block.settings.add_to_cart_text }}
+                </button>
+              {% else %}
+                <button class="ai-clearance-add-to-cart-{{ ai_gen_id }}" disabled>
+                  {{ block.settings.sold_out_text }}
+                </button>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      {% if block.settings.view_all_link != blank and block.settings.view_all_text != blank %}
+        <div class="ai-clearance-view-all-wrapper-{{ ai_gen_id }}">
+          <a href="{{ block.settings.view_all_link }}" class="ai-clearance-view-all-{{ ai_gen_id }}">
+            {{ block.settings.view_all_text }}
+          </a>
+        </div>
+      {% endif %}
+    {% else %}
+      <div class="ai-clearance-empty-state-{{ ai_gen_id }}">
+        {{ 'collection-apparel-1' | placeholder_svg_tag }}
+        <p>Select a clearance collection to display products</p>
+      </div>
+    {% endif %}
+  </div>
+</clearance-products-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ClearanceProducts{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.cart = null;
+      }
+
+      connectedCallback() {
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        const addToCartButtons = this.querySelectorAll('.ai-clearance-add-to-cart-{{ ai_gen_id }}');
+        
+        addToCartButtons.forEach(button => {
+          button.addEventListener('click', this.handleAddToCart.bind(this));
+        });
+      }
+
+      async handleAddToCart(event) {
+        const button = event.target;
+        const variantId = button.dataset.variantId;
+        
+        if (!variantId || button.disabled) return;
+
+        const originalText = button.textContent;
+        button.textContent = 'Adding...';
+        button.disabled = true;
+        button.classList.add('ai-clearance-loading-{{ ai_gen_id }}');
+
+        try {
+          const response = await fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              id: variantId,
+              quantity: 1
+            })
+          });
+
+          if (response.ok) {
+            button.textContent = 'Added!';
+            
+            window.dispatchEvent(new CustomEvent('cart:updated'));
+            
+            setTimeout(() => {
+              button.textContent = originalText;
+              button.disabled = false;
+              button.classList.remove('ai-clearance-loading-{{ ai_gen_id }}');
+            }, 2000);
+          } else {
+            throw new Error('Failed to add to cart');
+          }
+        } catch (error) {
+          console.error('Error adding to cart:', error);
+          button.textContent = 'Error';
+          
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.disabled = false;
+            button.classList.remove('ai-clearance-loading-{{ ai_gen_id }}');
+          }, 2000);
+        }
+      }
+    }
+
+    customElements.define('clearance-products-{{ ai_gen_id }}', ClearanceProducts{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Clearance products",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title",
+      "default": "Clearance Sale"
+    },
+    {
+      "type": "text",
+      "id": "promo_text",
+      "label": "Promotional text",
+      "default": "Limited Time Only!"
+    },
+    {
+      "type": "text",
+      "id": "section_subtitle",
+      "label": "Section subtitle",
+      "default": "Don't miss out on these incredible deals"
+    },
+    {
+      "type": "collection",
+      "id": "clearance_collection",
+      "label": "Clearance collection"
+    },
+    {
+      "type": "text",
+      "id": "add_to_cart_text",
+      "label": "Add to cart button text",
+      "default": "Add to Cart"
+    },
+    {
+      "type": "text",
+      "id": "sold_out_text",
+      "label": "Sold out button text",
+      "default": "Sold Out"
+    },
+    {
+      "type": "text",
+      "id": "view_all_text",
+      "label": "View all button text",
+      "default": "View All Clearance"
+    },
+    {
+      "type": "url",
+      "id": "view_all_link",
+      "label": "View all button link"
+    },
+    {
+      "type": "header",
+      "content": "Section style"
+    },
+    {
+      "type": "color",
+      "id": "section_background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Title style"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Font size",
+      "default": 36
+    },
+    {
+      "type": "select",
+      "id": "title_font_weight",
+      "label": "Font weight",
+      "options": [
+        {"value": "400", "label": "Normal"},
+        {"value": "600", "label": "Semi bold"},
+        {"value": "700", "label": "Bold"},
+        {"value": "800", "label": "Extra bold"}
+      ],
+      "default": "700"
+    },
+    {
+      "type": "select",
+      "id": "title_text_transform",
+      "label": "Text transform",
+      "options": [
+        {"value": "none", "label": "None"},
+        {"value": "uppercase", "label": "Uppercase"},
+        {"value": "lowercase", "label": "Lowercase"},
+        {"value": "capitalize", "label": "Capitalize"}
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "title_margin_bottom",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Bottom margin",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Promotional text style"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_shake_animation",
+      "label": "Enable shake animation",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "promo_bg_color",
+      "label": "Background color",
+      "default": "#ff4444"
+    },
+    {
+      "type": "color",
+      "id": "promo_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "promo_font_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "promo_font_weight",
+      "label": "Font weight",
+      "options": [
+        {"value": "400", "label": "Normal"},
+        {"value": "600", "label": "Semi bold"},
+        {"value": "700", "label": "Bold"}
+      ],
+      "default": "700"
+    },
+    {
+      "type": "select",
+      "id": "promo_text_transform",
+      "label": "Text transform",
+      "options": [
+        {"value": "none", "label": "None"},
+        {"value": "uppercase", "label": "Uppercase"},
+        {"value": "lowercase", "label": "Lowercase"}
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "range",
+      "id": "promo_padding_vertical",
+      "min": 4,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "promo_padding_horizontal",
+      "min": 8,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "promo_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "promo_margin_bottom",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Bottom margin",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Subtitle style"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "header_margin_bottom",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Header bottom margin",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Product grid"
+    },
+    {
+      "type": "range",
+      "id": "product_gap",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Grid gap",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "grid_margin_bottom",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Grid bottom margin",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Product cards"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "card_border_width",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "label": "Border width",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Border color",
+      "default": "#e5e5e5"
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "min": 10,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Card padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "card_hover_lift",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Hover lift effect",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Card shadow"
+    },
+    {
+      "type": "range",
+      "id": "card_shadow_horizontal",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Horizontal offset",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "card_shadow_vertical",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Vertical offset",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "card_shadow_blur",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Blur radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "card_shadow_opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "label": "Shadow opacity",
+      "default": 0.1
+    },
+    {
+      "type": "header",
+      "content": "Product images"
+    },
+    {
+      "type": "range",
+      "id": "product_image_height",
+      "min": 150,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Image height",
+      "default": 200
+    },
+    {
+      "type": "header",
+      "content": "Sale badges"
+    },
+    {
+      "type": "color",
+      "id": "badge_bg_color",
+      "label": "Badge background",
+      "default": "#ff4444"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Badge text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "badge_font_size",
+      "min": 10,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "badge_font_weight",
+      "label": "Font weight",
+      "options": [
+        {"value": "400", "label": "Normal"},
+        {"value": "600", "label": "Semi bold"},
+        {"value": "700", "label": "Bold"}
+      ],
+      "default": "700"
+    },
+    {
+      "type": "select",
+      "id": "badge_text_transform",
+      "label": "Text transform",
+      "options": [
+        {"value": "none", "label": "None"},
+        {"value": "uppercase", "label": "Uppercase"},
+        {"value": "lowercase", "label": "Lowercase"}
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "range",
+      "id": "badge_padding_vertical",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "badge_padding_horizontal",
+      "min": 4,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "badge_border_radius",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "badge_top_position",
+      "min": 5,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Top position",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "badge_left_position",
+      "min": 5,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Left position",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Product titles"
+    },
+    {
+      "type": "range",
+      "id": "product_title_font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "product_title_font_weight",
+      "label": "Font weight",
+      "options": [
+        {"value": "400", "label": "Normal"},
+        {"value": "600", "label": "Semi bold"},
+        {"value": "700", "label": "Bold"}
+      ],
+      "default": "600"
+    },
+    {
+      "type": "color",
+      "id": "product_title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "product_title_margin_bottom",
+      "min": 4,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Bottom margin",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Product prices"
+    },
+    {
+      "type": "range",
+      "id": "price_font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Sale price font size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "price_font_weight",
+      "label": "Sale price font weight",
+      "options": [
+        {"value": "400", "label": "Normal"},
+        {"value": "600", "label": "Semi bold"},
+        {"value": "700", "label": "Bold"}
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "sale_price_color",
+      "label": "Sale price color",
+      "default": "#ff4444"
+    },
+    {
+      "type": "range",
+      "id": "original_price_font_size",
+      "min": 10,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Original price font size",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "original_price_color",
+      "label": "Original price color",
+      "default": "#999999"
+    },
+    {
+      "type": "range",
+      "id": "product_price_margin_bottom",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Price bottom margin",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Add to cart buttons"
+    },
+    {
+      "type": "color",
+      "id": "add_to_cart_bg_color",
+      "label": "Background color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "add_to_cart_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "add_to_cart_hover_bg_color",
+      "label": "Hover background color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "add_to_cart_hover_text_color",
+      "label": "Hover text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "button_font_weight",
+      "label": "Font weight",
+      "options": [
+        {"value": "400", "label": "Normal"},
+        {"value": "600", "label": "Semi bold"},
+        {"value": "700", "label": "Bold"}
+      ],
+      "default": "600"
+    },
+    {
+      "type": "select",
+      "id": "button_text_transform",
+      "label": "Text transform",
+      "options": [
+        {"value": "none", "label": "None"},
+        {"value": "uppercase", "label": "Uppercase"},
+        {"value": "lowercase", "label": "Lowercase"}
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "min": 0,
+      "max": 3,
+      "step": 1,
+      "unit": "px",
+      "label": "Border width",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Border color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_border_color",
+      "label": "Hover border color",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "View all button"
+    },
+    {
+      "type": "color",
+      "id": "view_all_bg_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "view_all_text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "view_all_hover_bg_color",
+      "label": "Hover background color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "view_all_hover_text_color",
+      "label": "Hover text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "view_all_font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "view_all_font_weight",
+      "label": "Font weight",
+      "options": [
+        {"value": "400", "label": "Normal"},
+        {"value": "600", "label": "Semi bold"},
+        {"value": "700", "label": "Bold"}
+      ],
+      "default": "600"
+    },
+    {
+      "type": "select",
+      "id": "view_all_text_transform",
+      "label": "Text transform",
+      "options": [
+        {"value": "none", "label": "None"},
+        {"value": "uppercase", "label": "Uppercase"},
+        {"value": "lowercase", "label": "Lowercase"}
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "range",
+      "id": "view_all_padding_vertical",
+      "min": 8,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "view_all_padding_horizontal",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "view_all_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "view_all_border_width",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "unit": "px",
+      "label": "Border width",
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "view_all_border_color",
+      "label": "Border color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "view_all_hover_border_color",
+      "label": "Hover border color",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clearance products"
+    }
+  ]
+}
+{% endschema %}
