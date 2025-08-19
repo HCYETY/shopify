@@ -106,7 +106,7 @@
         "announcement_8gedGD": {
           "type": "announcement",
           "settings": {
-            "text": "<a href=\"https://www.crealityfalcon.com/pages/student-discount\" style=\"color: #000; font-weight: bold; text-decoration: none;\">\n   🎉 Buy 10+ Materials → Get <span style=\"color:#ff4d00;\">20% OFF</span> Automatically at Checkout!\n</a>",
+            "text": "<a href=\"https://www.crealityfalcon.com/collections/materials\" style=\"color: #000; font-weight: bold; text-decoration: none;\">\n   🎉 Buy 10+ Materials → Get <span style=\"color:#ff4d00;\">20% OFF</span> Automatically at Checkout!\n</a>",
             "btn_color": "#232323",
             "btn_border_color": "#ffffff",
             "btn_bg_color": "#ffffff",
@@ -116,7 +116,7 @@
         "announcement_8jVXmJ": {
           "type": "announcement",
           "settings": {
-            "text": "<a href=\"https://www.crealityfalcon.com/collections/materials\" style=\"color: #000; font-weight: bold; text-decoration: none;\">\n 🎓 <span style=\"color:#ff4d00; text-decoration: underline;\">8% Student &amp; Teacher Discount</span> valid sitewide!\n</a>",
+            "text": "<a href=\"https://www.crealityfalcon.com/pages/student-discount\" style=\"color: #000; font-weight: bold; text-decoration: none;\">\n 🎓 <span style=\"color:#ff4d00; text-decoration: underline;\">8% Student &amp; Teacher Discount</span> valid sitewide!\n</a>",
             "btn_color": "#232323",
             "btn_border_color": "#ffffff",
             "btn_bg_color": "#ffffff",
