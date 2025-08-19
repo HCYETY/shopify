@@ -55,6 +55,7 @@
         },
         "4e59f24a-8859-4579-a80a-d70e6f1bf66b": {
           "type": "info",
+          "disabled": true,
           "settings": {
             "show_vendor": false,
             "show_sku": false,
