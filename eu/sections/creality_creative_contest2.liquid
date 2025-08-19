@@ -1,0 +1,4186 @@
+<style>
+  @charset "UTF-8";
+  #app-{{section.id}} .HarmonyOS_Bold {
+    font-family: "HarmonyOS_Sans_SC_Bold";
+  }
+  #app-{{section.id}} .HarmonyOS_Regular {
+    font-family: "HarmonyOS_Sans_SC_Regular";
+  }
+  #app-{{section.id}} .container-box {
+    background-color: #F98153;
+  }
+  #app-{{section.id}} .container-box .view-btn {
+    margin: 0 auto;
+    margin-top: 0.521vw;
+    font-size: 1.042vw;
+    text-decoration: underline;
+    display: flex;
+    color: #93d500;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.563vw;
+    height: 2.604vw;
+    cursor: pointer;
+  }
+  #app-{{section.id}} .container-box img {
+    vertical-align: middle;
+  }
+  #app-{{section.id}} .container-box a {
+    text-decoration: none;
+  }
+  #app-{{section.id}} .container-box .common-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.667vw;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+    color: #ffffff;
+    font-family: "HarmonyOS_Sans_SC_Bold";
+  }
+  #app-{{section.id}} .container-box .common-subtitle {
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.833vw;
+    color: #ffffff;
+    font-family: "HarmonyOS_Sans_SC_Regular";
+  }
+  #app-{{section.id}} .container-box .content {
+    width: 62.5vw;
+    margin: 0 auto;
+  }
+  #app-{{section.id}} .container-box .t-videos {
+    margin-top: 2.083vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #app-{{section.id}} .container-box .t-videos .video-item {
+    width: 20.278vw;
+    position: relative;
+    border-radius: 0.833vw;
+    margin-bottom: 1.667vw;
+    background-color: #ffffff;
+    margin-right: 0.833vw;
+  }
+  #app-{{section.id}} .container-box .t-videos .video-item:nth-child(3) {
+    margin-right: 0;
+  }
+  #app-{{section.id}} .container-box .t-videos .video-item .ranking-img {
+    right: 1.042vw;
+    top: -0.885vw;
+    z-index: 20;
+    position: absolute;
+    width: 2.96875vw;
+    height: auto;
+    display: block;
+  }
+  #app-{{section.id}} .container-box .t-videos .video-item .p-info {
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+    padding: 0.833vw;
+  }
+  #app-{{section.id}} .container-box .t-videos .video-item .p-info .portrait {
+    width: 2.604vw;
+    height: 2.604vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 0.833vw;
+  }
+  #app-{{section.id}} .container-box .t-videos .video-item .p-info .portrait .portrait-img {
+    width: 100%;
+    height: auto;
+  }
+  #app-{{section.id}} .container-box .t-videos .video-item .p-info .name {
+    font-size: 0.833vw;
+    font-weight: bold;
+    color: #333;
+  }
+  #app-{{section.id}} .container-box .t-videos .video-item .video-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  #app-{{section.id}} .container-box .t-videos .video-item .video-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  #app-{{section.id}} .container-box .t-videos .video-item .video-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.417vw 0.833vw;
+    background-color: #ffffff;
+    border-radius: 0 0 0.833vw 0.833vw;
+  }
+  #app-{{section.id}} .container-box .t-videos .video-item .video-info .item {
+    padding: 0.833vw;
+    display: flex;
+    align-items: center;
+  }
+  #app-{{section.id}} .container-box .t-videos .video-item .video-info .item .img-wrap {
+    width: 1.042vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.521vw;
+  }
+  #app-{{section.id}} .container-box .t-videos .video-item .video-info .item .icon {
+    width: 100%;
+  }
+  #app-{{section.id}} .container-box .t-videos .video-item .video-info .item .nums {
+    font-size: 0.833vw;
+    color: #adadad;
+  }
+
+  #app-{{section.id}} .section1 {
+    position: relative;
+    background: linear-gradient(to right, #FDB684 0, #FBA978 20%,  #F18A60 40%, #F1895F 60%, #F69A6C 80%, #F8A172 100%);
+  }
+  #app-{{section.id}} .section1 .banner-img {
+    width: 100%;
+  }
+  #app-{{section.id}} .section1 .text-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1.042vw;
+    top: 9.896vw;
+    left: 8.333vw;
+  }
+  #app-{{section.id}} .section1 .text-box .img-title {
+    width: 36.458vw;
+  }
+  #app-{{section.id}} .section1 .text-box .subtitle {
+    font-size: 1.979vw;
+    color: rgba(0, 0, 0, .8);
+    font-weight: 500;
+  }
+  #app-{{section.id}} .section1 .text-box .win-title {
+    font-size: 2.5vw;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  #app-{{section.id}} .section1 .text-box .win-title span.red {
+    color: #E20121;
+  }
+  #app-{{section.id}} .section1 .text-box .win-title span.date {
+    font-size: 28px;
+  }
+  #app-{{section.id}} .section1 .text-box .btn-box {
+    gap: 1.042vw;
+    display: flex;
+  }
+  #app-{{section.id}} .section1 .text-box .btn-box .upload-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 16.458vw;
+    padding: 0.521vw 1.25vw;
+    background-color: #ffffff;
+    border: 0.052vw solid #E20121;
+    color: #E20121;
+    font-size: 1.25vw;
+    font-weight: 700;
+    border-radius: 52.031vw;
+    -webkit-border-radius: 52.031vw;
+    -moz-border-radius: 52.031vw;
+    -ms-border-radius: 52.031vw;
+    -o-border-radius: 52.031vw;
+  }
+  #app-{{section.id}} .section1 .text-box .btn-box .see-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 16.458vw;
+    padding: 0.521vw 1.25vw;
+    background-color: rgba(255, 255, 255, .4);
+    border: 0.052vw solid #49A67D;
+    color: #49A67D;
+    font-size: 1.25vw;
+    font-weight: 700;
+    border-radius: 52.031vw;
+    -webkit-border-radius: 52.031vw;
+    -moz-border-radius: 52.031vw;
+    -ms-border-radius: 52.031vw;
+    -o-border-radius: 52.031vw;
+  }
+  #app-{{section.id}} .section1 .share-btns {
+    padding: 0.625vw 0.833vw;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 52.031vw;
+    width: 18.229vw;
+    left: 8.333vw;
+    bottom: 18.229vw;
+    border-radius: 52.031vw;
+  }
+  #app-{{section.id}} .section1 .share-btns .share-item {
+    width: 1.667vw;
+    height: 1.667vw;
+    cursor: pointer;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  #app-{{section.id}} .section1 .share-btns .share-item:nth-child(1) {
+    background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/25_4899338c-c4ce-4718-8f77-c621a65077b0.png?v=1725418082");
+  }
+  #app-{{section.id}} .section1 .share-btns .share-item:nth-child(2) {
+    background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/26_753a1612-89d5-4ae2-a698-c867bc9737c8.png?v=1725418082");
+  }
+  #app-{{section.id}} .section1 .share-btns .share-item:nth-child(3) {
+    background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/27.png?v=1725418083");
+  }
+  #app-{{section.id}} .section1 .share-btns .share-item:nth-child(4) {
+    background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/e976a8c9b6e4b0ec000f4d86959a60f0.png?v=1725418083");
+  }
+  #app-{{section.id}} .section1 .share-btns .share-item:nth-child(5) {
+    background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/640.png?v=1725418082");
+  }
+
+  #app-{{section.id}} .section2 {
+    padding-bottom: 4.167vw;
+    background: linear-gradient(to right, #FDB684 0, #FBA978 20%,  #F18A60 40%, #F1895F 60%, #F69A6C 80%, #F8A172 100%);
+  }
+  #app-{{section.id}} .section2 .text-box {
+    margin: 0 auto;
+    border-radius: 1.25vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25vw;
+    width: 62.5vw;
+    padding: 2.604vw 6.25vw;
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+    text-align: center;
+  }
+  #app-{{section.id}} .section2 .text-box .title {
+    font-size: 1.667vw;
+    font-weight: bold;
+    font-family: "HarmonyOS_Sans_SC_Bold";
+    
+  }
+  #app-{{section.id}} .section2 .text-box .desc {
+    font-size: 0.833vw;
+    font-weight: 500;
+  }
+  #app-{{section.id}} .section2 .count-down-wrap {
+    width: 41.667vw;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 5.208vw;
+  }
+  #app-{{section.id}} .section2 .count-down-wrap img {
+    width: 100%;
+    height: auto;
+  }
+  #app-{{section.id}} .section2 .count-down {
+    position: absolute;
+    width: 31.25vw;
+    left: 50%;
+    top: 7.292vw;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  #app-{{section.id}} .section2 .count-down .time-item {
+    position: relative;
+    text-align: center;
+    padding: 1.542vw 2.542vw;
+  }
+  #app-{{section.id}} .section2 .count-down .time-item:not(:last-child)::after {
+    position: absolute;
+    top: 3.125vw;
+    right: 0;
+    transform: translateY(-50%) translateX(50%);
+    font-size: 1.667vw;
+    content: ":";
+    color: #ffffff;
+    margin-left: 0.26vw;
+  }
+  #app-{{section.id}} .section2 .count-down .time-item .num {
+    font-size: 2.5vw;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: "HarmonyOS_Sans_SC_Bold";
+  }
+  #app-{{section.id}} .section2 .count-down .time-item .date-text {
+    color: #ffffff;
+    font-size: 0.833vw;
+    font-family: "HarmonyOS_Sans_SC_Regular";
+  }
+
+  #app-{{section.id}} .section3 {
+    padding: 4.167vw 0;
+    background: linear-gradient(to right, #FDB684 0, #f7a06e 20%,  #f89067 40%, #f78f67 60%, #f79869 80%, #f59d6e 100%);
+  }
+  #app-{{section.id}} .section3 .special-award {
+    position: relative;
+  }
+  #app-{{section.id}} .section3 .special-award .award-img {
+    width: 100%;
+    height: auto;
+  }
+  #app-{{section.id}} .section3 .special-award .dialog-box {
+    position: absolute;
+    top: 0.521vw;
+    left: 10.417vw;
+
+  }
+  #app-{{section.id}} .section3 .special-award .dialog-box .dialog {
+    width: 9.375vw;
+    height: auto;
+  }
+  #app-{{section.id}} .section3 .special-award .dialog-box .dialog-text {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0.260vw;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.146vw;
+    color: #DB3631;
+    font-family: "HarmonyOS_Sans_SC_Bold";
+  }
+  #app-{{section.id}} .section3 .special-award .award-product {
+    width: 31.25vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  #app-{{section.id}} .section3 .special-award .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.042vw;
+    justify-content: center;
+  }
+  #app-{{section.id}} .section3 .special-award .texts .title {
+    text-align: center;
+    font-size: 1.979vw;
+    background: linear-gradient(to right, #FA8547 0, #DE6351 50%, #B8355E 100%);
+    font-family: "HarmonyOS_Sans_SC_Bold";
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+  }
+  #app-{{section.id}} .section3 .special-award .texts .desc {
+    text-align: center;
+    font-size: 0.833vw;
+    color: #F88148;
+  }
+  #app-{{section.id}} .section3 .special-award .mystery-box {
+    width: 13.542vw;
+    height: auto;
+  }
+  
+  #app-{{section.id}} .section3 .special-award .dialog-box .dialog-text2 {
+    font-size: 0.929vw;
+    top: 0.565vw;
+  }
+  #app-{{section.id}} .section3 .special-award .award-product2 {
+    width: 45.25vw;
+    bottom: 2.604vw;
+  }
+  #app-{{section.id}} .section3 .special-award .mystery-box2 {
+    width: 19.625vw;
+    height: auto;
+  }
+  #app-{{section.id}} .section3 .special-award .product-img {
+    flex-shrink: 0;
+  }
+  #app-{{section.id}} .section3 .gift-list {
+    margin-top: 2.604vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.042vw;
+  }
+
+  #app-{{section.id}} .section3 .gift-list .gift-item {
+    position: relative;
+  }
+  #app-{{section.id}} .section3 .gift-list .gift-item .dialog-box {
+    position: absolute;
+    right: 1.5625vw;
+    top: 0.521vw;
+  }
+
+  #app-{{section.id}} .section3 .gift-list .gift-item .dialog-box .dialog {
+    width: 7.8125vw;
+    height: auto;
+  }
+
+  #app-{{section.id}} .section3 .gift-list .gift-item .dialog-box .dialog-text {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0.260vw;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.042vw;
+    color: #DB3631;
+    font-family: "HarmonyOS_Sans_SC_Bold";
+  }
+  #app-{{section.id}} .section3 .gift-list .gift-item .gift-bg-img {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  #app-{{section.id}} .section3 .gift-list .gift-item .text-box {
+    position: absolute;
+    top: 9.375vw;
+    width: 100%;
+    padding: 0 2.604vw;
+    text-align: center;
+  }
+  #app-{{section.id}} .section3 .gift-list .gift-item .text-box .product-img {
+    width: 13.542vw;
+    height: auto;
+    margin: 0 auto;
+  }
+  #app-{{section.id}} .section3 .gift-list .gift-item .text-box .title {
+    margin-top: 2.604vw;
+    font-size: 1.25vw;
+    font-family: "HarmonyOS_Sans_SC_Bold";
+    color: #525252;
+  }
+  #app-{{section.id}} .section3 .gift-list .gift-item .text-box .desc {
+    font-style: 0.729vw;
+    color: #FBB78E;
+  }
+
+  #app-{{section.id}} .section3_1 {
+    padding-top: 4.167vw;
+    margin-bottom: 0;
+    background: linear-gradient(to right, #F39E7A 0, #EC7853 20%,  #E86B49 40%, #E86A48 60%, #f79869 95%, #F49367 100%);
+  }
+  #app-{{section.id}} .section3_1 .list1 {
+    margin-top: 1.5625vw;
+    margin-bottom: 8.167vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.042vw;
+  }
+  #app-{{section.id}} .section3_1 .list1 .list1-item {
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 1.25vw;
+    text-align: center;
+  }
+  #app-{{section.id}} .section3_1 .list1 .list1-item .item-img {
+    width: 100%;
+    height: auto;
+  }
+  #app-{{section.id}} .section3_1 .list1 .list1-item .item-text {
+    background-color: #ffffff;
+    padding: 1.042vw 0.521vw;
+    display: flex;
+    font-size: 1.042vw;
+    font-weight: 500;
+    font-family: "HarmonyOS_Sans_SC_Regular";
+    justify-content: center;
+    align-items: center;
+  }
+
+  #app-{{section.id}} .section3_1 .list2 {
+    margin: 2.083vw 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.042vw;
+  }
+  #app-{{section.id}} .section3_1 .list2 .list2-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.25vw;
+    text-align: center;
+  }
+  #app-{{section.id}} .section3_1 .list2 .list2-item .item-img {
+    width: 100%;
+    height: auto;
+  }
+  #app-{{section.id}} .section3_1 .list2 .list2-item .item-text {
+    padding: 4px 10px;
+    background-color: #49A67D;
+    border-radius: 999px;
+    position: absolute;
+    color: #ffffff;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3.085vw;
+    display: flex;
+    font-size: 1.042vw;
+    font-weight: 500;
+    font-family: "HarmonyOS_Sans_SC_Regular";
+    justify-content: center;
+    align-items: center;
+  }
+
+  #app-{{section.id}} .section3_1 .more-models {
+    width: 36.458vw;
+    margin: 0 auto;
+    border-radius: 52.031vw;
+    border: 0.052vw solid rgba(255, 255, 255, .4);
+    display: flex;
+    font-size: 0.9375vw;
+    font-family: 'HarmonyOS_Sans_SC_Regular';
+    color: #fff;
+  }
+
+  #app-{{section.id}} .section3_1 .more-models .text1 {
+    padding: 0.521vw 1.25vw;
+    flex: 1;
+  }
+
+  #app-{{section.id}} .section3_1 .more-models .text2 {
+    padding: 0.521vw 1.25vw;
+    flex: 1;
+    background-color: rgba(255, 255, 255, .4);
+    border-radius: 52.031vw;
+  }
+
+  #app-{{section.id}} .section3_2 {
+    padding-top: 8.167vw;
+    padding-bottom: 6.25vw;
+    background: linear-gradient(to right, #F39E7A 0, #EC7853 20%,  #E86B49 40%, #E86A48 60%, #f79869 95%, #F49367 100%);
+  }
+  #app-{{section.id}} .section3_2 .videos-wrap {
+    position: relative;
+    background-color: rgba(255, 255, 255, .25);
+    margin-top: 5.208vw;
+  }
+  #app-{{section.id}} .section3_2 .videos-wrap .snow1 {
+    width: 100%;
+    height: auto;
+    transform: translateY(-20%);
+  }
+  #app-{{section.id}} .before-list {
+    padding-bottom: 4.167vw;
+  }
+  #app-{{section.id}} .before-list .video-item {
+    width: 20.278vw;
+    position: relative;
+    border-radius: 0.833vw;
+    margin-bottom: 1.667vw;
+    background-color: #ffffff;
+    margin-right: 0.833vw;
+  }
+  #app-{{section.id}} .before-list .video-item .ranking-img {
+    right: 1.042vw;
+    top: -0.885vw;
+    z-index: 20;
+    position: absolute;
+    width: 2.96875vw;
+    height: auto;
+    display: block;
+  }
+  #app-{{section.id}} .before-list .video-item .p-info {
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+    padding: 0.833vw;
+  }
+  #app-{{section.id}} .before-list .video-item .p-info .portrait {
+    width: 2.604vw;
+    height: 2.604vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 0.833vw;
+  }
+  #app-{{section.id}} .before-list .video-item .p-info .portrait .portrait-img {
+    width: 100%;
+    height: auto;
+  }
+  #app-{{section.id}} .before-list .video-item .p-info .name {
+    font-size: 0.833vw;
+    font-weight: bold;
+    color: #333;
+  }
+  #app-{{section.id}} .before-list .video-item .video-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  #app-{{section.id}} .before-list .video-item .video-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  #app-{{section.id}} .before-list .video-item .video-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.417vw 0.833vw;
+    background-color: #ffffff;
+    border-radius: 0 0 0.833vw 0.833vw;
+  }
+  #app-{{section.id}} .before-list .video-item .video-info .item {
+    padding: 0.833vw;
+    display: flex;
+    align-items: center;
+  }
+  #app-{{section.id}} .before-list .video-item .video-info .item .img-wrap {
+    width: 1.042vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.521vw;
+  }
+  #app-{{section.id}} .before-list .video-item .video-info .item .icon {
+    width: 100%;
+  }
+  #app-{{section.id}} .before-list .video-item .video-info .item .nums {
+    font-size: 0.833vw;
+    color: #adadad;
+  }
+  #app-{{section.id}} .section3_2 .videos-wrap .snow2 {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(80%);
+  }
+
+  #app-{{section.id}} .section4 {
+    background: linear-gradient(to right, #F39E7A 0, #EC7853 20%,  #E86B49 40%, #E86A48 60%, #f79869 95%, #F49367 100%);
+    position: relative;
+    padding-top: 4.167vw;
+  }
+
+  #app-{{section.id}} .section5 {
+    background: linear-gradient(to right, #F39E7A 0, #EC7853 20%,  #E86B49 40%, #E86A48 60%, #f79869 95%, #F49367 100%);
+    position: relative;
+    padding-bottom: 4.167vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper-tabs {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.521vw 0;
+    list-style: none;
+    position: relative;
+    margin-bottom: 1.5625vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper-tabs .tab-item {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.521vw 0.78125vw;
+    font-size: 1.167vw;
+    font-weight: 500;
+    color: #ffffff;
+    position: relative;
+    z-index: 50;
+    transition: all 0.3s ease;
+  }
+  #app-{{section.id}} .section5 .content .swiper-tabs .tab-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50%;
+    width: 0.052vw;
+    background-color: #ffffff;
+  }
+  #app-{{section.id}} .section5 .content .swiper-tabs .tab-item.active {
+    font-weight: 600;
+  }
+  #app-{{section.id}} .section5 .content .swiper-tabs .tab-item.active::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    bottom: -0.521vw;
+    height: 1.042vw;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 52.031vw;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/2dd6ad71b1d1399f176501e5e89f18cc.png?v=1734678556");
+  }
+  #app-{{section.id}} .section5 .content .swiper {
+    width: 100%;
+    height: auto;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide {
+    height: auto;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .msg-block {
+    padding: 1.5625vw 5.208vw;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0.833vw;
+    -webkit-border-radius: 0.833vw;
+    -moz-border-radius: 0.833vw;
+    -ms-border-radius: 0.833vw;
+    -o-border-radius: 0.833vw;
+    color: #000;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .msg-block .block-title {
+    margin: 2.083vw 0;
+    text-align: center;
+    font-size: 1.5625vw;
+    font-weight: 600;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .msg-block .block-subtitle {
+    font-size: 1.25vw;
+    font-weight: 600;
+    margin-bottom: 0.625vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .msg-block .block-smal-text {
+    font-size: 0.9375vw;
+    font-weight: 500;
+    margin-bottom: 0.417vw;
+    padding-left: 0.78125vw;
+    position: relative;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .msg-block .block-smal-text::after {
+    content: "";
+    position: absolute;
+    top: 0.521vw;
+    left: 0.26vw;
+    width: 0.208vw;
+    height: 0.208vw;
+    background-color: #000;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .msg-block .desc {
+    font-size: 0.9375vw;
+    font-weight: 500;
+    line-height: 1.5625vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block1 .time-line {
+    width: 41.667vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding: 1.042vw 0;
+    overflow-x: auto;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block1 .time-line .time-item {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    padding: 0 1.042vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block1 .time-line .time-item .title {
+    width: 100%;
+    font-size: 0.729vw;
+    font-weight: 500;
+    color: #333;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block1 .time-line .time-item .red-box {
+    width: 100%;
+    width: 0.3125vw;
+    height: 1.302vw;
+    margin: 0.677vw 0;
+    background-color: #ee6d1d;
+    border-radius: 0.208vw;
+    position: relative;
+    -webkit-border-radius: 0.208vw;
+    -moz-border-radius: 0.208vw;
+    -ms-border-radius: 0.208vw;
+    -o-border-radius: 0.208vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block1 .time-line .time-item .time {
+    width: 100%;
+    font-size: 0.729vw;
+    color: #666;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block1 .time-line .line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 0.208vw;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: -1;
+    transform: translateY(-50%);
+    border-radius: 0.104vw;
+    -webkit-border-radius: 0.104vw;
+    -moz-border-radius: 0.104vw;
+    -ms-border-radius: 0.104vw;
+    -o-border-radius: 0.104vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block2 {
+    padding-bottom: 3.125vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block3 {
+    padding-bottom: 3.125vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .note {
+    margin-top: 2.083vw;
+    font-size: 0.833vw;
+    color: #f58038;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .search-container {
+    display: flex;
+    align-items: center;
+    background-color: #fbe6d9;
+    border-radius: 52.031vw;
+    padding: 0.26vw;
+    width: 36.458vw;
+    margin: 0 auto;
+    position: relative;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .search-container .search-input {
+    border: none;
+    padding: 0.521vw;
+    width: 100%;
+    border-radius: 52.031vw;
+    outline: none;
+    font-size: 0.833vw;
+    background: transparent;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .search-container .search-button {
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 0.521vw;
+    top: 55%;
+    cursor: pointer;
+    font-size: 1.042vw;
+    color: #333;
+    outline: none;
+    transform: translateY(-50%);
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .search-container .search-button i {
+    pointer-events: none;
+    display: inline-block;
+    width: 1.458vw;
+    height: 1.458vw;
+    background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/760a136efa3da6d10b31f7383044682c.png?v=1725526849");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list {
+    display: flex;
+    flex-direction: column;
+    padding: 1.042vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item {
+    display: flex;
+    align-items: center;
+    border-radius: 0.833vw;
+    padding: 0.521vw;
+    margin-bottom: 0.521vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .ranking {
+    color: #ee6d1d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vw;
+    font-weight: bold;
+    margin-right: 2.604vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-wrap {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.833vw;
+    overflow: hidden;
+    margin-right: 2.604vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-wrap .video-cover {
+    background-color: #eee;
+    width: 15.625vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-wrap .video-cover .cover-img {
+    width: 100%;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-wrap .video-name {
+    width: 15.625vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /* 限制文本行数 */
+    -webkit-box-orient: vertical;
+    font-size: 0.729vw;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 0.3125vw 0.521vw;
+    font-weight: 600;
+    line-height: 1.667vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-info .person {
+    width: 100%;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-info .person .img-wrap {
+    display: flex;
+    align-items: center;
+    margin-right: 0.78125vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-info .person .img-wrap .avatar {
+    width: 3.646vw;
+    height: 3.646vw;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1.5625vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-info .person .img-wrap .name {
+    font-size: 1.042vw;
+    font-weight: bold;
+    color: #333333;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-info .person .progress-bar {
+    background-color: #fceae0;
+    border-radius: 52.031vw;
+    height: 2.083vw;
+    width: 100%;
+    margin-right: 0.521vw;
+    position: relative;
+    margin: 0.625vw 0;
+    -webkit-border-radius: 52.031vw;
+    -moz-border-radius: 52.031vw;
+    -ms-border-radius: 52.031vw;
+    -o-border-radius: 52.031vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-info .person .progress-bar .progress-fill {
+    position: relative;
+    padding-left: 0.833vw;
+    background-color: #49A67D;
+    height: 100%;
+    width: 50%;
+    border-radius: 52.031vw;
+    transition: width 0.3s ease;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-info .person .progress-bar .progress-fill .num {
+    position: absolute;
+    top: 50%;
+    right: -0.625vw;
+    transform: translateY(-50%) translateX(100%);
+    font-size: 1.146vw;
+    font-weight: 600;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-info .person .progress-bar .view-progress .num {
+    color: #ee6d1d;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-info .person .progress-bar .view-progress::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    width: 1.667vw;
+    height: 1.354vw;
+    background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/3_3c23591f-df21-47fd-9125-6e245601f8e5.png?v=1725531608");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-info .person .progress-bar .like-progress {
+    background: linear-gradient(to right, #fbb78e 0%, #e32a39 35%, #E51527 100%);
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-info .person .progress-bar .like-progress .num {
+    color: #24e0ff;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .youtobe-list .y-item .video-info .person .progress-bar .like-progress::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    content: "";
+    width: 1.5625vw;
+    height: 1.348vw;
+    background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/decf8c22cba76172753365be512e05c0.png?v=1725531609");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .pagination-container {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 1.042vw;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .pagination-button {
+    width: 1.927vw;
+    height: 1.875vw;
+    margin: 0 0.521vw;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .pagination-button.button1 {
+    background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/5cfb6923a6d4e1ef5a3402953c4ae670.png?v=1725594630");
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .pagination-button.button2 {
+    background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/ccc32e0ae0968e216379dd57ad7b17e0.png?v=1725594630");
+  }
+  #app-{{section.id}} .section5 .content .swiper .swiper-slide .block4 .page-info {
+    font-size: 0.729vw;
+    color: #333333;
+    margin: 0.521vw 0;
+  }
+  
+  #app-{{section.id}} .section8 { 
+    background: linear-gradient(to right, #F2A082 0, #F49368 20%,  #FAA877 40%, #FAA877 60%, #F49266 80%, #EB7652 100%);
+    padding: 4.167vw 0;
+  }
+  #app-{{section.id}} .section8 .content {
+    width: 41.667vw;
+    margin: 0 auto;
+  }
+  #app-{{section.id}} .section8 .content .btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5625vw;
+  } 
+  #app-{{section.id}} .section8 .content .join-btn {
+    width: 7.8125vw;
+    height: 2.1875vw;
+    border-radius: 52.031vw;
+    font-size: 0.833vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 0.9375vw;
+    font-family: "HarmonyOS_Sans_SC_Bold";
+    background: linear-gradient(to right, #FA7240 0%, #EB2C2D 30%, #E30924 100%);
+    margin-right: 1.042vw;
+    cursor: pointer;
+  }
+  #app-{{section.id}} .section8 .content .join2 {
+    background: #49A67D;
+  }
+  #app-{{section.id}} .section9 {
+    background: linear-gradient(to right, #F2A082 0, #F49368 20%,  #FAA877 40%, #FAA877 60%, #F49266 80%, #EB7652 100%);
+  }
+  #app-{{section.id}} .section9 .content {
+    padding: 4.167vw 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2)
+  }
+  #app-{{section.id}} .section9 .content .gorup {
+    position: relative;
+    width: 62.5vw;
+    margin: 0 auto;
+    color: #ffffff;
+  }
+  #app-{{section.id}} .section9 .content .gorup .group-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625vw;
+  }
+  #app-{{section.id}} .section9 .content .gorup .group-left .title {
+    font-family: "HarmonyOS_Sans_SC_Bold";
+    font-size: 1.667vw;
+  }
+  #app-{{section.id}} .section9 .content .gorup .group-left .desc {
+    font-size: 0.833vw;
+    font-family: "HarmonyOS_Sans_SC_Regular";
+  }
+  #app-{{section.id}} .section9 .content .gorup .group-left .join-facebook {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    border-radius: 52.031vw;
+    border: 0.104vw solid #ffffff;
+    font-size: 0.9375vw;
+    font-family: "HarmonyOS_Sans_SC_Regular";
+    font-weight: 600;
+  }
+  #app-{{section.id}} .section9 .content .gorup .group-left .join-facebook .icon {
+    width: 2.083vw;
+    height: 2.083vw;
+    background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/fb.png?v=1734682538");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  #app-{{section.id}} .section9 .content .gorup .group-left .join-facebook span {
+    padding: 0 0.833vw;
+  }
+  #app-{{section.id}} .section9 .content .gorup .group-right .qr-code {
+    width: 10.417vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  #app-{{section.id}} .section10 {
+    padding: 4.167vw 0;
+    background: linear-gradient(to right, #F2A082 0, #F49368 20%,  #FAA877 40%, #FAA877 60%, #F49266 80%, #EB7652 100%);
+  }
+
+  #app-{{section.id}} .section10 .faq-container {
+    width: 100%;
+    background: rgba(255, 255, 255, .25);
+    border-radius: 1.25vw;
+    box-shadow: 0vw 0.208vw 1.042vw rgba(0, 0, 0, 0.1);
+    padding: 1.042vw;
+    box-sizing: border-box;
+  }
+
+  #app-{{section.id}} .section10 .faq-title {
+    text-align: center;
+    font-size: 1.25vw;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1.042vw;
+  }
+
+  #app-{{section.id}} .section10 .faq-item {
+    margin-bottom: 0.521vw;
+    border-bottom: 0.052vw solid #ffd0c3;
+    padding: 0.78125vw 0;
+    cursor: pointer;
+  }
+
+  #app-{{section.id}} .section10 .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9375vw;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  #app-{{section.id}} .section10 .faq-icon {
+    width: 0.729vw;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  #app-{{section.id}} .section10 .faq-answer {
+    display: none;
+    font-size: 0.833vw;
+    margin-top: 0.521vw;
+    color: #ffffff;
+  }
+
+  #app-{{section.id}} .section10 .faq-footer {
+    text-align: center;
+    font-size: 0.729vw;
+    color: #ffffff;
+    margin-top: 1.042vw;
+  }
+
+  #app-{{section.id}} .section10 .faq-footer a {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+
+  #app-{{section.id}} .section10 .faq-item.active .faq-answer {
+    display: block;
+  }
+
+  #app-{{section.id}} .section10 .faq-item.active .faq-icon {
+    transform: rotate(90deg);
+  }
+
+  #app-{{section.id}} .section10 .text-box1 {
+    width: 100%;
+    background: rgba(255, 255, 255, .25);
+    border-radius: 1.25vw; 
+    box-shadow: 0vw 0.208vw 1.042vw rgba(0, 0, 0, 0.1); 
+    padding: 1.042vw;
+    margin-bottom: 4.167vw; 
+    box-sizing: border-box; 
+  }
+
+  #app-{{section.id}} .section10 .text-box1 .title {
+    font-size: 0.9375vw; 
+    font-weight: bold;
+    color: #ffffff; 
+    margin-bottom: 0.521vw;
+    text-align: center; 
+  }
+
+  #app-{{section.id}} .section10 .text-box1 .subtitle {
+    font-size: 0.833vw; /* 副标题文字大小 */
+    color: #ffffff; /* 副标题文字颜色 */
+    text-align: center; /* 居中对齐 */
+  }
+
+  #app-{{section.id}} .section10 .text-box1 .subtitle a {
+    color: #ffffff; /* 链接颜色 */
+    text-decoration: underline; /* 链接下划线 */
+  }
+
+  #app-{{section.id}} .float-fotter {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    padding: 10px 0;
+    background-color: #E30924;
+    z-index: 100;
+  }
+  #app-{{section.id}} .float-fotter .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #app-{{section.id}} .float-fotter .tips {
+    color: #ffffff;
+    font-size: 1.042vw;
+    font-weight: 500;
+  }
+  #app-{{section.id}} .float-fotter .updata-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #49A67D;
+    width: 250px;
+    padding: 10px 0;
+    height: 42px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    #app-{{section.id}} .pc {
+      display: block;
+    }
+    #app-{{section.id}} .md {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    #app-{{section.id}} .pc {
+      display: none;
+    }
+    #app-{{section.id}} .md {
+      display: block;
+    }
+    #app-{{section.id}} .float-fotter .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #app-{{section.id}} .float-fotter .updata-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      background-color: #49A67D;
+      width: 250px;
+      padding: 10px 0;
+      height: 42px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    #app-{{section.id}} .container-box .common-title {
+      text-align: center;
+      font-size: 5.467vw;
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 5.267vw;
+    }
+    #app-{{section.id}} .container-box .common-subtitle {
+      padding: 0 4.267vw;
+      font-size: 3.733vw;
+      color: #666666;
+      font-weight: 400;
+      text-align: center;
+    }
+    #app-{{section.id}} .container-box .content {
+      width: 100%;
+      margin: auto;
+      padding: 0 4.267vw;
+    }
+    #app-{{section.id}} .container-box .t-videos {
+      margin-top: 5.333vw;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      padding-top: 2.667vw;
+    }
+    #app-{{section.id}} .container-box .t-videos::-webkit-scrollbar {
+      height: 2.133vw;
+    }
+    #app-{{section.id}} .container-box .t-videos::-webkit-scrollbar-track {
+      background-color: #ffffff;
+      border-radius: 1.067vw;
+    }
+    #app-{{section.id}} .container-box .t-videos::-webkit-scrollbar-thumb {
+      background-color: #24e0ff;
+      border-radius: 1.067vw;
+    }
+    #app-{{section.id}} .container-box .t-videos::-webkit-scrollbar-thumb:hover {
+      background-color: #1a9bd8;
+    }
+    #app-{{section.id}} .container-box .t-videos .video-item {
+      flex-shrink: 0;
+      width: 66.667vw;
+      position: relative;
+      border-radius: 2.133vw;
+      margin-bottom: 4.267vw;
+      background-color: #ffffff;
+      margin-right: 2.667vw;
+    }
+    #app-{{section.id}} .container-box .t-videos .video-item:nth-child(3) {
+      margin-right: 2.667vw;
+    }
+    #app-{{section.id}} .container-box .t-videos .video-item .ranking-img {
+      right: 2.667vw;
+      top: -2.133vw;
+      z-index: 20;
+      position: absolute;
+      width: 6.667vw;
+      height: auto;
+      display: block;
+    }
+    #app-{{section.id}} .container-box .t-videos .video-item .p-info {
+      display: flex;
+      align-items: flex-start;
+      align-items: center;
+      padding: 2.133vw;
+    }
+    #app-{{section.id}} .container-box .t-videos .video-item .p-info .portrait {
+      width: 8vw;
+      height: 8vw;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 1.067vw;
+    }
+    #app-{{section.id}} .container-box .t-videos .video-item .p-info .portrait .portrait-img {
+      width: 100%;
+      height: auto;
+    }
+    #app-{{section.id}} .container-box .t-videos .video-item .p-info .name {
+      font-size: 2.667vw;
+      font-weight: bold;
+      color: #333;
+    }
+    #app-{{section.id}} .container-box .t-videos .video-item .video-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+    }
+    #app-{{section.id}} .container-box .t-videos .video-item .video-wrap iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    #app-{{section.id}} .container-box .t-videos .video-item .video-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.067vw 2.667vw;
+      background-color: #ffffff;
+      border-radius: 0 0 4.267vw 4.267vw;
+    }
+    #app-{{section.id}} .container-box .t-videos .video-item .video-info .item {
+      padding: 2.133vw;
+      display: flex;
+      align-items: center;
+    }
+    #app-{{section.id}} .container-box .t-videos .video-item .video-info .item .img-wrap {
+      width: 5.333vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 2.667vw;
+    }
+    #app-{{section.id}} .container-box .t-videos .video-item .video-info .item .icon {
+      width: 100%;
+    }
+    #app-{{section.id}} .container-box .t-videos .video-item .video-info .item .nums {
+      font-size: 3.2vw;
+      color: #adadad;
+    }
+    #app-{{section.id}} .section1 {
+      position: relative;
+    }
+    #app-{{section.id}} .section1 .banner-img {
+      width: 100%;
+    }
+    #app-{{section.id}} .section1 .text-box {
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      top: 14vw;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 4.267vw;
+    }
+    #app-{{section.id}} .section1 .text-box .img-title {
+      width: 80vw;
+    }
+    #app-{{section.id}} .section1 .text-box .subtitle {
+      text-align: center;
+      width: 100%;
+      font-size: 4.267vw;
+    }
+    #app-{{section.id}} .section1 .text-box .win-title {
+      font-size: 5.333vw;
+    }
+    #app-{{section.id}} .section1 .text-box .btn-box {
+      padding: 0 8vw;
+      width: 100%;
+      display: flex;
+      gap: 4.267vw;
+    }
+    #app-{{section.id}} .section1 .text-box .btn-box .upload-btn {
+      flex: 1;
+      height: 10.333vw;
+      font-size: 3.267vw;
+      border-radius: 266.4vw;
+    }
+    #app-{{section.id}} .section1 .text-box .btn-box .see-btn {
+      flex: 1;
+      height: 10.333vw;
+      font-size: 3.267vw;
+      border-radius: 266.4vw;
+    }
+    #app-{{section.id}} .section1 .share-btns {
+      padding: 2.667vw 4.267vw;
+      display: flex;
+      justify-content: space-around;
+      position: absolute;
+      background-color: #ffffff;
+      border-radius: 266.4vw;
+      width: 53.333vw;
+      left: 50%;
+      bottom: 26.667vw;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      -webkit-border-radius: 266.4vw;
+      -moz-border-radius: 266.4vw;
+      -ms-border-radius: 266.4vw;
+      -o-border-radius: 266.4vw;
+    }
+    #app-{{section.id}} .section1 .share-btns .share-item {
+      width: 5.333vw;
+      height: 5.333vw;
+      cursor: pointer;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    #app-{{section.id}} .section1 .share-btns .share-item:nth-child(1) {
+      background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/25_4899338c-c4ce-4718-8f77-c621a65077b0.png?v=1725418082");
+    }
+    #app-{{section.id}} .section1 .share-btns .share-item:nth-child(2) {
+      background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/26_753a1612-89d5-4ae2-a698-c867bc9737c8.png?v=1725418082");
+    }
+    #app-{{section.id}} .section1 .share-btns .share-item:nth-child(3) {
+      background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/27.png?v=1725418083");
+    }
+    #app-{{section.id}} .section1 .share-btns .share-item:nth-child(4) {
+      background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/e976a8c9b6e4b0ec000f4d86959a60f0.png?v=1725418083");
+    }
+    #app-{{section.id}} .section1 .share-btns .share-item:nth-child(5) {
+      background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/640.png?v=1725418082");
+    }
+    #app-{{section.id}} .section2 {
+      padding: 8vw 0;
+    }
+    #app-{{section.id}} .section2 .text-box {
+      border-radius: 4.267vw;
+      gap: 4.267vw;
+      width: 100%;
+      padding: 5.333vw;
+      margin-bottom: 8vw;
+    }
+    #app-{{section.id}} .section2 .text-box .title {
+      font-size: 4.8vw;
+      font-weight: bold;
+      font-family: "HarmonyOS_Sans_SC_Bold";
+      margin-bottom: 0;
+    }
+    #app-{{section.id}} .section2 .text-box .desc {
+      font-size: 3.733vw;
+      font-weight: 500;
+    }
+    #app-{{section.id}} .section2 .count-down-wrap {
+      width: 90vw;
+      margin: 0 auto;
+      position: relative;
+      margin-top: 5.208vw;
+    }
+    #app-{{section.id}} .section2 .count-down-wrap img {
+      width: 100%;
+      height: auto;
+    }
+    #app-{{section.id}} .section2 .count-down {
+      top: 12.292vw;
+    }
+    #app-{{section.id}} .section2 .count-down .time-item {
+      position: relative;
+      text-align: center;
+      padding: 5.333vw 4.267vw;
+    }
+    #app-{{section.id}} .section2 .count-down .time-item:not(:last-child)::after {
+      position: absolute;
+      top: 9.333vw;
+      right: 0;
+      transform: translateY(-50%) translateX(50%);
+      font-size: 4.8vw;
+      content: ":";
+      margin-left: 1.333vw;
+    }
+    #app-{{section.id}} .section2 .count-down .time-item .num {
+      font-size: 5.467vw;
+      font-weight: 700;
+      font-family: "HarmonyOS_Sans_SC_Bold";
+    }
+    #app-{{section.id}} .section2 .count-down .time-item .date-text {
+      font-size: 3.2vw;
+      font-family: "HarmonyOS_Sans_SC_Regular";
+    }
+    #app-{{section.id}} .section3 {
+      padding: 8vw 0;
+      background-color: #f8d4c2;
+    }
+    #app-{{section.id}} .section3 .special-award {
+      margin-top: 8vw;
+      position: relative;
+    }
+    #app-{{section.id}} .section3 .special-award .dialog-box {
+      position: absolute;
+      top: 1.067vw;
+      left: 32vw;
+    }
+    #app-{{section.id}} .section3 .special-award .dialog-box .dialog {
+      width: 26.667vw;
+      height: auto;
+    }
+    #app-{{section.id}} .section3 .special-award .dialog-box .dialog-text {
+      top: 0.533vw;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 3.733vw;
+      color: #DB3631;
+      font-family: "HarmonyOS_Sans_SC_Bold";
+    }
+    #app-{{section.id}} .section3 .special-award .award-product {
+      width: 100%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: auto;
+      top: 18.133vw;
+      display: block;
+    }
+    #app-{{section.id}} .section3 .special-award .texts {
+      display: flex;
+      flex-direction: column;
+      gap: 2.133vw;
+      justify-content: center;
+    }
+    #app-{{section.id}} .section3 .special-award .texts .title {
+      text-align: center;
+      font-size: 4.267vw;
+      background: linear-gradient(to right, #FA8547 0, #DE6351 50%, #B8355E 100%);
+      font-family: "HarmonyOS_Sans_SC_Bold";
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent;
+    }
+    #app-{{section.id}} .section3 .special-award .texts .desc {
+      text-align: center;
+      font-size: 3.733vw;
+      color: #F88148;
+      margin-bottom: 2.133vw;
+    }
+    #app-{{section.id}} .section3 .special-award .mystery-box {
+      margin: 0 auto;
+      width: 34.667vw;
+      height: auto;
+    }
+    #app-{{section.id}} .section3 .special-award .dialog-box .dialog-text2 {
+      font-size: 2.733vw;
+    }
+    #app-{{section.id}} .section3 .special-award .award-product2 {
+      width: 60.133vw;
+      bottom: auto;
+    }
+    #app-{{section.id}} .section3 .gift-list {
+      margin-top: 10.667vw;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3.2vw;
+    }
+
+    #app-{{section.id}} .section3 .gift-list .gift-item {
+      position: relative;
+    }
+    #app-{{section.id}} .section3 .gift-list .gift-item .dialog-box {
+      position: absolute;
+      right: 2.667vw;
+      top: 0;
+    }
+
+    #app-{{section.id}} .section3 .gift-list .gift-item .dialog-box .dialog {
+      width: 18.667vw;
+      height: auto;
+    }
+
+    #app-{{section.id}} .section3 .gift-list .gift-item .dialog-box .dialog-text {
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 0.533vw;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2.667vw;
+      color: #DB3631;
+      font-family: "HarmonyOS_Sans_SC_Bold";
+    }
+    #app-{{section.id}} .section3 .gift-list .gift-item .gift-bg-img {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+    #app-{{section.id}} .section3 .gift-list .gift-item .text-box {
+      position: absolute;
+      top: 21.375vw;
+      width: 100%;
+      padding: 0 2.604vw;
+      text-align: center;
+    }
+    #app-{{section.id}} .section3 .gift-list .gift-item .text-box .product-img {
+      width: 24.542vw;
+      height: auto;
+      margin: 0 auto;
+    }
+    #app-{{section.id}} .section3 .gift-list .gift-item .text-box .title {
+      margin-top: 2.604vw;
+      font-size: 3.2vw;
+      font-family: "HarmonyOS_Sans_SC_Bold";
+      color: #525252;
+    }
+    #app-{{section.id}} .section3 .gift-list .gift-item .text-box .desc {
+      font-style: 3.733vw;
+      color: #FBB78E;
+    }
+    #app-{{section.id}} .section3_1 .list1 {
+      gap: 2.667vw;
+    }
+    #app-{{section.id}} .section3_1 .list1 .list1-item {
+      border-radius: 2.133vw;
+    }
+    #app-{{section.id}} .section3_1 .list1 .list1-item .item-text {
+      font-size: 2.542vw;
+    }
+    #app-{{section.id}} .section3_1 .list2 {
+      gap: 2.667vw;
+    }
+    #app-{{section.id}} .section3_1 .list2 .list2-item .item-text {
+      padding: 2px 10px;
+      bottom: 3.885vw;
+      font-size: 1.667vw;
+      font-weight: 500;
+    }
+    #app-{{section.id}} .section3_1 .more-models {
+      width: 90vw;
+      margin: 0 auto;
+      border-radius: 52.031vw;
+      border: 0.267vw solid rgba(255, 255, 255, .4);
+      display: flex;
+      font-size: 2.3375vw;
+      font-family: 'HarmonyOS_Sans_SC_Regular';
+      color: #fff;
+    }
+    #app-{{section.id}} .section3_1 .more-models .text1, #app-{{section.id}} .section3_1 .more-models .text2 {
+      padding: 1.521vw 1.25vw;
+      text-align: center;
+    } 
+
+    #app-{{section.id}} .before-list .swiper {
+      padding: 0 4.267vw;
+    }
+    #app-{{section.id}} .before-list .swiper .swiper-button-prev::after,
+    #app-{{section.id}} .before-list .swiper .swiper-button-next::after {
+      font-size: 6.4vw; /* 调整箭头图标大小 */
+    }
+    .before-list .video-item .p-info {
+      padding: 2.833vw;
+    }
+    #app-{{section.id}} .section4 {
+      position: relative;
+      padding-top: 10.667vw;
+    }
+    #app-{{section.id}} .section5 {
+      background-color: #f5bf9f;
+      padding: 10.667vw 0;
+      position: relative;
+    }
+    #app-{{section.id}} .section5 .content .swiper-tabs {
+      display: flex;
+      justify-content: space-around;
+      /* 水平分布选项卡 */
+      padding: 2.667vw 0;
+      /* 内边距 */
+      margin: 0;
+      list-style: none;
+      position: relative;
+    }
+    #app-{{section.id}} .section5 .content .swiper-tabs .tab-item {
+      flex: 1;
+      text-align: center;
+      cursor: pointer;
+      padding: 2.667vw 4vw;
+      font-size: 3.2vw;
+      font-weight: 500;
+      position: relative;
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+    #app-{{section.id}} .section5 .content .swiper-tabs .tab-item:nth-child(3)::after {
+      display: none;
+    }
+    #app-{{section.id}} .section5 .content .swiper-tabs .tab-item:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 50%;
+      width: 0.052vw;
+      background-color: #ffffff;
+    }
+    #app-{{section.id}} .section5 .content .swiper-tabs .tab-item:hover {
+      font-weight: 600;
+    }
+    #app-{{section.id}} .section5 .content .swiper-tabs .tab-item.active {
+      font-weight: 600;
+    }
+    #app-{{section.id}} .section5 .content .swiper-tabs .tab-item.active::before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      bottom: -0.521vw;
+      height: 2.042vw;
+      width: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 52.031vw;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    #app-{{section.id}} .section5 .content .swiper {
+      width: 100%;
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide {
+      height: auto;
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide .msg-block {
+      padding: 4.267vw;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 4.267vw;
+      -webkit-border-radius: 4.267vw;
+      -moz-border-radius: 4.267vw;
+      -ms-border-radius: 4.267vw;
+      -o-border-radius: 4.267vw;
+      color: #000;
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide .msg-block .block-title {
+      margin: 4.267vw 0;
+      text-align: center;
+      font-size: 5.867vw;
+      font-weight: 600;
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide .msg-block .block-subtitle {
+      font-size: 4.8vw;
+      font-weight: 600;
+      margin-bottom: 3.2vw;
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide .msg-block .block-smal-text {
+      font-size: 4vw;
+      font-weight: 500;
+      margin-bottom: 2.133vw;
+      padding-left: 4vw;
+      position: relative;
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide .msg-block .block-smal-text::after {
+      content: "";
+      position: absolute;
+      top: 2.667vw;
+      left: 1.333vw;
+      width: 1.067vw;
+      height: 1.067vw;
+      background-color: #000;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide .msg-block .desc {
+      font-size: 3.2vw;
+      font-weight: 500;
+      line-height: 5.333vw;
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide .block1 .time-line {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+      padding: 5.333vw 0;
+      overflow-x: auto;
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide .block1 .time-line .time-item {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      position: relative;
+      padding: 0 5.333vw;
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide .block1 .time-line .time-item .title {
+      width: 100%;
+      font-size: 2.667vw;
+      font-weight: 500;
+      color: #333;
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide .block1 .time-line .time-item .red-box {
+      width: 100%;
+      width: 1.6vw;
+      height: 6.667vw;
+      margin: 3.467vw 0;
+      background-color: #ee6d1d;
+      border-radius: 1.067vw;
+      position: relative;
+      -webkit-border-radius: 1.067vw;
+      -moz-border-radius: 1.067vw;
+      -ms-border-radius: 1.067vw;
+      -o-border-radius: 1.067vw;
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide .block1 .time-line .time-item .time {
+      width: 100%;
+      font-size: 3.2vw;
+      color: #666;
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide .block1 .time-line .line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 1.067vw;
+      width: 100%;
+      background-color: #ffffff;
+      z-index: -1;
+      transform: translateY(-50%);
+      border-radius: 0.533vw;
+      -webkit-border-radius: 0.533vw;
+      -moz-border-radius: 0.533vw;
+      -ms-border-radius: 0.533vw;
+      -o-border-radius: 0.533vw;
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide .block2 {
+      padding-bottom: 16vw;
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide .block3 {
+      padding-bottom: 16vw;
+    }
+    #app-{{section.id}} .section5 .content .swiper .swiper-slide .note {
+      margin-top: 5.333vw;
+      font-size: 3.2vw;
+      color: #f58038;
+    }
+    #app-{{section.id}} .section7 {
+      padding: 8vw 0;
+      background: linear-gradient(to right, #F39E7A 0, #EC7853 20%,  #E86B49 40%, #E86A48 60%, #f79869 95%, #F49367 100%);
+    }
+    #app-{{section.id}} .section7 .block4 {
+      padding: 0vw;
+    }
+    #app-{{section.id}} .section7 .block4 .search-container {
+      display: flex;
+      align-items: center;
+      background-color: #fbe6d9;
+      border-radius: 266.4vw;
+      padding: 1.333vw;
+      width: 100%;
+      margin: 4.267vw auto;
+      position: relative;
+    }
+    #app-{{section.id}} .section7 .block4 .search-container .search-input {
+      border: none;
+      padding: 2.667vw;
+      width: 100%;
+      border-radius: 266.4vw;
+      outline: none;
+      font-size: 3.2vw;
+      background: transparent;
+    }
+    #app-{{section.id}} .section7 .block4 .search-container .search-button {
+      background: transparent;
+      border: none;
+      position: absolute;
+      right: 2.667vw;
+      top: 55%;
+      cursor: pointer;
+      color: #333;
+      outline: none;
+      transform: translateY(-50%);
+    }
+    #app-{{section.id}} .section7 .block4 .search-container .search-button i {
+      pointer-events: none;
+      display: inline-block;
+      width: 5.333vw;
+      height: 5.333vw;
+      background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/760a136efa3da6d10b31f7383044682c.png?v=1725526849");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list {
+      display: flex;
+      flex-direction: column;
+      padding: 0vw;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item {
+      display: flex;
+      align-items: center;
+      border-radius: 2.133vw;
+      padding: 0vw;
+      margin-bottom: 4.267vw;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .ranking {
+      color: #ee6d1d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5.333vw;
+      font-weight: bold;
+      margin-right: 2.133vw;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-wrap {
+      display: flex;
+      flex-direction: column;
+      border-radius: 2.133vw;
+      overflow: hidden;
+      margin-right: 2.667vw;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-wrap .video-cover {
+      background-color: #eee;
+      width: 45vw;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-wrap .video-cover .cover-img {
+      width: 100%;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-wrap .video-name {
+      width: 45vw;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      /* 限制文本行数 */
+      -webkit-box-orient: vertical;
+      font-size: 2.8vw;
+      background-color: #ffffff;
+      text-align: center;
+      padding: 1vw 0;
+      font-weight: 600;
+      line-height: 4.267vw;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-info {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-info .person {
+      width: 100%;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-info .person .img-wrap {
+      display: flex;
+      align-items: center;
+      margin-right: 2.133vw;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-info .person .img-wrap .avatar {
+      width: 10.667vw;
+      height: 10.667vw;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 2.667vw;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-info .person .img-wrap .name {
+      font-size: 3.2vw;
+      font-weight: bold;
+      color: #333333;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-info .person .progress-bar {
+      background-color: #fceae0;
+      border-radius: 266.4vw;
+      height: 5.333vw;
+      width: 100%;
+      margin-right: 2.667vw;
+      position: relative;
+      margin: 2.133vw 0;
+      -webkit-border-radius: 266.4vw;
+      -moz-border-radius: 266.4vw;
+      -ms-border-radius: 266.4vw;
+      -o-border-radius: 266.4vw;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-info .person .progress-bar .progress-fill {
+      position: relative;
+      padding-left: 4.267vw;
+      background-color: #ee6d1d;
+      height: 100%;
+      width: 50%;
+      border-radius: 266.4vw;
+      transition: width 0.3s ease;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-info .person .progress-bar .progress-fill .num {
+      position: absolute;
+      top: 50%;
+      right: -3.2vw;
+      transform: translateY(-50%) translateX(100%);
+      font-size: 3.2vw;
+      font-weight: 600;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-info .person .progress-bar .view-progress .num {
+      color: #ee6d1d;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-info .person .progress-bar .view-progress::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      width: 3.2vw;
+      height: 3.2vw;
+      background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/3_3c23591f-df21-47fd-9125-6e245601f8e5.png?v=1725531608");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-info .person .progress-bar .like-progress {
+      background-color: #24e0ff;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-info .person .progress-bar .like-progress .num {
+      color: #24e0ff;
+    }
+    #app-{{section.id}} .section7 .block4 .youtobe-list .y-item .video-info .person .progress-bar .like-progress::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      width: 3.2vw;
+      height: 3.2vw;
+      background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/decf8c22cba76172753365be512e05c0.png?v=1725531609");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    #app-{{section.id}} .section7 .block4 .pagination-container {
+      width: 80vw;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5.333vw;
+    }
+    #app-{{section.id}} .section7 .block4 .pagination-button {
+      width: 6.667vw;
+      height: 6.667vw;
+      margin: 0 1.333vw;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    #app-{{section.id}} .section7 .block4 .pagination-button.button1 {
+      background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/5cfb6923a6d4e1ef5a3402953c4ae670.png?v=1725594630");
+    }
+    #app-{{section.id}} .section7 .block4 .pagination-button.button2 {
+      background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/ccc32e0ae0968e216379dd57ad7b17e0.png?v=1725594630");
+    }
+    #app-{{section.id}} .section7 .block4 .page-info {
+      font-size: 3.733vw;
+      color: #333333;
+      margin: 0 2.133vw;
+    }
+
+    #app-{{section.id}} .section8 { 
+      background: linear-gradient(to right, #F39E7A 0, #EC7853 20%,  #E86B49 40%, #E86A48 60%, #f79869 95%, #F49367 100%);
+      padding: 8vw 0;
+    }
+    #app-{{section.id}} .section8 .content {
+      padding: 4.167vw 2.667vw;
+      background: linear-gradient(to right, #F2A082 0, #F49368 20%,  #FAA877 40%, #FAA877 60%, #F49266 100%);
+      width: calc(100% - 8.533vw);
+      margin: 0 auto;
+      border-radius: 2.133vw;
+    }
+    #app-{{section.id}} .section8 .content .btn-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5625vw;
+    } 
+    #app-{{section.id}} .section8 .content .join-btn {
+      width: 32vw;
+      height: 8.533vw;
+      border-radius: 266.4vw;
+      font-size: 3.733vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      font-family: "HarmonyOS_Sans_SC_Bold";
+      margin-right: 4.267vw;
+      cursor: pointer;
+    }
+
+    #app-{{section.id}} .section9 {
+      background: linear-gradient(to right, #F39E7A 0, #EC7853 20%,  #E86B49 40%, #E86A48 60%, #f79869 95%, #F49367 100%);
+      padding: 8vw 0;
+    }
+    #app-{{section.id}} .section9 .content {
+      padding: 4.167vw 2.667vw;
+      background-color: rgba(255, 255, 255, .35);
+      background: linear-gradient(to right, #F2A082 0, #F49368 20%,  #FAA877 40%, #FAA877 60%, #F49266 100%);
+      width: calc(100% - 8.533vw);
+      margin: 0 auto;
+      border-radius: 2.133vw;
+    }
+    #app-{{section.id}} .section9 .content .gorup {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      color: #ffffff;
+    }
+    #app-{{section.id}} .section9 .content .gorup .group-left {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 2.133vw;
+      align-items: center;
+    }
+    #app-{{section.id}} .section9 .content .gorup .group-left .title {
+      font-family: "HarmonyOS_Sans_SC_Bold";
+      font-size: 5.333vw;
+    }
+    #app-{{section.id}} .section9 .content .gorup .group-left .desc {
+      font-size: 3.2vw;
+      font-family: "HarmonyOS_Sans_SC_Regular";
+    }
+    #app-{{section.id}} .section9 .content .gorup .group-left .join-facebook {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      border-radius: 52.031vw;
+      border: 0.104vw solid #ffffff;
+      font-size: 3.9375vw;
+      font-family: "HarmonyOS_Sans_SC_Regular";
+      font-weight: 600;
+    }
+    #app-{{section.id}} .section9 .content .gorup .group-left .join-facebook .icon {
+      width: 8.533vw;
+      height: 8.533vw;
+      background-image: url("https://cdn.shopify.com/s/files/1/0799/8714/7049/files/fb.png?v=1734682538");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-color: #ffffff;
+      border-radius: 50%;
+    }
+    #app-{{section.id}} .section9 .content .gorup .group-left .join-facebook span {
+      padding: 0 3.2vw;
+    }
+
+    #app-{{section.id}} .section10 .text-box1 {
+      width: 100%;
+      background: rgba(255, 255, 255, .25);
+      border-radius: 2.133vw; 
+      box-shadow: 0vw 0.208vw 1.042vw rgba(0, 0, 0, 0.1); 
+      padding: 3.2vw;
+      margin-bottom: 8vw; 
+      box-sizing: border-box; 
+    }
+
+    #app-{{section.id}} .section10 .text-box1 .title {
+      font-size: 3.2vw; 
+      margin-bottom: 2.133vw;
+    }
+
+    #app-{{section.id}} .section10 .text-box1 .subtitle {
+      font-size: 2.667vw; 
+    }
+
+    #app-{{section.id}} .section10 .faq-container {
+      border-radius: 2.133vw;
+      padding: 2.667vw;
+    }
+
+    #app-{{section.id}} .section10 .faq-title {
+      text-align: center;
+      font-size: 3.25vw;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 2.133vw;
+    }
+
+    #app-{{section.id}} .section10 .faq-item {
+      margin-bottom: 2.133vw;
+      border-bottom: 0.267vw solid #ffd0c3;
+      padding: 1.067vw 0;
+      cursor: pointer;
+    }
+
+    #app-{{section.id}} .section10 .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 2.9375vw;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    #app-{{section.id}} .section10 .faq-icon {
+      width: 2.133vw;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    #app-{{section.id}} .section10 .faq-answer {
+      display: none;
+      font-size: 2.833vw;
+      margin-top: 2.133vw;
+      color: #ffffff;
+    }
+
+    #app-{{section.id}} .section10 .faq-footer {
+      text-align: center;
+      font-size: 2.729vw;
+      color: #ffffff;
+      margin-top: 2.667vw;
+    }
+  } 
+</style>
+
+<style>
+  #lotteryModal {
+    display: none; /* 隐藏弹窗 */
+    position: fixed; /* 固定位置 */
+    z-index: 1000; /* 确保弹窗在最上层 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* 如果内容过多，添加滚动条 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+  }
+
+  #app-{{section.id}} #lotteryModal .title {
+    text-align: center;
+    font-size: 1.25vw;
+    color: #ffffff;
+  }
+
+  #app-{{section.id}} #lotteryModal #lotteryEmail {
+    width: 100%;
+  }
+  #app-{{section.id}} #lotteryModal .tips {
+    margin: 0.521vw 0;
+    font-style: 0.833vw;
+    color: #000000;
+  }
+
+  #app-{{section.id}} .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  #app-{{section.id}} .modal .tips {
+    padding-left: 0.833vw;
+    font-size: 0.625vw;
+    color: #333333;
+  }
+  #app-{{section.id}} .modal .modal-content {
+    position: absolute;
+    padding: 0.804vw 1.167vw;
+    background: linear-gradient(120deg, #ECAEB3 0%, #F5BEA0 50%, #F5BF9F 100%);
+    width: 41.667vw;
+    border-radius: 0.833vw;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  #app-{{section.id}} .modal .modal-content .title {
+    text-align: center;
+    font-size: 1.25vw;
+    margin-bottom: 0.625vw;
+  }
+  #app-{{section.id}} .modal .modal-content .close {
+    position: absolute;
+    top: 0;
+    right: 0.521vw;
+    color: #ffffff;
+    float: right;
+    font-size: 1.458vw;
+    font-weight: bold;
+  }
+  #app-{{section.id}} .modal .modal-content .close:hover, #app-{{section.id}} .modal .modal-content .close:focus {
+    color: #333333;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #app-{{section.id}} .modal .modal-content .first-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.042vw;
+  }
+  #app-{{section.id}} .modal .modal-content .first-box .item-wrap label {
+    display: block;
+    width: 100%;
+  }
+  #app-{{section.id}} .modal .modal-content .first-box .item-wrap input {
+    width: 100%;
+  }
+  #app-{{section.id}} .modal form {
+    display: flex;
+    flex-direction: column;
+  }
+  #app-{{section.id}} .modal form label {
+    position: relative;
+    padding-left: 0.521vw;
+    margin-top: 0.521vw;
+    font-size: 0.729vw;
+  }
+  #app-{{section.id}} .modal form label.two {
+    display: flex;
+    gap: 10px;
+  }
+  #app-{{section.id}} .modal form label .see-rule {
+    cursor: pointer;
+    font-size: 0.729vw;
+    text-decoration: underline;
+  }
+  #app-{{section.id}} .modal form label.required::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.729vw;
+    color: red;
+    content: "*";
+    left: 0;
+  }
+  #app-{{section.id}} .modal form input {
+    display: block;
+    margin-top: 0.260vw;
+    padding: 0.421vw;
+    border: 0.052vw solid #ddd;
+    border-radius: 0.417vw;
+    background-color: rgba(255, 255, 255, 0.7);
+    appearance: auto;
+    width: auto;
+    height: auto;
+    position: relative;
+  }
+  #app-{{section.id}} .modal form input:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  #app-{{section.id}} .modal form .btns {
+    display: flex;
+    justify-content: space-around;
+  }
+  #app-{{section.id}} .modal form button {
+    width: 10.625vw;
+    margin: 1.042vw auto 0 auto;
+    padding: 0.321vw;
+    background-color: #ffffff;
+    border: none;
+    color: #EE6D1E;
+    border-radius: 52.031vw;
+    border: 0.104vw solid #EE6D1E;
+    transition: all 0.3s ease;
+    font-size: 1.042vw;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  #app-{{section.id}} .modal form button:hover {
+    background-color: #EE6D1E;
+    color: #ffffff;
+  }
+  #app-{{section.id}} .modal form .prize-draw {
+    width: 10.625vw;
+    margin: 1.042vw auto 0 auto;
+    padding: 0.321vw;
+    background-color: #49A67D;
+    border: none;
+    color: #ffffff;
+    border-radius: 52.031vw;
+    transition: all 0.3s ease;
+    font-size: 1.042vw;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  #app-{{section.id}} .modal .radio-group {
+    margin-top: 0.417vw;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0.417vw;
+    padding: 0.433vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 0.521vw;
+  }
+  #app-{{section.id}} .modal .three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #app-{{section.id}} .modal .radio-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  #app-{{section.id}} .modal .radio-group input[type=radio] {
+    margin-right: 0.521vw;
+  }
+  #app-{{section.id}} .modal .radio-group input[type=radio]:checked + span {
+    font-weight: bold;
+  }
+
+  #app-{{section.id}} #giftModal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  #app-{{section.id}} #giftModal .modal-content {
+    position: absolute;
+    padding: 0.804vw 1.167vw;
+    background: linear-gradient(120deg, #ECAEB3 0%, #F5BEA0 50%, #F5BF9F 100%);
+    width: 31.667vw;
+    border-radius: 0.833vw;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  #app-{{section.id}} #giftModal .modal-content .title {
+    text-align: center;
+    font-size: 1.25vw;
+    margin-bottom: 0.625vw;
+  }
+
+  #app-{{section.id}} #giftModal .modal-content .close {
+    position: absolute;
+    top: 0;
+    right: 0.521vw;
+    color: #ffffff;
+    float: right;
+    font-size: 1.458vw;
+    font-weight: bold;
+  }
+
+  #app-{{section.id}} #giftModal .modal-content .close:hover,
+  #app-{{section.id}} #giftModal .modal-content .close:focus {
+    color: #333333;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #app-{{section.id}} #giftModal .modal-content .gift-img {
+    display: block;
+    margin: 1.042vw auto;
+    width: 15vw;
+    height: auto;
+  }
+
+  #app-{{section.id}} #giftModal .modal-content .gift-name {
+    text-align: center;
+    font-size: 1.042vw;
+    margin-top: 0.625vw;
+    font-weight: bold;
+  }
+
+  #app-{{section.id}} #giftModal .modal-content .tips {
+    padding-left: 0.833vw;
+    font-size: 0.625vw;
+    color: #333333;
+    text-align: center;
+    margin-top: 0.625vw;
+  }
+
+  @media (max-width: 768px)  {
+    #app-{{section.id}} #lotteryModal .modal-content {
+      height: 70vw;
+    }
+    #app-{{section.id}} #lotteryModal .title {
+      text-align: center;
+      font-size: 6.25vw;
+      color: #ffffff;
+    }
+    #app-{{section.id}} #lotteryModal button {
+      width: 40vw;
+      margin: 5vw auto;
+      padding: 2vw;
+      background-color: #ffffff;
+      color: #EE6D1E;
+      border-radius: 26.64vw;
+      border: 2px solid #EE6D1E;
+      transition: all 0.3s ease;
+      font-size: 10vw;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #app-{{section.id}} .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    #app-{{section.id}} .modal .tips {
+      padding-left: 3.2vw;
+      font-size: 3.2vw;
+      color: #333333;
+    }
+    #app-{{section.id}} .modal .modal-content {
+      position: absolute;
+      padding: 2.667vw;
+      background: linear-gradient(120deg, #ECAEB3 0%, #F5BEA0 50%, #F5BF9F 100%);
+      width: 90%;
+      height: 80vh;
+      border-radius: 2.133vw;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    #app-{{section.id}} .modal .modal-content .title {
+      text-align: center;
+      font-size: 5.333vw;
+      margin-bottom: 3.2vw;
+    }
+    #app-{{section.id}} .modal .modal-content .close {
+      position: absolute;
+      top: 2.667vw;
+      right: 2.667vw;
+      color: #ffffff;
+      float: right;
+      font-size: 7.467vw;
+      font-weight: bold;
+    }
+    #app-{{section.id}} .modal .modal-content .close:hover, #app-{{section.id}} .modal .modal-content .close:focus {
+      color: #333333;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    #app-{{section.id}} .modal .modal-content .first-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5.333vw;
+    }
+    #app-{{section.id}} .modal .modal-content .first-box .item-wrap label {
+      display: block;
+      width: 100%;
+    }
+    #app-{{section.id}} .modal .modal-content .first-box .item-wrap input {
+      width: 100%;
+    }
+    #app-{{section.id}} .modal form {
+      display: flex;
+      flex-direction: column;
+    }
+    #app-{{section.id}} .modal form label {
+      position: relative;
+      padding-left: 2.667vw;
+      margin-top: 2.667vw;
+      font-size: 3.2vw;
+    }
+    #app-{{section.id}} .modal form label.required::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 3.733vw;
+      color: red;
+      content: "*";
+      left: 0;
+    }
+    #app-{{section.id}} .modal form input {
+      font-size: 3.2vw;
+      margin-top: 1.333vw;
+      padding: 1.6vw 2.133vw;
+      border: 0.267vw solid #ddd;
+      border-radius: 2.133vw;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+    #app-{{section.id}} .modal form input:focus {
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+    #app-{{section.id}} .modal form button {
+      width: 40.333vw;
+      margin: 5.333vw auto;
+      padding: 2.667vw;
+      background-color: #ffffff;
+      color: #EE6D1E;
+      border-radius: 266.4vw;
+      border: 0.533vw solid #EE6D1E;
+      transition: all 0.3s ease;
+      font-size: 5.333vw;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    #app-{{section.id}} .modal form button:hover {
+      background-color: #EE6D1E;
+      color: #ffffff;
+    }
+    #app-{{section.id}} .modal form .prize-draw {
+      width: 40.333vw;
+      margin: 5.333vw auto;
+      padding: 2.667vw;
+      background-color: #ffffff;
+      color: #EE6D1E;
+      border-radius: 266.4vw;
+      border: 0.533vw solid #EE6D1E;
+      transition: all 0.3s ease;
+      font-size: 5.333vw;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    #app-{{section.id}} .modal .radio-group {
+      margin-top: 2.133vw;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 2.133vw;
+      padding: 2.133vw 2.667vw;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 2.667vw;
+    }
+    #app-{{section.id}} .modal .radio-group label {
+      margin-top: 0;
+      font-size: 2.667vw;
+    }
+    #app-{{section.id}} .modal .three {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    #app-{{section.id}} .modal .radio-group label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    #app-{{section.id}} .modal .radio-group input[type=radio] {
+      margin-right: 2.667vw;
+    }
+    #app-{{section.id}} .modal .radio-group input[type=radio]:checked + span {
+      font-weight: bold;
+    }
+
+    #app-{{section.id}} #giftModal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    #app-{{section.id}} #giftModal .modal-content {
+      position: absolute;
+      padding: 4vw 6vw;
+      background: linear-gradient(120deg, #ECAEB3 0%, #F5BEA0 50%, #F5BF9F 100%);
+      width: 80vw;
+      border-radius: 4vw;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 90vw;
+    }
+
+    #app-{{section.id}} #giftModal .modal-content .title {
+      text-align: center;
+      font-size: 4vw;
+      margin-bottom: 2vw;
+    }
+
+    #app-{{section.id}} #giftModal .modal-content .close {
+      position: absolute;
+      top: 2vw;
+      right: 2vw;
+      color: #ffffff;
+      font-size: 5vw;
+      font-weight: bold;
+    }
+
+    #app-{{section.id}} #giftModal .modal-content .close:hover,
+    #app-{{section.id}} #giftModal .modal-content .close:focus {
+      color: #333333;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #app-{{section.id}} #giftModal .modal-content .gift-img {
+      display: block;
+      margin: 4vw auto;
+      width: 40vw;
+      height: auto;
+    }
+
+    #app-{{section.id}} #giftModal .modal-content .gift-name {
+      text-align: center;
+      font-size: 3.5vw;
+      margin-top: 2vw;
+      font-weight: bold;
+    }
+
+    #app-{{section.id}} #giftModal .modal-content .tips {
+      padding-left: 2vw;
+      font-size: 3vw;
+      color: #333333;
+      text-align: center;
+      margin-top: 2vw;
+    }
+  }
+</style>
+
+<div id="app-{{section.id}}">
+  <div class="container-box">
+    <div class="section1">
+      <img class="banner-img" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/kv_7ff722db-08ca-4733-8efe-aa74c0904138.png?v=1734589870"
+        srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/kv_b991e8c3-55b1-4c5d-9f4d-46608055d222.png?v=1734761765? 768w, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/kv_7ff722db-08ca-4733-8efe-aa74c0904138.png?v=1734589870"
+        alt="">
+      <div class="text-box">
+        <img class="img-title" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Creality_Falcon_Challenge.png?v=1734590739" alt="">
+        <div class="subtitle">
+          DIY Gifts & Decoration <br>
+          for Christmas and New Year! <br>
+        </div>
+        <div class="win-title">
+         Win <span class="red">$10,000</span> Gifts!
+          
+         <span class="date red">12.24-2.14</span>
+        </div>
+        <div class="btn-box">
+          <div id="openModal" class="upload-btn">Upload Your Video!</div>
+          <div class="see-btn">See the Ranking</div>
+        </div>
+      </div>
+      <div class="share-btns">
+        <a class="share-item" href="https://www.facebook.com/sharer/sharer.php?u=https://www.crealityfalcon.com/pages/falcon-laser-engraver-influencer-contest" target="_blank" rel="noopener noreferrer">
+        </a>
+        <a class="share-item" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+        </a>
+        <a class="share-item" href="https://twitter.com/intent/tweet?url=https://www.crealityfalcon.com/pages/falcon-laser-engraver-influencer-contest&text=" target="_blank" rel="noopener noreferrer">
+        </a>
+        <a class="share-item" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+        </a>
+        <!-- <a class="share-item" href="#" target="_blank" rel="noopener noreferrer">
+        </a> -->
+      </div>
+    </div>
+    <div class="section2">
+      <div class="content">
+        <div class="text-box">
+          <div class="title">Broad Participation - Absolute Freedom</div>
+          <div class="desc">
+            We're opening our challenge to one and all! There are nothematic constraints: your ideas know no bounds
+            <br> It doesn't matter if you have a Creality Falcon or not. Whether you're an old hand or a newcomer
+            <br> all are heartily invited to display their flair.</div>
+        </div>
+        <div class="count-down-wrap">
+          <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/dafdcd033a4d8dd6670c35d671373ae2.png?v=1734595026" alt="">
+          <div class="count-down">
+            <div class="time-item">
+              <div class="num">22</div>
+              <div class="date-text">Days</div>
+            </div>
+            <div class="time-item">
+              <div class="num">22</div>
+              <div class="date-text">Hours</div>
+            </div>
+            <div class="time-item">
+              <div class="num">22</div>
+              <div class="date-text">Mins</div>
+            </div>
+            <div class="time-item">
+              <div class="num">22</div>
+              <div class="date-text">Secs</div>
+            </div>
+          </div>
+       </div>
+      </div>
+    </div>
+    <div class="section3">
+      <div class="content">
+        <div class="common-title">Win Free Gifts</div>
+        <div class="common-subtitle">Get ready to win fabulous prizes!</div>
+        <div class="special-award">
+          <div class="dialog-box">
+            <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/76f3ca21366574334a80d983db319827.png?v=1734603610" alt="dialog" class="dialog">
+            <div class="dialog-text">Top Award</div>
+          </div>
+          <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/56e1130a7d812429a2a565e766ab7e46.png?v=1734596165" alt="award-img" class="award-img pc">
+          <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/56e1130a7d812429a2a565e766ab7e46_e889f282-16b3-4179-9166-2f0dbe58c0d5.png?v=1734764522" alt="award-img" class="award-img md">
+          <div class="award-product">
+            <div class="texts">
+              <div class="title">
+                Upcoming New <br class="pc">
+                Laser Engraver
+              </div>
+              <div class="desc">1 winner</div>
+            </div>
+            <div class="product-img">
+              <img class="mystery-box" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/new.png?v=1734597897" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="gift-list">
+          <div class="gift-item">
+            <div class="dialog-box">
+              <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/76f3ca21366574334a80d983db319827.png?v=1734603610" alt="dialog" class="dialog">
+              <div class="dialog-text">First Prize</div>
+            </div>
+            <a href="{{section.settings.product1}}" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/0fc32f9b4364afbcc6dd38ece28a4d49.png?v=1734602897" alt="gift-img" class="gift-img">
+            </a>
+            <div class="text-box">
+              <img class="product-img" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Falcon2_Pro_60W.png?v=1734602639" alt="product-img">
+              <div class="title">Falcon2 Pro 60W *2</div>
+              <div class="desc">2 winners</div>
+            </div>
+          </div>
+          <div class="gift-item">
+            <div class="dialog-box">
+              <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/76f3ca21366574334a80d983db319827.png?v=1734603610" alt="dialog" class="dialog">
+              <div class="dialog-text">Second Prize</div>
+            </div>
+            <a href="{{section.settings.product2}}" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/0fc32f9b4364afbcc6dd38ece28a4d49.png?v=1734602897" alt="gift-img" class="gift-img">
+            </a>
+            <div class="text-box">
+              <img class="product-img" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Falcon_Smoke_Purifier.png?v=1734602639" alt="product-img">
+              <div class="title">
+                Falcon Smoke Purifier *1 <br>
+                Rotary Kit *3
+              </div>
+              <div class="desc">4 winners</div>
+            </div>
+          </div>
+          <div class="gift-item">
+            <div class="dialog-box">
+              <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/76f3ca21366574334a80d983db319827.png?v=1734603610" alt="dialog" class="dialog">
+              <div class="dialog-text">Third Prize</div>
+            </div>
+            <a href="{{section.settings.product3}}" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/0fc32f9b4364afbcc6dd38ece28a4d49.png?v=1734602897" alt="gift-img" class="gift-img">
+            </a>
+            <div class="text-box">
+              <img class="product-img" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Protective_Cover_34c1eb02-8494-4547-b26e-68f4b5f48ff9.png?v=1734602639" alt="product-img">
+              <div class="title">
+                Protective Cover *5 
+              </div>
+              <div class="desc">5 winners</div>
+            </div>
+          </div>
+        </div>
+        <div class="special-award">
+          <div class="dialog-box">
+            <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/76f3ca21366574334a80d983db319827.png?v=1734603610" alt="dialog" class="dialog">
+            <div class="dialog-text dialog-text2">Participation Prize</div>
+          </div>
+          <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/56e1130a7d812429a2a565e766ab7e46.png?v=1734596165" alt="award-img" class="award-img pc">
+          <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/56e1130a7d812429a2a565e766ab7e46_e889f282-16b3-4179-9166-2f0dbe58c0d5.png?v=1734764522" alt="award-img" class="award-img md">
+          <div class="award-product award-product2">
+            <div class="texts">
+              <div class="title">
+                Everybody 1 lottery chance for Materials Packages*10 & The New Laser Engraver*1
+              </div>
+              <div class="desc">11 winners</div>
+            </div>
+            <div class="product-img">
+              <img class="mystery-box mystery-box2" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/20241226-092918.png?v=1735176560" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section3_1">
+      <div class="content">
+        <div class="common-title">What can you craft to enter the challenge?</div>
+        <div class="list1">
+          <div class="list1-item">
+            <img class="item-img" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Holiday_Decor.png?v=1734661252" alt="Holiday Decor">
+            <div class="item-text">Holiday Decor</div>
+          </div>
+          <div class="list1-item">
+            <img class="item-img" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Party_supplies.png?v=1734661252" alt="Party supplies">
+            <div class="item-text">Party supplies</div>
+          </div>
+          <div class="list1-item">
+            <img class="item-img" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Small_Business.png?v=1734661251" alt="Small Business">
+            <div class="item-text">Small Business</div>
+          </div>
+        </div>
+        <div class="common-title">Get the Design Files</div>
+        <div class="list2">
+          <div class="list2-item">
+            <img class="item-img" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/download-1.png" alt="Download Model">
+            <a href="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Wooden_apple.fds" download>
+              <div class="item-text">Download</div>
+            </a>
+          </div>
+          <div class="list2-item">
+            <img class="item-img" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/download-2.png" alt="Download Model">
+            <a href="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Kraft_paper_biscuit_box.fds" download>
+              <div class="item-text">Download</div>
+            </a>
+          </div>
+          <div class="list2-item">
+            <img class="item-img" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/download-3.png" alt="Download Model">
+            <a href="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Dog_1.fds" download>
+              <div class="item-text">Download</div>
+            </a>
+          </div>
+        </div>
+        <div class="more-models">
+          <div class="text1">For more design files please visit</div>
+          <a class="text2" target="_blank" href="https://www.craftseek.com/project">https://www.craftseek.com/project</a>
+        </div>
+      </div>
+    </div>
+    <div class="section3_2">
+      <div class="common-title">Selected Works from Previous Challenge</div>
+      <div class="videos-wrap">
+        <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/2_d833995b-732e-441a-935a-15b3daafdd76.png" alt="snow" class="snow1">
+        <div class="before-list">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/2_d833995b-732e-441a-935a-15b3daafdd76.png" alt="snow" class="snow2">
+      </div>
+    </div>
+    {% comment %} <div class="section4">
+      <div class="content">
+        <div class="common-title">The Top Six Creation</div>
+        <div class="t-videos">
+          
+        </div>
+      </div>
+    </div> {% endcomment %}
+    <div class="section5">
+      <div class="content">
+        <div class="swiper-tabs HarmonyOS_Bold">
+          <div class="tab-item active" data-slide="0">Challenge Introduction</div>
+          <div class="tab-item" data-slide="1">Bonus Distribution</div>
+          <div class="tab-item" data-slide="2">How to Participate</div>
+          <div class="tab-item pc" data-slide="3">Ranking of Works</div>
+        </div>
+        <div class="swiper groups-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="msg-block block1">
+                <div class="block-title">Challenge Purpose</div>
+                <div class="desc">The Creality Falcon Engraving Machine Challenge is an initiative aimed at inspiring creativity and innovation among content creators. Our goal is to encourage the exploration of the machine's capabilities, enriching our community with diverse projects. With a platform to showcase talent, we're inviting creators to participate and inspire others. This challenge is not just about competition; it's about building a collaborative ecosystem that aligns with our mission to support and celebrate creative achievements. Join us in this journey to transform ideas into reality and contribute to the vibrant future of creative machining.</div>
+                <div class="block-title">Challenge Timeline</div>
+                <div class="time-line">
+                  <div class="time-item">
+                    <div class="title">Submission Phase</div>
+                    <div class="red-box"></div>
+                    <div class="time">2024.12.24</div>
+                  </div>
+                  <div class="time-item">
+                    <div class="title">End <br class="md">&nbsp;</div>
+                    <div class="red-box"></div>
+                    <div class="time">2025.2.14</div>
+                  </div>
+                  <div class="time-item">
+                    <div class="title">Award Announcement</div>
+                    <div class="red-box"></div>
+                    <div class="time">2025.2.20</div>
+                  </div>
+                  <div class="line"></div>
+                </div>
+                {% comment %} <div class="note">Note: If the goal is reached before the deadline, the event will conclude early, and prizes and bonuses will be distributed within 7 working days</div> {% endcomment %}
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="msg-block block2">
+                <div class="block-title">Bonus Distribution</div>
+                <div class="block-subtitle">Scoring criteria:</div>
+                <div class="block-smal-text">Video views volume: 40%</div>
+                <div class="block-smal-text">User interaction volume: 60% (including likes, comments).</div>
+                <br> <br class="pc">
+                <div class="block-subtitle">Gifts Distribution</div>
+                <div class="block-smal-text">Top Prize: Top scorer gets the new product + First Prize + Participation Prize</div>
+                <div class="block-smal-text">First Prize: 20,000+ views and 1,000+ interactions, get chance to win 60W Pro engraving machines.</div>
+                <div class="block-smal-text">Second Prize: 2,000+ views and 100+ interactions get chance to win air purifier & rotation kits.</div>
+                <div class="block-smal-text">Third Prize: Videos with 500+ views and 20+ interactions get chance to win engraving machine covers.</div>
+                <div class="block-smal-text">Participation Prize: All participants get 1 lottery chance for consumables pack & the new product.</div>
+                <div class="block-smal-text">*The participation prize will be drawn after the video is entered successfully and other prizes will be drawn on the Feb 20th.
+                </div>
+                <div class="block-smal-text">*Multiple wins are possible, e.g.,  Top Prize winner can also win First Prize and Participation Prize.</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="msg-block block3">
+                <div class="block-title">How to Participate</div>
+                {% comment %} <div class="block-smal-text">It doesn't matter if you have a Creality Falcon or not. Whether you're an old hand or a newcomer, all are heartily invited to display your flair. If you don’t have a machine, just make a video of the design photo of the object you want to engrave.</div> {% endcomment %}
+                {% comment %} <br> <br class="pc"> {% endcomment %}
+                <div class="block-subtitle">Video Tips:</div>
+                <div class="block-smal-text">Format: Make sure your video link starts with youtube.com/watch?v=.</div>
+                <div class="block-smal-text">Timeline: Published right in the heart of our competition period from December 24, 2024, to February 14, 2025.</div>
+                <div class="block-smal-text">Tag&Link Magic: includes the hashtag #CrealityFalcon Challenge. Don't forget to drop the challenge link and our purchase link and code WELCOME5 (Subscribe to our website to get an extra 5% off).</div>
+                <div class="block-smal-text">Brand Loyalty: Don’t promote other brands.</div>
+                <div class="block-smal-text">Unlimited Entries: Go wild! Submit as many videos as you like, but remember, no double dipping on the same project.</div>
+                <div class="block-smal-text">Video Content: Can focus on the following: home decoration, personalized design, holiday gifts, holiday decorations, tutorials, evaluation experience, parent-child interaction, pets, miniature models, etc.</div>
+                <div class="block-smal-text">Terms: By submitting, you're giving Creality Falcon the wings to share your content far and wide.</div>
+                <div class="block-smal-text">Originality is Key: Your entries must be as unique as a snowflake. No plagiarism, no borrowing without asking.</div>
+                <br>
+                <div class="block-subtitle">🌟 Get Ready to Shine:</div> 
+                <div class="block-smal-text">Capture the essence of creativity and innovation with Creality Falcon, and let's make this challenge a spectacle to remember! Are you ready to take flight? We can't wait to see your videos! </div>
+              </div>
+            </div>
+            <div class="swiper-slide pc">
+              <div class="msg-block block4">
+                <div class="search-container">
+                  <input type="text" id="search-input" class="search-input"
+                    placeholder="Youtube Name/Video ID/Video Name">
+                  <button id="search-button" class="search-button">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+                <div class="youtobe-list">
+
+                </div>
+                <div class="pagination-container">
+                  <button id="prev-button" class="pagination-button button1"></button>
+                  <div class="page-info">
+                    <span id="current-page">Page 1</span> /
+                    <span id="total-pages">20 pages in total</span>
+                  </div>
+                  <button id="next-button" class="pagination-button button2"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section7 md">
+      <div class="content">
+        <div class="common-title">Ranking of Works</div>
+        <div class="msg-block block4">
+          <div class="search-container">
+            <input type="text" id="search-input2" class="search-input" placeholder="Youtube Name/Video ID/Video Name">
+            <button id="search-button2" class="search-button">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+          <div class="youtobe-list">
+
+          </div>
+          <div class="pagination-container">
+            <button id="prev-button2" class="pagination-button button1"></button>
+            <div class="page-info">
+              <span class="current-page2" id="current-page">Page 1</span> /
+              <span class="total-pages2" id="total-pages">20 pages in total</span>
+            </div>
+            <button id="next-button2" class="pagination-button button2"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% comment %} {% if section.settings.show_top_five %}
+      <div class="section6">
+        <div class="content">
+          <div class="common-title">Prize Announcement</div>
+          
+          <div class="desc">Note: Winners will be contacted via email on Oct. 9th, please keep an eye on your email. If you haven't received the email, please contact us directly: 
+                <a href="mailto:kol@crealityfalcon.com">kol@crealityfalcon.com</a></div>
+          <div class="container">
+            <h1>Bonus Announcement</h1>
+            <div class="tab-wrap">
+              <table>
+                <thead>
+                    <tr>
+                        <th>Channel Name</th>
+                        <th>Bonus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>No1 IDEAS</td>
+                        <td>$1,000.0</td>
+                    </tr>
+                    <tr>
+                        <td>studio asyl</td>
+                        <td>$679.4</td>
+                    </tr>
+                    <tr>
+                        <td>Martina</td>
+                        <td>$102.0</td>
+                    </tr>
+                    <tr>
+                        <td>Shindo Keisuke</td>
+                        <td>$78.2</td>
+                    </tr>
+                    <tr>
+                        <td>Nelco neco</td>
+                        <td>$57.1</td>
+                    </tr>
+                    <tr>
+                        <td>Javier Abrisqueta</td>
+                        <td>$28.8</td>
+                    </tr>
+                    <tr>
+                        <td>juan carlos</td>
+                        <td>$21.5</td>
+                    </tr>
+                    <tr>
+                        <td>Tory Bobadilla</td>
+                        <td>$8.6</td>
+                    </tr>
+                    <tr>
+                        <td>Kevin Almeyda</td>
+                        <td>$8.9</td>
+                    </tr>
+                    <tr>
+                        <td>iczfirz</td>
+                        <td>$4.0</td>
+                    </tr>
+                    <tr>
+                        <td>ÁLVARO INDIAS SALGUERO</td>
+                        <td>$5.2</td>
+                    </tr>
+                    <tr>
+                        <td>Daniel Havrince</td>
+                        <td>$2.3</td>
+                    </tr>
+                    <tr>
+                        <td>Diana Pantea</td>
+                        <td>$2.6</td>
+                    </tr>
+                    <tr>
+                        <td>Patrick Gibney</td>
+                        <td>$1.3</td>
+                    </tr>
+                </tbody>
+              </table>
+             </div>
+             <h1>Gift Announcement</h1>
+             <div class="tab-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Channel Name</th>
+                    <th>Gift</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>No1 IDEAS</td>
+                    <td>Complete Crafting Bundle</td>
+                  </tr>
+                  <tr>
+                    <td>studio asyl</td>
+                    <td>Rotary Kit</td>
+                  </tr>
+                  <tr>
+                    <td>Martina</td>
+                    <td>Complete Crafting Bundle</td>
+                  </tr>
+                  <tr>
+                    <td>Shindo Keisuke</td>
+                    <td>K1C 3D Printer</td>
+                  </tr>
+                  <tr>
+                    <td>Nelco neco</td>
+                    <td>Creality Falcon2 Pro 60W</td>
+                  </tr>
+                  <tr>
+                    <td>Javier Abrisqueta</td>
+                    <td>Smoke Purifier</td>
+                  </tr>
+                  <tr>
+                    <td>juan carlos</td>
+                    <td>Complete Crafting Bundle</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+             <video controls style="width: 100%;">
+              <source src="https://cdn.shopify.com/videos/c/o/v/14c090f68c2f471098ee28c77bc62d31.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            </div>
+          <div class="t-videos">
+          </div>
+        </div>
+      </div>
+    {% endif %} {% endcomment %}
+    <div class="section8">
+      <div class="content">
+        <div class="common-title">Become CrealityFalcon Affiliate Partner</div>
+        <div class="common-subtitle HarmonyOS_Regular">Earn Commission From Your Recommendations!</div>
+        <div class="btn-wrap">
+          <a href="https://www.crealityfalcon.com/pages/affiliate-collaboration-for-partners" target="_blank" rel="noopener noreferrer">
+            <div class="join-btn HarmonyOS_Regular">Learn More</div>
+          </a>
+          <a href="https://www.shareasale.com/shareasale.cfm?merchantid=150021" target="_blank" rel="noopener noreferrer">
+            <div class="join-btn HarmonyOS_Regular join2">Sign Up Now</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="section9">
+      <div class="content">
+        <div class="gorup">
+          <div class="group-left">
+            <div class="title">Join Our Facebook Group</div>
+            <div class="desc">
+              Join the active Creality Falcon Facebook community, <br>
+              a vibrant hub for sharing ideas, discovering the latest updates<br>
+              and engaging with real users.
+            </div>
+            <a href="https://www.facebook.com/groups/falconlaserengraver" target="_blank" rel="noopener noreferrer">
+              <div class="join-facebook">
+                <div class="icon"></div>
+                <span>JOIN NOW</span>
+              </div>
+            </a>
+          </div>
+          <div class="pc group-right">
+            <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/624d541a971b6914f9f9011d8a1af20c.png" alt="qr-code" class="qr-code">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section10">
+      <div class="content">
+        <div class="text-box1">
+          <div class="title">Winners will be contacted via email within five business days after the awards are announced, please keep an eye on your email.</div>
+          <div class="subtitle">Winners who have not received the email please contact us dirrectly: <a href="mailto:kol@crealityfalcon.com">kol@crealityfalcon.com</a></div>
+        </div>
+        {% comment %} <div class="faq-container">
+          <h2 class="faq-title">Event FAQs</h2>
+          <div class="faq-item">
+            <div class="faq-question">
+              1. How Can I get all the free gifts during this event?
+              <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/97414c66e4c632f80e42d379e4a2db30.png?v=1734684446" alt="faq-icon" class="faq-icon">
+
+            </div>
+            <div class="faq-answer">
+              You can get free gifts by participating in the event and meeting the criteria.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              2. What payment methods do you accept?
+              <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/97414c66e4c632f80e42d379e4a2db30.png?v=1734684446" alt="faq-icon" class="faq-icon">
+
+            </div>
+            <div class="faq-answer">
+              We accept credit cards, PayPal, and other major payment methods.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              2. How long does shipment normally take?
+              <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/97414c66e4c632f80e42d379e4a2db30.png?v=1734684446" alt="faq-icon" class="faq-icon">
+            </div>
+            <div class="faq-answer">
+              Shipment typically takes 5-7 business days, depending on your location.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              3. Can I engrave on reflective/transparent materials such as ceramic/glass?
+              <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/97414c66e4c632f80e42d379e4a2db30.png?v=1734684446" alt="faq-icon" class="faq-icon">
+            </div>
+            <div class="faq-answer">
+              Yes, our products support engraving on such materials with proper settings.
+            </div>
+          </div>
+          <div class="faq-footer">
+            * If you have more questions, please contact us by <a href="mailto:kol@creality.com">kol@creality.com</a>
+          </div>
+        </div> {% endcomment %} 
+      </div>
+    </div>
+    <div class="float-fotter">
+      <div class="content">
+        <div class="tips pc">
+          Upload your video to win holiday gifts
+        </div>
+        <div class="updata-btn">Upload Your Video!</div>
+        </div>
+      </div>
+    </div>
+    <div id="formModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="infoForm">
+          <div class="first-box">
+            <div class="item-wrap">
+              <label class="required" for="name">Your name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="item-wrap">
+              <label class="required" for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+  
+          <label class="required" for="phoneNumber">Phone Number:</label>
+          <div class="tips">Tips: +1 408 XXX XXXX</div>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required>
+  
+          <label class="required two" for="videoUrl">
+            <span>Just a quick tip: upload your videos using this format</span> 
+            <span class="see-rule">Check the rules</span>
+          </label>
+          <input type="url" id="videoUrl" placeholder="https://www.youtube.com/watch?v=" name="videoUrl" pattern="https://.*" required>
+  
+          <label class="required" for="hasFalcon">*Whether Creality Falcon have been used in the video?</label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="hasFalcon" checked value="true" required>
+              Yes
+            </label>
+            <label>
+              <input type="radio" name="hasFalcon" value="false" required>
+              No
+            </label>
+          </div>
+  
+          <label class="required" for="videoName">Video Name:</label>
+          <input type="text" id="videoName" name="videoName" required> 
+  
+          <label class="required" for="videoType">Video Type:</label>
+          <div class="radio-group three">
+            <label>
+              <input type="radio" name="videoType" checked value="Home Decor" required>
+              Home Decor
+            </label>
+            <label>
+              <input type="radio" name="videoType" value="Gift Idea" required>
+              Gift Idea
+            </label>
+            <label>
+              <input type="radio" name="videoType" value="Tech Review" required>
+              Tech Review
+            </label>
+            <label>
+              <input type="radio" name="videoType" value="Personalised Business" required>
+              Personalised Business
+            </label>
+            <label>
+              <input type="radio" name="videoType" value="Miniature Model" required>
+              Miniature Model
+            </label>
+            <label>
+              <input type="radio" name="videoType" value="More" required>
+              Others
+            </label>
+          </div>
+          <div class="btns">
+            <button type="submit">Submit</button>
+            <button type="button" class="prize-draw">Prize Draw</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="lotteryModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="title">Lottery Draw</div>
+        <form id="lotteryForm">
+          <div class="item-wrap">
+            <label class="required" for="lotteryEmail">Enter your email for a chance to win:</label>
+            <input type="email" id="lotteryEmail" name="lotteryEmail" placeholder="Email Address" required>
+          </div>
+          <div class="tips">Please enter the email address where you uploaded the video. Once the video has been reviewed and approved, it can be used for a lucky draw.</div>
+          <button type="submit">Enter Lottery</button>
+        </form>
+      </div>
+    </div>
+    <div id="giftModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="title">Congratulations on winning the lottery</div>
+        <img class="gift-img" src="" alt="Gift">
+        <div class="gift-name"></div>
+        <div class="tips">Please enter the email address where you uploaded the video. Once the video has been approved (In 2 days), it can be used for a lucky draw. Other prizes will be announced on Feb 20th.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+$(function () {
+  $(".faq-item").click(function () {
+    const isActive = $(this).hasClass("active");
+    $(".faq-item").removeClass("active");
+    if (!isActive) {
+      $(this).addClass("active");
+    }
+  });
+
+  const isMobile = document.documentElement.clientWidth <= 768;
+  // 监听滚动
+  function fadeInListen() {
+    var fadeIn = $('.container').find('.fadein');
+    fadeIn.each(function () {
+      let element = this;
+      let {
+        scrub,
+        reverse,
+        duration,
+        actions,
+        fn
+      } = $(this).data()
+
+      gsap.set(element, {
+        opacity: 0,
+        y: 20
+      });
+      let toggleActions = "play none none none";
+      let start = $(this).data('start') || 70;
+      duration ? '' : duration = 0.8
+      let tl = gsap.to(element, {
+        opacity: 1,
+        y: 0,
+        duration
+      });
+      if (reverse) {
+        toggleActions = "play none none reverse"
+      }
+
+      ScrollTrigger.create({
+        animation: tl,
+        trigger: element,
+        toggleActions,
+        start: `top ${start}%`, // 调整触发点，视情况而定
+        onEnter: function () {
+
+        },
+        once: true // 只触发一次
+      });
+    });
+  }
+  fadeInListen();
+  // section 6 动画
+
+  var mySwiper = new Swiper('.groups-swiper', {
+    slidesPerView: 'auto',
+    effect: 'fade',
+    simulateTouch: false,
+    fadeEffect: {
+      crossFade: true
+    },
+    autoplay: false,
+    on: {
+      init: function () {
+        adjustSwiperHeight();
+      },
+      slideChangeTransitionEnd: function () {
+        // Using slideChangeTransitionEnd to ensure the class name has updated
+        adjustSwiperHeight();
+      }
+    }
+  })
+
+  const befroeSwiper = new Swiper('.section3_2 .before-list .swiper', {
+    slidesPerView: isMobile ? 2 : 'auto',
+    spaceBetween: isMobile ? 10 : 20,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // breakpoints: {
+    //   768: {
+    //     slidesPerView: 2, // 在中屏幕显示 2 个
+    //   },
+    //   1024: {
+    //     slidesPerView: 3, // 在大屏幕显示 3 个
+    //   },
+    // },
+  });
+
+  // 更新swiper 高度
+  function adjustSwiperHeight() {
+    var $activeSlide = $('.swiper-slide-active .msg-block');
+    var slideHeight = $activeSlide.outerHeight();
+    $('.groups-swiper .swiper-wrapper').height(slideHeight);
+  }
+
+  $('.tab-item').on('click', function () {
+    // 移除所有选项卡的 active 类
+    $('.tab-item').removeClass('active');
+
+    // 添加 active 类到当前点击的选项卡
+    $(this).addClass('active');
+
+    // 获取对应的幻灯片索引
+    var slideIndex = $(this).data('slide');
+
+    // 切换到指定的幻灯片
+    mySwiper.slideTo(slideIndex);
+  });
+
+  const countDownDate = {{ section.settings.count_down | json}}; 
+
+  // 辅助函数：格式化时间
+  function formatTime(num) {
+    return num < 10 ? '0' + num : num;
+  }
+
+  function updateCountdown() {
+    const now = new Date();
+    const [dateStr, timeStr] = countDownDate.split(' ');
+    const [year, month, day] = dateStr.split('-').map(Number);
+    const [hour, minute, second] = timeStr.split(':').map(Number);
+    const targetDate = new Date(year, month - 1, day, hour, minute, second);
+
+    const timeDiff = targetDate - now;
+
+    if (timeDiff < 1000) {
+      // 倒计时结束，隐藏倒计时
+      $(".count-down").hide();
+      return;
+    }
+
+    // 计算剩余时间
+    const totalSeconds = Math.floor(timeDiff / 1000);
+    const days = Math.floor(totalSeconds / 3600 / 24);
+    const hours = Math.floor(totalSeconds / 3600 % 24);
+    const minutes = Math.floor(totalSeconds / 60 % 60);
+    const seconds = Math.floor(totalSeconds % 60);
+
+    // 更新页面
+    $(".num").eq(0).text(formatTime(days));
+    $(".num").eq(1).text(formatTime(hours));
+    $(".num").eq(2).text(formatTime(minutes));
+    $(".num").eq(3).text(formatTime(seconds));
+  }
+
+  // 每秒更新一次
+  setInterval(updateCountdown, 1000);
+  // 立即执行一次以便页面加载时就显示正确的时间
+  updateCountdown();
+
+  // 视频列表请求
+  var currentPage = 1;
+  var totalPages = 1;
+
+  function fetchPage(page,query) {
+    const queryParams = $.param({
+      pageSize: 3,
+      pageNum: page
+    }); 
+    $.ajax({
+      url: `https://bsplugins.creality.com/openapi/dtc/crealityFalcon/videoChallenge/v2/list?${queryParams}`, // 替换为你的数据源
+      method: 'POST',
+      data: JSON.stringify({
+        queryParam: query || ""
+      }),
+      dataType: 'json',
+      contentType: 'application/json',
+      success: function (res) {
+        if(res.code == 200) {
+
+        }
+        console.log(res, "data");
+        totalPages = Math.ceil(res.total / 3);
+        updatePage(res.rows);
+        updatePageInfo();
+      }, 
+      error: function () {
+        console.log('无法获取数据');
+      }
+    });
+  }
+
+  // 搜索列表请求
+  // 监听 Enter 键按下事件
+  $('#search-input').on('keydown', function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault(); // 防止默认行为（例如提交表单）
+      performSearch();
+    }
+  });
+
+  // 监听按钮点击事件
+  $('#search-button2').on('click', function () {
+    performSearch();
+  });
+
+  $('#search-input2').on('keydown', function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault(); // 防止默认行为（例如提交表单）
+      performSearch();
+    }
+  });
+
+  // 监听按钮点击事件
+  $('#search-button').on('click', function () {
+    performSearch();
+  });
+
+  // 执行搜索的函数
+  function performSearch() {
+    let query;
+    if(isMobile) {
+      query = $('#search-input2').val().trim();
+    } else {
+      query = $('#search-input').val().trim();
+    }
+    console.log(query,'query');
+    // 调用接口请求搜索数据
+    currentPage = 1;
+    fetchPage(currentPage,query)
+  }
+
+  // 填充列表数据
+  function updatePage(data) {
+    var $list = $('.youtobe-list');
+    $list.empty(); // 清空现有内容
+
+    data.forEach(item => {
+      var html = `
+            <div class="y-item">
+                <div class="ranking">${item.rank}</div>
+                <div class="video-wrap">
+                    <div class="video-cover">
+                    <a href="${item.videoUrl}" target="_blank" rel="noopener noreferrer">
+                      <img class="cover-img" src="${item.thumbnailUrl}" alt="">
+                    </a>
+                    </div>
+                    <div class="video-name HarmonyOS_Bold">${item.videoName}</div>
+                </div>
+                <div class="video-info">
+                    <div class="person">
+                        <div class="img-wrap">
+                            <img class="avatar" src="${item.channelAvatarUrl}" alt="">
+                            <div class="name HarmonyOS_Bold">${item.channelName}</div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill view-progress">
+                                <div class="num HarmonyOS_Regular">${item.videoViews}</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill like-progress">
+                                <div class="num HarmonyOS_Regular">${item.videoLikes + item.videoComments}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        $list.append(html);
+    });
+    // adjustSwiperHeight();
+  }
+
+  // 更新分页器
+  function updatePageInfo() {
+    $('#current-page').text(`Page ${currentPage}`);
+    $('#total-pages').text(`${totalPages} pages in total`);
+    $('#prev-button').prop('disabled', currentPage <= 1);
+    $('#next-button').prop('disabled', currentPage >= totalPages);
+
+    $('.current-page2').text(`Page ${currentPage}`);
+    $('.total-pages2').text(`${totalPages} pages in total`);
+  }
+
+  $('#prev-button').click(function () {
+    if (currentPage > 1) {
+      currentPage--;
+      fetchPage(currentPage);
+    }
+  });
+
+  $('#next-button').click(function () {
+    if (currentPage < totalPages) {
+      currentPage++;
+      fetchPage(currentPage);
+    }
+  });
+
+  $('#prev-button2').click(function () {
+    if (currentPage > 1) {
+      currentPage--;
+      fetchPage(currentPage);
+    }
+  });
+
+  $('#next-button2').click(function () {
+    if (currentPage < totalPages) {
+      currentPage++;
+      fetchPage(currentPage);
+    }
+  });
+
+  // 初始加载第一页数据
+  fetchPage(currentPage);
+
+  // 
+  $(".see-btn").click(function () {
+    let top;
+    if (isMobile) {
+      top = $(".section7").offset().top;
+    } else {
+      top = $(".section5").offset().top;
+      $(".tab-item").eq(3).trigger("click");
+    }
+    console.log(top,'top')
+    $('html, body').animate({
+      scrollTop: top
+    }, 500);
+  })
+  $(".see-rule").click(function () {
+    $('#formModal').fadeOut();
+    let top;
+    if (isMobile) {
+      top = $(".section7").offset().top;
+    } else {
+      top = $(".section5").offset().top;
+      $(".tab-item").eq(2).trigger("click");
+    }
+    console.log(top,'top')
+    $('html, body').animate({
+      scrollTop: top
+    }, 500);
+  })
+
+  // 点击蒙层关闭弹窗
+  $('#openModal').click(function () {
+    $('#formModal').fadeIn();
+  });
+
+  $(".updata-btn").click(function () {
+    $('#formModal').fadeIn();
+  });
+
+  // Close modal
+  $('#formModal .close').click(function () {
+    $('#formModal').fadeOut();
+  });
+
+  // Close modal if clicked outside the modal
+  $(window).click(function (event) {
+    if ($(event.target).is('#formModal')) {
+      $('#formModal').hide();
+    }
+  });
+
+  // 获取弹窗元素
+  var $modal = $('#lotteryModal');
+  var $closeBtn = $modal.find('.close');
+  var $form = $('#lotteryForm');
+  var $giftModal = $('#giftModal');
+  var $giftCloseBtn = $giftModal.find('.close');
+
+  // 显示弹窗的函数
+  function showModal() {
+    $modal.fadeIn();
+  }
+
+  // 隐藏弹窗的函数
+  function closeModal() {
+    $modal.fadeOut();
+  }
+
+  // 点击关闭按钮时隐藏弹窗
+  $closeBtn.on('click', closeModal);
+
+  // 点击窗口外部时隐藏弹窗
+  $(window).on('click', function(event) {
+    if ($(event.target).is($modal)) {
+      closeModal();
+    }
+  });
+
+  $(".prize-draw").click(function () {
+    showModal();
+  });
+
+  // 显示中奖弹窗的函数
+  function showGiftModal(res) {
+    // setTimeout(function() {
+    //   $('#giftModal .gift-img').removeClass('shake').addClass('open');
+    // }, 1000);
+
+    if (res.targetIndex != 2) {
+      $('#giftModal .title').show();
+      $('#giftModal .gift-name').show();
+      $('#giftModal .tips').show();
+      $('#giftModal .gift-name').text(res.prizeName);
+    } else {
+      $('#giftModal .title').hide();
+      $('#giftModal .gift-name').hide();
+      $('#giftModal .tips').hide();
+    }
+    $("#giftModal .gift-img").attr("src", res.img);
+    $giftModal.fadeIn();
+  }
+
+  // showGiftModal({targetIndex: 1, img: "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/20241223-154140.webp?v=1734939818"});
+  // showGiftModal({targetIndex: 2, img: "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/796896641e4d484d20c5fcfa5f429676.png?v=1734939779"});
+  
+  // 隐藏中奖弹窗的函数
+  function closeGiftModal() {
+    $giftModal.fadeOut();
+  }
+
+  $giftCloseBtn.on('click', closeGiftModal);
+
+  // 抽奖提交
+  $form.on('submit', function(event) {
+    event.preventDefault();
+    var email = $('#lotteryEmail').val();
+
+    $.ajax({
+      url: 'https://bsplugins.creality.com/openapi/dtc/crealityFalcon/videoChallenge/v2/participation',
+      method: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify({ email: email }),
+      success: function(response) {
+        if (response.code === 200) {
+          closeModal();
+          showGiftModal(response.result); 
+        } else if (response.code === 3012) {
+          showToast("warning", "Please check, you don't meet the lottery conditions currently.");
+        } else {
+          showToast("warning", "An unexpected error occurred. Please try again later.");
+        }
+      },
+      error: function() {
+        showToast("error", "Network error, please try again later");
+      }
+    });
+  });
+
+  // Form submission with AJAX
+  $('#infoForm').on('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Form data
+    var formData = $(this).serializeArray();
+    var jsonData = {};
+
+    $.each(formData, function (i, field) {
+      jsonData[field.name] = field.value; // Construct JSON object
+    });
+
+    if (jsonData) {
+      jsonData.hasFalcon = Boolean(jsonData.hasFalcon)
+    }
+
+    // AJAX request
+    $.ajax({
+      type: 'POST',
+      url: 'https://bsplugins.creality.com/openapi/dtc/crealityFalcon/videoChallenge/v2/form', // Replace with your server endpoint
+      data: JSON.stringify(jsonData),
+      dataType: 'json',
+      contentType: 'application/json',
+      success: function (response) {
+        alert('Form submitted successfully!');
+        $('#formModal').hide();
+        $('#infoForm')[0].reset();
+        $.toast({
+          type: 'success',
+          duration: 3000,
+          text: 'Submitted successfully!',
+          icon: 'success',
+          position: 'mid-center',  // 中间位置
+          loader: true,        // Change it to false to disable loader
+          loaderBg: '#9EC600'  // To change the background
+        });
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        // console.error('Error:', textStatus, errorThrown); // Improved error logging
+        // alert('An error occurred. Please try again.');
+      }
+    });
+  });
+
+  $.ajax({
+    url: 'https://bsplugins.creality.com/openapi/dtc/crealityFalcon/videoChallenge/v2/list?pageNum=1&pageSize=6', // 替换为你的数据源
+    method: 'POST',
+    data: JSON.stringify({
+      queryParam: ""
+    }),
+    dataType: 'json',
+    contentType: 'application/json',
+    success: function (res) {
+      if (res.code === 200) {
+        // 假设数据结构是一个数组
+        const videoItems = res.rows;
+        const imgUrls = [
+          "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/1144.png",
+          "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/1143.png",
+          "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/1138.png",
+          "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/1141.png",
+          "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/1142.png",
+          "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/1145.png"
+        ]
+        
+        // 清空现有的内容
+        $('.t-videos').empty();
+        
+        // 遍历视频数据
+        videoItems.forEach((video,index) => {
+          // 创建视频条目的 HTML
+          const videoHtml = `
+            <div class="video-item">
+              <img class="ranking-img" src="${imgUrls[index]}" alt="">
+              <div class="p-info">
+                <div class="portrait">
+                  <img class="portrait-img" src="${video.channelAvatarUrl}" alt="">
+                </div>
+                <div class="name HarmonyOS_Bold">${video.channelName}</div>
+              </div>
+              <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/${extractVideoId(video.videoUrl)}" frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="video-info">
+                <div class="item">
+                  <div class="img-wrap">
+                    <img class="icon" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/1_38645e58-24c1-4d73-b348-e4a62ce94e41.png?v=1725444892" alt="">
+                  </div>
+                  <div class="nums HarmonyOS_Regular">${video.videoViews}</div>
+                </div>
+                <div class="item">
+                  <div class="img-wrap">
+                    <img class="icon" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/016aea119159532004f23b2411acf908.png?v=1725444900" alt="">
+                  </div>
+                  <div class="nums HarmonyOS_Regular">${video.videoComments}</div>
+                </div>
+              </div>
+            </div>
+          `;
+          
+          // 将 HTML 插入到容器中
+          $('.section4 .t-videos').append(videoHtml);
+        });
+
+        // 更新页面信息
+        updatePageInfo();
+      } else {
+        console.log('请求失败:', res.message);
+      }
+    },
+    error: function () {
+      console.log('无法获取数据');
+    }
+  });
+
+  $.ajax({
+    url: 'https://bsplugins.creality.com/openapi/dtc/crealityFalcon/videoChallenge/v2/lastFeatured', // 替换为你的数据源
+    method: 'GET',
+    dataType: 'json',
+    contentType: 'application/json',
+    success: function (res) {
+      if (res.code === 200) {
+        // 假设数据结构是一个数组
+        const videoItems = res.data.lastFeaturedList;
+        videoItems.forEach((video,index) => {
+          // 创建视频条目的 HTML
+          const videoHtml = `
+            <div class="swiper-slide video-item">
+              <div class="p-info">
+                <div class="portrait">
+                  <img class="portrait-img" src="${video.channelAvatarUrl}" alt="">
+                </div>
+                <div class="name HarmonyOS_Bold">${video.channelName}</div>
+              </div>
+              <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/${extractVideoId(video.videoUrl)}" frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <div class="video-info">
+                <div class="item">
+                  <div class="img-wrap">
+                    <img class="icon" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/1_38645e58-24c1-4d73-b348-e4a62ce94e41.png?v=1725444892" alt="">
+                  </div>
+                  <div class="nums HarmonyOS_Regular">${video.videoViews}</div>
+                </div>
+                <div class="item">
+                  <div class="img-wrap">
+                    <img class="icon" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/016aea119159532004f23b2411acf908.png?v=1725444900" alt="">
+                  </div>
+                  <div class="nums HarmonyOS_Regular">${video.videoComments}</div>
+                </div>
+              </div>
+            </div>
+          `;
+
+          $('.section3_2 .swiper .swiper-wrapper').append(videoHtml);
+        });
+  
+        // 更新页面信息
+        updatePageInfo();
+      } else {
+        console.log('请求失败:', res.message);
+      }
+    },
+    error: function () {
+      console.log('无法获取数据');
+    }
+  });
+  
+  // 从 YouTube 视频 URL 中提取视频 ID
+  function extractVideoId(url) {
+    const match = url.match(/youtube\.com\/watch\?v=([^\s&]+)/) || url.match(/youtu\.be\/([^\s&]+)/);
+    return match ? match[1] : '';
+  }
+
+  function showToast(type, message) {
+    const options = {
+        duration: 3000,
+        text: message,
+        position: 'mid-center',
+        loader: true,
+        loaderBg: type === 'error' ? 'red' : type === 'warning' ? 'yellow' : 'green', // 根据类型设置背景颜色
+    };
+
+    switch (type) {
+        case 'error':
+            options.type = 'error';
+            options.icon = 'error';
+            break;
+        case 'warning':
+            options.type = 'warning';
+            options.icon = 'warning';
+            break;
+        case 'success':
+            options.type = 'success';
+            options.icon = 'success';
+            break;
+        default:
+            options.type = 'info';
+            options.icon = 'info';
+            break;
+    }
+
+    $.toast(options);
+  }
+})
+</script>
+
+{% schema %} 
+  {
+    "name": "creality Creative Contest",
+    "settings": [
+      {
+        "type": "text",
+        "id": "count_down",
+        "label": "倒计时",
+        "default": "2025-02-14 59:59:59",
+        "info": "格式：2024-09-30 10:00:00"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_top_five",
+        "label": "显示前五名结果",
+        "default": true
+      },
+      {
+        "type": "url",
+        "id": "product1",
+        "label": "Falcon2 Pro 60W *2 产品链接",
+      },
+      {
+        "type": "url",
+        "id": "product2",
+        "label": "Falcon Smoke Purifier *1 Rotary Kit *3",
+      },
+      {
+        "type": "url",
+        "id": "product3",
+        "label": "Protective Cover *5 Materials Packages *10 产品链接",
+      }
+    ],
+    "presets": [
+      {
+        "name": "creality Creative Contest"
+      }
+    ]
+  }
+  {% endschema %}

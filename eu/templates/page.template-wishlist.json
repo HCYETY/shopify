@@ -1,0 +1,108 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-wishlist-page",
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "container",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "default_layout_desktop": "3"
+      }
+    },
+    "lookbook_with_collection_JB4FP9": {
+      "type": "lookbook-with-collection",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "section_bg": "#fafafa",
+        "section_gradient": "",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "title": "",
+        "color_title": "#232323",
+        "mg_bottom_title": 18,
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "des": "",
+        "color_des": "#3c3c3c",
+        "margin_bottom_des": 35,
+        "fontsize_des": 16,
+        "fontsize_des_mb": 12,
+        "title_align": "center",
+        "content_width": 700,
+        "view_more": "",
+        "view_all_link": "",
+        "view_all_color": "",
+        "view_all_enable_border": false,
+        "view_all_font_size": 12,
+        "view_all_font_weight": "700",
+        "view_all_pos": "right",
+        "view_more_mg_top": 35,
+        "image_behavior": "none",
+        "lookbook_style": "1",
+        "enable_lookbook_width": false,
+        "lookbook_width": 250,
+        "dot_desktop_size": 24,
+        "dot_mobile_size": 16,
+        "dot_shadow_color": "#ffffff",
+        "dot_outer_color": "#ffffff",
+        "show_dot_number": false,
+        "show_dot_number_mobile": false,
+        "dot_inner_color": "#000000",
+        "number_desktop_size": 24,
+        "number_mobile_size": 16,
+        "lookbook_truncate": "1",
+        "show_text": "Show Products",
+        "hide_text": "Hide Products",
+        "show_btn_bg_color": "",
+        "show_btn_gradient": "rgba(0,0,0,0.5)",
+        "show_btn_text_color": "#ffffff",
+        "show_btn_height": 30,
+        "show_btn_width": 135,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "link_text": "",
+        "link": "",
+        "link_underline": true,
+        "link_color": "#3c3c3c",
+        "link_color_hover": "#2a6876",
+        "link_margin_top": 18,
+        "link_fs": 16,
+        "link_fs_mb": 12,
+        "text_align": "left",
+        "link_width": 335
+      }
+    }
+  },
+  "order": [
+    "main",
+    "lookbook_with_collection_JB4FP9"
+  ]
+}

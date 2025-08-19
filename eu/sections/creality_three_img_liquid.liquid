@@ -1,0 +1,326 @@
+<style>
+  #app-{{section.id}} {
+    padding-top: {{section.settings.pc_top}}px;
+    padding-bottom: {{section.settings.pc_bottom}}px;
+  }
+  #app-{{section.id}} .content {
+    width: 62.5vw;
+    margin: 0 auto;
+  }
+  #app-{{section.id}} .section {
+    position: relative;
+    padding: 3.125vw 0;
+  }
+  #app-{{section.id}} .common-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.083vw;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+    font-family: "Plus_Jakarta_Sans,sans-serif";
+  }
+  #app-{{section.id}} .section .content .common-subtitle {
+    margin-top: 1.042vw;
+    text-align: center;
+    font-size: 0.833vw;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.2em;
+  }
+  #app-{{section.id}} .section2 {
+    padding-top: 3.906vw;
+  }
+  #app-{{section.id}} .section2 .gift-list {
+    margin-top: 2.604vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  #app-{{section.id}} .section2 .gift-list .gift-item {
+    flex: 1;
+    padding: 2.083vw;
+    text-align: center;
+  }
+  #app-{{section.id}} .section2 .gift-list .gift-item .gift-img {
+    width: 100%;
+  }
+  #app-{{section.id}} .section2 .gift-list .gift-item .gift-name {
+    margin-top: 2.083vw;
+    font-weight: 800;
+    font-size: 1.51vw;
+    line-height: 1.25em;
+    letter-spacing: 0vw;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+  }
+  #app-{{section.id}} .section2 .gift-list .gift-item .gift-desc {
+    margin-top: 1.042vw;
+    font-size: 0.729vw;
+    font-weight: 500;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.7em;
+    font-family: Montserrat, sans-serif;
+  }
+  @media (max-width: 767px) { 
+    #app-{{section.id}} {
+      padding-top: {{section.settings.md_top}}px; 
+      padding-bottom: {{section.settings.md_bottom}}px;
+    }
+    #app-{{section.id}} .content {
+      width: 100%;
+      padding: 0 16px;
+    }
+    #app-{{section.id}} .common-title {
+      padding: 0 4.267vw;
+      text-align: center;
+      font-size: 5.467vw;
+      color: #000000;
+      font-weight: 600;
+      margin-bottom: 4.267vw;
+    }
+    #app-{{section.id}} .common-subtitle {
+      padding: 0 4.267vw;
+      font-size: 3.733vw; 
+      color: #666666;
+      font-weight: 400;
+      text-align: center;
+    }
+    #app-{{section.id}} .section2 {
+      padding-top: 20vw;
+    }
+    #app-{{section.id}} .section2 .gift-list {
+      margin-top: 10.667vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    #app-{{section.id}} .section2 .gift-list .gift-item {
+      flex: auto;
+      width: 100%;
+      padding: 5.667vw;
+      text-align: center;
+    }
+    #app-{{section.id}} .section2 .gift-list .gift-item .gift-img {
+      width: 100%;
+    }
+    #app-{{section.id}} .section2 .gift-list .gift-item .gift-name {
+      margin-top: 10.667vw;
+      font-weight: 800;
+      font-size: 7.733vw;
+      line-height: 1.25em;
+      letter-spacing: 0vw;
+      font-family: Montserrat, sans-serif;
+      text-transform: uppercase;
+    }
+    #app-{{section.id}} .section2 .gift-list .gift-item .gift-desc {
+      margin-top: 5.333vw;
+      font-size: 3.733vw;
+      font-weight: 500;
+      text-transform: none;
+      font-style: normal; 
+      text-decoration: none;
+      line-height: 1.7em;
+      font-family: Montserrat, sans-serif;
+    }
+  } 
+</style>
+
+<div id="app-{{section.id}}">
+  <div class="section2">
+    <div class="content">
+      <div class="common-title">{{ section.settings.title }}</div>
+      <div class="gift-list">
+        {% for item in section.blocks %}
+          <div class="gift-item">
+            <img class="gift-img" src="{{ item.settings.image | img_url: "original" }}" alt="product">
+            <div class="gift-info">
+              <div class="gift-name">{{ item.settings.title }}</div>
+              <div class="gift-desc">
+                <span>{{ item.settings.subtitle }}</span>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  $(function() {
+    const isMobile = document.documentElement.clientWidth <= 768;
+    function fadeInListen () { 
+      var fadeIn = $('#container-{{section.id}}').find('.fadein');
+      fadeIn.each(function () {
+        let element = this;
+        let {
+          scrub,
+          reverse,
+          duration,
+          actions,
+          fn
+        } = $(this).data()
+
+        gsap.set(element, { 
+          opacity: 0,
+          y: 20
+        });
+        let toggleActions = "play none none none";
+        let start = $(this).data('start') || 70; 
+        duration ? '' : duration = 0.8
+        let tl = gsap.to(element, {
+          opacity: 1,
+          y: 0,
+          duration
+        });
+        if (reverse) {
+          toggleActions = "play none none reverse"
+        }
+
+        ScrollTrigger.create({
+          animation: tl,
+          trigger: element,
+          toggleActions,
+          start: `top ${start}%`, // 调整触发点，视情况而定
+          onEnter: function () {
+
+          },
+          once: true // 只触发一次
+        });
+      });
+    }
+    fadeInListen();
+    const count_down = {{ section.settings.count_down | json }};
+
+    // setion2 动画
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".gift-img",
+        start: "top 80%",  // 元素到达视口顶部80%处时触发
+        // end: "bottom 20%", // 元素到达视口顶部20%处时结束
+        toggleActions: "play none none none",
+        // scrub: true,       // 根据滚动条滚动时间轴
+        // markers: true      // 添加可视化标记，帮助调试
+      }
+    })
+    if(isMobile) {
+      // 获取所有 gift-img 元素
+      $('.gift-img').each(function(index) {
+        let element = this;
+        console.log("element");
+        const tl = gsap.from(element, {scale: 0, duration: 0.5}, index * 0.5); // 每个动画延迟 0.5 秒
+        ScrollTrigger.create({
+          animation: tl,
+          trigger: element,
+          toggleActions: "play none none none",
+          start: `top 80%`, // 调整触发点，视情况而定
+          onEnter: function () {
+            
+          },
+          once: true // 只触发一次
+        });
+        // 为每个元素添加动画到时间轴上
+      });
+    } else {
+      tl2.from(".gift-img",{scale: 0, duration: .5})
+    }
+  })
+</script>
+
+{% schema %}
+  {
+    "name": "creality promotion 1",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "标题",
+        "default": "xxxx"
+      },
+      {
+        "type": "range",
+        "id": "pc_top",
+        "label": {
+          "en-US": "PC top spacing",
+          "zh-CN": "PC上边距"
+        },
+        "default": 30,
+        "unit":"px",
+        "step": 1,
+        "max": 100,
+        "min": 0
+      },
+      {
+        "type": "range",
+        "id": "pc_bottom",
+        "label": {
+          "en-US": "PC bottom spacing",
+          "zh-CN": "PC端下边距"
+        },
+        "default": 30,
+        "unit":"px",
+        "step": 1,
+        "max": 100,
+        "min": 0
+      },
+      {
+        "type": "range",
+        "id": "md_top",
+        "label": {
+          "en-US": "Mobile top spacing",
+          "zh-CN": "移动端上边距"
+        },
+        "default": 30,
+        "unit":"%",
+        "step": 1,
+        "max": 100,
+        "min": 0
+      },
+      {
+        "type": "range",
+        "id": "md_bottom",
+        "label": {
+          "en-US": "Mobile bottom spacing",
+          "zh-CN": "移动端下边距"
+        },
+        "default": 30,
+        "unit":"px",
+        "step": 1,
+        "max": 100,
+        "min": 0
+      }
+    ],
+    "blocks": [
+      {
+        "type":"text_image",
+        "name": "图文",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "主图"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "标题",
+            "default": "xxx"
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "标题",
+            "default": "xxx"
+          },
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "creality promotion 1"
+      }
+    ]
+  }
+{% endschema %}

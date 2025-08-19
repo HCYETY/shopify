@@ -1,0 +1,442 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "creality_2024_header_advertisement_zawwM4": {
+      "type": "creality_2024_header_advertisement",
+      "disabled": true,
+      "settings": {
+        "item_bgcolor": "#000000",
+        "item_bgcolor_url": "",
+        "font_size": 17,
+        "item_bgcolor_pd_tb": 12,
+        "item_title": "⏰ Aug 8– Aug 18 | A1 Pro Dual Laser Engraver – €943",
+        "item_title_color": "#ff8b21",
+        "item_btn_text": "SHOP NOW!",
+        "item_btn_url": "https://eu.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver",
+        "item_btn_color": "#ffffff",
+        "item_btn_bgcolor": "#f44336",
+        "item_btn_brr_size": 3,
+        "item_btn_pdlr_size": 12,
+        "item_btn_pdtb_size": 4,
+        "item_btn_text_size": 13,
+        "item_position": "center",
+        "is_countDown": true,
+        "item_count_down_start": "2025-4-1 15:00:00",
+        "item_count_down_end": "2025-8-18 18:00:00",
+        "item_count_down_color": "#ffffff",
+        "item_count_down_text_sieze": 12
+      }
+    },
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_GyEDYH": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "🎉<a href=\"https://eu.crealityfalcon.com/pages/combo-sale\"><span style=\"color: #000000;\"><span style=\"color: #e03e2d;\">Monthly Sale, Special Offer</span>-</span><span style=\"color: #ecf0f1;\"> <strong>Auto €100-€350 Off &amp; Free Gift</strong></span></a>",
+            "btn_color": "#f84248",
+            "btn_border_color": "#ffffff",
+            "btn_bg_color": "#ffffff",
+            "btn_bg_color_gradient": ""
+          }
+        },
+        "9da20430-b562-46f1-9f28-e5592eeec567": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free shipping over €49.99 // 14-Day Money-Back Guarantee // 12-Month Warranty // Live Chat",
+            "btn_color": "#f84248",
+            "btn_border_color": "#ffffff",
+            "btn_bg_color": "#ffffff",
+            "btn_bg_color_gradient": ""
+          }
+        },
+        "announcement_TLRqWT": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "<p><a href=\"https://eu.crealityfalcon.com/pages/combo-sale\" style=\"color: inherit; text-decoration: none;\">Combo Sale Up to <strong style=\"color: red;\">46% Off</strong></a></p>",
+            "btn_color": "#f84248",
+            "btn_border_color": "#ffffff",
+            "btn_bg_color": "#ffffff",
+            "btn_bg_color_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_GyEDYH",
+        "9da20430-b562-46f1-9f28-e5592eeec567",
+        "announcement_TLRqWT"
+      ],
+      "settings": {
+        "enable_announcement": true,
+        "layout": "slider",
+        "enable_close": true,
+        "color_text": "#ffffff",
+        "bg_color_text": "#353434",
+        "bg_color_text_gradient": "",
+        "font_size_text": 14,
+        "font_style_text": "normal",
+        "font_weight_text": "700",
+        "arrow_active": true,
+        "content_max_width": 100,
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    },
+    "0827887c-0743-496d-b06a-55cd8d659ff4": {
+      "type": "header-navigation-utility",
+      "blocks": {
+        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-0": {
+          "type": "logo",
+          "settings": {
+            "logo_position": "always",
+            "logo": "shopify://shop_images/0e44a1e857d737112dc14a2239bda79c_df7d3f7b-7a28-44ef-963a-746666ece880.png",
+            "logo_width": 200,
+            "logo_width_fixed": 100,
+            "logo_text": "",
+            "logo_font_size": 20,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#000000"
+          }
+        },
+        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-1": {
+          "type": "main_menu",
+          "settings": {
+            "menu": "main-mega-menu",
+            "menu_top_spacing": 27,
+            "menu_bottom_spacing": 27,
+            "grid_gap_menu_item": 20,
+            "alignment": "center",
+            "bg_mega_menu": "#ffffff",
+            "bg_mega_menu_gradient": "",
+            "lv_1_color": "#3c3c3c",
+            "lv_1_color_hover": "#3c3c3c",
+            "lv_2_color": "#3c3c3c",
+            "lv_2_color_hover": "#14a9de",
+            "lv_3_color": "#3c3c3c",
+            "lv_3_color_hover": "#14a9de",
+            "sale_item_1": "Holiday Sale!",
+            "sale_item_2": "",
+            "sale_item_3": "",
+            "sale_item_color": "#ff8b21",
+            "label_position": "main_menu",
+            "show_label_blink": true,
+            "new_label_1": "",
+            "new_label_2": "",
+            "new_label_3": "",
+            "new_label_color": "#ffffff",
+            "new_label_bg": "#ff8b21",
+            "new_label_bg_gradient": "",
+            "sale_label_1": "",
+            "sale_label_2": "",
+            "sale_label_3": "",
+            "sale_label_color": "#ffffff",
+            "sale_label_bg": "#ff8b21",
+            "sale_label_bg_gradient": "",
+            "hot_label_1": "Holiday Sale!",
+            "hot_label_2": "",
+            "hot_label_3": "",
+            "hot_label_color": "#ffffff",
+            "hot_label_bg": "#ff8b21",
+            "hot_label_bg_gradient": ""
+          }
+        },
+        "megamenu_style_3_HJ4Hd4": {
+          "type": "megamenu_style_3",
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1200,
+            "mega_tyle": "style1",
+            "item": "Engraver",
+            "column": 5,
+            "show_banner_1": true,
+            "banner_1": "shopify://shop_images/falcon-engraver-cutter_87a79fc2-63b1-4488-af7b-a36d76aaf6c9.jpg",
+            "banner_url_1": "shopify://collections/falcon-engraver",
+            "show_banner_2": true,
+            "banner_2": "shopify://shop_images/crealityfalcon-falcon-pro-10w-engraver-02_509930d5-9911-46e5-9a8c-59ebad468df6.jpg",
+            "banner_url_2": "shopify://collections/falcon-pro-engraver",
+            "show_banner_3": true,
+            "banner_3": "shopify://shop_images/falcon2-22w-engraver-02_78dd7cf0-80e2-48d9-a4ac-e95441ce3866.jpg",
+            "banner_url_3": "shopify://collections/falcon2-engraver",
+            "show_banner_4": true,
+            "banner_4": "shopify://shop_images/falcon2-pro-40w-and-22w-engraver_10097214-fdba-4ea4-a440-1553ca924599.jpg",
+            "banner_url_4": "shopify://products/creality-falcon-2-pro-enclosed-laser-engraver-cutter",
+            "show_banner_5": true,
+            "banner_5": "shopify://shop_images/crealityfalcon-materials-for-engravers_a3a07a23-69cb-4669-8a68-f2278088de92.jpg",
+            "banner_url_5": "shopify://collections/materials"
+          }
+        },
+        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-2": {
+          "type": "header_icons",
+          "settings": {
+            "show_language_currency": true,
+            "show_search": true,
+            "show_customer": true,
+            "show_wishlist": true,
+            "show_cart": true,
+            "text_font_size": 14,
+            "show_language_currency_sticky": true,
+            "show_search_sticky": true,
+            "show_customer_sticky": true,
+            "show_wishlist_sticky": true,
+            "show_cart_sticky": true,
+            "header_icons_color": "#232323",
+            "header_icons_color_hover": "#232323",
+            "cart_count_bubble_color": "#ffffff",
+            "cart_count_bubble_bg": "#1a2531",
+            "cart_count_bubble_bg_gradient": ""
+          }
+        },
+        "2504d97c-d2e8-4203-a55a-aff8b17b5498": {
+          "type": "megamenu_style_1",
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1280,
+            "item": "Theme Demo",
+            "column": 5,
+            "show_banner_1": false,
+            "banner_url_1": "",
+            "show_product": false,
+            "product_title": "Featured Products",
+            "product_collection": ""
+          }
+        },
+        "24d4b595-9d92-4b04-ac3c-62b2f599d20f": {
+          "type": "megamenu_style_1",
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1200,
+            "item": "product",
+            "column": 5,
+            "show_banner_1": false,
+            "banner_url_1": "",
+            "show_product": false,
+            "product_title": "Featured Products",
+            "product_collection": ""
+          }
+        },
+        "6c368518-bedd-4b8b-b9ba-bb542219267a": {
+          "type": "megamenu_style_1",
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1200,
+            "item": "Shop",
+            "column": 4,
+            "show_banner_1": false,
+            "banner_url_1": "",
+            "show_product": false,
+            "product_title": "Featured Products",
+            "product_collection": ""
+          }
+        },
+        "49459ccc-e7bb-40e5-8544-bf7b8e3000b5": {
+          "type": "megamenu_style_1",
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1200,
+            "item": "new in",
+            "column": 3,
+            "show_banner_1": true,
+            "banner_url_1": "",
+            "show_product": true,
+            "product_title": "Featured Products",
+            "product_collection": ""
+          }
+        },
+        "a95ae51a-e02d-42cd-8e35-232434188ac6": {
+          "type": "megamenu_style_2",
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1200,
+            "item": "trend",
+            "column": 3,
+            "show_banner_1": true,
+            "banner_url_1": "shopify://collections/congue",
+            "show_banner_2": true,
+            "banner_url_2": "shopify://collections/scarvero",
+            "show_banner_3": false,
+            "banner_url_3": ""
+          }
+        },
+        "97694fad-9988-43b2-9b94-417b1bf997cc": {
+          "type": "megamenu_style_4",
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1200,
+            "item": "Collections",
+            "column": 5,
+            "menu_text_left": "",
+            "menu_text_left_sale": "",
+            "show_banner_1": true,
+            "banner_url_1": "shopify://collections/congue",
+            "show_banner_2": true,
+            "banner_url_2": "shopify://collections/cosmopolis",
+            "show_az_brand": true,
+            "az_brand_title": "All Brands A-Z",
+            "az_brand_link_text": "See All Brands",
+            "az_brand_url": "",
+            "bg_mega_menu_bottom": "#f8f8f8",
+            "az_brand_link_text_color": "#000000"
+          }
+        },
+        "megamenu_style_6_6yEWBT": {
+          "type": "megamenu_style_6",
+          "disabled": true,
+          "settings": {
+            "item_bgcolor": "#e8e8e8",
+            "item_bgcolor_url": "",
+            "font_size": 14,
+            "item_bgcolor_pd_tb": 15,
+            "item_title": "✨Starter Pack: Beginner-Friendly & Budget-Friendly Engraving Machines!",
+            "item_title_color": "#232323",
+            "item_btn_text": "SHOP NOW",
+            "item_btn_url": "https://eu.crealityfalcon.com/collections/low-wattage-laser-engraver-for-beginner",
+            "item_btn_color": "#ffffff",
+            "item_btn_bgcolor": "#14a9de",
+            "item_btn_brr_size": 3,
+            "item_btn_pdlr_size": 12,
+            "item_btn_pdtb_size": 4,
+            "item_btn_text_size": 14,
+            "item_position": "center",
+            "is_countDown": false,
+            "item_count_down_start": "2024-9-02 06:00:00",
+            "item_count_down_end": "2024-9-14 05:59:59",
+            "item_count_down_color": "#ffffff",
+            "item_count_down_text_sieze": 12
+          }
+        }
+      },
+      "block_order": [
+        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-0",
+        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-1",
+        "megamenu_style_3_HJ4Hd4",
+        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-2",
+        "2504d97c-d2e8-4203-a55a-aff8b17b5498",
+        "24d4b595-9d92-4b04-ac3c-62b2f599d20f",
+        "6c368518-bedd-4b8b-b9ba-bb542219267a",
+        "49459ccc-e7bb-40e5-8544-bf7b8e3000b5",
+        "a95ae51a-e02d-42cd-8e35-232434188ac6",
+        "97694fad-9988-43b2-9b94-417b1bf997cc",
+        "megamenu_style_6_6yEWBT"
+      ],
+      "settings": {
+        "container": "full",
+        "padding_full_width": 0,
+        "header_navigation_bg": "#ffffff",
+        "header_navigation_bg_gradient": "",
+        "sticky_header_type": "on_scroll",
+        "sticky_header_width": "default",
+        "item_rotatingBroadcast_color": "#ffffff",
+        "item_rotatingBroadcast_size": 1,
+        "is_rotatingBroadcast": false
+      }
+    },
+    "header-mobile": {
+      "type": "header-mobile",
+      "blocks": {
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944": {
+          "type": "menu",
+          "settings": {
+            "color": "#232323"
+          }
+        },
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53": {
+          "type": "search",
+          "settings": {
+            "color": "#232323"
+          }
+        },
+        "550fbd21-75fb-4051-9dee-77d91b5239f0": {
+          "type": "logo",
+          "settings": {
+            "logo_mobile": "shopify://shop_images/0e44a1e857d737112dc14a2239bda79c_df7d3f7b-7a28-44ef-963a-746666ece880.png",
+            "logo_width_mobile": 100,
+            "logo_text": "",
+            "logo_font_size": 20,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#232323"
+          }
+        },
+        "20dae707-64c0-4ea3-a05e-561cae9836d8": {
+          "type": "customer",
+          "settings": {
+            "icon": "1",
+            "color": "#232323"
+          }
+        },
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d": {
+          "type": "cart",
+          "settings": {
+            "icon": "2",
+            "color": "#232323",
+            "color_bubble": "#ffffff",
+            "bg_bubble": "#232323"
+          }
+        },
+        "megamenu_style_6_M3yX7g": {
+          "type": "megamenu_style_6",
+          "disabled": true,
+          "settings": {
+            "item_bgcolor": "#e8e8e8",
+            "item_bgcolor_url": "",
+            "font_size": 14,
+            "item_bgcolor_pd_tb": 12,
+            "item_title": "✨Starter Pack: Beginner-Friendly & Budget-Friendly Engraving Machines!",
+            "item_title_color": "#232323",
+            "item_btn_text": "SHOP NOW",
+            "item_btn_url": "https://eu.crealityfalcon.com/collections/low-wattage-laser-engraver-for-beginner",
+            "item_btn_color": "#ffffff",
+            "item_btn_bgcolor": "#14a9de",
+            "item_btn_brr_size": 3,
+            "item_btn_pdlr_size": 12,
+            "item_btn_pdtb_size": 4,
+            "item_btn_text_size": 12,
+            "item_position": "center",
+            "is_countDown": false,
+            "item_count_down_start": "2024-9-02 06:00:00",
+            "item_count_down_end": "2024-9-14 05:59:59",
+            "item_count_down_color": "#ffffff",
+            "item_count_down_text_sieze": 12
+          }
+        }
+      },
+      "block_order": [
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944",
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53",
+        "550fbd21-75fb-4051-9dee-77d91b5239f0",
+        "20dae707-64c0-4ea3-a05e-561cae9836d8",
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d",
+        "megamenu_style_6_M3yX7g"
+      ],
+      "settings": {
+        "background": "#ffffff",
+        "gradient": "",
+        "sticky_header_type": "on_scroll",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "item_rotatingBroadcast_color_md": "#ffffff",
+        "item_rotatingBroadcast_size_md": 1,
+        "is_rotatingBroadcast_md": false
+      }
+    }
+  },
+  "order": [
+    "creality_2024_header_advertisement_zawwM4",
+    "announcement-bar",
+    "0827887c-0743-496d-b06a-55cd8d659ff4",
+    "header-mobile"
+  ]
+}

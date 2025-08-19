@@ -1,0 +1,326 @@
+{% assign pc_padding_top=section.settings.pc_padding_top %}
+{% assign pc_padding_bottom=section.settings.pc_padding_bottom %}
+{% assign mobile_padding_top=section.settings.mobile_padding_top %}
+{% assign mobile_padding_bottom=section.settings.mobile_padding_bottom %}
+{% assign jump_id = section.settings.jump_id %}
+
+<style>
+  .download-support-{{section.id}}  {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top:{{pc_padding_top}}px;
+    padding-bottom:{{pc_padding_bottom}}px;
+  }
+  .download-support-{{section.id}} .drop-icon-close {
+    transform: rotate(180deg);
+  } 
+  .download-support-{{section.id}} .icon-download {
+    width: 20px;
+    height: 20px;
+  }
+  .download-support-{{section.id}} .drop-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .download-support-{{section.id}}  .download-support-heading {
+    font-family: "Montserrat-Bold";
+    font-weight: bold;
+    font-size:32px;
+    line-height:39.01px;
+    color: rgba(0, 0, 0, 1);
+  }
+  .download-support-{{section.id}}  .item-title-time  .item-title {
+    font-family: "Montserrat-Semibold";
+    font-weight:600;
+    font-size:18px;
+    line-height:21.94px;
+    color: rgba(0, 0, 0, 1);
+  }
+  .download-support-{{section.id}}  .item-title-time .item-time {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height:17.07px;
+    color: rgba(0, 0, 0, 1);
+  }
+  .download-support-{{section.id}} .item-btn  .download-btn {
+    font-family: "Montserrat-Semibold";
+    font-weight:600;
+    font-size:14px;
+    line-height:17.07px;
+    color: rgba(0, 0, 0, 1);
+  }
+  .download-support-{{section.id}} .item-btn .drop-btn-text {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height:17.07px;
+    color: rgba(0, 0, 0, 1);
+  }
+  .download-support-{{section.id}}  .drop-down-text {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height:24px;
+    color: rgba(0, 0, 0, 1);
+
+  }
+  @media (max-width: 960px) {
+    .download-support-{{section.id}}  { 
+      width: 100%;
+      padding-right: 16px; 
+      padding-left: 16px;
+      padding-top:{{mobile_padding_top}}px;
+      padding-bottom:{{mobile_padding_bottom}}px;
+    }
+    .download-support-{{section.id}}  .download-support-heading {
+      font-family: "Montserrat-Bold";
+      font-weight: bold;
+      font-size: 18px;
+      line-height:27px
+    }
+    .download-support-{{section.id}}  .item-title-time  .item-title {
+      font-size:14px;
+      line-height:17.07px;
+    }
+
+    .download-support-{{section.id}}  .item-title-time .item-time {
+      font-size:12px;
+      line-height:14.63px;
+    }
+    .download-support-{{section.id}} .item-btn  .download-btn  {
+      font-size:12px;
+      line-height:14.63px;
+    }
+    .download-support-{{section.id}} .item-btn .drop-btn-text {
+      font-size: 12px;
+      line-height:14.63px;
+    }
+    .download-support-{{section.id}}  .drop-down-text {
+      line-height:12px;
+      line-height:18px;
+    }
+  } 
+</style>
+<div class="download-support-{{section.id}}">
+  <div id="{{jump_id}}"></div>
+  <div class="download-support-heading tw-mb-10 md:tw-mb-5">{{section.settings.heading}}</div>
+  <div class="download-support-items">
+    {% for block in section.blocks%}
+    {% assign title =block.settings.title %}
+    {% assign time =block.settings.time %}
+    {% assign button_text=block.settings.button_text %}
+    {% assign button_link=block.settings.button_link %}
+    {% assign drop_down_guide_text=block.settings.drop_down_guide_text %}
+    {% assign drop_down_text=block.settings.drop_down_text %}
+    {% assign content_bg_color=block.settings.content_bg_color %}
+    <div
+      class="download-support-item tw-flex tw-flex-col tw-px-[60px] tw-py-[15px] md:tw-px-5 md:tw-py-[15px] tw-mb-5 md:tw-mb-[15px]"
+      style="background-color: {{content_bg_color}}">
+      <div
+        class="tw-flex lg:tw-items-center lg:tw-justify-between md:tw-flex-col">
+        <div class="item-title-time md:tw-flex md:tw-flex-col md:tw-mb-5  ">
+          {% if title %}
+          <span class="item-title lg:tw-mr-5 md:tw-mb-[5px]">{{title}}</span>
+          {% endif %}
+
+          {% if time %}
+          <span class="item-time">{{time}}</span>
+          {% endif %}
+        </div>
+        {% if button_text and drop_down_guide_text %}
+          <div class="item-btn tw-flex md:tw-justify-between tw-items-center">
+            <a class="download-btn  tw-mr-9  tw-flex lg:tw-items-center tw-cursor-pointer" href="{{button_link}}" download="{{button_link}}" target="_blank">
+              <span class="tw-m-2">{{ button_text }}</span>
+              <svg t="1712460968714" class="icon-download tw-cursor-pointer" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10981" width="32" height="32">
+                <path d="M921.6 882.688H142.336c-24.576 0-44.032 19.456-44.032 44.032s19.456 44.032 44.032 44.032H921.6c24.576 0 44.032-19.456 44.032-44.032 0-23.552-19.456-44.032-44.032-44.032zM502.784 806.912c8.192 8.192 19.456 12.288 29.696 11.264 10.24 0 21.504-3.072 29.696-11.264l266.24-266.24c15.36-15.36 15.36-40.96 0-56.32s-40.96-15.36-56.32 0L570.368 686.08V89.088c0-21.504-17.408-39.936-39.936-39.936s-39.936 17.408-39.936 39.936v592.896L292.864 484.352c-15.36-15.36-40.96-15.36-56.32 0s-15.36 40.96 0 56.32l266.24 266.24z" fill="#515151" p-id="10982"></path>
+              </svg>
+            </a>
+            <div class="drop-btn tw-flex tw-items-center">
+              <span class="tw-cursor-pointer drop-btn-text tw-mr-[10px] ">{{drop_down_guide_text}}</span>
+              <svg t="1712458362907" class="drop-icon tw-cursor-pointer" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2680" width="32" height="32">
+                <path d="M511.609097 961.619254M511.906879 662.759609 511.906879 662.759609 129.831974 280.679587c-14.788821-14.762215-38.777165-14.762215-53.585429 0-14.788821 14.812357-14.788821 38.799678 0 53.607942l405.851425 405.805376c0.867764 1.107217 1.824555 2.190899 2.843768 3.206018 14.808264 14.788821 38.795585 14.788821 53.585429 0l408.230612-408.226518c14.807241-14.808264 14.807241-38.795585 0-53.584406-14.767332-14.785751-38.754652-14.785751-53.562916 0L511.906879 662.759609 511.906879 662.759609zM511.906879 662.759609" fill="#8a8a8a" p-id="2681"></path>
+              </svg>
+            </div>
+          </div>
+        {% endif %}
+
+      </div>
+      <div class="drop-down-text tw-hidden">{{drop_down_text}}</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<script type="module">
+  $(function() {
+    $('.download-support-{{section.id}} .download-support-item .drop-btn').click(function(){
+      $(this).children('.drop-icon').toggleClass('drop-icon-close')
+      $(this).parents(".download-support-item").children(".drop-down-text").slideToggle()
+    })
+    $('.download-support-{{section.id}} .download-support-item .only-icon').click(function(){
+      $(this).children('.drop-icon').toggleClass('drop-icon-close')
+      $(this).parents(".download-support-item").children(".drop-down-text").slideToggle()
+    })
+  })
+</script>
+{% schema %}
+{
+  "name": "creality download",
+  "settings": [
+    {
+      "type": "text",
+      "id": "jump_id",
+      "label": {
+        "en-US": "Jump ID",
+        "zh-CN": "跳转ID"
+      }
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": {
+        "en-US": "heading",
+        "zh-CN": "标题"
+      },
+      "default": "Automatic bed leveling"
+    },
+    {
+      "type": "header",
+      "content": {
+        "zh-CN": "间距",
+        "en-US": "padding"
+      }
+    },
+    {
+      "type": "range",
+      "id": "pc_padding_top",
+      "label": {
+        "en-US": "PC Padding top",
+        "zh-CN": "PC 上间距"
+      },
+      "unit": "px",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "pc_padding_bottom",
+      "label": {
+        "en-US": "PC Padding bottom",
+        "zh-CN": "PC 下间距"
+      },
+      "unit": "px",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": {
+        "en-US": "Mobile Padding top",
+        "zh-CN": "Mobile 上间距"
+      },
+      "unit": "px",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": {
+        "en-US": "Mobile Padding bottom",
+        "zh-CN": "Mobile 下间距"
+      },
+      "unit": "px",
+      "step": 2,
+      "min": 0,
+      "max": 200,
+      "default": 30
+    }
+  ],
+  "blocks": [
+    {
+      "type": "header",
+      "name": {
+        "en-US": "Column Content ",
+        "zh-CN": "栏目内容"
+      },
+      "settings": [
+        {
+          "type": "color",
+          "default": "#F9F9F9",
+          "id": "content_bg_color",
+          "label": {
+            "en-US": "content bg color",
+            "zh-CN": "内容背景色"
+          }
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": {
+            "en-US": "title",
+            "zh-CN": "标题"
+          },
+          "default": "Firmware Name"
+        },
+        {
+          "type": "text",
+          "id": "time",
+          "label": {
+            "en-US": "time",
+            "zh-CN": "时间"
+          },
+          "default": "2022.03.11"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": {
+            "en-US": "link text",
+            "zh-CN": "链接文字"
+          },
+          "default": "download"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": {
+            "en-US": "Button link",
+            "zh-CN": "按钮链接"
+          }
+        },
+        {
+          "type": "text",
+          "id": "drop_down_guide_text",
+          "label": {
+            "en-US": "drop down guide text",
+            "zh-CN": "下拉指引文字"
+          },
+          "default": "Release Notes"
+        },
+        {
+          "type": "richtext",
+          "id": "drop_down_text",
+          "label": { 
+            "en-US": "drop downtext",
+            "zh-CN": "下拉文字"
+          },
+          "default": "<h3>Release Notes</h3>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "creality download"
+    }
+  ]
+}
+{% endschema %}

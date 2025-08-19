@@ -1,0 +1,349 @@
+<style>
+  {% assign pc_width = 1920.0 %}
+  {% assign mb_width = 768.0 %}
+  #app-{{section.id}} .section2 {
+    padding: 3.906vw 0;
+  }
+  #app-{{section.id}} .section2 .time-box {
+    text-align: center;
+    width: {% render 'tovw', px: section.settings.card_width, design_width: pc_width %}vw;
+    margin: 0 auto;
+    background-color: {{ section.settings.background}};
+    padding: 2.083vw 1.042vw;
+    border-radius: {{ section.settings.borderRadius }}px;
+  }
+  {% for block in section.blocks %}
+   #app-{{section.id}} .section2 .time-box .custom_title-{{ forloop.index }}{
+     font-family: {{ block.settings.heading_font.family }};
+     color: {{block.settings.font_color}};
+     margin-top: {% render 'tovw', px: block.settings.font_margin_top, design_width: pc_width %}vw;
+     text-align: {{block.settings.text_align}};
+     font-size: {% render 'tovw', px: block.settings.font_size, design_width: pc_width %}vw;
+   }
+  {% endfor %}
+  #app-{{section.id}} .section2 .time-box .title {
+    line-height: 1.2em;
+    letter-spacing: 0vw;
+    text-transform: uppercase;
+  }
+  #app-{{section.id}} .section2 .time-box .small-title {
+    font-size: 1.042vw;
+    font-weight: 500;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.4em;
+    font-family: Montserrat;
+  }
+  #app-{{section.id}} .section2 .time-box .small-title {
+    margin-top: 1.563vw;
+  }
+  #app-{{section.id}} .section2 .time-box .count-down {
+    margin-top: 2.083vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  #app-{{section.id}} .section2 .time-box .count-down .time-item {
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 0.15625vw solid #ED1F22;
+    margin-right: 0.521vw;
+    text-align: center;
+    padding: 1.042vw;
+    width: 5.469vw;
+    height: 5.573vw;
+  }
+  #app-{{section.id}} .section2 .time-box .count-down .time-item .num {
+    font-size: 1.888vw;
+    font-weight: 700;
+    color: #ED1F22;
+  }
+  #app-{{section.id}} .section2 .time-box .count-down .time-item .date-text {
+    font-size: 0.638vw;
+    font-weight: 600;
+  }
+  @media (max-width: 768px) {
+  {% for block in section.blocks %}
+   #app-{{section.id}} .section2 .time-box .custom_title-{{ forloop.index }}{
+     margin-top: {% render 'tovw', px: block.settings.font_margin_top, design_width: mb_width %}vw;
+     font-size: {% render 'tovw', px: block.settings.font_size, design_width: mb_width %}vw;
+   }
+  {% endfor %}
+    
+    #app-{{section.id}} .section2 {
+      padding: 3.906vw 0;
+    }
+    #app-{{section.id}} .section2 .time-box {
+      width: 100%;
+      padding: 10.667vw 5.333vw;
+    }
+    #app-{{section.id}} .section2 .time-box .title {
+      font-size: {% render 'tovw', px: section.settings.h1_fontSize, design_width: mb_width %}vw;
+      font-family: "Plus_Jakarta_Sans,sans-serif";
+      text-transform: uppercase;
+    }
+    #app-{{section.id}} .section2 .time-box .small-title {
+      font-size: 4.267vw;
+      font-family: Montserrat;
+      margin-top: 5.333vw;
+    }
+    #app-{{section.id}} .section2 .time-box .count-down {
+      margin-top: 2.083vw;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+    #app-{{section.id}} .section2 .time-box .count-down .time-item {
+      border: 0.533vw solid #ED1F22;
+      margin-right: 4.267vw;
+      text-align: center;
+      padding: 1.042vw;
+      width: 15.469vw;
+      height: 15.573vw;
+    }
+    #app-{{section.id}} .section2 .time-box .count-down .time-item:last-child {
+      margin-right: 0;
+    }
+    #app-{{section.id}} .section2 .time-box .count-down .time-item .num {
+      font-size: 6.188vw;
+    }
+    #app-{{section.id}} .section2 .time-box .count-down .time-item .date-text {
+      font-size: 2.638vw;
+    }
+  }
+</style>
+<div id="app-{{section.id}}" class="containers">
+  <div class="section2">
+      <div class="content">
+        <div class="time-box">
+          {% for block in section.blocks %}
+            <{{ block.settings.tag }} class="custom_title-{{ forloop.index }} fadein">
+              {{ block.settings.block_title }}
+            </{{ block.settings.tag }}>
+          {% endfor %}
+          <div class="count-down">
+            <div class="time-item">
+              <div class="num">00</div>
+              <div class="date-text">DAYS</div>
+            </div>
+            <div class="time-item">
+              <div class="num">00</div>
+              <div class="date-text">HOURS</div>
+            </div>
+            <div class="time-item">
+              <div class="num">00</div>
+              <div class="date-text">MINS</div>
+            </div>
+            <div class="time-item">
+              <div class="num">00</div>
+              <div class="date-text">SECS</div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+<script>
+$(()=>{
+   // 倒计时
+    const count_down = {{ section.settings.count_down | json}}; 
+    (function () {
+        if (!count_down && !count_down.length) return;
+        let ymdarr = count_down.split(" ")[0].split("-");
+        let hmsarr = count_down.split(" ")[1].split(":");
+      
+        if (ymdarr.length === 3 && hmsarr.length === 3) {
+            let timer = null;
+            clearInterval(timer);
+
+            const oYear = Number(ymdarr[0]);
+            const oMonth = Number(ymdarr[1]) - 1; // 月份应减1
+            const oDay = Number(ymdarr[2]);
+            const oHour = Number(hmsarr[0]);
+            const oMinute = Number(hmsarr[1]);
+            const oSecond = Number(hmsarr[2]);
+
+            // 设置定时器
+            timer = setInterval(function () {
+                // 使用北京时间
+                const funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+                const now = new Date();
+                const beijingNow = new Date(now.getTime() + (now.getTimezoneOffset() * 60000) + 28800000); // 调整时间到北京时间
+                const isTime = funtureDate.getTime() - beijingNow.getTime();
+
+                if (isTime < 1000) {
+                    $(".count-down").hide();
+                    clearInterval(timer);
+                    return;
+                }
+
+                const funtureTime = funtureDate.getTime();
+                const presenTime = beijingNow.getTime(); 
+
+                if (funtureTime < presenTime) return; // 时间已过，停止定时器
+
+                const allTime = funtureTime - presenTime;
+                const allSecond = parseInt(allTime / 1000);
+
+                const day = size(parseInt(allSecond / 3600 / 24));
+                const hour = size(parseInt(allSecond / 3600 % 24));
+                const minute = size(parseInt(allSecond / 60 % 60));
+                const second = size(parseInt(allSecond % 60));
+
+                const nodes = document.querySelectorAll(".num");
+                const nodes2 = document.querySelectorAll(".date");
+                nodes[0].innerHTML = day; 
+                nodes[1].innerHTML = hour;
+                nodes[2].innerHTML = minute;
+                nodes[3].innerHTML = second;
+                nodes2[0].innerHTML = day;
+                nodes2[1].innerHTML = hour;
+                nodes2[2].innerHTML = minute;
+                nodes2[3].innerHTML = second;
+            }, 1000);
+        }
+    })();
+ 
+    function size(num) {
+      return num < 10 && num >= 0 ? '0' + num : num;
+    }
+})
+  
+</script>
+
+{% schema %}
+  {
+    "name": "活动倒计时卡片",
+    "settings": [
+      {
+        "type": "text",
+        "id": "count_down",
+        "label": "倒计时",
+        "default": "2024-08-09 10:00:00",
+        "info": "格式：2024-08-09 10:00:00"
+      },
+      {
+        "type": "range",
+        "id": "card_width",
+        "min": 500,
+        "max": 1500,
+        "step": 10,
+        "unit": "px",
+        "label": "卡片长度",
+        "default": 1000
+      },
+      {
+        "type": "range",
+        "id": "borderRadius",
+        "min": 6,
+        "max": 48,
+        "step": 1,
+        "unit": "px",
+        "label": "卡片圆角",
+        "default": 16
+      },
+      {
+        "type": "color",
+        "id": "background",
+        "label": "卡片背景颜色",
+        "default": "#F4F4F4"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "card_title",
+        "name": "标题",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "block_title",
+            "label": "标题",
+            "default": "这是一个标题"
+          },
+          {
+            "type": "range",
+            "id": "font_size",
+            "min": 12,
+            "max": 68,
+            "step": 1,
+            "unit": "px",
+            "label": "标题字号",
+            "default": 24
+          },
+          {
+            "type": "font_picker",
+            "id": "heading_font",
+            "label": "字体",
+            "default": "sans-serif"
+          },
+          {
+            "type": "color",
+            "id": "font_color",
+            "label": "字体颜色",
+            "default": "#000"
+          },
+          {
+            "type": "text_alignment",
+            "id": "text_align",
+            "label": "文字位置",
+            "info":"只在块级元素生效",
+            "default": "center",
+          },
+          {
+            "type": "text",
+            "id": "font_margin_top",
+            "label": "上边距",
+            "info":"只在块级元素生效",
+            "default": "0"
+           },
+          {
+            "type": "select",
+            "id": "tag",
+            "label": "标签",
+            "options": [
+              { "value": "div", "label": "块级元素" },
+              { "value": "span", "label": "内联元素" },
+            ],
+            "default": "div"
+           },
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "活动倒计时卡片",
+        "category": "自定义样式",
+        "blocks": [
+          {
+            "type": "card_title",
+            "settings": {
+              "block_title": "DISCOUNT LASER ENGRAVERS FOR FAMILY CRAFTING"
+            }
+          },
+          {
+            "type": "card_title",
+            "settings": {
+              "block_title": "<strong><u>SAVE UP TO A$1361.05 DON'T MISS IT!</u></strong>",
+              "font_color": "#FF5C00",
+            }
+          },
+          {
+            "type": "card_title",
+            "settings": {
+              "block_title": "Limited Stock：Only 30 Sets of Each Falcon2 Laser Engraver Bundles!",
+              "font_margin_top": "30"
+            }
+          },
+          {
+            "type": "card_title",
+            "settings": {
+              "block_title": "Deals will end on Aug.18th 23:59PM",
+            }
+          },
+        ]
+      }
+    ]
+  }
+{% endschema %}

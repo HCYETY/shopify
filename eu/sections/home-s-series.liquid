@@ -1,0 +1,306 @@
+<link rel="stylesheet" href="{{ 'swiper.css' | asset_url }}">
+<script src="{{ 'swiper.js' | asset_url }}" defer></script>
+
+{% style %}
+  @media (min-width: 901px) and (max-width: 1920px) {
+    #{{ section.id }}.series {
+        margin: 64px 0 80px
+    }
+
+    #{{ section.id }}.series .container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        -webkit-column-gap: 64px;
+        -moz-column-gap: 64px;
+        column-gap: 64px;
+        justify-content: center;
+        padding: 0;
+    }
+
+    #{{ section.id }}.series .swiper {
+        width: 100%
+    }
+
+    #{{ section.id }}.series .swiper .swiper-slide {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+
+    #{{ section.id }}.series .swiper [class*=swiper-button] {
+        height: 56px;
+        width: 56px
+    }
+
+    #{{ section.id }}.series .swiper .swiper-button-next {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg)
+    }
+
+    #{{ section.id }}.series .series-item {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-shrink: 0;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        position: relative;
+        width: 100px;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        /* flex-direction: column;
+        gap: 8px;
+        margin-right: 32px;
+        width: 172px; */
+    }
+
+    #{{ section.id }}.series .series-item p {
+        font-size: 14px;
+        text-align: center;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        width: 100%
+    }
+
+    #{{ section.id }}.series .series-item:hover p {
+        color: #0BB3FB;
+        text-decoration: underline
+    }
+
+    #{{ section.id }}.series .series-item img {
+        display: block;
+        height: 69px;
+        margin: 6px auto 13px;
+        width: 69px
+    }
+  }
+
+  @media (max-width: 900px) {
+    #{{ section.id }}.series {
+        margin: 6.4vw 0;
+        max-width: 100%;
+        overflow: auto;
+        width: 100%
+    }
+
+    #{{ section.id }}.series .container {
+      padding: 0 6.4vw;
+    }
+
+    #{{ section.id }}.series::-webkit-scrollbar {
+        display: none
+    }
+
+    #{{ section.id }}.series .series-item {
+        -webkit-flex-shrink: 0;
+        width: 21.3333333333vw;
+        -ms-flex-negative: 0;
+        flex-shrink: 0
+    }
+
+    #{{ section.id }}.series .swiper-slide {
+        -webkit-flex-shrink: 0;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        margin-right: 6.4vw
+    }
+
+    #{{ section.id }}.series .container,#{{ section.id }}.series .swiper-slide {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex
+    }
+
+    #{{ section.id }}.series .container {
+        -webkit-column-gap: 6.4vw;
+        -moz-column-gap: 6.4vw;
+        column-gap: 6.4vw;
+        padding-right: 0
+    }
+
+    #{{ section.id }}.series .container img {
+        height: 17.0666666667vw;
+        margin: 0 auto 2.1333333333vw;
+        width: 17.0666666667vw
+    }
+
+    #{{ section.id }}.series .container p {
+        font-size: 3.2vw;
+        text-align: center
+    }
+  }
+
+  @media (min-width: 1920px) {
+    #{{ section.id }}.series {
+        margin: 3.3333333333vw 0 4.1666666667vw
+    }
+
+    #{{ section.id }}.series .container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        -webkit-column-gap: 3.3333333333vw;
+        -moz-column-gap: 3.3333333333vw;
+        column-gap: 3.3333333333vw;
+        justify-content: center;
+        padding: 0;
+    }
+
+    #{{ section.id }}.series .swiper {
+        width: 100%
+    }
+
+    #{{ section.id }}.series .swiper .swiper-slide {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+
+    #{{ section.id }}.series .swiper [class*=swiper-button] {
+        height: 2.9166666667vw;
+        width: 2.9166666667vw
+    }
+
+    #{{ section.id }}.series .swiper .swiper-button-next {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg)
+    }
+
+    #{{ section.id }}.series .series-item {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-shrink: 0;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        position: relative;
+        width: 5.2083333333vw;
+        -ms-flex-negative: 0;
+        flex-shrink: 0
+    }
+
+    #{{ section.id }}.series .series-item p {
+        font-size: .7291666667vw;
+        text-align: center;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        width: 100%
+    }
+
+    #{{ section.id }}.series .series-item:hover p {
+        color: #0BB3FB;
+        text-decoration: underline
+    }
+
+    #{{ section.id }}.series .series-item img {
+        display: block;
+        height: 3.59375vw;
+        margin: .3125vw auto .6770833333vw;
+        width: 3.59375vw
+    }
+  }
+{% endstyle %}
+
+<div id="{{ section.id }}" class="series">
+  <div class="container">
+    <div class="swiper" id="{{ section.id }}-swiper">
+      <div class="swiper-wrapper">
+        {%- for link in section.settings.series_menu.links -%}
+    
+          <div class="swiper-slide">
+            <a data-discover="true" class="series-item" href="{{ link.url }}"
+              >
+              {% assign collection = link.object %}
+              {% if collection and link.type == 'collection_link' %}
+
+              <img
+                alt="creality"
+                decoding="async"
+                loading="lazy"
+                src="{{ collection.metafields.custom.imageurl.value| image_url  }}"
+              >
+              {% endif %}
+              <p class="series-item-title">{{ link.title }}</p>
+            </a>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script defer>
+  function init() {
+    if (typeof Swiper !== 'undefined') {
+      swiper = new Swiper('#{{ section.id }}-swiper', {
+        slidesPerView: 'auto',
+        breakpoints: {
+          900: {
+            slidesPerView: 6,
+            slidesPerGroup: 6
+          }
+        }
+      });
+    } else {
+      console.error('Swiper库未加载成功');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
+
+  // shopify block load
+  document.addEventListener('shopify:block:load', init);
+
+ 
+</script>
+
+{% schema %}
+{
+  "name": "Home S Series",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "series_menu",
+      "label": "系列产品菜单"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home S Series"
+    }
+  ]
+}
+{% endschema %}

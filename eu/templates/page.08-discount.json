@@ -1,0 +1,1306 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "custom_text_block_hCyWyN": {
+      "type": "custom-text-block",
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "brand_bg": "#ffffff",
+        "brand_bg_gradient": "",
+        "brand_title": "Welcome to CrealityFalcon European Official Store",
+        "color_title": "#232323",
+        "fontsize_title": 15,
+        "fontsize_title_mb": 15,
+        "brand_des": "We deliver to the following European countries: DE, FR, IT, ES, NL, SE, PL, BE, AT, DK, IE, FI, PT, CZ, RO, HU, SK, BG, HR, SI, LT, LU, LV, EE, GR.",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "title_align": "center",
+        "menu": "",
+        "grid_gap": 5,
+        "padding_vertical": 5,
+        "padding_hozi": 5,
+        "border_radius": 5,
+        "fontsize_tab": 16,
+        "color_tab": "#232323",
+        "border_color": "#f9ede1",
+        "bg_color_tab": "#f9ede1",
+        "bg_color_gradient_tab": "",
+        "color_active": "#232323",
+        "border_color_active": "#f9ede1",
+        "bg_color_active": "#f9ede1",
+        "bg_color_gradient_active": ""
+      }
+    },
+    "creality_2024_08_official_kXwXGa": {
+      "type": "creality_2024_08_official",
+      "blocks": {
+        "product1_fRxEy7": {
+          "type": "product1",
+          "settings": {
+            "product": "falcon2-12w-laser-engraver-cutter",
+            "point1": "Intermediate Creator, Side Hustler.",
+            "point2": "Quickly cuts 6mm wood sheets, perfect for large-format engravings, home decor, wooden devices, and wooden puzzles.",
+            "point3": "Pre-assembled for your convenience."
+          }
+        },
+        "product1_YXiKmr": {
+          "type": "product1",
+          "settings": {
+            "product": "falcon2-22w-laser-engraver-cutter",
+            "point1": "Seasoned Enthusiast, Independent Contractor.",
+            "point2": "Quickly cuts 10mm basswood, stainless steel, aluminum, copper, and gold. Perfect for large engravings, home decor, wooden devices, and mechanical wood puzzles.",
+            "point3": "Advanced cutting for thicker, more intricate artworks."
+          }
+        },
+        "product1_DMXEDi": {
+          "type": "product1",
+          "settings": {
+            "product": "falcon2-40w-laser-engraver-cutter",
+            "point1": "Professional Crafter, Small Business Owner.",
+            "point2": "Quickly cuts 20mm basswood and 0.15mm stainless steel sheets, as well as aluminum, copper, and gold. Ideal for large-scale engraving, home decor, functional wooden equipment, machinery, and kinetic wooden puzzles.",
+            "point3": "Ultimate cutting power, beyond imagination, surpass your expectations."
+          }
+        },
+        "product2_F8b8KC": {
+          "type": "product2",
+          "settings": {
+            "product": "falcon2-12w-laser-engraver-and-cutter-protection-engraving-kits",
+            "image": "shopify://shop_images/bundle-falcon2-12w-laser-engraver.png",
+            "star_num": "203",
+            "dom": "<div style=\"text-align: center;\">\n  <i><u>Buy now, pay in 30 days, or from €193/mo with Klarna.</u></i>\n</div>"
+          }
+        },
+        "product2_MX3bXk": {
+          "type": "product2",
+          "settings": {
+            "product": "falcon2-22w-laser-engraver-and-cutter-ultimate-engraving-package",
+            "image": "shopify://shop_images/bundle-falcon2-22w-laser-engraver.png",
+            "star_num": "287",
+            "dom": "<div style=\"text-align: center;\">\n  <i><u>Buy now, pay in 30 days, or from €266.33/mo with Klarna.</u></i>\n</div>"
+          }
+        },
+        "product2_FFYiwm": {
+          "type": "product2",
+          "settings": {
+            "product": "falcon2-40w-laser-engraver-and-cutter-complete-crafting-engraver-set",
+            "image": "shopify://shop_images/bundle-falcon2-40w-laser-engraver.png",
+            "star_num": "412",
+            "dom": "<div style=\"text-align: center;\">\n  <i><u>Buy now, pay in 30 days, or from €376.33/mo with Klarna.</u></i>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "product1_fRxEy7",
+        "product1_YXiKmr",
+        "product1_DMXEDi",
+        "product2_F8b8KC",
+        "product2_MX3bXk",
+        "product2_FFYiwm"
+      ],
+      "settings": {
+        "count_down": "2024-08-19 06:00:00",
+        "product1": "falcon2-12w-laser-engraver-and-cutter-protection-engraving-kits",
+        "product2": "falcon2-22w-laser-engraver-and-cutter-ultimate-engraving-package",
+        "product3": "falcon2-40w-laser-engraver-and-cutter-complete-crafting-engraver-set"
+      }
+    },
+    "product_block_TBPTMy": {
+      "type": "product-block",
+      "disabled": true,
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "border_height": 1,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "product_block_layout": "grid",
+        "product_bg": "#ffffff",
+        "product_bg_gradient": "",
+        "style_block_header": "style1",
+        "pd_top_title": 30,
+        "product_block_title": "Trending Now",
+        "enable_border_title": true,
+        "enable_border_title_style2": true,
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "mg_bottom_title": 12,
+        "mg_bottom_title_mb": 12,
+        "border_color_title": "#232323",
+        "color_title": "#232323",
+        "view_all": "",
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "mg_bottom_view_mb": 0,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "icon_view_all": "",
+        "color_view_all_icon": "#eb492f",
+        "title_align": "center",
+        "button_text": "Show More",
+        "button_text_font_size": 14,
+        "button_text_font_weight": "500",
+        "button_text_text_transform": "uppercase",
+        "product_button_width": 270,
+        "pd_top_product_button": 12,
+        "pd_bottom_product_button": 12,
+        "button_icon": "",
+        "mg_bottom_button": 55,
+        "enable_button_shadow": false,
+        "color_button": "#ffffff",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "",
+        "border_color_button_hover": "",
+        "bg_color_button_hover": "",
+        "bg_color_gradient_button_hover": "",
+        "product_block_collection": "",
+        "product_block_limit": 8,
+        "grid_gap": 30,
+        "pb_style": "style1",
+        "style_countdown": "style_1",
+        "countdown": "",
+        "font_size_countdown_text": 14,
+        "color_countdown": "#f42b23",
+        "countdown_margin_left": 15,
+        "product_block_per_row": "4",
+        "product_block_infinite_scroll": true,
+        "product_block_swipe_on_mobile": true,
+        "enable_product_card_pd_bottom": false,
+        "product_card_pd_bottom": 40,
+        "product_block_dots": false,
+        "product_block_dots_mb": true,
+        "spacing_top_dots": 0,
+        "product_block_arrows": true,
+        "product_block_arrows_mb": false,
+        "product_block_progress_bar": false,
+        "product_block_counter_number": false,
+        "product_block_show": "5",
+        "position_vertical_arrow": "70px",
+        "product_block_per_view": "4",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_hover_drag_icon": true,
+        "position": "left",
+        "width_banner": 40,
+        "display_list_collection": false,
+        "collection_color": "#202020",
+        "collection_color_hover": "#3e8cc4",
+        "collection_bg_color": "#ffffff",
+        "collection_bg_color_gradient": "",
+        "text_list": "View all categories",
+        "url_list": "",
+        "enable_layout_special": false,
+        "bg_card": "#ffffff",
+        "padding_card": 15,
+        "border_radius_card": 5,
+        "border_layout_card": "full",
+        "border_width_card": 5,
+        "border_color_card": "#f0f1f4"
+      }
+    },
+    "product_tab_block_qzzcUP": {
+      "type": "product-tab-block",
+      "blocks": {
+        "product_tabs_BqCmjB": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Bundle Low-wattage Engravers",
+            "collection": "bundle-low-wattage-engravers"
+          }
+        },
+        "product_tabs_zgTG6n": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Bundle Falcon2 22W Engraver",
+            "collection": "bundle-falcon2-22w-engraver"
+          }
+        },
+        "product_tabs_6WcQjq": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Bundle Falcon2 40W Engraver",
+            "collection": "bundle-falcon2-40w-engraver"
+          }
+        }
+      },
+      "block_order": [
+        "product_tabs_BqCmjB",
+        "product_tabs_zgTG6n",
+        "product_tabs_6WcQjq"
+      ],
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "product_block_layout": "grid",
+        "product_block_title": "",
+        "fontsize_title": 18,
+        "fontsize_title_mb": 16,
+        "mg_bottom_title": 12,
+        "enable_border_title": false,
+        "border_color_title": "#232323",
+        "enable_border_title2": false,
+        "border_color_title2": "#232323",
+        "color_title": "#232323",
+        "title_align": "center",
+        "product_block_limit": 20,
+        "image_behavior": "none",
+        "product_block_per_row": "5",
+        "product_block_infinite_scroll": true,
+        "min_width_button": "",
+        "product_block_dots": false,
+        "product_block_dots_mb": true,
+        "product_block_arrows": true,
+        "product_block_arrows_mb": false,
+        "product_block_show": "5",
+        "product_block_per_view": "5",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_hover_drag_icon": true,
+        "position": "left",
+        "width_banner": 20,
+        "tab_title_style": "style_1",
+        "mg_bottom_title_tab": 24,
+        "type_tab_font": "font_1",
+        "separation": true,
+        "style_separation": "style1",
+        "color_separation": "",
+        "enable_scroll_title": true,
+        "fontsize_tab": 14,
+        "fontsize_tab_mb": 14,
+        "font_weight_tab": "700",
+        "font_weight_active_tab": "700",
+        "spacing_between_title": 24,
+        "line_height_tab": 20,
+        "line_height_tab_mobile": 24,
+        "border_tab_radius": 3,
+        "min_width_tab": 5,
+        "border_width_tab": 3,
+        "color_tab": "#232323",
+        "border_color_tab": "",
+        "bg_color_tab": "#ffffff",
+        "bg_color_gradient_tab": "",
+        "color_tab_active": "#14a9de",
+        "bg_color_tab_active": "#f8f8f8",
+        "bg_color_gradient_tab_active": ""
+      }
+    },
+    "shops_card1_36dRaz": {
+      "type": "shops-card1",
+      "blocks": {
+        "gifts_lists_UBnwLe": {
+          "type": "gifts-lists",
+          "settings": {
+            "item_image_link": "https://cdn.shopify.com/s/files/1/0853/7944/9135/files/Combo_6520a1a6-54b1-4625-b5ea-d498b3d4a416.png?v=1717564799",
+            "price_text1": "€399",
+            "card_text2": "<span style=\"color: #000000;\">Value</span> <span style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€62</span>",
+            "item_desc1": "Spend €399 and Get: 2 Adjustable Hats+3pcs Basswood Plywood Sheets-10mm for FREE."
+          }
+        },
+        "gifts_lists_EfNXwX": {
+          "type": "gifts-lists",
+          "settings": {
+            "item_image_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Crafting-materials-package.jpg?v=1722305053",
+            "price_text1": "€699",
+            "card_text2": "<span style=\"color: #000000;\">Value</span> <span style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€144</span>",
+            "item_desc1": "Spend Over €699 and Get:10 Pieces of Basswood Sheets + 10 Pieces of Acrylic Sheets + Coaster + Metal Perfume Bottle for FREE."
+          }
+        },
+        "gifts_lists_J6ageV": {
+          "type": "gifts-lists",
+          "settings": {
+            "item_image_link": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/SurfaceCreationKitforFalconlaserengraver.png?v=1722242799",
+            "price_text1": "€999",
+            "card_text2": "<span style=\"color: #000000;\">Value</span> <span style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€225</span>",
+            "item_desc1": "Spend €999 and Get: 1 Falcon Rotary Kit Pro with Risers(4Packs) for Curved Surface Laser for FREE."
+          }
+        }
+      },
+      "block_order": [
+        "gifts_lists_UBnwLe",
+        "gifts_lists_EfNXwX",
+        "gifts_lists_J6ageV"
+      ],
+      "settings": {
+        "card_background_color": "linear-gradient(45deg, #F5F5F5, #ADD8E6)",
+        "card_title": "Shop In-Store and Enjoy Tier Gifts",
+        "card_text": "Discount Laser Engravers for Family Crafting – Save Big on Creative Tools",
+        "card_title_color": "#232323",
+        "notice_text": "Notice: While supplies last <br class=\"mb\">(gifts may be adjusted based on actual inventory)"
+      }
+    },
+    "product_tab_block_aLkk9e": {
+      "type": "product-tab-block",
+      "blocks": {
+        "product_tabs_HmBCiY": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Accessories for Falcon 12W 22W 40W 60W Laser Engravers",
+            "collection": "accessories-for-falcon-12w-22w-40w-60w"
+          }
+        },
+        "product_tabs_9PYhXT": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Accessories for Falcon 5W 7.5W 10W Laser Engravers",
+            "collection": "accessories-for-5w-7-5w-10w-laser-engravers"
+          }
+        }
+      },
+      "block_order": [
+        "product_tabs_HmBCiY",
+        "product_tabs_9PYhXT"
+      ],
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "product_block_layout": "slider",
+        "product_block_title": "Accessories For Falcon Laser Engraver and Cutter",
+        "fontsize_title": 18,
+        "fontsize_title_mb": 16,
+        "mg_bottom_title": 12,
+        "enable_border_title": true,
+        "border_color_title": "#232323",
+        "enable_border_title2": false,
+        "border_color_title2": "#232323",
+        "color_title": "#232323",
+        "title_align": "center",
+        "product_block_limit": 20,
+        "image_behavior": "none",
+        "product_block_per_row": "4",
+        "product_block_infinite_scroll": true,
+        "min_width_button": "",
+        "product_block_dots": false,
+        "product_block_dots_mb": true,
+        "product_block_arrows": true,
+        "product_block_arrows_mb": false,
+        "product_block_show": "4",
+        "product_block_per_view": "4",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_hover_drag_icon": true,
+        "position": "left",
+        "width_banner": 20,
+        "tab_title_style": "style_1",
+        "mg_bottom_title_tab": 24,
+        "type_tab_font": "font_1",
+        "separation": true,
+        "style_separation": "style1",
+        "color_separation": "#727272",
+        "enable_scroll_title": true,
+        "fontsize_tab": 14,
+        "fontsize_tab_mb": 14,
+        "font_weight_tab": "700",
+        "font_weight_active_tab": "700",
+        "spacing_between_title": 24,
+        "line_height_tab": 20,
+        "line_height_tab_mobile": 24,
+        "border_tab_radius": 3,
+        "min_width_tab": 5,
+        "border_width_tab": 3,
+        "color_tab": "#232323",
+        "border_color_tab": "",
+        "bg_color_tab": "#ffffff",
+        "bg_color_gradient_tab": "",
+        "color_tab_active": "#14a9de",
+        "bg_color_tab_active": "#f8f8f8",
+        "bg_color_gradient_tab_active": ""
+      }
+    },
+    "product_tab_block_xUa3BV": {
+      "type": "product-tab-block",
+      "blocks": {
+        "product_tabs_rcDEwR": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Craft Wood",
+            "collection": "wood-and-bamboo"
+          }
+        },
+        "product_tabs_4qAxrQ": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Colorful Transparent Acrylic",
+            "collection": "transparent-acrylic-sheets"
+          }
+        },
+        "product_tabs_e9UjN6": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Art & Craft Paper",
+            "collection": "navigation-paper"
+          }
+        },
+        "product_tabs_ehXzTN": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Metalworking",
+            "collection": "metalworking"
+          }
+        },
+        "product_tabs_MLX3GB": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Leather Crafting",
+            "collection": "navigation-leather"
+          }
+        }
+      },
+      "block_order": [
+        "product_tabs_rcDEwR",
+        "product_tabs_4qAxrQ",
+        "product_tabs_e9UjN6",
+        "product_tabs_ehXzTN",
+        "product_tabs_MLX3GB"
+      ],
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "product_block_layout": "slider",
+        "product_block_title": "Crafting Materials For Laser Engraving",
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "mg_bottom_title": 12,
+        "enable_border_title": true,
+        "border_color_title": "#232323",
+        "enable_border_title2": false,
+        "border_color_title2": "#232323",
+        "color_title": "#232323",
+        "title_align": "center",
+        "product_block_limit": 20,
+        "image_behavior": "none",
+        "product_block_per_row": "4",
+        "product_block_infinite_scroll": true,
+        "min_width_button": "",
+        "product_block_dots": false,
+        "product_block_dots_mb": true,
+        "product_block_arrows": true,
+        "product_block_arrows_mb": false,
+        "product_block_show": "4",
+        "product_block_per_view": "4",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_hover_drag_icon": true,
+        "position": "left",
+        "width_banner": 20,
+        "tab_title_style": "style_1",
+        "mg_bottom_title_tab": 24,
+        "type_tab_font": "font_1",
+        "separation": true,
+        "style_separation": "style1",
+        "color_separation": "#727272",
+        "enable_scroll_title": true,
+        "fontsize_tab": 14,
+        "fontsize_tab_mb": 14,
+        "font_weight_tab": "700",
+        "font_weight_active_tab": "700",
+        "spacing_between_title": 24,
+        "line_height_tab": 20,
+        "line_height_tab_mobile": 24,
+        "border_tab_radius": 3,
+        "min_width_tab": 5,
+        "border_width_tab": 3,
+        "color_tab": "#232323",
+        "border_color_tab": "",
+        "bg_color_tab": "#ffffff",
+        "bg_color_gradient_tab": "",
+        "color_tab_active": "#14a9de",
+        "bg_color_tab_active": "#f8f8f8",
+        "bg_color_gradient_tab_active": ""
+      }
+    },
+    "instagram_P3PpDJ": {
+      "type": "instagram",
+      "blocks": {
+        "instagram_HCaJTB": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/bird_house-Daniel_Taylor.jpg",
+            "link": ""
+          }
+        },
+        "instagram_7eBb3z": {
+          "type": "instagram",
+          "disabled": true,
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Brandon_Fessenden-2.jpg",
+            "link": ""
+          }
+        },
+        "instagram_Gtrqhx": {
+          "type": "instagram",
+          "disabled": true,
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/clock-Graham_Green1.jpg",
+            "link": ""
+          }
+        },
+        "instagram_iWrwqM": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/box-Veronique_Conhidon1.jpg",
+            "link": ""
+          }
+        },
+        "instagram_4dEfxQ": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Bernard_Pathadumbarage-3.jpg",
+            "link": ""
+          }
+        },
+        "instagram_jtn4YQ": {
+          "type": "instagram",
+          "disabled": true,
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/candle_holer1-Jonas.jpg",
+            "link": ""
+          }
+        },
+        "instagram_9YUdEB": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Book_cover1-Kyle_Samuel.jpg",
+            "link": ""
+          }
+        },
+        "instagram_9GkKLb": {
+          "type": "instagram",
+          "disabled": true,
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/big_pond1_-_hitacstudio.jpg",
+            "link": ""
+          }
+        },
+        "instagram_69yHkJ": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Dustin_Harney_da61f5cf-ceea-4863-ae8d-581ba68bd070.png",
+            "link": ""
+          }
+        },
+        "instagram_QRM3Ng": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Erich_Hetterscheidt-_1.jpg",
+            "link": ""
+          }
+        },
+        "instagram_iHdid9": {
+          "type": "instagram",
+          "disabled": true,
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Antonio_Cannistraro-Queen_Logo2.jpg",
+            "link": ""
+          }
+        },
+        "instagram_iPy8Dj": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Dustin_Harney.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "instagram_HCaJTB",
+        "instagram_7eBb3z",
+        "instagram_Gtrqhx",
+        "instagram_iWrwqM",
+        "instagram_4dEfxQ",
+        "instagram_jtn4YQ",
+        "instagram_9YUdEB",
+        "instagram_9GkKLb",
+        "instagram_69yHkJ",
+        "instagram_QRM3Ng",
+        "instagram_iHdid9",
+        "instagram_iPy8Dj"
+      ],
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "type_instagram": "default",
+        "block_layout": "infinite",
+        "scroll_from": "rtl",
+        "scroll_time": "20",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "enable_border_instagram": false,
+        "instagram_border_color": "#e6e6e6",
+        "instagram_bg": "#fafafa",
+        "instagram_bg_gradient": "",
+        "instagram_title": "\"Stunning Laser Creations\"",
+        "enable_border_title": false,
+        "border_color_title": "#232323",
+        "color_title": "#232323",
+        "mg_bottom_title": 15,
+        "fontsize_title": 25,
+        "fontsize_title_mb": 20,
+        "instagram_des": "Get Inspired: Explore Unique Laser Engraving Projects by Our Talented Users",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "margin_bottom_des": 35,
+        "content_width": 375,
+        "title_align": "center",
+        "view_all": "",
+        "view_all_fs": 12,
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "display_instagram_button": true,
+        "instagram_button_text": "View Gallery",
+        "type_button_more": "load",
+        "instagram_button_link": "",
+        "enable_underline_button": false,
+        "color_button": "#ffffff",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "#232323",
+        "border_color_button_hover": "#232323",
+        "bg_color_button_hover": "#ffffff",
+        "bg_color_gradient_button_hover": "",
+        "maxwidth_button": 230,
+        "mg_top_button": 30,
+        "embed_code": "",
+        "type_instagram_by_gallery": "popup_image",
+        "images_per_row": "5",
+        "instagram_item_limit": 5,
+        "grid_gap": 5,
+        "enable_hide_portion": false,
+        "slide_ins": "default_ins",
+        "display_arrow": true,
+        "icon_for_image": "",
+        "icon_style": "style_1",
+        "effects_bg": "",
+        "effects_opacity": 0
+      }
+    },
+    "spotlight_block_jnMDzQ": {
+      "type": "spotlight-block",
+      "blocks": {
+        "image_FU8bU7": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/20240808-093929.jpg",
+            "title_align": "center",
+            "enable_absolute": false,
+            "align_items": "center",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "",
+            "color_title": "#232323",
+            "fontsize_title": 20,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "",
+            "link": "",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#232323",
+            "bg_color_button": "#232323",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#232323",
+            "bg_color_button_hover": "#232323",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        },
+        "image_N4Y74B": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/20240808-093923.jpg",
+            "title_align": "center",
+            "enable_absolute": false,
+            "align_items": "center",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "",
+            "color_title": "#232323",
+            "fontsize_title": 20,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "",
+            "link": "",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#232323",
+            "bg_color_button": "#232323",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#232323",
+            "bg_color_button_hover": "#232323",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        },
+        "image_cKC86Q": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/20240808-093935.jpg",
+            "title_align": "center",
+            "enable_absolute": false,
+            "align_items": "center",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "",
+            "color_title": "#232323",
+            "fontsize_title": 20,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "",
+            "link": "",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#232323",
+            "bg_color_button": "#232323",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#232323",
+            "bg_color_button_hover": "#232323",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_FU8bU7",
+        "image_N4Y74B",
+        "image_cKC86Q"
+      ],
+      "settings": {
+        "container": "1200",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "mg_minus_desktop": 0,
+        "block_layout": "slider",
+        "spotlight_block_swipe_on_mobile": "slider",
+        "column": "3",
+        "column_mb": "1",
+        "enable_arrows": true,
+        "enable_arrows_mb": false,
+        "position_horizontal_slick_arrow": "0",
+        "enable_dots": false,
+        "enable_dots_mb": true,
+        "display_border_bottom": false,
+        "border_color": "#e3e3e3",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "spotlight_bg": "#ffffff",
+        "spotlight_bg_gradient": "",
+        "spotlight_block_title": "Why Choose CrealityFalcon Laser Engraver?",
+        "enable_border_title": false,
+        "color_title": "#232323",
+        "fontsize_title": 25,
+        "fontsize_title_mb": 20,
+        "margin_bottom_title": 45,
+        "spotlight_block_des": "",
+        "color_des": "#3c3c3c",
+        "margin_bottom_des": 30,
+        "fontsize_des": 16,
+        "title_align": "center",
+        "item_distance": 15,
+        "item_radius": 12,
+        "view_all": "",
+        "view_all_fs": 12,
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "display_spotlight_button": false,
+        "spotlight_button_text": "",
+        "spotlight_button_link": "",
+        "color_button": "#ffffff",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "#232323",
+        "border_color_button_hover": "#ffffff",
+        "bg_color_button_hover": "#ffffff",
+        "bg_color_gradient_button_hover": "",
+        "maxwidth_button": 230,
+        "mg_top_button": 30,
+        "enable_shadow": false,
+        "shadow_horizontal_length": 0,
+        "shadow_vertical_length": 0,
+        "shadow_blur_radius": 0,
+        "shadow_spread": 0,
+        "shadow_color": "transparent",
+        "shadow_inset": "no",
+        "enable_plus_icon": false,
+        "color_plus_icon": "#ffffff",
+        "enable_content_border": false,
+        "content_border_color": "#e2e2e2"
+      }
+    },
+    "spotlight_block_FgyM4i": {
+      "type": "spotlight-block",
+      "blocks": {
+        "image_AkAc4y": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/3508512bf5301cf3c394f4fdc9a38e17_52cecc85-ffd1-464d-907e-f19375a515e9.jpg",
+            "title_align": "center",
+            "enable_absolute": false,
+            "align_items": "center",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "Falcon Protective Cover",
+            "color_title": "#232323",
+            "fontsize_title": 20,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "Giveaway 3PCS! 3 Winners' List as Below:<br>Winner 1. Marc Hansen from Switzerland;<br>\nWinner 2. Jukka Hynninen from Finland<br>\nWinner 3. Andrea Belvisi from Italy\n<br>🎉Congratulations!🎉",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 15,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "",
+            "link": "",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#232323",
+            "bg_color_button": "#232323",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#232323",
+            "bg_color_button_hover": "#232323",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        },
+        "image_t7R786": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/3986fd990913d4522b51a2216202d1cb_c947e6df-2c0d-4fba-8a91-4d86daf327b8.jpg",
+            "title_align": "center",
+            "enable_absolute": false,
+            "align_items": "center",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "Risers & Rotary Roller",
+            "color_title": "#232323",
+            "fontsize_title": 20,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "Giveaway 1 Set! 1 Winner as Below:<br>Winner 1. Hallgeir Stølen-Bosse from Denmark\n<br>🎉Congratulations!🎉",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 15,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "",
+            "link": "",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#232323",
+            "bg_color_button": "#232323",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#232323",
+            "bg_color_button_hover": "#232323",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        },
+        "image_RRcEzJ": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/0124750089b0938addebdae4ffc882ed_2ec26864-c8f2-4e8b-aa51-ae9b2a6a9c81.jpg",
+            "title_align": "center",
+            "enable_absolute": false,
+            "align_items": "center",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "DIY Craft Materials Set",
+            "color_title": "#232323",
+            "fontsize_title": 20,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "Giveaway 3 Set! 3 Winners' List as Below:<br>Winner 1. Sander Sakkee from Netherlands;<br>\nWinner 2. Eveliina Maskulin from Finland;<br>\nWinner 3. Jonas Fältmarsch from Finland\n<br>🎉Congratulations!🎉",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 15,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "",
+            "link": "",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#232323",
+            "bg_color_button": "#232323",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#232323",
+            "bg_color_button_hover": "#232323",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_AkAc4y",
+        "image_t7R786",
+        "image_RRcEzJ"
+      ],
+      "settings": {
+        "container": "1200",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "mg_minus_desktop": 0,
+        "block_layout": "slider",
+        "spotlight_block_swipe_on_mobile": "slider",
+        "column": "3",
+        "column_mb": "1",
+        "enable_arrows": true,
+        "enable_arrows_mb": false,
+        "position_horizontal_slick_arrow": "0",
+        "enable_dots": false,
+        "enable_dots_mb": true,
+        "display_border_bottom": false,
+        "border_color": "#e3e3e3",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "spotlight_bg": "#ffffff",
+        "spotlight_bg_gradient": "",
+        "spotlight_block_title": "Giveaway Winners Announced!",
+        "enable_border_title": true,
+        "color_title": "#232323",
+        "fontsize_title": 25,
+        "fontsize_title_mb": 20,
+        "margin_bottom_title": 45,
+        "spotlight_block_des": "🎉Winners have been randomly selected from those who subscribed to CrealityFalcon between August 1st and August 9th. Check the list below for the winners and their prizes. Notifications will be sent from eu.support@crealityfalcon.com, so please check your inbox (or spam folder) and provide your shipping address. Thanks for all of your participation! 🎉",
+        "color_des": "#3c3c3c",
+        "margin_bottom_des": 30,
+        "fontsize_des": 18,
+        "title_align": "center",
+        "item_distance": 15,
+        "item_radius": 12,
+        "view_all": "",
+        "view_all_fs": 12,
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "display_spotlight_button": false,
+        "spotlight_button_text": "",
+        "spotlight_button_link": "",
+        "color_button": "#ffffff",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "#232323",
+        "border_color_button_hover": "#ffffff",
+        "bg_color_button_hover": "#ffffff",
+        "bg_color_gradient_button_hover": "",
+        "maxwidth_button": 230,
+        "mg_top_button": 30,
+        "enable_shadow": false,
+        "shadow_horizontal_length": 0,
+        "shadow_vertical_length": 0,
+        "shadow_blur_radius": 0,
+        "shadow_spread": 0,
+        "shadow_color": "transparent",
+        "shadow_inset": "no",
+        "enable_plus_icon": false,
+        "color_plus_icon": "#ffffff",
+        "enable_content_border": false,
+        "content_border_color": "#e2e2e2"
+      }
+    },
+    "custom_liquid_PAiPTp": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<body>\n\n\n  <meta charset=\"UTF-8\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Document</title>\n  <style>\n    .tw-text-center {\n      text-align: center;\n    }\n\n    .comment-wrap {\n      width: 1200px;\n      margin: 0 auto;\n      margin-top: 30px;\n      margin-bottom: 30px;\n    }\n\n    .products_heading {\n      text-align: center;\n      cursor: pointer;\n      font-family: 'Montserrat-Bold';\n      font-style: normal;\n      font-weight: 700;\n      font-size: 40px;\n      line-height: 49px;\n      color: #000000;\n      margin-bottom: 40px;\n    }\n\n    .subheading {\n      text-align: center;\n      width: 700px;\n      margin: 0 auto;\n      color: #978C8C;\n      font-size: 18px;\n    }\n\n    .join-button {\n      width: 180px;\n      display: flex;\n      justify-content: right;\n      margin-left: 50%;\n      margin-top: 30px;\n      margin-bottom: 30px;\n      transform: translateX(-50%);\n      height: 42px;\n      line-height: 42px;\n      color: #fff;\n      font-size: 20px;\n      font-weight: 500;\n      padding: 0 15px;\n      border-radius: 20px;\n      background-color: #0473FF;\n    }\n\n    .icon-xxxx {\n      width: 38px;\n      position: absolute;\n      top: 50%;\n      left: 15px;\n      transform: translateY(-50%);\n    }\n\n    .bolck_heading {\n      font-family: 'Montserrat-Bold';\n      font-style: normal;\n      font-size: 26px;\n      color: #000000;\n    }\n\n    .comment-list {\n      margin: 35px 0;\n    }\n\n    .comment-item {\n      width: 389.3px;\n      background-color: #F5F5F5;\n      border-radius: 8px;\n      padding: 20px 30px;\n      box-sizing: border-box;\n    }\n\n    .avatar {\n      border-radius: 50%;\n      width: 80px;\n    }\n\n    .name {\n      font-size: 18px;\n      font-weight: 600;\n    }\n\n    .comment-header {\n      margin-bottom: 20px;\n    }\n\n    .quotation-mark {\n      width: 28px;\n      margin-left: 10px;\n    }\n\n    .quotation-mark-2 {\n      width: 28px;\n      margin-right: 10px;\n      transform: rotate(180deg);\n      vertical-align: bottom;\n    }\n\n    .text-part {\n      font-size: 16px;\n      color: #978C8C;\n    }\n\n    .pictrue {\n      border-radius: 16px;\n    }\n\n    @media (max-width: 960px) {\n      .products_heading {\n        font-style: normal;\n        font-weight: 500;\n        font-size: 26px;\n        line-height: 22px;\n        color: #000000;\n        margin-bottom: 10px;\n      }\n\n      .subheading {\n        font-size: 14px;\n      }\n\n      .bolck_heading {\n        font-size: 18px;\n      }\n\n      .comment-wrap {\n        width: 100%;\n        margin-top: 30px;\n        margin-bottom: 30px;\n      }\n\n      .subheading {\n        width: 100%;\n        font-size: 14px;\n      }\n\n      .comment-list {\n        margin: 35px 0;\n        flex-wrap: wrap;\n      }\n\n      .comment-item {\n        width: 100%;\n        margin-bottom: 16px;\n      }\n\n      .comment-item:last-child {\n        margin-bottom: 0;\n      }\n    }\n\n    .tw-no-underline {\n      text-decoration: none\n    }\n\n    .tw-flex {\n      display: flex;\n    }\n\n    .tw-justify-between {\n      justify-content: space-between;\n    }\n\n    .tw-justify-around {\n      justify-content: space-around;\n    }\n\n    .tw-items-center {\n      align-items: center;\n    }\n\n    .tw-mt-4 {\n      margin-bottom: 16px;\n    }\n\n    .tw-w-full {\n      width: 100%;\n    }\n\n    .tw-flex-col {\n      flex-direction: column;\n    }\n\n    .tw-mt-4 {\n      margin-top: 16px;\n    }\n  </style>\n\n\n  <div class=\"comment-wrap\">\n    <div class=\"products_heading\">\n      Join Our Facebook Group\n    </div>\n    <div class=\"subheading\">\n      Join the active Creality Falcon Facebook community, a vibrant hub for sharing ideas, discovering the latest\n      updates, and engaging with real users.\n    </div>\n    <a class=\"tw-no-underline\" href=\"https://www.facebook.com/groups/falconlaserengraver\" target=\"_blank\">\n      <div class=\"join-button\">\n        <svg t=\"1690269851759\" class=\"icon-xxxx \" viewbox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"\n          p-id=\"6038\" width=\"32\" height=\"32\">\n          <path d=\"M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z\" fill=\"#1B77F2\" p-id=\"6039\"></path>\n          <path\n            d=\"M1024 512c0-282.7776-229.2224-512-512-512S0 229.2224 0 512s229.2224 512 512 512 512-229.2224 512-512zM374.528 512V414.0032h60.0064V354.816c0-79.872 23.9104-137.472 111.4112-137.472h104.0384v97.7408h-73.216c-36.7616 0-45.056 24.3712-45.056 49.92v49.0496h112.896L629.248 512h-97.536v295.5264H434.5344V512H374.528z\"\n            fill=\"#FFFFFF\" p-id=\"6040\"></path>\n        </svg>\n        <span>Join Now</span>\n      </div>\n    </a>\n    <div class=\"bolck_heading tw-text-center tw-cursor-pointer\">\n      Explore genuine user reviews\n    </div>\n    <div class=\"subheading tw-text-center\">\n      Dive into authentic reviews and videos to learn more about our machines before you place your order.\n    </div>\n    <div class=\"comment-list tw-flex tw-justify-between\">\n      <div class=\"comment-item tw-flex tw-flex-col tw-justify-between\">\n        <div class=\"comment-header tw-flex tw-justify-around tw-items-center\">\n          <img class=\"avatar\" src=\"https://img.staticdj.com/57090c393572675053154f26254321fd.jpg\" alt=\"avatar\">\n          <div class=\"name\">Donovan Jacobs</div>\n        </div>\n        <div class=\"text-box\">\n          <img class=\"quotation-mark\" src=\"https://img.staticdj.com/9c7cf47a815d56781f69997415bab79c.png\"\n            alt=\"quotation-mark\">\n          <span class=\"text-part\">Greetings, greetings all. Love my 10w falcon. This thing exceeded my expectations like\n            crazy. Works like a charm and so easy to build.</span>\n          <img class=\"quotation-mark-2\" src=\"https://img.staticdj.com/9c7cf47a815d56781f69997415bab79c.png\"\n            alt=\"quotation-mark\">\n        </div>\n        <div class=\"img-wrap tw-mt-4\">\n          <img class=\"tw-w-full pictrue\" src=\"https://img.staticdj.com/36ba027d97adce5b7d767525a53ff8fc.png\" alt=\"\">\n        </div>\n      </div>\n      <div class=\"comment-item tw-flex tw-flex-col tw-justify-between\">\n        <div class=\"comment-header tw-flex tw-justify-around tw-items-center\">\n          <img class=\"avatar\" src=\"https://img.staticdj.com/c0e1d51dc8ef79053bc1cd76d6eccaca.jpg\" alt=\"avatar\">\n          <div class=\"name\">Daniel Hughes</div>\n        </div>\n        <div class=\"text-box\">\n          <img class=\"quotation-mark\" src=\"https://img.staticdj.com/9c7cf47a815d56781f69997415bab79c.png\"\n            alt=\"quotation-mark\">\n          <span class=\"text-part\">Did a little something for myself for a change. Engraved my stainless steel ciggy\n            case. Surprised how crisp it came out!</span>\n          <img class=\"quotation-mark-2\" src=\"https://img.staticdj.com/9c7cf47a815d56781f69997415bab79c.png\"\n            alt=\"quotation-mark\">\n        </div>\n        <div class=\"img-wrap tw-mt-4\">\n          <img class=\"tw-w-full pictrue\" src=\"https://img.staticdj.com/1f0b19322c65fc82e2193bb8b0990347.png\" alt=\"\">\n        </div>\n      </div>\n      <div class=\"comment-item tw-flex tw-flex-col tw-justify-between\">\n        <div class=\"comment-header tw-flex tw-justify-around tw-items-center\">\n          <img class=\"avatar\" src=\"https://img.staticdj.com/050526c09766760807a495b82e69a513.jpg\" alt=\"avatar\">\n          <div class=\"name\">Alby Martin</div>\n        </div>\n        <div class=\"text-box\">\n          <img class=\"quotation-mark\" src=\"https://img.staticdj.com/9c7cf47a815d56781f69997415bab79c.png\"\n            alt=\"quotation-mark\">\n          <span class=\"text-part\">100 Wedding Gifts, with a falcon 5W (I had to make 3 layers of 0.4mm wood). I cut the\n            adhesive paper itself with my own laser. Besides, I made a custom keychain design for the friends of the\n            couple that formed the figure of the meplee.</span>\n          <img class=\"quotation-mark-2\" src=\"https://img.staticdj.com/9c7cf47a815d56781f69997415bab79c.png\"\n            alt=\"quotation-mark\">\n        </div>\n        <div class=\"img-wrap tw-mt-4\">\n          <img class=\"tw-w-full pictrue\" src=\"https://img.staticdj.com/4fcf9e19424d30baabeb1f119c863269.png\" alt=\"\">\n        </div>\n      </div>\n    </div>\n  </div>\n\n</body>"
+      }
+    },
+    "faqs_FyXFzk": {
+      "type": "faqs",
+      "blocks": {
+        "question_item_9n6d44": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q1: How Can I get all the free gifts during this event?",
+            "unswer_text": "If your order meets the requirements of our promotion, the free gifts will be automatically added to your shopping cart until you reach the checkout page. If you don't see it, please contact our customer service for assistance. Please email to: eu.support@crealityfalcon.com.",
+            "is_open": true
+          }
+        },
+        "question_item_neqFEA": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q2：What payment methods do you accept?",
+            "unswer_text": "We accept a variety of payment methods including credit cards, shop pay, PayPal, Klarna and more. You can choose the payment method that works best for you at checkout.",
+            "is_open": true
+          }
+        },
+        "question_item_LCRkNb": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q3：How long does shipment normally take?",
+            "unswer_text": "Due to high order volume, we typically ship packages within 48 hours. Delivery time is estimated to take 5-10 working days from the German warehouse.",
+            "is_open": true
+          }
+        },
+        "question_item_VU7nMD": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q4：Can I engrave on reflective/transparent materials such as ceramic/glass?",
+            "unswer_text": "Yes, but you need to coat the surface of the material with anti-reflective material before engraving to ensure the engraving effect and prevent the reflected light from damaging the laser module.",
+            "is_open": true
+          }
+        }
+      },
+      "block_order": [
+        "question_item_9n6d44",
+        "question_item_neqFEA",
+        "question_item_LCRkNb",
+        "question_item_VU7nMD"
+      ],
+      "settings": {
+        "ques_background_color": "linear-gradient(45deg, #F5F5F5, #ADD8E6)",
+        "ques_title": "Event FAQs",
+        "text_color": "#000000",
+        "border_color": "#333333",
+        "arrow_color": "#14a9de"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_text_block_hCyWyN",
+    "creality_2024_08_official_kXwXGa",
+    "product_block_TBPTMy",
+    "product_tab_block_qzzcUP",
+    "shops_card1_36dRaz",
+    "product_tab_block_aLkk9e",
+    "product_tab_block_xUa3BV",
+    "instagram_P3PpDJ",
+    "spotlight_block_jnMDzQ",
+    "spotlight_block_FgyM4i",
+    "custom_liquid_PAiPTp",
+    "faqs_FyXFzk"
+  ]
+}

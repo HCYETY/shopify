@@ -1,0 +1,1831 @@
+<link rel="stylesheet" href="{{ 'reset.css' | asset_url }}">
+<script src="{{ 'jquery.cart.min.js' | asset_url }}"></script>
+{% style %}
+.md {
+  display: none;
+}
+
+
+
+.contrast .spinner {
+  font-size: 28px;
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+.contrast .spinner .center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.contrast .spinner .spinner-blade {
+  position: absolute;
+  left: 0.4629em;
+  bottom: 0;
+  width: 0.074em;
+  height: 0.2777em;
+  border-radius: 0.0555em;
+  background-color: transparent;
+  -webkit-transform-origin: center -0.2222em;
+  -ms-transform-origin: center -0.2222em;
+  transform-origin: center -0.2222em;
+  animation: spinner-fade9234 1s infinite linear;
+}
+
+.contrast .spinner .spinner-blade:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.contrast .spinner .spinner-blade:nth-child(2) {
+  -webkit-animation-delay: 0.083s;
+  animation-delay: 0.083s;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.contrast .spinner .spinner-blade:nth-child(3) {
+  -webkit-animation-delay: 0.166s;
+  animation-delay: 0.166s;
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.contrast .spinner .spinner-blade:nth-child(4) {
+  -webkit-animation-delay: 0.249s;
+  animation-delay: 0.249s;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.contrast .spinner .spinner-blade:nth-child(5) {
+  -webkit-animation-delay: 0.332s;
+  animation-delay: 0.332s;
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.contrast .spinner .spinner-blade:nth-child(6) {
+  -webkit-animation-delay: 0.415s;
+  animation-delay: 0.415s;
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.contrast .spinner .spinner-blade:nth-child(7) {
+  -webkit-animation-delay: 0.498s;
+  animation-delay: 0.498s;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.contrast .spinner .spinner-blade:nth-child(8) {
+  -webkit-animation-delay: 0.581s;
+  animation-delay: 0.581s;
+  -webkit-transform: rotate(210deg);
+  -ms-transform: rotate(210deg);
+  transform: rotate(210deg);
+}
+
+.contrast .spinner .spinner-blade:nth-child(9) {
+  -webkit-animation-delay: 0.664s;
+  animation-delay: 0.664s;
+  -webkit-transform: rotate(240deg);
+  -ms-transform: rotate(240deg);
+  transform: rotate(240deg);
+}
+
+.contrast .spinner .spinner-blade:nth-child(10) {
+  -webkit-animation-delay: 0.747s;
+  animation-delay: 0.747s;
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.contrast .spinner .spinner-blade:nth-child(11) {
+  -webkit-animation-delay: 0.83s;
+  animation-delay: 0.83s;
+  -webkit-transform: rotate(300deg);
+  -ms-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+
+.contrast .spinner .spinner-blade:nth-child(12) {
+  -webkit-animation-delay: 0.913s;
+  animation-delay: 0.913s;
+  -webkit-transform: rotate(330deg);
+  -ms-transform: rotate(330deg);
+  transform: rotate(330deg);
+}
+
+@keyframes spinner-fade9234 {
+  0% {
+    background-color: #69717d;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.contrast-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 999;
+  top: 0px;
+  left: 0;
+  position: sticky;
+}
+
+.contrast-header-box {
+  display: flex;
+  padding-left: 100px;
+  gap: 30px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 93px;
+  background-color: #fff;
+}
+
+.contrast-header-box-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  width: 220px;
+  cursor: pointer;
+}
+
+.contrast-header-box-input input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 1px solid #e1e3e6;
+  border-radius: 6px;
+  cursor: pointer;
+  padding-left: 16px;
+  padding-right: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contrast-header-box-input svg {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 5%;
+  transition: all 0.5s;
+  transform: rotate(0deg);
+}
+
+.contrast-header-box-input ul {
+  position: absolute;
+  border: 1px solid #e1e3e6;
+  width: 96%;
+  top: 140%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  justify-content: center;
+  background-color: #fff;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+  max-height: 0px;
+  overflow: scroll;
+  z-index: 99999 !important;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+}
+
+.contrast-header-box-input ul::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
+}
+
+.contrast-header-box-input ul li {
+  padding: 0 5% 20% 5%;
+  font-size: 15px;
+}
+
+.contrast-header-box-input ul li:first-child h4 {
+  border: none !important;
+}
+
+.contrast-header-box-input ul li h4 {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.contrast-header-box-input ul li {
+  padding: 0 5% 20% 5%;
+  font-size: 15px;
+}
+
+.contrast-header-box-input ul li:first-child h4 {
+  border: none !important;
+}
+
+.contrast-header-box-input ul li h4 {
+  padding-top: 20px;
+  border-top: 1px solid #f1f1f1;
+  font-weight: bolder;
+  color: #898a8e;
+}
+
+.contrast-header-box-input ul li p {
+  margin-top: 20px;
+  color: #000;
+}
+
+.contrast-header-box-input ul li p:hover {
+  color: #28be44;
+}
+
+.contrast-header-box-input ul li .activep {
+  color: #28be44;
+}
+
+.contrast-header-box .active svg {
+  transform: rotate(180deg);
+}
+
+.contrast-header-box .active input {
+  border: 1px solid #28be44;
+  padding-right: 30px;
+}
+
+.contrast-header-box .active ul {
+  max-height: 420px;
+  opacity: 1;
+}
+
+.contrast-main {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-left: 100px;
+  align-items: stretch;
+}
+
+.contrast-main-box {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contrast-main-box-img {
+  width: 220px;
+}
+
+.contrast-main-box-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.contrast-main-box-price {
+  margin-top: 16px;
+  font-size: 15px;
+  width: 220px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.contrast-main-box-price p:first-child span {
+  font-size: 15px;
+}
+
+.contrast-main-box-price p:first-child span:first-child {
+  text-decoration: line-through;
+}
+
+.contrast-main-box-price p:first-child span:last-child {
+  color: red;
+}
+
+.contrast-main-box-price p:nth-child(2) {
+  margin-top: 10px;
+  text-align: center;
+  width: 90%;
+  font-size: 12px;
+  color: #898fa0;
+}
+
+.contrast-main-box-price p:last-child {
+  width: 90%;
+  font-size: 12px;
+  margin-top: 10px;
+  line-height: 17px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.contrast-main-box-price-byStages {
+  width: 220px;
+  margin-top: 12px;
+  text-align: center;
+  color: #898fa0;
+  min-height: 46px;
+}
+
+.contrast-main-box-btn {
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  height: 36px;
+  margin-top: 16px;
+}
+
+.contrast-main-box-btn button {
+  width: 50%;
+  height: 36px;
+  background-color: {{section.settings.bg_color}};
+  border-radius: 15px;
+  border: none;
+  color: {{section.settings.text_color}};
+}
+
+.contrast-main-box-btn button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.contrast-nav {
+  position: fixed;
+  left: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  z-index: 999;
+}
+
+.contrast-nav .strip {
+  position: absolute;
+  height: 105%;
+  top: -3%;
+  border: 1px solid #e1e3e6;
+}
+
+.contrast-nav .strip p {
+  position: absolute;
+  height: 10%;
+  top: 0%;
+  transition: all 0.6s;
+  border: 1px solid #28be44;
+}
+
+.contrast-nav-box {
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.contrast-nav-box p {
+  color: #898fa0;
+  cursor: pointer;
+}
+
+.contrast-nav-box .active {
+  color: #000;
+}
+
+.contrast-section1 {
+  margin-top: 20px;
+}
+
+.contrast-section1-box {
+  display: flex;
+  flex-flow: column;
+}
+
+.contrast-section1-box-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f1f1;
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.contrast-section1-box-title p {
+  font-size: 25px;
+}
+
+.contrast-section1-box-title p svg {
+  width: 20px;
+  height: 20px;
+  transform: rotate(180deg);
+  transition: 0.6s transform;
+}
+
+.contrast-section1-box-title p svg:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.contrast-section1-box-content {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.contrast-section1-box-content-L {
+  white-space: nowrap;
+  position: absolute;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.contrast-section1-box-content-R {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  margin-top: 20px;
+  padding-left: 100px;
+}
+
+.contrast-section1-box-content-R ul {
+  width: 220px;
+  font-size: 15px;
+}
+
+.contrast-section1-box-content-R ul li {
+  margin-bottom: 15px;
+  line-height: 20px;
+  color: #898fa0;
+  position: relative;
+  padding-left: 15px;
+}
+
+.contrast-section1-box-content-R ul li::first-line {
+  line-height: 1;
+}
+
+.contrast-section1-box-content-R ul li::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background-color: #898fa0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  left: 4px;
+  top: 5px;
+}
+
+.contrast-section1-box-list {
+  display: flex;
+  flex-flow: column;
+  transition: max-height 0.6s ease-out;
+  max-height: 1000px;
+}
+
+.contrast-section1-box .active {
+  max-height: 0;
+}
+
+.contrast-section2, .contrast-section3, .contrast-section4, .contrast-section5 {
+  margin-top: 20px;
+}
+
+.contrast-section2-box, .contrast-section3-box, .contrast-section4-box, .contrast-section5-box {
+  display: flex;
+  flex-flow: column;
+}
+
+.contrast-section2-box-title, .contrast-section3-box-title, .contrast-section4-box-title, .contrast-section5-box-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f1f1;
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.contrast-section2-box-title p, .contrast-section3-box-title p, .contrast-section4-box-title p, .contrast-section5-box-title p {
+  font-size: 25px;
+}
+
+.contrast-section2-box-title p svg, .contrast-section3-box-title p svg, .contrast-section4-box-title p svg, .contrast-section5-box-title p svg {
+  width: 20px;
+  height: 20px;
+  transform: rotate(180deg);
+  transition: 1s transform;
+}
+
+.contrast-section2-box-title p svg:hover, .contrast-section3-box-title p svg:hover, .contrast-section4-box-title p svg:hover, .contrast-section5-box-title p svg:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.contrast-section2-box-table, .contrast-section3-box-table, .contrast-section4-box-table, .contrast-section5-box-table {
+  max-height: 2000px;
+  overflow: hidden;
+  transition: max-height 1s;
+}
+
+.contrast-section2-box-table-thead, .contrast-section3-box-table-thead, .contrast-section4-box-table-thead, .contrast-section5-box-table-thead {
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+  font-size: 15px;
+  position: relative;
+  gap: 30px;
+}
+
+.contrast-section2-box-table-thead:last-child, .contrast-section3-box-table-thead:last-child, .contrast-section4-box-table-thead:last-child, .contrast-section5-box-table-thead:last-child {
+  border-bottom: none;
+}
+
+.contrast-section2-box-table-thead h4, .contrast-section3-box-table-thead h4, .contrast-section4-box-table-thead h4, .contrast-section5-box-table-thead h4 {
+  position: absolute;
+  width: 144px;
+  left: 0;
+  top: 0;
+  height: 100%;
+  line-height: 20px;
+  text-align: left;
+  align-content: center;
+}
+
+.contrast-section2-box-table-thead-th, .contrast-section3-box-table-thead-th, .contrast-section4-box-table-thead-th, .contrast-section5-box-table-thead-th {
+  display: flex;
+  gap: 30px;
+  padding-left: 100px;
+}
+
+.contrast-section2-box-table-thead-th p, .contrast-section3-box-table-thead-th p, .contrast-section4-box-table-thead-th p, .contrast-section5-box-table-thead-th p {
+  text-align: center;
+  width: 220px;
+  color: #898fa0;
+  line-height: 20px;
+}
+
+.contrast-section2-box .active, .contrast-section3-box .active, .contrast-section4-box .active, .contrast-section5-box .active {
+  max-height: 0px;
+}
+
+@media screen and (max-width: 1280px) {
+  .contrast-nav {
+    border-top: 1px solid #f1f1f1;
+    width: 90%;
+    margin: 30px auto;
+    padding-top: 20px;
+    position: sticky !important;
+    top: 80px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    z-index: 99;
+    transform: translateY(0) !important;
+  }
+  .contrast-nav .strip {
+    display: none;
+  }
+  .contrast-nav-box {
+    flex-flow: row !important;
+    gap: 10px !important;
+    justify-content: space-around;
+    width: 100%;
+    color: #898fa0;
+  }
+  .contrast-nav .active {
+    color: #000;
+    cursor: pointer;
+  }
+  .navactive {
+    border: none;
+    width: 100% !important;
+    box-shadow: 0px 5px 5px #f1eeee;
+    justify-content: center;
+    margin: 0;
+    left: 0;
+    width: 100%;
+  }
+  .navactive .nav-box {
+    width: 90% !important;
+  }
+  .contrast-header-box {
+    padding-left: 0px !important;
+  }
+  .contrast-main {
+    padding-left: 0 !important;
+  }
+  .contrast-section1 {
+    margin-top: 70px !important;
+  }
+  .contrast-section1-box-title {
+    width: 90% !important;
+  }
+  .contrast-section1-box-content {
+    flex-flow: column;
+    width: 90% !important;
+  }
+  .contrast-section1-box-content-R {
+    padding-left: 0px !important;
+  }
+  .contrast-section1-box-content-L {
+    font-size: 14px !important;
+    position: static !important;
+  }
+  .contrast-section2,
+  .contrast-section3,
+  .contrast-section4,
+  .contrast-section5 {
+    margin-top: 20px;
+  }
+  .contrast-section2-box-title,
+  .contrast-section3-box-title,
+  .contrast-section4-box-title,
+  .contrast-section5-box-title {
+    width: 90% !important;
+  }
+  .contrast-section2-box-table-thead,
+  .contrast-section3-box-table-thead,
+  .contrast-section4-box-table-thead,
+  .contrast-section5-box-table-thead {
+    flex-flow: column;
+    width: 90% !important;
+  }
+  .contrast-section2-box-table-thead h4,
+  .contrast-section3-box-table-thead h4,
+  .contrast-section4-box-table-thead h4,
+  .contrast-section5-box-table-thead h4 {
+    position: static !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+  }
+  .contrast-section2-box-table-thead-th,
+  .contrast-section3-box-table-thead-th,
+  .contrast-section4-box-table-thead-th,
+  .contrast-section5-box-table-thead-th {
+    justify-content: center;
+    padding-left: 0px !important;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .pc {
+    display: none !important;
+  }
+  .contrast-header-box {
+    width: 100%;
+    height: 40px;
+    height: 85px;
+  }
+  .contrast-header-box-input {
+    width: 164px;
+    height: 40px;
+  }
+  .contrast-main-box-img {
+    width: 164px;
+  }
+  .contrast-main-box-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .contrast-main-box-price {
+    width: 164px;
+  }
+  .contrast-main-box-price-byStages {
+    width: 164px;
+    text-align: center;
+    overflow: hidden;
+    color: #898fa0;
+  }
+  .contrast-main-box-btn {
+    width: 164px;
+  }
+  .contrast-main-box-btn button {
+    width: 100%;
+  }
+  .contrast-nav-box p {
+    font-size: 12px;
+    text-align: center;
+    align-content: center;
+  }
+  .contrast-section1-box-content-R ul {
+    width: 164px !important;
+  }
+  .contrast-section1-box-content-R ul li {
+    font-size: 10px;
+  }
+  .contrast-section1-box-content-R ul li::before {
+    width: 4px !important;
+    height: 4px !important;
+    top: 3px !important;
+  }
+  .contrast-section2-box-table-thead-th p,
+  .contrast-section3-box-table-thead-th p,
+  .contrast-section4-box-table-thead-th p,
+  .contrast-section5-box-table-thead-th p {
+    width: 164px !important;
+    font-size: 12px;
+    text-align: left !important;
+    text-align: center !important;
+  }
+}
+
+
+
+{% endstyle %}
+<div class="contrast">
+  <div class="contrast-header" >
+    <div class="contrast-header-box">
+      <div class="contrast-header-box-input" id="inputValue1">
+      
+        <input type="text" readonly />
+        <svg t="1721638477025" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4252" width="200" height="200"><path d="M185.884 327.55 146.3 367.133 512.021 732.779 877.7 367.133 838.117 327.55 511.997 653.676Z" p-id="4253"></path></svg>
+
+        <ul>
+   
+        </ul>
+      </div>
+      <div class="contrast-header-box-input" id="inputValue2">
+        <input type="text" readonly />
+        <svg t="1721638477025" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4252" width="200" height="200"><path d="M185.884 327.55 146.3 367.133 512.021 732.779 877.7 367.133 838.117 327.55 511.997 653.676Z" p-id="4253"></path></svg>
+        <ul>
+        
+        </ul>
+      </div>
+      <div class="contrast-header-box-input pc" id="inputValue3">
+        <input type="text" readonly />
+        <svg t="1721638477025" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4252" width="200" height="200"><path d="M185.884 327.55 146.3 367.133 512.021 732.779 877.7 367.133 838.117 327.55 511.997 653.676Z" p-id="4253"></path></svg>
+        <ul>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="contrast-main">
+  
+  </div>
+  <div class="contrast-nav">
+    <div class="strip">
+      <p></p>
+    </div>
+    <div class="contrast-nav-box">
+      {% if section.settings.is_support_accessories %}
+      <p
+        data="overview"
+        class="active"
+        value="0">Overview</p>
+      <p data="engraver-parameters" value="22">Engraver Parameters</p>
+      <p data="software" value="45">Software</p>
+      <p data="Support-Materials" value="67">Support Materials</p>
+      
+        <p data="Support-accessories" value="89">Support Accessories</p>
+        {% else %}
+        <p
+        data="overview"
+        class="active"
+        value="5">Overview</p>
+      <p data="engraver-parameters" value="32">Engraver Parameters</p>
+      <p data="software" value="60">Software</p>
+      <p data="Support-Materials" value="90">Support Materials</p>
+      {% endif %}
+   
+    </div>
+  </div>
+  <div class="contrast-section1">
+    <div class="contrast-section1-box">
+      <div class="contrast-section1-box-title">
+        <p id="overview">Overview</p>
+        <p><svg t="1721638477025" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4252" width="200" height="200"><path d="M185.884 327.55 146.3 367.133 512.021 732.779 877.7 367.133 838.117 327.55 511.997 653.676Z" p-id="4253"></path></svg></p>
+      </div>
+      <div class="contrast-section1-box-list">
+        <div class="contrast-section1-box-content">
+          <div class="contrast-section1-box-content-L">Key point</div>
+          <div class="contrast-section1-box-content-R">
+            <ul>
+              <li>Efficient Work, Safety First</li>
+            </ul>
+            <ul>
+              <li>Mightyly but Precise</li>
+            </ul>
+            <ul class="pc">
+              <li>
+                Budget-friendly, entry-level laser for hobbyists and
+ 
+ 
+ 
+                beginners
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="contrast-section1-box-content">
+          <div class="contrast-section1-box-content-L">Key Features</div>
+          <div class="contrast-section1-box-content-R">
+            <ul>
+              <li>Robust, fully enclosed frame with 360° visibility</li>
+              <li>Powerful 40W laser cuts 20mm basswood in one pass</li>
+              <li>
+                Built-in camera ensures precise and reliable alignment
+              </li>
+              <li>
+                Comprehensive security monitoring, FDA Class 1 certified
+              </li>
+              <li>Convenient metal drawer design for easy cleaning</li>
+            </ul>
+            <ul>
+              <li>Advanced cutting, fast batch production</li>
+              <li>Advanced cutting for thicker, create more</li>
+              <li>Multiple laser modules: 12W/22W/40W</li>
+              <li>Large working space: 400mm*415mm</li>
+              <li>Multiple accessories to expand compabilities</li>
+              <li>Air assist device to keep the arts smooth and clean</li>
+            </ul>
+            <ul class="pc">
+              <li>Engraving and cutting, safer and easier</li>
+              <li>
+                Engraving and cutting balance are common in daily creations
+              </li>
+              <li>
+                Multiple safety measures: emergency stop, safety lock,
+ 
+ 
+ 
+                abnormal stop.
+              </li>
+              <li>Air assist keeps creations smooth and clean.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contrast-section2">
+    <div class="contrast-section2-box">
+      <div class="contrast-section2-box-title">
+        <p id="engraver-parameters">Engraver Parameters</p>
+        <p><svg t="1721638477025" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4252" width="200" height="200"><path d="M185.884 327.55 146.3 367.133 512.021 732.779 877.7 367.133 838.117 327.55 511.997 653.676Z" p-id="4253"></path></svg></p>
+      </div>
+      <div class="contrast-section2-box-table">
+    
+      </div>
+    </div>
+  </div>
+  <div class="contrast-section3">
+    <div class="contrast-section3-box">
+      <div class="contrast-section3-box-title">
+        <p id="software">Software</p>
+        <p><svg t="1721638477025" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4252" width="200" height="200"><path d="M185.884 327.55 146.3 367.133 512.021 732.779 877.7 367.133 838.117 327.55 511.997 653.676Z" p-id="4253"></path></svg></p>
+      </div>
+      <div class="contrast-section3-box-table">
+      
+      </div>
+    </div>
+  </div>
+  <div class="contrast-section4">
+    <div class="contrast-section4-box">
+      <div class="contrast-section4-box-title">
+        <p id="Support-Materials">Support Materials</p>
+        <p><svg t="1721638477025" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4252" width="200" height="200"><path d="M185.884 327.55 146.3 367.133 512.021 732.779 877.7 367.133 838.117 327.55 511.997 653.676Z" p-id="4253"></path></svg></p>
+      </div>
+      <div class="contrast-section4-box-table">
+      
+      </div>
+    </div>
+  </div>
+  {% if section.settings.is_support_accessories %}
+    <div class="contrast-section5">
+      <div class="contrast-section5-box">
+        <div class="contrast-section5-box-title">
+          <p id="Support-accessories">Support Accessories</p>
+          <p><svg t="1721638477025" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4252" width="200" height="200"><path d="M185.884 327.55 146.3 367.133 512.021 732.779 877.7 367.133 838.117 327.55 511.997 653.676Z" p-id="4253"></path></svg></p>
+        </div>
+        <div class="contrast-section5-box-table">
+          <div class="contrast-section5-box-table-thead">
+            <h4>Accessories</h4>
+            <div class="contrast-section5-box-table-thead-th">
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+</div>
+<script>
+  let blocksData = [];
+  {% for block in section.blocks %}
+    blocksData.push({
+
+      item_title: "{{ block.settings.item_title | escape | strip_newlines }}",
+      optical_power: "{{ block.settings.optical_power | escape | strip_newlines }}",
+      item_image: "{{ block.settings.item_image | escape | strip_newlines }}",
+      key_point: "{{ block.settings.key_point | escape | strip_newlines }}",
+      key_features: `{{ block.settings.key_features | escape | strip_newlines | replace: "\n", "" | replace: "\r", "" }}`,
+      laser_type: `{{ block.settings.laser_type |  escape | strip_newlines  }}`,
+      bsswood: "{{ block.settings.bsswood | escape | strip_newlines }}",
+      transparent_acrylic: "{{ block.settings.transparent_acrylic | escape | strip_newlines }}",
+      engraving_area: "{{ block.settings.engraving_area | escape | strip_newlines }}",
+      laser_spot: "{{ block.settings.laser_spot | escape | strip_newlines }}",
+      ai_camera: "{{ block.settings.ai_camera | escape | strip_newlines }}",
+      enclosed: "{{ block.settings.enclosed | escape | strip_newlines }}",
+      laser_wavelength: "{{ block.settings.laser_wavelength | escape | strip_newlines }}",
+      laser_class: "{{ block.settings.laser_class | escape | strip_newlines }}",
+      certifications: "{{ block.settings.certifications | escape | strip_newlines }}",
+      gross_weight: "{{ block.settings.gross_weight | escape | strip_newlines }}",
+      package_size: "{{ block.settings.package_size | escape | strip_newlines }}",
+      laser_engraving_software: "{{ block.settings.laser_engraving_software | escape | strip_newlines }}",
+      operating_system: "{{ block.settings.operating_system | escape | strip_newlines }}",
+      cuttable_materials: "{{ block.settings.cuttable_materials | escape | strip_newlines }}",
+      engravable_materials: "{{ block.settings.engravable_materials | escape | strip_newlines }}",
+      accessories: "{{ block.settings.accessories | escape | strip_newlines }}",
+      item_hyperlink: "{{ block.settings.item_hyperlink | escape | strip_newlines }}",
+      star_rating: "{{ block.settings.star_rating | escape | strip_newlines }}",
+      comment: "{{ block.settings.comment | escape | strip_newlines }}",
+      copywriting: "{{ block.settings.copywriting | escape | strip_newlines }}",
+      item_id:"{{ block.settings.item_id | escape | strip_newlines }}",
+      price_currency:"{{ block.settings.price_currency | escape | strip_newlines }}",
+    });
+  {% endfor %}
+
+
+
+
+  </script>
+
+<script>
+  // 下拉框中添加数据
+  $(function () {
+    const dropDownTitle = blocksData.reduce((acc, current) => {
+  const existingItem = acc.find(item => item.item_title === current.item_title);
+  if (existingItem) {
+    existingItem.optical_power.push(current.optical_power);
+  } else {
+    acc.push({ item_title: current.item_title, optical_power: [current.optical_power] });
+  }
+  return acc;
+}, []);
+  dropDownTitle.forEach(item => {
+  const powerList = item.optical_power.map(i => `<p>${item.item_title}(${i})</p>`).join('');
+  $(".contrast-header-box-input ul").append(`
+    <li>
+      <h4>${item.item_title}</h4>
+      ${powerList}
+    </li>
+  `);
+});
+  })
+  // 下拉框
+  $(function () {
+  function isValueUnique(value) {
+    let isUnique = true;
+    $(".contrast-header-box-input input").each(function () {
+      if ($(this).val() === value) {
+        isUnique = false;
+        return false; // 退出each循环
+      }
+    });
+    return isUnique;
+  }
+  
+  function getNextUniqueValue(currentValue, $options) {
+    let nextValue = currentValue;
+    $options.each(function () {
+      if (isValueUnique($(this).text())) {
+        nextValue = $(this).text();
+        return false; // 退出each循环
+      }
+    });
+    return nextValue;
+  }
+  // 点击下拉
+  const list = $(".contrast-header-box-input  ul");
+  const inputBox = $(".contrast-header-box-input");
+  const input = $(".contrast-header-box-input input");
+  const icon = $(".contrast-header-box-input svg");
+  // 点击选择框下拉
+  function inputDropDown(params) {
+    if ($(this).parent().hasClass("active")) {
+      $(this).parent().removeClass("active");
+      // list.hide();
+    } else {
+      inputBox.removeClass("active");
+      // list.hide();
+      $(this).parent().addClass("active");
+      // $(this).siblings("ul").show();
+    }
+  }
+  input.on("click", inputDropDown);
+  icon.on("click", inputDropDown);
+  $(document).on("mousedown", function (e) {
+    if (!$(e.target).closest(".contrast-header-box-input").length) {
+      inputBox.removeClass("active").blur();
+      // list.hide();
+    }
+  });
+
+  });
+$(function () {
+let inputSelectArr = [{}, {}, {}]; // 初始化为三个空对象，分别对应三个输入框);
+function inputSelect($input, num) {
+  const inputValue = $input.val();
+  const matchedItem = blocksData.find(item => `${item.item_title}(${item.optical_power})` === inputValue);
+  if (matchedItem) {
+    inputSelectArr[num - 1] = matchedItem; // 更新对应输入框的数据
+  }
+}
+const default_input=[
+  '{{section.settings.default_input1}}',
+  '{{section.settings.default_input2}}',
+  '{{section.settings.default_input3}}',
+]
+
+// 初始化输入框的值
+default_input.forEach((id, index) => {
+  let found = false; // 标志位
+  blocksData.forEach((item) => {
+    if (item.item_id == id) {
+      $(`#inputValue${index+1} input`).val(`${item.item_title}(${item.optical_power})`);
+      found = true; // 找到匹配项
+    }
+  });
+  
+  // 如果没有找到匹配项，则使用 else 条件
+  if (!found) {
+    $(`#inputValue${index+1} input`).val($($(`#inputValue${index+1} ul li p`)[index]).text());
+  }
+});
+
+
+
+// 调用 inputSelect 函数初始化 inputSelectArr
+inputSelect($("#inputValue1 input"), 1);
+inputSelect($("#inputValue2 input"), 2);
+inputSelect($("#inputValue3 input"), 3);
+function inputValueP(num) {
+  $(`#inputValue${num} ul li p`).on("click", function () {
+    $(`#inputValue${num} ul li p`).removeClass("activep");
+    $(this).addClass("activep");
+    $(`#inputValue${num} input`).val($(this).text());
+    $(`#inputValue${num}`).removeClass("active").blur();
+
+    // 更新 inputSelectArr 数组中特定输入框的数据
+    inputSelect($("#inputValue" + num + " input"), num);
+    upDated()
+     // 输出更新后的 blocksData 数组
+  });
+}
+// 为每个输入框调用 inputValueP 函数
+inputValueP(1);
+inputValueP(2);
+inputValueP(3);
+function upDated() {
+  const Keypoint=[]
+  const KeyFeatures=[]
+  const laser_type=[]
+  const optical_power=[]
+  const bsswood=[]
+  const transparent_acrylic=[]
+  const engraving_area=[]
+  const laser_spot=[]
+  const ai_camera=[]
+  const enclosed=[]
+  const laser_wavelength=[]
+  const laser_class=[]
+  const certifications=[]
+  const gross_weight=[]
+  const package_size=[]
+  const laser_engraving_software=[]
+  const operating_system=[]
+  const cuttable_materials=[]
+  const engravable_materials=[]
+  const accessories=[]
+  const requestCache = {};
+function decodeHTML(html) {
+  const txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
+  }
+  $(".contrast-main").html("")
+  // 添加图片数据
+//   console.log(inputSelectArr, "@@@");
+   function requestDetailsPage (id) {
+    return new Promise((resolve, reject) => {
+      $.ajax(
+    `https://shopifyinterface.creality.com/test1`,
+    {
+    method: "POST",
+    data:JSON.stringify({
+      url:"eu.crealityfalcon.com",
+      tokenKey:"X-Shopify-Access-Token",
+      id
+     }),
+    headers: {
+      "Content-Type": "application/json",
+
+   },
+      success: function (result) {
+       console.log(JSON.parse(result).variant);
+
+       resolve(JSON.parse(result).variant);
+    
+      },
+      error: function (err) {
+        console.log(err);
+      },
+    }
+  );
+    })
+
+}
+/*
+ 
+*/
+inputSelectArr.forEach((item,index)=>{
+  
+
+  $(".contrast-main").append(`
+    <div class="contrast-main-box ${index==2?"pc":""}">
+      <div class="contrast-main-box-img">
+        <img src="${item.item_image}" alt="" />
+      </div>
+      <div class="contrast-main-box-price boxprice${index}">
+       
+            <p >
+              <span class="contrast-main-box-price-star">&#9733;</span>
+              <span class="contrast-main-box-price-star">&#9733;</span>
+              <span class="contrast-main-box-price-star">&#9733;</span>
+              <span class="contrast-main-box-price-star">&#9733;</span>
+              <span class="contrast-main-box-price-star">&#9733;</span>
+               <span class="contrast-main-box-price-comment">${item.comment}reviews</span>
+            </p>
+            <p>
+             ${item.copywriting}
+            </p>
+      </div>
+      <div onclick="location.href='${item.item_hyperlink}';" class="contrast-main-box-btn">
+        <button>Shop Now</button>
+      </div>
+    </div>
+  `)
+  console.log();
+$(`.boxprice${index} .contrast-main-box-price-star`).each(function (i, v) {
+    if (i < item.star_rating) {
+      $(v).css({
+        color: "#ffa41c",
+      });
+    }
+  })
+  requestDetailsPage(item.item_id).then(doc => {
+   
+    $(`.boxprice${index}`).prepend(`
+       <p >
+           <span  class="contrast-main-box-price-money">${item.price_currency}${doc.compare_at_price}</span>
+            <span  class="contrast-main-box-price-money">${item.price_currency}${doc.price}</span>
+           </p>
+    `);
+  });
+  // 给overview添加数据
+   Keypoint.push(`<ul class="${index==2?"pc":""}">${decodeHTML(item.key_point)}</ul>`)
+  KeyFeatures.push(`<ul class="${index==2?"pc":""}">${decodeHTML(item.key_features)}</ul>`)
+  laser_type.push(`<p class="${index==2?"pc":""}">${item?.laser_type}</p>`)
+  optical_power.push(`<p class="${index==2?"pc":""}">${item?.optical_power}</p>`)
+  bsswood.push(`<p class="${index==2?"pc":""}">${item?.bsswood}</p>`)
+  transparent_acrylic.push(`<p class="${index==2?"pc":""}">${item?.transparent_acrylic}</p>`)
+  engraving_area.push(`<p class="${index==2?"pc":""}">${item?.engraving_area}</p>`)
+  laser_spot.push(`<p class="${index==2?"pc":""}">${item?.laser_spot}</p>`)
+  ai_camera.push(`<p class="${index==2?"pc":""}">${item?.ai_camera}</p>`)
+  enclosed.push(`<p class="${index==2?"pc":""}">${item?.enclosed}</p>`)
+  laser_wavelength.push(`<p class="${index==2?"pc":""}">${item?.laser_wavelength}</p>`)
+  laser_class.push(`<p class="${index==2?"pc":""}">${item?.laser_class}</p>`)
+  certifications.push(`<p class="${index==2?"pc":""}">${item?.certifications}</p>`)
+  gross_weight.push(`<p class="${index==2?"pc":""}">${item?.gross_weight}</p>`)
+  package_size.push(`<p class="${index==2?"pc":""}">${item?.package_size}</p>`)
+  laser_engraving_software.push(`<p class="${index==2?"pc":""}">${item?.laser_engraving_software}</p>`)
+  operating_system.push(`<p class="${index==2?"pc":""}">${item?.operating_system}</p>`)
+  cuttable_materials.push(`<p class="${index==2?"pc":""}">${item?.cuttable_materials}</p>`)
+  engravable_materials.push(`<p class="${index==2?"pc":""}">${item?.engravable_materials}</p>`)
+  accessories.push(`<p class="${index==2?"pc":""}">${item?.accessories}</p>`)
+  // 给engraver parameter添加数据
+})
+// overview
+$(".contrast-section1-box-list").html(`
+   <div class="contrast-section1-box-content">
+          <div class="contrast-section1-box-content-L">Key point</div>
+          <div class="contrast-section1-box-content-R">
+            ${Keypoint.join("")}
+          </div>
+        </div>
+ <div class="contrast-section1-box-content">
+          <div class="contrast-section1-box-content-L">Key Features</div>
+          <div class="contrast-section1-box-content-R">
+            ${KeyFeatures.join("")}
+          </div>
+        </div>
+  `)
+// engraver parameter
+$(".contrast-section2-box-table").html(`
+        <div class="contrast-section2-box-table-thead">
+          <h4>Laser Type</h4>
+          <div class="contrast-section2-box-table-thead-th">
+                    ${laser_type.join("")}
+          </div>
+        </div>
+        <div class="contrast-section2-box-table-thead">
+          <h4>Optical Power</h4>
+          <div class="contrast-section2-box-table-thead-th">
+      ${optical_power.join("")}
+          </div>
+        </div>
+        <div class="contrast-section2-box-table-thead">
+          <h4>Maximum cutting thickness in one pass（Basswood)</h4>
+          <div class="contrast-section2-box-table-thead-th">
+           ${bsswood.join("")}
+          </div>
+        </div>
+        <div class="contrast-section2-box-table-thead">
+          <h4>
+            Maximum cutting thickness in one pass（Transparent Acrylic )
+          </h4>
+          <div class="contrast-section2-box-table-thead-th">
+           ${transparent_acrylic.join("")}
+          </div>
+        </div>
+        <div class="contrast-section2-box-table-thead">
+          <h4>Engraving Area</h4>
+          <div class="contrast-section2-box-table-thead-th">
+        ${engraving_area.join("")}
+          </div>
+        </div>
+        <div class="contrast-section2-box-table-thead">
+          <h4>Laser spot</h4>
+          <div class="contrast-section2-box-table-thead-th">
+         ${laser_spot.join("")}
+          </div>
+        </div>
+        <div class="contrast-section2-box-table-thead">
+          <h4>AI camera</h4>
+          <div class="contrast-section2-box-table-thead-th">
+            ${ai_camera.join("")}
+          </div>
+        </div>
+        <div class="contrast-section2-box-table-thead">
+          <h4>Enclosed</h4>
+          <div class="contrast-section2-box-table-thead-th">
+              ${enclosed.join("")}
+          </div>
+        </div>
+        <div class="contrast-section2-box-table-thead">
+          <h4>Laser Wavelength</h4>
+          <div class="contrast-section2-box-table-thead-th">
+          ${laser_wavelength.join("")}
+          </div>
+        </div>
+        <div class="contrast-section2-box-table-thead">
+          <h4>Laser Class</h4>
+          <div class="contrast-section2-box-table-thead-th">
+               ${laser_class.join("")}
+          </div>
+        </div>
+        <div class="contrast-section2-box-table-thead">
+          <h4>Certifications</h4>
+          <div class="contrast-section2-box-table-thead-th">
+           ${certifications.join("")}
+          </div>
+        </div>
+        <div class="contrast-section2-box-table-thead">
+          <h4>Gross Weight</h4>
+          <div class="contrast-section2-box-table-thead-th">
+        ${gross_weight.join("")}
+          </div>
+        </div>
+        <div class="contrast-section2-box-table-thead">
+          <h4>Package Size</h4>
+          <div class="contrast-section2-box-table-thead-th">
+          ${package_size.join("")}
+          </div>
+        </div>
+    
+`)
+$(".contrast-section3-box-table").html(`
+        <div class="contrast-section3-box-table-thead">
+          <h4>Laser Engraving Software</h4>
+          <div class="contrast-section3-box-table-thead-th">
+           ${laser_engraving_software.join("")}
+          </div>
+        </div>
+        <div class="contrast-section3-box-table-thead">
+          <h4>Operating System</h4>
+          <div class="contrast-section3-box-table-thead-th">
+            ${operating_system.join("")}
+          </div>
+        </div>
+     
+`)
+$(".contrast-section4-box-table").html(`
+        <div class="contrast-section4-box-table-thead">
+          <h4>Cuttable Materials</h4>
+          <div class="contrast-section4-box-table-thead-th">
+            ${cuttable_materials.join("")}
+          </div>
+        </div>
+        <div class="contrast-section4-box-table-thead">
+          <h4>Engravable Materials</h4>
+          <div class="contrast-section4-box-table-thead-th">
+            ${engravable_materials.join("")}
+          </div>
+        </div>
+ 
+`)
+$(".contrast-section5-box-table").html(`
+        <div class="contrast-section4-box-table-thead">
+          <h4>Accessories</h4>
+          <div class="contrast-section4-box-table-thead-th">
+            ${accessories.join("")}
+          </div>
+        </div>
+       
+ 
+`)
+}
+
+upDated()
+})
+  // 详情参数下拉
+  $(function () {
+  function compareParametersList(icon, list) {
+    icon.on("click", function () {
+      if (list.attr("class").includes("active")) {
+        list.removeClass("active");
+        $(this).css({
+          transform: "rotate(180deg)",
+        });
+      } else {
+        list.addClass("active");
+        $(this).css({
+          transform: "rotate(0deg)",
+        });
+      }
+    });
+  }
+  compareParametersList($(".contrast-section1-box-title svg"), $(".contrast-section1-box-list"));
+  compareParametersList($(".contrast-section2-box-title svg"), $(".contrast-section2-box-table"));
+  compareParametersList($(".contrast-section3-box-title svg"), $(".contrast-section3-box-table"));
+  compareParametersList($(".contrast-section4-box-title svg"), $(".contrast-section4-box-table"));
+  compareParametersList($(".contrast-section5-box-title svg"), $(".contrast-section5-box-table"));
+  });
+  //nav滑动
+  $(function () {
+  let isClicking = false;
+  $(".contrast-nav-box p").on("click", function () {
+    isClicking = true;
+    $(".contrast-nav-box p").removeClass("active");
+    $(this).addClass("active");
+    $(".strip p").css({
+      top: `${$(this).attr("value")}%`,
+    });
+    const targetId = $(this).attr("data");
+    slide(targetId);
+  });
+  
+  function slide(targetId) {
+    $("html, body").animate(
+      {
+        scrollTop: $(`#${targetId}`).offset().top - 150,
+      },
+      1000,
+      function () {
+        isClicking = false; // 重置标志
+      }
+    );
+    $(`#${targetId}`).parent().siblings().removeClass("active");
+    $(`#${targetId}`).siblings().children("svg").css({
+      transform: "rotate(180deg)",
+    });
+  }
+  $(window).on("scroll", function () {
+    if (isClicking) return;
+    const scrollPosition = $(window).scrollTop() + 150; // Adjust based on the offset used in slide
+    $(".contrast-nav-box p").each(function (item) {
+      const targetId = $(this).attr("data");
+      const targetOffset = $(`#${targetId}`).offset().top;
+      const targetHeight = $(`#${targetId}`)
+        .parent()
+        .parent()
+        .parent()
+        .outerHeight();
+  
+      if (
+        scrollPosition >= targetOffset &&
+        scrollPosition < targetOffset + targetHeight
+      ) {
+        $(".contrast-nav-box p").removeClass("active");
+        $(this).addClass("active");
+        $(".strip p").css({
+          top: `${$(this).attr("value")}%`,
+        });
+      }
+    });
+  });
+  });
+// 增加阴影边框
+$(function () {
+  $(window).on("scroll", function () {
+    const scrollTop = $(window).scrollTop();
+    const nav = $(".contrast-nav").offset().top;
+    const header = $(".contrast-header").offset().top;
+    const navTop = nav - scrollTop;
+    const headerTop = header - scrollTop;
+    const windowHeight = $(window).height();
+    const headerHeight = $(".contrast-header").height();
+
+    if (
+      scrollTop + windowHeight > header &&
+      scrollTop < header + headerHeight
+    ) {
+      $("#MainContent").css({
+        overflow: "visible",
+      });
+    //  $(".scrolled-past-header").hide();
+      $(".contrast-nav").show();
+      if ($("#qab_background").length) {
+      $(".contrast-header").css({
+        top:  $("#qab_background").height()+"px",
+      });
+      if ($(window).width()<=1280) {
+        $(".contrast-nav").css({
+        top:  Number(80)+Number($("#qab_background").height())+"px",
+        });
+        }else{
+        $(".contrast-nav").css({
+        top:  "50%",
+      });
+      }
+
+      }
+ 
+
+    } else {
+      $("#MainContent").css({
+        overflow: "hidden",
+      });
+    //  $(".scrolled-past-header").show();
+      $(".contrast-nav").hide();
+    }
+    let h=80
+    let ht=0
+    if ($("#qab_background").length) {
+      ht=$("#qab_background").height()
+      h=Number(80)+Number($("#qab_background").height())
+    }
+    
+    if (navTop <= h) {
+      $(".contrast-nav").addClass("navactive");
+      $(".contrast-header").css({
+        boxShadow: "none",
+      });
+    } else {
+      $(".contrast-nav").removeClass("navactive");
+      $(".contrast-header").css({
+        boxShadow: "0px 5px 5px #f1eeee",
+      });
+    }
+    if (headerTop > ht) {
+        $(".contrast-header").css({
+        boxShadow: "none",
+      });
+    }
+ 
+  });
+
+});
+
+
+</script>
+{% schema %}
+  {
+    "name": "produc-tcontrast",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "is_support_accessories",
+        "label": "是否显示Support Accessories",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "default_input1",
+        "label": "默认输入框值1（必须是已有的商品id）",
+        "default": "47669864562985"
+      }
+      ,
+      {
+        "type": "text",
+        "id": "default_input2",
+        "label": "默认输入框值2（必须是已有的商品id）",
+        "default": "47669864562985"
+      }
+      ,
+      {
+        "type": "text",
+        "id": "default_input3",
+        "label": "默认输入框值3（必须是已有的商品id）",
+        "default": "47669864562985"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "按钮背景颜色",
+        "default": "#28be44"
+      }
+      ,
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "按钮文字颜色",
+        "default": "#FFF"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "products-tcontrast",
+        "name": {
+          "en-US": "products-tcontrast",
+          "zh-CN": "products-tcontrast"
+        },
+        "settings": [
+          {
+            "type": "text",
+            "id": "item_hyperlink",
+            "label": {
+              "en-US": "detailsButton",
+              "zh-CN": "detailsButton"
+            },
+            "default": "https://www.crealityfalcon.com/products/creality-falcon-2-pro-enclosed-laser-engraver?variant=47669864562985"
+          },
+          {
+            "type": "text",
+            "id": "item_image",
+            "label": {
+              "en-US": "tcontrast image link",
+              "zh-CN": "accessory图片链接"
+            },
+            "default": "https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/Creality_Falcon_Pro_905_543.png?v=1721805281"
+          },
+          {
+            "type": "text",
+            "id": "item_title",
+            "label": {
+              "en-US": "tcontrast title text",
+              "zh-CN": "accessory标题"
+            },
+            "default": "Creality Falcon2 Pro"
+          },
+          {
+            "type": "text",
+            "id": "item_id",
+            "label": {
+              "en-US": "id",
+              "zh-CN": "id"
+            },
+            "default": "47669864562985"
+          },
+          {
+            "type": "text",
+            "id": "price_currency",
+            "label": {
+              "en-US": "price_currency",
+              "zh-CN": "币种"
+            },
+            "default": "€"
+          },
+          {
+            "type": "textarea",
+            "id": "key_point",
+            "label": {
+              "en-US": "key_point",
+              "zh-CN": "key_point"
+            },
+            "default": "<li>Efficient Work, Safety First</li>"
+          },
+          {
+            "type": "textarea",
+            "id": "key_features",
+            "label": {
+              "en-US": "key_features",
+              "zh-CN": "key_features"
+            },
+            "default": "<li>Robust, fully enclosed frame with 360° visibility</li><li>Powerful 40W laser cuts 20mm basswood in one pass</li><li>Built-in camera ensures precise and reliable alignment</li><li>Comprehensive security monitoring, FDA Class 1 certified</li><li>Convenient metal drawer design for easy cleaning</li>"
+          }, {
+            "type": "text",
+            "id": "laser_type",
+            "label": {
+              "en-US": "laser_type",
+              "zh-CN": "laser_type"
+            },
+            "default": "Diode Laser"
+          }, {
+            "type": "text",
+            "id": "optical_power",
+            "label": {
+              "en-US": "optical_power",
+              "zh-CN": "optical_power"
+            },
+            "default": "22W"
+          }, {
+            "type": "text",
+            "id": "bsswood",
+            "label": {
+              "en-US": "bsswood",
+              "zh-CN": "bsswood"
+            },
+            "default": "10mm"
+          }, {
+            "type": "text",
+            "id": "transparent_acrylic",
+            "label": {
+              "en-US": "transparent_acrylic",
+              "zh-CN": "transparent_acrylic"
+            },
+            "default": "10mm"
+          }, {
+            "type": "text",
+            "id": "engraving_area",
+            "label": {
+              "en-US": "engraving_area",
+              "zh-CN": "engraving_area"
+            },
+            "default": "400mm*415mm"
+          }, {
+            "type": "text",
+            "id": "laser_spot",
+            "label": {
+              "en-US": "laser_spot",
+              "zh-CN": "laser_spot"
+            },
+            "default": "0.08*0.1mm"
+          }, {
+            "type": "text",
+            "id": "ai_camera",
+            "label": {
+              "en-US": "ai_camera",
+              "zh-CN": "ai_camera"
+            },
+            "default": "√"
+          }, {
+            "type": "text",
+            "id": "enclosed",
+            "label": {
+              "en-US": "enclosed",
+              "zh-CN": "enclosed"
+            },
+            "default": "√"
+          }, {
+            "type": "text",
+            "id": "laser_wavelength",
+            "label": {
+              "en-US": "laser_wavelength",
+              "zh-CN": "laser_wavelength"
+            },
+            "default": "455±5nm"
+          }, {
+            "type": "text",
+            "id": "laser_class",
+            "label": {
+              "en-US": "laser_class",
+              "zh-CN": "laser_class"
+            },
+            "default": "Class 1(FDA)"
+          }, {
+            "type": "text",
+            "id": "certifications",
+            "label": {
+              "en-US": "certifications",
+              "zh-CN": "certifications"
+            },
+            "default": "IEC60825、FDA、CE、ROHS、FCC、UKCA、UL Report、PSE"
+          }, {
+            "type": "text",
+            "id": "gross_weight",
+            "label": {
+              "en-US": "gross_weight",
+              "zh-CN": "gross_weight"
+            },
+            "default": "23.66kg"
+          }, {
+            "type": "text",
+            "id": "package_size",
+            "label": {
+              "en-US": "package_size",
+              "zh-CN": "package_size"
+            },
+            "default": "770*645*285"
+          }, {
+            "type": "text",
+            "id": "laser_engraving_software",
+            "label": {
+              "en-US": "laser_engraving_software",
+              "zh-CN": "laser_engraving_software"
+            },
+            "default": "LightBurn、LaserGRBL"
+          }, {
+            "type": "text",
+            "id": "operating_system",
+            "label": {
+              "en-US": "operating_system",
+              "zh-CN": "operating_system"
+            },
+            "default": "Windows/MacOS"
+          }, {
+            "type": "text",
+            "id": "cuttable_materials",
+            "label": {
+              "en-US": "cuttable_materials",
+              "zh-CN": "cuttable_materials"
+            },
+            "default": "Paper, Wood, Leather, MDF, Felt, Some dark opaque acrylic"
+          }, {
+            "type": "text",
+            "id": "engravable_materials",
+            "label": {
+              "en-US": "engravable_materials",
+              "zh-CN": "engravable_materials"
+            },
+            "default": "Paper, Wood, Leather, MDF, Stainless steel, Some dark opaque acrylic, Bamboo, Fabric, Dark glass, Ceramic, Jade, Marble, Shale, Cement, Brick, Plated metal, Painted metal"
+          }, {
+            "type": "text",
+            "id": "accessories",
+            "label": {
+              "en-US": "accessories",
+              "zh-CN": "accessories"
+            },
+            "default": "-"
+          }
+          , {
+            "type": "text",
+            "id": "star_rating",
+            "label": {
+              "en-US": "starRating",
+              "zh-CN": "星级"
+            },
+            "default": "5"
+          }
+          , {
+            "type": "text",
+            "id": "comment",
+            "label": {
+              "en-US": "comment",
+              "zh-CN": "评论数"
+            },
+            "default": "0"
+          }
+          , {
+            "type": "text",
+            "id": "copywriting",
+            "label": {
+              "en-US": "copywriting",
+              "zh-CN": "文案"
+            },
+            "default": "editableCopyEditableCopyEditableCopyEditableCopyEditableCopy"
+          }
+        ]
+      }
+   
+    ],
+    "presets": [
+      {
+        "name": "produc-tcontrast"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,526 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "ufea_euro_BFjXpV": {
+      "type": "ufea_euro",
+      "blocks": {
+        "products_lists_X6J6QB": {
+          "type": "products-lists",
+          "settings": {
+            "item1_tab_text": "22W",
+            "item1_image_link": "https://cdn.shopify.com/s/files/1/0853/7944/9135/files/1crealityfalcon222w.png?v=1714297349",
+            "item1_title": "Falcon2 22W Laser Engraver and Cutter",
+            "item1_desc1": "Working Together with Your Falcon Laser Engraver",
+            "item1_old_price": "€1199",
+            "item1_new_price": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€579</span>",
+            "item1_discount_text1": "SAVE",
+            "item1_discount_text2": "52%",
+            "item1_addcart_code": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9547908448559\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"48564657127727\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"20\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\">\n <div class=\"addcart\">\n <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">\n </div>\n <div class=\"buynow\">Buy Now</div>\n </button>\n</form>",
+            "item2_tab_text": "40W",
+            "item2_image_link": "https://cdn.shopify.com/s/files/1/0853/7944/9135/files/1crealityfalcon240w.jpg?v=1714297547",
+            "item2_title": "Falcon2 40W Laser Engraver and Cutter",
+            "item2_desc1": "Working Together with Your Falcon Laser Engraver",
+            "item2_old_price": "€1999",
+            "item2_new_price": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€1279</span>",
+            "item2_discount_text1": "SAVE",
+            "item2_discount_text2": "36%",
+            "item2_addcart_code": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9547909923119\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"48564631437615\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"20\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\">\n <div class=\"addcart\">\n <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">\n </div>\n <div class=\"buynow\">Buy Now</div>\n </button>\n</form>",
+            "item3_tab_text": "",
+            "item3_image_link": "",
+            "item3_title": "",
+            "item3_desc1": "",
+            "item3_old_price": "",
+            "item3_new_price": "",
+            "item3_discount_text1": "",
+            "item3_discount_text2": "",
+            "item3_addcart_code": "",
+            "accessories1_image_link": "https://cdn.shopify.com/s/files/1/0853/7944/9135/files/1crealityfalconProtectiveCoverforLaserEngraver.jpg?v=1714296719",
+            "accessories1_title": "Falcon Protective Cover for Laser Engraver",
+            "accessories1_old_price": "€79.99",
+            "accessories1_new_price": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€64</span>",
+            "accessories1_addcart_code": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9547902877999\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"48253593944367\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"16\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\">\n <div class=\"addcart\">\n <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">\n </div>\n <div class=\"buynow\">Buy Now</div>\n </button>\n</form>",
+            "accessories2_image_link": "https://cdn.shopify.com/s/files/1/0853/7944/9135/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714296344",
+            "accessories2_title": "Falcon Honeycomb Workbench for Laser Engraver 500mm * 500mm",
+            "accessories2_old_price": "€149",
+            "accessories2_new_price": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€99</span>",
+            "accessories2_addcart_code": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9547900354863\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"48253588209967\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"15\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\">\n <div class=\"addcart\">\n <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">\n </div>\n <div class=\"buynow\">Buy Now</div>\n </button>\n</form>"
+          }
+        },
+        "products_lists_3wCP36": {
+          "type": "products-lists",
+          "settings": {
+            "item1_tab_text": "40W",
+            "item1_image_link": "https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/1crealityfalcon2Pro40w.jpg?v=1714295722",
+            "item1_title": "Creality Falcon2 Pro 40W Enclosed Laser Engraver",
+            "item1_desc1": "Working Together with Your Falcon Laser Engraver",
+            "item1_old_price": "€2051",
+            "item1_new_price": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€1739</span>",
+            "item1_discount_text1": "SAVE",
+            "item1_discount_text2": "15%",
+            "item1_addcart_code": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9666090303791\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"48611913498927\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"5\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\">\n        <div class=\"addcart\">\n            <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">\n        </div>\n        <div class=\"buynow\">Buy Now</div>\n    </button>\n</form>",
+            "item2_tab_text": "22W",
+            "item2_image_link": "https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/1crealityfalcon2Pro22W.jpg?v=1714295722",
+            "item2_title": "Creality Falcon2 Pro 22W Enclosed Laser Engraver",
+            "item2_desc1": "Working Together with Your Falcon Laser Engraver",
+            "item2_old_price": "€1403",
+            "item2_new_price": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€1189</span>",
+            "item2_discount_text1": "SAVE",
+            "item2_discount_text2": "15%",
+            "item2_addcart_code": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9666090303791\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"48700109357359\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"5\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\">\n        <div class=\"addcart\">\n            <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">\n        </div>\n        <div class=\"buynow\">Buy Now</div>\n    </button>\n</form>",
+            "item3_tab_text": "60W(NEW)",
+            "item3_image_link": "https://cdn.shopify.com/s/files/1/0853/7944/9135/files/3828576f42c6ac22956fb386a2677992.png?v=1715217875",
+            "item3_title": "Creality Falcon2 Pro 60W Enclosed Laser Cutter and Engraver",
+            "item3_desc1": "Working Together with Your Falcon Laser Engraver",
+            "item3_old_price": "€2872",
+            "item3_new_price": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€2872</span>",
+            "item3_discount_text1": "Free Gifts",
+            "item3_discount_text2": "",
+            "item3_addcart_code": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-10018892939567\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"49582684700975\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" class=\"\" id=\"product-add-to-cart\" disabled>\n <div class=\"addcart\">\n <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">\n </div>\n <div class=\"buynow\">Buy Now</div>\n </button>\n</form>",
+            "accessories1_image_link": "https://cdn.shopify.com/s/files/1/0853/7944/9135/files/1CrealityFalcon2ExtraRaisers.jpg?v=1714295585",
+            "accessories1_title": "Creality Falcon2 Extra Raisers (4 Packs)",
+            "accessories1_old_price": "€29",
+            "accessories1_new_price": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€23</span>",
+            "accessories1_addcart_code": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9604691099951\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"48373420720431\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"9\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\">\n <div class=\"addcart\">\n <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">\n </div>\n <div class=\"buynow\">Buy Now</div>\n </button>\n</form>",
+            "accessories2_image_link": "https://cdn.shopify.com/s/files/1/0853/7944/9135/files/0crealityfalconRotaryKitPro.jpg?v=1714296817",
+            "accessories2_title": "Falcon Rotary Kit Pro for Curved Surface Engraving",
+            "accessories2_old_price": "€199",
+            "accessories2_new_price": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€179</span>",
+            "accessories2_addcart_code": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9547899502895\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"48253585064239\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"19\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\">\n <div class=\"addcart\">\n <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">\n </div>\n <div class=\"buynow\">Buy Now</div>\n </button>\n</form>"
+          }
+        },
+        "products_lists_bUMeqJ": {
+          "type": "products-lists",
+          "settings": {
+            "item1_tab_text": "Pro 10W",
+            "item1_image_link": "https://cdn.shopify.com/s/files/1/0853/7944/9135/files/2crealityfalconpro10w.jpg?v=1714296628",
+            "item1_title": "Falcon Pro 10W Laser Engraver",
+            "item1_desc1": "Working Together with Your Falcon Laser Engraver",
+            "item1_old_price": "€559",
+            "item1_new_price": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€399</span>",
+            "item1_discount_text1": "SAVE",
+            "item1_discount_text2": "29%",
+            "item1_addcart_code": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9547898093871\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"49442560835887\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"6\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\">\n <div class=\"addcart\">\n <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">\n </div>\n <div class=\"buynow\">Buy Now</div>\n </button>\n</form>",
+            "item2_tab_text": "10W",
+            "item2_image_link": "https://cdn.shopify.com/s/files/1/0853/7944/9135/files/1crealityfalcon10w.jpg?v=1714295992",
+            "item2_title": "CR-Laser Falcon 10W Laser Engraver",
+            "item2_desc1": "Working Together with Your Falcon Laser Engraver",
+            "item2_old_price": "€509",
+            "item2_new_price": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€399</span>",
+            "item2_discount_text1": "SAVE",
+            "item2_discount_text2": "22%",
+            "item2_addcart_code": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9547907531055\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"48887556243759\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"10\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\">\n <div class=\"addcart\">\n <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">\n </div>\n <div class=\"buynow\">Buy Now</div>\n </button>\n</form>",
+            "item3_tab_text": "5W",
+            "item3_image_link": "https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/12crealityfalcon5W.jpg?v=1714296247",
+            "item3_title": "CR-Laser Falcon 5W Laser Engraver",
+            "item3_desc1": "Working Together with Your Falcon Laser Engraver",
+            "item3_old_price": "€399",
+            "item3_new_price": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">$299</span>",
+            "item3_discount_text1": "SAVE",
+            "item3_discount_text2": "20%",
+            "item3_addcart_code": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9547899666735\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"48253585686831\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"9\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\">\n        <div class=\"addcart\">\n            <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">\n        </div>\n        <div class=\"buynow\">Buy Now</div>\n    </button>\n</form>",
+            "accessories1_image_link": "https://cdn.shopify.com/s/files/1/0853/7944/9135/files/1crealityfalconProtectiveCoverforLaserEngraver.jpg?v=1714296719",
+            "accessories1_title": "Falcon Protective Cover for Laser Engraver",
+            "accessories1_old_price": "€79.99",
+            "accessories1_new_price": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€64</span>",
+            "accessories1_addcart_code": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9547902877999\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"48253593944367\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"16\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\">\n <div class=\"addcart\">\n <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">\n </div>\n <div class=\"buynow\">Buy Now</div>\n </button>\n</form>",
+            "accessories2_image_link": "https://cdn.shopify.com/s/files/1/0853/7944/9135/files/1CrealityFalcon10WFalconEngraverAccessoryKit.jpg?v=1714293452",
+            "accessories2_title": "10W Falcon Engraver Accessory Kit",
+            "accessories2_old_price": "€59",
+            "accessories2_new_price": "<span class=\"new_price\" style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€54</span>",
+            "accessories2_addcart_code": "<form method=\"post\" action=\"/cart/add\" id=\"product-form-9547898945839\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"48253584277807\"><button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"19\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\">\n <div class=\"addcart\">\n <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">\n </div>\n <div class=\"buynow\">Buy Now</div>\n </button>\n</form>"
+          }
+        }
+      },
+      "block_order": [
+        "products_lists_X6J6QB",
+        "products_lists_3wCP36",
+        "products_lists_bUMeqJ"
+      ],
+      "settings": {}
+    },
+    "shops_card1_FAyKkx": {
+      "type": "shops-card1",
+      "blocks": {
+        "gifts_lists_LpwdK7": {
+          "type": "gifts-lists",
+          "settings": {
+            "item_image_link": "https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/4crealityfalconplywood.jpg?v=1714293778",
+            "price_text1": "€100",
+            "card_text2": "<span style=\"color: #000000;\">Value</span> <span style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€25.99</span>",
+            "item_desc1": "Spend €100 and Get a 10PCS Plywood Gift. Valued at €25.99"
+          }
+        },
+        "gifts_lists_QBX6A7": {
+          "type": "gifts-lists",
+          "disabled": true,
+          "settings": {
+            "item_image_link": "https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/4crealityFalconLaserSafetyGlasses.jpg?v=1714296442",
+            "price_text1": "€999",
+            "card_text2": "<span style=\"color: #000000;\">Value</span> <span style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€49</span>",
+            "item_desc1": "Spend €999 and Get a Laser Safety Glasses Gift. Valued at €49"
+          }
+        },
+        "gifts_lists_NUJ4qb": {
+          "type": "gifts-lists",
+          "settings": {
+            "item_image_link": "https://cdn.shopify.com/s/files/1/0853/7944/9135/files/0crealityfalconRotaryKitPro.jpg?v=1714296817",
+            "price_text1": "€1999",
+            "card_text2": "<span style=\"color: #000000;\">Value</span> <span style=\"background: linear-gradient(to right, #ed3b4b, #4c3b92);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;color: transparent;\">€199</span>",
+            "item_desc1": "Spend €1999 and Get a Rotary Kit Pro Gift. Valued at €199"
+          }
+        }
+      },
+      "block_order": [
+        "gifts_lists_LpwdK7",
+        "gifts_lists_QBX6A7",
+        "gifts_lists_NUJ4qb"
+      ],
+      "settings": {
+        "card_background_color": "linear-gradient(15deg, #fff, #0A188C)",
+        "card_title": "Shop In-Store and Enjoy Tier Gifts",
+        "card_text": "Unlock More Rewards with Every Purchase!",
+        "card_title_color": "#ffffff",
+        "notice_text": "Notice: While supplies last <br class=\"mb\">(gifts may be adjusted based on actual inventory)"
+      }
+    },
+    "product_tab_block_JjJLzk": {
+      "type": "product-tab-block",
+      "blocks": {
+        "product_tabs_pb9Lj4": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Accessories",
+            "collection": "accessories"
+          }
+        },
+        "product_tabs_DPfhGw": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Materials",
+            "collection": "materials"
+          }
+        }
+      },
+      "block_order": [
+        "product_tabs_pb9Lj4",
+        "product_tabs_DPfhGw"
+      ],
+      "settings": {
+        "container": "fullwidth",
+        "padding_full_width": 0,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "product_block_layout": "grid",
+        "product_block_title": "Frequently Bought With",
+        "fontsize_title": 25,
+        "fontsize_title_mb": 18,
+        "mg_bottom_title": 14,
+        "enable_border_title": false,
+        "border_color_title": "#232323",
+        "enable_border_title2": false,
+        "border_color_title2": "#232323",
+        "color_title": "#232323",
+        "title_align": "center",
+        "product_block_limit": 4,
+        "image_behavior": "none",
+        "product_block_per_row": "4",
+        "product_block_infinite_scroll": true,
+        "min_width_button": "",
+        "product_block_dots": true,
+        "product_block_dots_mb": true,
+        "product_block_arrows": true,
+        "product_block_arrows_mb": false,
+        "product_block_show": "4",
+        "product_block_per_view": "4",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_hover_drag_icon": true,
+        "position": "left",
+        "width_banner": 20,
+        "tab_title_style": "style_1",
+        "mg_bottom_title_tab": 24,
+        "type_tab_font": "font_1",
+        "separation": true,
+        "style_separation": "style2",
+        "color_separation": "#232323",
+        "enable_scroll_title": true,
+        "fontsize_tab": 14,
+        "fontsize_tab_mb": 14,
+        "font_weight_tab": "700",
+        "font_weight_active_tab": "700",
+        "spacing_between_title": 24,
+        "line_height_tab": 20,
+        "line_height_tab_mobile": 24,
+        "border_tab_radius": 3,
+        "min_width_tab": 5,
+        "border_width_tab": 3,
+        "color_tab": "#232323",
+        "border_color_tab": "",
+        "bg_color_tab": "#ffffff",
+        "bg_color_gradient_tab": "",
+        "color_tab_active": "#232323",
+        "bg_color_tab_active": "#f8f8f8",
+        "bg_color_gradient_tab_active": ""
+      }
+    },
+    "shops_card2_rPyd79": {
+      "type": "shops-card2",
+      "disabled": true,
+      "settings": {
+        "card_background_color": "linear-gradient(15deg, #fff, #0A188C)",
+        "card_background_color2": "linear-gradient(45deg, #809DD5, #7281D0);",
+        "card_title": "Get 20% off all accessories and materials.",
+        "card_text": "Shop to your heart's content! Don't miss out.",
+        "card_title_color": "#ffffff",
+        "tabitem1_text": "Accessories",
+        "tabitem2_text": "Materials",
+        "star_color": "#5cb2f6"
+      }
+    },
+    "shops_card3_6jCjdC": {
+      "type": "shops-card3",
+      "settings": {
+        "card_background_color": "linear-gradient(15deg, #2240B2, #2B43B3);",
+        "card_title": "15,000+ Facebook Group Happy Customers And Counting",
+        "card_title_color": "#ffffff"
+      }
+    },
+    "brand_slider_ipDJwT": {
+      "type": "brand-slider",
+      "blocks": {
+        "image_x8aztU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative01.png",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "image_RRFiyi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative02.png",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "image_TmYDbQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative03.png",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "image_FyED6P": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative04.png",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "image_3bEbiW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative05.png",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_x8aztU",
+        "image_RRFiyi",
+        "image_TmYDbQ",
+        "image_FyED6P",
+        "image_3bEbiW"
+      ],
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "brands_block_style": "style_1",
+        "brand_layout": "infinite",
+        "scroll_from": "ltr",
+        "brand_scroll_time": "20",
+        "display_brand_border": true,
+        "brand_bg": "#f5f5f5",
+        "brand_bg_gradient": "",
+        "title_align": "center",
+        "brand_title": "",
+        "color_title": "#232323",
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "mg_bottom_title": 12,
+        "enable_background_title": false,
+        "enable_border_title": false,
+        "border_color_title": "#051c42",
+        "brand_des": "",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "mg_bottom_des": 0,
+        "view_all": "",
+        "view_all_fs": 12,
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 0,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "icon_view_all": "",
+        "color_view_all_icon": "#eb492f",
+        "view_all_icon_side": "left",
+        "btn_text": "",
+        "fontsize_btn": 12,
+        "btn_spacing_top": 15,
+        "btn_color": "#828282",
+        "btn_link": "",
+        "enable_autoplay": false,
+        "brand_speed": "3000",
+        "brand_rows": "5",
+        "enable_arrows": true,
+        "enable_dots": false,
+        "enable_center_mode": false,
+        "style_position_arrows": "none",
+        "position_horizontal_arrow": 15,
+        "color_arrow": "",
+        "arrow_background": "",
+        "arrow_background_gradient": "",
+        "arrow_border": "",
+        "color_arrow_hover": "",
+        "arrow_background_hover": "",
+        "arrow_background_gradient_hover": "",
+        "arrow_border_hover": "",
+        "brand_rows_mb": "1",
+        "brand_image_ratio": "square",
+        "item_distance": 15,
+        "margin_bottom_image": 0,
+        "brand_item_border": "none",
+        "border_radius": 0,
+        "border_color": "#e2e5e7",
+        "border_color_hover": "#2d2d2d",
+        "hover_effect": "zoom",
+        "color_underline_image_hover": "#000000",
+        "fontsize_text": 16,
+        "fontsize_text_mb": 13,
+        "font_weight_title": "400",
+        "margin_bottom_title": 0,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
+    "faqs_pXMWKc": {
+      "type": "faqs",
+      "blocks": {
+        "question_item_bUnm8C": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q1：How Can I get all the free gifts during this event?",
+            "unswer_text": "A：If your order meets the requirements of our promotion, the free gifts will be automatically added to your shopping cart until you reach the checkout page. If you don't see it, please contact our customer service for assistance.  eu.support@crealityfalcon.com",
+            "is_open": true
+          }
+        },
+        "question_item_FmDkEC": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q2：What payment methods do you accept?",
+            "unswer_text": "A：We accept a variety of payment methods including credit cards, shop pay, PayPal and more. You can choose the payment method that works best for you at checkout.",
+            "is_open": false
+          }
+        },
+        "question_item_eCrp4Y": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q3：How long does shipment normally take?",
+            "unswer_text": "A：Due to high order volume, we typically ship packages within 48 hours.",
+            "is_open": false
+          }
+        },
+        "question_item_QWPGJg": {
+          "type": "question_item",
+          "settings": {
+            "question_text": "Q4：Can I engrave on reflective/transparent materials such as ceramic/glass?",
+            "unswer_text": "A：Yes, but you need to coat the surface of the material with anti-reflective material before engraving to ensure the engraving effect and prevent the reflected light from damaging the laser module.",
+            "is_open": false
+          }
+        }
+      },
+      "block_order": [
+        "question_item_bUnm8C",
+        "question_item_FmDkEC",
+        "question_item_eCrp4Y",
+        "question_item_QWPGJg"
+      ],
+      "settings": {
+        "ques_background_color": "linear-gradient(45deg, #2B4BBD, #75A7D8)",
+        "ques_title": "Event FAQs",
+        "text_color": "#000000",
+        "border_color": "#333333",
+        "arrow_color": "#14a9de"
+      }
+    },
+    "tips_text_KpDkH4": {
+      "type": "tips_text",
+      "settings": {
+        "tips_background_color": "linear-gradient(45deg, #5B79C5, #9DC4D7)",
+        "tips_title": "Event Details and Terms:",
+        "tips_text": "1. From June 15th to June 30th, sign up for our newsletter and receive a free gift of plywood. Limit one gift per order.\n<br><br>2. Customers who purchase from the CrealityFalcon official website (crealityfalcon.com) will enjoy a price guarantee within 30 days for this promotion.\n<br><br>3. All discounted products are eligible for quality assurance and enjoy the same warranty service.",
+        "text_color": "#000000"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ufea_euro_BFjXpV",
+    "shops_card1_FAyKkx",
+    "product_tab_block_JjJLzk",
+    "shops_card2_rPyd79",
+    "shops_card3_6jCjdC",
+    "brand_slider_ipDJwT",
+    "faqs_pXMWKc",
+    "tips_text_KpDkH4"
+  ]
+}
