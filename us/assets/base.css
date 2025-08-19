@@ -172,7 +172,7 @@ option.soldout {
 
     .template-index .wrapper-body {
         padding-bottom: 0px;
-        overflow: hidden;
+        overflow: visible;
     }
 
     .template-index.style-arrows-5 .wrapper-body {

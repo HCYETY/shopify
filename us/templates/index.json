@@ -16,8 +16,8 @@
         "image_EkifAa": {
           "type": "image",
           "settings": {
-            "image_slide": "shopify://shop_images/A1P-PC.png",
-            "image_slide_mb": "shopify://shop_images/A1P-M.png",
+            "image_slide": "shopify://shop_images/A1pro_banner_pc_8f6ab3d4-686e-4cf1-ac37-75cd7a1c1b81.jpg",
+            "image_slide_mb": "shopify://shop_images/A1pro_banner_m_d04b499b-2a57-4b39-ace5-0f7d9fb7afaf.jpg",
             "alignment": "left",
             "enable_custom_position": false,
             "custom_horizontal": "",
@@ -58,11 +58,11 @@
             "font_size_heading": 40,
             "line_height_heading": 40,
             "heading_spacing_bottom": 8,
-            "color_heading": "#232323",
+            "color_heading": "#ffffff",
             "slide-des": "",
             "font_size_des": 12,
             "des_spacing_bottom": 35,
-            "color_des": "#232323",
+            "color_des": "#ffffff",
             "sub_heading_mb": "",
             "font_size_sub_heading_mb": 20,
             "sub_heading_spacing_bottom_mb": 20,
@@ -88,10 +88,10 @@
             "button_style": "button_1",
             "button_slide_2": "",
             "link_2": "",
-            "min_width_banner_button": 270,
-            "color_button": "#ffffff",
-            "border_button": "#232323",
-            "bg_button": "#232323",
+            "min_width_banner_button": 100,
+            "color_button": "#232323",
+            "border_button": "#ffffff",
+            "bg_button": "#ffffff",
             "bg_button_gradient": "",
             "color_button_hover": "#ffffff",
             "border_button_hover": "#232323",
@@ -680,9 +680,9 @@
       "settings": {
         "products": [
           "falcon-a1-10w-enclosed-laser-engraver-and-cutter",
-          "low-wattage-laser-engraver-cutter-cr-falcon-10w-machine",
-          "falcon2-22w-laser-engraver-cutter",
-          "falcon-2-pro-40w-enclosed-laser-engraver-and-cutter"
+          "falcon-a1-pro-20w-dual-laser-engraver",
+          "falcon-2-pro-40w-enclosed-laser-engraver-and-cutter",
+          "laser-engraver-cutter-falcon2-40w-engraving-machine"
         ],
         "title": "Best Selling Products"
       }

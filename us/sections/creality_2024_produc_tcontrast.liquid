@@ -985,7 +985,7 @@
 let navHeight = 0;
 $(document).ready(function () {
   // 获取顶部导航栏的高度
-  navHeight = $("#MainContent").offset().top;
+  navHeight = $(".header-wrap").offset().top;
 
 if (navHeight > 0) {
   // 设置 contrast-header 的 top 值
