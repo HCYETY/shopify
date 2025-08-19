@@ -19,7 +19,7 @@
       "blocks": {
         "products_tcontrast_K34MqA": {
           "type": "products-tcontrast",
-          "name": "Pro 60W",
+          "name": "Falcon2 Pro 60W",
           "settings": {
             "item_hyperlink": "https://www.crealityfalcon.com/products/falcon2-pro-60w-enclosed-laser-cutter-and-engraver",
             "item_image": "https://www.crealityfalcon.com/cdn/shop/files/60W_png.png?v=1752910879",
@@ -34,8 +34,8 @@
             "transparent_acrylic": "30mm (60w Diode laser)",
             "engraving_area": "400mm*400mm",
             "laser_spot": "0.08*0.15mm (60w Diode laser)",
-            "ai_camera": "√",
-            "enclosed": "√",
+            "ai_camera": "✅",
+            "enclosed": "✅",
             "laser_wavelength": "455±5nm",
             "laser_class": "Class 1(FDA)",
             "certifications": "FDA、CE、ROHS、FCC、PSE",
@@ -48,16 +48,16 @@
             "accessories": "-",
             "star_rating": "5",
             "comment": "85",
-            "copywriting": "World's First 60W Enclosed Safety Laser Cutter: Three Smart Adjustable Power!"
+            "copywriting": ""
           }
         },
         "products_tcontrast_AHzi7x": {
           "type": "products-tcontrast",
-          "name": "Pro 40W",
+          "name": "Falcon2 Pro 40W",
           "settings": {
             "item_hyperlink": "https://www.crealityfalcon.com/products/falcon2-pro-40w-enclosed-laser-engraver-and-cutter-basic-kits-for-wood-engraving",
             "item_image": "https://www.crealityfalcon.com/cdn/shop/files/pro_40W_png.png?v=1752910879",
-            "item_title": "Falcon2 Pro",
+            "item_title": "Falcon2 Pro 40W",
             "item_id": "44872797913247",
             "price_currency": "$",
             "key_point": "<li>Efficient Work, Safety First</li>",
@@ -68,8 +68,8 @@
             "transparent_acrylic": "30mm (40w Diode laser)",
             "engraving_area": "400mm*415mm",
             "laser_spot": "0.08*0.12mm (40w Diode laser)",
-            "ai_camera": "√",
-            "enclosed": "√",
+            "ai_camera": "✅",
+            "enclosed": "✅",
             "laser_wavelength": "455±5nm",
             "laser_class": "Class 1(FDA)",
             "certifications": "FDA、CE、ROHS、FCC、PSE",
@@ -82,15 +82,16 @@
             "accessories": "-",
             "star_rating": "5",
             "comment": "99",
-            "copywriting": "Enclosed 40W Laser Engraver, Two Smart Adjustable Power"
+            "copywriting": ""
           }
         },
         "products_tcontrast_7agyzM": {
           "type": "products-tcontrast",
+          "name": "Falcon2 Pro 22W",
           "settings": {
             "item_hyperlink": "https://www.crealityfalcon.com/products/falcon-2-pro-40w-enclosed-laser-engraver-and-cutter",
             "item_image": "https://www.crealityfalcon.com/cdn/shop/files/pro_22W_png.png?v=1752910879",
-            "item_title": "Falcon2 Pro",
+            "item_title": "Falcon2 Pro 22W",
             "item_id": "44872797913247",
             "price_currency": "$",
             "key_point": "<li>Efficient Work, Safety First</li>",
@@ -101,8 +102,8 @@
             "transparent_acrylic": "10mm",
             "engraving_area": "400mm*415mm",
             "laser_spot": "0.08*0.1mm",
-            "ai_camera": "√",
-            "enclosed": "√",
+            "ai_camera": "✅",
+            "enclosed": "✅",
             "laser_wavelength": "455±5nm",
             "laser_class": "Class 1(FDA)",
             "certifications": "FDA、CE、ROHS、FCC、PSE",
@@ -115,15 +116,16 @@
             "accessories": "",
             "star_rating": "5",
             "comment": "102",
-            "copywriting": "The Most Cost-effective Fully Enclosed 22W Laser Engraver"
+            "copywriting": ""
           }
         },
         "products_tcontrast_CrtmF6": {
           "type": "products-tcontrast",
+          "name": "Falcon2 40W",
           "settings": {
             "item_hyperlink": "https://www.crealityfalcon.com/products/laser-engraver-cutter-falcon2-40w-engraving-machine",
             "item_image": "https://www.crealityfalcon.com/cdn/shop/files/Falcon2_40W.png?v=1752549077",
-            "item_title": "Falcon2",
+            "item_title": "Falcon2 40W",
             "item_id": "44895330631839",
             "price_currency": "$",
             "key_point": "<li>Mightyly but Precise</li>",
@@ -134,8 +136,8 @@
             "transparent_acrylic": "30mm",
             "engraving_area": "400mm*415mm",
             "laser_spot": "0.08*0.12mm",
-            "ai_camera": "×",
-            "enclosed": "× Compatible with Falcon Enclosure",
+            "ai_camera": "❌",
+            "enclosed": "❌",
             "laser_wavelength": "455±5nm",
             "laser_class": "Class 4(FDA)",
             "certifications": "-",
@@ -148,15 +150,16 @@
             "accessories": "",
             "star_rating": "5",
             "comment": "178",
-            "copywriting": "Multiple Laser Modules, Advanced Cutting for Thicker, Create More"
+            "copywriting": ""
           }
         },
         "products_tcontrast_WerYBc": {
           "type": "products-tcontrast",
+          "name": "Falcon2 22W",
           "settings": {
             "item_hyperlink": "https://www.crealityfalcon.com/collections/engravers/products/falcon2-22w-laser-engraver-cutter",
             "item_image": "https://cdn.shopify.com/s/files/1/0630/7522/1663/files/1crealityfalcon222w.png?v=1714299413",
-            "item_title": "Falcon2",
+            "item_title": "Falcon2 22W",
             "item_id": "44895330631839",
             "price_currency": "$",
             "key_point": "<li>Mightyly but Precise</li>",
@@ -167,8 +170,8 @@
             "transparent_acrylic": "10mm",
             "engraving_area": "400mm*415mm",
             "laser_spot": "0.08*0.1mm",
-            "ai_camera": "×",
-            "enclosed": "× Compatible with Falcon Enclosure",
+            "ai_camera": "❌",
+            "enclosed": "❌",
             "laser_wavelength": "455±5nm",
             "laser_class": "Class 4(FDA)",
             "certifications": "FDA、CE、ROHS、FCC、PSE",
@@ -181,15 +184,16 @@
             "accessories": "-",
             "star_rating": "5",
             "comment": "311",
-            "copywriting": "Most Affordable and Beginner-Friendly 22W Laser Engraver"
+            "copywriting": ""
           }
         },
         "products_tcontrast_HJ8pKP": {
           "type": "products-tcontrast",
+          "name": "CR 12W",
           "settings": {
-            "item_hyperlink": "https://www.crealityfalcon.com/products/low-wattage-laser-engraver-cutter-falcon-pro-10w",
+            "item_hyperlink": "https://www.crealityfalcon.com/collections/engravers",
             "item_image": "https://eu.crealityfalcon.com/cdn/shop/files/1crealityfalcon212w.jpg?v=1714297020",
-            "item_title": "Falcon2",
+            "item_title": "CR 12W",
             "item_id": "44895330631839",
             "price_currency": "$",
             "key_point": "<li>Mightyly but Precise</li>",
@@ -200,8 +204,8 @@
             "transparent_acrylic": "30mm",
             "engraving_area": "400mm*415mm",
             "laser_spot": "0.06*0.08mm",
-            "ai_camera": "×",
-            "enclosed": "× Compatible with Falcon Enclosure",
+            "ai_camera": "❌",
+            "enclosed": "❌",
             "laser_wavelength": "455±5nm",
             "laser_class": "Class 4(FDA)",
             "certifications": "-",
@@ -214,15 +218,16 @@
             "accessories": "",
             "star_rating": "5",
             "comment": "109",
-            "copywriting": "12W Multiple Laser Modules, Advanced Cutting for Thicker"
+            "copywriting": ""
           }
         },
         "products_tcontrast_e8jjnQ": {
           "type": "products-tcontrast",
+          "name": "CR Pro 10W",
           "settings": {
-            "item_hyperlink": "https://www.crealityfalcon.com/products/low-wattage-laser-engraver-cutter-falcon-pro-10w",
+            "item_hyperlink": "https://www.crealityfalcon.com/collections/engravers",
             "item_image": "https://eu.crealityfalcon.com/cdn/shop/files/2crealityfalconpro10w.jpg?v=1714296628",
-            "item_title": "Falcon Pro",
+            "item_title": "CR Pro 10W",
             "item_id": "44728271569055",
             "price_currency": "$",
             "key_point": "<li>Budget-friendly, entry-level laser for hobbyists and beginners\t\t\t</li>",
@@ -233,8 +238,8 @@
             "transparent_acrylic": "9.6mm",
             "engraving_area": "400mm*415mm",
             "laser_spot": "0.06*0.08mm",
-            "ai_camera": "×",
-            "enclosed": "× Compatible with Falcon Enclosure",
+            "ai_camera": "❌",
+            "enclosed": "❌",
             "laser_wavelength": "455±5nm",
             "laser_class": "Class 4 (FDA)",
             "certifications": "FDA、CE、ROHS、FCC、PSE",
@@ -247,15 +252,16 @@
             "accessories": "",
             "star_rating": "5",
             "comment": "66",
-            "copywriting": "Budget-friendly, Entry-level Laser for Hobbyists and Beginners"
+            "copywriting": ""
           }
         },
         "products_tcontrast_EpLPij": {
           "type": "products-tcontrast",
+          "name": "CR 10W",
           "settings": {
             "item_hyperlink": "https://www.crealityfalcon.com/products/low-wattage-laser-engraver-cutter-cr-falcon-10w-machine",
             "item_image": "https://eu.crealityfalcon.com/cdn/shop/files/Falcon10W.jpg?v=1724634232",
-            "item_title": "CR-Laser Falcon",
+            "item_title": "CR 10W",
             "item_id": "44728271569055",
             "price_currency": "$",
             "key_point": "<li>Budget-friendly, entry-level laser for hobbyists and beginners\t\t\t</li>",
@@ -266,8 +272,8 @@
             "transparent_acrylic": "9.6mm",
             "engraving_area": "400mm*415mm",
             "laser_spot": "0.06*0.08mm",
-            "ai_camera": "×",
-            "enclosed": "× Compatible with Falcon Enclosure",
+            "ai_camera": "❌",
+            "enclosed": "❌",
             "laser_wavelength": "455±5nm",
             "laser_class": "Class 4 (FDA)",
             "certifications": "FDA、CE、ROHS、FCC、PSE",
@@ -280,15 +286,16 @@
             "accessories": "",
             "star_rating": "5",
             "comment": "102",
-            "copywriting": "Ultra Accurate and Fast Laser Engraver"
+            "copywriting": ""
           }
         },
         "products_tcontrast_Ba39tE": {
           "type": "products-tcontrast",
+          "name": "CR 5W",
           "settings": {
             "item_hyperlink": "https://www.crealityfalcon.com/products/low-wattage-laser-engraver-cutter-cr-falcon-5w",
-            "item_image": "https://eu.crealityfalcon.com/cdn/shop/files/1crealityfalcon7.5w.jpg?v=1714296298",
-            "item_title": "CR-Laser Falcon",
+            "item_image": "https://www.crealityfalcon.com/cdn/shop/files/5W_png.png?v=1747303621",
+            "item_title": "CR 5W",
             "item_id": "44728271569055",
             "price_currency": "$",
             "key_point": "<li>Budget-friendly, entry-level laser for hobbyists and beginners\t\t\t</li>",
@@ -299,8 +306,8 @@
             "transparent_acrylic": "9.6mm",
             "engraving_area": "400mm*415mm",
             "laser_spot": "0.06*0.08mm",
-            "ai_camera": "×",
-            "enclosed": "× Compatible with Falcon Enclosure",
+            "ai_camera": "❌",
+            "enclosed": "❌",
             "laser_wavelength": "455±5nm",
             "laser_class": "Class 4 (FDA)",
             "certifications": "FDA、CE、ROHS、FCC、PSE",
@@ -313,74 +320,7 @@
             "accessories": "-",
             "star_rating": "5",
             "comment": "55",
-            "copywriting": "Budget-friendly, Entry-level Laser for Hobbyists and Beginners"
-          }
-        },
-        "products_tcontrast_LV7da9": {
-          "type": "products-tcontrast",
-          "settings": {
-            "item_hyperlink": "https://www.crealityfalcon.com/products/low-wattage-laser-engraver-cutter-cr-falcon-5w",
-            "item_image": "https://www.crealityfalcon.com/cdn/shop/files/1crealityfalcon10w.jpg?v=1714295966",
-            "item_title": "CR-Laser Falcon",
-            "item_id": "44728271569055",
-            "price_currency": "$",
-            "key_point": "<li>Budget-friendly, entry-level laser for hobbyists and beginners\t\t\t</li>",
-            "key_features": "<li>Engraving and cutting, safer and easier </li><li>Engraving and cutting balance are common in daily creations. </li><li> Multiple safety measures: emergency stop, safety lock, abnormal stop. </li><li>Air assist keeps creations smooth and clean.</li>",
-            "laser_type": "Diode Laser",
-            "optical_power": "5W",
-            "bsswood": "3mm",
-            "transparent_acrylic": "-",
-            "engraving_area": "400mm*415mm",
-            "laser_spot": "0.06*0.06mm",
-            "ai_camera": "×",
-            "enclosed": "× Compatible with Falcon Enclosure",
-            "laser_wavelength": "455±5nm",
-            "laser_class": "Class 1(FDA)",
-            "certifications": "FDA、CE、ROHS、FCC、PSE",
-            "gross_weight": "4.8kg",
-            "package_size": "615*310*195mm",
-            "laser_engraving_software": "LightBurn、LaserGRBL",
-            "operating_system": "Windows/MacOS",
-            "cuttable_materials": "Paper, Wood, Leather, MDF, Felt, Some Dark Opaque Acrylic",
-            "engravable_materials": "Paper, Wood, Leather, MDF, Stainless steel, Some dark opaque acrylic, Bamboo, Fabric, Dark glass, Ceramic, Jade, Marble, Shale, Cement, Brick, Plated metal, Painted metal",
-            "accessories": "",
-            "star_rating": "5",
-            "comment": "200",
-            "copywriting": "Pre-assembled for Easy Start, Easy Entry into Laser Engraving"
-          }
-        },
-        "products_tcontrast_GdGPay": {
-          "type": "products-tcontrast",
-          "disabled": true,
-          "settings": {
-            "item_hyperlink": "https://www.crealityfalcon.com/products/creality-falcon-2-pro-enclosed-laser-engraver?variant=47669864562985",
-            "item_image": "https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/CR-Laser_Falcon__614_384.png?v=1721805382",
-            "item_title": "CR-Laser Falcon",
-            "item_id": "47669864562985",
-            "price_currency": "€",
-            "key_point": "<li>Budget-friendly, entry-level laser for hobbyists and beginners\t\t\t</li>",
-            "key_features": "<li>Engraving and cutting, safer and easier </li><li>Engraving and cutting balance are common in daily creations. </li><li> Multiple safety measures: emergency stop, safety lock, abnormal stop. </li><li>Air assist keeps creations smooth and clean.</li>",
-            "laser_type": "Diode Laser",
-            "optical_power": "10W",
-            "bsswood": "-",
-            "transparent_acrylic": "-",
-            "engraving_area": "400mm*415mm",
-            "laser_spot": "0.06*0.08mm",
-            "ai_camera": "×",
-            "enclosed": "× Compatible with Falcon Enclosure",
-            "laser_wavelength": "455±5nm",
-            "laser_class": "Class 4 (FDA)",
-            "certifications": "IEC60825、FDA、CE、ROHS、FCC、UKCA、UL Report、PSE",
-            "gross_weight": "4.8kg",
-            "package_size": "615*310*195mm",
-            "laser_engraving_software": "LightBurn、LaserGRBL",
-            "operating_system": "Windows/MacOS",
-            "cuttable_materials": "Paper, Wood, Leather, MDF, Felt, Some dark opaque acrylic",
-            "engravable_materials": "Paper, Wood, Leather, MDF, Stainless steel, Some dark opaque acrylic, Bamboo, Fabric, Dark glass, Ceramic, Jade, Marble, Shale, Cement, Brick, Plated metal, Painted metal",
-            "accessories": "-",
-            "star_rating": "5",
-            "comment": "0",
-            "copywriting": "editableCopyEditableCopyEditableCopyEditableCopyEditableCopy"
+            "copywriting": ""
           }
         }
       },
@@ -393,9 +333,7 @@
         "products_tcontrast_HJ8pKP",
         "products_tcontrast_e8jjnQ",
         "products_tcontrast_EpLPij",
-        "products_tcontrast_Ba39tE",
-        "products_tcontrast_LV7da9",
-        "products_tcontrast_GdGPay"
+        "products_tcontrast_Ba39tE"
       ],
       "name": "产品对比",
       "settings": {

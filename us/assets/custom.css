@@ -134,3 +134,6 @@
     flex-wrap: wrap;
   }
 }
+.slide-content .slide-sub span{
+      color: var(--slide-sub-color-style);
+}
