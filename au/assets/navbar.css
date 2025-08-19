@@ -1,7 +1,7 @@
 .section-nav-bar {
   position: sticky;
   top: 60px;
-  z-index: 130;
+  z-index: 89;
   box-sizing: border-box;
   transition: all 0.3s ease;
 }
@@ -48,16 +48,9 @@
   z-index: 2;
 }
 
-.section-nav-bar .nav-bar .nav-bar-item-text {
-  position: relative;
-  z-index: 3;
-  transition: color 0.3s ease;
-}
-
-
 .section-nav-bar .nav-bar .nav-bar-item.active {
-  font-weight: 600;
-  transform: translateY(-1px);
+  /* font-weight: 600; */
+  /* transform: translateY(-1px); */
 }
 
 /* 滑动指示线 */
@@ -85,22 +78,12 @@
     padding: 0 16px;
     justify-content: flex-start;
   }
-
-  .section-nav-bar .nav-bar .nav-bar-item {
-    padding: 10px 12px;
-    font-size: 14px;
-  }
 }
 
 @media screen and (max-width: 480px) {
   .section-nav-bar .nav-bar-container {
     gap: 28px;
     padding: 0 12px;
-  }
-
-  .section-nav-bar .nav-bar .nav-bar-item {
-    padding: 8px 0;
-    font-size: 13px;
   }
 }
 
@@ -172,11 +155,6 @@
 .section-nav-bar .nav-bar .nav-bar-item:focus {
   outline: 2px solid rgba(0, 123, 255, 0.5);
   outline-offset: 2px;
-}
-
-/* 悬停时的微动画 */
-.section-nav-bar .nav-bar .nav-bar-item:hover .nav-bar-item-text {
-  transform: scale(1.02);
 }
 
 /* 加载状态 */
