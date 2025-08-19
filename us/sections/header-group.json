@@ -105,6 +105,7 @@
       "blocks": {
         "announcement_8gedGD": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "<a href=\"https://www.crealityfalcon.com/collections/materials\" style=\"color: #000; font-weight: bold; text-decoration: none;\">\n   🎉 Buy 10+ Materials → Get <span style=\"color:#ff4d00;\">20% OFF</span> Automatically at Checkout!\n</a>",
             "btn_color": "#232323",
