@@ -1,0 +1,812 @@
+{% doc %}
+  @prompt
+    Create a customizable section with a main section title to display top 3 featured items or products in a row on desktop with constrained width (not full width). Each product should include a responsive product image that adapts to different devices, product title, individual product description, price, compare-at price (crossed out), and call-to-action button styled as cards. The section should have settings to adjust the section width with contained/constrained layout options. Include a customizable section title/heading at the top. The product images should be responsive and change size/aspect ratio based on the device. On mobile devices, the three items should display as a horizontal slider/carousel with swipe functionality using card-style design. Make it responsive and include customization options for colors, fonts, and styling.
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-featured-products-{{ ai_gen_id }} {
+    padding: 60px 20px;
+    background-color: {{ block.settings.section_bg_color }};
+  }
+
+  .ai-featured-products-container-{{ ai_gen_id }} {
+    max-width: {% if block.settings.section_width == 'contained' %}1200px{% else %}100%{% endif %};
+    margin: 0 auto;
+  }
+
+  .ai-featured-products-heading-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    font-weight: 600;
+  }
+
+  .ai-featured-products-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .ai-featured-product-card-{{ ai_gen_id }} {
+    background-color: {{ block.settings.card_bg_color }};
+    border-radius: {{ block.settings.card_border_radius }}px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .ai-featured-product-card-{{ ai_gen_id }}:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .ai-featured-product-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-featured-product-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-featured-product-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-featured-product-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-featured-product-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+  }
+
+  .ai-featured-product-content-{{ ai_gen_id }} {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ai-featured-product-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.product_title_size }}px;
+    color: {{ block.settings.product_title_color }};
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .ai-featured-product-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.product_description_size }}px;
+    color: {{ block.settings.product_description_color }};
+    margin-bottom: 15px;
+    line-height: 1.5;
+    flex-grow: 1;
+  }
+
+  .ai-featured-product-price-wrapper-{{ ai_gen_id }} {
+    margin-bottom: 20px;
+  }
+
+  .ai-featured-product-price-{{ ai_gen_id }} {
+    font-size: {{ block.settings.price_size }}px;
+    color: {{ block.settings.price_color }};
+    font-weight: 700;
+    margin-right: 10px;
+  }
+
+  .ai-featured-product-compare-price-{{ ai_gen_id }} {
+    font-size: {{ block.settings.compare_price_size }}px;
+    color: {{ block.settings.compare_price_color }};
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+
+  .ai-featured-product-button-{{ ai_gen_id }} {
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    border: none;
+    padding: 12px 24px;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_text_size }}px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+  }
+
+  .ai-featured-product-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_bg_color }};
+  }
+
+  .ai-featured-products-slider-{{ ai_gen_id }} {
+    display: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+    padding: 0 20px 20px;
+  }
+
+  .ai-featured-products-slider-{{ ai_gen_id }}::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ai-featured-products-slider-{{ ai_gen_id }} {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .ai-featured-product-slide-{{ ai_gen_id }} {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-featured-products-{{ ai_gen_id }} {
+      padding: 40px 0;
+    }
+
+    .ai-featured-products-heading-{{ ai_gen_id }} {
+      margin-bottom: 30px;
+      padding: 0 20px;
+    }
+
+    .ai-featured-products-grid-{{ ai_gen_id }} {
+      display: none;
+    }
+
+    .ai-featured-products-slider-{{ ai_gen_id }} {
+      display: flex;
+    }
+
+    .ai-featured-product-image-wrapper-{{ ai_gen_id }} {
+      aspect-ratio: 4/3;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ai-featured-product-slide-{{ ai_gen_id }} {
+      flex: 0 0 250px;
+    }
+  }
+{% endstyle %}
+
+<featured-products-{{ ai_gen_id }}
+  class="ai-featured-products-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-featured-products-container-{{ ai_gen_id }}">
+    {% if block.settings.section_heading != blank %}
+      <h2 class="ai-featured-products-heading-{{ ai_gen_id }}">
+        {{ block.settings.section_heading }}
+      </h2>
+    {% endif %}
+
+    <div class="ai-featured-products-grid-{{ ai_gen_id }}">
+      {% for i in (1..3) %}
+        {% liquid
+          assign product_key = 'product_' | append: i
+          assign title_key = 'product_' | append: i | append: '_title'
+          assign description_key = 'product_' | append: i | append: '_description'
+          assign price_key = 'product_' | append: i | append: '_price'
+          assign compare_price_key = 'product_' | append: i | append: '_compare_price'
+          assign button_text_key = 'product_' | append: i | append: '_button_text'
+          assign button_link_key = 'product_' | append: i | append: '_button_link'
+
+          assign product = block.settings[product_key]
+          assign custom_title = block.settings[title_key]
+          assign custom_description = block.settings[description_key]
+          assign custom_price = block.settings[price_key]
+          assign custom_compare_price = block.settings[compare_price_key]
+          assign button_text = block.settings[button_text_key]
+          assign button_link = block.settings[button_link_key]
+
+          if custom_title != blank
+            assign display_title = custom_title
+          elsif product != blank
+            assign display_title = product.title
+          else
+            assign display_title = 'Product Title'
+          endif
+
+          if custom_description != blank
+            assign display_description = custom_description
+          elsif product != blank
+            assign display_description = product.description | truncate: 120
+          else
+            assign display_description = 'Add a product description here.'
+          endif
+
+          if custom_price != blank
+            assign display_price = custom_price
+          elsif product != blank
+            assign display_price = product.price | money
+          else
+            assign display_price = '$0.00'
+          endif
+
+          if custom_compare_price != blank
+            assign display_compare_price = custom_compare_price
+          elsif product != blank and product.compare_at_price > product.price
+            assign display_compare_price = product.compare_at_price | money
+          else
+            assign display_compare_price = ''
+          endif
+
+          if button_text != blank
+            assign display_button_text = button_text
+          else
+            assign display_button_text = 'Shop Now'
+          endif
+
+          if button_link != blank
+            assign display_button_link = button_link
+          elsif product != blank
+            assign display_button_link = product.url
+          else
+            assign display_button_link = '#'
+          endif
+        %}
+
+        <div class="ai-featured-product-card-{{ ai_gen_id }}"><div class="ai-featured-product-image-wrapper-{{ ai_gen_id }}">
+            {% if product != blank and product.featured_image %}
+              <img
+                src="{{ product.featured_image | image_url: width: 400 }}"
+                alt="{{ product.featured_image.alt | escape }}"
+                class="ai-featured-product-image-{{ ai_gen_id }}"
+                loading="lazy"
+                width="400"
+                height="400"
+              >
+            {% else %}
+              <div class="ai-featured-product-placeholder-{{ ai_gen_id }}">
+                {{ 'product-apparel-1' | placeholder_svg_tag }}
+                <div class="ai-featured-product-empty-state-{{ ai_gen_id }}">
+                  Add product {{ i }}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="ai-featured-product-content-{{ ai_gen_id }}">
+            <h3 class="ai-featured-product-title-{{ ai_gen_id }}">
+              {{ display_title }}
+            </h3><p class="ai-featured-product-description-{{ ai_gen_id }}">
+              {{ display_description }}
+            </p>
+
+            <div class="ai-featured-product-price-wrapper-{{ ai_gen_id }}"><span class="ai-featured-product-price-{{ ai_gen_id }}">
+                {{ display_price }}
+              </span>
+              {% if display_compare_price != blank %}
+                <span class="ai-featured-product-compare-price-{{ ai_gen_id }}">
+                  {{ display_compare_price }}
+                </span>
+              {% endif %}
+            </div>
+
+            <a
+              href="{{ display_button_link }}"
+              class="ai-featured-product-button-{{ ai_gen_id }}"
+            >
+              {{ display_button_text }}
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="ai-featured-products-slider-{{ ai_gen_id }}">
+      {% for i in (1..3) %}
+        {% liquid
+          assign product_key = 'product_' | append: i
+          assign title_key = 'product_' | append: i | append: '_title'
+          assign description_key = 'product_' | append: i | append: '_description'
+          assign price_key = 'product_' | append: i | append: '_price'
+          assign compare_price_key = 'product_' | append: i | append: '_compare_price'
+          assign button_text_key = 'product_' | append: i | append: '_button_text'
+          assign button_link_key = 'product_' | append: i | append: '_button_link'
+
+          assign product = block.settings[product_key]
+          assign custom_title = block.settings[title_key]
+          assign custom_description = block.settings[description_key]
+          assign custom_price = block.settings[price_key]
+          assign custom_compare_price = block.settings[compare_price_key]
+          assign button_text = block.settings[button_text_key]
+          assign button_link = block.settings[button_link_key]
+
+          if custom_title != blank
+            assign display_title = custom_title
+          elsif product != blank
+            assign display_title = product.title
+          else
+            assign display_title = 'Product Title'
+          endif
+
+          if custom_description != blank
+            assign display_description = custom_description
+          elsif product != blank
+            assign display_description = product.description | truncate: 100
+          else
+            assign display_description = 'Add a product description here.'
+          endif
+
+          if custom_price != blank
+            assign display_price = custom_price
+          elsif product != blank
+            assign display_price = product.price | money
+          else
+            assign display_price = '$0.00'
+          endif
+
+          if custom_compare_price != blank
+            assign display_compare_price = custom_compare_price
+          elsif product != blank and product.compare_at_price > product.price
+            assign display_compare_price = product.compare_at_price | money
+          else
+            assign display_compare_price = ''
+          endif
+
+          if button_text != blank
+            assign display_button_text = button_text
+          else
+            assign display_button_text = 'Shop Now'
+          endif
+
+          if button_link != blank
+            assign display_button_link = button_link
+          elsif product != blank
+            assign display_button_link = product.url
+          else
+            assign display_button_link = '#'
+          endif
+        %}
+
+        <div class="ai-featured-product-slide-{{ ai_gen_id }}">
+          <div class="ai-featured-product-card-{{ ai_gen_id }}">
+            <div class="ai-featured-product-image-wrapper-{{ ai_gen_id }}">
+              {% if product != blank and product.featured_image %}
+                <img
+                  src="{{ product.featured_image | image_url: width: 300 }}"
+                  alt="{{ product.featured_image.alt | escape }}"
+                  class="ai-featured-product-image-{{ ai_gen_id }}"
+                  loading="lazy"
+                  width="300"
+                  height="225"
+                >
+              {% else %}
+                <div class="ai-featured-product-placeholder-{{ ai_gen_id }}">
+                  {{ 'product-apparel-1' | placeholder_svg_tag }}
+                  <div class="ai-featured-product-empty-state-{{ ai_gen_id }}">
+                    Add product {{ i }}
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="ai-featured-product-content-{{ ai_gen_id }}">
+              <h3 class="ai-featured-product-title-{{ ai_gen_id }}">
+                {{ display_title }}
+              </h3>
+
+              <p class="ai-featured-product-description-{{ ai_gen_id }}">
+                {{ display_description }}
+              </p>
+
+              <div class="ai-featured-product-price-wrapper-{{ ai_gen_id }}">
+                <span class="ai-featured-product-price-{{ ai_gen_id }}">
+                  {{ display_price }}
+                </span>
+                {% if display_compare_price != blank %}
+                  <span class="ai-featured-product-compare-price-{{ ai_gen_id }}">
+                    {{ display_compare_price }}
+                  </span>
+                {% endif %}
+              </div>
+
+              <a
+                href="{{ display_button_link }}"
+                class="ai-featured-product-button-{{ ai_gen_id }}"
+              >
+                {{ display_button_text }}
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</featured-products-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class FeaturedProducts{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.slider = this.querySelector('.ai-featured-products-slider-{{ ai_gen_id }}');
+        if (this.slider) {
+          this.setupTouchEvents();
+        }
+      }
+
+      setupTouchEvents() {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        this.slider.addEventListener('mousedown', (e) => {
+          isDown = true;
+          startX = e.pageX - this.slider.offsetLeft;
+          scrollLeft = this.slider.scrollLeft;
+        });
+
+        this.slider.addEventListener('mouseleave', () => {
+          isDown = false;
+        });
+
+        this.slider.addEventListener('mouseup', () => {
+          isDown = false;
+        });
+
+        this.slider.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - this.slider.offsetLeft;
+          const walk = (x - startX) * 2;
+          this.slider.scrollLeft = scrollLeft - walk;
+        });
+      }
+    }
+
+    customElements.define('featured-products-{{ ai_gen_id }}', FeaturedProducts{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Featured products",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section heading",
+      "default": "Featured Products"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "options": [
+        {
+          "value": "contained",
+          "label": "Contained"
+        },
+        {
+          "value": "full",
+          "label": "Full width"
+        }
+      ],
+      "default": "contained"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 32
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "product_title_size",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Product title size",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "product_title_color",
+      "label": "Product title color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "product_description_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Description size",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "product_description_color",
+      "label": "Description color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "price_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Price size",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "compare_price_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Compare price size",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "compare_price_color",
+      "label": "Compare price color",
+      "default": "#999999"
+    },
+    {
+      "type": "header",
+      "content": "Card style"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Card border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Button hover background",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Button text size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Product 1"
+    },
+    {
+      "type": "product",
+      "id": "product_1",
+      "label": "Product"
+    },
+    {
+      "type": "text",
+      "id": "product_1_title",
+      "label": "Custom title"
+    },
+    {
+      "type": "textarea",
+      "id": "product_1_description",
+      "label": "Custom description"
+    },
+    {
+      "type": "text",
+      "id": "product_1_price",
+      "label": "Custom price"
+    },
+    {
+      "type": "text",
+      "id": "product_1_compare_price",
+      "label": "Custom compare price"
+    },
+    {
+      "type": "text",
+      "id": "product_1_button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "product_1_button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Product 2"
+    },
+    {
+      "type": "product",
+      "id": "product_2",
+      "label": "Product"
+    },
+    {
+      "type": "text",
+      "id": "product_2_title",
+      "label": "Custom title"
+    },
+    {
+      "type": "textarea",
+      "id": "product_2_description",
+      "label": "Custom description"
+    },
+    {
+      "type": "text",
+      "id": "product_2_price",
+      "label": "Custom price"
+    },
+    {
+      "type": "text",
+      "id": "product_2_compare_price",
+      "label": "Custom compare price"
+    },
+    {
+      "type": "text",
+      "id": "product_2_button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "product_2_button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Product 3"
+    },
+    {
+      "type": "product",
+      "id": "product_3",
+      "label": "Product"
+    },
+    {
+      "type": "text",
+      "id": "product_3_title",
+      "label": "Custom title"
+    },
+    {
+      "type": "textarea",
+      "id": "product_3_description",
+      "label": "Custom description"
+    },
+    {
+      "type": "text",
+      "id": "product_3_price",
+      "label": "Custom price"
+    },
+    {
+      "type": "text",
+      "id": "product_3_compare_price",
+      "label": "Custom compare price"
+    },
+    {
+      "type": "text",
+      "id": "product_3_button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "product_3_button_link",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured products"
+    }
+  ]
+}
+{% endschema %}

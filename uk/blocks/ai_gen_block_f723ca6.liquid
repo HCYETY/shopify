@@ -1,0 +1,610 @@
+{% doc %}
+  @prompt
+    Create an intelligent tab navigation component that automatically detects and grabs the names of existing sections on the page to create clickable tab titles. The component should scan for section headings or titles and generate tabs that allow smooth scrolling navigation to each detected section. Include fallback options for manual configuration if needed.
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-smart-tabs-{{ ai_gen_id }} {
+    position: {{ block.settings.position }};
+    top: {{ block.settings.top_offset }}px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: {{ block.settings.background_color }};
+    border-bottom: 1px solid {{ block.settings.border_color }};
+    padding: {{ block.settings.padding_vertical }}px {{ block.settings.padding_horizontal }}px;
+  }
+
+  .ai-smart-tabs-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: {{ block.settings.tab_spacing }}px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .ai-smart-tabs-container-{{ ai_gen_id }}::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ai-smart-tab-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    padding: {{ block.settings.tab_padding_vertical }}px {{ block.settings.tab_padding_horizontal }}px;
+    background-color: {{ block.settings.tab_background_color }};
+    color: {{ block.settings.tab_text_color }};
+    border: 1px solid {{ block.settings.tab_border_color }};
+    border-radius: {{ block.settings.tab_border_radius }}px;
+    text-decoration: none;
+    font-size: {{ block.settings.tab_font_size }}px;
+    font-weight: {{ block.settings.tab_font_weight }};
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .ai-smart-tab-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.tab_hover_background_color }};
+    color: {{ block.settings.tab_hover_text_color }};
+    border-color: {{ block.settings.tab_hover_border_color }};
+  }
+
+  .ai-smart-tab-{{ ai_gen_id }}.active {
+    background-color: {{ block.settings.tab_active_background_color }};
+    color: {{ block.settings.tab_active_text_color }};
+    border-color: {{ block.settings.tab_active_border_color }};
+  }
+
+  .ai-smart-tabs-fallback-{{ ai_gen_id }} {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    color: {{ block.settings.tab_text_color }};
+    font-style: italic;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-smart-tabs-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_vertical | times: 0.75 }}px {{ block.settings.padding_horizontal | times: 0.75 }}px;
+    }
+
+    .ai-smart-tab-{{ ai_gen_id }} {
+      font-size: {{ block.settings.tab_font_size | times: 0.9 }}px;
+      padding: {{ block.settings.tab_padding_vertical | times: 0.8 }}px {{ block.settings.tab_padding_horizontal | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<smart-tabs-{{ ai_gen_id }}
+  class="ai-smart-tabs-{{ ai_gen_id }}"
+  data-scroll-offset="{{ block.settings.scroll_offset }}"
+  data-auto-detect="{{ block.settings.auto_detect_sections }}"
+  data-section-selectors="{{ block.settings.section_selectors }}"
+  data-heading-selectors="{{ block.settings.heading_selectors }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-smart-tabs-container-{{ ai_gen_id }}">
+    {% if block.settings.manual_tabs_enabled %}
+      {% for i in (1..5) %}
+        {% assign tab_title_key = 'manual_tab_' | append: i | append: '_title' %}
+        {% assign tab_target_key = 'manual_tab_' | append: i | append: '_target' %}
+        {% assign tab_title = block.settings[tab_title_key] %}
+        {% assign tab_target = block.settings[tab_target_key] %}
+        
+        {% if tab_title != blank and tab_target != blank %}
+          <a
+            href="#{{ tab_target }}"
+            class="ai-smart-tab-{{ ai_gen_id }} manual-tab"
+            data-target="{{ tab_target }}"
+          >
+            {{ tab_title }}
+          </a>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+  
+  <div class="ai-smart-tabs-fallback-{{ ai_gen_id }}">
+    {% if block.settings.auto_detect_sections %}
+      Scanning page for sections...
+    {% else %}
+      Configure manual tabs in the settings
+    {% endif %}
+  </div>
+</smart-tabs-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class SmartTabs{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.tabsContainer = this.querySelector('.ai-smart-tabs-container-{{ ai_gen_id }}');
+        this.fallbackMessage = this.querySelector('.ai-smart-tabs-fallback-{{ ai_gen_id }}');
+        this.scrollOffset = parseInt(this.dataset.scrollOffset) || 100;
+        this.autoDetect = this.dataset.autoDetect === 'true';
+        this.sectionSelectors = this.dataset.sectionSelectors || 'section, .section, [class*="section"]';
+        this.headingSelectors = this.dataset.headingSelectors || 'h1, h2, h3, .section-title, .heading, [class*="title"], [class*="heading"]';
+        this.activeTab = null;
+        this.sections = [];
+      }
+
+      connectedCallback() {
+        if (this.autoDetect) {
+          this.detectSections();
+        }
+        this.setupEventListeners();
+        this.updateActiveTab();
+      }
+
+      detectSections() {
+        const detectedSections = [];
+        const sectionElements = document.querySelectorAll(this.sectionSelectors);
+        
+        sectionElements.forEach((section, index) => {
+          let title = this.extractSectionTitle(section);
+          let id = section.id;
+          
+          if (!id) {
+            id = `auto-section-${index}`;
+            section.id = id;
+          }
+          
+          if (title && id) {
+            detectedSections.push({ title, id, element: section });
+          }
+        });
+
+        if (detectedSections.length > 0) {
+          this.renderDetectedTabs(detectedSections);
+          this.sections = detectedSections;
+          this.fallbackMessage.style.display = 'none';
+        } else {
+          this.fallbackMessage.style.display = 'block';this.fallbackMessage.textContent = 'No sections detected on this page';
+        }
+      }
+
+      extractSectionTitle(section) {
+        const headingElement = section.querySelector(this.headingSelectors);
+        
+        if (headingElement) {
+          let title = headingElement.textContent.trim();
+          if (title.length > 30) {
+            title = title.substring(0, 27) + '...';
+          }
+          return title;
+        }
+
+        const dataTitle = section.dataset.title || section.dataset.sectionTitle;
+        if (dataTitle) {
+          return dataTitle;
+        }
+
+        const ariaLabel = section.getAttribute('aria-label');
+        if (ariaLabel) {
+          return ariaLabel;
+        }
+
+        const classList = Array.from(section.classList);
+        for (const className of classList) {
+          if (className.includes('hero')) return 'Hero';
+          if (className.includes('about')) return 'About';
+          if (className.includes('product')) return 'Products';
+          if (className.includes('service')) return 'Services';
+          if (className.includes('contact')) return 'Contact';
+          if (className.includes('testimonial')) return 'Testimonials';
+          if (className.includes('feature')) return 'Features';
+          if (className.includes('gallery')) return 'Gallery';
+          if (className.includes('blog')) return 'Blog';
+          if (className.includes('news')) return 'News';
+        }
+
+        return null;
+      }
+
+      renderDetectedTabs(sections) {
+        const existingAutoTabs = this.tabsContainer.querySelectorAll('.auto-tab');
+        existingAutoTabs.forEach(tab => tab.remove());
+
+        sections.forEach(({ title, id }) => {
+          const tab = document.createElement('a');
+          tab.href = `#${id}`;
+          tab.className = 'ai-smart-tab-{{ ai_gen_id }} auto-tab';
+          tab.dataset.target = id;
+          tab.textContent = title;
+          this.tabsContainer.appendChild(tab);
+        });
+      }
+
+      setupEventListeners() {
+        this.tabsContainer.addEventListener('click', (e) => {
+          if (e.target.classList.contains('ai-smart-tab-{{ ai_gen_id }}')) {
+            e.preventDefault();
+            const targetId = e.target.dataset.target;
+            this.scrollToSection(targetId);
+            this.setActiveTab(e.target);
+          }
+        });
+
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+          clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(() => {
+            this.updateActiveTab();
+          }, 100);
+        });
+
+        window.addEventListener('resize', () => {
+          clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(() => {
+            this.updateActiveTab();
+          }, 100);
+        });
+      }
+
+      scrollToSection(targetId) {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          const offsetTop = elementTop - this.scrollOffset;
+          
+          window.scrollTo({
+            top: Math.max(0, offsetTop),
+            behavior: 'smooth'
+          });
+        }
+      }
+
+      setActiveTab(tab) {
+        this.tabsContainer.querySelectorAll('.ai-smart-tab-{{ ai_gen_id }}').forEach(t => {
+          t.classList.remove('active');
+        });
+        tab.classList.add('active');
+        this.activeTab = tab;
+      }
+
+      updateActiveTab() {
+        const tabs = this.tabsContainer.querySelectorAll('.ai-smart-tab-{{ ai_gen_id }}');
+        if (tabs.length === 0) return;
+
+        let currentSection = null;
+        const scrollPosition = window.pageYOffset + this.scrollOffset + 50;
+
+        tabs.forEach(tab => {
+          const targetId = tab.dataset.target;
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            const elementTop = targetElement.offsetTop;
+            const elementBottom = elementTop + targetElement.offsetHeight;
+            
+            if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
+              currentSection = tab;
+            }
+          }
+        });
+
+        if (currentSection && currentSection !== this.activeTab) {
+          this.setActiveTab(currentSection);
+        }
+      }
+    }
+
+    customElements.define('smart-tabs-{{ ai_gen_id }}', SmartTabs{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Smart tab navigation",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Detection settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_detect_sections",
+      "label": "Auto-detect sections",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "section_selectors",
+      "label": "Section selectors",
+      "default": "section, .section, [class*=\"section\"]",
+      "info": "CSS selectors to find sections on the page"
+    },
+    {
+      "type": "text",
+      "id": "heading_selectors",
+      "label": "Heading selectors", 
+      "default": "h1, h2, h3, .section-title, .heading, [class*=\"title\"], [class*=\"heading\"]",
+      "info": "CSS selectors to find section titles"
+    },
+    {
+      "type": "range",
+      "id": "scroll_offset",
+      "label": "Scroll offset",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 100,
+      "info": "Distance from top when scrolling to sections"
+    },
+    {
+      "type": "header",
+      "content": "Manual tabs"
+    },
+    {
+      "type": "checkbox",
+      "id": "manual_tabs_enabled",
+      "label": "Enable manual tabs",
+      "default": false,
+      "info": "Add custom tabs that override auto-detection"
+    },
+    {
+      "type": "text",
+      "id": "manual_tab_1_title",
+      "label": "Tab 1 title"
+    },
+    {
+      "type": "text",
+      "id": "manual_tab_1_target",
+      "label": "Tab 1 target ID"
+    },
+    {
+      "type": "text",
+      "id": "manual_tab_2_title",
+      "label": "Tab 2 title"
+    },
+    {
+      "type": "text",
+      "id": "manual_tab_2_target",
+      "label": "Tab 2 target ID"
+    },
+    {
+      "type": "text",
+      "id": "manual_tab_3_title",
+      "label": "Tab 3 title"
+    },
+    {
+      "type": "text",
+      "id": "manual_tab_3_target",
+      "label": "Tab 3 target ID"
+    },
+    {
+      "type": "text",
+      "id": "manual_tab_4_title",
+      "label": "Tab 4 title"
+    },
+    {
+      "type": "text",
+      "id": "manual_tab_4_target",
+      "label": "Tab 4 target ID"
+    },
+    {
+      "type": "text",
+      "id": "manual_tab_5_title",
+      "label": "Tab 5 title"
+    },
+    {
+      "type": "text",
+      "id": "manual_tab_5_target",
+      "label": "Tab 5 target ID"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "position",
+      "label": "Position",
+      "options": [
+        {
+          "value": "static",
+          "label": "Static"
+        },
+        {
+          "value": "sticky",
+          "label": "Sticky"
+        },
+        {
+          "value": "fixed",
+          "label": "Fixed"
+        }
+      ],
+      "default": "sticky"
+    },
+    {
+      "type": "range",
+      "id": "top_offset",
+      "label": "Top offset",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 0,
+      "info": "Distance from top when sticky or fixed"
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "label": "Vertical padding",
+      "min": 5,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "label": "Horizontal padding",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "tab_spacing",
+      "label": "Tab spacing",
+      "min": 5,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Tab style"
+    },
+    {
+      "type": "range",
+      "id": "tab_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "tab_font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "range",
+      "id": "tab_padding_vertical",
+      "label": "Tab vertical padding",
+      "min": 5,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "tab_padding_horizontal",
+      "label": "Tab horizontal padding",
+      "min": 10,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "tab_border_radius",
+      "label": "Tab border radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e5e5e5"
+    },
+    {
+      "type": "color",
+      "id": "tab_background_color",
+      "label": "Tab background",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "tab_text_color",
+      "label": "Tab text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "tab_border_color",
+      "label": "Tab border color",
+      "default": "#e5e5e5"
+    },
+    {
+      "type": "color",
+      "id": "tab_hover_background_color",
+      "label": "Tab hover background",
+      "default": "#e5e5e5"
+    },
+    {
+      "type": "color",
+      "id": "tab_hover_text_color",
+      "label": "Tab hover text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "tab_hover_border_color",
+      "label": "Tab hover border color",
+      "default": "#cccccc"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_background_color",
+      "label": "Active tab background",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_text_color",
+      "label": "Active tab text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_border_color",
+      "label": "Active tab border color",
+      "default": "#000f9f"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Smart tab navigation"
+    }
+  ]
+}
+{% endschema %}
