@@ -224,7 +224,7 @@
 }
 
 .contrast-header-box-input ul li {
-  padding: 0 5% 20% 5%;
+  padding: 0 5% 1% 5%;
   font-size: 15px;
 }
 
@@ -237,9 +237,8 @@
   margin-bottom: 10px;
 }
 
-.contrast-header-box-input ul li {
-  padding: 0 5% 20% 5%;
-  font-size: 15px;
+.contrast-header-box-input ul li:last-child {
+  margin-bottom: 20px;
 }
 
 .contrast-header-box-input ul li:first-child h4 {
@@ -980,6 +979,32 @@
 
 
 
+let navHeight = 0;
+document.addEventListener('DOMContentLoaded', function () {
+  function updateHeaderVars() {
+    navHeight = document.querySelector('#home-s-header-mobile').offsetHeight;
+
+    if (navHeight > 0) {
+      $(".contrast-header").css({
+        top: `${navHeight}px`,
+      });
+
+      // 只在屏幕小于等于1280px时设置 contrast-nav 的 top 值
+      if ($(window).width() <= 1280) {
+        $(".contrast-nav").css({
+          top: `${navHeight + 80}px`,
+        });
+      }
+    }
+  }
+
+  // 初始设置
+  updateHeaderVars();
+
+  // 监听窗口大小变化
+  window.addEventListener('resize', updateHeaderVars);
+});
+
 
   </script>
 
@@ -996,10 +1021,9 @@
   return acc;
 }, []);
   dropDownTitle.forEach(item => {
-  const powerList = item.optical_power.map(i => `<p>${item.item_title} ${i.split('+')[0]}</p>`).join('');
+  const powerList = item.optical_power.map(i => `<p>${item.item_title}</p>`).join('');
   $(".contrast-header-box-input ul").append(`
     <li>
-      <h4>${item.item_title}</h4>
       ${powerList}
     </li>
   `);
@@ -1059,7 +1083,7 @@ $(function () {
 let inputSelectArr = [{}, {}, {}]; // 初始化为三个空对象，分别对应三个输入框);
 function inputSelect($input, num) {
   const inputValue = $input.val();
-  const matchedItem = blocksData.find(item => `${item.item_title} ${item.optical_power.split('+')[0]}` === inputValue);
+  const matchedItem = blocksData.find(item => item.item_title === inputValue);
   if (matchedItem) {
     inputSelectArr[num - 1] = matchedItem; // 更新对应输入框的数据
   }
@@ -1075,7 +1099,7 @@ default_input.forEach((id, index) => {
   let found = false; // 标志位
   blocksData.forEach((item) => {
     if (item.item_id == id) {
-      $(`#inputValue${index+1} input`).val(`${item.item_title} ${item.optical_power.split('+')[0]}`);
+      $(`#inputValue${index+1} input`).val(item.item_title);
       found = true; // 找到匹配项
     }
   });
