@@ -51,6 +51,40 @@
             "copywriting": ""
           }
         },
+        "products_tcontrast_rGHJYw": {
+          "type": "products-tcontrast",
+          "name": "Falcon A1 Pro",
+          "settings": {
+            "item_hyperlink": "https://www.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver",
+            "item_image": "https://www.crealityfalcon.com/cdn/shop/files/1_1.png?v=1754388094",
+            "item_title": "Falcon A1 Pro",
+            "item_id": "9747662307625",
+            "price_currency": "$",
+            "key_point": "<li>Dual laser option | Touch Screen | IoT Control</li>",
+            "key_features": "<li>20W Blue / 2W IR Laser Modules</li><li>Work with 350+ Materials</li><li>Smart Camera for Auto Focus </li><li>App Control: Real-time Monitoring</li><li> Smart Touch Screen: Convenient Working</li>",
+            "laser_type": "Diode/IR Laser",
+            "optical_power": "20W/2W",
+            "bsswood": "10m",
+            "transparent_acrylic": "8mm",
+            "engraving_area": "305mm*381mm",
+            "laser_spot": "0.06*0.08mm",
+            "ai_camera": "✅",
+            "enclosed": "✅",
+            "laser_wavelength": "455±15nm",
+            "laser_class": "Class 1 (FDA)",
+            "certifications": "FDA、CE、ROHS、FCC、PSE",
+            "gross_weight": "16.8kg",
+            "package_size": "646mm*556mm*275mm",
+            "laser_engraving_software": "Falcon Design Space, LightBurn, LaserGRBL",
+            "operating_system": "Windows/MacOS",
+            "cuttable_materials": "Paper, Wood, Leather, MDF, Felt, Some Dark Opaque Acrylic",
+            "engravable_materials": "Paper, Wood, Leather, MDF, Stainless steel, Some dark opaque acrylic, Bamboo, Fabric, Dark glass, Ceramic, Jade, Marble, Shale, Cement, Brick, Plated metal, Painted metal",
+            "accessories": "-",
+            "star_rating": "5",
+            "comment": "2",
+            "copywriting": ""
+          }
+        },
         "products_tcontrast_K34MqA": {
           "type": "products-tcontrast",
           "name": "Falcon2 Pro 60W",
@@ -360,6 +394,7 @@
       },
       "block_order": [
         "products_tcontrast_FFpkYV",
+        "products_tcontrast_rGHJYw",
         "products_tcontrast_K34MqA",
         "products_tcontrast_AHzi7x",
         "products_tcontrast_7agyzM",
