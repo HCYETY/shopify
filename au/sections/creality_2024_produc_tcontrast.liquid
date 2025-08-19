@@ -1505,7 +1505,8 @@ $(function () {
      // $(".scrolled-past-header").show();
       $(".contrast-nav").hide();
     }
-    let h=80
+    const navHeight = $("#MainContent").offset().top;
+    let h=80+navHeight
     let ht=0
     if ($("#qab_background").length) {
       ht=$("#qab_background").height()
