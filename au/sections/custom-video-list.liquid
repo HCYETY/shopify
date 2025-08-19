@@ -1,0 +1,501 @@
+{{ 'swiper.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign se_blocks = section.blocks
+%}
+
+<style>
+  #container-{{ sid }} .main-content {
+    max-width: 1200px;
+    width: 90%;
+    margin: 1.6vw auto 2.4vw;
+  }
+
+  .custom-video-accordion {
+    position: relative;
+  }
+  .custom-video-accordion .video-accordion-title {
+    font-size: 1.61vw;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0;
+    color: #262629;
+    margin-bottom: 1.25vw;
+  }
+  .custom-video-accordion .accordion-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 22.9vw;
+  }
+  .custom-video-accordion .accordion-list .accordion-item {
+    position: relative;
+    transition: width 0.3s linear;
+    border-radius: 0.8vw;
+    overflow: hidden;
+  }
+  .custom-video-accordion .accordion-list .accordion-item .accordion-content {
+    height: 100%;
+  }
+  .custom-video-accordion .accordion-list .accordion-item .accordion-content .video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .custom-video-accordion .accordion-list .accordion-item .accordion-content .accordion-banner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.3s linear;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .custom-video-accordion .accordion-list .accordion-item .accordion-content .accordion-banner img {
+    position: relative;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .custom-video-accordion
+    .accordion-list
+    .accordion-item
+    .accordion-content
+    .accordion-banner
+    .accordion-banner-img
+    .fit_picture {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 101%;
+    object-fit: contain;
+  }
+  .custom-video-accordion
+    .accordion-list
+    .accordion-item
+    .accordion-content
+    .accordion-banner
+    .accordion-banner-img
+    .fit_picture
+    img {
+    width: 100%;
+    height: 100%;
+  }
+  .custom-video-accordion .accordion-list .accordion-item .accordion-content .accordion-title {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 20%;
+    font-weight: var(--vi_fw);
+    text-decoration: none;
+    padding: 1.2vw;
+    font-size: var(--vi_fz);
+    color: var(--vi_color);
+    z-index: 3;
+  }
+  .custom-video-accordion .accordion-list .accordion-item .accordion-content .accordion-title .accordion-title-icon {
+    width: 1.6vw;
+    height: 1.6vw;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+  }
+  .custom-video-accordion .accordion-list .accordion-active {
+    width: 37.84% !important;
+  }
+  .custom-video-accordion .accordion-list .accordion-active .accordion-content .accordion-title .accordion-title-icon {
+    opacity: 1;
+  }
+  .custom-video-accordion .accordion-list .in-play .accordion-content .video-player {
+    z-index: 2;
+  }
+  .custom-video-accordion .accordion-list .in-play .accordion-content .accordion-content .accordion-banner {
+    opacity: 0;
+    z-index: 1;
+  }
+  .custom-video-accordion .accordion-list .accordion-unactive {
+    width: 19.22% !important;
+  }
+  .custom-video-accordion .swiper-button-next,
+  .custom-video-accordion .swiper-button-prev {
+    width: 1.92vw;
+    height: 1.92vw;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .custom-video-accordion .swiper-button-next:after,
+  .custom-video-accordion .swiper-button-prev:after {
+    font-size: 0.64vw;
+  }
+  .custom-video-accordion .swiper-button-next {
+    right: -2.8vw;
+  }
+  .custom-video-accordion .swiper-button-prev {
+    left: -2.8vw;
+  }
+
+  .accordion-swiper .swiper-slide {
+    width:24%;
+    margin-right:15px;
+  }
+
+  @media (max-width: 960px) {
+    #container-{{ sid }} .main-content {
+      margin:2.6vw auto 5.2vw;
+    }
+
+    .accordion-swiper .swiper-slide {
+      width:100%;
+      margin-right:0px;
+    }
+    
+    .custom-video-accordion .video-accordion-title {
+      font-size: 3.2vw;
+      margin-bottom: 3vw;
+    }
+    .custom-video-accordion .accordion-list {
+      gap: 0;
+      height: 75vw;
+    }
+    .custom-video-accordion .accordion-list .accordion-item {
+      flex: none;
+      border-radius: 3.8vw;
+    }
+    .custom-video-accordion .accordion-list .accordion-item .accordion-content .accordion-title {
+      align-items: center;
+      font-size: var(--vi_fz_mb);
+      font-weight:var(--vi_fw_mb);
+      padding: 3.2vw;
+    }
+    .custom-video-accordion .accordion-list .accordion-item .accordion-content .accordion-title .accordion-title-icon {
+      opacity: 1;
+      width: 3.2vw;
+      height: 3.2vw;
+    }
+    .custom-video-accordion .swiper-button-next,
+    .custom-video-accordion .swiper-button-prev {
+      display: none;
+    }
+  }
+</style>
+
+<div id="container-{{ sid }}">
+  <div class="custom-video-accordion main-content">
+    <div class="video-accordion-title">
+      {{ se_stts.video_list_title }}
+    </div>
+
+    <div class="accordion swiper-container accordion-swiper">
+      <div class="accordion-list swiper-wrapper ">
+        {% for block in se_blocks %}
+          {% assign bk_stts = block.settings %}
+          <div class="accordion-item swiper-slide" style="--vi_fz:{{ bk_stts.vi_fz }}px;--vi_fw:{{ bk_stts.vi_fw }};--vi_color:{{ bk_stts.vi_color }};--vi_fz_mb:{{ bk_stts.vi_fz_mb }}px;--vi_fw_mb:{{ bk_stts.vi_fw_mb }}">
+            <div class="accordion-content">
+              <a href="{{ bk_stts.vi_link }}" class="accordion-title">
+                <span>{{ bk_stts.video_title }}</span>
+                <div class="accordion-title-icon">
+                  <svg
+                    t="1731304331695"
+                    class="icon"
+                    viewBox="0 0 1024 1024"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    p-id="4250"
+                  >
+                    <path
+                        d="M332.501333 183.168a42.666667 42.666667 0 0 1 57.621334-2.496l2.709333 2.496 298.666667 298.666667a42.666667 42.666667 0 0 1 2.496 57.621333l-2.496 2.709333-298.666667 298.666667a42.666667 42.666667 0 0 1-62.826667-57.621333l2.496-2.709334L600.96 512 332.501333 243.498667a42.666667 42.666667 0 0 1-2.496-57.621334l2.496-2.709333z"
+                        fill="#ffffff" p-id="4251"></path>
+                  </svg>
+                </div>
+              </a>
+              <div class="accordion-banner">
+                <img
+                  srcset="
+                    {%- if bk_stts.video_image.width >= 533 -%}
+                        {{ bk_stts.video_image | img_url: '533x' }} 533w,
+                    {%- endif -%}
+                    {%- if bk_stts.video_image.width >= 534 -%}
+                        {{ bk_stts.video_image | img_url: '534x' }} 534w,
+                    {%- endif -%}
+                    {%- if bk_stts.video_image.width >= 720 -%}
+                        {{ bk_stts.video_image | img_url: '720x' }} 720w,
+                    {%- endif -%}
+                    {%- if bk_stts.video_image.width >= 940 -%}
+                        {{ bk_stts.video_image | img_url: '940x' }} 940w,
+                    {%- endif -%}
+                    {%- if bk_stts.video_image.width >= 1066 -%}
+                        {{ bk_stts.video_image | img_url: '1066x' }} 1066w
+                    {%- endif -%}
+                  "
+                  src="{{ bk_stts.video_image | img_url: '533x' }}"
+                  sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                  alt="{{ bk_stts.video_image.alt | escape }} {{bk_stts.video_image.width}}"
+                  loading="lazy"
+                  class="fit_picture"
+                >
+              </div>
+              <video
+                muted
+                preload="auto"
+                playsinline
+                class="video-player"
+              >
+                <source src="{{ bk_stts.video_url }}" type="video/mp4">
+                Your browser does not support the video TAB, please upgrade your browser.
+              </video>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+{% javascript %}
+    $(function() {
+      const docWidth = document.documentElement.clientWidth;
+      const docHeight = document.documentElement.clientHeight;
+      const vw = docWidth / 100;
+      const vh = docHeight / 100;
+      let moblieShow = $(window).width() < 960;
+      let spaceBetween = moblieShow ? 3 * vw : 1 * vw;
+
+      let $accordionSwiper = $('.accordion-swiper');
+      let $accordionitem = $('.accordion-item');
+      let slidesLength = $accordionitem.length;
+
+      function handleInPlay(_this) {
+        let $this = _this;
+        let $video = $this.find('.video-player')[0];
+        $this.addClass('in-play');
+        $video.play();
+
+  // 绑定 ended 事件
+        $video.addEventListener('ended', function() {
+          $this.removeClass('in-play');
+          $video.currentTime = 0;
+        });
+      }
+
+      function initAccordionSwiper(mobileShow) {
+        const swiperOptions = {
+          spaceBetween: spaceBetween,
+          slidesPerGroup: 1,
+          navigation: {
+            nextEl: '.custom-video-accordion .swiper-button-next',
+            prevEl: '.custom-video-accordion .swiper-button-prev'
+          }
+        };
+
+        if (mobileShow) {
+          swiperOptions.slidesPerView = 'auto';
+          swiperOptions.normalizeSlideIndex = false;
+          
+          swiperOptions.slidesPerView = 1.2;
+          swiperOptions.on = {
+            slideChangeTransitionEnd: function() {
+              $accordionitem.removeClass('in-play');
+              const $this = $accordionitem.eq(this.activeIndex);
+              handleInPlay($this);
+            }
+          };
+        } else {
+          swiperOptions.slidesPerView = 4;
+        }
+
+        const accordionSwiper = new Swiper('.accordion-swiper', swiperOptions);
+        
+        if (! mobileShow) {
+          $accordionitem.click(function() {
+            const $this = $(this);
+            const index = $this.index();
+            const activeIndex = accordionSwiper.activeIndex;
+            const visibleStart = activeIndex;
+            const visibleEnd = activeIndex + 3;
+            console.log($this,index)
+
+            if (index >= visibleStart && index <= visibleEnd) {
+              const positionInVisible = index - visibleStart + 1;
+              const accordionArry = $accordionitem.slice(visibleStart, visibleStart + 4);
+
+              accordionArry.each((i, element) => {
+                if (i === positionInVisible - 1) {
+                  $(element).addClass('accordion-active');
+                  handleInPlay($(element));
+                } else {
+                  $(element).addClass('accordion-unactive');
+                }
+              });
+            }
+          });
+
+          $accordionitem.mouseleave(function() {
+            $accordionitem.removeClass('accordion-active accordion-unactive in-play');
+            const $video = $(this).find('.video-player')[0];
+            if ($video) {
+              $video.pause();
+              $video.currentTime = 0;
+            }
+          });
+        } else {
+          handleInPlay($accordionitem.eq(0));
+        }
+      }
+
+      initAccordionSwiper(moblieShow);
+    });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Custom Video List",
+  "settings": [
+    {
+      "id": "video_list_title",
+      "type": "text",
+      "label": "Title",
+      "default": "Shop by Interest"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video_block",
+      "name": "Video Block",
+      "settings": [
+        {
+          "id": "video_title",
+          "type": "text",
+          "label": "Video Title"
+        },
+        {
+          "type": "range",
+          "id": "vi_fz",
+          "label": "fontSize",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 16
+        },
+        {
+          "type": "select",
+          "id": "vi_fw",
+          "label": "fontWeight",
+          "default": "600",
+          "options": [
+            {
+              "value": "400",
+              "label": "t:settings_schema.typography.settings.font_weight.options__1"
+            },
+            {
+              "value": "500",
+              "label": "t:settings_schema.typography.settings.font_weight.options__2"
+            },
+            {
+              "value": "600",
+              "label": "t:settings_schema.typography.settings.font_weight.options__3"
+            },
+            {
+              "value": "700",
+              "label": "t:settings_schema.typography.settings.font_weight.options__4"
+            }, {
+              "value": "800",
+              "label": "t:settings_schema.typography.settings.font_weight.options__5"
+            }, {
+              "value": "900",
+              "label": "t:settings_schema.typography.settings.font_weight.options__6"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "vi_fz_mb",
+          "label": "fontSize(mobile)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 16
+        }, {
+          "type": "select",
+          "id": "vi_fw_mb",
+          "label": "fontWeight(mobile)",
+          "default": "600",
+          "options": [
+            {
+              "value": "400",
+              "label": "t:settings_schema.typography.settings.font_weight.options__1"
+            },
+            {
+              "value": "500",
+              "label": "t:settings_schema.typography.settings.font_weight.options__2"
+            },
+            {
+              "value": "600",
+              "label": "t:settings_schema.typography.settings.font_weight.options__3"
+            },
+            {
+              "value": "700",
+              "label": "t:settings_schema.typography.settings.font_weight.options__4"
+            }, {
+              "value": "800",
+              "label": "t:settings_schema.typography.settings.font_weight.options__5"
+            }, {
+              "value": "900",
+              "label": "t:settings_schema.typography.settings.font_weight.options__6"
+            }
+          ]
+        }, {
+          "type": "color",
+          "id": "vi_color",
+          "label": "Color",
+          "default": "#000"
+        }, {
+          "id": "vi_link",
+          "type": "url",
+          "label": "Link"
+        }, {
+          "id": "video_url",
+          "type": "text",
+          "label": "Video URL"
+        }, {
+          "id": "video_image",
+          "type": "image_picker",
+          "label": "Video Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Video List",
+      "blocks": [
+        {
+          "type": "video_block"
+        }, {
+          "type": "video_block"
+        }, {
+          "type": "video_block"
+        }, {
+          "type": "video_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

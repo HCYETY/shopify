@@ -1,0 +1,251 @@
+<style>
+ .button-ATC,card-action .button {
+    min-width:unset !important;
+    margin:0 !important;
+  }
+  .card-action form{
+     width:fit-content !important;
+     flex:unset !important;
+  }
+   .card-action{
+       flex:unset !important;
+       width: fit-content;
+   }
+  .btns{
+        justify-content: center !important;
+  }
+  #shopify-section-{{section.id}} .banner {
+      width: 100%;
+      background: linear-gradient(to top, #ffffff, #14a9de);
+      padding: 1.56vw 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 39.06vw;
+      overflow: hidden;
+      position: relative;
+    }
+    #shopify-section-{{section.id}} .banner img,
+    #shopify-section-{{section.id}} .banner picture {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+   #shopify-section-{{section.id}} .banner .content .countdown .time-box .label {
+      font-size: 0.47vw;
+      margin-top: 0.47vw;
+    }
+    #shopify-section-{{section.id}} .banner .content {
+      text-align: left;
+      color: #000;
+      position: absolute;
+      top: 7.03vw;
+      left: 21.88vw;
+    }
+    #shopify-section-{{section.id}} .banner .content .title {
+      font-size: 1.95vw;
+      margin-bottom: 0.59vw;
+    }
+    #shopify-section-{{section.id}} .banner .content .subtitle {
+      font-size: 1.25vw;
+      margin-bottom: 0.39vw;
+    }
+    #shopify-section-{{section.id}} .banner .content .discount {
+      font-size: 1.25vw;
+      margin-bottom: 1.17vw;
+      font-weight: bold;
+    }
+    #shopify-section-{{section.id}} .banner .content .discount strong {
+      font-size: 1.875vw;
+      color: #F8611F;
+    }
+    #shopify-section-{{section.id}} .banner .content .countdown {
+      display: flex;
+      justify-content: left;
+      gap: 1.41vw;
+      margin-top: 1.56vw;
+    }
+    #shopify-section-{{section.id}} .banner .content .countdown .time-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #shopify-section-{{section.id}} .banner .content .countdown .time-box .number {
+      background-color: #fff;
+      color: #14A9DE;
+      font-size: 1.25vw;
+      width: 2.34vw;
+      height: 2.34vw;
+      border-radius: 0.2vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  @media(max-width:750px){
+     #shopify-section-{{section.id}} .banner {
+        padding: 5.33vw 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 157.33vw;
+      }
+      #shopify-section-{{section.id}} .banner img,
+      #shopify-section-{{section.id}} .banner picture {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #shopify-section-{{section.id}} .banner .content {
+        text-align: left;
+        color: #000;
+        position: absolute;
+        top: 16vw;
+        left: unset;
+        text-align: center;
+      }
+     #shopify-section-{{section.id}} .banner .content .discount strong {
+      font-size: 5.875vw;
+    }
+      #shopify-section-{{section.id}} .banner .content .title {
+        font-size: 5.6vw;
+        margin-bottom: 2vw;
+      }
+      #shopify-section-{{section.id}} .banner .content .subtitle {
+        font-size: 4.27vw;
+        margin-bottom: 1.33vw;
+      }
+      #shopify-section-{{section.id}} .banner .content .discount {
+        font-size: 4.27vw;
+        margin-bottom: 4vw;
+      }
+      #shopify-section-{{section.id}} .banner .content .discount .price {
+        font-size: 6.4vw;
+        font-weight: bold;
+      }
+      #shopify-section-{{section.id}} .banner .content .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 4.8vw;
+        margin-top: 5.33vw;
+      }
+      #shopify-section-{{section.id}} .banner .content .countdown .time-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #shopify-section-{{section.id}} .banner .content .countdown .time-box .number {
+        font-size: 4.27vw;
+        width: 8vw;
+        height: 8vw;
+        border-radius: 0.67vw;
+      }
+      #shopify-section-{{section.id}} .banner .content .countdown .time-box .label {
+        font-size: 2.13vw;
+        font-weight: bold;
+        margin-top: 1.6vw;
+      }
+  }
+</style>
+ <div class="banner">
+           <picture>
+                <source media="(max-width: 750px)" srcset="{{ section.settings.m_banner | img_url:'' }}">
+                <source media="(min-width: 750px)" srcset="{{ section.settings.banner | img_url:'' }}">  
+                <img width="" height="" class="fit_picture" src="{{ section.settings.banner | img_url:'' }}" alt="{{ section.settings.banner.alt }}">
+            </picture>
+            <div class="content">
+                <h2 class="title">{{ section.settings.title }}</h2>
+                <p class="subtitle">{{ section.settings.subtitle }}</p>
+                <div class="discount">{{ section.settings.desc }}</div>
+
+                <div class="countdown">
+                    <div class="time-box">
+                        <div class="number">05</div>
+                        <div class="label">DAYS</div>
+                    </div>
+                    <div class="time-box">
+                        <div class="number">03</div>
+                        <div class="label">HOURS</div>
+                    </div>
+                    <div class="time-box">
+                        <div class="number">21</div>
+                        <div class="label">MINUTES</div>
+                    </div>
+                    <div class="time-box">
+                        <div class="number">07</div>
+                        <div class="label">SECONDS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+         function startCountdown() {
+            const endDate = new Date("{{ section.settings.time }}").getTime();
+            const countdownTimer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = endDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Display the result with leading zeros
+            document.querySelector('#shopify-section-{{ section.id }} .countdown .time-box:nth-child(1) .number').textContent = days.toString().padStart(2, '0');
+            document.querySelector('#shopify-section-{{ section.id }} .countdown .time-box:nth-child(2) .number').textContent = hours.toString().padStart(2, '0');
+            document.querySelector('#shopify-section-{{ section.id }} .countdown .time-box:nth-child(3) .number').textContent = minutes.toString().padStart(2, '0');
+            document.querySelector('#shopify-section-{{ section.id }} .countdown .time-box:nth-child(4) .number').textContent = seconds.toString().padStart(2, '0');
+       
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.querySelector('#shopify-section-{{ section.id }} .countdown').innerHTML = "<div class='expired'>This offer has expired!</div>";
+            }
+        }, 1000);
+    }
+    
+    // Start the countdown when the document is ready
+    document.addEventListener('DOMContentLoaded', function() {
+        startCountdown();
+    });
+        </script>
+{% schema %}
+  {
+    "name": "custom-banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id":"banner",
+        "label":"banner"
+      },
+      {
+        "type": "image_picker",
+        "id":"m_banner",
+        "label":"mobile banner"
+      },
+       {
+          "type": "text",
+          "id":"time",
+          "label":"time"
+        },
+       {
+          "type": "text",
+          "id":"title",
+          "label":"title"
+        },
+       {
+          "type": "text",
+          "id":"subtitle",
+          "label":"subtitle"
+        },
+       {
+          "type": "richtext",
+          "id":"desc",
+          "label":"desc"
+        }
+    ],
+    "presets": [{"name":"custom-banner"}]
+  }
+{% endschema %}

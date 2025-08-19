@@ -1,0 +1,513 @@
+{% style %}
+  .promotion-countdown-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-image: url('{{ section.settings.background_image | img_url: 'master' }}');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+
+  .promotion-content {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 33.5px;
+    margin-left: 290px;
+  }
+
+  .promotion-headline {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+    line-height: 1;
+  }
+
+  .promotion-subheadline {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+
+  .promotion-offer {
+    font-size: 30px;
+    font-weight: 600;
+    color: #ffa900;
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+
+  .promotion-date-range {
+    font-size: 16px;
+    margin-bottom: 14px;
+    font-weight: 500;
+    color: #000;
+    line-height: 1;
+  }
+
+  .countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 32px;
+    position: relative;
+  }
+
+  .countdown-separator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30px;
+    gap: 4px;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 50%;
+  }
+
+  .countdown-value {
+    font-size: 16px;
+    font-weight: 700;
+    background: #fff;
+    border-radius: 6px;
+    padding: 8px 0;
+    min-width: 32px;
+    width: 32px;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    color: #ffaa00;
+    line-height: 1;
+  }
+
+  .countdown-label {
+    font-size: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .promotion-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .promotion-product {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .promotion-product:hover {
+    transform: translateY(-5px);
+  }
+
+  .promotion-product img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+  }
+
+    .promotion-countdown-section .promotion-logo {
+      display: flex;
+      align-items: center;
+      gap: 6.5px;
+      padding: 5px 14px;
+      margin-bottom: 10px;
+      background-color: #ffbd3c;
+      border-radius: 5px;
+      color: #fff;
+      align-self: flex-end;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .promotion-countdown-section .promotion-logo-image-container {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .promotion-countdown-section .promotion-logo-image-container img {
+      object-fit: contain;
+    }
+
+    @media  (max-width: 900px) {
+      .promotion-countdown-section {
+        height: 600px;
+        background-image: url('{{ section.settings.background_image_mobile | img_url: 'master' }}');
+      }
+      .promotion-countdown-section .promotion-content {
+        align-items: center;
+        margin: 47px auto 0;
+      }
+      .promotion-countdown-section .promotion-headline {
+        font-size: 30px;
+      }
+      .promotion-countdown-section .promotion-logo {
+        align-self: center;
+      }
+    }
+
+    @media (min-width: 1920px) {
+      .promotion-countdown-section {
+    position: relative;
+    width: 100%;
+    height: 39.0625vw;
+    overflow: hidden;
+    background-image: url('{{ section.settings.background_image | img_url: 'master' }}');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+
+  .promotion-content {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 2.617vw;
+    margin-left: 22.656vw;
+  }
+
+  .promotion-headline {
+    font-size: 2.65625vw;
+    font-weight: bold;
+    margin-bottom: 0.78125vw;
+    color: #000;
+    line-height: 1;
+  }
+
+  .promotion-subheadline {
+    font-size: 1.25vw;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0.78125vw;
+    line-height: 1;
+  }
+
+  .promotion-offer {
+    font-size: 2.34375vw;
+    font-weight: 600;
+    color: #ffa900;
+    margin-bottom: 0.78125vw;
+    line-height: 1;
+  }
+
+  .promotion-date-range {
+    font-size: 1.25vw;
+    margin-bottom: 1.09375vw;
+    font-weight: 500;
+    color: #000;
+    line-height: 1;
+  }
+
+  .countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 1.09375vw;
+  }
+
+  .countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 2.5vw;
+    position: relative;
+  }
+
+  .countdown-separator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 2.34375vw;
+    gap: 0.3125vw;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 0.3125vw;
+    height: 0.3125vw;
+    background-color: #000;
+    border-radius: 50%;
+  }
+
+  .countdown-value {
+    font-size: 1.25vw;
+    font-weight: 700;
+    background: #fff;
+    border-radius: 0.46875vw;
+    padding: 0.625vw 0;
+    min-width: 2.5vw;
+    width: 2.5vw;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    color: #ffaa00;
+    line-height: 1;
+  }
+
+  .countdown-label {
+    font-size: 0.78125vw;
+    margin-top: 0.391vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -1.5625vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .promotion-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5625vw;
+    width: 100%;
+  }
+
+  .promotion-product {
+    width: 15.625vw;
+    height: 15.625vw;
+    background-color: #fff;
+    border-radius: 0.625vw;
+    overflow: hidden;
+    box-shadow: 0 0.3125vw 1.5625vw rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .promotion-product:hover {
+    transform: translateY(-0.391vw);
+  }
+
+  .promotion-product img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0.78125vw;
+  }
+
+    .promotion-countdown-section .promotion-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.508vw;
+      padding: 0.391vw 1.09375vw;
+      margin-bottom: 0.78125vw;
+      background-color: #ffbd3c;
+      border-radius: 0.391vw;
+      color: #fff;
+      align-self: flex-end;
+      font-size: 1.09375vw;
+    }
+
+    .promotion-countdown-section .promotion-logo-image-container {
+      width: 1.875vw;
+      height: 1.875vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .promotion-countdown-section .promotion-logo-image-container img {
+      object-fit: contain;
+    }
+    }
+{% endstyle %}
+
+<div class="promotion-countdown-section">
+  <div class="promotion-content">
+    <div class="promotion-logo">
+      <div class="promotion-logo-image-container">
+        <img
+          src="{{ section.settings.logo_image | image_url }}"
+          alt="{{ section.settings.logo_image.alt }}"
+          class="promotion-logo-image"
+          width="100%"
+          height="100%"
+        >
+      </div>
+      {% if section.settings.logo_text != blank %}
+        <span class="promotion-logo-text">{{ section.settings.logo_text }}</span>
+      {% endif %}
+    </div>
+    {% if section.settings.headline != blank %}
+      <h2 class="promotion-headline">{{ section.settings.headline }}</h2>
+    {% endif %}
+
+    {% if section.settings.subheadline != blank %}
+      <p class="promotion-subheadline">{{ section.settings.subheadline }}</p>
+    {% endif %}
+
+    {% if section.settings.offer_text != blank %}
+      <div class="promotion-offer">{{ section.settings.offer_text }}</div>
+    {% endif %}
+
+    {% if section.settings.date_range != blank %}
+      <div class="promotion-date-range">{{ section.settings.date_range }}</div>
+    {% endif %}
+
+    {% if section.settings.countdown_end_date != blank %}
+      <div class="countdown-timer" data-end-date="{{ section.settings.countdown_end_date }}">
+        <div class="countdown-item">
+          <span class="countdown-value days">00</span>
+          <span class="countdown-label">{{ section.settings.days_text }}</span>
+        </div>
+        <div class="countdown-separator">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value hours">00</span>
+          <span class="countdown-label">{{ section.settings.hours_text }}</span>
+        </div>
+        <div class="countdown-separator">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value minutes">00</span>
+          <span class="countdown-label">{{ section.settings.minutes_text }}</span>
+        </div>
+        <div class="countdown-separator">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value seconds">00</span>
+          <span class="countdown-label">{{ section.settings.seconds_text }}</span>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<script src="{{ '2025-03-27-s1.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "2025-周年庆-s1",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "背景图片"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "背景图片（移动端）"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo 图片"
+    },
+    {
+      "type": "text",
+      "id": "logo_text",
+      "label": "Logo 文字",
+      "default": "Anniversary"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "主标题",
+      "default": "Join the Celebration!"
+    },
+    {
+      "type": "text",
+      "id": "subheadline",
+      "label": "副标题",
+      "default": "Engrave Excellence, Craft the Future"
+    },
+    {
+      "type": "text",
+      "id": "offer_text",
+      "label": "促销信息",
+      "default": "Up To 52% OFF"
+    },
+    {
+      "type": "text",
+      "id": "date_range",
+      "label": "活动日期范围",
+      "default": "Apr 1 - Apr 10"
+    },
+    {
+      "type": "header",
+      "content": "倒计时设置"
+    },
+    {
+      "type": "text",
+      "id": "countdown_end_date",
+      "label": "倒计时结束日期",
+      "info": "设置促销活动的结束时间，格式为：YYYY-MM-DD hh:mm:ss，例如：2023-12-31 23:59:59",
+      "placeholder": "2023-12-31 23:59:59",
+      "default": "2024-12-31 23:59:59"
+    },
+    {
+      "type": "header",
+      "content": "倒计时文字设置"
+    },
+    {
+      "type": "text",
+      "id": "days_text",
+      "label": "天数文字",
+      "default": "Days"
+    },
+    {
+      "type": "text",
+      "id": "hours_text",
+      "label": "小时文字",
+      "default": "Hours"
+    },
+    {
+      "type": "text",
+      "id": "minutes_text",
+      "label": "分钟文字",
+      "default": "Minutes"
+    },
+    {
+      "type": "text",
+      "id": "seconds_text",
+      "label": "秒数文字",
+      "default": "Seconds"
+    }
+  ],
+  "presets": [
+    {
+      "name": "2025-周年庆-s1",
+      "category": "周年庆"
+    }
+  ]
+}
+{% endschema %}

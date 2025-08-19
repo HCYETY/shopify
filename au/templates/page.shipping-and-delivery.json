@@ -1,0 +1,140 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Shipping Time and Rules",
+            "question_1": "Processing Time",
+            "answer_1": "We typically take 1-3 business days to prepare your products before shipping. However, some items may take 7-10 business days to process due to stock availability limitations.",
+            "question_2": "Pre-Sale Items",
+            "answer_2": "For items listed for pre-sale,please refer to the shipping date specified the individual product page.",
+            "question_3": "Shipping Time",
+            "answer_3": "Standard Shipping: Orders typically arrive within 2-4 business days. Deliveries to remote areas may take longer.",
+            "question_4": "Shipping Rules",
+            "answer_4": "Our system will send you an email notification once your parccel has been dispatched\nWe strive to ship all items in an order together whenever possible. Howeveer, we may choose to split your order into multiple packages to ensure that you get your items faster. In such cases,you\nwill receive a separate tracking number for each package. Rest assured tihat even if we send your order in multiple packages, you will not be chargd more than the shipping cost you were given\nduring checkout\nIf you encounter any issues with your package(s), please contact us withirn 180 days of making your purchase. We will respond to your inquiry within 1 business day.",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "paragraph_xYtctB": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Delivery and Shipping Fee",
+            "question_1": "Shipping Services",
+            "answer_1": "<p><br>1. Shipping Country/Region\nAustralia; New Zealand (except remote areas);<br>2. Orders are dispatched within 1-3 days of placement.\n<br>3. Depending on local transportation conditions, customers can expect to receive their packages within 2-4 business days. Orders from Australia will be shipped by AU Post, TOLL and Fastway depending on the weight and size of the products.\n<br>4. In the event of stock shortages or lost packages, we will proactively contact the affected customers to provide updates and resolutions.\n\n<br><br>This policy aims to provide a reliable and efficient shipping experience while maintaining open communication with our customers in case of any issues.</p>",
+            "question_2": "Shipping Fee",
+            "answer_2": "1. Orders with a total purchase amount of A$69.99 or more will qualify for free shipping.\n<br>2. For orders below the A$69.99 threshold, a flat shipping fee of A$9.99 per order will be applied, regardless of the weight or number of items in the order.\n\n<br><br>This policy simplifies the shipping process by applying a consistent fee structure based solely on the total order value, rather than on the weight or quantity of individual items.",
+            "question_3": "Shipping Notice",
+            "answer_3": "<p>1. Place the multi-stage focusing bar between the laser module and the processed material, follow the laser engraving on the surface of the focusing bar to make the bottom of the laser module's eyecup contact with the corresponding position of the multi-stage focusing bar, and then finally use the hand screw on the right side to lock it.<br>2. When you place an order, be sure to enter the correct name, address, and contact information so that we can deliver your items successfully.</p>",
+            "question_4": "",
+            "answer_4": "<p>When you place an order, be sure to enter the correct name, address, and contact information so that we can deliver your items successfully.</p>",
+            "question_5": "Not Liable for Delays or Rejections",
+            "answer_5": "<p>1. Shipping time might be delayed for 1-2 days for transportation to remote regions.\n</p><p>2. Delay or delivery failure because of the consignee’s actions. These actions include, but are not limited to: changing the address after shipment, entering an unknown address or wrong address, entering incorrect contact information, and refusal to receive, etc.\n</p><p>3. Delay due to force majeure. “Force majeure” means an unforeseen, inevitable, or insurmountable objective situation and other objective conditions that cause delayed shipping, including, but not limited to: national or regional air or ground transportation system controls or interruptions (e.g., weather reasons), communication system interference or malfunction, government actions, postal administration policy changes, wars, earthquakes, typhoons, floods, fires, heavy rain, heavy fog, and other similar events.\n</p><p>4. Aviation contraband, mobile phones, electronic products, fragile products, and other products that are not available for air freight service due to aviation security regulations.\n</p><p>5. Shipments that are confiscated or disposed of due to a violation of transportation regulations.\n</p><p>6. Mail and packages cannot be delivered to the consignee’s address during weekends, national holidays, and festivals.\n</p><p>7. The consignee address is a school, unit, or residential community where the courier has no access.</p>",
+            "question_6": "Other Fee",
+            "answer_6": "1. Tariff: Falcon will pay for all the tariffs. Our customers do not need to pay any tariff fees. If you are charged tariff fees by customs, please contact us for help or reimbursement. (au.support@crealityfalcon.com).<br><br>2. GST/VAT/HST and other fees: We collect GST according to the local policy of your shipping place and you can see the details on your order. After completing your order, you do not need to pay GST to customs or local authorities. If you are charged with GST by customs or local authorities, please contact us for help or reimbursement. (au.support@crealityfalcon.com).",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "f4d12560-a07c-4bd4-a934-2a8eddeaccc9": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Order and Logistics Tracking",
+            "question_1": "Notification",
+            "answer_1": "<p>After the order is shipped, you will receive a notification email or SMS containing the waybill number (you need to confirm SMS notifications when placing the order). You can click the link and skip to the express company’s official website to check your package shipment status.</p>",
+            "question_2": "Tracking Your Order",
+            "answer_2": "<p>1. Log in to your CrealityFalcon account and check “My Orders”\n</p>2. Contact CrealityFalcon Support: au.support@crealityfalcon.com.",
+            "question_3": "",
+            "answer_3": "",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c",
+        "paragraph_xYtctB",
+        "f4d12560-a07c-4bd4-a934-2a8eddeaccc9"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "1170",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "show_faqs_filter": true,
+        "faqs_text": "<p>Below FAQ are some common concerns of our clients before purchasing the theme.\n</p><p> If you have other questions, please just send it to <a href=\"mailto:example@domain.com\" style=\"text-decoration: underline;\">au.support@crealityfalcon.com</a>.</p>",
+        "faqs_message_heading": "Help Center",
+        "faqs_message_text": "<p style=\"line-height: 30px; margin-bottom: 0px;margin-top: 5px;\">\n<span class=\"icon\">\n<svg style=\"position: relative; top: 0px; width: 20px;height: 20px\" aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"comment-alt-dots\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\" class=\"svg-inline--fa fa-comment-alt-dots fa-w-16 fa-7x\"><path fill=\"currentColor\" d=\"M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zM128 240c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z\" class=\"\"></path></svg>\n</span>\n<span style=\"margin-left: 7px\">CALL US：+86 400-613-3882 <a href=\"tel:%20%20091-123-ELLA\"></a></span>\n</p>\n<p style=\"line-height:30px; margin-top: 0\">\n<span class=\"icon\">\n<svg style=\"width: 20px;height: 20px\" aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"envelope\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\" class=\"svg-inline--fa fa-envelope fa-w-16 fa-7x\"><path fill=\"currentColor\" d=\"M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z\" class=\"\"></path></svg></span>\n<span style=\"margin-left: 7px\"><a href=\"mailto:au.support@crealityfalcon.com\">au.support@crealityfalcon.com</a></span>\n</p><p>Business Hours:\n<br>\nMonday-Friday 9:00-18:00 BJT</p>\n<br><br><b>Company Name:</b> Shenzhen Chuangxiang 3D Technology Co., Ltd.<br>\n<b>Company Number:</b> 91440300094231378E<br>\n<b>Company Address:</b> Room 1808, Jinxiu Hongdu Building, Meilong Avenue, Xinniu Community, Minzhi Street, Longhua District, Shenzhen (office address); Factory Building No. 156, Huawang Road, Langkou Community, Dalang Street, Longhua District, Shenzhen (production address)",
+        "message_method_link_1": "",
+        "message_method_text_1": "",
+        "message_method_link_2": "https://www.facebook.com/groups/falconlaserengraver",
+        "message_method_text_2": "Join Our Group",
+        "contact_content_text": "Unable to find satisfactory answers ?",
+        "contact_text": "Contact Support",
+        "contact_link": "shopify://pages/contact",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#14a9de",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#e93d29",
+        "contact_color_bg_hover": "#e93d29",
+        "contact_color_bg_gradient_hover": ""
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

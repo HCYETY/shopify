@@ -1,0 +1,104 @@
+<style>
+  #container-{{section.id}} * {
+      box-sizing: border-box;
+      line-height: 1;
+  }
+
+  #container-{{section.id}} img {
+      width: 100%;
+      height: auto;
+  }
+
+  #container-{{section.id}} .title {
+      font-family: HarmonyOS_Sans_SC_Bold;
+      font-weight: 900;
+      font-size: 2.13vw;
+      /* 可修改 */
+      color: #fff;
+      text-align: center;
+      line-height: 1.2;
+      padding-bottom: 2vw;
+  }
+
+  #container-{{section.id}} .section8 {
+      padding-top: 6vw;
+  }
+
+
+  @media (max-width: 769px) {
+
+      #container-{{section.id}} .title {
+          font-size: 5vw;
+          padding-bottom: 4vw;
+      }
+
+
+      #container-{{section.id}} .section8 {
+          padding-top: 10vw;
+      }
+  }
+</style>
+{%- liquid 
+  assign card_background_color = section.settings.card_background_color
+  assign card_title = section.settings.card_title
+  assign card_title_color = section.settings.card_title_color
+  assign pc_image = section.settings.pc_image
+  assign mobile_image = section.settings.mobile_image
+
+-%}
+
+<div id="container-{{section.id}}">
+  <div class="section8" style="background: {{card_background_color}}">
+      <div class="title" style="color: {{card_title_color}};">
+          {{card_title}}
+      </div>
+      {% if pc_image != blank  %}
+        <div class="img-wrap">
+          <img data-srcset="{{ mobile_image | img_url: '1920x' }} 768w, {{ pc_image | img_url: '1920x' }}"
+              data-sizes="100vw" class="lazyload" alt="Responsive Image" />
+        </div>
+      {% endif %}
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "shops-card3",
+    "settings": [
+      {
+        "type": "text",
+        "id": "card_background_color",
+        "label": "背景颜色",
+        "default": "linear-gradient(15deg, #2240B2, #2B43B3);"
+      },
+      {
+        "type": "text",
+        "id": "card_title",
+        "label": "标题",
+        "default": "Shop In-Store and Enjoy Tier Gifts"
+      },
+      {
+        "type": "color",
+        "id": "card_title_color",
+        "label": "标题及文本颜色",
+        "default": "#fff"
+      },
+      {
+        "type": "image_picker",
+        "id": "pc_image",
+        "label": "pc_image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "mobile_image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "shops-card3"
+      }
+    ]
+  }
+{% endschema %}

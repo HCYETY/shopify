@@ -1,0 +1,49 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "home_s_footer_ximEWP": {
+      "type": "home-s-footer",
+      "settings": {
+        "menu": "home-s-footer",
+        "address": "Company Address: Room 1808, Jinxiu Hongdu Building, Meilong Avenue, Xinniu Community, Minzhi Street, Longhua District, Shenzhen (office address)",
+        "phone": "+86 400-613-3882",
+        "email": "au.support@crealityfalcon.com",
+        "logo": "shopify://shop_images/20250728160216.png",
+        "copyright": "© Creality Falcon AU, The Australian Official Store. All Rights Reserved.",
+        "instagram_link": "https://www.instagram.com/falconlaser.official",
+        "pinterest_link": "https://www.pinterest.com/FalconLaserOfficial/",
+        "tiktok_link": "https://www.tiktok.com/@falconlaserofficial",
+        "facebook_link": "https://www.facebook.com/CrealityFalconOfficial",
+        "youtube_link": "https://youtube.com/@falconlaserofficial",
+        "twitter_link": "https://x.com/CrealityFalcon",
+        "show_pay_pal": true,
+        "show_visa_pay": true,
+        "show_master_card": true,
+        "show_amex_pay": true,
+        "show_Jcb_pay": true,
+        "show_discover_pay": true,
+        "show_dinners_club": false,
+        "show_meta_pay": false,
+        "show_google_pay": true,
+        "show_after_pay": true,
+        "show_shop_pay": true,
+        "show_union_pay": true,
+        "show_sofort_pay": false,
+        "show_klarna_pay": false
+      }
+    }
+  },
+  "order": [
+    "home_s_footer_ximEWP"
+  ]
+}

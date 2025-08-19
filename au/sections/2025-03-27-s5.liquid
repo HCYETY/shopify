@@ -1,0 +1,519 @@
+{% style %}
+    .anniversary-2025-s5 {
+    width: 100%;
+    background-color: #a9cdf9;
+    /* padding: 0 0 48px; */
+    position: relative;
+  }
+  .anniversary-2025-s5 .s5-content-container {
+    background-image:
+       url({{ section.settings.background_image | img_url: 'master' }}),
+       url({{ section.settings.background_image | img_url: 'master' }}),
+       url({{ section.settings.background_image | img_url: 'master' }}),
+       url({{ section.settings.background_image | img_url: 'master' }}),
+       url({{ section.settings.background_image | img_url: 'master' }}),
+       url({{ section.settings.background_image | img_url: 'master' }});
+
+    /* 设置每个图片的位置 */
+    background-position:
+      right 81px top 95px,
+      left 77px top 494px,
+      right 81px top 806px,
+      left 77px top 1219px,
+      right 81px bottom 430px,
+      left 77px bottom 68px;
+
+    /* 设置每个图片的大小 */
+    background-size: 40% auto;
+    background-repeat: no-repeat;
+  }
+  .anniversary-2025-s5 .s5-headline-container {
+    margin: 0 auto;
+    color: #333;
+    text-align: center;
+  }
+  .anniversary-2025-s5 .s5-headline {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .anniversary-2025-s5 .s5-subheadline {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  .anniversary-2025-s5 .s5-products-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50.5px;
+    margin: 33.5px auto 0;
+  }
+
+  /* 切换栏样式 */
+  .s5-tabs-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color:#a9cdf9;
+    padding: 12px 0;
+    z-index: 103;
+    /* border-bottom: 1px solid #eee; */
+  }
+
+  .s5-tabs-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .s5-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .s5-tab {
+    padding: 9px 12.5px;
+    border-radius: 14px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1;
+    border: 1px solid #0068ff;
+    color: #000000;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .s5-tab.active {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #ffffff;
+  }
+
+  .s5-content-section {
+    scroll-margin-top: 150px; /* 确保滚动时内容不被固定导航栏遮挡 */
+  }
+  #beginner.s5-content-section {
+    padding-top: 34px;
+  }
+  #passionate-creator.s5-content-section,
+  #professional.s5-content-section {
+    padding-top: 40px;
+  }
+  #professional.s5-content-section {
+    padding-bottom: 48px;
+  }
+
+  /* 响应式处理 - 900px分割点 */
+  @media screen and (max-width: 900px) {
+    .anniversary-2025-s5 .s5-headline-container {
+      max-width: 95%;
+      text-align: left;
+      padding: 0 10px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .anniversary-2025-s5 {
+    width: 100%;
+    background-color: #a9cdf9;
+    /* padding: 0 0 3.75vw; */
+    position: relative;
+  }
+  .anniversary-2025-s5 .s5-content-container {
+    background-image:
+       url({{ section.settings.background_image | img_url: 'master' }}),
+       url({{ section.settings.background_image | img_url: 'master' }}),
+       url({{ section.settings.background_image | img_url: 'master' }}),
+       url({{ section.settings.background_image | img_url: 'master' }}),
+       url({{ section.settings.background_image | img_url: 'master' }}),
+       url({{ section.settings.background_image | img_url: 'master' }});
+
+    /* 设置每个图片的位置 */
+    background-position:
+      right 6.328vw top 7.422vw,
+      left 6.016vw top 38.594vw,
+      right 6.328vw top 62.969vw,
+      left 6.016vw top 95.234vw,
+      right 6.328vw bottom 33.594vw,
+      left 6.016vw bottom 5.3125vw;
+
+    /* 设置每个图片的大小 */
+    background-size: 40% auto;
+    background-repeat: no-repeat;
+  }
+  .anniversary-2025-s5 .s5-headline-container {
+    margin: 0 auto;
+    color: #333;
+    text-align: center;
+  }
+  .anniversary-2025-s5 .s5-headline {
+    font-size: 1.5625vw;
+    font-weight: 600;
+  }
+  .anniversary-2025-s5 .s5-subheadline {
+    font-size: 0.9375vw;
+    font-weight: 600;
+    margin-top: 0.78125vw;
+  }
+
+
+
+  .anniversary-2025-s5 .s5-products-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3.945vw;
+    margin: 2.617vw auto 0;
+  }
+
+  /* 切换栏样式 */
+  .s5-tabs-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0.9375vw 0;
+    z-index: 103;
+  }
+
+  .s5-tabs-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0.15625vw 0.625vw rgba(0, 0, 0, 0.1);
+  }
+
+  .s5-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1.5625vw;
+    max-width: 46.875vw;
+    margin: 0 auto;
+  }
+
+  .s5-tab {
+    padding: 0.703vw 0.977vw;
+    border-radius: 1.09375vw;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.859vw;
+    line-height: 1;
+    border: 0.078vw solid #0068ff;
+    color: #000000;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .s5-tab.active {
+    background-color: #ffffff;
+    color: #000;
+    border: 0.078vw solid #FFFFFF;
+  }
+
+  .s5-content-section {
+    scroll-margin-top: 11.719vw; /* 确保滚动时内容不被固定导航栏遮挡 */
+  }
+  #beginner.s5-content-section {
+    padding-top: 2.65625vw;
+  }
+  #passionate-creator.s5-content-section,
+  #professional.s5-content-section {
+    padding-top: 3.125vw;
+  }
+  #professional.s5-content-section {
+    padding-bottom: 3.75vw;
+  }
+  }
+{% endstyle %}
+
+<div class="anniversary-2025-s5">
+  <!-- 切换栏 -->
+  <div class="s5-tabs-container" id="s5TabsContainer">
+    <div class="s5-tabs">
+      <div class="s5-tab active" data-target="beginner">Pro Kits</div>
+      <div class="s5-tab" data-target="passionate-creator">🎓Beginners Prefers</div>
+      <div class="s5-tab" data-target="professional">Level Up Choices</div>
+    </div>
+  </div>
+
+  <div class="s5-content-container">
+    {% comment %} beginner {% endcomment %}
+    <div id="beginner" class="s5-content-section">
+      <div class="s5-headline-container">
+        <p class="s5-headline">{{ section.settings.headline_beginner }}</p>
+        <p class="s5-subheadline">{{ section.settings.subheadline_beginner }}</p>
+      </div>
+      <div class="s5-products-container">
+        {% content_for 'block', type: 'bestsell-product-slider', id: 'bestsell-product-slider-beginner' %}
+        {% content_for 'block', type: 'offsell-product-small-slider', id: 'offsell-product-small-slider-beginner' %}
+      </div>
+    </div>
+
+    {% comment %} Passionate Creator {% endcomment %}
+    <div id="passionate-creator" class="s5-content-section">
+      <div class="s5-headline-container">
+        <p class="s5-headline">{{ section.settings.headline_passionate_creator }}</p>
+        <p class="s5-subheadline">{{ section.settings.subheadline_passionate_creator }}</p>
+      </div>
+      <div class="s5-products-container">
+        {% content_for 'block', type: 'bestsell-product-slider', id: 'bestsell-product-slider-passionate-creator' %}
+        {% content_for 'block',
+          type: 'offsell-product-small-slider',
+          id: 'offsell-product-small-slider-passionate-creator'
+        %}
+      </div>
+    </div>
+
+    {% comment %} Professional {% endcomment %}
+    <div id="professional" class="s5-content-section">
+      <div class="s5-headline-container">
+        <p class="s5-headline">{{ section.settings.headline_professional }}</p>
+        <p class="s5-subheadline">{{ section.settings.subheadline_professional }}</p>
+      </div>
+      <div class="s5-products-container">
+        {% content_for 'block', type: 'bestsell-product-slider', id: 'bestsell-product-slider-professional' %}
+        {% content_for 'block', type: 'offsell-product-small-slider', id: 'offsell-product-small-slider-professional' %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabsContainer = document.getElementById('s5TabsContainer');
+    const tabs = document.querySelectorAll('.s5-tab');
+    const sections = document.querySelectorAll('.s5-content-section');
+
+    // 初始位置，用于确定何时固定导航
+    const tabsContainerOffset = tabsContainer.getBoundingClientRect().top + window.pageYOffset;
+    let tabsContainerInitialHeight = tabsContainer.offsetHeight;
+    let placeholderElement = null;
+
+    // 添加一个变量用于控制是否监听滚动事件
+    let isScrollListenerEnabled = true;
+
+    // 固定导航栏功能
+    function checkStickyState() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop >= tabsContainerOffset) {
+        // 只有在还没有添加sticky类时才创建占位元素
+        if (!tabsContainer.classList.contains('s5-tabs-sticky')) {
+          // 添加一个占位元素，防止内容跳动
+          if (!placeholderElement) {
+            placeholderElement = document.createElement('div');
+            placeholderElement.style.height = tabsContainerInitialHeight + 'px';
+            placeholderElement.style.width = '100%';
+            tabsContainer.parentNode.insertBefore(placeholderElement, tabsContainer);
+          }
+          tabsContainer.classList.add('s5-tabs-sticky');
+        }
+      } else {
+        // 移除sticky类
+        tabsContainer.classList.remove('s5-tabs-sticky');
+        
+        // 移除占位元素
+        if (placeholderElement && placeholderElement.parentNode) {
+          placeholderElement.parentNode.removeChild(placeholderElement);
+          placeholderElement = null;
+        }
+      }
+    }
+
+    // 初始检查一次
+    checkStickyState();
+
+    // 监听滚动事件
+    window.addEventListener('scroll', function() {
+      checkStickyState();
+    });
+
+    // 监听窗口大小变化，重新计算位置
+    window.addEventListener('resize', function() {
+      if (!tabsContainer.classList.contains('s5-tabs-sticky')) {
+        tabsContainerOffset = tabsContainer.getBoundingClientRect().top + window.pageYOffset;
+      }
+      tabsContainerInitialHeight = tabsContainer.offsetHeight;
+      if (placeholderElement) {
+        placeholderElement.style.height = tabsContainerInitialHeight + 'px';
+      }
+      checkStickyState();
+    });
+
+    // 点击选项卡切换
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', function (ev) {
+        // 移除所有活动状态
+        tabs.forEach((t) => t.classList.remove('active'));
+
+        // 添加当前活动状态
+        ev.currentTarget.classList.add('active');
+
+        // 获取目标部分ID
+        const targetId = ev.currentTarget.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+
+        // 临时禁用滚动监听，防止滚动时active状态跳跃
+        isScrollListenerEnabled = false;
+
+        // 滚动到目标部分，考虑导航栏高度
+        if (targetSection) {
+          // 获取导航栏高度
+          const navHeight = tabsContainer.offsetHeight;
+
+          // 计算目标位置，考虑导航栏高度
+          const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
+          // 滚动到计算后的位置
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth',
+          });
+
+          // 滚动完成后重新启用滚动监听
+          setTimeout(() => {
+            isScrollListenerEnabled = true;
+          }, 800); // 设置一个适当的延迟，等待滚动动画完成
+        }
+      });
+    });
+
+    // 滚动时更新活动选项卡
+    window.addEventListener('scroll', function () {
+      // 只有当滚动监听启用时才更新活动标签
+      if (!isScrollListenerEnabled) return;
+
+      let currentTab = '';
+      // 获取导航栏高度加上一点缓冲区
+      const navHeight = tabsContainer.offsetHeight + 10;
+
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionBottom = section.getBoundingClientRect().bottom;
+
+        // 考虑导航栏高度判断部分是否在视图中
+        if (sectionTop < navHeight && sectionBottom > navHeight) {
+          currentTab = section.getAttribute('id');
+        }
+      });
+
+      if (currentTab) {
+        tabs.forEach((tab) => {
+          tab.classList.remove('active');
+          if (tab.getAttribute('data-target') === currentTab) {
+            tab.classList.add('active');
+          }
+        });
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "2025-周年庆-s5",
+  "blocks": [{ "type": "@theme" }],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "背景元素图片"
+    },
+    {
+      "type": "header",
+      "content": "Beginner 相关设置"
+    },
+    {
+      "type": "text",
+      "id": "headline_beginner",
+      "label": "主标题",
+      "default": "Low Wattage Machine for More Detailed Engraving Work"
+    },
+    {
+      "type": "text",
+      "id": "subheadline_beginner",
+      "label": "副标题",
+      "default": "Budget-friendly Falcon Engravers for Engraving Beginners"
+    },
+    {
+      "type": "header",
+      "content": "Passionate Creator 相关设置"
+    },
+    {
+      "type": "text",
+      "id": "headline_passionate_creator",
+      "label": "主标题",
+      "default": "Best-Seller Falcon2 Engraver and Cutter"
+    },
+    {
+      "type": "text",
+      "id": "subheadline_passionate_creator",
+      "label": "副标题",
+      "default": "Falcon 2 Series: Versatile 22W and 40W Laser Engravers for Passionate Creators."
+    },
+    {
+      "type": "header",
+      "content": "Professional 相关设置"
+    },
+    {
+      "type": "text",
+      "id": "headline_professional",
+      "label": "主标题",
+      "default": "Materials for All Laser Engravers"
+    },
+    {
+      "type": "text",
+      "id": "subheadline_professional",
+      "label": "副标题",
+      "default": "Elevate your engraving experience with our top-notch art and craft materials."
+    }
+  ],
+  "presets": [
+    {
+      "name": "2025-周年庆-s5",
+      "category": "周年庆",
+      "blocks": [
+        {
+          "type": "bestsell-product-slider",
+          "id": "bestsell-product-slider-beginner",
+          "static": true
+        },
+        {
+          "type": "offsell-product-small-slider",
+          "id": "offsell-product-small-slider-beginner",
+          "static": true
+        },
+        {
+          "type": "bestsell-product-slider",
+          "id": "bestsell-product-slider-passionate-creator",
+          "static": true
+        },
+        {
+          "type": "offsell-product-small-slider",
+          "id": "offsell-product-small-slider-passionate-creator",
+          "static": true
+        },
+        {
+          "type": "bestsell-product-slider",
+          "id": "bestsell-product-slider-professional",
+          "static": true
+        },
+        {
+          "type": "offsell-product-small-slider",
+          "id": "offsell-product-small-slider-professional",
+          "static": true
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

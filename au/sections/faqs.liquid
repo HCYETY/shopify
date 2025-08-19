@@ -1,0 +1,221 @@
+<style>
+  #container-{{section.id}}.question-card {
+     padding: 2.5vw 22.6vw;
+  }
+  #container-{{section.id}}.question-card .text-title {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-weight: bold;
+    font-size: 1.83vw;
+    color: #000000;
+    text-align: center;
+  }
+  #container-{{section.id}}.question-card .curtain-list {
+    height: auto;
+    overflow: hidden;
+    margin-top: 2.8vw;
+  }
+  #container-{{section.id}}.question-card .curtain-list .curtain-item {
+    max-height: 4.2vw;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  #container-{{section.id}}.question-card .curtain-list .curtain-item .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.2vw;
+    border-bottom: 1px solid {{section.settings.border_color}};
+  }
+  #container-{{section.id}}.question-card .curtain-list .curtain-item .title span {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-size: 1.07vw;
+    line-height: 1;
+  }
+  #container-{{section.id}}.question-card .curtain-list .curtain-item .title .arrow {
+    width: 1.5vw;
+    height: 1.5vw;
+    transition: all 0.3s ease;
+    margin-right: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #container-{{section.id}}.question-card .curtain-list .curtain-item .title .arrow svg {
+    width: 100%;
+    height: 100%;
+  }
+  #container-{{section.id}}.question-card .curtain-list .curtain-item.open {
+    max-height: 20vw;
+    height: auto;
+  }
+  #container-{{section.id}}.question-card .curtain-list .curtain-item.open .arrow {
+    transform: rotate(90deg);
+  }
+  #container-{{section.id}}.question-card .curtain-list .curtain-item .desc2 {
+    font-size: 0.9vw;
+    line-height: 1.4;
+    letter-spacing: -0.05vw;
+    padding-top: 1vw;
+    display: block;
+    padding-top: 1vw;
+  }
+
+  @media (max-width: 769px) {
+    #container-{{section.id}}.question-card {
+      padding: 14.5vw 4.4vw;
+    }
+    #container-{{section.id}}.question-card .text-title {
+      font-size: 5vw;
+    }
+    #container-{{section.id}}.question-card .curtain-list {
+      height: auto;
+      overflow: hidden;
+      margin-top: 7.5;
+    }
+    #container-{{section.id}}.question-card .curtain-list .curtain-item {
+      max-height: 10.8vw;
+    }
+    #container-{{section.id}}.question-card .curtain-list .curtain-item .title {
+      display: flex;
+      text-align: left;
+      align-items: center;
+      justify-content: space-between;
+      height: 10.8vw;
+      line-height: 1.3;
+      border-bottom: 1px solid {{section.settings.border_color}};
+    }
+    #container-{{section.id}}.question-card .curtain-list .curtain-item .title span {
+      font-size: 3.24vw;
+    }
+    #container-{{section.id}}.question-card .curtain-list .curtain-item .title .arrow {
+      width: 3.6vw;
+      height: 3.6vw;
+      margin-right: 2vw;
+      flex-shrink: 0;
+    }
+    #container-{{section.id}}.question-card .curtain-list .curtain-item .title .arrow svg {
+      width: 100%;
+      height: 100%;
+    }
+    #container-{{section.id}}.question-card .curtain-list .curtain-item.open {
+      max-height: 40vw;
+      height: auto;
+    }
+    #container-{{section.id}}.question-card .curtain-list .curtain-item.open .arrow {
+      transform: rotate(90deg);
+    }
+    #container-{{section.id}}.question-card .curtain-list .curtain-item .desc2 {
+      font-size: 2.8vw;
+      line-height: 1.4;
+      letter-spacing: -0.05vw;
+      padding-top: 3vw;
+      display: block;
+      padding-top: 3vw;
+    }
+  }
+</style>
+
+
+
+<div id="container-{{section.id}}" class="question-card" style="background: {{ section.settings.ques_background_color }};">
+  <div class="text-title" style="color: {{section.settings.text_color}};">
+    {{ section.settings.ques_title }}
+  </div>
+  <div class="curtain-list">
+    {% for item in section.blocks %}
+      <div class="curtain-item {% if item.settings.is_open %} open{% endif %}">
+        <div class="title">
+            <span style="color: {{section.settings.text_color}};">{{ item.settings.question_text }}</span>
+            <div class="arrow">
+                <svg t="1716347737034" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="4310" width="200" height="200">
+                    <path
+                        d="M380.196571 146.285714l-4.608 0.585143a18.066286 18.066286 0 0 0-8.192 4.754286l-69.412571 69.485714a18.139429 18.139429 0 0 0 0 25.6L563.273143 512 297.837714 777.508571a18.066286 18.066286 0 0 0 0 25.6l69.485715 69.412572c2.194286 2.194286 4.900571 3.657143 7.68 4.534857l4.315428 0.731429a18.212571 18.212571 0 0 0 13.750857-5.339429l347.574857-347.574857a18.139429 18.139429 0 0 0 0-25.6L393.069714 151.625143A18.066286 18.066286 0 0 0 380.196571 146.285714z"
+                        fill="{{section.settings.arrow_color}}" p-id="4311"></path>
+                </svg>
+            </div>
+        </div>
+        <span class="desc2" style="color: {{section.settings.text_color}};">{{ item.settings.unswer_text }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+
+<script>
+      
+  $(function(){
+    $('.question-card .curtain-item').click(function () {
+        $(this).toggleClass('open');
+    })
+  })
+</script>
+
+{% schema %}
+  {
+    "name": "faqs",
+    "settings": [
+      {
+        "type": "text",
+        "id": "ques_background_color",
+        "label": "背景颜色",
+        "default": "linear-gradient(45deg, #2B4BBD, #75A7D8)"
+      },
+      {
+        "type": "text",
+        "id": "ques_title",
+        "label": "标题",
+        "default": "Event FAQs"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "字体颜色",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "border_color",
+        "label": "下边框颜色",
+        "default": "#333"
+      },
+      {
+        "type": "color",
+        "id": "arrow_color",
+        "label": "箭头颜色",
+        "default": "#14a9de"
+      }
+    ],
+    "blocks": [
+    {
+      "type": "question_item",
+      "name": "Question Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question_text",
+          "label": "question"
+        },
+        {
+          "type": "text",
+          "id": "unswer_text",
+          "label": "unswer"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_open",
+          "label": "question open",
+          "default": false
+        }
+      ]
+    }
+  ],
+    "presets": [
+      {
+        "name": "faqs"
+      }
+    ]
+  }
+{% endschema %}

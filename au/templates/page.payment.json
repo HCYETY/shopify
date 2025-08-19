@@ -1,0 +1,346 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Warranty Policy",
+            "question_1": "If the product has performance failure during the valid warranty period of the product, you can apply for product warranty service.",
+            "answer_1": "",
+            "question_2": "The implementation of free warranty service must meet the following conditions:",
+            "answer_2": "<p>√ The product has been used normally within the specified product warranty period since the purchase of the product, and there is a non-artificial performance failure of the product;</p>\n\n<p></p>√ No modification or installation as directed by unofficial manuals, or other non-human-caused failures;<p></p>\n\n<p></p>√ Put forward product maintenance requirements within 1 year from the date of receipt, and provide valid proof of purchase, documents and order numbers, as well as corresponding product information, fault information, etc.\n<p></p>",
+            "question_3": "The following situations aren’t accessible to the free product warranty service:",
+            "answer_3": "<p></p>× Collision and burning accidents caused by man-made non-product quality problems;\n<p></p>\n<p></p>× Damage caused by unauthorized modification, disassembly, opening of the shell, etc. as directed by the unofficial manual;<p></p>\n\n<p></p>× Damage or water ingress caused by improper installation, use and operation not in accordance with the instructions in the manual;<p></p>\n\n<p></p>× In the absence of official instructions and guidance, the damage caused by customers during repair assembly and installation;<p></p>\n<p></p>× Damage caused by reliability and compatibility issues when used with third-party components that are not certified by CrealityFalcon;<p></p>\n\n<p></p>× The machine serial number, factory label and other signs are torn or altered;<p></p>\n\n<p></p>× After contacting CrealityFalcon to confirm the warranty service, the corresponding item is not shipped within 7 natural days.<p></p>",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "1170",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "show_faqs_filter": true,
+        "faqs_text": "<p>Below FAQ are some common concerns of our clients before purchasing the theme.\n</p><p> If you have other questions, please just send it to <a href=\"mailto:example@domain.com\" style=\"text-decoration: underline;\">au.support@crealityfalcon.com</a>.</p>",
+        "faqs_message_heading": "Need Help?",
+        "faqs_message_text": "<span>If you have an issue or question that requires immediate assistance, you can click the button below to chat live with a Customer Service representative.   \n<br> \n<br>\nIf we aren’t available, drop us an email and we will get back to you within 20-36 hours!</span>\n<br> \n<br>\nIf you have more doubts about the use of the engraving machine, we recommend that you join our community directly and seek help from the users of the machine.",
+        "message_method_icon_1": "shopify://shop_images/facebook-notification-gift-in-stocking.jpg",
+        "message_method_link_1": "shopify://pages/facebook-group",
+        "message_method_text_1": "Join Our Group",
+        "message_method_link_2": "https://www.facebook.com/groups/falconlaserengraver/",
+        "message_method_text_2": "Join Our Group",
+        "contact_content_text": "Unable to find satisfactory answers ?",
+        "contact_text": "Contact Support",
+        "contact_link": "shopify://pages/contact",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#14a9de",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#e93d29",
+        "contact_color_bg_hover": "#e93d29",
+        "contact_color_bg_gradient_hover": ""
+      }
+    },
+    "rich_text_gKgBPT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mbGwRE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Payment Methods",
+            "heading_size": 30,
+            "heading_size_mb": 30,
+            "heading_line_height": 1,
+            "heading_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mbGwRE"
+      ],
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false
+      }
+    },
+    "image_banner_y4e9FV": {
+      "type": "image-banner",
+      "blocks": {
+        "large_img_48wxyr": {
+          "type": "largeImg",
+          "settings": {
+            "image": "shopify://shop_images/Payment.png",
+            "enable_max_width_image": false,
+            "custom_width_image": 1170,
+            "enable_scroll_down": false,
+            "enable_custom_image": false,
+            "image_behavior": "none",
+            "sub_title": "",
+            "border_sub_title": false,
+            "font_size_sub_title": 14,
+            "font_size_sub_title_mb": 14,
+            "margin_bottom_sub_title": 14,
+            "sub_heading_font": "font_1",
+            "font_weight_sub_title": "700",
+            "sub_title_position": "sub_title_above",
+            "color_sub_title": "#232323",
+            "color_sub_title_mb": "#ffffff",
+            "heading": "",
+            "letter_spacing_heading": "",
+            "enable_style_italic": false,
+            "font_size_heading": 40,
+            "font_size_heading_mb": 24,
+            "margin_bottom_heading": 20,
+            "font_weight_heading": "600",
+            "color_heading": "#232323",
+            "color_heading_mb": "#ffffff",
+            "border_title": "border_s1",
+            "border_color_title": "#232323",
+            "border_color_title_mobile": "#ffffff",
+            "text": "",
+            "font_size_des": 12,
+            "font_size_des_mb": 12,
+            "line_height_des": 26,
+            "margin_bottom_des": 35,
+            "color_des": "#232323",
+            "color_des_mb": "#ffffff",
+            "countdown": "",
+            "hide_countdown_fc": "countdown",
+            "countdown_style": "round",
+            "countdown_position": "countdown_below_desc",
+            "font_size_countdown_number": 30,
+            "font_size_countdown_text": 14,
+            "color_countdown": "#232323",
+            "color_countdown_mb": "#ffffff",
+            "countdown_margin_bottom": 35,
+            "content_width": 475,
+            "align": "center",
+            "align_items": "center",
+            "position": "left",
+            "custom_horizontal": "",
+            "custom_vertical": "",
+            "btn_text": "",
+            "link": "",
+            "btn_icon": "",
+            "button_1_width": 235,
+            "enable_button_custom_border": false,
+            "button_color": "#ffffff",
+            "button_border": "#232323",
+            "button_background": "#232323",
+            "button_background_gradient": "",
+            "button_color_hover": "#ffffff",
+            "button_border_hover": "#232323",
+            "button_background_hover": "#232323",
+            "button_background_gradient_hover": "",
+            "btn_text_2": "",
+            "link_2": "",
+            "btn_icon_2": "",
+            "button_color_2": "#ffffff",
+            "button_border_2": "#232323",
+            "button_background_2": "#232323",
+            "button_background_2_gradient": "",
+            "button_color_hover_2": "#ffffff",
+            "button_border_hover_2": "#232323",
+            "button_background_hover_2": "#232323",
+            "button_background_gradient_hover_2": "",
+            "video_link": "",
+            "adaptive_height_video": "56",
+            "icon_style": "style_1",
+            "color_icon": "#ffffff",
+            "bg_color_icon": "#000000",
+            "enable_custom_video_icon_position": false,
+            "video_icon_horizontal_position": "",
+            "video_icon_vertical_position": "",
+            "video_icon_horizontal_position_mb": "",
+            "video_icon_vertical_position_mb": ""
+          }
+        }
+      },
+      "block_order": [
+        "large_img_48wxyr"
+      ],
+      "settings": {
+        "id_section": "",
+        "container": "1170",
+        "padding_full_width": 0,
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "image_banner_title": "",
+        "enable_border_title": false,
+        "color_title": "#202020",
+        "fontsize_title": 24,
+        "fontsize_title_mb": 20,
+        "margin_bottom_title": 25,
+        "image_banner_des": "",
+        "color_des": "#202020",
+        "fontsize_des": 16,
+        "title_align": "center",
+        "style_bg": "none",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "display_type": "slide",
+        "list_gap": 0,
+        "enable_arrows": false,
+        "arrows_position": "",
+        "enable_dots": false,
+        "enable_autoplay": false
+      }
+    },
+    "rich_text_MxEgJe": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JW9XpV": {
+          "type": "heading",
+          "settings": {
+            "heading": "1. Pay with Credit/Debit Card",
+            "heading_size": 30,
+            "heading_size_mb": 30,
+            "heading_line_height": 1,
+            "heading_color": "#000000"
+          }
+        },
+        "text_JhL6gH": {
+          "type": "text",
+          "settings": {
+            "text": "<div style=\"text-align: left;\">The available credit card options are listed above. The credit card companies listed above are the most commonly used credit cards on this website. Do not worry if your credit card company is not listed, we encourage you to go ahead and make the purchase.\n\n<br>Please note that CrealityFalcon does not collect your credit/debit card number or personal information when you make a payment. For questions regarding your transactions on our site, please consult your card-issuing bank for information.</div>",
+            "text_size": 16,
+            "text_line_height": 1,
+            "margin_top_text": 27,
+            "text_color": "#000000",
+            "text_width": "900px"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JW9XpV",
+        "text_JhL6gH"
+      ],
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false
+      }
+    },
+    "rich_text_4wHm8z": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_iKVAqj": {
+          "type": "heading",
+          "settings": {
+            "heading": "1. Additional payment methods",
+            "heading_size": 30,
+            "heading_size_mb": 30,
+            "heading_line_height": 1,
+            "heading_color": "#000000"
+          }
+        },
+        "text_ywxcYd": {
+          "type": "text",
+          "settings": {
+            "text": "<div style=\"text-align: left;\">The available credit card options are listed above. The credit card companies listed above are the most commonly used credit cards on this website. Do not worry if your credit card company is not listed, we encourage you to go ahead and make the purchase.\n\n<br>Please note that CrealityFalcon does not collect your credit/debit card number or personal information when you make a payment. For questions regarding your transactions on our site, please consult your card-issuing bank for information.</div>",
+            "text_size": 16,
+            "text_line_height": 1,
+            "margin_top_text": 27,
+            "text_color": "#000000",
+            "text_width": "900px"
+          }
+        }
+      },
+      "block_order": [
+        "heading_iKVAqj",
+        "text_ywxcYd"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_gKgBPT",
+    "image_banner_y4e9FV",
+    "rich_text_MxEgJe",
+    "rich_text_4wHm8z"
+  ]
+}

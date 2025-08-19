@@ -1,0 +1,197 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "collapsible_content_haVgWA": {
+      "type": "collapsible-content",
+      "blocks": {
+        "content_FLd8jJ": {
+          "type": "content",
+          "settings": {
+            "heading": "Education And Academic Research",
+            "content": "<p>Dive into the world of educational innovation with the CrealityFalcon engraving machine. It's perfect for creating precise and engaging <strong>teaching aids</strong> and <strong>educational models</strong>. Whether you're a teacher looking to bring complex concepts to life or a student working on a school project, the laser engraver enables you to craft stunning visual aids and intricate models that transform learning. </p><p>From <strong>three-dimensional geometric shapes</strong> to <strong>detailed maps</strong> and<strong> historical dioramas</strong>, CrealityFalcon engraving machine empowers educators and learners alike to unlock their creative potential and enhance the learning experience.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_FLd8jJ"
+      ],
+      "settings": {
+        "id_section": "",
+        "container": "container",
+        "padding_full_width": 0,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "collapsible_bg": "#fff",
+        "collapsible_bg_gradient": "",
+        "collapsible_title": "",
+        "color_title": "#232323",
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "collapsible_des": "",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "fontsize_des_mb": 12,
+        "max_width_des": 700,
+        "title_align": "center",
+        "enable_image_right": true,
+        "image_right": "shopify://shop_images/1200_1200-1_979a440d-f982-40a9-a238-e5957f433807.png",
+        "bg_content_color": "#ffffff",
+        "title_color": "#232323",
+        "content_color": "#232323",
+        "icon_color": "#232323",
+        "border_color": "#232323"
+      }
+    },
+    "instagram_kpjAtF": {
+      "type": "instagram",
+      "blocks": {
+        "instagram_RtErYk": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/1_9f2852b3-5849-4a28-9aba-e2625f64aacc.jpg",
+            "link": ""
+          }
+        },
+        "instagram_mCQtwC": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/4_5c02ca26-a4fb-49c9-87bf-151a7adc6b22.jpg",
+            "link": ""
+          }
+        },
+        "instagram_qWCUw3": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/3_6d5e4604-a79e-4b33-8042-17917fb63dc2.jpg",
+            "link": ""
+          }
+        },
+        "instagram_mxAcnW": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/2_2507f834-101d-4257-a51a-fbd0b637563a.png",
+            "link": ""
+          }
+        },
+        "instagram_D9U8nR": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/5_167617fb-226e-4ae9-a186-c535a7d95a75.jpg",
+            "link": ""
+          }
+        },
+        "instagram_UHihPf": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/6_5c21764d-b6b9-4bce-9a2a-34033c3fe84d.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "instagram_RtErYk",
+        "instagram_mCQtwC",
+        "instagram_qWCUw3",
+        "instagram_mxAcnW",
+        "instagram_D9U8nR",
+        "instagram_UHihPf"
+      ],
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "type_instagram": "default",
+        "block_layout": "grid",
+        "scroll_from": "rtl",
+        "scroll_time": "30",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "enable_border_instagram": false,
+        "instagram_border_color": "#e6e6e6",
+        "instagram_bg": "#fafafa",
+        "instagram_bg_gradient": "",
+        "instagram_title": "Creative Gallery",
+        "enable_border_title": false,
+        "border_color_title": "#232323",
+        "color_title": "#232323",
+        "mg_bottom_title": 15,
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "instagram_des": "",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "margin_bottom_des": 35,
+        "content_width": 375,
+        "title_align": "center",
+        "view_all": "",
+        "view_all_fs": 12,
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "display_instagram_button": true,
+        "instagram_button_text": "View Gallery",
+        "type_button_more": "load",
+        "instagram_button_link": "",
+        "enable_underline_button": false,
+        "color_button": "#fff",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "#232323",
+        "border_color_button_hover": "#232323",
+        "bg_color_button_hover": "#fff",
+        "bg_color_gradient_button_hover": "",
+        "maxwidth_button": 230,
+        "mg_top_button": 30,
+        "embed_code": "",
+        "type_instagram_by_gallery": "popup_image",
+        "images_per_row": "5",
+        "instagram_item_limit": 5,
+        "grid_gap": 5,
+        "enable_hide_portion": false,
+        "slide_ins": "default_ins",
+        "display_arrow": true,
+        "icon_for_image": "",
+        "icon_style": "style_1",
+        "effects_bg": "",
+        "effects_opacity": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collapsible_content_haVgWA",
+    "instagram_kpjAtF"
+  ]
+}

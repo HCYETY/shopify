@@ -1,0 +1,113 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Return Policy",
+            "question_1": "How to Get After-sales Service？",
+            "answer_1": "<p>It’s ensured by CrealityFalcon that under normal use, the CrealityFalcon products you purchase will be free from defects in material and workmanship during the warranty period.</p>\n\n<p></p>During the warranty period, if the product cannot achieve the guaranteed function, please contact the after-sales service channel of CrealityFalcon to obtain the corresponding after-sales service.<p></p>\n\n<p></p>After-sales service channel information:<p></p>\n\n<p></p>Mail:au.support@crealityfalcon.com<p></p>\n\n<p></p>Let us know what we can do for you by emailing us your order ID, breakdown information and pictures or videos\n<p></p>",
+            "question_2": "Solutions Provided by CrealityFalcon",
+            "answer_2": "<p>When contacting CrealityFalcon technical support, please explain the problem of the product in detail, including product information, purchase information, fault description, and pictures/videos of fault.</p><p>\n\n</p><p>A technical support engineer will try to diagnose and resolve your issue via phone, email, or remote assistance.</p><p>\n\n</p><p>For after-sales services such as return/exchange/warranty, if it is not the fault of engraver itself, CrealityFalcon will not bear the transportation cost, and if it needs to be returned to China, CrealityFalcon will not bear the possible taxes.</p><p>\n\n</p><p>At the same time if the customer doesn't want/the customer directly rejects the package or return for personal reasons after delivery (must be in original condition), you may need to bear the bill of shipping and return fee of the package sent by the seller.</p><p>\n\n</p><p>In addition, after returning the goods, it will take 15 working days to process the refund after our fulfillment center receives the goods, and it will take 3 to 5 working days for the refund amount to appear in your account.</p><p>\n\n</p><p>CrealityFalcon will arrange service based on the type of warranty service accessible to the product, and the specific type is specified in this after-sales service category.</p><p></p>",
+            "question_3": "Non-after-sales policy coverage",
+            "answer_3": "<p>This policy does not cover the following situations:</p><p>\n\n</p><p>× Collision and burning accidents caused by man-made non-product quality problems;</p><p>\n\n</p><p>× Damage caused by unauthorized modification, disassembly, opening of the shell, etc. as directed by the unofficial manual;</p><p>\n\n</p><p>× Damage caused by improper installation, use and operation not in accordance with the instructions of the manual;</p><p>\n\n</p><p>× In the absence of official instructions and guidance, the damage caused by customers during repair and installation;</p><p>\n\n</p><p>× Damage caused by reliability and compatibility issues when used with third-party components that are not certified by CrealityFalcon;</p><p>\n\n</p><p>× Malfunction or damage caused by any third party products (including those provided by or integrated in CrealityFalcon products at your request);</p><p>\n\n</p><p>× Any technical or other support provided for the Machine, such as assistance with \"how-to\" questions and questions regarding the setup and installation of the Machine;</p><p>\n\n</p><p>× Products or parts with modified or removed identification labels. The type of after-sales service CrealityFalcon offers you the following after-sales services: return service, exchange service and warranty service.</p><p>\n\n</p><p>For more information, please contact CrealityFalcon after-sales service channel Mail: au.support@crealityfalcon.com</p>",
+            "question_4": "You can apply for a return if you meet the following conditions:",
+            "answer_4": "<p></p>√ Within 14 natural days after the customer receives the goods, the product packaging, accessories, gifts, and instructions are complete, and there is no artificial damage, and it has not been activated for use, which does not affect the secondary sales;\n<p></p>\n<p></p>√ Within 14 natural days after the customer receives the goods, it is found that the product has a performance failure that is not artificially damaged.<p></p>",
+            "question_5": "We have the right to refuse the customer's return request in the following cases:",
+            "answer_5": "<p></p>× If the request for return is made more than 14 natural days from the date of receipt; × The returned product is incomplete, the outer packaging, accessories, gifts, instructions are incomplete, or the appearance is damaged due to artificial reasons; × Failure to provide legal proof of purchase or documents when returning goods, or to forge or alter documents;<p></p>\n\n<p></p>× Collision and burnout not caused by the quality of the product itself, as well as product quality problems caused by man-made unauthorized modification, entry of foreign objects (water, oil, etc.), incorrect installation, or failure to use and operate in accordance with the instructions;<p></p>\n\n<p></p>× Tear up or alter labels, machine serial numbers, and anti-counterfeiting marks, etc.;<p></p>\n\n<p></p>× Products damaged due to unavoidable factors, such as fire, flood and other force majeure;<p></p>\n\n<p></p>× After contacting CrealityFalcon to confirm the return service, the corresponding item is not sent within 7 natural days;<p></p>\n\n<p></p>× Other cases described in the policy.<p></p>",
+            "question_6": "An exchange may be requested if one of the following conditions is met:",
+            "answer_6": "<p></p>√ The customer finds that the product has been damaged during transportation within 30 natural days after receiving the goods and can provide the certificate of damage to the goods provided by the transportation company;<p></p>\n\n<p></p>√ The customer finds that the product is seriously inconsistent with the original product description in one or more important aspects within 30 natural days after receiving the goods;<p></p>\n\n<p></p>√ Within 30 natural days after the customer receives the goods, it is found that the product has a performance failure that is not artificially damaged.<p></p>",
+            "question_7": "We have the right to refuse the customer's exchange request in the following cases: ",
+            "answer_7": "<p></p>× If the request for replacement is made more than 30 natural days from the date of receipt;<p></p>\n<p></p>× The legal proof of purchase or documents cannot be provided when exchanging goods, or the documents are forged or altered;<p></p>\n\n<p></p>× The replacement product is incomplete, or the appearance is damaged due to artificial reasons;<p></p>\n\n<p></p>× Tested by the CrealityFalcon technical support department, there is no quality problem; × Collision and burning caused by non-self-quality problems, as well as product quality problems caused by man-made unauthorized modification, entry of foreign objects (water, etc.), incorrect installation, or failure to use and operate according to the instructions in the manual;<p></p>\n\n<p></p>× Tear up or alter labels, machine serial numbers, waterproof marks, anti-counterfeiting marks, etc.;<p></p>\n\n<p></p>× Products damage due to unavoidable factors, such as fire, flood and other force majeure; × After contacting CrealityFalcon to confirm the exchange service, the corresponding item is not sent within 7 natural days;<p></p>\n\n<p></p>× If the goods are damaged due to transportation, they propose to exchange the goods but fail to provide the cargo damage certificate issued by the transportation company;<p></p>\n\n<p></p>× Other situations described in the policy.<p></p>",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "paragraph_8zxyWC": {
+          "type": "paragraph",
+          "settings": {
+            "title": "NOTICE：",
+            "question_1": "If there is a shipping cost incurred at the time of purchase, the shipping cost incurred at the time of purchase will be deducted from the refund, if there is no shipping cost incurred at the time of purchase, a full refund will be made.",
+            "answer_1": "",
+            "question_2": "",
+            "answer_2": "",
+            "question_3": "",
+            "answer_3": "",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c",
+        "paragraph_8zxyWC"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "1170",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "show_faqs_filter": true,
+        "faqs_text": "<p>Below FAQ are some common concerns of our clients before purchasing the theme.\n</p><p> If you have other questions, please just send it to <a href=\"mailto:example@domain.com\" style=\"text-decoration: underline;\">au.support@crealityfalcon.com</a>.</p>",
+        "faqs_message_heading": "Contact us",
+        "faqs_message_text": "<p style=\"line-height: 30px; margin-bottom: 0px;margin-top: 5px;\">\n<span class=\"icon\">\n<svg style=\"position: relative; top: 0px; width: 20px;height: 20px\" aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"comment-alt-dots\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\" class=\"svg-inline--fa fa-comment-alt-dots fa-w-16 fa-7x\"><path fill=\"currentColor\" d=\"M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zM128 240c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z\" class=\"\"></path></svg>\n</span>\n<span style=\"margin-left: 7px\">CALL US：+86 400-613-3882 <a href=\"tel:%20%20091-123-ELLA\"></a></span>\n</p>\n<p style=\"line-height:30px; margin-top: 0\">\n<span class=\"icon\">\n<svg style=\"width: 20px;height: 20px\" aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"envelope\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\" class=\"svg-inline--fa fa-envelope fa-w-16 fa-7x\"><path fill=\"currentColor\" d=\"M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z\" class=\"\"></path></svg></span>\n<span style=\"margin-left: 7px\"><a href=\"mailto:au.support@crealityfalcon.com\">au.support@crealityfalcon.com</a></span>\n</p><p>Business Hours:\n<br>\nMonday-Friday 9:00-18:00 BJT</p>\n<br><br><b>Company Name:</b> Shenzhen Chuangxiang 3D Technology Co., Ltd.<br>\n<b>Company Number:</b> 91440300094231378E<br>\n<b>Company Address:</b> Room 1808, Jinxiu Hongdu Building, Meilong Avenue, Xinniu Community, Minzhi Street, Longhua District, Shenzhen (office address); Factory Building No. 156, Huawang Road, Langkou Community, Dalang Street, Longhua District, Shenzhen (production address)",
+        "message_method_link_1": "",
+        "message_method_text_1": "",
+        "message_method_link_2": "",
+        "message_method_text_2": "",
+        "contact_content_text": "Unable to find satisfactory answers ?",
+        "contact_text": "Contact Support",
+        "contact_link": "shopify://pages/contact",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#14a9de",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#e93d29",
+        "contact_color_bg_hover": "#e93d29",
+        "contact_color_bg_gradient_hover": ""
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

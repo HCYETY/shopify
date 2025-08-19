@@ -1,0 +1,767 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "custom_banner_bYdQYb": {
+      "type": "custom-banner",
+      "settings": {
+        "banner": "shopify://shop_images/1..jpg",
+        "m_banner": "shopify://shop_images/957x1305_97211c55-c574-45f8-9742-84d2d7f00486.jpg",
+        "time": "2025-03-09 20:59:59",
+        "title": "Work Smart, Create More!",
+        "subtitle": "Celebrate Women in Craft & Industry",
+        "desc": "<p>Save Up To <strong>A$1585</strong> On Falcon2 22W Bundle</p>"
+      }
+    },
+    "topbar_MWBiyW": {
+      "type": "topbar",
+      "blocks": {
+        "tab_QpJ6GV": {
+          "type": "tab",
+          "settings": {
+            "target": "section1",
+            "title": "Flash Sale",
+            "active": true
+          }
+        },
+        "tab_nGFQHD": {
+          "type": "tab",
+          "settings": {
+            "target": "section2",
+            "title": "Top Picks",
+            "active": true
+          }
+        },
+        "tab_ztJgKK": {
+          "type": "tab",
+          "settings": {
+            "target": "section3",
+            "title": "50% OFF!",
+            "active": true
+          }
+        },
+        "tab_6h9xmd": {
+          "type": "tab",
+          "settings": {
+            "target": "section4",
+            "title": "Professional Solution",
+            "active": true
+          }
+        },
+        "tab_nNLfTa": {
+          "type": "tab",
+          "settings": {
+            "target": "section5",
+            "title": "Materials & Acces",
+            "active": true
+          }
+        },
+        "tab_jV3zDe": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "target": "section6",
+            "title": "New Release",
+            "active": true
+          }
+        }
+      },
+      "block_order": [
+        "tab_QpJ6GV",
+        "tab_nGFQHD",
+        "tab_ztJgKK",
+        "tab_6h9xmd",
+        "tab_nNLfTa",
+        "tab_jV3zDe"
+      ],
+      "settings": {}
+    },
+    "rights_and_interests_mrB9Va": {
+      "type": "rights-and-interests",
+      "blocks": {
+        "rights_mC7hgt": {
+          "type": "rights",
+          "settings": {
+            "icon": "shopify://shop_images/e75059fa3fd1f40b65511e345c144ed2_e8d42aea-c7e9-46a0-a152-2beb66817a0a.png",
+            "desc": "Subscribe Gifts"
+          }
+        },
+        "rights_GxLp4C": {
+          "type": "rights",
+          "settings": {
+            "icon": "shopify://shop_images/b1b8d38d99152bccb164e2c1b259cb50.png",
+            "desc": "Limited Flash Sale"
+          }
+        },
+        "rights_faTzDF": {
+          "type": "rights",
+          "settings": {
+            "icon": "shopify://shop_images/dba4f26b71de541ce9ca07d477f67233.png",
+            "desc": "Free Shipping Over A$69.99"
+          }
+        },
+        "rights_NCkWFq": {
+          "type": "rights",
+          "settings": {
+            "icon": "shopify://shop_images/90525e031f104fa9d91cb37d31a518ef.png",
+            "desc": "100% Secure Payment"
+          }
+        },
+        "rights_7wAcBt": {
+          "type": "rights",
+          "settings": {
+            "icon": "shopify://shop_images/62b346479761e66abbf8c135abb2c594.png",
+            "desc": "14-Day Money Back Guarantee"
+          }
+        },
+        "rights_URMz3g": {
+          "type": "rights",
+          "settings": {
+            "icon": "shopify://shop_images/88c3eb86da2aa0a72be97a9aeb171090.png",
+            "desc": "12-Month Warranty"
+          }
+        }
+      },
+      "block_order": [
+        "rights_mC7hgt",
+        "rights_GxLp4C",
+        "rights_faTzDF",
+        "rights_NCkWFq",
+        "rights_7wAcBt",
+        "rights_URMz3g"
+      ],
+      "settings": {
+        "bind": ""
+      }
+    },
+    "custom_newsletter1_jR4prP": {
+      "type": "custom-newsletter1",
+      "settings": {
+        "bind": "",
+        "banner": "shopify://shop_images/4..jpg",
+        "m_banner": "shopify://shop_images/mail1.jpg",
+        "title": "Women's Day Special Giveaway",
+        "subtitle": "Sign up now for a chance to win a Free Cordless Electric Screwd!",
+        "desc": "Don't missout!",
+        "comment": "*Only 5 Lucky Winners will be announced on Mar. 10th."
+      }
+    },
+    "timedown_collections_hL3W3b": {
+      "type": "timedown-collections",
+      "blocks": {
+        "product_ByFGwn": {
+          "type": "product",
+          "settings": {
+            "product": "bubinga-brazilian-rosewood-plywood-sheets-for-laser-engraving-6pcs"
+          }
+        },
+        "product_Ki9dyW": {
+          "type": "product",
+          "settings": {
+            "product": "stainless-steel-name-tags-for-laser-engraving-20-packs-in-4-colors"
+          }
+        },
+        "product_XD9mnD": {
+          "type": "product",
+          "settings": {
+            "product": "mens-slim-metal-wallets-rfid-blocking-money-clip-card-holder-2-packs"
+          }
+        }
+      },
+      "block_order": [
+        "product_ByFGwn",
+        "product_Ki9dyW",
+        "product_XD9mnD"
+      ],
+      "disabled": true,
+      "settings": {
+        "bind": "section1",
+        "icon": "shopify://shop_images/5.flash_sale.png",
+        "time": "2025-03-09 20:59:59"
+      }
+    },
+    "collection_products_YmTQra": {
+      "type": "collection-products",
+      "blocks": {
+        "product_pR8UJU": {
+          "type": "product",
+          "settings": {
+            "product": "falcon2-22w-laser-engraver-and-cutter",
+            "icon": "shopify://shop_images/6.1.png",
+            "desc": ""
+          }
+        },
+        "product_tJxi4X": {
+          "type": "product",
+          "settings": {
+            "product": "falcon2-pro-40w-and-22w-enclosed-laser-cutter-engraver",
+            "icon": "shopify://shop_images/6.2.png",
+            "desc": ""
+          }
+        },
+        "product_hBwENq": {
+          "type": "product",
+          "settings": {
+            "product": "low-wattage-engraver-cr-laser-falcon-10w",
+            "icon": "shopify://shop_images/6.3.png",
+            "desc": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_pR8UJU",
+        "product_tJxi4X",
+        "product_hBwENq"
+      ],
+      "settings": {
+        "bind": "section2",
+        "title": "Get Your Trusted Tool for Creativity and Productivity",
+        "subtitle": "Checkout Creality Falcon's bestsellers"
+      }
+    },
+    "long_collection_list_6EFGRW": {
+      "type": "long-collection-list",
+      "blocks": {
+        "feature_fgkdWz": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/22w.png",
+            "text": "22W/40W"
+          }
+        },
+        "feature_xVCP89": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/41c2144c5fb21d8be33944d26f56924f.png",
+            "text": "25000mm/min"
+          }
+        },
+        "feature_ywYpQV": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/afe301bc3e76be3ac1f7e1cfb7aa8f9c_6d42d641-1d11-4df9-9ec3-426c357cabd1.png",
+            "text": "New Integrated Air Assist"
+          }
+        },
+        "feature_edMjmi": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/b059942a7321575b31567fab557b7626.png",
+            "text": "Triple Monitoring Systems"
+          }
+        },
+        "feature_VJNTaw": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/12480f0e8f9b09674ef371b7319a2184.png",
+            "text": "Five Safety Protection"
+          }
+        },
+        "feature_xfyaq3": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/bb9c35e3e480a559eaac21c077c84d61.png",
+            "text": "Hassle-Free Assembly"
+          }
+        },
+        "product_ETfFTd": {
+          "type": "product",
+          "settings": {
+            "product": "falcon2-22w-40w-laser-cutter-and-engraver-protection-kits",
+            "description": "Best-Seller Falcon2 Series For Home Bussiness"
+          }
+        },
+        "product_LbDCrq": {
+          "type": "product",
+          "settings": {
+            "product": "falcon2-40w-laser-engraver-cutter",
+            "description": "Powerful 40W Laser Qutput | Fast Operation: Cutting speed up to 25000 mm/min"
+          }
+        },
+        "product_P6QmkL": {
+          "type": "product",
+          "settings": {
+            "product": "40w-combo-sale-falcon2-laser-engraver-all-in-one-kits",
+            "description": "Best-Seller Falcon2 Series For Home Bussiness"
+          }
+        }
+      },
+      "block_order": [
+        "feature_fgkdWz",
+        "feature_xVCP89",
+        "feature_ywYpQV",
+        "feature_edMjmi",
+        "feature_VJNTaw",
+        "feature_xfyaq3",
+        "product_ETfFTd",
+        "product_LbDCrq",
+        "product_P6QmkL"
+      ],
+      "settings": {
+        "bind": "section3",
+        "is_reverse": false,
+        "heading": "Work Smarter, Create Bigger",
+        "subheading": "Falcon 2 Series: Versatile 22W and 40W Laser Engravers for Passionate Creators.",
+        "tag": "Top Picks",
+        "main_product_title": "Falcon2 22W Laser Engraver and Cutter",
+        "main_product_specs": "22W | 25000mm/min | New Integrated Air Assist",
+        "main_product_image": "shopify://shop_images/7_3e4ba8c2-90a9-42a9-9022-aaaa5ef190d3.jpg",
+        "product": "falcon2-22w-laser-engraver-and-cutter"
+      }
+    },
+    "long_collection_list_MgQNRR": {
+      "type": "long-collection-list",
+      "blocks": {
+        "feature_LnNRQn": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Creality_Falcon2_Pro_22W_40W_60W.png",
+            "text": "22W/40W/60W"
+          }
+        },
+        "feature_Np4JBG": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/afe301bc3e76be3ac1f7e1cfb7aa8f9c.png",
+            "text": "Bonus 1.6W Laser Module"
+          }
+        },
+        "feature_tpebyk": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/daf2e77e4ec241918761fc502291f416.png",
+            "text": "Precise Positioning"
+          }
+        },
+        "feature_AbznJm": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/41c2144c5fb21d8be33944d26f56924f_222fbbab-1b7f-4668-b355-33cebd0b1abd.png",
+            "text": "25000mm/min"
+          }
+        },
+        "feature_7Mg8iw": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/FDA_3c4a8a1b-9767-4629-8ef6-ab141f6c5c67.png",
+            "text": "FDA Class 1 Safety"
+          }
+        },
+        "feature_KfmNcH": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/b059942a7321575b31567fab557b7626_8bd30523-0e7e-41d7-9255-b3b9e76cb4ff.png",
+            "text": "Bulit-in Camera"
+          }
+        },
+        "product_HdD3WH": {
+          "type": "product",
+          "settings": {
+            "product": "falcon2-pro-22w-40w-60w-enclosed-laser-cutter-and-engraver-protection-kits",
+            "description": "Safe Option Falcon2 Pro Series For Professional Precision."
+          }
+        },
+        "product_JLUmyq": {
+          "type": "product",
+          "settings": {
+            "product": "falcon2-pro-60w-enclosed-laser-cutter-and-engraver",
+            "description": "World's First 60W | Built-in Camera"
+          }
+        },
+        "product_UmDtLw": {
+          "type": "product",
+          "settings": {
+            "product": "falcon2-pro-40w-enclosed-laser-cutter-and-engraver-master-engraving-bundle",
+            "description": "Super Powerful Falcon2 Pro Enclosed Laser Engravers and Cutters"
+          }
+        }
+      },
+      "block_order": [
+        "feature_LnNRQn",
+        "feature_Np4JBG",
+        "feature_tpebyk",
+        "feature_AbznJm",
+        "feature_7Mg8iw",
+        "feature_KfmNcH",
+        "product_HdD3WH",
+        "product_JLUmyq",
+        "product_UmDtLw"
+      ],
+      "settings": {
+        "bind": "section4",
+        "is_reverse": true,
+        "heading": "Power Meets Precision, Craft Without Limits",
+        "subheading": "Falcon2 Pro Series: Powerful 22W, 40W, and 60W Lasers for Professional Precision.",
+        "tag": "Best Seller",
+        "main_product_title": "Falcon2 Pro Enclosed Laser Engraver and Cutter",
+        "main_product_specs": "22W/40W/60W | Bonus 1.6W | FDA Class 1 Safety",
+        "main_product_image": "shopify://shop_images/24_05e92389-8da9-422e-8878-a1511763fea8.jpg",
+        "product": "falcon2-pro-40w-and-22w-enclosed-laser-cutter-engraver"
+      }
+    },
+    "little_collections_dcKU33": {
+      "type": "little-collections",
+      "settings": {
+        "bind": "section5",
+        "title": "Materials for All Laser Engravers",
+        "collection": "engraving-machine-craft-materials"
+      }
+    },
+    "double_collection_gdpCKC": {
+      "type": "double-collection",
+      "blocks": {
+        "collection_iUQNHr": {
+          "type": "collection",
+          "settings": {
+            "title": "Accessories for 22W/40W/60W",
+            "collection": "accessories-for-falcon2-laser-engravers-cutters"
+          }
+        },
+        "collection_zgFAtd": {
+          "type": "collection",
+          "settings": {
+            "title": "Accessories for 5W/10W",
+            "collection": "accessories-for-falcon-laser-engravers-5w-7-5w-10w"
+          }
+        }
+      },
+      "block_order": [
+        "collection_iUQNHr",
+        "collection_zgFAtd"
+      ],
+      "settings": {
+        "bind": ""
+      }
+    },
+    "second_newsletter_c7wGL7": {
+      "type": "second-newsletter",
+      "settings": {
+        "bind": "section6",
+        "link": "",
+        "tag_text": "It's Coming!",
+        "heading": "Creality Falcon A1 10W",
+        "subtext": "Get first-hand news and offers from Creality Falcon.",
+        "placeholder": "Your Email",
+        "button_text": "Sign up",
+        "background_image": "shopify://shop_images/25.jpg",
+        "mobile_image": "shopify://shop_images/28.jpg"
+      }
+    },
+    "brand_slider_YK4XQX": {
+      "type": "brand-slider",
+      "blocks": {
+        "image_MFCjam": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative01_1_85e357de-9ccb-4c12-b84f-771bf8a0cd4c.png",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "image_LB3qPV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative02_1_bd671a05-3376-4eed-a88d-ac98f5610a8a.png",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "image_xPYGCX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative03_1_455dce15-4241-4ea9-8d90-c1425ee1ff93.png",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "image_Xj9KR4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative04_1_963629c7-93eb-4d78-afa7-a7c54c247866.png",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "image_CdNaJz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative05_1_71cce2fc-12a5-42b5-bcd9-753b10fd2632.png",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "image_rbHRKq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/laser_engraver_user_group_falcon_creative06_1_824d7973-50cb-4daa-aa2b-cf8f7a330747.png",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_MFCjam",
+        "image_LB3qPV",
+        "image_xPYGCX",
+        "image_Xj9KR4",
+        "image_CdNaJz",
+        "image_rbHRKq"
+      ],
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "brands_block_style": "style_1",
+        "brand_layout": "infinite",
+        "scroll_from": "ltr",
+        "brand_scroll_time": "20",
+        "display_brand_border": true,
+        "brand_bg": "#ffffff",
+        "brand_bg_gradient": "",
+        "title_align": "center",
+        "brand_title": "Hear from Our Happy Customers",
+        "color_title": "#232323",
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "mg_bottom_title": 12,
+        "enable_background_title": false,
+        "enable_border_title": false,
+        "border_color_title": "#051c42",
+        "brand_des": "",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "mg_bottom_des": 0,
+        "view_all": "",
+        "view_all_fs": 12,
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 0,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "icon_view_all": "",
+        "color_view_all_icon": "#eb492f",
+        "view_all_icon_side": "left",
+        "btn_text": "",
+        "fontsize_btn": 12,
+        "btn_spacing_top": 15,
+        "btn_color": "#828282",
+        "btn_link": "",
+        "enable_autoplay": false,
+        "brand_speed": "3000",
+        "brand_rows": "5",
+        "enable_arrows": true,
+        "enable_dots": false,
+        "enable_center_mode": false,
+        "style_position_arrows": "none",
+        "position_horizontal_arrow": 15,
+        "color_arrow": "",
+        "arrow_background": "",
+        "arrow_background_gradient": "",
+        "arrow_border": "",
+        "color_arrow_hover": "",
+        "arrow_background_hover": "",
+        "arrow_background_gradient_hover": "",
+        "arrow_border_hover": "",
+        "brand_rows_mb": "1",
+        "brand_image_ratio": "square",
+        "item_distance": 15,
+        "margin_bottom_image": 0,
+        "brand_item_border": "none",
+        "border_radius": 0,
+        "border_color": "#e2e5e7",
+        "border_color_hover": "#2d2d2d",
+        "hover_effect": "zoom",
+        "color_underline_image_hover": "#000000",
+        "fontsize_text": 16,
+        "fontsize_text_mb": 13,
+        "font_weight_title": "400",
+        "margin_bottom_title": 0,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
+    "instagram_dMedL8": {
+      "type": "instagram",
+      "blocks": {
+        "instagram_3NJYWM": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Doriane_Louin-rose_6c816283-5828-4be1-88dd-2b75ff506c3b.jpg",
+            "link": ""
+          }
+        },
+        "instagram_LTRG7Y": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Sophie_Smith_a92ad28b-f70b-45b1-b44b-9e34b1fc85bc.png",
+            "link": ""
+          }
+        },
+        "instagram_YXkziD": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/laser-cutting-custom-engraved-leather-keychain_dccd7b63-6afa-4889-b3d4-e4c2a49659ae.webp",
+            "link": ""
+          }
+        },
+        "instagram_xjRcFr": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/acrylic-door-name-sign.webp",
+            "link": ""
+          }
+        },
+        "instagram_VEXiM9": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/engraved-metal-tumblers_f6b61f4f-a1c1-412a-b7f0-7470cd35b1a9.webp",
+            "link": ""
+          }
+        },
+        "instagram_hMhBck": {
+          "type": "instagram",
+          "settings": {
+            "enable": true,
+            "image": "shopify://shop_images/Perfume_Spray_Bottle.webp",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "instagram_3NJYWM",
+        "instagram_LTRG7Y",
+        "instagram_YXkziD",
+        "instagram_xjRcFr",
+        "instagram_VEXiM9",
+        "instagram_hMhBck"
+      ],
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "type_instagram": "default",
+        "block_layout": "infinite",
+        "scroll_from": "rtl",
+        "scroll_time": "30",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "enable_border_instagram": false,
+        "instagram_border_color": "#e6e6e6",
+        "instagram_bg": "#fafafa",
+        "instagram_bg_gradient": "",
+        "instagram_title": "New year ideas for laser engraving",
+        "enable_border_title": false,
+        "border_color_title": "#232323",
+        "color_title": "#232323",
+        "mg_bottom_title": 15,
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "instagram_des": "",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "margin_bottom_des": 35,
+        "content_width": 375,
+        "title_align": "center",
+        "view_all": "",
+        "view_all_fs": 12,
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "display_instagram_button": true,
+        "instagram_button_text": "Learn More Inspiration",
+        "type_button_more": "link",
+        "instagram_button_link": "https://www.craftseek.com/project",
+        "enable_underline_button": false,
+        "color_button": "#f4dbdb",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "#232323",
+        "border_color_button_hover": "#232323",
+        "bg_color_button_hover": "#ffffff",
+        "bg_color_gradient_button_hover": "",
+        "maxwidth_button": 230,
+        "mg_top_button": 30,
+        "embed_code": "",
+        "type_instagram_by_gallery": "popup_image",
+        "images_per_row": "5",
+        "instagram_item_limit": 5,
+        "grid_gap": 5,
+        "enable_hide_portion": false,
+        "slide_ins": "default_ins",
+        "display_arrow": true,
+        "icon_for_image": "",
+        "icon_style": "style_1",
+        "effects_bg": "",
+        "effects_opacity": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_banner_bYdQYb",
+    "topbar_MWBiyW",
+    "rights_and_interests_mrB9Va",
+    "custom_newsletter1_jR4prP",
+    "timedown_collections_hL3W3b",
+    "collection_products_YmTQra",
+    "long_collection_list_6EFGRW",
+    "long_collection_list_MgQNRR",
+    "little_collections_dcKU33",
+    "double_collection_gdpCKC",
+    "second_newsletter_c7wGL7",
+    "brand_slider_YK4XQX",
+    "instagram_dMedL8"
+  ]
+}

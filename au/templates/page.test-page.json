@@ -1,0 +1,499 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "product_block_BAgLj4": {
+      "type": "product-block",
+      "blocks": {
+        "banner_xPCe9A": {
+          "type": "banner",
+          "disabled": true,
+          "settings": {
+            "enable_image": false,
+            "banner_height": "full_height",
+            "enable_image_zoom": true,
+            "banner_border_radius": 0,
+            "content_align": "center",
+            "align_items": "center",
+            "align_items_spacing_tb": 80,
+            "align_items_spacing_lr": 10,
+            "text": "FORGEDIO",
+            "fontsize_text": 16,
+            "fontsize_text_mb": 16,
+            "mg_bottom_text": 0,
+            "color_text": "#ffffff",
+            "sub_text": "",
+            "fontsize_sub_text": 14,
+            "fontsize_sub_text_mb": 14,
+            "mg_bottom_sub_text": 14,
+            "color_sub_text": "#ffffff",
+            "description": "",
+            "fontsize_description": 14,
+            "color_description": "#ffffff",
+            "button_text": "",
+            "button_link": "",
+            "button_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_bg_color": "#232323",
+            "button_bg_color_gradient": "",
+            "button_color_hover": "#232323",
+            "button_border_color_hover": "#232323",
+            "button_bg_color_hover": "#ffffff",
+            "button_bg_color_gradient_hover": "",
+            "enable_custom_position": false,
+            "custom_horizontal": "",
+            "custom_vertical": "",
+            "style_video": "mp4",
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "url_mp4": "https://cdn.shopify.com/videos/c/o/v/0fc96ed2cf3d4534b34bfd8f01f9d5ad.mp4",
+            "adaptive_height_video": "56",
+            "icon_style": "style_1",
+            "color_icon": "#ffffff",
+            "bg_color_icon": "#000000",
+            "enable_custom_video_icon_position": false,
+            "video_icon_horizontal_position": "",
+            "video_icon_vertical_position": "",
+            "video_icon_horizontal_position_mb": "",
+            "video_icon_vertical_position_mb": ""
+          }
+        }
+      },
+      "block_order": [
+        "banner_xPCe9A"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "border_height": 1,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "product_block_layout": "slider",
+        "product_bg": "#ffffff",
+        "product_bg_gradient": "",
+        "style_block_header": "style1",
+        "pd_top_title": 30,
+        "product_block_title": "Trending Now",
+        "enable_border_title": true,
+        "enable_border_title_style2": true,
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "mg_bottom_title": 12,
+        "mg_bottom_title_mb": 12,
+        "border_color_title": "#232323",
+        "color_title": "#232323",
+        "product_tab_des": "",
+        "product_tab_des_color": "#232323",
+        "view_all": "",
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "mg_bottom_view_mb": 0,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "icon_view_all": "",
+        "color_view_all_icon": "#eb492f",
+        "title_align": "center",
+        "button_text": "Show More",
+        "button_text_font_size": 14,
+        "button_text_font_weight": "500",
+        "button_text_text_transform": "uppercase",
+        "product_button_width": 270,
+        "pd_top_product_button": 12,
+        "pd_bottom_product_button": 12,
+        "button_icon": "",
+        "mg_bottom_button": 55,
+        "enable_button_shadow": false,
+        "color_button": "#ffffff",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "",
+        "border_color_button_hover": "",
+        "bg_color_button_hover": "",
+        "bg_color_gradient_button_hover": "",
+        "product_block_collection": "",
+        "product_block_limit": 8,
+        "grid_gap": 30,
+        "pb_style": "style1",
+        "style_countdown": "style_1",
+        "countdown": "",
+        "font_size_countdown_text": 14,
+        "color_countdown": "#f42b23",
+        "countdown_margin_left": 15,
+        "product_block_per_row": "4",
+        "product_block_infinite_scroll": true,
+        "product_block_swipe_on_mobile": true,
+        "enable_product_card_pd_bottom": false,
+        "product_card_pd_bottom": 40,
+        "product_block_dots": false,
+        "product_block_dots_mb": true,
+        "spacing_top_dots": 0,
+        "product_block_arrows": true,
+        "product_block_arrows_mb": false,
+        "product_block_progress_bar": false,
+        "product_block_counter_number": false,
+        "product_block_show": "5",
+        "position_vertical_arrow": "70px",
+        "product_block_per_view": "4",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_hover_drag_icon": true,
+        "position": "left",
+        "width_banner": 40,
+        "display_list_collection": false,
+        "collection_color": "#202020",
+        "collection_color_hover": "#3e8cc4",
+        "collection_bg_color": "#ffffff",
+        "collection_bg_color_gradient": "",
+        "text_list": "View all categories",
+        "url_list": "",
+        "enable_layout_special": false,
+        "bg_card": "#ffffff",
+        "padding_card": 15,
+        "border_radius_card": 5,
+        "border_layout_card": "full",
+        "border_width_card": 5,
+        "border_color_card": "#f0f1f4"
+      }
+    },
+    "product_tab_block_q4Wmtb": {
+      "type": "product-tab-block",
+      "blocks": {
+        "product_tabs_DBRPhd": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Womens",
+            "collection": ""
+          }
+        },
+        "product_tabs_nbyr3m": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Womens",
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_tabs_DBRPhd",
+        "product_tabs_nbyr3m"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "product_block_layout": "grid",
+        "product_bg": "#e8e8e8",
+        "product_block_title": "Trending Now",
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "mg_bottom_title": 12,
+        "enable_border_title": true,
+        "border_color_title": "#232323",
+        "enable_border_title2": false,
+        "border_color_title2": "#232323",
+        "color_title": "#232323",
+        "product_tab_des": "desctiption",
+        "product_tab_des_color": "#232323",
+        "title_align": "center",
+        "product_block_limit": 8,
+        "image_behavior": "none",
+        "product_block_per_row": "4",
+        "product_block_infinite_scroll": true,
+        "min_width_button": "",
+        "product_block_dots": false,
+        "product_block_dots_mb": true,
+        "product_block_arrows": true,
+        "product_block_arrows_mb": false,
+        "product_block_show": "5",
+        "product_block_per_view": "4",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_hover_drag_icon": true,
+        "position": "left",
+        "width_banner": 20,
+        "tab_title_style": "style_1",
+        "mg_bottom_title_tab": 24,
+        "type_tab_font": "font_1",
+        "separation": true,
+        "style_separation": "style1",
+        "color_separation": "",
+        "enable_scroll_title": true,
+        "fontsize_tab": 14,
+        "fontsize_tab_mb": 14,
+        "font_weight_tab": "700",
+        "font_weight_active_tab": "700",
+        "spacing_between_title": 24,
+        "line_height_tab": 20,
+        "line_height_tab_mobile": 24,
+        "border_tab_radius": 3,
+        "min_width_tab": 5,
+        "border_width_tab": 3,
+        "color_tab": "#232323",
+        "border_color_tab": "",
+        "bg_color_tab": "#ffffff",
+        "bg_color_gradient_tab": "",
+        "color_tab_active": "#232323",
+        "bg_color_tab_active": "#f8f8f8",
+        "bg_color_gradient_tab_active": ""
+      }
+    },
+    "video_block_g7a6Yd": {
+      "type": "video-block",
+      "disabled": true,
+      "settings": {
+        "container": "960",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "spotlight_bg": "#ffffff",
+        "spotlight_bg_gradient": "",
+        "video_block_title": "Video",
+        "color_title": "#232323",
+        "fontsize_title": 16,
+        "fontsize_title_mb": 22,
+        "margin_bottom_title": 45,
+        "video_block_des": "",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "title_align": "center",
+        "autoplay": true,
+        "border_radius": "30",
+        "video_height": "54",
+        "style_video": "youtube",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "url_mp4": "",
+        "description": "",
+        "full_width": false
+      }
+    },
+    "creality_2024_12_christmas_iWNDj4": {
+      "type": "creality_2024_12_christmas",
+      "blocks": {
+        "gift_rule_tKFkgz": {
+          "type": "gift-rule",
+          "settings": {
+            "gift_rule_image": "shopify://shop_images/1.gif",
+            "gift_rule_title": "Gift ideas for anyone",
+            "gift_rule_desc": "Wrap up the magic of the perfect gift at the right price."
+          }
+        },
+        "gift_rule_e7JXKp": {
+          "type": "gift-rule",
+          "settings": {
+            "gift_rule_title": "Gift ideas for anyone",
+            "gift_rule_desc": "Wrap up the magic of the perfect gift at the right price."
+          }
+        },
+        "gift_rule_ieMEqJ": {
+          "type": "gift-rule",
+          "settings": {
+            "gift_rule_title": "Gift ideas for anyone",
+            "gift_rule_desc": "Wrap up the magic of the perfect gift at the right price."
+          }
+        },
+        "gift_rule_rGUeFw": {
+          "type": "gift-rule",
+          "settings": {
+            "gift_rule_title": "Gift ideas for anyone",
+            "gift_rule_desc": "Wrap up the magic of the perfect gift at the right price."
+          }
+        },
+        "faq_item_DGEkNp": {
+          "type": "faq-item",
+          "settings": {
+            "faq_question": "aaaaaaa",
+            "faq_answer": "bbbbbbbb"
+          }
+        },
+        "faq_item_jgXYfU": {
+          "type": "faq-item",
+          "settings": {
+            "faq_question": "cccccc",
+            "faq_answer": "dddddd"
+          }
+        },
+        "faq_item_rfMdzK": {
+          "type": "faq-item",
+          "settings": {
+            "faq_question": "",
+            "faq_answer": ""
+          }
+        },
+        "faq_item_haphAN": {
+          "type": "faq-item",
+          "settings": {
+            "faq_question": "",
+            "faq_answer": ""
+          }
+        },
+        "faq_item_dY66aF": {
+          "type": "faq-item",
+          "settings": {
+            "faq_question": "",
+            "faq_answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "gift_rule_tKFkgz",
+        "gift_rule_e7JXKp",
+        "gift_rule_ieMEqJ",
+        "gift_rule_rGUeFw",
+        "faq_item_DGEkNp",
+        "faq_item_jgXYfU",
+        "faq_item_rfMdzK",
+        "faq_item_haphAN",
+        "faq_item_dY66aF"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_banner": false,
+        "banner_title": "",
+        "banner_desc": "",
+        "banner_btn_link": "",
+        "banner_image": "shopify://shop_images/Chrismas_Sale_1880_x_600.jpg",
+        "banner_mb_image": "shopify://shop_images/Chrismas_Sale_957_x_1350.jpg",
+        "countdown_title": "Hurry up! Christmas Sale Begins!🎅Deals end in",
+        "countdown": "2024-12-26T21:59:59",
+        "section1_title": "🎄Huge Save on Best-Seller Falcon2 Engraver and Cutter",
+        "section1_sub_title": "Falcon2 22W & Falcon2 40W",
+        "section1_collection": "black-friday-falcon2-series",
+        "section2_title": "Falcon2 Pro Laser Cutter: Up to 60W",
+        "section2_sub_title": "high-speed precision",
+        "section2_collection": "combo-sale-falcon2-22w-laser-engraver",
+        "discount_code": [
+          "tree-toppers",
+          "aaaa",
+          "1111",
+          "test"
+        ],
+        "section_product_list_title": "Shop all christmas decor",
+        "section_product_list": [
+          "low-wattage-engraver-cr-laser-falcon-10w",
+          "bundle-falcon2-22w-laser-engraver-extension-kits",
+          "bundle-falcon2-40w-laser-engraver-extension-kits"
+        ],
+        "section3_title": "Best Accessories Deals for you !",
+        "section3_sub_title": "this is a subtitle",
+        "section3_collection": "engraving-machine-accessories",
+        "section4_title": "Materials",
+        "section4_sub_title": "this is a subtitle",
+        "section4_collection": "engraving-machine-craft-materials",
+        "introduce_block_title": "Christmas Creation",
+        "introduce_block_desc": "Shop our curated Christmas tree bundles, customized to bring a <br> cohesive look to your holiday decorating plans!",
+        "introduce_block_list": "1111111111111111111111,222222222222222222,333333333333333,44444444444444444444",
+        "introduce_block_img1": "shopify://shop_images/Chrismas_Creality_Falcon_1.jpg",
+        "introduce_block_img2": "shopify://shop_images/Chrismas_Creality_Falcon_6.jpg",
+        "introduce_block_link": "",
+        "section_gift_rule": "Gift giving—simplified",
+        "section_faq_title": "Frequently asked questions"
+      }
+    },
+    "creality_2025_1_new_year_JMqJj7": {
+      "type": "creality_2025_1_newYear",
+      "blocks": {
+        "card_rule_CPcFrU": {
+          "type": "card-rule",
+          "settings": {
+            "card_content": "Bedding <br> Basics from :",
+            "card_price": "100",
+            "coupon_title": "VOUCHER",
+            "coupon_rule": "10% OFF",
+            "coupon_desc": "<u>Get it now</u>"
+          }
+        },
+        "right_protection_nyrkAU": {
+          "type": "right-protection",
+          "settings": {
+            "rp_title": "Free SHIPPING over $49.99",
+            "rp_desc": "Delivery calculated per shipment"
+          }
+        }
+      },
+      "block_order": [
+        "card_rule_CPcFrU",
+        "right_protection_nyrkAU"
+      ],
+      "settings": {
+        "header_title": "End of year sale",
+        "header_subTitle": "SALE UP to <u>57% OFF</u>",
+        "header_subTitle3": "SALE UP to <u>57% OFF</u>",
+        "big_title": "SHOP THE LOOK",
+        "hot_product": "",
+        "hot_title": "Deal of the days",
+        "hot_review": "(1298 reviews)",
+        "countdown": "2025-01-25T00:00:00",
+        "hot_link": "Full details",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/e2c32189931c46c1ae4f151d088ff3ee.mp4#t=,",
+        "video_review": "Rated 4.9/5 by 167 of happy customers",
+        "section1_title": "Don't miss out sale !",
+        "section1_sub_title": "this is a subtitle",
+        "section1_collection": "",
+        "section2_title": "Don't miss out sale !",
+        "section2_sub_title": "this is a subtitle",
+        "section2_collection": "",
+        "section2_collection_left_text": "",
+        "section2_collection_left_subtitle": "",
+        "section2_collection_left": "",
+        "section2_collection_right_text": "",
+        "section2_collection_right_subtitle": "",
+        "section2_collection_right": "",
+        "section3_collection": "",
+        "section3_json": "",
+        "title": "Hear from Our Happy Customers",
+        "he-fz": 40,
+        "he-fz-mb": 28,
+        "form_title": "GET ON THE LIST",
+        "form_subTitle": "Create More in 2025 – Limited-Time Promos!",
+        "form_btn": "subscirbe"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_block_BAgLj4",
+    "product_tab_block_q4Wmtb",
+    "video_block_g7a6Yd",
+    "creality_2024_12_christmas_iWNDj4",
+    "creality_2025_1_new_year_JMqJj7"
+  ]
+}

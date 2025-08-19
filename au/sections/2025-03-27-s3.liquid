@@ -1,0 +1,190 @@
+{% style %}
+  .anniversary-2025-s3 {
+    width: 100%;
+    padding: 32.5px 0 85.5px;
+    display: grid;
+    grid-template-columns: repeat(6, 108.5px);
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+    background-image: url('{{ section.settings.background_image | img_url: 'master' }}');
+    background-size: cover;
+    background-position: center;
+  }
+  .anniversary-2025-s3 .gift-image-container {
+    width: 108.5px;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+  }
+  .anniversary-2025-s3 .gift-image-container .gift-image {
+    width: 100%;
+    height: auto;
+  }
+  @media screen and (max-width: 768px) {
+    .anniversary-2025-s3 {
+      height: auto;
+      padding: 42px 16.5px 38px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      column-gap: 8.5px;
+      row-gap: 38.5px;
+      background-image: url('{{ section.settings.background_image_mobile | img_url: 'master' }}');
+    }
+    .anniversary-2025-s3 .gift-image-container {
+      width: 100%;
+    }
+  }
+  @media (min-width: 1920px) {
+    .anniversary-2025-s3 {
+    width: 100%;
+    padding: 2.539vw 0 6.680vw;
+    display: grid;
+    grid-template-columns: repeat(6, 8.477vw);
+    justify-content: center;
+    align-items: end;
+    gap: 0.78125vw;
+    background-image: url('{{ section.settings.background_image | img_url: 'master' }}');
+    background-size: cover;
+    background-position: center;
+  }
+  .anniversary-2025-s3 .gift-image-container {
+    width: 8.477vw;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+  }
+  .anniversary-2025-s3 .gift-image-container .gift-image {
+    width: 100%;
+    height: auto;
+  }
+  }
+{% endstyle %}
+
+<div class="anniversary-2025-s3">
+  <div class="gift-image-container">
+    {% if section.settings.gift_image_1 != blank %}
+      <img
+        src="{{ section.settings.gift_image_1 | img_url: 'master' }}"
+        alt="gift-image-1"
+        class="gift-image"
+        width="100%"
+        height="auto"
+      >
+    {% endif %}
+  </div>
+
+  <div class="gift-image-container">
+    {% if section.settings.gift_image_2 != blank %}
+      <img
+        src="{{ section.settings.gift_image_2 | img_url: 'master' }}"
+        alt="gift-image-2"
+        class="gift-image"
+        width="100%"
+        height="auto"
+      >
+    {% endif %}
+  </div>
+
+  <div class="gift-image-container">
+    {% if section.settings.gift_image_3 != blank %}
+      <img
+        src="{{ section.settings.gift_image_3 | img_url: 'master' }}"
+        alt="gift-image-3"
+        class="gift-image"
+        width="100%"
+        height="auto"
+      >
+    {% endif %}
+  </div>
+
+  <div class="gift-image-container">
+    {% if section.settings.gift_image_4 != blank %}
+      <img
+        src="{{ section.settings.gift_image_4 | img_url: 'master' }}"
+        alt="gift-image-4"
+        class="gift-image"
+        width="100%"
+        height="auto"
+      >
+    {% endif %}
+  </div>
+
+  <div class="gift-image-container">
+    {% if section.settings.gift_image_5 != blank %}
+      <img
+        src="{{ section.settings.gift_image_5 | img_url: 'master' }}"
+        alt="gift-image-5"
+        class="gift-image"
+        width="100%"
+        height="auto"
+      >
+    {% endif %}
+  </div>
+
+  <div class="gift-image-container">
+    {% if section.settings.gift_image_6 != blank %}
+      <img
+        src="{{ section.settings.gift_image_6 | img_url: 'master' }}"
+        alt="gift-image-6"
+        class="gift-image"
+        width="100%"
+        height="auto"
+      >
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "2025-03-27-s3",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "背景图片"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "背景图片（移动端）"
+    },
+    {
+      "type": "image_picker",
+      "id": "gift_image_1",
+      "label": "活动权益图1"
+    },
+    {
+      "type": "image_picker",
+      "id": "gift_image_2",
+      "label": "活动权益图2"
+    },
+    {
+      "type": "image_picker",
+      "id": "gift_image_3",
+      "label": "活动权益图3"
+    },
+    {
+      "type": "image_picker",
+      "id": "gift_image_4",
+      "label": "活动权益图4"
+    },
+    {
+      "type": "image_picker",
+      "id": "gift_image_5",
+      "label": "活动权益图5"
+    },
+    {
+      "type": "image_picker",
+      "id": "gift_image_6",
+      "label": "活动权益图6"
+    }
+  ],
+  "presets": [
+    {
+      "name": "2025-周年庆-s3",
+      "category": "周年庆"
+    }
+  ]
+}
+{% endschema %}

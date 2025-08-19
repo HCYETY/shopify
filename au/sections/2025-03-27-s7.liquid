@@ -1,0 +1,90 @@
+{% style %}
+  .anniversary-2025-s7 {
+    width: 100%;
+    background-color: {{ section.settings.background_color }};
+    background-size: cover;
+    background-position: top center;
+    padding: 48px 0 56px;
+  }
+  .anniversary-2025-s7 .s7-headline-container {
+    margin: 0 auto;
+    color: #333;
+    text-align: center;
+  }
+  .anniversary-2025-s7 .s7-headline {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .anniversary-2025-s7 .s7-products-container {
+    width: 80%;
+    margin: 34px auto 0;
+  }
+
+  @media (min-width: 1920px) {
+    .anniversary-2025-s7 {
+    width: 100%;
+    background-color: {{ section.settings.background_color }};
+    background-size: cover;
+    background-position: top center;
+    padding: 3.75vw 0 4.375vw;
+  }
+  .anniversary-2025-s7 .s7-headline-container {
+    margin: 0 auto;
+    color: #333;
+    text-align: center;
+  }
+  .anniversary-2025-s7 .s7-headline {
+    font-size: 1.5625vw;
+    font-weight: 600;
+  }
+
+  .anniversary-2025-s7 .s7-products-container {
+    width: 80%;
+    margin: 2.65625vw auto 0;
+  }
+  }
+{% endstyle %}
+
+<div class="anniversary-2025-s7">
+  <div class="s7-headline-container">
+    <p class="s7-headline">{{ section.settings.headline }}</p>
+  </div>
+  <div class="s7-products-container">
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+<script defer></script>
+
+{% schema %}
+{
+  "name": "2025-周年庆-s7",
+  "blocks": [{ "type": "@theme" }],
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "主标题",
+      "default": "Product Video Center"
+    }
+  ],
+  "presets": [
+    {
+      "name": "2025-周年庆-s7",
+      "category": "周年庆",
+      "blocks": [
+        {
+          "type": "youtube-video-slider"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
