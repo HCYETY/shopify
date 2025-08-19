@@ -151,7 +151,7 @@
   justify-content: center;
   width: 100%;
   z-index: 50;
-  top: calc(var(--header-height));
+  top: 64px;
   left: 0;
   position: sticky;
 }
@@ -384,7 +384,7 @@
   top: 50%;
   transform: translateY(-50%);
   display: flex;
-  z-index: 49;
+  z-index: 60;
 }
 
 .contrast-nav .strip {
@@ -611,7 +611,7 @@
     margin: 30px auto;
     padding-top: 20px;
     position: sticky !important;
-    top: calc(var(--header-height)) + 80px;
+    top: 144px;
     padding-bottom: 20px;
     background-color: #fff;
     z-index: 49;
@@ -987,16 +987,21 @@ $(document).ready(function () {
   // 获取顶部导航栏的高度
   navHeight = $("#MainContent").offset().top;
 
+if (navHeight > 0) {
   // 设置 contrast-header 的 top 值
   $(".contrast-header").css({
     top: `${navHeight}px`,
   });
 
-  // 设置 contrast-nav 的 top 值
-  $(".contrast-nav").css({
-    top: `${navHeight + 80}px`, // 假设 contrast-nav 需要比 contrast-header 高 80px
-  });
+  // 只在屏幕小于等于1280px时设置 contrast-nav 的 top 值
+  if ($(window).width() <= 1280) {
+    $(".contrast-nav").css({
+      top: `${navHeight + 80}px`, // 假设 contrast-nav 需要比 contrast-header 高 80px
+    });
+  }
+}
 });
+
 
 
 
@@ -1519,8 +1524,9 @@ $(function () {
       overflow: "hidden",
       });
     //  $(".scrolled-past-header").show();
-     // $(".contrast-nav").hide();
+     $(".contrast-nav").hide();
     }
+    const navHeight = $("#MainContent").offset().top;
     let h=80+navHeight
     let ht=0
     if ($("#qab_background").length) {
