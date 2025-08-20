@@ -1,18 +1,19 @@
 {% style %}
     .anniversary-2025-s5 {
     width: 100%;
-    background-color: #f3e3a6;
+    background-color: #a9cdf9;
     /* padding: 0 0 48px; */
     position: relative;
   }
   .anniversary-2025-s5 .s5-content-container {
     background-image:
+    /*
        url({{ section.settings.background_image | img_url: 'master' }}),
        url({{ section.settings.background_image | img_url: 'master' }}),
        url({{ section.settings.background_image | img_url: 'master' }}),
        url({{ section.settings.background_image | img_url: 'master' }}),
        url({{ section.settings.background_image | img_url: 'master' }}),
-       url({{ section.settings.background_image | img_url: 'master' }});
+       url({{ section.settings.background_image | img_url: 'master' }});    */
 
     /* 设置每个图片的位置 */
     background-position:
@@ -55,7 +56,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color:#fff7e5;
+    background-color:#a9cdf9;
     padding: 12px 0;
     z-index: 103;
     /* border-bottom: 1px solid #eee; */
@@ -85,16 +86,16 @@
     font-weight: 500;
     font-size: 11px;
     line-height: 1;
-    border: 1px solid #ffa900;
-    color: #999999;
+    border: 1px solid #0068ff;
+    color: #000000;
     cursor: pointer;
     user-select: none;
   }
 
   .s5-tab.active {
-    background-color: #fff0cd;
+    background-color: #ffffff;
     color: #000;
-    border: 1px solid #fff0cd;
+    border: 1px solid #ffffff;
   }
 
   .s5-content-section {
@@ -123,11 +124,12 @@
   @media (min-width: 1920px) {
     .anniversary-2025-s5 {
     width: 100%;
-    background-color: #f3e3a6;
+    background-color: #a9cdf9;
     /* padding: 0 0 3.75vw; */
     position: relative;
   }
   .anniversary-2025-s5 .s5-content-container {
+    /*
     background-image:
        url({{ section.settings.background_image | img_url: 'master' }}),
        url({{ section.settings.background_image | img_url: 'master' }}),
@@ -135,6 +137,7 @@
        url({{ section.settings.background_image | img_url: 'master' }}),
        url({{ section.settings.background_image | img_url: 'master' }}),
        url({{ section.settings.background_image | img_url: 'master' }});
+    */
 
     /* 设置每个图片的位置 */
     background-position:
@@ -207,16 +210,16 @@
     font-weight: 500;
     font-size: 0.859vw;
     line-height: 1;
-    border: 0.078vw solid #ffa900;
-    color: #999999;
+    border: 0.078vw solid #0068ff;
+    color: #000000;
     cursor: pointer;
     user-select: none;
   }
 
   .s5-tab.active {
-    background-color: #fff0cd;
+    background-color: #ffffff;
     color: #000;
-    border: 0.078vw solid #fff0cd;
+    border: 0.078vw solid #FFFFFF;
   }
 
   .s5-content-section {
@@ -239,9 +242,9 @@
   <!-- 切换栏 -->
   <div class="s5-tabs-container" id="s5TabsContainer">
     <div class="s5-tabs">
-      <div class="s5-tab active" data-target="beginner">Beginner</div>
-      <div class="s5-tab" data-target="passionate-creator">Passionate Creator</div>
-      <div class="s5-tab" data-target="professional">Professional</div>
+      <div class="s5-tab active" data-target="beginner">Pro Kits</div>
+      <div class="s5-tab" data-target="passionate-creator">🎓Beginners Prefers</div>
+      <div class="s5-tab" data-target="professional">Level Up Choices</div>
     </div>
   </div>
 
@@ -423,11 +426,15 @@
   "name": "2025-周年庆-s5",
   "blocks": [{ "type": "@theme" }],
   "settings": [
+    
+    /*
     {
       "type": "image_picker",
       "id": "background_image",
       "label": "背景元素图片"
     },
+    */
+    
     {
       "type": "header",
       "content": "Beginner 相关设置"
