@@ -249,7 +249,7 @@
     "show_sold_out_badge": true,
     "show_swatch": false,
     "point_product_swatch_custom": "30px",
-    "show_action": true,
+    "show_action": false,
     "show_quick_shop": true,
     "quick_shop_type": "3",
     "show_product_marquee": false,

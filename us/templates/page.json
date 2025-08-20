@@ -12,9 +12,15 @@
     "main": {
       "type": "main-page",
       "settings": {}
+    },
+    "page_8wHFpU": {
+      "type": "page",
+      "name": "导航栏",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "page_8wHFpU"
   ]
 }

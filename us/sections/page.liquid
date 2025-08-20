@@ -1,371 +1,238 @@
-{{- 'navbar.css' | asset_url | stylesheet_tag -}}
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
-{%- liquid
-  assign background_color = section.settings.background_color
--%}
-
-<div style="background-color: {{ background_color | default: '#ffffff' }}">
-  <div class="row nav-bar">
-    <div
-      class="nav-bar-container"
-      data-nav-container
-      style="height: {{ section.settings.height }}px;">
-      {%- for block in section.blocks -%}
-        {%- liquid
-          assign title = block.settings.title
-          assign title_id = block.settings.title_id
-          # 优先使用block设置，如果没有则使用section全局设置
-          assign item_color = block.settings.item_color | default: section.settings.default_text_color | default: '#b2b2b2'
-          assign active_color = block.settings.active_color | default: section.settings.active_text_color | default: '#000000'
-        -%}
-        <div
-          data-id="{{ title_id }}"
-          data-index="{{ forloop.index0 }}"
-          data-color="{{ item_color }}"
-          data-active-color="{{ active_color }}"
-          class="nav-bar-item"
-          style="color: {{ item_color }}; font-size: {{ section.settings.item_font_size }}px;">
-          {{ title }}
+<div class="page section-block-{{section.id}}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
+  <div class="{% if section.settings.container == 'fullwidth' %}container-full{% elsif section.settings.container == '1770' %}container-1770{% elsif section.settings.container == '1170' %}container-1170{% else %}container{% endif %}">
+    <h2 class="page-title" style="--color-heading-style: {{ section.settings.heading_color }};
+                      --fontsize-heading-style: {{ section.settings.heading_size | append: 'px' }};
+                      --heading-size-mb-style: {{ section.settings.heading_size_mb | append: 'px' }}">
+      {%- if section.settings.page.title != blank -%}
+        {{ section.settings.page.title | escape }}
+      {%- else -%}
+        {{ 'templates.search.page' | t }}
+      {%- endif -%}
+    </h2>
+    <div class="rte">
+      {%- if section.settings.page.content != blank -%}
+        {{ section.settings.page.content }}
+      {%- else -%}
+        <div class='page-placeholder-wrapper placeholder'>
+          {{ 'page' | placeholder_svg_tag: 'page-placeholder' }}
         </div>
-      {%- endfor -%}
-
-      <!-- 滑动指示线 -->
-      <div
-        class="nav-bar-indicator-line"
-        data-indicator-line
-        style="background-color: {{ section.settings.active_text_color | default: '#000000' }};"></div>
+      {%- endif -%}
     </div>
   </div>
 </div>
 
-<script>
-  window.addEventListener('DOMContentLoaded', function () {
-    class NavigationMenu {
-      constructor() {
-        this.container = document.querySelector('[data-nav-container]');
-        this.items = document.querySelectorAll('.nav-bar-item');
-        this.indicatorLine = document.querySelector('[data-indicator-line]');
-        this.activeIndex = 0;
-        this.isProgrammaticScroll = false;
-        this.scrollEndTimer = null;
-        this.init();
-      }
-  
-      init() {
-        this.setupEventListeners();
-        this.handleResize();
-        this.updateActiveStates();
-        this.updateIndicatorLine();
-        this.setupIntersectionObserver();
-      }
-  
-      setupEventListeners() {
-        // 添加点击事件
-        this.items.forEach((item, index) => {
-          item.addEventListener('click', () => {
-            this.handleNavClick(item.getAttribute('data-id'), index);
-          });
-        });
-  
-        // 滚动事件
-        window.addEventListener('scroll', this.handleScroll.bind(this), { passive: true });
-  
-        // 滚动结束事件
-        window.addEventListener('scrollend', this.handleScrollEnd.bind(this));
-  
-        // 窗口大小变化事件
-        window.addEventListener('resize', this.handleResize.bind(this));
-      }
-  
-      setupIntersectionObserver() {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            if (this.isProgrammaticScroll) return;
-  
-            entries.forEach((entry) => {
-              if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
-                const targetId = entry.target.id;
-                const targetItem = document.querySelector(`.nav-bar-item[data-id="${targetId}"]`);
-                if (targetItem) {
-                  const index = parseInt(targetItem.getAttribute('data-index'));
-                  this.setActiveIndex(index);
-                }
-              }
-            });
-          },
-          {
-            root: null,
-            rootMargin: '-20% 0px -20% 0px',
-            threshold: [0.3, 0.5, 0.7],
-          }
-        );
-  
-        // 观察所有目标元素
-        this.items.forEach((item) => {
-          const id = item.getAttribute('data-id');
-          const target = document.getElementById(id);
-          if (target) {
-            observer.observe(target);
-          }
-        });
-      }
-  
-      handleScroll() {
-        if (this.isProgrammaticScroll) return;
-  
-        const scrollY = window.scrollY;
-        const windowHeight = window.innerHeight;
-  
-        // 检查哪个区域当前在视口中
-        for (let i = 0; i < this.items.length; i++) {
-          const item = this.items[i];
-          const elementId = item.getAttribute('data-id');
-          const element = document.getElementById(elementId);
-  
-          if (element) {
-            const rect = element.getBoundingClientRect();
-            const elementTop = rect.top + scrollY;
-            const elementBottom = elementTop + rect.height;
-  
-            // 如果元素在视窗中心区域
-            if (scrollY >= elementTop - windowHeight / 2 && scrollY < elementBottom - windowHeight / 2) {
-              this.setActiveIndex(i);
-              break;
-            }
-          }
-        }
-      }
-  
-      handleNavClick(elementId, index) {
-        if (!elementId) return;
-  
-        const element = document.getElementById(elementId);
-        if (!element) return;
-  
-        // 设置程序化滚动标志
-        this.isProgrammaticScroll = true;
-  
-        // 立即更新激活状态
-        this.setActiveIndex(index);
-  
-        // 计算滚动位置
-        const offset = this.calculateHeaderOffset();
-        const elementTop = element.getBoundingClientRect().top + window.scrollY;
-        const paddingTop = parseInt(element.style.paddingTop?.replace('px', '') || '0');
-  
-        window.scrollTo({
-          top: elementTop - paddingTop - offset - 45,
-          behavior: 'smooth',
-        });
-  
-        // 清除之前的定时器
-        if (this.scrollEndTimer) {
-          clearTimeout(this.scrollEndTimer);
-        }
-  
-        // 设置延迟重置标志
-        this.scrollEndTimer = setTimeout(() => {
-          this.isProgrammaticScroll = false;
-        }, 1000);
-      }
-  
-      handleScrollEnd() {
-        this.isProgrammaticScroll = false;
-      }
-  
-      setActiveIndex(index) {
-        if (this.activeIndex === index) return;
-  
-        this.activeIndex = index;
-        this.updateActiveStates();
-        this.updateIndicatorLine();
-        this.scrollToNavItem();
-      }
-  
-      updateActiveStates() {
-        this.items.forEach((item, index) => {
-          const isActive = index === this.activeIndex;
-          const defaultColor = item.getAttribute('data-color');
-          const activeColor = item.getAttribute('data-active-color');
-  
-          item.classList.toggle('active', isActive);
-          item.style.color = isActive ? activeColor : defaultColor;
-        });
-      }
-  
-      updateIndicatorLine() {
-        if (!this.indicatorLine) return;
-  
-        const activeItem = this.items[this.activeIndex];
-        if (activeItem) {
-          const activeColor = activeItem.getAttribute('data-active-color');
-          this.indicatorLine.style.left = `${activeItem.offsetLeft}px`;
-          this.indicatorLine.style.width = `${activeItem.offsetWidth}px`;
-          this.indicatorLine.style.backgroundColor = activeColor;
-        }
-      }
-  
-      scrollToNavItem() {
-        if (!this.container) return;
-  
-        const windowWidth = window.innerWidth;
-        const activeItem = this.items[this.activeIndex];
-  
-        if (activeItem) {
-          const { left, right } = activeItem.getBoundingClientRect();
-          const isVisible = left >= 0 && right <= windowWidth;
-  
-          if (!isVisible) {
-            // 如果是最后一个项目，滚动到最右边
-            if (this.activeIndex === this.items.length - 1) {
-              this.container.scrollTo({
-                left: this.container.scrollWidth - this.container.clientWidth,
-                behavior: 'smooth',
-              });
-              return;
-            }
-  
-            // 否则滚动到中心位置
-            const scrollLeft = activeItem.offsetLeft - windowWidth / 2 + activeItem.offsetWidth / 2;
-            this.container.scrollTo({
-              left: Math.max(0, scrollLeft),
-              behavior: 'smooth',
-            });
-          }
-        }
-      }
-  
-      handleResize() {
-        // 重新计算动态头部高度
-        this.headerOffset = this.calculateHeaderOffset();
-        // 重新设置导航栏位置
-        document.querySelector('.section-nav-bar').style.top = `${this.headerOffset - 1}px`;
-  
-        if (!this.container) return;
-        // 根据内容宽度调整对齐方式
-        if (this.container.clientWidth >= this.container.scrollWidth) {
-          this.container.style.justifyContent = 'center';
-        } else {
-          this.container.style.justifyContent = 'flex-start';
-        }
-  
-        // 更新指示线位置
-        this.updateIndicatorLine();
-      }
-  
-      calculateHeaderOffset() {
-        // 计算动态头部高度
-        const headerElement = document.querySelector('#home-s-header');
-        const mobileHeaderElement = document.querySelector('#home-s-header-mobile');
-        const headerHeightStr = getComputedStyle(headerElement).getPropertyValue('--header-height').trim().replace('px', '');
-        const mobileHeaderHeightStr = getComputedStyle(mobileHeaderElement).getPropertyValue('--s-header-m-height').trim().replace('px', '');
-        
-        const headerHeightNumber = Number(headerHeightStr);
-        const mobileHeaderHeightNumber = Number(mobileHeaderHeightStr);
-  
-        return headerHeightNumber + mobileHeaderHeightNumber;
-      }
+<style>
+    {%- liquid
+        assign mg_top_desktop = section.settings.mg_top_desktop
+        assign mg_top_tablet = section.settings.mg_top_tablet
+        assign mg_top_mobile = section.settings.mg_top_mobile
+        assign mg_bottom_desktop = section.settings.mg_bottom_desktop
+        assign mg_bottom_tablet = section.settings.mg_bottom_tablet
+        assign mg_bottom_mobile = section.settings.mg_bottom_mobile
+        assign padding_full_width = section.settings.padding_full_width
+
+        assign heading_color = section.settings.heading_color
+        assign heading_size = section.settings.heading_size
+        assign heading_size_mb = section.settings.heading_size_mb
+    -%}
+
+    .section-block-{{section.id}} .page-title {
+        font-size: var(--fontsize-heading-style);
+        color: var(--color-heading-style);
     }
-  
-    // 初始化导航菜单
-    new NavigationMenu();
-  });
-</script>
+
+    @media (min-width: 1200px) {
+        .section-block-{{section.id}} {
+            padding-top: {{ mg_top_desktop | append: 'px' }};
+            padding-bottom: {{ mg_bottom_desktop | append: 'px' }};
+        }
+    }
+
+    @media (min-width: 1025px) {
+        {% if section.settings.container == 'fullwidth' %}
+            .section-block-{{section.id}} .container-full {
+                padding-left: {{ padding_full_width | append: 'px' }};
+                padding-right: {{ padding_full_width | append: 'px' }};
+            }
+        {% endif %}
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+        .section-block-{{section.id}} {
+            padding-top: {{ mg_top_tablet | append: 'px' }};
+            padding-bottom: {{ mg_bottom_tablet | append: 'px' }};
+        }
+    }
+
+    @media (max-width: 767px) {
+        .section-block-{{section.id}} {
+            padding-top: {{ mg_top_mobile | append: 'px' }};
+            padding-bottom: {{ mg_bottom_mobile | append: 'px' }};
+            font-size: var(--heading-size-mb-style);
+        }
+    }
+</style>
 
 {% schema %}
-  {
-    "name": "导航栏",
-    "class": "section-nav-bar",
-    "settings": [
-      {
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "page",
+      "id": "page",
+      "label": "t:sections.main-page.name"
+    },
+    {
         "type": "header",
-        "content": "导航栏外观设置"
-      },
-      {
-        "type": "color",
-        "id": "background_color",
-        "label": "背景颜色",
-        "default": "#ffffff"
-      },
-      {
-        "type": "header",
-        "content": "默认文字颜色"
-      },
-      {
-        "type": "color",
-        "id": "default_text_color",
-        "label": "默认文字颜色",
-        "default": "#b2b2b2",
-        "info": "所有导航项的默认颜色，可在单个导航项中覆盖"
-      },
-      {
-        "type": "color",
-        "id": "active_text_color",
-        "label": "激活时文字颜色",
-        "default": "#000000",
-        "info": "当前激活导航项的颜色，同时也是指示线的颜色"
-      },
-      {
-        "type": "range",
-        "id": "height",
-        "label": "导航栏高度",
-        "default": 45,
-        "min": 45,
-        "max": 80,
-        "step": 1,
-        "unit": "px",
-        "info": "导航栏容器的高度，范围45-80px"
-      },
-      {
-        "type": "range",
-        "id": "item_font_size",
-        "label": "导航项字体大小",
-        "default": 14,
-        "min": 12,
-        "max": 20,
-        "step": 1,
-        "unit": "px",
-        "info": "导航项文字的大小，范围12-20px"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "text",
-        "name": "导航项",
-        "settings": [
-          {
-            "type": "text",
-            "id": "title",
-            "label": "导航项标题"
-          },
-          {
-            "type": "text",
-            "id": "title_id",
-            "label": "目标元素ID",
-            "info": "要跳转到的页面元素ID，需要配合 NavBarID 组件使用"
-          },
-          {
-            "type": "header",
-            "content": "自定义颜色（可选）"
-          },
-          {
-            "type": "color",
-            "id": "item_color",
-            "label": "自定义默认颜色",
-            "info": "留空则使用全局默认颜色设置"
-          }, {
-            "type": "color",
-            "id": "active_color",
-            "label": "自定义激活颜色",
-            "info": "留空则使用全局激活颜色设置"
-          }
+        "content": "t:settings_schema.general.name"
+    },
+    {
+        "type": "select",
+        "id": "container",
+        "label": "t:sections.layout.container.option",
+        "default": "container",
+        "options": [
+            {
+                "value": "container",
+                "label": "t:sections.layout.container.option1"
+            },
+            {
+                "value": "1170",
+                "label": "t:sections.layout.container.option4"
+            },
+            {
+                "value": "1770",
+                "label": "t:sections.layout.container.option3"
+            },
+            {
+                "value": "fullwidth",
+                "label": "t:sections.layout.container.option2"
+            }
         ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "导航栏"
-      }
-    ]
+    },
+    {
+        "type": "range",
+        "id": "padding_full_width",
+        "label": "t:sections.layout.container.padding_full_width",
+        "min": 0,
+        "max": 50,
+        "step": 5,
+        "unit": "t:sections.layout.fontsize.fontsize_title.unit",
+        "default": 0,
+        "info": "t:sections.layout.container.info_full_width"
+    },
+   
+    {
+        "type": "header",
+        "content": "t:sections.layout.margin_top"
+    },
+    {
+        "type": "range",
+        "id": "mg_top_desktop",
+        "label": "t:sections.layout.mg_desktop.label",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+    },
+    {
+        "type": "range",
+        "id": "mg_top_tablet",
+        "label": "t:sections.layout.mg_tablet.label",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+    },
+    {
+        "type": "range",
+        "id": "mg_top_mobile",
+        "label": "t:sections.layout.mg_mobile.label",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+    },
+    {
+        "type": "header",
+        "content": "t:sections.layout.margin_bottom"
+    },
+    {
+        "type": "range",
+        "id": "mg_bottom_desktop",
+        "label": "t:sections.layout.mg_desktop.label",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+    },
+    {
+        "type": "range",
+        "id": "mg_bottom_tablet",
+        "label": "t:sections.layout.mg_tablet.label",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+    },
+    {
+        "type": "range",
+        "id": "mg_bottom_mobile",
+        "label": "t:sections.layout.mg_mobile.label",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 50
+    },
+    {
+        "type": "header",
+        "content": "t:sections.main-page.title"
+    },
+    {
+        "type": "range",
+        "id": "heading_size",
+        "label": "t:sections.rich-text.blocks.heading.settings.heading_size.label",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 30
+    },
+    {
+        "type": "range",
+        "id": "heading_size_mb",
+        "label": "t:sections.rich-text.blocks.heading.settings.heading_size.fz_mb",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "t:sections.layout.mg_desktop.unit",
+        "default": 24
+    },
+    {
+        "type" : "color",
+        "id" : "heading_color",
+        "label" : "t:sections.rich-text.blocks.heading.settings.heading_size.color",
+        "default" : "#000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.main-page.name"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
   }
+}
 {% endschema %}
