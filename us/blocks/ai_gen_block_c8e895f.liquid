@@ -1,0 +1,533 @@
+{% doc %}
+  @prompt
+    Create a clearance products section that displays products in a responsive grid layout. On mobile, show 2 rows with 2 columns (4 products total). On desktop, show 4 rows with 4 columns (16 products total). Include a "View All" button that links to the complete clearance collection. Add horizontal shaking animation for promotional messaging to highlight special offers and limited-time deals. The section should have a clearance/sale vibe with appropriate styling and colors.
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-clearance-section-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_padding }}px 20px;
+    background-color: {{ block.settings.background_color }};
+    text-align: center;
+  }
+
+  .ai-clearance-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-clearance-header-{{ ai_gen_id }} {
+    margin-bottom: 40px;
+  }
+
+  .ai-clearance-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 700;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .ai-clearance-promo-{{ ai_gen_id }} {
+    display: inline-block;
+    background: linear-gradient(45deg, {{ block.settings.promo_bg_color }}, {{ block.settings.promo_bg_secondary }});
+    color: {{ block.settings.promo_text_color }};
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: {{ block.settings.promo_text_size }}px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: ai-clearance-shake-{{ ai_gen_id }} 2s infinite;
+  }
+
+  @keyframes ai-clearance-shake-{{ ai_gen_id }} {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+    20%, 40%, 60%, 80% { transform: translateX(2px); }
+  }
+
+  .ai-clearance-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-clearance-grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+  }
+
+  .ai-clearance-product-{{ ai_gen_id }} {
+    background: {{ block.settings.product_card_bg }};
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+
+  .ai-clearance-product-{{ ai_gen_id }}:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .ai-clearance-product-image-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+  }
+
+  .ai-clearance-product-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-clearance-product-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-clearance-product-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-clearance-badge-{{ ai_gen_id }} {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: {{ block.settings.sale_badge_color }};
+    color: {{ block.settings.sale_badge_text }};
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  .ai-clearance-product-info-{{ ai_gen_id }} {
+    padding: 16px;
+    text-align: left;
+  }
+
+  .ai-clearance-product-title-{{ ai_gen_id }} {
+    font-size: 14px;
+    font-weight: 500;
+    color: {{ block.settings.product_title_color }};
+    margin: 0 0 8px;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .ai-clearance-product-price-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .ai-clearance-price-current-{{ ai_gen_id }} {
+    font-size: 16px;
+    font-weight: 700;
+    color: {{ block.settings.sale_price_color }};
+  }
+
+  .ai-clearance-price-original-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: {{ block.settings.original_price_color }};
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+
+  .ai-clearance-price-save-{{ ai_gen_id }} {
+    font-size: 12px;
+    color: {{ block.settings.savings_color }};
+    font-weight: 600;
+    background: {{ block.settings.savings_bg_color }};
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+
+  .ai-clearance-view-all-{{ ai_gen_id }} {
+    display: inline-block;
+    background: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    padding: 16px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: {{ block.settings.button_text_size }}px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: 2px solid {{ block.settings.button_bg_color }};
+  }
+
+  .ai-clearance-view-all-{{ ai_gen_id }}:hover {
+    background: {{ block.settings.button_hover_bg }};
+    color: {{ block.settings.button_hover_text }};
+    border-color: {{ block.settings.button_hover_bg }};
+    transform: translateY(-2px);
+  }
+
+  .ai-clearance-empty-state-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+  }
+
+  .ai-clearance-empty-title-{{ ai_gen_id }} {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .ai-clearance-empty-text-{{ ai_gen_id }} {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-clearance-grid-{{ ai_gen_id }} {
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    .ai-clearance-product-info-{{ ai_gen_id }} {
+      padding: 12px;
+    }
+
+    .ai-clearance-product-title-{{ ai_gen_id }} {
+      font-size: 13px;
+    }
+
+    .ai-clearance-price-current-{{ ai_gen_id }} {
+      font-size: 14px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-clearance-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-clearance-container-{{ ai_gen_id }}">
+    <div class="ai-clearance-header-{{ ai_gen_id }}">
+      {% if block.settings.section_title != blank %}
+        <h2 class="ai-clearance-title-{{ ai_gen_id }}">{{ block.settings.section_title }}</h2>
+      {% endif %}
+      
+      {% if block.settings.promo_message != blank %}
+        <div class="ai-clearance-promo-{{ ai_gen_id }}">
+          {{ block.settings.promo_message }}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if block.settings.clearance_collection != blank and block.settings.clearance_collection.products.size > 0 %}
+      <div class="ai-clearance-grid-{{ ai_gen_id }}">
+        {% liquid
+          assign mobile_limit = 4
+          assign desktop_limit = 16
+          assign products_to_show = block.settings.clearance_collection.products
+        %}
+        
+        {% for product in products_to_show limit: desktop_limit %}
+          {% liquid
+            assign mobile_class = ''
+            if forloop.index > mobile_limit
+              assign mobile_class = 'ai-clearance-desktop-only-' | append: ai_gen_id
+            endif
+          %}
+          
+          <div class="ai-clearance-product-{{ ai_gen_id }} {{ mobile_class }}">
+            <div class="ai-clearance-product-image-{{ ai_gen_id }}">
+              {% if product.featured_image %}
+                <img
+                  src="{{ product.featured_image | image_url: width: 400 }}"
+                  alt="{{ product.featured_image.alt | escape }}"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                >
+              {% else %}
+                <div class="ai-clearance-product-placeholder-{{ ai_gen_id }}">
+                  {{ 'product-apparel-1' | placeholder_svg_tag }}
+                </div>
+              {% endif %}
+              
+              {% if product.compare_at_price > product.price %}
+                {% assign savings_percent = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price %}
+                <div class="ai-clearance-badge-{{ ai_gen_id }}">
+                  {{ savings_percent }}% OFF
+                </div>
+              {% endif %}
+            </div>
+            
+            <div class="ai-clearance-product-info-{{ ai_gen_id }}">
+              <h3 class="ai-clearance-product-title-{{ ai_gen_id }}">
+                <a href="{{ product.url }}" style="color: inherit; text-decoration: none;">
+                  {{ product.title }}
+                </a>
+              </h3>
+              
+              <div class="ai-clearance-product-price-{{ ai_gen_id }}">
+                <span class="ai-clearance-price-current-{{ ai_gen_id }}">
+                  {{ product.price | money }}
+                </span>
+                
+                {% if product.compare_at_price > product.price %}
+                  <span class="ai-clearance-price-original-{{ ai_gen_id }}">
+                    {{ product.compare_at_price | money }}
+                  </span>
+                  
+                  {% assign savings = product.compare_at_price | minus: product.price %}
+                  <span class="ai-clearance-price-save-{{ ai_gen_id }}">
+                    Save {{ savings | money }}
+                  </span>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      {% if block.settings.view_all_text != blank and block.settings.view_all_link != blank %}
+        <a href="{{ block.settings.view_all_link }}" class="ai-clearance-view-all-{{ ai_gen_id }}">
+          {{ block.settings.view_all_text }}
+        </a>
+      {% endif %}
+    {% else %}
+      <div class="ai-clearance-empty-state-{{ ai_gen_id }}">
+        <div class="ai-clearance-empty-title-{{ ai_gen_id }}">No clearance products found</div>
+        <div class="ai-clearance-empty-text-{{ ai_gen_id }}">Select a collection with products to display your clearance items</div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  @media screen and (max-width: 749px) {
+    .ai-clearance-desktop-only-{{ ai_gen_id }} {
+      display: none;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Clearance products",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collection"
+    },
+    {
+      "type": "collection",
+      "id": "clearance_collection",
+      "label": "Clearance collection"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title",
+      "default": "Clearance Sale"
+    },
+    {
+      "type": "text",
+      "id": "promo_message",
+      "label": "Promotional message",
+      "default": "Limited Time Only - Up to 70% Off!"
+    },
+    {
+      "type": "text",
+      "id": "view_all_text",
+      "label": "View all button text",
+      "default": "View All Clearance"
+    },
+    {
+      "type": "url",
+      "id": "view_all_link",
+      "label": "View all button link"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#d32f2f"
+    },
+    {
+      "type": "color",
+      "id": "promo_bg_color",
+      "label": "Promo background color",
+      "default": "#ff5722"
+    },
+    {
+      "type": "color",
+      "id": "promo_bg_secondary",
+      "label": "Promo background secondary",
+      "default": "#ff9800"
+    },
+    {
+      "type": "color",
+      "id": "promo_text_color",
+      "label": "Promo text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "product_card_bg",
+      "label": "Product card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "product_title_color",
+      "label": "Product title color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "sale_price_color",
+      "label": "Sale price color",
+      "default": "#d32f2f"
+    },
+    {
+      "type": "color",
+      "id": "original_price_color",
+      "label": "Original price color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "savings_color",
+      "label": "Savings text color",
+      "default": "#2e7d32"
+    },
+    {
+      "type": "color",
+      "id": "savings_bg_color",
+      "label": "Savings background color",
+      "default": "#e8f5e8"
+    },
+    {
+      "type": "color",
+      "id": "sale_badge_color",
+      "label": "Sale badge background",
+      "default": "#d32f2f"
+    },
+    {
+      "type": "color",
+      "id": "sale_badge_text",
+      "label": "Sale badge text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button background",
+      "default": "#d32f2f"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg",
+      "label": "Button hover background",
+      "default": "#b71c1c"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text",
+      "label": "Button hover text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "promo_text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Promo text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Button text size",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clearance products"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

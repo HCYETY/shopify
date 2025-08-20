@@ -1,0 +1,482 @@
+{% doc %}
+  @prompt
+    Create a split layout section with a main product showcase on the left side and four smaller product displays on the right side. The left side should display one main product with title, price, and add to cart button. The right side should display four smaller products in a grid, each with title, price, and add to cart button. Include customizable settings for background color and adjustable height for both left and right sections. Make the layout responsive and visually appealing.
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-split-showcase-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    padding: 40px 20px;
+    min-height: {{ block.settings.section_height }}px;
+  }
+
+  .ai-split-showcase-container-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .ai-split-showcase-main-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: {{ block.settings.left_section_height }}px;
+  }
+
+  .ai-split-showcase-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    min-height: {{ block.settings.right_section_height }}px;
+    align-content: center;
+  }
+
+  .ai-split-showcase-product-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ai-split-showcase-main-product-{{ ai_gen_id }} {
+    text-align: center;
+  }
+
+  .ai-split-showcase-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .ai-split-showcase-grid-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  .ai-split-showcase-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 300px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-split-showcase-grid-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 150px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-split-showcase-image-placeholder-{{ ai_gen_id }} svg,
+  .ai-split-showcase-grid-image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-split-showcase-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-split-showcase-title-{{ ai_gen_id }} {
+    font-size: 24px;
+    font-weight:600;
+    margin: 0 0 12px;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-split-showcase-grid-title-{{ ai_gen_id }} {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 8px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.3;
+  }
+
+  .ai-split-showcase-price-{{ ai_gen_id }} {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    color: {{ block.settings.price_color }};
+  }
+
+  .ai-split-showcase-grid-price-{{ ai_gen_id }} {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    color: {{ block.settings.price_color }};
+  }
+
+  .ai-split-showcase-button-{{ ai_gen_id }} {
+    background-color: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    border: none;
+    padding: 12px 24px;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;}
+
+  .ai-split-showcase-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_color }};
+  }
+
+  .ai-split-showcase-grid-button-{{ ai_gen_id }} {
+    background-color: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    border: none;
+    padding: 8px 16px;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .ai-split-showcase-grid-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_color }};
+  }
+
+  .ai-split-showcase-empty-product-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #999;
+    font-style: italic;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-split-showcase-container-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .ai-split-showcase-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr1fr;
+      gap: 15px;
+    }
+
+    .ai-split-showcase-title-{{ ai_gen_id }} {
+      font-size: 20px;
+    }
+
+    .ai-split-showcase-grid-title-{{ ai_gen_id }} {
+      font-size: 14px;
+    }
+
+    .ai-split-showcase-price-{{ ai_gen_id }} {
+      font-size: 18px;
+    }
+
+    .ai-split-showcase-grid-price-{{ ai_gen_id }} {
+      font-size: 13px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ai-split-showcase-{{ ai_gen_id }} {
+      padding: 20px 15px;
+    }
+
+    .ai-split-showcase-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+
+    .ai-split-showcase-grid-image-{{ ai_gen_id }},
+    .ai-split-showcase-grid-image-placeholder-{{ ai_gen_id }} {
+      height: 200px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-split-showcase-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-split-showcase-container-{{ ai_gen_id }}">
+    <div class="ai-split-showcase-main-{{ ai_gen_id }}">
+      {% if block.settings.main_product %}
+        <div class="ai-split-showcase-main-product-{{ ai_gen_id }}">
+          {% if block.settings.main_product.featured_image %}
+            <img
+              src="{{ block.settings.main_product.featured_image | image_url: width: 600}}"
+              alt="{{ block.settings.main_product.featured_image.alt | escape }}"
+              class="ai-split-showcase-image-{{ ai_gen_id }}"
+              loading="lazy"
+              width="600"
+              height="300"
+            >
+          {% else %}
+            <div class="ai-split-showcase-image-placeholder-{{ ai_gen_id }}">
+              {{ 'product-apparel-1' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+
+          <h2 class="ai-split-showcase-title-{{ ai_gen_id }}">{{ block.settings.main_product.title }}</h2>
+          <div class="ai-split-showcase-price-{{ ai_gen_id }}">{{ block.settings.main_product.price | money }}</div>
+          {% if block.settings.main_product.available %}
+            <a
+              href="{{ block.settings.main_product.url }}"
+              class="ai-split-showcase-button-{{ ai_gen_id }}">
+              {{ block.settings.main_button_text }}
+            </a>
+          {% else %}
+            <button
+              class="ai-split-showcase-button-{{ ai_gen_id }}"
+              disabled
+              style="opacity: 0.6; cursor: not-allowed;"
+            >Sold out
+            </button>
+          {% endif %}
+        </div>
+      {% else %}
+        <div class="ai-split-showcase-empty-product-{{ ai_gen_id }}">
+          <div class="ai-split-showcase-image-placeholder-{{ ai_gen_id }}">
+            {{ 'product-apparel-1' | placeholder_svg_tag }}<div class="ai-split-showcase-empty-state-{{ ai_gen_id }}">
+              Select a main product
+            </div>
+          </div>
+          <p>Choose a main product to showcase</p>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="ai-split-showcase-grid-{{ ai_gen_id }}">
+      {% for i in (1..4) %}
+        {% liquid
+          assign product_key = 'grid_product_' | append: i
+          assign product = block.settings[product_key]
+        %}
+
+        {% if product %}
+          <div class="ai-split-showcase-product-{{ ai_gen_id }}">
+            {% if product.featured_image %}
+              <img
+                src="{{ product.featured_image | image_url: width: 300 }}"
+                alt="{{ product.featured_image.alt | escape }}"
+                class="ai-split-showcase-grid-image-{{ ai_gen_id }}"
+                loading="lazy"
+                width="300"
+                height="150"
+              >
+            {% else %}
+              <div class="ai-split-showcase-grid-image-placeholder-{{ ai_gen_id }}">
+                {{ 'product-apparel-1' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+
+            <h3 class="ai-split-showcase-grid-title-{{ ai_gen_id }}">{{ product.title }}</h3>
+            <div class="ai-split-showcase-grid-price-{{ ai_gen_id }}">{{ product.price | money }}</div>
+            
+            {% if product.available %}
+              <a
+                href="{{ product.url }}"
+                class="ai-split-showcase-grid-button-{{ ai_gen_id }}"
+              >
+                {{ block.settings.grid_button_text }}
+              </a>
+            {% else %}
+              <button
+                class="ai-split-showcase-grid-button-{{ ai_gen_id }}"
+                disabled
+                style="opacity: 0.6; cursor: not-allowed;"
+              >
+                Sold out
+              </button>
+            {% endif %}
+          </div>
+        {% else %}
+          <div class="ai-split-showcase-empty-product-{{ ai_gen_id }}">
+            <div class="ai-split-showcase-grid-image-placeholder-{{ ai_gen_id }}">
+              {{ 'product-apparel-1' | placeholder_svg_tag }}
+              <div class="ai-split-showcase-empty-state-{{ ai_gen_id }}">
+                Select product {{ i }}
+              </div>
+            </div>
+            <p>Choose product {{ i }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Split product showcase",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Main product"
+    },
+    {
+      "type": "product",
+      "id": "main_product",
+      "label": "Main product"
+    },
+    {
+      "type": "text",
+      "id": "main_button_text",
+      "label": "Main button text",
+      "default": "Shop now"
+    },
+    {
+      "type": "header",
+      "content": "Grid products"
+    },
+    {
+      "type": "product",
+      "id": "grid_product_1",
+      "label": "Grid product 1"
+    },
+    {
+      "type": "product",
+      "id": "grid_product_2",
+      "label": "Grid product 2"
+    },
+    {
+      "type": "product",
+      "id": "grid_product_3",
+      "label": "Grid product 3"
+    },
+    {
+      "type": "product",
+      "id": "grid_product_4",
+      "label": "Grid product 4"
+    },
+    {
+      "type": "text",
+      "id": "grid_button_text",
+      "label": "Grid button text",
+      "default": "Add to cart"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "section_height",
+      "label": "Section height",
+      "min": 400,
+      "max": 800,
+      "step": 50,
+      "unit": "px",
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "left_section_height",
+      "label": "Left section height",
+      "min": 300,
+      "max": 700,
+      "step": 50,
+      "unit": "px",
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "right_section_height",
+      "label": "Right section height",
+      "min": 300,
+      "max": 700,
+      "step": 50,
+      "unit": "px",
+      "default": 500
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button hover color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Button border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Split product showcase"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

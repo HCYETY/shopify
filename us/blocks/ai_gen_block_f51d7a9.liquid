@@ -1,0 +1,663 @@
+{% doc %}
+  @prompt
+    A magazine-style editorial layout
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-editorial-layout-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: {{ block.settings.section_padding }}px 20px;
+    background-color: {{ block.settings.background_color }};}
+
+  .ai-editorial-content-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.content_gap }}px;
+    align-items: start;
+  }
+
+  .ai-editorial-main-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;gap: {{ block.settings.text_spacing }}px;
+  }
+
+  .ai-editorial-sidebar-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.sidebar_gap }}px;
+  }
+
+  .ai-editorial-category-{{ ai_gen_id }} {
+    font-size: {{ block.settings.category_font_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.category_color }};
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+  }
+
+  .ai-editorial-headline-{{ ai_gen_id }} {
+    font-size: {{ block.settings.headline_font_size }}px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: {{ block.settings.headline_color }};
+    margin: 0;
+  }
+
+  .ai-editorial-byline-{{ ai_gen_id }} {
+    font-size: {{ block.settings.byline_font_size }}px;
+    color: {{ block.settings.byline_color }};
+    margin: 0;
+  }
+
+  .ai-editorial-excerpt-{{ ai_gen_id }} {
+    font-size: {{ block.settings.body_font_size }}px;
+    line-height: 1.6;
+    color: {{ block.settings.body_color }};
+    margin: 0;
+  }
+
+  .ai-editorial-excerpt-{{ ai_gen_id }} p {
+    margin: 0 0 1em;}
+
+  .ai-editorial-excerpt-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-editorial-read-more-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: {{ block.settings.link_color }};
+    text-decoration: none;
+    font-weight: 500;
+    font-size: {{ block.settings.body_font_size }}px;
+    transition: color 0.3s ease;
+  }
+
+  .ai-editorial-read-more-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.link_hover_color }};
+  }
+
+  .ai-editorial-read-more-{{ ai_gen_id }} svg {
+    width: 16px;
+    height: 16px;transition: transform 0.3s ease;
+  }
+
+  .ai-editorial-read-more-{{ ai_gen_id }}:hover svg {
+    transform: translateX(4px);
+  }
+
+  .ai-editorial-featured-image-{{ ai_gen_id }} {
+    width: 100%;
+    margin-bottom: {{ block.settings.image_spacing }}px;
+  }
+
+  .ai-editorial-featured-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: auto;
+    border-radius: {{ block.settings.image_border_radius }}px;}
+
+  .ai-editorial-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-color: #f4f4f4;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: {{ block.settings.image_spacing }}px;
+  }
+
+  .ai-editorial-image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-editorial-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-editorial-sidebar-item-{{ ai_gen_id }} {
+    padding: {{ block.settings.sidebar_item_padding }}px;
+    background-color: {{ block.settings.sidebar_bg_color }};
+    border-radius: {{ block.settings.sidebar_border_radius }}px;
+    border-left: 4px solid {{ block.settings.accent_color }};
+  }
+
+  .ai-editorial-sidebar-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.sidebar_title_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.sidebar_title_color }};
+    margin: 0 0 12px;
+  }
+
+  .ai-editorial-sidebar-content-{{ ai_gen_id }} {
+    font-size: {{ block.settings.sidebar_content_size }}px;
+    line-height: 1.5;
+    color: {{ block.settings.sidebar_content_color }};
+  }
+
+  .ai-editorial-sidebar-content-{{ ai_gen_id }} p {
+    margin: 0 0 0.8em;
+  }
+
+  .ai-editorial-sidebar-content-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-editorial-quote-{{ ai_gen_id }} {
+    font-size: {{ block.settings.quote_font_size }}px;
+    font-style: italic;
+    line-height: 1.4;
+    color: {{ block.settings.quote_color }};
+    border-left: 4px solid {{ block.settings.accent_color }};
+    padding-left: 20px;
+    margin: {{ block.settings.quote_spacing }}px 0;
+  }
+
+  .ai-editorial-divider-{{ ai_gen_id }} {
+    width: 60px;
+    height: 2px;
+    background-color: {{ block.settings.accent_color }};
+    border: none;
+    margin: {{ block.settings.divider_spacing }}px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-editorial-content-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;gap: {{ block.settings.mobile_gap }}px;
+    }
+
+    .ai-editorial-headline-{{ ai_gen_id }} {
+      font-size: {{ block.settings.headline_font_size | times: 0.8 }}px;
+    }
+
+    .ai-editorial-sidebar-{{ ai_gen_id }} {
+      order: -1;
+    }
+
+    .ai-editorial-layout-{{ ai_gen_id }} {
+      padding: {{ block.settings.section_padding | times: 0.6 }}px 16px;
+    }
+  }
+{% endstyle %}<article class="ai-editorial-layout-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-editorial-content-{{ ai_gen_id }}">
+    <div class="ai-editorial-main-{{ ai_gen_id }}">
+      {% if block.settings.featured_image %}
+        <div class="ai-editorial-featured-image-{{ ai_gen_id }}"><img
+            src="{{ block.settings.featured_image | image_url: width: 800 }}"
+            alt="{{ block.settings.featured_image.alt | escape }}"
+            loading="lazy"
+            width="{{ block.settings.featured_image.width }}"
+            height="{{ block.settings.featured_image.height }}"
+          >
+        </div>
+      {% else %}
+        <div class="ai-editorial-image-placeholder-{{ ai_gen_id }}">
+          {{ 'hero-apparel-1' | placeholder_svg_tag }}<div class="ai-editorial-empty-state-{{ ai_gen_id }}">
+            Add a featured image
+          </div>
+        </div>
+      {% endif %}
+
+      {% if block.settings.category != blank %}
+        <p class="ai-editorial-category-{{ ai_gen_id }}">{{ block.settings.category }}</p>
+      {% endif %}
+
+      {% if block.settings.headline != blank %}
+        <h1 class="ai-editorial-headline-{{ ai_gen_id }}">{{ block.settings.headline }}</h1>
+      {% endif %}
+
+      {% if block.settings.byline != blank %}
+        <p class="ai-editorial-byline-{{ ai_gen_id }}">{{ block.settings.byline }}</p>
+      {% endif %}
+
+      {% if block.settings.show_divider %}
+        <hr class="ai-editorial-divider-{{ ai_gen_id }}">
+      {% endif %}
+
+      {% if block.settings.excerpt != blank %}
+        <div class="ai-editorial-excerpt-{{ ai_gen_id }}">{{ block.settings.excerpt }}</div>
+      {% endif %}
+
+      {% if block.settings.pull_quote != blank %}
+        <blockquote class="ai-editorial-quote-{{ ai_gen_id }}">
+          "{{ block.settings.pull_quote }}"
+        </blockquote>
+      {% endif %}
+
+      {% if block.settings.read_more_url != blank %}
+        <a href="{{ block.settings.read_more_url }}" class="ai-editorial-read-more-{{ ai_gen_id }}">
+          {{ block.settings.read_more_text }}<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12,5 19,1212,19"></polyline>
+          </svg>
+        </a>
+      {% endif %}
+    </div><aside class="ai-editorial-sidebar-{{ ai_gen_id }}">
+      {% if block.settings.sidebar_item_1_title != blank or block.settings.sidebar_item_1_content != blank %}
+        <div class="ai-editorial-sidebar-item-{{ ai_gen_id }}">
+          {% if block.settings.sidebar_item_1_title != blank %}
+            <h3 class="ai-editorial-sidebar-title-{{ ai_gen_id }}">{{ block.settings.sidebar_item_1_title }}</h3>
+          {% endif %}
+          {% if block.settings.sidebar_item_1_content != blank %}
+            <div class="ai-editorial-sidebar-content-{{ ai_gen_id }}">{{ block.settings.sidebar_item_1_content }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.sidebar_item_2_title != blank or block.settings.sidebar_item_2_content != blank %}
+        <div class="ai-editorial-sidebar-item-{{ ai_gen_id }}">
+          {% if block.settings.sidebar_item_2_title != blank %}
+            <h3 class="ai-editorial-sidebar-title-{{ ai_gen_id }}">{{ block.settings.sidebar_item_2_title }}</h3>
+          {% endif %}
+          {% if block.settings.sidebar_item_2_content != blank %}
+            <div class="ai-editorial-sidebar-content-{{ ai_gen_id }}">{{ block.settings.sidebar_item_2_content }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.sidebar_item_3_title != blank or block.settings.sidebar_item_3_content != blank %}
+        <div class="ai-editorial-sidebar-item-{{ ai_gen_id }}">
+          {% if block.settings.sidebar_item_3_title != blank %}
+            <h3 class="ai-editorial-sidebar-title-{{ ai_gen_id }}">{{ block.settings.sidebar_item_3_title }}</h3>
+          {% endif %}
+          {% if block.settings.sidebar_item_3_content != blank %}
+            <div class="ai-editorial-sidebar-content-{{ ai_gen_id }}">{{ block.settings.sidebar_item_3_content }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </aside>
+  </div>
+</article>
+
+{% schema %}
+{
+  "name": "Magazine editorial layout",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "featured_image",
+      "label": "Featured image"
+    },
+    {
+      "type": "text",
+      "id": "category",
+      "label": "Category",
+      "default": "Featured Story"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "The Future of Fashion"
+    },
+    {
+      "type": "text",
+      "id": "byline",
+      "label": "Byline",
+      "default": "By Editorial Team • March 15, 2024"
+    },
+    {
+      "type": "richtext",
+      "id": "excerpt",
+      "label": "Article excerpt",
+      "default": "<p>Discover the latest trends and innovations shaping the fashion industry. From sustainable materials to cutting-edge design techniques, explore what's driving change in modern fashion.</p><p>This comprehensive look at emerging trends reveals how designers are reimagining traditional approaches while embracing new technologies and sustainable practices.</p>"
+    },
+    {
+      "type": "text",
+      "id": "pull_quote",
+      "label": "Pull quote",
+      "default": "Fashion is not just about clothing; it's about expressing identity and values through design."
+    },
+    {
+      "type": "url",
+      "id": "read_more_url",
+      "label": "Read more link"
+    },
+    {
+      "type": "text",
+      "id": "read_more_text",
+      "label": "Read more text",
+      "default": "Continue reading"
+    },
+    {
+      "type": "header",
+      "content": "Sidebar content"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_item_1_title",
+      "label": "Sidebar item 1 title",
+      "default": "Quick Facts"
+    },
+    {
+      "type": "richtext",
+      "id": "sidebar_item_1_content",
+      "label": "Sidebar item 1 content",
+      "default": "<p>•73% of consumers prefer sustainable fashion<br>• Digital fashion shows increased by 200%<br>• Circular design principles gaining adoption</p>"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_item_2_title",
+      "label": "Sidebar item 2 title",
+      "default": "Related Topics"
+    },
+    {
+      "type": "richtext",
+      "id": "sidebar_item_2_content",
+      "label": "Sidebar item 2 content",
+      "default": "<p>Explore sustainable materials, digital fashion innovation, and the future of retail experiences.</p>"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_item_3_title",
+      "label": "Sidebar item 3 title",
+      "default": "Expert Insight"
+    },
+    {
+      "type": "richtext",
+      "id": "sidebar_item_3_content",
+      "label": "Sidebar item 3 content",
+      "default": "<p>Industry leaders share their perspectives on emerging trends and the evolution of fashion design.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "label": "Show decorative divider",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "content_gap",
+      "min": 20,
+      "max": 80,
+      "step": 10,
+      "unit": "px",
+      "label": "Content gap",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "min": 20,
+      "max": 60,
+      "step": 10,
+      "unit": "px",
+      "label": "Mobile gap",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "text_spacing",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Text spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "image_spacing",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Image spacing",
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "quote_spacing",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Quote spacing",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "divider_spacing",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Divider spacing",
+      "default": 25
+    },
+    {
+      "type": "header",
+      "content": "Sidebar style"
+    },
+    {
+      "type": "range",
+      "id": "sidebar_gap",
+      "min": 15,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Sidebar gap",
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "sidebar_item_padding",
+      "min": 15,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Sidebar item padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "sidebar_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Sidebar border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "category_font_size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Category font size",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "headline_font_size",
+      "min": 24,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Headline font size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "byline_font_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Byline font size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Body font size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "quote_font_size",
+      "min": 16,
+      "max": 28,
+      "step": 2,
+      "unit": "px",
+      "label": "Quote font size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "sidebar_title_size",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "Sidebar title size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "sidebar_content_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Sidebar content size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "category_color",
+      "label": "Category color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "headline_color",
+      "label": "Headline color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "byline_color",
+      "label": "Byline color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "body_color",
+      "label": "Body text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "quote_color",
+      "label": "Quote color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link color",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "link_hover_color",
+      "label": "Link hover color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "sidebar_bg_color",
+      "label": "Sidebar background",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "sidebar_title_color",
+      "label": "Sidebar title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "sidebar_content_color",
+      "label": "Sidebar content color",
+      "default": "#333333"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Magazine editorial layout"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}
