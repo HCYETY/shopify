@@ -28,6 +28,7 @@
   scroll-behavior: smooth;
 }
 
+
 .section-nav-bar .nav-bar-container::-webkit-scrollbar {
   display: none;
   width: 0;
