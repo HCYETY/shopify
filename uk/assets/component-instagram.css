@@ -524,22 +524,4 @@ instagram-block-load,
     .instagram-slide .halo-row .halo-item .icon-show-more {
         display: inline-block;
     }
-
-    .container-1170 {
-        max-width: 1200px !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-}
-
-@media (min-width: 1770px) {
-    .container-1770 {
-        max-width: 1800px !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
 }
