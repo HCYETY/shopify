@@ -4,6 +4,18 @@
   assign background_color = section.settings.background_color
 -%}
 
+<style>
+  /* 确保s5-tabs-sticky在激活时定位到nav-bar-container下面 */
+  .s5-tabs-sticky {
+    top: calc(var(--header-height, 0px) + var(--mobile-header-height, 0px) + var(--navbar-height, 45px)) !important;
+  }
+  
+  /* 设置导航栏高度CSS变量 */
+  .nav-bar-container {
+    --navbar-height: {{ section.settings.height }}px;
+  }
+</style>
+
 <div style="background-color: {{ background_color | default: '#ffffff' }}">
   <div class="row nav-bar">
     <div
@@ -57,6 +69,7 @@
         this.updateActiveStates();
         this.updateIndicatorLine();
         this.setupIntersectionObserver();
+        this.updateNavbarCSSVariable();
       }
   
       setupEventListeners() {
@@ -251,6 +264,33 @@
   
         // 更新指示线位置
         this.updateIndicatorLine();
+        
+        // 更新CSS变量，确保s5-tabs-sticky正确定位
+        this.updateNavbarCSSVariable();
+      }
+      
+      updateNavbarCSSVariable() {
+        // 更新CSS变量，确保s5-tabs-sticky能够正确定位到导航栏下方
+        if (this.container) {
+          const navbarHeight = this.container.offsetHeight;
+          document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
+          
+          // 同时设置头部高度变量
+          const headerElement = document.querySelector('#home-s-header');
+          const mobileHeaderElement = document.querySelector('#home-s-header-mobile');
+          
+          if (headerElement) {
+            const headerHeightStr = getComputedStyle(headerElement).getPropertyValue('--header-height').trim().replace('px', '');
+            const headerHeightNumber = Number(headerHeightStr) || 0;
+            document.documentElement.style.setProperty('--header-height', `${headerHeightNumber}px`);
+          }
+          
+          if (mobileHeaderElement) {
+            const mobileHeaderHeightStr = getComputedStyle(mobileHeaderElement).getPropertyValue('--s-header-m-height').trim().replace('px', '');
+            const mobileHeaderHeightNumber = Number(mobileHeaderHeightStr) || 0;
+            document.documentElement.style.setProperty('--mobile-header-height', `${mobileHeaderHeightNumber}px`);
+          }
+        }
       }
   
       calculateHeaderOffset() {

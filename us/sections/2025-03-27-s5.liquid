@@ -56,22 +56,20 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color:#a9cdf9;
+    background-color: #fff;
     padding: 12px 0;
-    z-index: 103;
+    z-index: 10;
+    transform: translateY(-1px);
     /* border-bottom: 1px solid #eee; */
   }
 
   .s5-tabs-sticky {
     position: fixed;
-    top: 0;
+    top: calc(var(--header-height, 0px) + var(--mobile-header-height, 0px) + var(--navbar-height, 45px));
     left: 0;
     right: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-
     z-index: 1000; /* 层级低于 section1 */
-
   }
 
   .s5-tabs {
@@ -97,9 +95,9 @@
   }
 
   .s5-tab.active {
-    background-color: #ffffff;
+    background-color: #a9cdf9;
     color: #000;
-    border: 1px solid #ffffff;
+    border: 1px solid #a9cdf9;
   }
 
   .s5-content-section {
@@ -115,6 +113,68 @@
   #professional.s5-content-section {
     padding-bottom: 48px;
   }
+
+/* 确保容器样式生效 */
+.container-1770 {
+    max-width: 1800px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.container-1570 {
+    max-width: 1600px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.container-1470 {
+    max-width: 1500px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.container-1370 {
+    max-width: 1400px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.container-1320 {
+    max-width: 1350px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.container-1170 {
+    max-width: 1200px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* 移动端适配 */
+@media (max-width: 551px) {
+    .container-1770,
+    .container-1570,
+    .container-1470,
+    .container-1370,
+    .container-1320,
+    .container-1170 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
 
   /* 响应式处理 - 900px分割点 */
   @media screen and (max-width: 900px) {
@@ -187,12 +247,12 @@
     justify-content: center;
     width: 100%;
     padding: 0.9375vw 0;
-    z-index: 103;
+    z-index: 10;
   }
 
   .s5-tabs-sticky {
     position: fixed;
-    top: 0;
+    top: calc(var(--header-height, 0px) + var(--mobile-header-height, 0px) + var(--navbar-height, 45px));
     left: 0;
     right: 0;
     box-shadow: 0 0.15625vw 0.625vw rgba(0, 0, 0, 0.1);
@@ -221,9 +281,9 @@
   }
 
   .s5-tab.active {
-    background-color: #ffffff;
+    background-color: #a9cdf9;
     color: #000;
-    border: 0.078vw solid #FFFFFF;
+    border: 0.078vw solid #a9cdf9;
   }
 
   .s5-content-section {
@@ -242,7 +302,7 @@
   }
 {% endstyle %}
 
-<div class="anniversary-2025-s5">
+<div class="anniversary-2025-s5 {% if section.settings.container == 'fullwidth' %}container-full{% elsif section.settings.container == '1770' %}container-1770 {% elsif section.settings.container == '1570'%}container-1570 {% elsif section.settings.container == '1470'%}container-1470 {% elsif section.settings.container == '1320'%}container-1320 {% else %}{% if section.settings.container == '1200' %}layout--special{% endif %} container{% endif %}">
   <!-- 切换栏 -->
   <div class="s5-tabs-container" id="s5TabsContainer">
     <div class="s5-tabs">
@@ -309,6 +369,30 @@
     // 添加一个变量用于控制是否监听滚动事件
     let isScrollListenerEnabled = true;
 
+    // 计算总偏移量的辅助函数
+    function calculateTotalOffset() {
+      try {
+        const headerElement = document.querySelector('#home-s-header');
+        const mobileHeaderElement = document.querySelector('#home-s-header-mobile');
+        const navbarElement = document.querySelector('.nav-bar-container');
+        const s5tabsElement = document.querySelector('.s5-tabs-container');
+        
+        const headerHeight = headerElement ? 
+          Number(getComputedStyle(headerElement).getPropertyValue('--header-height').trim().replace('px', '')) || 0 : 0;
+        
+        const mobileHeaderHeight = mobileHeaderElement ? 
+          Number(getComputedStyle(mobileHeaderElement).getPropertyValue('--s-header-m-height').trim().replace('px', '')) || 0 : 0;
+        
+        const navbarHeight = navbarElement ? navbarElement.offsetHeight : 0;
+        const s5tabsHeight = s5tabsElement ? s5tabsElement.offsetHeight : 0;
+        
+        return headerHeight + mobileHeaderHeight + navbarHeight + s5tabsHeight;
+      } catch (error) {
+        console.warn('计算头部偏移量时出错:', error);
+        return 0;
+      }
+    }
+
     // 固定导航栏功能
     function checkStickyState() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -360,26 +444,34 @@
     // 点击选项卡切换
     tabs.forEach((tab) => {
       tab.addEventListener('click', function (ev) {
-        // 移除所有活动状态
-        tabs.forEach((t) => t.classList.remove('active'));
+        try {
+          // 移除所有活动状态
+          tabs.forEach((t) => t.classList.remove('active'));
 
-        // 添加当前活动状态
-        ev.currentTarget.classList.add('active');
+          // 添加当前活动状态
+          ev.currentTarget.classList.add('active');
 
-        // 获取目标部分ID
-        const targetId = ev.currentTarget.getAttribute('data-target');
-        const targetSection = document.getElementById(targetId);
+          // 获取目标部分ID
+          const targetId = ev.currentTarget.getAttribute('data-target');
+          const targetSection = document.getElementById(targetId);
 
-        // 临时禁用滚动监听，防止滚动时active状态跳跃
-        isScrollListenerEnabled = false;
+          if (!targetSection) {
+            console.warn(`未找到目标section: ${targetId}`);
+            return;
+          }
 
-        // 滚动到目标部分，考虑导航栏高度
-        if (targetSection) {
-          // 获取导航栏高度
-          const navHeight = tabsContainer.offsetHeight;
+          // 临时禁用滚动监听，防止滚动时active状态跳跃
+          isScrollListenerEnabled = false;
 
-          // 计算目标位置，考虑导航栏高度
-          const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navHeight;
+          // 计算总偏移量
+          const totalOffset = calculateTotalOffset();
+          
+          // 获取目标section的headline容器
+          const headlineContainer = targetSection.querySelector('.s5-headline-container');
+          const targetElement = headlineContainer || targetSection;
+          
+          // 计算目标位置，确保headline容器在视图中正确显示，添加额外偏移确保标题完全可见
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - totalOffset - 20;
 
           // 滚动到计算后的位置
           window.scrollTo({
@@ -391,37 +483,51 @@
           setTimeout(() => {
             isScrollListenerEnabled = true;
           }, 800); // 设置一个适当的延迟，等待滚动动画完成
+        } catch (error) {
+          console.error('点击标签页时出错:', error);
+          isScrollListenerEnabled = true; // 确保滚动监听重新启用
         }
       });
     });
 
-    // 滚动时更新活动选项卡
+    // 滚动时更新活动选项卡（添加防抖优化）
+    let scrollTimeout;
     window.addEventListener('scroll', function () {
       // 只有当滚动监听启用时才更新活动标签
       if (!isScrollListenerEnabled) return;
 
-      let currentTab = '';
-      // 获取导航栏高度加上一点缓冲区
-      const navHeight = tabsContainer.offsetHeight + 10;
+      // 清除之前的定时器，实现防抖
+      clearTimeout(scrollTimeout);
+      
+      scrollTimeout = setTimeout(() => {
+        try {
+          let currentTab = '';
+          
+          // 计算总偏移量，加上缓冲区
+          const totalOffset = calculateTotalOffset() + 10;
 
-      sections.forEach((section) => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const sectionBottom = section.getBoundingClientRect().bottom;
+          sections.forEach((section) => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const sectionBottom = section.getBoundingClientRect().bottom;
 
-        // 考虑导航栏高度判断部分是否在视图中
-        if (sectionTop < navHeight && sectionBottom > navHeight) {
-          currentTab = section.getAttribute('id');
-        }
-      });
+            // 考虑所有头部元素高度判断部分是否在视图中
+            if (sectionTop < totalOffset && sectionBottom > totalOffset) {
+              currentTab = section.getAttribute('id');
+            }
+          });
 
-      if (currentTab) {
-        tabs.forEach((tab) => {
-          tab.classList.remove('active');
-          if (tab.getAttribute('data-target') === currentTab) {
-            tab.classList.add('active');
+          if (currentTab) {
+            tabs.forEach((tab) => {
+              tab.classList.remove('active');
+              if (tab.getAttribute('data-target') === currentTab) {
+                tab.classList.add('active');
+              }
+            });
           }
-        });
-      }
+        } catch (error) {
+          console.warn('更新活动标签时出错:', error);
+        }
+      }, 50); // 50ms防抖延迟
     });
   });
 </script>
@@ -431,7 +537,42 @@
   "name": "2025-周年庆-s5",
   "blocks": [{ "type": "@theme" }],
   "settings": [
-    
+     {
+        "type": "select",
+        "id": "container",
+        "label": "t:sections.layout.container.option",
+        "default": "fullwidth",
+        "options": [
+            {
+                "value": "container",
+                "label": "t:sections.layout.container.option1"
+            },
+            {
+                "value": "1200",
+                "label": "t:sections.layout.container.option4"
+            },
+            {
+                "value": "1320",
+                "label": "t:sections.layout.container.option7"
+            },
+            {
+                "value": "1470",
+                "label": "t:sections.layout.container.option5"
+            },
+            {
+                "value": "1570",
+                "label": "t:sections.layout.container.option6"
+            },
+            {
+                "value": "1770",
+                "label": "t:sections.layout.container.option3"
+            },
+            {
+                "value": "fullwidth",
+                "label": "t:sections.layout.container.option2"
+            }
+        ]
+    },
     /*
     {
       "type": "image_picker",

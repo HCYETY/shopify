@@ -3,8 +3,74 @@
 {%- assign position_horizontal_slick_arrow = section.settings.position_horizontal_slick_arrow -%}
 <link rel="stylesheet" href="{{ 'component-spotlight-block.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-spotlight-block.css' | asset_url | stylesheet_tag }}</noscript>
-<div class="spotlight-block section-block-{{section.id}}{% if section.settings.block_layout == 'slider' %} enable_slider{% endif %}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}" id="spotlight-{{section.id}}"{% if section.settings.block_layout == 'slider' %} data-loader-script="{{ 'halo.slide-spotlight.js' | asset_url }}"{% endif %}>
-    <div class="{% if section.settings.container == 'fullwidth' %}container-full{% elsif section.settings.container == '1770' %}container-1770 {% elsif section.settings.container == '1570'%}container-1570 {% elsif section.settings.container == '1470'%}container-1470 {% else %}{% if section.settings.container == '1200' %}layout--special{% endif %} container{% endif %}">
+
+<style>
+/* 确保容器样式生效 */
+.container-1770 {
+    max-width: 1800px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.container-1570 {
+    max-width: 1600px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.container-1470 {
+    max-width: 1500px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.container-1370 {
+    max-width: 1400px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.container-1320 {
+    max-width: 1350px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.container-1170 {
+    max-width: 1200px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* 移动端适配 */
+@media (max-width: 551px) {
+    .container-1770,
+    .container-1570,
+    .container-1470,
+    .container-1370,
+    .container-1320,
+    .container-1170 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+</style>
+
+
+<div class="spotlight-block section-block-{{section.id}}{% if section.settings.block_layout == 'slider' %} enable_slider{% endif %}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.container == 'fullwidth' %}container-full{% elsif section.settings.container == '1770' %}container-1770 {% elsif section.settings.container == '1570'%}container-1570 {% elsif section.settings.container == '1470'%}container-1470 {% elsif section.settings.container == '1320'%}container-1320 {% else %}{% if section.settings.container == '1200' %}layout--special{% endif %} container{% endif %}" id="spotlight-{{section.id}}"{% if section.settings.block_layout == 'slider' %} data-loader-script="{{ 'halo.slide-spotlight.js' | asset_url }}"{% endif %}>
+    <div class="{% if section.settings.container == 'fullwidth' %}container-full{% elsif section.settings.container == '1770' %}container-1770 {% elsif section.settings.container == '1570'%}container-1570 {% elsif section.settings.container == '1470'%}container-1470 {% elsif section.settings.container == '1320'%}container-1320 {% else %}{% if section.settings.container == '1200' %}layout--special{% endif %} container{% endif %}">
         {%- if section.settings.spotlight_block_title != blank -%}
             <div class="halo-block-header text-{{ section.settings.title_align }}{% if section.settings.view_all != blank %} viewAll--{{ section.settings.view_all_align }}{% endif %}">   
                 <h3 class="title{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}" style="--margin-bottom-title: {{ section.settings.margin_bottom_title | append: 'px' }}"><span class="text">{{ section.settings.spotlight_block_title }}</span></h3>
@@ -249,7 +315,7 @@
         "type": "select",
         "id": "container",
         "label": "t:sections.layout.container.option",
-        "default": "container",
+        "default": "fullwidth",
         "options": [
             {
                 "value": "container",
