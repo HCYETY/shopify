@@ -568,3 +568,51 @@
         right: calc((100% - 1770px)/ 2)!important;
     }
 }
+
+/* 分期付款样式 - 新增 */
+.installment {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.installment.caption-large {
+    font-size: 14px;
+}
+
+/* Shop Pay 分期付款样式 */
+.shopify-payment-terms {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.shopify-payment-terms__message {
+    color: #666;
+    margin: 0;
+}
+
+.shopify-payment-terms__message a {
+    color: #5a31f4;
+    text-decoration: none;
+}
+
+.shopify-payment-terms__message a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .installment {
+        font-size: 13px;
+    }
+    
+    .installment.caption-large {
+        font-size: 13px;
+    }
+}
+
+/* 深色主题支持 */
+@media (prefers-color-scheme: dark) {
+    .shopify-payment-terms__message {
+        color: #ccc;
+    }
+}
