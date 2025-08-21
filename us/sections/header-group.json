@@ -126,31 +126,10 @@
         },
         "announcement_HWTQYW": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "<a href=\"https://www.crealityfalcon.com/products/laser-engraver-cutter-falcon2-40w-engraving-machine\" style=\"color: #ff4d00; font-weight: bold;\">\n  🔥 Clearance Deal: Falcon2 40W Only $719 — Limited Stock!\n</a>",
             "btn_color": "#f84248",
-            "btn_border_color": "#ffffff",
-            "btn_bg_color": "#ffffff",
-            "btn_bg_color_gradient": ""
-          }
-        },
-        "announcement_qN4JNE": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "<a href=\"https://www.crealityfalcon.com/collections/engraver-combo-packages\" style=\"text-decoration: none; color: inherit;\">\n  🎁 <strong style=\"color: rgb(255, 42, 0);\">Shop smart, create more</strong> – all in one go!\n</a>",
-            "btn_color": "#232323",
-            "btn_border_color": "#ffffff",
-            "btn_bg_color": "#ffffff",
-            "btn_bg_color_gradient": ""
-          }
-        },
-        "announcement_tXfqAF": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "🔥 Just Launched! Falcon A1 Workbench Available &amp; Ready to Ship | \n  <a href=\"https://www.crealityfalcon.com/products/460-346mm-honeycomb-workbench-for-creality-falcon-a1\" style=\"color: #ff2a00; font-weight: bold; text-decoration: none;\">Shop Now →</a>",
-            "btn_color": "#232323",
             "btn_border_color": "#ffffff",
             "btn_bg_color": "#ffffff",
             "btn_bg_color_gradient": ""
@@ -160,9 +139,7 @@
       "block_order": [
         "announcement_8gedGD",
         "announcement_8jVXmJ",
-        "announcement_HWTQYW",
-        "announcement_qN4JNE",
-        "announcement_tXfqAF"
+        "announcement_HWTQYW"
       ],
       "settings": {
         "enable_announcement": true,

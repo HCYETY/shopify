@@ -193,6 +193,23 @@
         "item_font_size": 14
       }
     },
+    "175575481725ac5a79": {
+      "type": "apps",
+      "blocks": {
+        "gsc_countdown_timer_countdown_nFDWiy": {
+          "type": "shopify://apps/gsc-countdown-timer/blocks/countdown/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
+          "settings": {
+            "widget_id": "GSC-LARGE-jRdenLccFHNf"
+          }
+        }
+      },
+      "block_order": [
+        "gsc_countdown_timer_countdown_nFDWiy"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
     "navbar_id_9GjWEV": {
       "type": "navbar-id",
       "name": "NavBarID",
@@ -1736,6 +1753,7 @@
   "order": [
     "image_banner_H3MGPg",
     "navbar_7xRBJq",
+    "175575481725ac5a79",
     "navbar_id_9GjWEV",
     "featured_blog_bciB4U",
     "spotlight_block_fxkhEF",
