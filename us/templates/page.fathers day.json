@@ -817,7 +817,7 @@
         "border_color_button_hover": "",
         "bg_color_button_hover": "",
         "bg_color_gradient_button_hover": "",
-        "product_block_collection": "engraving-machine-craft-materials",
+        "product_block_collection": "materials",
         "product_block_limit": 4,
         "grid_gap": 30,
         "pb_style": "style1",

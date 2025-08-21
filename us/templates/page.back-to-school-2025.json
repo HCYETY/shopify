@@ -186,7 +186,7 @@
       ],
       "name": "导航栏",
       "settings": {
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "default_text_color": "#232323",
         "active_text_color": "#4799fc",
         "height": 60,
@@ -984,7 +984,7 @@
           "type": "offsell-product-small-slider",
           "static": true,
           "settings": {
-            "collection": "quality-metalworking-supplies-for-laser-engraving"
+            "collection": "metal-bundle"
           },
           "blocks": {}
         }
@@ -1414,19 +1414,19 @@
         "mg_bottom_desktop": 50,
         "mg_bottom_tablet": 50,
         "mg_bottom_mobile": 50,
-        "policies_bg": "#FFFFFF",
+        "policies_bg": "#ffffff",
         "policies_bg_gradient": "",
         "border_item": "none",
         "align_items": "center",
         "text_align_items": "center",
         "enable_item_distance": true,
-        "item_color_border": "#000",
+        "item_color_border": "#000000",
         "item_padding_top": 13,
         "item_padding_bottom": 13,
         "item_padding_left_right": 20,
         "item_radius": 4,
         "bg_color_block": "#f2f7fd",
-        "border_block": "#FFFFFF",
+        "border_block": "#ffffff",
         "color_block": "#232323",
         "color_icon": "#3c3c3c"
       }

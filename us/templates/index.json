@@ -344,7 +344,7 @@
             "font_weight_sub_heading": "400",
             "border_sub_heading": "none",
             "sub_title_position": "sub_title_above",
-            "color_sub_heading": "#ffffff",
+            "color_sub_heading": "#3c3c3c",
             "heading": "Falcon2",
             "letter_spacing_heading": "",
             "enable_border_heading": false,
