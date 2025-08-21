@@ -462,7 +462,7 @@
         "image_7GnYFN"
       ],
       "settings": {
-        "container": "1200",
+        "container": "container",
         "padding_full_width": 0,
         "disable_padding_content": false,
         "mg_minus_desktop": 0,
@@ -619,10 +619,10 @@
         "content_gradient": ""
       }
     },
-    "1645071896528770e8": {
+    "spotlight_block_6pFCHB": {
       "type": "spotlight-block",
       "blocks": {
-        "image_yG9N7p": {
+        "image_QFLe4J": {
           "type": "image",
           "settings": {
             "enable_image": true,
@@ -633,10 +633,10 @@
             "align_items_spacing_top_bottom_position": 0,
             "align_items_spacing_top_bottom_position_mb": 0,
             "bg_color_content": "",
-            "align_items_spacing_top": 40,
-            "align_items_spacing_bottom": 40,
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
             "align_items_spacing_lr": 10,
-            "sub_title": "",
+            "sub_title": "Falcon2 Pro 60W",
             "border_sub_title": false,
             "color_sub_title": "#232323",
             "fontsize_sub_title": 20,
@@ -654,27 +654,27 @@
             "color_des": "#3c3c3c",
             "fontsize_des": 12,
             "mg_top_des": 8,
-            "enable_des_hover": false,
-            "button": "",
-            "link": "shopify://products/falcon-a1-10w-enclosed-laser-engraver-and-cutter",
+            "enable_des_hover": true,
+            "button": "Shop Now",
+            "link": "shopify://products/falcon-2-pro-40w-enclosed-laser-engraver-and-cutter",
             "fontsize_btn": 16,
             "button_width": 190,
-            "color_button": "#ffffff",
-            "border_color_button": "#232323",
-            "bg_color_button": "#232323",
-            "bg_color_button_gradient": "",
-            "color_button_hover": "#ffffff",
-            "border_color_button_hover": "#232323",
-            "bg_color_button_hover": "#232323",
+            "color_button": "#fff",
+            "border_color_button": "#a9cdf9",
+            "bg_color_button": "#a9cdf9",
+            "bg_color_button_gradient": "linear-gradient(0deg, rgba(169, 205, 249, 1), rgba(255, 255, 255, 1) 100%, rgba(245, 245, 245, 1) 100%)",
+            "color_button_hover": "#fff",
+            "border_color_button_hover": "#ffffff",
+            "bg_color_button_hover": "#ffffff",
             "bg_color_button_gradient_hover": "",
             "bg_opacity_button": 1,
             "enable_button_custom_border": false,
-            "btn_text_transform": "uppercase",
-            "btn_icon": "",
-            "mg_top_btn": 30
+            "btn_text_transform": "capitalize",
+            "btn_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 640 640\"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill=\"#6991f7\" d=\"M24 48C10.7 48 0 58.7 0 72C0 85.3 10.7 96 24 96L69.3 96C73.2 96 76.5 98.8 77.2 102.6L129.3 388.9C135.5 423.1 165.3 448 200.1 448L456 448C469.3 448 480 437.3 480 424C480 410.7 469.3 400 456 400L200.1 400C188.5 400 178.6 391.7 176.5 380.3L171.4 352L475 352C505.8 352 532.2 330.1 537.9 299.8L568.9 133.9C572.6 114.2 557.5 96 537.4 96L124.7 96L124.3 94C119.5 67.4 96.3 48 69.2 48L24 48zM208 576C234.5 576 256 554.5 256 528C256 501.5 234.5 480 208 480C181.5 480 160 501.5 160 528C160 554.5 181.5 576 208 576zM432 576C458.5 576 480 554.5 480 528C480 501.5 458.5 480 432 480C405.5 480 384 501.5 384 528C384 554.5 405.5 576 432 576z\"></path></svg>",
+            "mg_top_btn": 15
           }
         },
-        "image_WXgXhP": {
+        "image_LkmPgN": {
           "type": "image",
           "settings": {
             "enable_image": true,
@@ -685,10 +685,10 @@
             "align_items_spacing_top_bottom_position": 0,
             "align_items_spacing_top_bottom_position_mb": 0,
             "bg_color_content": "",
-            "align_items_spacing_top": 40,
-            "align_items_spacing_bottom": 40,
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
             "align_items_spacing_lr": 10,
-            "sub_title": "",
+            "sub_title": "Falcon A1 10W",
             "border_sub_title": false,
             "color_sub_title": "#232323",
             "fontsize_sub_title": 20,
@@ -706,27 +706,27 @@
             "color_des": "#3c3c3c",
             "fontsize_des": 12,
             "mg_top_des": 8,
-            "enable_des_hover": false,
-            "button": "",
-            "link": "shopify://products/falcon-2-pro-40w-enclosed-laser-engraver-and-cutter",
+            "enable_des_hover": true,
+            "button": "Shop Now",
+            "link": "shopify://products/falcon-a1-10w-enclosed-laser-engraver-and-cutter-1",
             "fontsize_btn": 16,
             "button_width": 190,
-            "color_button": "#ffffff",
-            "border_color_button": "#232323",
-            "bg_color_button": "#232323",
-            "bg_color_button_gradient": "",
-            "color_button_hover": "#ffffff",
-            "border_color_button_hover": "#232323",
-            "bg_color_button_hover": "#232323",
+            "color_button": "#fff",
+            "border_color_button": "#a9cdf9",
+            "bg_color_button": "#a9cdf9",
+            "bg_color_button_gradient": "linear-gradient(0deg, rgba(169, 205, 249, 1), rgba(255, 255, 255, 1) 98%, rgba(245, 245, 245, 1) 100%, rgba(215, 204, 250, 1) 100%)",
+            "color_button_hover": "#fff",
+            "border_color_button_hover": "#ffffff",
+            "bg_color_button_hover": "#ffffff",
             "bg_color_button_gradient_hover": "",
             "bg_opacity_button": 1,
             "enable_button_custom_border": false,
-            "btn_text_transform": "uppercase",
-            "btn_icon": "",
-            "mg_top_btn": 30
+            "btn_text_transform": "capitalize",
+            "btn_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 640 640\"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill=\"#6991f7\" d=\"M24 48C10.7 48 0 58.7 0 72C0 85.3 10.7 96 24 96L69.3 96C73.2 96 76.5 98.8 77.2 102.6L129.3 388.9C135.5 423.1 165.3 448 200.1 448L456 448C469.3 448 480 437.3 480 424C480 410.7 469.3 400 456 400L200.1 400C188.5 400 178.6 391.7 176.5 380.3L171.4 352L475 352C505.8 352 532.2 330.1 537.9 299.8L568.9 133.9C572.6 114.2 557.5 96 537.4 96L124.7 96L124.3 94C119.5 67.4 96.3 48 69.2 48L24 48zM208 576C234.5 576 256 554.5 256 528C256 501.5 234.5 480 208 480C181.5 480 160 501.5 160 528C160 554.5 181.5 576 208 576zM432 576C458.5 576 480 554.5 480 528C480 501.5 458.5 480 432 480C405.5 480 384 501.5 384 528C384 554.5 405.5 576 432 576z\"></path></svg>",
+            "mg_top_btn": 15
           }
         },
-        "image_iR3fHM": {
+        "image_4ybUYd": {
           "type": "image",
           "settings": {
             "enable_image": true,
@@ -737,10 +737,10 @@
             "align_items_spacing_top_bottom_position": 0,
             "align_items_spacing_top_bottom_position_mb": 0,
             "bg_color_content": "",
-            "align_items_spacing_top": 40,
-            "align_items_spacing_bottom": 40,
+            "align_items_spacing_top": 10,
+            "align_items_spacing_bottom": 10,
             "align_items_spacing_lr": 10,
-            "sub_title": "",
+            "sub_title": "Falcon2 40W",
             "border_sub_title": false,
             "color_sub_title": "#232323",
             "fontsize_sub_title": 20,
@@ -758,69 +758,70 @@
             "color_des": "#3c3c3c",
             "fontsize_des": 12,
             "mg_top_des": 8,
-            "enable_des_hover": false,
-            "button": "",
-            "link": "shopify://products/falcon-2-pro-40w-enclosed-laser-engraver-and-cutter",
+            "enable_des_hover": true,
+            "button": "Shop Now",
+            "link": "shopify://products/laser-engraver-cutter-falcon2-40w-engraving-machine",
             "fontsize_btn": 16,
             "button_width": 190,
-            "color_button": "#ffffff",
-            "border_color_button": "#232323",
-            "bg_color_button": "#232323",
-            "bg_color_button_gradient": "",
-            "color_button_hover": "#ffffff",
-            "border_color_button_hover": "#232323",
-            "bg_color_button_hover": "#232323",
+            "color_button": "#fff",
+            "border_color_button": "#a9cdf9",
+            "bg_color_button": "#a9cdf9",
+            "bg_color_button_gradient": "linear-gradient(0deg, rgba(169, 205, 249, 1), rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)",
+            "color_button_hover": "#fff",
+            "border_color_button_hover": "#ffffff",
+            "bg_color_button_hover": "#ffffff",
             "bg_color_button_gradient_hover": "",
             "bg_opacity_button": 1,
             "enable_button_custom_border": false,
-            "btn_text_transform": "uppercase",
-            "btn_icon": "",
-            "mg_top_btn": 30
+            "btn_text_transform": "capitalize",
+            "btn_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 640 640\"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill=\"#6991f7\" d=\"M24 48C10.7 48 0 58.7 0 72C0 85.3 10.7 96 24 96L69.3 96C73.2 96 76.5 98.8 77.2 102.6L129.3 388.9C135.5 423.1 165.3 448 200.1 448L456 448C469.3 448 480 437.3 480 424C480 410.7 469.3 400 456 400L200.1 400C188.5 400 178.6 391.7 176.5 380.3L171.4 352L475 352C505.8 352 532.2 330.1 537.9 299.8L568.9 133.9C572.6 114.2 557.5 96 537.4 96L124.7 96L124.3 94C119.5 67.4 96.3 48 69.2 48L24 48zM208 576C234.5 576 256 554.5 256 528C256 501.5 234.5 480 208 480C181.5 480 160 501.5 160 528C160 554.5 181.5 576 208 576zM432 576C458.5 576 480 554.5 480 528C480 501.5 458.5 480 432 480C405.5 480 384 501.5 384 528C384 554.5 405.5 576 432 576z\"></path></svg>",
+            "mg_top_btn": 15
           }
         }
       },
       "block_order": [
-        "image_yG9N7p",
-        "image_WXgXhP",
-        "image_iR3fHM"
+        "image_QFLe4J",
+        "image_LkmPgN",
+        "image_4ybUYd"
       ],
+      "name": "t:sections.spotlight_block.presets.name",
       "settings": {
-        "container": "1200",
+        "container": "container",
         "padding_full_width": 0,
         "disable_padding_content": false,
         "mg_minus_desktop": 0,
         "block_layout": "grid",
         "spotlight_block_swipe_on_mobile": "slider",
         "column": "3",
-        "column_mb": "2",
+        "column_mb": "1",
         "enable_arrows": true,
         "enable_arrows_mb": false,
         "position_horizontal_slick_arrow": "0",
-        "enable_dots": true,
+        "enable_dots": false,
         "enable_dots_mb": true,
         "display_border_bottom": false,
-        "border_color": "#ffffff",
-        "mg_top_desktop": 0,
-        "mg_top_tablet": 0,
-        "mg_top_mobile": 0,
-        "mg_bottom_desktop": 10,
-        "mg_bottom_tablet": 10,
-        "mg_bottom_mobile": 10,
+        "border_color": "#ffffffff",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
         "spotlight_bg": "#a9cdf9",
         "spotlight_bg_gradient": "",
         "spotlight_block_title": "",
-        "enable_border_title": true,
+        "enable_border_title": false,
         "color_title": "#232323",
-        "fontsize_title": 10,
-        "fontsize_title_mb": 10,
-        "margin_bottom_title": 0,
+        "fontsize_title": 16,
+        "fontsize_title_mb": 22,
+        "margin_bottom_title": 45,
         "spotlight_block_des": "",
         "color_des": "#3c3c3c",
         "margin_bottom_des": 30,
         "fontsize_des": 16,
         "title_align": "center",
-        "item_distance": 20,
-        "item_radius": 20,
+        "item_distance": 15,
+        "item_radius": 0,
         "view_all": "",
         "view_all_fs": 12,
         "view_all_align": "center",
@@ -832,7 +833,7 @@
         "display_spotlight_button": false,
         "spotlight_button_text": "",
         "spotlight_button_link": "",
-        "color_button": "#ffffff",
+        "color_button": "#fff",
         "border_color_button": "#232323",
         "bg_color_button": "#232323",
         "bg_color_gradient_button": "",
@@ -850,7 +851,7 @@
         "shadow_color": "transparent",
         "shadow_inset": "no",
         "enable_plus_icon": false,
-        "color_plus_icon": "#ffffff",
+        "color_plus_icon": "#fff",
         "enable_content_border": false,
         "content_border_color": "#e2e2e2"
       }
@@ -1008,6 +1009,7 @@
       },
       "name": "耗材轮播",
       "settings": {
+        "container": "1200",
         "headline_beginner": "Lightweight wood, perfect for warm and natural projects.",
         "subheadline_beginner": "",
         "headline_passionate_creator": "Bright, clear colors for eye-catching designs.",
@@ -1110,7 +1112,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/DSC06978___1.jpg",
+            "image": "shopify://shop_images/1_df1fd04e-ab6a-4c1b-9977-bb86cc345541.jpg",
             "link": ""
           }
         },
@@ -1119,7 +1121,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/2_9d1b0cbf-7630-4340-af57-983bd2312330.jpg",
+            "image": "shopify://shop_images/2_23af09f7-c6e1-4dd2-bc47-be05a3a38303.jpg",
             "link": ""
           }
         },
@@ -1128,7 +1130,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/DSC07011___1.jpg",
+            "image": "shopify://shop_images/3_0bc52d2f-dcaf-405a-8a11-03044c8001ed.jpg",
             "link": ""
           }
         },
@@ -1137,7 +1139,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/452A3124.jpg",
+            "image": "shopify://shop_images/4_20ccd7af-d7b3-4284-b340-3ca0cd2c118b.jpg",
             "link": ""
           }
         },
@@ -1146,7 +1148,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/452A3096.jpg",
+            "image": "shopify://shop_images/5_d9b8cd1a-6002-4282-9fad-3ac5db7171f5.jpg",
             "link": ""
           }
         },
@@ -1155,7 +1157,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/DSC06604_f989e615-af8e-4bf7-9bc9-7474ee772357.jpg",
+            "image": "shopify://shop_images/6_ca967239-0b9d-4708-ba86-009e7fecc2c8.jpg",
             "link": ""
           }
         },
@@ -1164,7 +1166,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/output1.jpg",
+            "image": "shopify://shop_images/7_93bc277d-b0d5-473b-b633-0a658bd755ce.jpg",
             "link": ""
           }
         },
@@ -1173,7 +1175,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/452A3055.jpg",
+            "image": "shopify://shop_images/8_321fff84-6761-4be6-a629-1da429ac2f62.jpg",
             "link": ""
           }
         },
@@ -1182,7 +1184,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/452A2952.jpg",
+            "image": "shopify://shop_images/9_e4c3ae3c-ea7e-4485-981c-98c87b72961f.jpg",
             "link": ""
           }
         },
@@ -1191,7 +1193,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/DSC06976.jpg",
+            "image": "shopify://shop_images/10_78d0779a-feec-42b7-aa13-3d5a88746af9.jpg",
             "link": ""
           }
         },
@@ -1200,7 +1202,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/9_9016e5e7-c937-46c4-8f38-c6501a0f814a.jpg",
+            "image": "shopify://shop_images/11_b8b929d8-073c-4c37-b5e0-ca14dac7884b.jpg",
             "link": ""
           }
         },
@@ -1209,7 +1211,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/452A3155.jpg",
+            "image": "shopify://shop_images/12_f7b85c84-f661-442c-8fdf-de98dfbecbc0.jpg",
             "link": ""
           }
         },
@@ -1218,7 +1220,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/452A9911.jpg",
+            "image": "shopify://shop_images/13_db6d1131-8a08-46c5-a546-1f028d69bc38.jpg",
             "link": ""
           }
         },
@@ -1227,7 +1229,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/452A3006.jpg",
+            "image": "shopify://shop_images/14_d5a9a6c3-644d-4263-b0b2-d17ff32f9bc9.jpg",
             "link": ""
           }
         },
@@ -1236,7 +1238,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/452A9844.jpg",
+            "image": "shopify://shop_images/15_8ad5943a-23bd-4ff6-bc9d-3be57f42a6aa.jpg",
             "link": ""
           }
         },
@@ -1245,7 +1247,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/452A9860.jpg",
+            "image": "shopify://shop_images/16_02af631e-c3be-4abd-9f39-f65c62edc7ff.jpg",
             "link": ""
           }
         },
@@ -1254,7 +1256,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/452A9823.jpg",
+            "image": "shopify://shop_images/17_90956ebc-d125-42a0-ab63-71853c4e9f85.png",
             "link": ""
           }
         },
@@ -1263,7 +1265,7 @@
           "name": "p",
           "settings": {
             "enable": true,
-            "image": "shopify://shop_images/DSC06980_1___1.jpg",
+            "image": "shopify://shop_images/18_1d9e88dc-2a09-4b95-ba2b-5d5a2f49ae4b.jpg",
             "link": ""
           }
         }
@@ -1290,22 +1292,22 @@
       ],
       "name": "作品轮播",
       "settings": {
-        "container": "1170",
+        "container": "container",
         "padding_full_width": 0,
         "disable_padding_content": false,
         "type_instagram": "default",
         "block_layout": "infinite",
         "scroll_from": "rtl",
-        "scroll_time": "30",
+        "scroll_time": "40",
         "mg_top_desktop": 15,
         "mg_top_tablet": 15,
-        "mg_top_mobile": 15,
-        "mg_bottom_desktop": 15,
+        "mg_top_mobile": 10,
+        "mg_bottom_desktop": 10,
         "mg_bottom_tablet": 15,
-        "mg_bottom_mobile": 15,
+        "mg_bottom_mobile": 10,
         "enable_border_instagram": false,
         "instagram_border_color": "#ffffff",
-        "instagram_bg": "#a9cdf9",
+        "instagram_bg": "#f2f7fd",
         "instagram_bg_gradient": "",
         "instagram_title": "",
         "enable_border_title": false,
@@ -1328,7 +1330,7 @@
         "enable_border_view_all": true,
         "link_view_all": "",
         "color_view_all": "#3c3c3c",
-        "display_instagram_button": false,
+        "display_instagram_button": true,
         "instagram_button_text": "",
         "type_button_more": "load",
         "instagram_button_link": "",
@@ -1350,7 +1352,7 @@
         "grid_gap": 5,
         "enable_hide_portion": false,
         "slide_ins": "default_ins",
-        "display_arrow": true,
+        "display_arrow": false,
         "icon_for_image": "",
         "icon_style": "style_1",
         "effects_bg": "",
@@ -1759,7 +1761,7 @@
     "spotlight_block_fxkhEF",
     "navbar_id_yQYfJz",
     "featured_blog_hyGnaH",
-    "1645071896528770e8",
+    "spotlight_block_6pFCHB",
     "navbar_id_yWQmxR",
     "featured_blog_aRriHA",
     "2025_03_27_s5_UFdMTE",

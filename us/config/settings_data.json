@@ -212,7 +212,7 @@
     "show_saved_price": false,
     "show_scroll_down_section": false,
     "enable_view_documentation": false,
-    "product_card_layout": "05",
+    "product_card_layout": "02",
     "enable_background_button_card": true,
     "disable_product_card_border": false,
     "enable_custom_layout_card": false,

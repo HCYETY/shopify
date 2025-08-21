@@ -577,6 +577,12 @@
                 <div class="swiper-slide">
                   <div class="product-item">
                     <a data-discover="true" class="item-img" href="{{ product.url }}" target="_self">
+                      {% render 'responsive-image',
+                        image: product.featured_image,
+                        size: '256x256'
+                        retina: true
+                      %}
+{% comment %} 
                       <img
                         alt="{{ product.title }}"
                         decoding="async"
@@ -584,9 +590,15 @@
                         src="{{ product.featured_image | img_url: 'master' }}"
                         width="100%"
                         height="100%"
-                      >
+                      > {% endcomment %}
                     </a>
                     <a data-discover="true" class="active-img" href="{{ product.url }}" target="_self">
+                      {% render 'responsive-image',
+                        image: product.images[1],
+                        size: '256x256'
+                        retina: true
+                      %}
+{% comment %} 
                       <img
                         alt="{{ product.title }}"
                         decoding="async"
@@ -594,7 +606,7 @@
                         src="{{ product.images[1] | img_url: 'master' }}"
                         width="100%"
                         height="100%"
-                      >
+                      > {% endcomment %}
                     </a>
                     <div class="item-content">
                       <a data-discover="true" class="title" href="{{ product.url }}" target="_self">
