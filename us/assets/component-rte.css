@@ -627,3 +627,16 @@
         opacity: 1;
     }
 }
+
+
+@media (min-width: 1200px) {
+    .container-1170 {
+        max-width: 1200px !important;
+    }
+}
+
+@media (min-width: 1770px) {
+    .container-1770 {
+        max-width: 1800px !important;
+    }
+}
