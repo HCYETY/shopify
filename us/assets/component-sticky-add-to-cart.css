@@ -380,12 +380,17 @@
 }
 
 @media (max-width: 767px) {
+    .productView-stickyCart.style-1 .sticky-product{
+        flex-direction: column;
+    }
+
     .productView-stickyCart.style-1 .container {
         padding: 0 10px;
     }
 
     .productView-stickyCart.style-1 .sticky-left {
-        display: none;
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .productView-stickyCart.style-1 .sticky-right {
@@ -450,6 +455,7 @@
         width: 100%;
         background-color: white;
         height: 50vh;
+        opacity: 0;
     }
 
     .sticky-product-mobile .slick-arrow,
