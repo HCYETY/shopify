@@ -106,6 +106,17 @@
         "announcement_8gedGD": {
           "type": "announcement",
           "settings": {
+            "text": "<a href=\"https://www.crealityfalcon.com/pages/back-to-school-2025\" style=\"color: #000; font-weight: bold; text-decoration: none;\">\n 📚 Back to School Sale |\nSave Up To 56%\n</a>",
+            "btn_color": "#232323",
+            "btn_border_color": "#ffffff",
+            "btn_bg_color": "#ffffff",
+            "btn_bg_color_gradient": ""
+          }
+        },
+        "announcement_F3TQz6": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
             "text": "<a href=\"https://www.crealityfalcon.com/collections/materials\" style=\"color: #000; font-weight: bold; text-decoration: none;\">\n   🎉 Buy 10+ Materials → Get <span style=\"color:#ff4d00;\">20% OFF</span> Automatically at Checkout!\n</a>",
             "btn_color": "#232323",
             "btn_border_color": "#ffffff",
@@ -137,6 +148,7 @@
       },
       "block_order": [
         "announcement_8gedGD",
+        "announcement_F3TQz6",
         "announcement_8jVXmJ",
         "announcement_HWTQYW"
       ],
