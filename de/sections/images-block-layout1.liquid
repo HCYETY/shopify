@@ -1,0 +1,181 @@
+<style>
+    .tw-container-1440 {
+        padding-top: 0px;
+        padding-left: 110px;
+        padding-bottom: 40px;
+        padding-right: 130px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1440px;
+        box-sizing: border-box;
+    }
+
+    #shopify-section-{{ section.id }} .pic-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        /* gap: 20px; */
+    }
+    #shopify-section-{{ section.id }} .pic-flex .fit_pic {
+        max-height: 500px;
+        height: 500px;
+        width: auto;
+        margin-bottom: 20px;
+    }
+
+    #shopify-section-{{ section.id }} .pic-flex .fit_max_pic {
+        height: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #shopify-section-{{ section.id }} .mobile-image {
+        display: none;
+        position: relative;
+    }
+
+    #shopify-section-{{ section.id }} .mobile-image img{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    @media (max-width: 1480px) {
+        #shopify-section-{{ section.id }} .pic-flex .fit_pic {
+            height: calc((100vw - 245px) * 0.41);
+            width: auto;
+            margin-bottom: calc((100vw - 245px) * 0.02);
+        }   
+        
+    }
+    @media (max-width: 960px) {
+        .tw-container-1440 {
+            padding-top: 0px;
+            padding-left: 0px;
+            padding-bottom: 10px;
+            padding-right: 0px;
+        }
+
+        #shopify-section-{{ section.id }} .pic-flex .fit_pic {
+            height: calc((100vw - 245px) * 0.41);
+            width: auto;
+            margin-bottom: calc((100vw - 245px) * 0.02);
+        }   
+        
+        #shopify-section-{{ section.id }} .mobile-image {
+            display: block;
+        }
+
+        #shopify-section-{{ section.id }} .pic-flex {
+            display: none;
+        }
+        
+    }
+</style>
+{% assign width = section.settings.image_width | default: 750 %}
+{% assign height = section.settings.image_height | default: 1500 %}
+{% assign aspect_ratio = height | divided_by: width %}
+{% assign padding_top_percentage = aspect_ratio | times: 100 %}
+
+<div class="tw-container-1440" id="shopify-section-{{ section.id }}">
+    <div class="pic-flex">
+        {% for block in section.blocks %}
+            <img class="{% if block.settings.fit_width %}fit_max_pic{% else %}fit_pic{% endif %}" data-src="{{ block.settings.image | img_url: '1200x' }}" alt="">
+        {% endfor %}
+    </div>
+    <div class="mobile-image" style="padding-top: {{ padding_top_percentage }}%;">
+        <img data-src="{{ section.settings.mobile_image | img_url: '1200x' }}" alt="">
+    </div>
+</div>
+
+<script type="module">
+    const docWidth = document.documentElement.clientWidth;
+    $(function(){
+        if(docWidth <= 960){
+            $('#shopify-section-{{ section.id }}').find('.mobile-image img').each(function(){
+                let src = $(this).data('src');
+                src? this.src=src:''
+            })
+        }else {
+            $('#shopify-section-{{ section.id }}').find('.pic-flex img').each(function(){
+                let src = $(this).data('src');
+                src? this.src=src:''
+            })
+        }
+    })
+
+
+
+    $(function () {
+        var resizefun = function(){
+            const docWidth = document.documentElement.clientWidth;                
+            if(docWidth <= 960){
+                $('#shopify-section-{{ section.id }}').find('.mobile-image img').each(function(){
+                    let src = $(this).data('src');
+                    src? this.src=src:''
+                })
+            }else {
+                $('#shopify-section-{{ section.id }}').find('.pic-flex img').each(function(){
+                    let src = $(this).data('src');
+                    src? this.src=src:''
+                })
+            }
+        }
+        $(window).resize(resizefun);
+        resizefun();
+    })
+    
+</script>
+
+{% schema %}
+{
+    "name": "images block layout1",
+    "tag": "section",
+    "blocks": [
+    {
+        "type": "image",
+        "name": "图片",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "图片"
+            },
+            {
+                "type": "checkbox",
+                "id": "fit_width",
+                "label": "Fit Width",
+                "default": false
+            }
+        ]
+    }
+    ],
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "移动端显示的大图"
+        },
+        {
+            "type": "text",
+            "id": "image_width",
+            "label": "图片宽度",
+            "default": "750"
+        },
+        {
+            "type": "text",
+            "id": "image_height",
+            "label": "移动端高度",
+            "default": "1500"
+        }
+    ],
+    "presets": [
+    {
+        "name": "images block layout1"
+    }
+    ]
+}
+{% endschema %}
+    

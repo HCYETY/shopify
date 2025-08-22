@@ -1,0 +1,860 @@
+{% style %}
+  .why-store {
+    margin: 48px 0 80px;
+  }
+
+  .why-store .title {
+    font-family: Montserrat;
+    font-size: 32px;
+    margin-bottom: 32px;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  .why-store .content-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .why-store .content-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .why-store .content {
+    display: grid;
+    gap: 16px;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .why-store .content-block-1 {
+    grid-row: 1;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .why-store .content-block-2 {
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .why-store .content-block-3 {
+    grid-row: 1;
+    grid-column: span 2;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .why-store .content-item {
+    border-radius: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    /* height: fit-content; */
+  }
+
+  .why-store .content-block-3 .faster-speed {
+    grid-row: span 2;
+    grid-column: 1;
+  }
+
+  .why-store .content-block-3 .secure-payment {
+    grid-row: span 1;
+    grid-column: 2;
+  }
+
+  .why-store .content-block-3 .free-shipping {
+    grid-row: span 1;
+    grid-column: 2;
+  }
+
+  .why-store .content-block-3 .precision-meets-art {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+
+  .why-store .content-item:hover {
+    -webkit-box-shadow: 0 12px 20px 6px #606d800a, 0 8px 16px 4px #606d800a, 0 4px 14px #626f830a;
+    box-shadow: 0 12px 20px 6px #606d800a, 0 8px 16px 4px #606d800a, 0 4px 14px #626f830a;
+  }
+
+  .why-store .content-item:hover img {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  .why-store .content-item img {
+    background-color: #fff;
+    border-radius: 16px;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  .why-store .content-block-1 .multi-power {
+    flex: 278;
+  }
+
+  .why-store .content-block-1 .pay-later {
+    flex: 204;
+  }
+
+  .why-store .content-block-2 .return-guarantee {
+    flex: 218;
+  }
+
+  .why-store .content-block-2 .design-space {
+    flex: 264;
+  }
+
+  /* 模态窗口样式 */
+  .falcon-modal-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: none;
+  }
+
+  .falcon-modal-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: auto;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+
+  .falcon-modal {
+    width: 720px;
+    max-width: calc(100vw - 32px);
+    position: relative;
+    margin: 0 auto;
+    top: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+  }
+
+  .falcon-modal .falcon-modal-content {
+    position: relative;
+    width: 100%;
+  }
+
+  .falcon-modal .falcon-modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0;
+    color: #8d9095;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f5f6f7;
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+  }
+
+  .falcon-modal .falcon-modal-close:hover {
+    background-color: #e7e8e9;
+  }
+
+  .falcon-modal .falcon-modal-close .falcon-modal-close-x {
+    display: flex;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 32px;
+    justify-content: center;
+    text-transform: none;
+    text-rendering: auto;
+  }
+
+  .falcon-modal .falcon-modal-close .close-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .falcon-modal .falcon-modal-body {
+    padding: 5px 0;
+  }
+
+  .falcon-modal .modal-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: left;
+  }
+
+  .falcon-modal .modal-wrap .d-title {
+    color: #1a1a1a;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .falcon-modal .modal-wrap .desc {
+    color: #51545a;
+    font-size: 14px;
+  }
+
+  .falcon-modal .modal-wrap .link {
+    color: #0bb3fb;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .falcon-modal .modal-wrap .link:hover {
+    text-decoration: underline;
+  }
+
+  .falcon-modal .falcon-modal-open {
+    overflow: hidden;
+  }
+
+  @media (min-width: 1920px) {
+    .why-store {
+      margin: 2.5vw 0 4.167vw;
+    }
+    .why-store .title {
+      font-size: 1.667vw;
+      margin-bottom: 1.667vw;
+    }
+    .why-store .content {
+      gap: 0.833vw;
+    }
+    .why-store .content-block-1 {
+      gap: 0.833vw;
+    }
+    .why-store .content-block-2 {
+      gap: 0.833vw;
+    }
+    .why-store .content-block-3 {
+      gap: 0.833vw;
+    }
+    .why-store .content-item {
+      border-radius: 0.833vw;
+    }
+    .why-store .content-item:hover {
+      -webkit-box-shadow: 0 0.625vw 1.042vw 0.313vw #606d800a, 0 0.417vw 0.833vw 0.208vw #606d800a,
+        0 0.208vw 0.729vw #626f830a;
+      box-shadow: 0 0.625vw 1.042vw 0.313vw #606d800a, 0 0.417vw 0.833vw 0.208vw #606d800a, 0 0.208vw 0.729vw #626f830a;
+    }
+    .why-store .content-item img {
+      border-radius: 0.833vw;
+    }
+
+    .falcon-modal {
+      width: 37.5vw;
+      max-width: calc(100vw - 1.667vw);
+      border-radius: 0.417vw;
+      box-shadow: 0 0.313vw 0.833vw 0 rgba(0, 0, 0, 0.08), 0 0.156vw 0.313vw -0.208vw rgba(0, 0, 0, 0.12),
+        0 0.469vw 1.458vw 0.417vw rgba(0, 0, 0, 0.05);
+      padding: 2.083vw;
+    }
+    .falcon-modal .falcon-modal-close {
+      height: 1.771vw;
+      width: 1.771vw;
+    }
+    .falcon-modal .falcon-modal-close .falcon-modal-close-x {
+      font-size: 0.833vw;
+      line-height: 1.667vw;
+    }
+    .falcon-modal .falcon-modal-close .close-icon {
+      width: 0.833vw;
+      height: 0.833vw;
+    }
+    .falcon-modal .falcon-modal-body {
+      padding: 0.26vw 0;
+    }
+    .falcon-modal .modal-wrap {
+      gap: 1.25vw;
+    }
+    .falcon-modal .modal-wrap .d-title {
+      font-size: 1.25vw;
+    }
+    .falcon-modal .modal-wrap .desc {
+      font-size: 0.729vw;
+    }
+    .falcon-modal .modal-wrap .link {
+      font-size: 0.729vw;
+    }
+  }
+
+  @media (max-width: 900px) {
+
+    .why-store {
+        margin: 12.8vw 0
+    }
+
+    .why-store .container {
+      padding: 0 6.4vw;
+    }
+
+    .why-store .content,
+    .why-store .content-block-1,
+    .why-store .content-block-2,
+    .why-store .content-block-3 {
+      gap: 2.133vw;
+    }
+
+    .why-store .content .content-item {
+      border-radius: 2.133vw;
+      min-width: 42.667vw;
+    }
+
+    .why-store .title {
+      font-size: 6.4vw;
+      margin-bottom: 6.4vw;
+    }
+
+    .falcon-modal {
+      padding: 6.4vw;
+    }
+    .falcon-modal .modal-wrap .d-title {
+      font-size: 5.333vw;
+    }
+  }
+{% endstyle %}
+
+<div class="why-store">
+  <div class="container">
+    <h2 class="title">{{ section.settings.title }}</h2>
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="content-block-1">
+          <div
+            class="content-item multi-power"
+            data-title="{{ section.settings.multi_power_title }}"
+            data-description="{{ section.settings.multi_power_description }}"
+            data-link="{{ section.settings.multi_power_link }}"
+          >
+            {% if section.settings.multi_power_image %}
+              <img
+                src="{{ section.settings.multi_power_image | image_url }}"
+                alt="multi power"
+                width="100%"
+                height="100%"
+              >
+            {% else %}
+              <img src="{{ 'Frame-multi-power.png' | asset_url }}" alt="multi power" width="100%" height="100%">
+            {% endif %}
+          </div>
+
+          <div
+            class="content-item pay-later"
+            data-title="{{ section.settings.pay_later_title }}"
+            data-description="{{ section.settings.pay_later_description }}"
+            data-link="{{ section.settings.pay_later_link }}"
+          >
+            {% if section.settings.pay_later_image %}
+              <img src="{{ section.settings.pay_later_image | image_url }}" alt="pay later" width="100%" height="100%">
+            {% else %}
+              <img src="{{ 'Frame-pay-later.png' | asset_url }}" alt="pay later" width="100%" height="100%">
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="content-block-2">
+          <div
+            class="content-item return-guarantee"
+            data-title="{{ section.settings.return_guarantee_title }}"
+            data-description="{{ section.settings.return_guarantee_description }}"
+            data-link="{{ section.settings.return_guarantee_link }}"
+          >
+            {% if section.settings.return_guarantee_image %}
+              <img
+                src="{{ section.settings.return_guarantee_image | image_url }}"
+                alt="return guarantee"
+                width="100%"
+                height="100%"
+              >
+            {% else %}
+              <img
+                src="{{ 'Frame-return-guarantee.png' | asset_url }}"
+                alt="return guarantee"
+                width="100%"
+                height="100%"
+              >
+            {% endif %}
+          </div>
+          <div
+            class="content-item design-space"
+            data-title="{{ section.settings.design_space_title }}"
+            data-description="{{ section.settings.design_space_description }}"
+            data-link="{{ section.settings.design_space_link }}"
+          >
+            {% if section.settings.design_space_image %}
+              <img
+                src="{{ section.settings.design_space_image | image_url }}"
+                alt="design space"
+                width="100%"
+                height="100%"
+              >
+            {% else %}
+              <img src="{{ 'Frame-design-space.png' | asset_url }}" alt="design space" width="100%" height="100%">
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="content-block-3">
+          <div
+            class="content-item faster-speed"
+            data-title="{{ section.settings.faster_speed_title }}"
+            data-description="{{ section.settings.faster_speed_description }}"
+            data-link="{{ section.settings.faster_speed_link }}"
+          >
+            {% if section.settings.faster_speed_image %}
+              <img
+                src="{{ section.settings.faster_speed_image | image_url }}"
+                alt="faster speed"
+                width="100%"
+                height="100%"
+              >
+            {% else %}
+              <img src="{{ 'Frame-faster-speed.png' | asset_url }}" alt="faster speed" width="100%" height="100%">
+            {% endif %}
+          </div>
+
+          <div
+            class="content-item secure-payment"
+            data-title="{{ section.settings.secure_payment_title }}"
+            data-description="{{ section.settings.secure_payment_description }}"
+            data-link="{{ section.settings.secure_payment_link }}"
+          >
+            {% if section.settings.secure_payment_image %}
+              <img
+                src="{{ section.settings.secure_payment_image | image_url }}"
+                alt="secure payment"
+                width="100%"
+                height="100%"
+              >
+            {% else %}
+              <img src="{{ 'Frame-secure-payment.png' | asset_url }}" alt="secure payment" width="100%" height="100%">
+            {% endif %}
+          </div>
+          <div
+            class="content-item free-shipping"
+            data-title="{{ section.settings.free_shipping_title }}"
+            data-description="{{ section.settings.free_shipping_description }}"
+            data-link="{{ section.settings.free_shipping_link }}"
+          >
+            {% if section.settings.free_shipping_image %}
+              <img
+                src="{{ section.settings.free_shipping_image | image_url }}"
+                alt="free shipping"
+                width="100%"
+                height="100%"
+              >
+            {% else %}
+              <img src="{{ 'Frame-free-shipping.png' | asset_url }}" alt="free shipping" width="100%" height="100%">
+            {% endif %}
+          </div>
+
+          <div
+            class="content-item precision-meets-art"
+            data-title="{{ section.settings.precision_meets_art_title }}"
+            data-description="{{ section.settings.precision_meets_art_description }}"
+            data-link="{{ section.settings.precision_meets_art_link }}"
+          >
+            {% if section.settings.precision_meets_art_image %}
+              <img
+                src="{{ section.settings.precision_meets_art_image | image_url }}"
+                alt="precision meets art"
+                width="100%"
+                height="100%"
+              >
+            {% else %}
+              <img
+                src="{{ 'Frame-precision-meets-art.png' | asset_url }}"
+                alt="precision meets art"
+                width="100%"
+                height="100%"
+              >
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 模态窗口结构 -->
+<div class="falcon-modal-mask"></div>
+<div class="falcon-modal-wrap">
+  <div class="falcon-modal">
+    <div class="falcon-modal-content">
+      <button type="button" aria-label="Close" class="falcon-modal-close">
+        <span class="falcon-modal-close-x">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="close-icon">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12.1213 4.87868C12.4142 4.58579 12.4142 4.12132 12.1213 3.82843C11.8284 3.53553 11.364 3.53553 11.0711 3.82843L8 6.89949L4.92893 3.82843C4.63604 3.53553 4.17157 3.53553 3.87868 3.82843C3.58579 4.12132 3.58579 4.58579 3.87868 4.87868L6.94975 8L3.87868 11.0711C3.58579 11.364 3.58579 11.8284 3.87868 12.1213C4.17157 12.4142 4.63604 12.4142 4.92893 12.1213L8 9.05025L11.0711 12.1213C11.364 12.4142 11.8284 12.4142 12.1213 12.1213C12.4142 11.8284 12.4142 11.364 12.1213 11.0711L9.05025 8L12.1213 4.87868Z"
+              fill="#8D9095"
+            ></path>
+          </svg>
+        </span>
+      </button>
+      <div class="falcon-modal-body">
+        <div>
+          <div class="modal-wrap">
+            <div class="d-title"></div>
+            <div class="desc-wrap">
+              <p class="desc"></p>
+            </div>
+            <a href="" target="_blank" class="link">More Details Here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    const contentItems = document.querySelectorAll('.content-item');
+    const modalMask = document.querySelector('.falcon-modal-mask');
+    const modalWrap = document.querySelector('.falcon-modal-wrap');
+    const modalClose = document.querySelector('.falcon-modal-close');
+    const modalTitle = document.querySelector('.modal-wrap .d-title');
+    const modalDesc = document.querySelector('.modal-wrap .desc');
+    const modalLink = document.querySelector('.modal-wrap .link');
+
+    // 打开模态窗口
+    function openModal(title, description, link) {
+      modalTitle.textContent = title || '';
+      modalDesc.textContent = description || '';
+
+      if (link) {
+        modalLink.href = link;
+        modalLink.style.display = 'inline-block';
+      } else {
+        modalLink.style.display = 'none';
+      }
+
+      modalMask.style.display = 'block';
+      modalWrap.style.display = 'flex';
+      document.body.classList.add('falcon-modal-open');
+    }
+
+    // 关闭模态窗口
+    function closeModal() {
+      modalMask.style.display = 'none';
+      modalWrap.style.display = 'none';
+      document.body.classList.remove('falcon-modal-open');
+    }
+
+    // 为所有内容项添加点击事件
+    contentItems.forEach((item) => {
+      item.addEventListener('click', function () {
+        const title = this.getAttribute('data-title');
+        const description = this.getAttribute('data-description');
+        const link = this.getAttribute('data-link');
+        openModal(title, description, link);
+      });
+    });
+
+    // 点击关闭按钮关闭模态窗口
+    modalClose.addEventListener('click', closeModal);
+
+    // 点击模态窗口外部区域关闭模态窗口
+    modalWrap.addEventListener('click', function (e) {
+      if (e.target === modalWrap) {
+        closeModal();
+      }
+    });
+
+    // ESC键关闭模态窗口
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modalWrap.style.display === 'flex') {
+        closeModal();
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Home S Why Store",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Why Shop at the CREALITY Falcon?"
+    },
+    {
+      "type": "header",
+      "content": "第一列区块"
+    },
+    {
+      "type": "header",
+      "content": "第一列上方位置"
+    },
+    {
+      "type": "image_picker",
+      "id": "multi_power_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "multi_power_title",
+      "label": "Title",
+      "default": "Multiple Power Selection",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "textarea",
+      "id": "multi_power_description",
+      "label": "Description",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "url",
+      "id": "multi_power_link",
+      "label": "Link",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "header",
+      "content": "第一列下方位置"
+    },
+    {
+      "type": "image_picker",
+      "id": "pay_later_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "pay_later_title",
+      "label": "Title",
+      "default": "Buy now Pay later financing",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "textarea",
+      "id": "pay_later_description",
+      "label": "Description",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "url",
+      "id": "pay_later_link",
+      "label": "Link",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "header",
+      "content": "第二列区块"
+    },
+    {
+      "type": "header",
+      "content": "第二列上方位置"
+    },
+    {
+      "type": "image_picker",
+      "id": "return_guarantee_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "return_guarantee_title",
+      "label": "Title",
+      "default": "14-day Return Guarantee",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "textarea",
+      "id": "return_guarantee_description",
+      "label": "Description",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "url",
+      "id": "return_guarantee_link",
+      "label": "Link",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "header",
+      "content": "第二列下方位置"
+    },
+    {
+      "type": "image_picker",
+      "id": "design_space_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "design_space_title",
+      "label": "Title",
+      "default": "Falcon Design Space",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "textarea",
+      "id": "design_space_description",
+      "label": "Description",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "url",
+      "id": "design_space_link",
+      "label": "Link",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "header",
+      "content": "第三列区块"
+    },
+    {
+      "type": "header",
+      "content": "第三列第一个位置"
+    },
+    {
+      "type": "image_picker",
+      "id": "faster_speed_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "faster_speed_title",
+      "label": "Title",
+      "default": "3X Faster Speed",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "textarea",
+      "id": "faster_speed_description",
+      "label": "Description",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "url",
+      "id": "faster_speed_link",
+      "label": "Link",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "header",
+      "content": "第三列第二个位置"
+    },
+    {
+      "type": "image_picker",
+      "id": "secure_payment_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "secure_payment_title",
+      "label": "Title",
+      "default": "100% Secure Paymen",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "textarea",
+      "id": "secure_payment_description",
+      "label": "Description",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "url",
+      "id": "secure_payment_link",
+      "label": "Link",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "header",
+      "content": "第三列第三个位置"
+    },
+    {
+      "type": "image_picker",
+      "id": "free_shipping_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "free_shipping_title",
+      "label": "Title",
+      "default": "Free US Shipping Over $49.99",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "textarea",
+      "id": "free_shipping_description",
+      "label": "Description",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "url",
+      "id": "free_shipping_link",
+      "label": "Link",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "header",
+      "content": "第三列第四个位置"
+    },
+    {
+      "type": "image_picker",
+      "id": "precision_meets_art_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "precision_meets_art_title",
+      "label": "Title",
+      "default": "Precision Meets Art",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "textarea",
+      "id": "precision_meets_art_description",
+      "label": "Description",
+      "info": "用于弹窗"
+    },
+    {
+      "type": "url",
+      "id": "precision_meets_art_link",
+      "label": "Link",
+      "info": "用于弹窗"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home S Why Store"
+    }
+  ]
+}
+{% endschema %}

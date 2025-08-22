@@ -1,0 +1,332 @@
+{%- assign title = section.settings.title -%}
+{%- assign columns = section.settings.columns -%}
+{%- assign padding_pt_pc = section.settings.padding_pt_pc -%}
+{%- assign padding_pb_pc = section.settings.padding_pb_pc -%}
+{%- assign padding_pt_mb = section.settings.padding_pt_mb -%}
+{%- assign padding_pt_mb = section.settings.padding_pt_mb -%}
+<style>
+  #shopify-section-{{ section.id }} .text-ellipsis {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #shopify-section-{{ section.id }} .transform-center {
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  #shopify-section-{{ section.id }} .title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .container-{{section.id}} {
+    padding-top: {{padding_pt_pc}}px;
+    padding-bottom: {{padding_pb_pc}}px;
+  }
+  #shopify-section-{{ section.id }} .anchor-box {
+    display: grid;
+    width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #F7F7F7;
+    border-bottom: 1px solid #F7F7F7;
+    padding: 30px 0;
+  }
+  #shopify-section-{{ section.id }} .anchor-item {
+    border: 1px solid #F7F7F7;
+    transition: all .16s ease-in-out;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+  }
+  #shopify-section-{{ section.id }} .anchor-item:hover {
+    color: #0762c8;
+    border-color: #0762C8;
+  }
+  #shopify-section-{{ section.id }} .anchor-item:hover .anchor-icon {
+    stroke: #0762c8;
+    transform: rotate(90deg);
+  }
+  #shopify-section-{{ section.id }} .anchor-title {
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 600;
+  } 
+  #shopify-section-{{ section.id }} .anchor-icon-box {
+    width: 80px;
+  }
+  #shopify-section-{{ section.id }} .anchor-icon {
+    transition: all .16s ease-in-out;
+    width: 20px;
+    height: 20px;
+  }
+  @media (max-width:960px) {
+    #shopify-section-{{ section.id }} .anchor-box {
+      display: none; 
+    }
+    .container-{{section.id}} {
+      padding-top: {{padding_pt_mb}}px;
+      padding-bottom: {{padding_pb_pmb}}px;
+    }
+    #shopify-section-{{ section.id }} .anchor-item {
+      width: 100%;
+    }
+    #shopify-section-{{ section.id }} .dropdown {
+      width: 100%;
+      padding: 0 25px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    #shopify-section-{{ section.id }} .dropdown-toggle {
+      width: 100%;
+      border-radius: 20px;
+      padding-left: 20px;
+      background-color: #fff;
+      border: 1px solid #EBECF0;
+      color: #606266;
+      padding: 10px 25px;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .3s ease-in;
+    }
+    #shopify-section-{{ section.id }} .dropdown-toggle:hover {
+      border-color: #409EFF;
+    }
+    
+    #shopify-section-{{ section.id }} .fold-menu {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      width: calc(100% - 50px);
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      margin-top: 5px;
+      z-index: 1;
+    }
+    
+    #shopify-section-{{ section.id }} .dropdown-item {
+      color: #606266;
+      padding: 12px 20px;
+      font-size: 14px;
+      line-height: 1;
+      display: block;
+    }
+
+    #shopify-section-{{ section.id }} .dropdown-item:hover {
+      color: #409EFF;
+      background-color: #F5F7FA;
+    }
+    
+    #shopify-section-{{ section.id }} .dropdown-item:hover {
+      background-color: #f5f7fa;
+    }
+    
+  }
+</style>
+  
+<div class="container-{{section.id}}" {% render 'section-properties' %}>
+  {% if title %}
+    <div class="title">{{title}}</div>
+  {% endif %}
+  <div class="md:tw-hidden anchor-box tw-grid tw-gap-[15px] tw-w-full   
+    {% if columns == 1 %} lg:tw-grid-cols-1 {% endif %}
+    {% if columns == 2 %} lg:tw-grid-cols-2 {% endif %}
+    {% if columns == 3 %} lg:tw-grid-cols-3 {% endif %}
+  ">
+		{%- for block in section.blocks -%}
+      <div id="skip-{{block.settings.anchor_id}}" class="anchor-item tw-w-full tw-flex">
+        <div class="anchor-title tw-flex-1">{{block.settings.title}}</div>
+        <div class="anchor-icon-box tw-flex tw-justify-center tw-items-center">
+          <svg class="anchor-icon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.8" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M5 12l14 0" />
+            <path d="M15 16l4 -4" />
+            <path d="M15 8l4 4" />
+          </svg>
+        </div>
+      </div>
+    {%- endfor -%}
+	</div>
+  <div class="lg:tw-hidden anchor-box-mb tw-w-full">
+    <div class="dropdown">
+      <div class="dropdown-toggle">Selective skip card</div>
+      <div class="fold-menu"> 
+        {%- for block in section.blocks -%}
+          <div id="skip-{{block.settings.anchor_id}}" class="dropdown-item">{{block.settings.title}}</div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div> 
+<!-- <script> -->
+<script type="module">
+	const isMbile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  const height = $(".shopify-section--header").height(); 
+  const height2 = $(".announcement-bar").height(); 
+  console.log(height,'elementId') 
+  // $(document).ready(function(){
+    $("#shopify-section-{{ section.id }} .dropdown-toggle").click(function(){
+      $("#shopify-section-{{ section.id }}  .fold-menu").toggle();
+    });
+  // });
+  // 跳转逻辑实现 
+  $("#shopify-section-{{ section.id }} .anchor-item").each(function(i,item) {
+    $(this).click(function() {
+      var elementId = $(this).attr('id').split("-")[1];
+      if(elementId) { 
+        var top = $("#" + elementId).offset()["top"];
+        var height = $(".shopify-section-group-header-group").height();
+        if(top && top > height) {
+          $("html").animate({scrollTop: top - (height || 0) - (height2 || 0) - 50},500);
+        }
+      }
+    })
+  })
+  $("#shopify-section-{{ section.id }} .dropdown-item").each(function(i,item) {
+    $(this).click(function() {
+      var elementId = $(this).attr('id').split("-")[1];
+      if(elementId) {
+        var top = $("#" + elementId).offset()["top"];
+        var height = $(".shopify-section-group-header-group").height();
+        $("#shopify-section-{{ section.id }}  .fold-menu").toggle(); 
+        if(top && top > height) {
+          $("html").animate({scrollTop: top - (height || 0) - (height2 || 0) - 50},500);
+        }
+      }
+    })
+  })
+</script>
+
+{%- schema -%}
+{
+	"name": "creality anchor point",
+  "max_blocks": 12,
+	"settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": {
+      "en-US": "title",
+      "zh-CN": "标题"
+      },
+      "default": "default title"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": {
+        "en-US": "Columns",
+        "zh-CN": "列数"
+      },
+      "default": 2,
+      "step": 1,
+      "max": 3,
+      "min": 1
+    },
+    {
+      "type": "range",
+      "id": "padding_pt_pc",
+      "label": {
+        "en-US": "top space between",
+        "zh-CN": "PC上间距"
+      },
+      "default": 20,
+      "unit":"px",
+      "step": 1,
+      "max": 100,
+      "min": 10
+    },
+    {
+      "type": "range",
+      "id": "padding_pb_pc",
+      "label": {
+        "en-US": "bottom space between",
+        "zh-CN": "PC下间距"
+      },
+      "default": 20,
+      "unit":"px",
+      "step": 1,
+      "max": 100,
+      "min": 10
+    },
+    {
+      "type": "range",
+      "id": "padding_pt_mb",
+      "label": {
+        "en-US": "mobile top space between",
+        "zh-CN": "移动端上间距"
+      },
+      "default": 20,
+      "unit":"px",
+      "step": 1,
+      "max": 100,
+      "min": 10
+    },
+    {
+      "type": "range",
+      "id": "padding_pb_mb",
+      "label": {
+        "en-US": "mobile bottom space between",
+        "zh-CN": "移动端下间距"
+      },
+      "default": 20,
+      "unit":"px",
+      "step": 1,
+      "max": 100,
+      "min": 10
+    }
+  ],
+  "blocks": [
+    {
+      "type":"anchor_point",
+      "name":{
+        "en-US": "anchor point",
+        "zh-CN": "锚点"
+      },
+      "settings":[
+        {
+          "type": "text",
+          "id": "title",
+          "label": {
+          "en-US": "title",
+          "zh-CN": "标题"
+          }
+        },
+        {
+          "type": "text",
+          "id": "anchor_id",
+          "label": {
+            "en-US": "anchor Id",
+            "zh-CN": "跳转Id"
+          }
+        }
+      ]
+    }
+  ],
+	"presets": [
+		{
+			"name": "creality anchor point",
+      "blocks": [
+        {
+          "type":"anchor_point",
+          "settings": {
+            "title": "test 1",
+            "anchor_id": ""
+          }
+        },
+        {
+          "type":"anchor_point",
+          "settings": {
+            "title": "test 2",
+            "anchor_id": ""
+          }
+        }
+      ]
+    }
+	]
+}
+{%- endschema -%}

@@ -1,0 +1,2217 @@
+<style>
+   .blur-up {
+            filter: blur(1.25rem);
+            transition: filter 0.4s, -webkit-filter 0.4s;
+        }
+
+        .blur-up.loaded {
+            filter: blur(0rem);
+
+            
+        }
+    
+          .falcon2_40w .blur-up {
+              filter: blur(20px);
+              transition: filter 0.4s, -webkit-filter 0.4s;
+          }
+
+          .falcon2_40w .blur-up.loaded {
+              filter: blur(0px);
+          }
+          .falcon2_40w .fit_picture {
+            display: block;
+            width: 100%;
+            height: auto;
+            position: relative;
+          }
+          .falcon2_40w .fit_picture img {
+             position: absolute;
+             width: 100%;
+             height: auto;
+             left: 0;
+             top: 0;
+             object-fit: contain;
+           }
+        
+            @media (min-width:0px) {
+              .falcon2_40w .fit_picture .placeholderTag {
+                  display: none;
+              }
+              .falcon2_40w .fit_picture ._xmedium {
+                  display: block;
+              }
+            }
+          
+            @media (min-width:1921px) {
+              .falcon2_40w .fit_picture .placeholderTag {
+                  display: none;
+              }
+              .falcon2_40w .fit_picture ._xlarge {
+                  display: block;
+              }
+            }
+          
+            @media (max-width:960px) {
+              .falcon2_40w .fit_picture .placeholderTag {
+                  display: none;
+              }
+              .falcon2_40w .fit_picture ._xsmall {
+                  display: block;
+              }
+            }
+            @charset "UTF-8";
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.en .fontBold {
+  font-family: HarmonyOS_Sans_SC_Bold, sans-serif;
+}
+.en .fontRegular {
+  font-family: HarmonyOS_Sans_SC_Regular, sans-serif;
+}
+.en .fontLight {
+  font-family: HarmonyOS_Sans_SC_Light, sans-serif;
+}
+.en .fontMedium {
+  font-family: HarmonyOS_Sans_SC_Medium, sans-serif;
+}
+
+.cn .fontBold {
+  font-family: HarmonyOS_Sans_SC_Bold, sans-serif;
+}
+.cn .fontRegular {
+  font-family: HarmonyOS_Sans_SC_Regular, sans-serif;
+}
+.cn .fontLight {
+  font-family: HarmonyOS_Sans_SC_Light, sans-serif;
+}
+.cn .fontMedium {
+  font-family: HarmonyOS_Sans_SC_Medium, sans-serif;
+}
+
+.scroll-no {
+  overflow-y: hidden;
+}
+
+.falcon2_40w {
+  width: 100%;
+  font-size: 0;
+  position: relative;
+  background-color: #000000;
+  overflow: hidden;
+  line-height: 1;
+}
+.falcon2_40w .video {
+  position: relative;
+}
+.falcon2_40w .play {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 2vw;
+  border-style: solid;
+  border-width: 1vw 0 1vw 1.5vw;
+  border-color: transparent transparent transparent #4CAF50;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+.falcon2_40w .play:hover {
+  border-color: transparent transparent transparent #377939;
+}
+.falcon2_40w.cn {
+  font-family: "HarmonyOS_Sans_SC_Regular", "Microsoft YaHei", "Open Sans", "PingFang SC", "Arial", "sans-serif";
+}
+.falcon2_40w.cn h2 {
+  font-family: HarmonyOS_Sans_SC_Bold;
+}
+.falcon2_40w.en {
+  font-family: "HarmonyOS_Sans_SC_Regular", "Microsoft YaHei", "Open Sans", "PingFang SC", "Arial", "sans-serif";
+}
+.falcon2_40w.en h2 {
+  font-family: HarmonyOS_Sans_SC_Bold;
+}
+.falcon2_40w .hm-bold {
+  font-family: HarmonyOS_Sans_SC_Bold;
+}
+.falcon2_40w .hm-medium {
+  font-family: HarmonyOS_Sans_SC_Medium;
+}
+.falcon2_40w .mb {
+  display: none;
+}
+.falcon2_40w * {
+  box-sizing: border-box;
+}
+.falcon2_40w > * {
+  position: relative;
+}
+.falcon2_40w img {
+  width: 100%;
+  height: auto;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  user-drag: none;
+}
+.falcon2_40w .fit_picture {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.falcon2_40w .fit_picture img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 0;
+}
+.falcon2_40w .fixed_block {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.falcon2_40w a {
+  text-decoration: none;
+}
+.falcon2_40w h1,
+.falcon2_40w h2,
+.falcon2_40w h3,
+.falcon2_40w h4,
+.falcon2_40w h5,
+.falcon2_40w h6,
+.falcon2_40w p {
+  margin: 0;
+  padding: 0;
+}
+.falcon2_40w h2 {
+  font-size: 2.15vw;
+  color: #000000;
+  line-height: 1;
+  font-family: HarmonyOS_Sans_SC_Bold;
+  text-align: center;
+}
+.falcon2_40w .section-common .wrap {
+  padding: 0 22.5vw;
+  color: #fff;
+}
+.falcon2_40w .section-common .wrap .relative {
+  position: relative;
+  height: 100%;
+}
+.falcon2_40w .section-common .wrap .text-box .text1 {
+  font-size: 1.8vw;
+  line-height: 1.25;
+}
+.falcon2_40w .section-common .wrap .text-box .text2 {
+  font-size: 1vw;
+  line-height: 1.25;
+  padding-top: 1vw;
+}
+.falcon2_40w .section1 {
+  color: #fff;
+}
+.falcon2_40w .section1 .wrap {
+  padding: initial;
+  left: 15vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.falcon2_40w .section1 .wrap .text-box .text1 {
+  font-size: 3vw;
+  line-height: 1.65;
+}
+.falcon2_40w .section1 .wrap .text-box .text2 {
+  font-size: 2vw;
+  line-height: 1.25;
+}
+.falcon2_40w .section1 .wrap .icon-box {
+  width: 25vw;
+  font-size: 0.75vw;
+  display: flex;
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 2vw;
+  transform: translateX(-1vw);
+  flex-wrap: wrap;
+}
+.falcon2_40w .section1 .wrap .icon-box .icon-box-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 50%;
+  gap: 0.6vw;
+  margin-top: 2vw;
+}
+.falcon2_40w .section1 .wrap .icon-box .icon-box-item .fit_picture {
+  width: auto;
+  flex: 1vw;
+}
+.falcon2_40w .section1 .wrap .icon-box .icon-box-item:nth-child(1) .fit_picture {
+  height: 2.4vw;
+}
+.falcon2_40w .section1 .wrap .icon-box .icon-box-item:nth-child(2) .fit_picture {
+  height: 2.55vw;
+}
+.falcon2_40w .section1 .wrap .icon-box .icon-box-item:nth-child(3) .fit_picture {
+  height: 2vw;
+}
+.falcon2_40w .section1 .wrap .icon-box .icon-box-item:nth-child(3) .fit_picture img {
+  margin-top: 0.5vw;
+}
+.falcon2_40w .section1 .wrap .icon-box .icon-box-item:nth-child(4) .fit_picture {
+  height: 1.8vw;
+}
+.falcon2_40w .section1 .wrap .icon-box .icon-box-item:nth-child(4) .fit_picture img {
+  margin-top: 0.5vw;
+}
+.falcon2_40w .section2 .wrap {
+  padding: 10vw 20vw 4vw;
+}
+.falcon2_40w .section2 .wrap .icon-box {
+  color: #fff;
+  font-size: 0.83vw;
+  column-count: 4;
+  column-gap: 2vw;
+}
+.falcon2_40w .section2 .wrap .icon-box .icon-box-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  padding-bottom: 6vw;
+  text-align: center;
+  line-height: 1.5;
+}
+.falcon2_40w .section2 .wrap .icon-box .icon-box-item .fit_picture {
+  height: 2.5vw;
+  width: auto;
+  overflow: hidden;
+}
+.falcon2_40w .section2 .wrap .icon-box .icon-box-item .fit_picture img {
+  height: 2.5vw;
+}
+.falcon2_40w .section3 .wrap {
+  text-align: center;
+  padding-top: 4vw;
+}
+.falcon2_40w .section3 .wrap .text-box .text1 {
+  padding: 0 13vw;
+}
+.falcon2_40w .section3 .overview {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 25vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(20%, -35%);
+  gap: 0.8vw;
+}
+.falcon2_40w .section3 .overview .item {
+  position: relative;
+  flex: 1;
+  font-size: 1vw;
+  color: #6ABBFF;
+}
+.falcon2_40w .section3 .overview .item > p {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  line-height: 1.5;
+}
+.falcon2_40w .section4 .wrap .text-box {
+  width: 24vw;
+  padding-top: 15vw;
+}
+.falcon2_40w .section4 .wrap .text-box .text1 {
+  font-size: 1.88vw;
+  line-height: 1.5;
+}
+.falcon2_40w .section4 .wrap .text-box .text2 {
+  padding-top: 1vw;
+  padding-right: 1vw;
+  line-height: 1.5;
+}
+.falcon2_40w .section5-2 .wrap .overview {
+  display: flex;
+  gap: 1vw;
+  text-align: center;
+}
+.falcon2_40w .section5-2 .wrap .overview .item {
+  margin-top: 2vw;
+  flex: 1;
+}
+.falcon2_40w .section5-2 .wrap .overview .item .fit_picture {
+  border: 1px solid #1f3f5b;
+  border-radius: 0.5vw;
+  overflow: hidden;
+}
+.falcon2_40w .section5-2 .wrap .overview .item h2 {
+  font-size: 1.88vw;
+  color: #fff;
+  padding-top: 1vw;
+}
+.falcon2_40w .section5-2 .wrap .overview .item p {
+  font-size: 1.25vw;
+  padding: 1vw 0;
+}
+.falcon2_40w .section5 .wrap, .falcon2_40w .section6 .wrap {
+  text-align: center;
+}
+.falcon2_40w .section5 .wrap .text-box, .falcon2_40w .section6 .wrap .text-box {
+  padding-top: 4vw;
+}
+.falcon2_40w .section5 .wrap .text-box .text1, .falcon2_40w .section6 .wrap .text-box .text1 {
+  font-size: 1.88vw;
+  line-height: 2;
+}
+.falcon2_40w .section5 .wrap .text-box .text2, .falcon2_40w .section6 .wrap .text-box .text2 {
+  font-size: 1vw;
+}
+.falcon2_40w .section5 .wrap .videox-box, .falcon2_40w .section6 .wrap .videox-box {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4vw;
+  gap: 2.5vw;
+  text-align: center;
+}
+.falcon2_40w .section5 .wrap .videox-box .video-item, .falcon2_40w .section6 .wrap .videox-box .video-item {
+  flex: 1;
+  border-radius: 0.5vw;
+  overflow: hidden;
+  font-size: 1vw;
+}
+.falcon2_40w .section5 .wrap .videox-box .video-item .text-wrap, .falcon2_40w .section6 .wrap .videox-box .video-item .text-wrap {
+  display: flex;
+  padding: 1vw 0;
+}
+.falcon2_40w .section5 .wrap .videox-box .video-item .text-wrap :nth-child(1), .falcon2_40w .section6 .wrap .videox-box .video-item .text-wrap :nth-child(1) {
+  flex: 1;
+}
+.falcon2_40w .section5 .wrap .videox-box .video-item .text-wrap :nth-child(2), .falcon2_40w .section6 .wrap .videox-box .video-item .text-wrap :nth-child(2) {
+  flex: 0.75;
+}
+.falcon2_40w .section5 .wrap .videox-box .video-item p, .falcon2_40w .section6 .wrap .videox-box .video-item p {
+  padding: 1vw 0;
+}
+.falcon2_40w .section5 .wrap .videox-box .video-item video, .falcon2_40w .section6 .wrap .videox-box .video-item video {
+  width: 100%;
+}
+.falcon2_40w .section6 {
+  padding-top: 8vw;
+}
+.falcon2_40w .section6 .wrap .text-box {
+  padding-top: 6.5vw;
+}
+.falcon2_40w .section6 .wrap .second-text-box {
+  position: absolute;
+  width: 100%;
+  top: 40vw;
+  font-size: 1.4vw;
+  text-align: center;
+}
+.falcon2_40w .section6 .wrap .third-text-box {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 60vw;
+  padding: 0 4vw 0 2vw;
+  text-align: center;
+  font-size: 1vw;
+}
+.falcon2_40w .section6 .wrap .third-text-box p {
+  flex: 1;
+}
+.falcon2_40w .section7 .wrap {
+  text-align: center;
+}
+.falcon2_40w .section7 .wrap .text-box {
+  padding-top: 2vw;
+}
+.falcon2_40w .section7 .wrap .videox-box {
+  position: relative;
+  margin-top: 4vw;
+}
+.falcon2_40w .section7 .wrap .videox-box video {
+  width: 100%;
+}
+.falcon2_40w .section7 .wrap .overview-contrast {
+  position: relative;
+  font-size: 1vw;
+  margin-top: 4vw;
+}
+.falcon2_40w .section7 .wrap .overview-contrast p {
+  position: absolute;
+  top: 1.85vw;
+  left: 2vw;
+}
+.falcon2_40w .section7 .wrap .icon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transform: translateY(2vw);
+}
+.falcon2_40w .section7 .wrap .icon img {
+  width: 4vw;
+}
+.falcon2_40w .section8 {
+  padding: 8vw 0;
+}
+.falcon2_40w .section8 .wrap {
+  text-align: center;
+}
+.falcon2_40w .section8 .wrap .text-title .text1 {
+  padding: 0 8vw;
+  line-height: 1.5;
+}
+.falcon2_40w .section8 .wrap .overview-description {
+  padding-top: 8vw;
+  display: flex;
+  text-align: left;
+}
+.falcon2_40w .section8 .wrap .overview-description .text-item {
+  font-size: 1vw;
+}
+.falcon2_40w .section8 .wrap .overview-description .text-item .text1 {
+  font-size: 1.25vw;
+}
+.falcon2_40w .section8 .wrap .overview-description .text-item .text2 {
+  line-height: 2;
+  padding-right: 10vw;
+}
+.falcon2_40w .section8 .wrap .overview-description > div {
+  flex: 1;
+}
+.falcon2_40w .section9 {
+  padding: 8vw 0;
+}
+.falcon2_40w .section9 .wrap {
+  display: flex;
+  padding: initial;
+  align-items: center;
+  gap: 8vw;
+}
+.falcon2_40w .section9 .wrap .text-box .text1 {
+  font-size: 1.25vw;
+}
+.falcon2_40w .section9 .wrap .text-box .text2 {
+  padding-right: 29vw;
+  line-height: 2;
+}
+.falcon2_40w .section9 .wrap > div {
+  flex: 1;
+}
+.falcon2_40w .section10 {
+  padding-bottom: 8vw;
+}
+.falcon2_40w .section10 .wrap {
+  padding: 0 15vw;
+  column-count: 3;
+  gap: 2vw;
+}
+.falcon2_40w .section10 .wrap .picture-item {
+  position: relative;
+  border-radius: 0.5vw;
+  overflow: hidden;
+}
+.falcon2_40w .section10 .wrap .picture-item .text-box {
+  background-color: #0E121D;
+  padding: 1vw;
+  height: 9vw;
+}
+.falcon2_40w .section10 .wrap .picture-item .text-box .text1 {
+  font-size: 1vw;
+}
+.falcon2_40w .section10 .wrap .picture-item .text-box .text2 {
+  padding-top: 0.5vw;
+  font-size: 0.75vw;
+  line-height: 1.5;
+}
+.falcon2_40w .section11 {
+  padding: 4vw 0 2vw;
+  background: radial-gradient(#273150 0%, #0C0F19 100%);
+}
+.falcon2_40w .section11 .wrap {
+  padding: 0 16vw;
+}
+.falcon2_40w .section11 .wrap .picture-background {
+  display: flex;
+  justify-content: center;
+  padding-top: 4vw;
+}
+.falcon2_40w .section11 .wrap .picture-background .fit_picture {
+  width: 28vw;
+}
+.falcon2_40w .section11 .wrap .text-tips {
+  position: absolute;
+  right: 25.5vw;
+  font-size: 0.75vw;
+  left: 65vw;
+  top: 15vw;
+  width: 22vw;
+  line-height: 2;
+}
+.falcon2_40w .section11 .wrap .text-box {
+  text-align: center;
+}
+.falcon2_40w .section11 .wrap .text-box .text1 {
+  font-size: 2vw;
+}
+.falcon2_40w .section11 .wrap .overview-description {
+  display: flex;
+  gap: 1vw;
+  margin-top: -12vw;
+}
+.falcon2_40w .section11 .wrap .overview-description .picture-item {
+  position: relative;
+  background-color: #000000;
+  border-radius: 0.5vw;
+  overflow: hidden;
+}
+.falcon2_40w .section11 .wrap .overview-description .picture-item .text-box {
+  text-align: left;
+  padding: 1vw;
+}
+.falcon2_40w .section11 .wrap .overview-description .picture-item .text-box .text1 {
+  font-size: 1.25vw;
+}
+.falcon2_40w .section11 .wrap .overview-description .picture-item .text-box .text2 {
+  font-size: 0.75vw;
+  line-height: 1.5;
+  padding-top: 0.5vw;
+  padding-right: 1.6vw;
+}
+.falcon2_40w .section11 .wrap .overview-description > div {
+  flex: 1;
+}
+.falcon2_40w .section12 .wrap {
+  padding: initial;
+  left: 20vw;
+  top: 10.5vw;
+}
+.falcon2_40w .section12 .wrap .text-box {
+  width: 25vw;
+}
+.falcon2_40w .section12 .wrap .text-box .text2 {
+  padding-top: 1vw;
+  line-height: 1.5;
+}
+.falcon2_40w .section12-install {
+  padding: 6vw 0 2vw;
+}
+.falcon2_40w .section12-install .wrap .text-box {
+  text-align: center;
+}
+.falcon2_40w .section12-install .wrap .text-box .text1 {
+  font-size: 1.88vw;
+}
+.falcon2_40w .section12-install .wrap .videox-box {
+  position: relative;
+  margin-top: 3vw;
+}
+.falcon2_40w .section12-install .wrap .videox-box video {
+  width: 100%;
+}
+.falcon2_40w .section13 .wrap {
+  left: 1.75vw;
+  top: 11.5vw;
+}
+.falcon2_40w .section13 .wrap .text-box {
+  width: 25vw;
+}
+.falcon2_40w .section13 .wrap .text-box .text2 {
+  padding-top: 1vw;
+  line-height: 1.5;
+}
+.falcon2_40w .section14 {
+  padding: 3vw 0;
+}
+.falcon2_40w .section14 .wrap {
+  text-align: center;
+}
+.falcon2_40w .section14 .wrap .text-box .text1 {
+  font-size: 2vw;
+}
+.falcon2_40w .section14 .wrap .text-box .text2 {
+  padding-top: 1vw;
+  line-height: 1.5;
+}
+.falcon2_40w .section14 .wrap .picture-group {
+  display: flex;
+  gap: 0.5vw;
+  margin-top: 3vw;
+}
+.falcon2_40w .section14 .wrap .picture-group .fit_picture:nth-child(1) {
+  flex: 0.6;
+}
+.falcon2_40w .section14 .wrap .picture-group .fit_picture:nth-child(2) {
+  flex: 1;
+}
+.falcon2_40w .section15 .wrap {
+  text-align: center;
+  padding-top: 3vw;
+}
+.falcon2_40w .section15 .wrap .text-box .text1 {
+  font-size: 1.75vw;
+}
+.falcon2_40w .section15 .wrap .text-box .text2 {
+  padding-top: 1vw;
+}
+.falcon2_40w .section15 .text-tips {
+  position: absolute;
+  bottom: 8vw;
+  right: 24.5vw;
+  font-size: 0.75vw;
+  width: 22vw;
+  line-height: 1.5;
+  color: #fff;
+}
+.falcon2_40w .section16 .wrap {
+  text-align: center;
+}
+.falcon2_40w .section16 .wrap .text-title .text1 {
+  padding-top: 4vw;
+}
+.falcon2_40w .section16 .wrap .text-title .text2 {
+  padding: 1vw 6vw 0;
+  line-height: 1.5;
+}
+.falcon2_40w .section16 .wrap .overview-description {
+  display: flex;
+  gap: 2vw;
+  margin-top: 28vw;
+}
+.falcon2_40w .section16 .wrap .overview-description .picture-item {
+  position: relative;
+  border-radius: 0.5vw;
+  overflow: hidden;
+}
+.falcon2_40w .section16 .wrap .overview-description .picture-item .text-box {
+  text-align: left;
+  padding: 1vw;
+  background-color: #0E121D;
+}
+.falcon2_40w .section16 .wrap .overview-description .picture-item .text-box .text1 {
+  font-size: 1.25vw;
+}
+.falcon2_40w .section16 .wrap .overview-description .picture-item .text-box .text2 {
+  font-size: 0.75vw;
+  line-height: 1.5;
+  padding-top: 0.5vw;
+  padding-right: 1.6vw;
+}
+.falcon2_40w .section16 .wrap .overview-description > div {
+  flex: 1;
+}
+.falcon2_40w .section17 .wrap {
+  padding: 0 16vw;
+  padding-top: 4vw;
+}
+.falcon2_40w .section17 .wrap .text-title {
+  text-align: center;
+}
+.falcon2_40w .section17 .wrap .overview-description {
+  display: flex;
+  gap: 1.5vw;
+  margin-top: 37vw;
+}
+.falcon2_40w .section17 .wrap .overview-description .picture-item {
+  position: relative;
+  border-radius: 0.5vw;
+  overflow: hidden;
+}
+.falcon2_40w .section17 .wrap .overview-description .picture-item .text-box {
+  background-color: #0C0F19;
+  padding: 1vw;
+  text-align: left;
+  height: 100%;
+}
+.falcon2_40w .section17 .wrap .overview-description .picture-item .text-box .text1 {
+  font-size: 1.25vw;
+}
+.falcon2_40w .section17 .wrap .overview-description .picture-item .text-box .text2 {
+  font-size: 0.75vw;
+  line-height: 1.5;
+  padding-top: 0.5vw;
+  padding-right: 0.5vw;
+}
+.falcon2_40w .section17 .wrap .overview-description > div {
+  flex: 1;
+}
+.falcon2_40w .section18 {
+  padding: 4vw 0;
+}
+.falcon2_40w .section18 .wrap {
+  text-align: center;
+}
+.falcon2_40w .section18 .wrap .fit_picture {
+  margin-top: 4vw;
+}
+.falcon2_40w .section18 .wrap .text-box .text2 {
+  padding: 1vw 2vw 0;
+  line-height: 1.5vw;
+}
+.falcon2_40w .section19 {
+  padding: 3vw 18.4vw;
+  background-color: #fff;
+  color: #000;
+}
+.falcon2_40w .section19 h2.title {
+  color: #000;
+  text-align: left;
+}
+.falcon2_40w .section19 .table_wrap {
+  margin-top: 2vw;
+}
+.falcon2_40w .section19 .table_wrap .row-item {
+  display: flex;
+  border-bottom: 0.0625rem solid #d9d9d9;
+  padding: 1vw 0;
+}
+.falcon2_40w .section19 .table_wrap .row-item .param-name {
+  width: 12vw;
+  flex-shrink: 0;
+  font-family: HarmonyOS_Sans_SC_Medium;
+  font-size: 0.86vw;
+  line-height: 1;
+}
+.falcon2_40w .section19 .table_wrap .row-item .param-name.first {
+  font-size: 1.17vw;
+}
+.falcon2_40w .section19 .table_wrap .row-item .value-wrap {
+  flex: 1;
+  display: flex;
+  gap: 5vw;
+}
+.falcon2_40w .section19 .table_wrap .row-item .value-wrap .value-item {
+  flex: 1;
+  font-family: HarmonyOS_Sans_SC_Medium;
+  font-size: 0.86vw;
+  line-height: 1.4;
+}
+.falcon2_40w .section19 .table_wrap .row-item .value-wrap .value-item .product-name {
+  font-family: HarmonyOS_Sans_SC_Medium;
+  font-size: 1.17vw;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 2.5vw;
+}
+.falcon2_40w .section19 .table_wrap .row-item .value-wrap .value-item .fit_picture {
+  width: 100%;
+}
+.falcon2_40w .section19 .table_wrap .row-item .value-wrap .m-value-item {
+  display: none;
+}
+
+.toTop {
+  position: fixed;
+  z-index: 999;
+  cursor: pointer;
+  bottom: 8.75vw;
+  right: 2%;
+  transform: rotate(180deg);
+  width: 2vw;
+  height: 2vw;
+}
+.toTop:hover .sellpoint-item-jump svg {
+  transform: translateY(0);
+}
+.toTop .sellpoint-item-jump {
+  width: 100%;
+  height: 100%;
+  background-color: #ecfafb;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 9;
+  transform: translate3d(0, 0, 0);
+}
+.toTop .sellpoint-item-jump svg {
+  width: 100%;
+  height: auto;
+  transition: all 1s;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+@media (max-width: 60rem) {
+  .falcon2_40w {
+    width: 100%;
+    font-size: 0;
+    position: relative;
+  }
+  .falcon2_40w .mb {
+    display: block;
+  }
+  .falcon2_40w .pc {
+    display: none;
+  }
+  .falcon2_40w h2 {
+    font-size: 5.33vw;
+    line-height: 1.2;
+  }
+  .falcon2_40w .desc {
+    font-size: 2.93vw;
+    margin-top: 2vw;
+  }
+  .falcon2_40w .section-common .wrap {
+    padding: 0 6vw;
+  }
+  .falcon2_40w .section-common .wrap .relative {
+    position: relative;
+    height: 100%;
+  }
+  .falcon2_40w .section-common .wrap .text-box {
+    padding-top: 10vw;
+  }
+  .falcon2_40w .section-common .wrap .text-box .text1 {
+    font-size: 5.3vw;
+  }
+  .falcon2_40w .section-common .wrap .text-box .text2 {
+    padding-top: 3vw;
+    font-size: 3vw;
+    line-height: 1.25;
+  }
+  .falcon2_40w .section1 .wrap {
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+  .falcon2_40w .section1 .wrap .text-box {
+    text-align: center;
+  }
+  .falcon2_40w .section1 .wrap .text-box .text1 {
+    font-size: 7vw;
+  }
+  .falcon2_40w .section1 .wrap .text-box .text2 {
+    font-size: 5.5vw;
+  }
+  .falcon2_40w .section1 .wrap .icon-box {
+    width: 74vw;
+    font-size: 2.88vw;
+    flex-wrap: wrap;
+  }
+  .falcon2_40w .section1 .wrap .icon-box .icon-box-item {
+    margin-top: 4vw;
+    flex: 0 0 50%;
+    gap: 2vw;
+  }
+  .falcon2_40w .section1 .wrap .icon-box .icon-box-item .fit_picture {
+    flex: 9vw;
+  }
+  .falcon2_40w .section2 {
+    padding-top: 12vw;
+  }
+  .falcon2_40w .section2 .wrap {
+    padding: 0 9vw;
+  }
+  .falcon2_40w .section2 .wrap .icon-box {
+    font-size: 3.2vw;
+    column-count: 2;
+  }
+  .falcon2_40w .section2 .wrap .icon-box .icon-box-item {
+    text-align: center;
+    padding-bottom: 10vw;
+    gap: 3vw;
+  }
+  .falcon2_40w .section2 .wrap .icon-box .icon-box-item .fit_picture {
+    height: 9.5vw;
+    width: auto;
+    overflow: hidden;
+  }
+  .falcon2_40w .section2 .wrap .icon-box .icon-box-item span {
+    line-height: 1.5;
+    padding: 0 1vw;
+  }
+  .falcon2_40w .section3 .wrap .text-box {
+    text-align: left;
+  }
+  .falcon2_40w .section3 .wrap .text-box .text1 {
+    padding: initial;
+  }
+  .falcon2_40w .section3 .wrap .text-box .text2 {
+    padding-right: 11vw;
+    line-height: 1.5;
+  }
+  .falcon2_40w .section3 .overview {
+    width: 100%;
+    transform: none;
+    flex-direction: row;
+    top: 70%;
+    left: 0;
+    padding: 0 2vw;
+    gap: 2vw;
+  }
+  .falcon2_40w .section3 .overview .item {
+    border-radius: 1vw;
+    overflow: hidden;
+    border: 1px solid #1f3f5b;
+    font-size: 3.5vw;
+  }
+  .falcon2_40w .section3 .overview .item > p {
+    top: 70%;
+    left: 12%;
+  }
+  .falcon2_40w .section4 .wrap .text-box {
+    text-align: left;
+    width: initial;
+    padding-top: 14vw;
+  }
+  .falcon2_40w .section4 .wrap .text-box .text1 {
+    line-height: initial;
+  }
+  .falcon2_40w .section5 .wrap .text-box {
+    text-align: left;
+  }
+  .falcon2_40w .section5 .wrap .text-box .text1 {
+    line-height: initial;
+  }
+  .falcon2_40w .section5 .wrap .videox-box {
+    flex-direction: column;
+    gap: 6vw;
+    margin-top: 6vw;
+  }
+  .falcon2_40w .section5 .wrap .videox-box .video-item video {
+    height: inherit;
+    width: 100%;
+  }
+  .falcon2_40w .section5 .wrap .videox-box .video-item p {
+    padding: 3vw 0;
+    font-size: 3.5vw;
+  }
+  .falcon2_40w .section5-2 {
+    padding-top: 8vw;
+  }
+  .falcon2_40w .section5-2 .wrap .overview {
+    flex-direction: column;
+    gap: 4vw;
+  }
+  .falcon2_40w .section5-2 .wrap .overview .item {
+    position: relative;
+    border-radius: 1vw;
+    overflow: hidden;
+    border: 1px solid #1f3f5b;
+    border-radius: 2vw;
+  }
+  .falcon2_40w .section5-2 .wrap .overview .item .fit_picture {
+    border: none;
+  }
+  .falcon2_40w .section5-2 .wrap .overview .item .text-wrap {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 6vw;
+  }
+  .falcon2_40w .section5-2 .wrap .overview .item .text-wrap h2 {
+    font-size: 5.26vw;
+  }
+  .falcon2_40w .section5-2 .wrap .overview .item .text-wrap p {
+    font-size: 3.5vw;
+    padding: 2vw 0;
+  }
+  .falcon2_40w .section6 .wrap {
+    height: 100%;
+  }
+  .falcon2_40w .section6 .wrap .videox-box {
+    flex-direction: column;
+  }
+  .falcon2_40w .section6 .wrap .videox-box .video-item .text-wrap {
+    display: flex;
+    font-size: 3.5vw;
+    padding: 4vw 0;
+  }
+  .falcon2_40w .section6 .wrap .videox-box .video-item video {
+    height: initial;
+    width: 100%;
+  }
+  .falcon2_40w .section6 .wrap .text-box {
+    text-align: left;
+  }
+  .falcon2_40w .section6 .wrap .text-box .text1 {
+    line-height: 1.5;
+  }
+  .falcon2_40w .section6 .wrap .second-text-box {
+    font-size: 4.38vw;
+    top: 170vw;
+    line-height: 1.5;
+    text-align: left;
+    padding-right: 6vw;
+  }
+  .falcon2_40w .section6 .wrap .third-text-box {
+    font-size: 3.6vw;
+    top: initial;
+    bottom: 29vw;
+  }
+  .falcon2_40w .section6 .wrap .third-text-box :nth-child(2) {
+    flex: 0.8;
+    text-indent: 10vw;
+  }
+  .falcon2_40w .section7 .wrap .text-box {
+    text-align: left;
+  }
+  .falcon2_40w .section7 .wrap .text-box .text1 {
+    padding-right: 10vw;
+  }
+  .falcon2_40w .section7 .wrap .text-box .text2 {
+    font-size: 3.2vw;
+  }
+  .falcon2_40w .section7 .wrap .overview-contrast {
+    font-size: 2.8vw;
+  }
+  .falcon2_40w .section7 .wrap .overview-contrast p {
+    top: 2vw;
+    left: 3vw;
+  }
+  .falcon2_40w .section8 .wrap {
+    width: initial;
+    top: 0;
+    left: 0;
+  }
+  .falcon2_40w .section8 .wrap .overview-description {
+    padding-top: initial;
+    flex-direction: column;
+    gap: 8vw;
+  }
+  .falcon2_40w .section8 .wrap .overview-description .text-item .text1 {
+    font-size: 5.3vw;
+  }
+  .falcon2_40w .section8 .wrap .overview-description .text-box .text2 {
+    font-size: 3.2vw;
+    line-height: 1.5;
+  }
+  .falcon2_40w .section9 .wrap {
+    flex-direction: column-reverse;
+  }
+  .falcon2_40w .section9 .wrap .picture-item {
+    width: 100%;
+    transform: translateX(-6vw);
+  }
+  .falcon2_40w .section9 .wrap .text-box .text2 {
+    padding-right: 10vw;
+    line-height: 1.5;
+  }
+  .falcon2_40w .section9-1 {
+    padding: 12vw 0 22vw;
+  }
+  .falcon2_40w .section9-1 .navigation-wrap {
+    top: 44%;
+  }
+  .falcon2_40w .section10 .wrap {
+    text-align: left;
+    column-count: 2;
+  }
+  .falcon2_40w .section10 .wrap .picture-item .text-box {
+    padding: 2vw 1vw;
+    height: 20vw;
+  }
+  .falcon2_40w .section10 .wrap .picture-item .text-box .text1 {
+    font-size: 3.2vw;
+  }
+  .falcon2_40w .section10 .wrap .picture-item .text-box .text2 {
+    font-size: 2.63vw;
+  }
+  .falcon2_40w .section10 .wrap :nth-child(3) {
+    column-span: all;
+    padding-top: 2vw;
+  }
+  .falcon2_40w .section11 {
+    padding-bottom: 8vw;
+  }
+  .falcon2_40w .section11 .wrap .picture-background {
+    padding: 4vw 10vw 0;
+  }
+  .falcon2_40w .section11 .wrap .picture-background .fit_picture {
+    width: 100%;
+  }
+  .falcon2_40w .section11 .wrap .text-tips {
+    padding: 4vw 8vw 0;
+    font-size: 2.6vw;
+    text-align: center;
+    line-height: 1.5;
+    position: initial;
+    width: initial;
+  }
+  .falcon2_40w .section11 .wrap .overview-description {
+    flex-direction: column;
+    gap: 3vw;
+    margin-top: -30vw;
+  }
+  .falcon2_40w .section11 .wrap .overview-description .picture-item {
+    border-radius: 2vw;
+  }
+  .falcon2_40w .section11 .wrap .overview-description .picture-item .text-box {
+    padding: 3vw;
+  }
+  .falcon2_40w .section11 .wrap .overview-description .picture-item .text-box .text1 {
+    font-size: 3.2vw;
+  }
+  .falcon2_40w .section11 .wrap .overview-description .picture-item .text-box .text2 {
+    font-size: 2.63vw;
+  }
+  .falcon2_40w .section12 .wrap {
+    top: 0;
+    left: 0;
+  }
+  .falcon2_40w .section12 .wrap .text-box {
+    width: initial;
+  }
+  .falcon2_40w .section12 .wrap .text-box .text1 {
+    padding-right: 15vw;
+  }
+  .falcon2_40w .section12-install .wrap .text-box {
+    text-align: left;
+  }
+  .falcon2_40w .section13 .wrap {
+    left: 0;
+    top: 0;
+  }
+  .falcon2_40w .section13 .wrap .text-box {
+    width: initial;
+  }
+  .falcon2_40w .section13 .wrap .text-box .text2 {
+    font-size: 3.2vw;
+  }
+  .falcon2_40w .section14 .wrap {
+    left: 0;
+    top: 0;
+  }
+  .falcon2_40w .section14 .wrap .text-box {
+    width: initial;
+  }
+  .falcon2_40w .section14 .wrap .text-box .text1 {
+    line-height: initial;
+    padding-bottom: 4vw;
+  }
+  .falcon2_40w .section14 .wrap .text-box .text2 {
+    padding-top: initial;
+    font-size: 2.5vw;
+  }
+  .falcon2_40w .section14 .wrap .picture-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+  }
+  .falcon2_40w .section14 .wrap .picture-group :nth-child(1) {
+    width: 50%;
+  }
+  .falcon2_40w .section14 .wrap .picture-group :nth-child(2) {
+    border-radius: 2vw;
+    overflow: hidden;
+  }
+  .falcon2_40w .section15 .wrap {
+    text-align: left;
+  }
+  .falcon2_40w .section15 .wrap .text-box .text2 {
+    padding-right: 16vw;
+  }
+  .falcon2_40w .section15 .text-tips {
+    width: 90vw;
+    bottom: 4vw;
+    right: 3.5vw;
+    font-size: 2.6vw;
+  }
+  .falcon2_40w .section16 .wrap {
+    text-align: left;
+  }
+  .falcon2_40w .section16 .wrap .text-box .text2 {
+    padding: 3vw 0 0;
+  }
+  .falcon2_40w .section16 .wrap .overview-description {
+    margin-top: 48vw;
+  }
+  .falcon2_40w .section16 .wrap .overview-description .picture-item {
+    border-radius: 2vw;
+    overflow: hidden;
+  }
+  .falcon2_40w .section16 .wrap .overview-description .picture-item .text-box {
+    padding: 2vw;
+    height: 100%;
+  }
+  .falcon2_40w .section16 .wrap .overview-description .picture-item .text-box .text1 {
+    font-size: 3.2vw;
+    padding-right: 2vw;
+  }
+  .falcon2_40w .section16 .wrap .overview-description .picture-item .text-box .text2 {
+    padding-top: 3vw;
+    font-size: 2.6vw;
+  }
+  .falcon2_40w .section17 .wrap {
+    padding: 0 10vw;
+  }
+  .falcon2_40w .section17 .wrap .text-box {
+    text-align: left;
+  }
+  .falcon2_40w .section17 .wrap .text-box .text2 {
+    line-height: 1.5;
+  }
+  .falcon2_40w .section17 .wrap .overview-description {
+    flex-direction: column;
+    gap: 4vw;
+    margin-top: 70vw;
+  }
+  .falcon2_40w .section17 .wrap .overview-description .picture-item {
+    border-radius: 2vw;
+    overflow: hidden;
+  }
+  .falcon2_40w .section17 .wrap .overview-description .picture-item .text-box {
+    padding: 2vw;
+    height: 100%;
+  }
+  .falcon2_40w .section17 .wrap .overview-description .picture-item .text-box .text1 {
+    font-size: 3.2vw;
+    padding-right: 10vw;
+  }
+  .falcon2_40w .section17 .wrap .overview-description .picture-item .text-box .text2 {
+    padding-top: 3vw;
+    font-size: 2.6vw;
+  }
+  .falcon2_40w .section18 {
+    padding: 4vw 0 10vw;
+  }
+  .falcon2_40w .section18 .wrap {
+    text-align: left;
+  }
+  .falcon2_40w .section18 .wrap .text-box .text2 {
+    padding: 4vw 0 0;
+  }
+  .falcon2_40w .section18 .wrap .fit_picture {
+    margin-top: 10vw;
+  }
+  .falcon2_40w .section19 {
+    padding: 10vw 6vw;
+  }
+  .falcon2_40w .section19 .title {
+    text-align: left;
+    padding-left: 3vw;
+  }
+  .falcon2_40w .section19 .table_wrap .row-item {
+    border-color: #666;
+  }
+  .falcon2_40w .section19 .table_wrap .row-item .value-wrap {
+    gap: 1vw;
+    flex-direction: column;
+  }
+  .falcon2_40w .section19 .table_wrap .row-item .value-wrap .value-item {
+    font-size: 2.85vw;
+    display: flex;
+    padding-left: 3vw;
+  }
+  .falcon2_40w .section19 .table_wrap .row-item .value-wrap .value-item > span {
+    flex: 1;
+  }
+  .falcon2_40w .section19 .table_wrap .row-item .value-wrap .value-item > span:first-child {
+    flex: 0.7;
+  }
+  .falcon2_40w .section19 .table_wrap .row-item .value-wrap .m-value-item {
+    display: block;
+    height: 0.085vw;
+    background-color: #666;
+  }
+  .toTop {
+    position: fixed;
+    z-index: 999;
+    cursor: pointer;
+    bottom: 8.75vw;
+    right: 2%;
+    transform: rotate(180deg);
+    width: 8vw;
+    height: 8vw;
+  }
+  .toTop:hover .sellpoint-item-jump svg {
+    transform: translateY(0);
+  }
+  .toTop .sellpoint-item-jump {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(244, 245, 249);
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 9;
+    transform: translate3d(0, 0, 0);
+  }
+  .toTop .sellpoint-item-jump svg {
+    width: 100%;
+    height: auto;
+    transition: all 1s;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+}
+</style>
+<div id="container-{{section.id}}">
+    <div class="falcon2_40w main-contain en">
+        <div class="section-common section1">
+            <picture class="fit_picture"><div style="padding-bottom: 160.00%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 39.02%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 39.02%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_s1-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_s1-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_s1-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_s1-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_s1-pic1_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_s1-pic1_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_s1-pic1_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_s1-pic1_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_s1-pic1_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_s1-pic1_blur.jpg" alt="s1_pic1"></picture>
+                <div class="wrap fixed_block">
+                    <div class="text-box en fadein">
+                        <div class="text2 hm-bold">Creality Falcon2 40W</div>
+                        <div class="text1 hm-bold">Leistungsstark und präzis</div>
+                        <div class="text2 ">Spitzentechnologie für <br>professionelles Arbeiten</div>
+                    </div>
+                    <div class="icon-box delay-fadein">
+                        <div class="icon-box-item">
+                            <img class="fit_picture" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/faIcon2_40w_40w.png" alt="faIcon2_40w_40w.png">
+                            <span>40 W - Ultrastarke Leistung</span>
+                        </div>
+                        <div class="icon-box-item">
+                            <img class="fit_picture" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/faIcon2_40w_facula.png" alt="faIcon2_40w_facula.png">
+                            <span>Verstellbarer Strahl</span>
+                        </div>
+                        <div class="icon-box-item">
+                            <img class="fit_picture" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/faIcon2_40w_fast.png" alt="faIcon2_40w_fast.png">
+                            <span>25.000 mm/min-Schnelle Gravur</span>
+                        </div>
+                        <div class="icon-box-item">
+                            <img class="fit_picture" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/faIcon2_40w_precision.png" alt="faIcon2_40w_precision.png">
+                            <span>Bewegungsgenauigkeit 0.0125mm</span> 
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="section2">
+            <div class="wrap">
+                <div class="icon-box delay-fadein">
+                    <div class="icon-box-item">
+                        <img class="fit_picture" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/faIcon2_40w_40w.png" alt="faIcon2_40w_40w.png">
+                        <span>40 W - Ultrastarke Leistung</span>
+                    </div>
+                    
+                    <div class="icon-box-item">
+                        <img class="fit_picture" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/faIcon2_40w_wind.png" alt="faIcon2_40w_wind.png">
+                        <span>Innovative integrierte Luftunterstützung</span>
+                    </div>
+    
+                    <div class="icon-box-item">
+                        <img class="fit_picture" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/faIcon2_40w_fast.png" alt="faIcon2_40w_fast.png">
+                        <span>25.000 mm/min - Schnelle Gravur</span>
+                    </div>
+    
+                    <div class="icon-box-item">
+                        <img class="fit_picture" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/faIcon2_40w_precision.png" alt="faIcon2_40w_precision.png">
+                        <span>Bewegungsgenauigkeit<br> 0,0125 mm</span>
+                    </div>
+    
+                    <div class="icon-box-item">
+                        <img class="fit_picture" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/faIcon2_40w_facula.png" alt="faIcon2_40w_facula.png">
+                        <span>Verstellbarer <br> Strahl</span>
+                    </div>
+    
+                    <div class="icon-box-item">
+                        <img class="fit_picture" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/faIcon2_40w_watch.png" alt="faIcon2_40w_watch.png">
+                        <span>Dreifaches intelligentes Überwachungssystem </span>
+                    </div>
+    
+                    <div class="icon-box-item">
+                        <img class="fit_picture" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/faIcon2_40w_safe.png" alt="faIcon2_40w_safe.png">
+                        <span>Fünf Schutzmechanismen für mehr Sicherheit</span>
+                    </div>
+    
+                    <div class="icon-box-item">
+                        <img class="fit_picture" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/faIcon2_40w_palette.png" alt="faIcon2_40w_palette.png">
+                        <span>Magische farbige Gravur</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-common section3">
+            <picture class="fit_picture"><div style="padding-bottom: 202.40%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 53.44%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 53.44%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic1_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic1_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic1_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic1_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic1_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic1_blur.jpg" alt="falcon2_40w_sec3-pic1_blur.jpg"></picture>
+            <div class="wrap fixed_block">
+                <div class="text-box fadein">
+                    <div class="text1 fontBold pc">Treffen Sie die Superleistung des Creality Falcon2 40W zusammen</div>
+                    <div class="text1 fontBold mb">40W Bisher das stärkste</div>
+                    <div class="text2 fontRegular mb">Basierend auf der neuesten FAC-Spot-Kompressionstechnologie werden 8 leistungsstarke 5,5W-Laserdioden komprimiert, um die Laserleistung auf 40W zu erhöhen.</div>
+                </div>
+            </div>
+            <div class="overview delay-fadein">
+                <div class="item">
+                    <picture class="fit_picture"><div style="padding-bottom: 158.08%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 38.61%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 38.61%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic2_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic2_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic2_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic2_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic2_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic2_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic2_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic2_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic2_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic2_blur.jpg" alt="falcon2_40w_sec3-pic2_blur.jpg"></picture>
+                    <p class="fontRegular">Holz <br>20mm</p>
+                </div>
+                <div class="item">
+                    <picture class="fit_picture"><div style="padding-bottom: 157.39%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 38.61%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 38.61%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic3_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic3_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic3_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic3_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic3_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic3_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic3_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic3_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic3_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic3_blur.jpg" alt="falcon2_40w_sec3-pic3_blur.jpg"></picture>
+                    <p class="fontRegular">Schwarzes Acryl<br>30mm</p>
+                </div>
+                <div class="item">
+                    <picture class="fit_picture"><div style="padding-bottom: 158.08%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 38.61%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 38.61%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic4_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic4_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic4_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic4_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic4_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic4_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic4_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic4_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic4_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec3-pic4_blur.jpg" alt="falcon2_40w_sec3-pic4_blur.jpg"></picture>
+                    <p class="fontRegular">Rostfreier Stahl<br>0,15mm</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-common section4">
+            <picture class="fit_picture"><div style="padding-bottom: 160.00%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 39.06%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 39.06%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec4-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec4-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec4-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec4-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec4-pic1_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec4-pic1_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec4-pic1_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec4-pic1_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec4-pic1_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec4-pic1_blur.jpg" alt="falcon2_40w_sec4-pic1_blur.jpg"></picture>
+            <div class="wrap fixed_block">
+                <div class="text-box fadein">
+                    <div class="text1 fontBold">Magische farbige Gravur</div>
+                    <div class="text2 fontLight">Wenn Edelstahl durch einen ultraintensiven
+                        Laserstrahl erhitzt wird, findet auf der
+                        Metalloberfläche eine magische physikalische
+                        Reaktion statt, bei der Hunderte von Farben
+                        entstehen, die Ihr Werkstück zum Leben erwecken.
+                        
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="section-common section5">
+            <div class="wrap">
+                <div class="text-box fadein">
+                    <div class="text1 fontBold">Verstellbarer Strahl</div>
+                    <div class="text2 fontLight">Ein Laserkopf wird für zwei Anwendungen (40W &amp; 22W) verwendet und erfüllt gleichzeitig Schnitz- und Schneidanforderungen. Mit einem Knopfdruck kann man zwischen den beiden Modi wechseln, ohne dass ein Austausch erforderlich ist. Das ist bequem und schnell.</div>
+                </div>
+                <div class="videox-box delay-fadein">
+                    <div class="video-item">
+                        <div class="video">
+                            <video class="auto-video lazy-video" muted="" loop="">
+                                <source src="https://cdn.shopify.com/videos/c/o/v/53fbeea213d5459987b7763c17f53ac3.mp4" type="video/mp4">
+                            </video>
+                            <div class="play"></div>
+                        </div>
+                        <p class="fontLight">Creality Falcon2 40W</p>
+                    </div>
+                    <div class="video-item">
+                        <div class="video">
+                            <video class="auto-video lazy-video" muted="" loop="">
+                                <source src="https://cdn.shopify.com/videos/c/o/v/44156d6b91df45a48f564eeac740126b.mp4" type="video/mp4">
+                            </video>
+                            <div class="play"></div>
+                        </div>
+                        <p class="fontLight">Others</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-common section5-2">
+            <div class="wrap">
+                <div class="overview delay-fadein">
+                    <div class="item">
+                        <picture class="fit_picture"><div style="padding-bottom: 85.56%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 85.56%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 85.56%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic4_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic4_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic4_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic4_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic4_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic4_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic4_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic4_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic4_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic4_blur.jpg" alt="falcon2_40w_sec5-pic4_blur.jpg"></picture>
+                        <div class="text-wrap">
+                            <h2 class="fontBold">40w</h2>
+                            <p class="fontRegular">Dickes und schnelles Schneiden</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <picture class="fit_picture"><div style="padding-bottom: 85.56%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 85.56%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 85.56%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic3_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic3_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic3_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic3_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic3_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic3_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic3_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic3_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic3_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec5-pic3_blur.jpg" alt="falcon2_40w_sec5-pic3_blur.jpg"></picture>
+                        <div class="text-wrap">
+                            <h2 class="fontBold">22w</h2>
+                            <p class="fontRegular">Hohe Präzision, feineres Schneiden</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-common section6">
+            <picture class="fit_picture"><div style="padding-bottom: 279.73%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 58.67%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 58.67%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec6-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec6-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec6-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec6-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec6-pic1_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec6-pic1_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec6-pic1_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec6-pic1_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec6-pic1_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec6-pic1_blur.jpg" alt="falcon2_40w_sec6-pic1_blur.jpg"></picture>
+            <div class="wrap fixed_block">
+                <div class="relative ">
+                    <div class="text-box fadein">
+                        <div class="text1 fontBold">Superkraft der Geschwindigkeit 25000mm/min</div>
+                    </div>
+                    <div class="videox-box delay-fadein">
+                        <div class="video-item">
+                            <div class="video">
+                                <video class="auto-video lazy-video" muted="" loop="">
+                                    <source src="https://cdn.shopify.com/videos/c/o/v/2c20eec01ba4474ea2532920e0cd0325.mp4" type="video/mp4">
+                                </video>
+                                <div class="play"></div>
+                            </div>
+                            <div class="text-wrap">
+                                <p class="fontLight">Creality Falcon2 40W</p>
+                                <p class="fontLight">Others</p>
+                            </div>
+                        </div>
+                        <div class="video-item">
+                            <div class="video">
+                                <video class="auto-video lazy-video" muted="" loop="">
+                                    <source src="https://cdn.shopify.com/videos/c/o/v/a98d4b141ccd4fc285943cef9bcfaf75.mp4" type="video/mp4">
+                                </video>
+                                <div class="play"></div>
+                            </div>
+                            <div class="text-wrap">
+                                <p class="fontLight">Creality Falcon2 40W</p>
+                                <p class="fontLight">Others</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="second-text-box fadein">
+                       <p class="fontBold"> Stellen Sie sicher, dass Ihre Schnitte effektiv sind, mit präziseren Schnittkanten.</p>
+                    </div>
+
+                    <div class="third-text-box ">
+                        <p class="fontMedium">Creality Falcon2 40W</p>
+                        <p class="fontMedium">Others</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section-common section7">
+            <div class="wrap">
+                <div class="text-box fadein">
+                    <div class="text1 fontBold">Weit davon entfernt, schwarz geworden und körnig</div>
+                    <div class="text2 fontLight">Die Größe des Luftstroms kann mit der LightBurn-Einstellung automatisch angepasst werden.</div>
+                </div>
+
+                <div class="videox-box fadein">
+                    <video class="auto-video lazy-video" muted="" loop="">
+                        <source src="https://cdn.shopify.com/videos/c/o/v/80e86e3b99a446009c4050d847a2e829.mp4" type="video/mp4">
+                    </video>
+                    <div class="play"></div>
+                </div>
+
+                <div class="overview-contrast fadein">
+                    <picture class="fit_picture"><div style="padding-bottom: 37.62%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 37.57%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 37.57%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic1_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic1_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic1_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic1_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic1_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic1_blur.jpg" alt="falcon2_40w_sec7-pic1_blur.jpg"></picture>
+                    <p class="fontRegular">Creality Falcon2 40W: Mit automatischer Luftunterstützung</p>
+                </div>
+                <div class="icon">
+                    <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/faIcon2_40w_VS.png" alt="faIcon2_40w_VS.png">
+                </div>
+                <div class="overview-contrast fadein">
+                    <picture class="fit_picture"><div style="padding-bottom: 37.82%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 37.65%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 37.65%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic2_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic2_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic2_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic2_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic2_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic2_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic2_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic2_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic2_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec7-pic2_blur.jpg" alt="falcon2_40w_sec7-pic2_blur.jpg"></picture>
+                    <p class="fontRegular">Others: Ohne automatische Luftunterstützung</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-common section8">
+            <div class="wrap">
+                <div class="text-box fadein text-title">
+                    <div class="text1 fontBold pc">Besondere fünf Sicherheitsschutzfunktionen schützen Ihre Betriebssicherheit</div>
+                    <div class="text1 fontBold mb">Fünf Schutzmechanismen für mehr Sicherheit</div>
+                </div>
+
+                <div class="overview-description delay-fadein">
+                    <div class="text-box text-item">
+                        <p class="text1 ">Bidirektionaler Endschalter</p>
+                        <p class="text2 fontRegular">Wenn der Laserkopf die Grenzen überschreitet,
+                            wird die Maschine automatisch angehalten und ein
+                            Alarmton ertönt.
+                            </p>
+                    </div>
+                    <div class="picture-item">
+                        <picture class="fit_picture"><div style="padding-bottom: 76.92%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 76.83%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 76.83%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec8-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec8-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec8-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec8-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec8-pic1_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec8-pic1_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec8-pic1_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec8-pic1_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec8-pic1_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec8-pic1_blur.jpg" alt="falcon2_40w_sec8-pic1_blur.jpg"></picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section-common section9">
+            <div class="wrap">
+                <div class="picture-item">
+                    <picture class="fit_picture"><div style="padding-bottom: 57.24%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 42.01%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 42.01%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec9-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec9-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec9-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec9-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec9-pic1_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec9-pic1_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec9-pic1_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec9-pic1_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec9-pic1_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec9-pic1_blur.jpg" alt="falcon2_40w_sec9-pic1_blur.jpg"></picture>
+                </div>
+
+                <div class="text-box fadein">
+                    <div class="text1">Aktive Stoppfunktion </div>
+                    <div class="text2 fontRegular">Wenn die Maschine versehentlich während des Betriebs umkippt, umstürzt oder herunterfällt, schaltet sich die Maschine sofort ab, und es wird gleichzeitig ein akustischer und optischer Alarm ausgelöst.</div>
+                </div>
+            </div>
+        </div>
+        <section class="section-common section10">
+            <div class="wrap delay-fadein">
+                <div class="picture-item ">
+                    <picture class="fit_picture"><div style="padding-bottom: 102.14%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 74.29%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 74.29%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic1_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic1_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic1_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic1_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic1_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic1_blur.jpg" alt="falcon2_40w_sec10-pic1_blur.jpg"></picture>
+                    <div class="text-box">
+                        <div class="text1">Sicherheitsschloss-Design </div>
+                        <div class="text2 fontLight">Nur für den professionellen Einsatz.</div>
+                    </div>
+                </div>
+                <div class="picture-item">
+                    <picture class="fit_picture"><div style="padding-bottom: 102.14%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 74.42%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 74.42%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic2_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic2_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic2_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic2_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic2_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic2_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic2_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic2_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic2_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic2_blur.jpg" alt="falcon2_40w_sec10-pic2_blur.jpg"></picture>
+                    <div class="text-box">
+                        <div class="text1">Not-Aus-Schalter</div>
+                        <div class="text2 fontLight">Wenn während des Betriebs ein Notfall eintritt, kann die Maschine sofort angehalten werden.</div>
+                    </div>
+                </div>
+                <div class="picture-item">
+                    <picture class="fit_picture"><div style="padding-bottom: 43.76%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 74.29%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 74.29%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic3_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic3_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic3_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic3_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic3_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic3_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic3_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic3_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic3_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec10-pic3_blur.jpg" alt="falcon2_40w_sec10-pic3_blur.jpg"></picture>
+                    <div class="text-box">
+                        <div class="text1">Sicheres Design zum Schutz vor Laserstrahlung</div>
+                        <div class="text2 fontLight">Die Schutzabdeckung um den Laserkopf besteht aus hocheffizientem, gefärbtem Filterglas, das effektiv den Austritt von Laserlicht verhindert und einen umfassenden Schutz für die Augen bietet.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-common section11">
+            <div class="wrap">
+                <div class="text-box fadein">
+                    <div class="text1 fontBold">Dreifaches intelligentes Überwachungssystem</div>
+                </div>
+                <div class="text-tips">
+                    (Hinweis: Die Alarmfunktion ist standardmäßig deaktiviert. Aktivieren Sie sie bei Bedarf in den Geräteeinstellungen.)
+                </div>
+                <div class="picture-background">
+                    <picture class="fit_picture"><div style="padding-bottom: 102.80%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 102.73%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 102.73%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/png" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic1_xsmall.png" media="(max-width:960px)"><source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic1_xsmall_blur.png"><source type="image/png" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic1_xmedium_2n.png" media="(min-width:1921px)"><source type="image/png" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic1_xmedium.png, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic1_xmedium_2n.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic1_blur.png" alt="falcon2_40w_sec11-pic1_blur.png"></picture>
+                </div>
+
+                <div class="overview-description delay-fadein">
+                    <div class="picture-item">
+                        <picture class="fit_picture"><div style="padding-bottom: 44.76%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 102.07%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 102.07%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic2_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic2_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic2_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic2_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic2_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic2_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic2_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic2_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic2_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic2_blur.jpg" alt="falcon2_40w_sec11-pic2_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Luftstromüberwachung</div>
+                            <div class="text2 fontLight">Zeigt die aktuelle Luftstrommenge an, damit die Benutzer den Luftstrom an die Gravur- und Schneideanforderungen anpassen können.</div>
+                        </div>
+                    </div>
+                    <div class="picture-item">
+                        <picture class="fit_picture"><div style="padding-bottom: 47.11%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 102.42%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 102.42%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic3_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic3_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic3_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic3_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic3_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic3_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic3_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic3_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic3_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic3_blur.jpg" alt="falcon2_40w_sec11-pic3_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Überwachung der Linsenverschmutzung</div>
+                            <div class="text2 fontLight">Das integrierte System zur Überwachung der Linsenverschmutzung löst einen Alarm aus, wenn die Linse einen bestimmten Verschmutzungsgrad erreicht hat, wodurch ein Linsenbruch und häufiges Auswechseln vermieden werden.</div>
+                        </div>
+                    </div>
+                    <div class="picture-item">
+                        <picture class="fit_picture"><div style="padding-bottom: 48.25%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 102.60%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 102.60%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic4_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic4_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic4_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic4_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic4_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic4_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic4_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic4_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic4_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec11-pic4_blur.jpg" alt="falcon2_40w_sec11-pic4_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Flammenüberwachung </div>
+                            <div class="text2 fontLight">Wenn die Maschine eine Flamme erkennt, blinkt die Kontrollleuchte am Gehäuse rot und ein Alarmton ertönt. Daraufhin wird die Maschine sofort angehalten.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>   
+        
+        
+        
+        <section class="section-common section12">
+            <picture class="fit_picture"><div style="padding-bottom: 181.07%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 39.06%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 39.06%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec12-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec12-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec12-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec12-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec12-pic1_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec12-pic1_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec12-pic1_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec12-pic1_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec12-pic1_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec12-pic1_blur.jpg" alt="falcon2_40w_sec12-pic1_blur.jpg"></picture>
+            <div class="wrap fixed_block">
+                <div class="text-box fadein">
+                    <div class="text1 fontBold">Kleine Geräte, um Ihnen zu helfen, effizientes Fokussieren in 3 Sekunden zu erreichen</div>
+                    <div class="text2 fontRegular">1. Platzieren Sie den mehrstufigen Festfokusblock zwischen dem Modul und dem bearbeiteten Material.</div>
+                    <div class="text2 fontRegular">2. Senken Sie das Lasermodul ab, um die entsprechende Position der mehrstufigen Fokussierleiste zu berühren.</div>
+                    <div class="text2 fontRegular">3. Verwenden Sie die richtige Schraube, um sie zu verriegeln.</div>
+                </div>
+            </div>
+        </section>   
+
+        <section class="section-common section12-install">
+            <div class="wrap">
+                <div class="text-box fadein">
+                    <div class="text1 fontBold">In wenigen Schritten zur perfekten Maschine</div>
+                </div>
+                <div class="videox-box">
+                    <video class="auto-video lazy-video" muted="" loop="">
+                        <source src="https://cdn.shopify.com/videos/c/o/v/231a2b5262ab4a1aa556555de53aefd4.mp4" type="video/mp4">
+                    </video>
+                    <div class="play"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-common section13">
+            <picture class="fit_picture"><div style="padding-bottom: 160.00%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 39.06%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 39.06%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec13-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec13-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec13-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec13-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec13-pic1_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec13-pic1_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec13-pic1_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec13-pic1_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec13-pic1_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec13-pic1_blur.jpg" alt="falcon2_40w_sec13-pic1_blur.jpg"></picture>
+            <div class="wrap fixed_block">
+                <div class="text-box fadein">
+                    <div class="text1 fontBold">Umfassende Kompatibilität</div>
+                    <div class="text2 fontRegular pc">Kompatibel mit verschiedenen Systemen wie Windows und macOS sowie Software wie LaserGRBL und LightBurn.</div>
+                    <div class="text2 fontRegular mb">Compatible with a variety of systems, including WindovVS
+                        and macos systems, and software such as LaserGRBL
+                        and LightBurn.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-common section14">
+            <div class="wrap">
+                <div class="text-box fadein">
+                    <div class="text1 fontBold"> Unterstützt Offline-Gestaltung </div>
+                    <div class="text2 fontRegular"> Legen Sie einfach eine TF-Karte ein, und Sie können jederzeit und überall gestalten. </div>
+                </div>
+                <div class="picture-group delay-fadein">
+                    <picture class="fit_picture"><div style="padding-bottom: 107.83%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 111.58%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 111.58%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic1_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic1_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic1_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic1_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic1_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic1_blur.jpg" alt="falcon2_40w_sec14-pic1_blur.jpg"></picture>
+                    <picture class="fit_picture"><div style="padding-bottom: 69.42%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 66.70%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 66.70%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic2_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic2_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic2_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic2_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic2_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic2_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic2_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic2_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic2_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec14-pic2_blur.jpg" alt="falcon2_40w_sec14-pic2_blur.jpg"></picture>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section-common section15">
+            <picture class="fit_picture"><div style="padding-bottom: 160.00%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 39.06%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 39.06%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec15-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec15-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec15-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec15-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec15-pic1_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec15-pic1_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec15-pic1_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec15-pic1_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec15-pic1_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec15-pic1_blur.jpg" alt="falcon2_40w_sec15-pic1_blur.jpg"></picture>
+            <div class="wrap fixed_block">
+                <div class="text-box fadein">
+                    <div class="text1 fontBold">Unterstützt dynamische Offline-Vorschau</div>
+                    <div class="text2 fontRegular">Präzises Positionieren und Anpassen, ohne Verbindung mit einem Computer.</div>
+                </div>
+            </div>
+            <p class="text-tips">Kurzes Drücken, um eine Feineinstellung von 1 mm vorzunehmen, und langes Drücken, um 10 mm/s einzustellen.</p>
+        </section>
+
+
+        <section class="section-common section16">
+            <picture class="fit_picture"><div style="padding-bottom: 160.00%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 66.80%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 66.80%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic1_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic1_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic1_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic1_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic1_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic1_blur.jpg" alt="falcon2_40w_sec16-pic1_blur.jpg"></picture>
+            <div class="wrap fixed_block">
+                <div class="text-box text-title fadein">
+                    <div class="text1 fontBold">Vollmetallrahmen für absolute Stabilität</div>
+                    <div class="text2 fontRegular">Die Konstruktion aus einer Vollaluminiumlegierung sorgt für ein robustes Gehäuse und gewährleistet auch bei hohen Geschwindigkeiten eine hervorragende Stabilität.</div>
+                </div>
+                <div class="overview-description delay-fadein">
+                    <div class="picture-item">
+                        <picture class="fit_picture"><div style="padding-bottom: 65.88%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 65.88%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 65.88%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic2_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic2_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic2_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic2_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic2_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic2_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic2_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic2_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic2_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic2_blur.jpg" alt="falcon2_40w_sec16-pic2_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Integrierte Gleitschiene, verschleißfeste Räder</div>
+                            <div class="text2 fontLight">Die integrierte Gleitschiene sorgt für einen hochsynchronen Lauf, und die U-förmigen verschleißfesten Räder gewährleisten einen stabilen und ruhigen Betrieb.</div>
+                        </div>
+                    </div>
+                    <div class="picture-item">
+                        <picture class="fit_picture"><div style="padding-bottom: 66.08%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 66.08%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 66.08%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic3_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic3_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic3_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic3_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic3_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic3_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic3_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic3_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic3_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec16-pic3_blur.jpg" alt="falcon2_40w_sec16-pic3_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Silikon-Fußpolster</div>
+                            <div class="text2 fontLight">Die neu gestalteten Silikon-Fußpolster sorgen für einen sicheren Stand auf dem Tisch und gewährleisten einen rutschfesten 360-Grad-Betrieb.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-common section17 ">
+            <picture class="fit_picture"><div style="padding-bottom: 317.73%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 77.85%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 77.85%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic1_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic1_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic1_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic1_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic1_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic1_blur.jpg" alt="falcon2_40w_sec17-pic1_blur.jpg"></picture>
+            <div class="wrap fixed_block">
+                <div class="text-box text-title fadein">
+                    <div class="text1 fontBold">Verbesserte Benutzererfahrung</div>
+                    <div class="text2 fontRegular">An der Unterseite des Gehäuses befinden sich drei Löcher zur Anpassung an unterschiedliche Tischgrößen.</div>
+                </div>
+
+                <div class="overview-description delay-fadein">
+                    <div class="picture-item">
+                        <picture class="fit_picture"><div style="padding-bottom: 51.21%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 89.29%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 89.29%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic2_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic2_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic2_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic2_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic2_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic2_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic2_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic2_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic2_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic2_blur.jpg" alt="falcon2_40w_sec17-pic2_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Silikon-Fußpolster </div>
+                            <div class="text2 fontLight">Die Höhe kann manuell fein eingestellt werden, um sich an unebene Tischplatten anzupassen.</div>
+                        </div>
+                    </div>
+                    <div class="picture-item">
+                        <picture class="fit_picture"><div style="padding-bottom: 61.78%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 89.29%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 89.29%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic3_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic3_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic3_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic3_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic3_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic3_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic3_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic3_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic3_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic3_blur.jpg" alt="falcon2_40w_sec17-pic3_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Einstellbare Höhe</div>
+                            <div class="text2 fontLight">Mehrere Segmente mit gleicher Länge zum Einstellen der Höhe, die für das Gravieren größerer Objekte wie Skateboards, Basketbälle usw. verwendet werden können. (Standardmäßig werden 8 Segmente zum Einstellen der Höhe mitgeliefert.)</div>
+                        </div>
+                    </div>
+                    <div class="picture-item">
+                        <picture class="fit_picture"><div style="padding-bottom: 70.61%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 89.29%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 89.29%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic4_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic4_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic4_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic4_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic4_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic4_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic4_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic4_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic4_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec17-pic4_blur.jpg" alt="falcon2_40w_sec17-pic4_blur.jpg"></picture>
+                        <div class="text-box">
+                            <div class="text1">Integrierte Schleppkette zur Kabelführung</div>
+                            <div class="text2 fontLight">Integrierte Schleppkette für mehr Sicherheit und gute Organisation.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-common section18">
+            <div class="wrap">
+                <div class="text-box fadein">
+                    <div class="text1 fontBold">Entfalten Sie Ihre Kreativität mit Creality Falcon2 40W</div>
+                    <div class="text2 fontRegular">Vom Heimwerker bis zum Produzenten, von der individuellen Gestaltung von Schmuck bis zur kommerziellen Beschilderung, was auch immer Sie sich vorstellen können, Falcon2 kann Ihnen dabei helfen, es zu erreichen.</div>
+                </div>
+                <picture class="fit_picture"><div style="padding-bottom: 99.94%;" class="_xsmall placeholderTag"></div><div style="padding-bottom: 99.94%;" class="_xlarge placeholderTag"></div><div style="padding-bottom: 99.94%;" class="_xmedium placeholderTag"></div><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec18-pic1_xsmall.webp" media="(max-width:960px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec18-pic1_xmedium_2n.webp" media="(min-width:1921px)"><source type="image/webp" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec18-pic1_xmedium.webp, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec18-pic1_xmedium_2n.webp 2x" media="(min-width:0px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec18-pic1_xsmall.jpg" media="(max-width:960px)"><source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec18-pic1_xsmall_blur.jpg"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec18-pic1_xmedium_2n.jpg" media="(min-width:1921px)"><source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec18-pic1_xmedium.jpg, https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec18-pic1_xmedium_2n.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/falcon2_40w_sec18-pic1_blur.jpg" alt="falcon2_40w_sec18-pic1_blur.jpg"></picture>
+            </div>
+        </section>
+        
+         <div class="section19">
+            <h2 class="title fadein">Specifications</h2>
+            <div class="table_wrap">
+                <div class="row-item">
+                    <div class="value-wrap">
+                        
+
+                        <div class="value-item"><span>Machine Power:</span> <span class="mtl">Max.240W</span></div>
+                        <div class="m-value-item"></div>
+                        <div class="value-item"><span>Certification:</span> <span class="mtl">IEC60825 , FDA , CE , ROHS , FCC , UKCA , UL Report , PSE etc.</span></div>
+
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="value-wrap">
+                        <div class="value-item"><span>Laser Module Output Power:</span> <span class="mtl">40W</span></div>
+                        <div class="m-value-item"></div>
+                        <div class="value-item"><span>Operating System:</span> <span class="mtl">Windows, Macos</span></div>
+
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="value-wrap">
+                        <div class="value-item"><span>Laser Spot:</span> <span class="mtl">0.1mm/0.15mm</span></div>
+                        <div class="m-value-item"></div>
+                        <div class="value-item"><span>Control Software:</span> <span class="mtl">LightBurn , LaserGRBL</span></div>
+
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="value-wrap">
+                        <div class="value-item"><span>Wavelenth: </span><span class="mtl">455±5mm</span></div>
+                        <div class="m-value-item"></div>
+                        <div class="value-item"><span>File Type(s):</span> <span class="mtl">jpeg , jpg , png , bmp , svg , dxf , etc</span></div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="value-wrap">
+                        <div class="value-item"><span>Engraving Speed:</span> <span class="mtl">Max. 25000mm/min</span></div>
+                        <div class="m-value-item"></div>
+                        <div class="value-item"><span>Net Weight: </span><span class="mtl">7.4kg</span></div>
+
+
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="value-wrap">
+                        <div class="value-item"><span>Working Area:</span> <span class="mtl">400mm*415mm</span></div>
+                        <div class="m-value-item"></div>
+                        <div class="value-item"><span>Gross Weight:</span> <span class="mtl">10.94kg</span></div>
+
+
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="value-wrap">
+                        <div class="value-item"><span>Voltage Input:</span> <span class="mtl">100-240V~ 50-60Hz</span></div>
+                        <div class="m-value-item"></div>
+                        <div class="value-item"><span>Product Size (L * W * H):</span> <span class="mtl">664*570*193mm</span></div>
+
+
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="value-wrap">
+                        <div class="value-item"><span>Voltage Output:</span> <span class="mtl">DC 24.0V 9A</span></div>
+                        <div class="m-value-item"></div>
+                        <div class="value-item"><span>Package Size (L * W * H):</span> <span class="mtl">725*625*150mm</span></div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="value-wrap">
+                        <div class="value-item"><span>Connecting Interfaces:</span><span class="mtl"> TF Card, Type-C</span></div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="value-wrap">
+                        <div class="value-item"><span>Material for Engraving:</span> <span class="mtl">Cardboard, Felt, Cardboard, Wood, Bamboo, Leather, Fabric, Acrylic, Brushed StainlessSteel, Dark Anodized Aluminum, Painted Metal, etc.</span></div>
+                    </div>
+                </div>
+                <div class="row-item">
+                    <div class="value-wrap">
+                        <div class="value-item"><span>Material for Cutting:</span> <span class="mtl">Cardboard, Felt, Cardboard, Bamlboo, Leather</span></div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- 回到顶部 -->
+    <div class="toTop" data-target=".section2">
+        <div class="sellpoint-item-jump">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="92" viewBox="0 0 46 92">
+                <defs>
+                    <clipPath id="clip-path">
+                        <rect id="pash_17131" data-name="pash 17131" width="46" height="92" transform="translate(9802 -12581)" fill="#fff" stroke="#707070" stroke-width="1"></rect>
+                    </clipPath>
+                </defs>
+                <g id="sdf_3084" data-name="sdf 3084" transform="translate(-9802 12581)" clip-path="url(#clip-path)">
+                    <g id="gds_48908" data-name="gds 48908" transform="translate(34 2)">
+                        <g id="gds_9" data-name="gds 9" transform="translate(8728 -14303)">
+                            <path id="uutyu_24" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#00D3EF">
+                            </path>
+                        </g>
+                        <g id="gds_9-2" data-name="gds 9" transform="translate(8728 -14257)">
+                            <path id="uutyu_24-2" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#00D3EF">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    gsap.registerPlugin(ScrollToPlugin);
+    gsap.registerPlugin(ScrollTrigger)
+    const delay = function (timer) {
+        return new Promise((res, rej) => {
+            setTimeout(() => {
+                res()
+            }, timer)
+        })
+    }
+
+    const docWidth = document.documentElement.clientWidth;
+    const docHeight = document.documentElement.clientHeight;
+    const vw = docWidth / 100;
+    const vh = docHeight / 100;
+    let spaceBetween = 1.3 * vw;
+
+    let spaceNum = docWidth > 960 ? 0.012 : 0.05
+
+
+    let tarGetinit = function () {
+        $('[data-target]').click(function (e) {
+            e.preventDefault();
+            let target = $(this).data('target')
+            gsap.to(window, {
+                duration: 0.5,
+                scrollTo: {
+                    y: target
+                }
+            });
+        })
+        let pagePagination = $(".page-pagination")
+
+        $(window).scroll(function () {
+            if (docWidth > 960) {
+                var scrollPos = $(window).scrollTop();
+                let docHeight = document.documentElement.clientHeight
+
+                $(".page-pagination li").each(function (key) {
+                    var target = $(this).data("target");
+                    var targetPos = $(target).offset().top;
+                    var targetHeight = $(target).outerHeight();
+
+                    // 检查元素是否在视图中
+                    if (scrollPos >= (targetPos - docHeight * (1 - 0.3))) {
+                        pagePagination.fadeIn();
+                        $('.page-pagination li').removeClass('active')
+                        $(this).addClass("active"); // 如果在视图中，添加"active"类
+                    } else if (key === 0) {
+                        pagePagination.fadeOut()
+                    }
+                });
+            }
+        });
+    }
+
+    var fadeInListen = function () {
+        var fadeIn = $('.main-contain').find('.fadein');
+
+        fadeIn.each(function () {
+            let element = this;
+            let {
+                scrub,
+                reverse,
+                duration,
+                actions,
+                fn
+            } = $(this).data()
+
+            gsap.set(element, {
+                opacity: 0,
+                y: 30
+            });
+            let toggleActions = "play none none none";
+            let start = $(this).data('start') || 80;
+            duration ? '' : duration = 0.8
+            let tl = gsap.to(element, {
+                opacity: 1,
+                y: 0,
+                duration
+            });
+            if (reverse) {
+                toggleActions = "play none none reverse"
+            }
+
+            ScrollTrigger.create({
+                animation: tl,
+                trigger: element,
+                toggleActions,
+                start: `top ${start}%`, // 调整触发点，视情况而定
+                onEnter: function () {
+
+                },
+                once: true // 只触发一次
+            });
+        });
+
+        var delayFadeIn = $('.delay-fadein');
+        delayFadeIn.each(function () {
+            let element = this;
+            let {
+                parent,
+                el,
+                scrub,
+                reverse,
+                duration,
+                actions,
+                fn
+            } = $(this).data()
+            let parentEl = $(parent);
+            parentEl.length ? '' : parentEl = $(element)
+            let delayEl = [];
+            if (el) {
+                el.split(',').forEach((selector) => delayEl.push(...parentEl.find(
+                    selector)))
+            } else {
+                delayEl = parentEl.children();
+            }
+
+            let toggleActions = "play none none none";
+            scrub ? scrub = true : scrub = false;
+
+            duration ? '' : duration = 0.8
+            console.log(duration)
+            let start = $(this).data('start') || 80;
+            let stagger = $(this).data('delay') || 0.3;
+
+
+            gsap.set(delayEl, {
+                opacity: 0,
+                y: 30
+            });
+
+            let tl = gsap.timeline();
+            tl.to(delayEl, {
+                stagger,
+                opacity: 1,
+                y: 0,
+                duration
+            })
+            if (fn) {
+                console.log(fn)
+                tl = k1c_tl[fn](tl)
+            }
+            if (reverse) {
+                toggleActions = "play none none reverse"
+                gsap.set(element, {
+                    opacity: 0,
+                    y: 30
+                });
+                let t2 = gsap.to(element, {
+                    opacity: 1,
+                    y: 0,
+                    duration
+                })
+                ScrollTrigger.create({
+                    animation: t2,
+                    toggleActions,
+                    trigger: element,
+                    scrub,
+                    start: `top ${start}%`, // 调整触发点，视情况而定
+                });
+            }
+            actions ? toggleActions = actions : ''
+
+
+            ScrollTrigger.create({
+                animation: tl,
+                toggleActions,
+                trigger: element,
+                scrub,
+                start: `top ${start}%`, // 调整触发点，视情况而定
+                // marker: true
+                // once: true // 只触发一次
+            });
+        });
+
+    }
+    function throttle(func, delay) {
+        let lastCall = 0;
+        return function (...args) {
+            const now = new Date().getTime();
+            if (now - lastCall >= delay) {
+                lastCall = now;
+                return func(...args);
+            }
+        };
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        let videos = document.querySelectorAll('.auto-video');
+        let tolerancePixel = 40;
+        function checkVideosInView() {
+            let scrollTop = $(window).scrollTop() + tolerancePixel;
+            let scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
+            videos.forEach(function (video) {
+                let yTopMedia = $(video).offset().top;
+                let yBottomMedia = $(video).height() + yTopMedia;
+
+                if (scrollTop < yBottomMedia && scrollBottom > yTopMedia) {
+                    if (video.readyState >= 3) { // HAVE_FUTURE_DATA or higher
+                        video.play();
+                    } else {
+                        video.addEventListener('canplaythrough', function onCanPlay() {
+                            video.play();
+                            video.removeEventListener('canplaythrough', onCanPlay);
+                        });
+                    }
+                } else {
+                    video.pause();
+                }
+            });
+        }
+
+        window.addEventListener('scroll', throttle(checkVideosInView, 150));
+        window.addEventListener('resize', throttle(checkVideosInView, 150));
+
+        checkVideosInView();
+    });
+
+
+    // 淡入淡出 初始化
+    fadeInListen();
+    tarGetinit() //跳转初始化
+
+
+    // <!-- lazy load -->
+    const picture_observer = lozad('.fit_picture,.lazy-video', {
+        rootMargin: '1500px 0px', // syntax similar to that of CSS Margin
+        load: function (el) {
+            // console.log(el)
+            if (el.tagName === 'PICTURE' || el.tagName === 'IMG') {
+                let image = el.tagName === 'IMG' ? el : el.querySelector('img');
+                if (el.tagName === 'IMG') image = el;
+
+                image.onload = function () {
+                    this.classList.add('loaded')
+                }
+                el.querySelectorAll('source').forEach(source => {
+                    let srcset = source.getAttribute('data-srcset');
+                    srcset ? source.setAttribute('srcset', srcset) : ''
+                });
+            } else if (el.tagName === 'VIDEO') {
+                el.onloadeddata = function () {
+                    console.log('loaded...')
+                    this.classList.add('loaded');
+                };
+                const poster = el.getAttribute('data-poster');
+                if (poster) el.setAttribute('poster', poster);
+
+                el.querySelectorAll('source').forEach(source => {
+                    const src = source.getAttribute('data-src');
+                    if (src) {
+                        source.setAttribute('src', src);
+                        el.load()
+                    }
+                });
+            }
+        }
+    });
+    picture_observer.observe();
+</script>
+
+{% schema %}
+{
+    "name": "shopify_falcon_40w",
+    "settings": [],
+    "presets": [
+        {
+            "name": "shopify_falcon_40w"
+        }
+    ]
+}
+{% endschema %}

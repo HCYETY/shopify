@@ -1,0 +1,103 @@
+{% style %}
+  .thanks {
+    margin: 48px 0 80px;
+  }
+
+  .thanks .title {
+    font-family: Montserrat;
+    font-size: 32px;
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  .thanks .swiper .swiper-pagination {
+    margin-top: 60px;
+    bottom: 0;
+  }
+
+  .thanks .v-slider-container .swiper-button-next,
+  .thanks .v-slider-container .swiper-button-prev {
+    top: 0;
+    margin-top: 0;
+  }
+
+  @media (max-width: 900px) {
+    .thanks {
+      margin: 12.8vw 0;
+    }
+
+    .thanks .container {
+      padding: 0 6.4vw;
+    }
+
+    .thanks .title {
+      font-size: 6.4vw;
+      margin-bottom: 6.4vw;
+    }
+
+    .thanks .swiper .swiper-pagination {
+      margin-top: 6.4vw;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .thanks {
+      margin: 2.5vw 0 4.167vw;
+    }
+    .thanks .title {
+      font-size: 1.667vw;
+      margin-bottom: 1.667vw;
+    }
+    .thanks .swiper .swiper-pagination {
+      margin-top: 3.125vw;
+    }
+  }
+{% endstyle %}
+
+<div class="thanks">
+  <div class="container">
+    <h2 class="title">{{ section.settings.title }}</h2>
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Home S Thanks",
+  "blocks": [{ "type": "@theme" }],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "主标题",
+      "default": "Hear what users have to say"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home S Thanks",
+      "blocks": [
+        {
+          "type": "v-slider",
+          "settings": {
+            "show_pagination": true
+          },
+          "blocks": [
+            {
+              "type": "home-thank-word"
+            },
+            {
+              "type": "home-thank-word"
+            },
+            {
+              "type": "home-thank-word"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
