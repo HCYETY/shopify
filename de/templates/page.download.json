@@ -1,0 +1,340 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "creality_anchor_point_gEQmai": {
+      "type": "creality_anchor_point",
+      "blocks": {
+        "anchor_point_4ekKPB": {
+          "type": "anchor_point",
+          "settings": {
+            "title": "Laser Engraver Firmware",
+            "anchor_id": "pia"
+          }
+        },
+        "anchor_point_kxGMxU": {
+          "type": "anchor_point",
+          "settings": {
+            "title": "User manual download",
+            "anchor_id": "pia2"
+          }
+        },
+        "anchor_point_ynpd8q": {
+          "type": "anchor_point",
+          "settings": {
+            "title": "Recommended Parameters",
+            "anchor_id": "pia3"
+          }
+        }
+      },
+      "block_order": [
+        "anchor_point_4ekKPB",
+        "anchor_point_kxGMxU",
+        "anchor_point_ynpd8q"
+      ],
+      "settings": {
+        "title": "Downloads",
+        "columns": 3,
+        "padding_pt_pc": 20,
+        "padding_pb_pc": 20,
+        "padding_pt_mb": 20,
+        "padding_pb_mb": 20
+      }
+    },
+    "creality_download_support_FPqYAB": {
+      "type": "creality_download_support",
+      "blocks": {
+        "header_ChmVJH": {
+          "type": "header",
+          "settings": {
+            "title": "Creality Falcon A1 10W",
+            "button_text": "CrealityFalcon _CV40_V1_0_6",
+            "button_link": "https://cdn.shopify.com/s/files/1/0624/2163/1028/files/CV40-MASTER-Release_V1_0_6.bin?v=1745206500",
+            "time": "2025-04-21",
+            "description": "",
+            "button_text2": "",
+            "button_link2": "",
+            "time2": "",
+            "description2": "",
+            "button_text3": "",
+            "button_link3": "",
+            "time3": "",
+            "description3": ""
+          }
+        },
+        "header_LJXxLw": {
+          "type": "header",
+          "settings": {
+            "title": "Creality Falcon2",
+            "button_text": "CrealityFalcon2_CV50_40W_V3_0_5",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Creality_Falcon2_CV50_40W_V3_0_5.zip?v=1704856352",
+            "time": "2024-01-03",
+            "description": "Optimize communication between devices.",
+            "button_text2": "CrealityFalcon2_CV50_22W_V3_0_5",
+            "button_link2": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Creality_Falcon2_CV50_22W_V3_0_5.zip?v=1704939356",
+            "time2": "2024-01-03",
+            "description2": "Optimize communication between devices.",
+            "button_text3": "CrealityFalcon2_CV50_12W_V3_0_5",
+            "button_link3": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Creality_Falcon2_CV50_12W_V3_0_5.zip?v=1704939457",
+            "time3": "2024-01-03",
+            "description3": "Optimize communication between devices."
+          }
+        },
+        "header_eeJNfn": {
+          "type": "header",
+          "settings": {
+            "title": "Firmware Name",
+            "button_text": "download",
+            "button_link": "",
+            "time": "2022-03-11",
+            "description": "",
+            "button_text2": "download",
+            "button_link2": "",
+            "time2": "2022-03-11",
+            "description2": "",
+            "button_text3": "download",
+            "button_link3": "",
+            "time3": "2022-03-11",
+            "description3": ""
+          }
+        },
+        "header_R7RPpd": {
+          "type": "header",
+          "settings": {
+            "title": "CR-Laser Falcon",
+            "button_text": "CR-Laser User CV-30-Firmware_V3.0.24",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/CR-Laser_Falcon_User_CV-30-Firmware_V3.0.24.zip?v=1704954781",
+            "time": "2023-02-02",
+            "description": "1. Change: the way of open laser power2. Add: change machine parameter and save parameter3. Add: Automatic identification device function of lightburn software",
+            "button_text2": "",
+            "button_link2": "",
+            "time2": "",
+            "description2": "",
+            "button_text3": "",
+            "button_link3": "",
+            "time3": "",
+            "description3": ""
+          }
+        },
+        "header_4KDjiN": {
+          "type": "header",
+          "settings": {
+            "title": "CV-01 Pro",
+            "button_text": "CV-01 Pro_V3.0.16_202112311706",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/CV-01-Pro_V3.0.16_202112311706.bin?v=1704954791",
+            "time": "2022-05-11",
+            "description": "Factory standard firmware",
+            "button_text2": "",
+            "button_link2": "",
+            "time2": "",
+            "description2": "",
+            "button_text3": "",
+            "button_link3": "",
+            "time3": "",
+            "description3": ""
+          }
+        },
+        "header_JYKxKg": {
+          "type": "header",
+          "settings": {
+            "title": "Creality Laser Module",
+            "button_text": "CV-30-3DPrint-V3_0_24",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/CV-30-3DPrint-V3_0_24.zip?v=1704954365",
+            "time": "2023-03-09",
+            "description": "This firmware is the motherboard firmware for the 3D printer",
+            "button_text2": "",
+            "button_link2": "",
+            "time2": "",
+            "description2": "",
+            "button_text3": "download",
+            "button_link3": "",
+            "time3": "",
+            "description3": ""
+          }
+        }
+      },
+      "block_order": [
+        "header_ChmVJH",
+        "header_LJXxLw",
+        "header_eeJNfn",
+        "header_R7RPpd",
+        "header_4KDjiN",
+        "header_JYKxKg"
+      ],
+      "settings": {
+        "jump_id": "pia",
+        "heading": "Laser Engraving Machine Firmware",
+        "subheading": "The CrealityFalcon laser engraving machine is designed for personal consumptive use. With a modular design, it is easy to assemble and use. It supports various materials for engraving, such as cardboard, wood, bamboo, rubber, leather, fabric, acrylic, plastic, stainless steel, and lacquered metal, as well as cutting with cardboard, felt, leather, wood, bamboo, etc, widely acceptable for engineers, designers, and DIY enthusiasts, to create all kinds of arts and crafts. Kindly proceed to download the firmware for the Creality Falcon laser engraving machine as per your requirements.",
+        "overall_bg_color": "#f0f8ff",
+        "content_bg_color": "#f9f9f9",
+        "pc_padding_top": 60,
+        "pc_padding_bottom": 60,
+        "mobile_padding_top": 30,
+        "mobile_padding_bottom": 30
+      }
+    },
+    "creality_product_list_pJMBLg": {
+      "type": "creality_product_list",
+      "settings": {
+        "jump_id": "pia2",
+        "title": "User manual download",
+        "collection_list": [
+          "falcon2-pro-engraver",
+          "falcon2-engraver",
+          "falcon-pro-engraver",
+          "falcon-engraver"
+        ]
+      }
+    },
+    "creality_download_yyqmkg": {
+      "type": "creality_download",
+      "blocks": {
+        "header_PieTdB": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_A1 10W engraver",
+            "time": "2025.03.25",
+            "button_text": "download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Consumable_parameters_database_A1.xlsx?v=1742875525",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<p>Latest Updates</p>"
+          }
+        },
+        "header_AwX4HR": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_60W engraver",
+            "time": "2022.03.11",
+            "button_text": "download",
+            "button_link": "https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/Recommended_Parameters_for_60W.pdf?v=1715939517",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<p>Latest Updates</p>"
+          }
+        },
+        "header_EmBT3d": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_40W engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Recommended_Parameters_for_40W-Updated.pdf?v=1704958637",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<p>Latest Updates</p>"
+          }
+        },
+        "header_WJphjB": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_22W engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Recommended_Parameters_for_22W-Updated.pdf?v=1704958637",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<p>Latest Updates</p>"
+          }
+        },
+        "header_iEPYG6": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_12W engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<p>Latest Updates</p>"
+          }
+        },
+        "header_YAMLxc": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_10W engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Recommended_parameters_for_10W.pdf?v=1699868680",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<h3>Release Notes</h3>"
+          }
+        },
+        "header_M7Udgx": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_7.5W engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Recommended_Parameters_for_7.5W_1.pdf?v=1704958637",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<h3>Release Notes</h3>"
+          }
+        },
+        "header_AmVfUV": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_5W engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Recommended_parameters_for_5W.pdf?v=1704958637",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<h3>Release Notes</h3>"
+          }
+        },
+        "header_UWy97h": {
+          "type": "header",
+          "settings": {
+            "content_bg_color": "#f9f9f9",
+            "title": "Recommended_parameters_for_1.6W engraver",
+            "time": "",
+            "button_text": "download",
+            "button_link": "",
+            "drop_down_guide_text": "Release Notes",
+            "drop_down_text": "<h3>Release Notes</h3>"
+          }
+        }
+      },
+      "block_order": [
+        "header_PieTdB",
+        "header_AwX4HR",
+        "header_EmBT3d",
+        "header_WJphjB",
+        "header_iEPYG6",
+        "header_YAMLxc",
+        "header_M7Udgx",
+        "header_AmVfUV",
+        "header_UWy97h"
+      ],
+      "settings": {
+        "jump_id": "pia3",
+        "heading": "Recommended Parameters",
+        "pc_padding_top": 60,
+        "pc_padding_bottom": 60,
+        "mobile_padding_top": 30,
+        "mobile_padding_bottom": 30
+      }
+    }
+  },
+  "order": [
+    "main",
+    "creality_anchor_point_gEQmai",
+    "creality_download_support_FPqYAB",
+    "creality_product_list_pJMBLg",
+    "creality_download_yyqmkg"
+  ]
+}

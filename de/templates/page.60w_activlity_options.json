@@ -1,0 +1,257 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "60w_activlity_options_tjxNAi": {
+      "type": "60w_activlity_options",
+      "blocks": {
+        "products_accessory_FykEdD": {
+          "type": "products-accessory",
+          "settings": {
+            "item_checkbox1": true,
+            "item_checkbox2": true,
+            "item_image_link": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864",
+            "item_title": "Honeycomb Workbench For Laser Engraver 500mm * 500mm",
+            "item_desc1": "4213432",
+            "item_desc2": "4324324",
+            "item_old_price": "234324",
+            "item_new_price": "324324324",
+            "item_save_price": "32432432",
+            "item_addcart_code": "                            <form method=\"post\" action=\"/cart/add\" id=\"product-form-9245050929457\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"47925193769265\">                                <button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"5\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\">                                    <div class=\"addcart\">                                        <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">                                    </div>                                    <div class=\"buynow\">Buy Now</div>                                </button>                            </form>"
+          }
+        },
+        "products_accessory_VdwVcL": {
+          "type": "products-accessory",
+          "settings": {
+            "item_checkbox1": false,
+            "item_checkbox2": true,
+            "item_image_link": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864",
+            "item_title": "Test",
+            "item_desc1": "345435",
+            "item_desc2": "543543",
+            "item_old_price": "543543",
+            "item_new_price": "543543",
+            "item_save_price": "543543",
+            "item_addcart_code": "                                                                                                                                                                                                                Buy Now                                                           "
+          }
+        },
+        "products_accessory_Ri9CpP": {
+          "type": "products-accessory",
+          "settings": {
+            "item_checkbox1": true,
+            "item_checkbox2": false,
+            "item_image_link": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864",
+            "item_title": "Test2",
+            "item_desc1": "43543543",
+            "item_desc2": "435435",
+            "item_old_price": "345435",
+            "item_new_price": "345435",
+            "item_save_price": "435435",
+            "item_addcart_code": "                                                                                                                                                                                                                Buy Now                                                           "
+          }
+        },
+        "products_material_H3PR3y": {
+          "type": "products-Material",
+          "settings": {
+            "item_checkbox1": true,
+            "item_checkbox2": true,
+            "item_image_link": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864",
+            "item_title": "4534534",
+            "item_desc1": "543543",
+            "item_desc2": "543543",
+            "item_old_price": "543543",
+            "item_new_price": "543543",
+            "item_save_price": "53543",
+            "item_addcart_code": "534543"
+          }
+        },
+        "products_material_z9qwgD": {
+          "type": "products-Material",
+          "settings": {
+            "item_checkbox1": true,
+            "item_checkbox2": true,
+            "item_image_link": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864",
+            "item_title": "6546456",
+            "item_desc1": "546546",
+            "item_desc2": "",
+            "item_old_price": "6546",
+            "item_new_price": "54646",
+            "item_save_price": "546",
+            "item_addcart_code": "                            <form method=\"post\" action=\"/cart/add\" id=\"product-form-9245050929457\" accept-charset=\"UTF-8\" class=\"event-wrap\" enctype=\"multipart/form-data\" novalidate=\"novalidate\" data-type=\"add-to-cart-form\">\n<input type=\"hidden\" name=\"id\" value=\"47925193769265\">                                <button type=\"submit\" name=\"add\" data-btn-addtocart=\"\" data-inventory-quantity=\"5\" data-available=\"false\" class=\"\" id=\"product-add-to-cart\">                                    <div class=\"addcart\">                                        <img src=\"https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png\" alt=\"cart.png\">                                    </div>                                    <div class=\"buynow\">Buy Now</div>                                </button>                            </form>"
+          }
+        },
+        "products_material_44yQ6y": {
+          "type": "products-Material",
+          "settings": {
+            "item_checkbox1": true,
+            "item_checkbox2": true,
+            "item_image_link": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864",
+            "item_title": "Creality Falcon Honeycomb Workbench 500mm x 500mm",
+            "item_desc1": "Better Heat Dissipation",
+            "item_desc2": "Double Desktop Protection",
+            "item_old_price": "$169.00",
+            "item_new_price": "$119.00",
+            "item_save_price": "$50",
+            "item_addcart_code": "Buy Now"
+          }
+        },
+        "products_material_UKagHR": {
+          "type": "products-Material",
+          "settings": {
+            "item_checkbox1": true,
+            "item_checkbox2": true,
+            "item_image_link": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864",
+            "item_title": "Creality Falcon Honeycomb Workbench 500mm x 500mm",
+            "item_desc1": "Better Heat Dissipation",
+            "item_desc2": "Double Desktop Protection",
+            "item_old_price": "$169.00",
+            "item_new_price": "$119.00",
+            "item_save_price": "$50",
+            "item_addcart_code": "Buy Now"
+          }
+        },
+        "products_accessory_iYPNyN": {
+          "type": "products-accessory",
+          "settings": {
+            "item_checkbox1": true,
+            "item_checkbox2": true,
+            "item_image_link": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864",
+            "item_title": "Creality Falcon Honeycomb Workbench 500mm x 500mm",
+            "item_desc1": "Better Heat Dissipation",
+            "item_desc2": "Double Desktop Protection",
+            "item_old_price": "$169.00",
+            "item_new_price": "$119.00",
+            "item_save_price": "$50",
+            "item_addcart_code": "Buy Now"
+          }
+        },
+        "products_accessory_c7WWWz": {
+          "type": "products-accessory",
+          "settings": {
+            "item_checkbox1": true,
+            "item_checkbox2": true,
+            "item_image_link": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864",
+            "item_title": "Creality Falcon Honeycomb Workbench 500mm x 500mm",
+            "item_desc1": "Better Heat Dissipation",
+            "item_desc2": "Double Desktop Protection",
+            "item_old_price": "$169.00",
+            "item_new_price": "$119.00",
+            "item_save_price": "$50",
+            "item_addcart_code": "Buy Now"
+          }
+        },
+        "products_newcomers_R8qwCx": {
+          "type": "products-newcomers",
+          "settings": {
+            "item_image_link": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864",
+            "item_title": "Creality Falcon Honeycomb Workbench 500mm x 500mm",
+            "item_desc1": "Better Heat Dissipation",
+            "item_desc2": "Double Desktop Protection",
+            "item_desc3": "",
+            "item_old_price": "$169.00",
+            "item_new_price": "$119.00",
+            "item_save_price": "$50",
+            "item_addcart_code": "Buy Now"
+          }
+        },
+        "products_newcomers_RY8cDY": {
+          "type": "products-newcomers",
+          "settings": {
+            "item_image_link": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864",
+            "item_title": "Creality Falcon Honeycomb Workbench 500mm x 500mm",
+            "item_desc1": "Better Heat Dissipation",
+            "item_desc2": "Double Desktop Protection",
+            "item_desc3": "",
+            "item_old_price": "$169.00",
+            "item_new_price": "$119.00",
+            "item_save_price": "$50",
+            "item_addcart_code": "Buy Now"
+          }
+        },
+        "products_newcomers_ARKCgt": {
+          "type": "products-newcomers",
+          "settings": {
+            "item_image_link": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864",
+            "item_title": "Creality Falcon Honeycomb Workbench 500mm x 500mm",
+            "item_desc1": "Better Heat Dissipation",
+            "item_desc2": "Double Desktop Protection",
+            "item_desc3": "",
+            "item_old_price": "$169.00",
+            "item_new_price": "$119.00",
+            "item_save_price": "$50",
+            "item_addcart_code": "Buy Now"
+          }
+        },
+        "gifts_lists_ndm6Vz": {
+          "type": "gifts-lists",
+          "settings": {
+            "item_image_link": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864",
+            "price_text1": "$499",
+            "price_text2": "$39.99",
+            "item_desc1": "Better Heat Dissipation"
+          }
+        },
+        "gifts_lists_8bEa9J": {
+          "type": "gifts-lists",
+          "settings": {
+            "item_image_link": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864",
+            "price_text1": "$499",
+            "price_text2": "$39.99",
+            "item_desc1": "Better Heat Dissipation"
+          }
+        },
+        "gifts_lists_cfVjDd": {
+          "type": "gifts-lists",
+          "settings": {
+            "item_image_link": "//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864",
+            "price_text1": "$499",
+            "price_text2": "$39.99",
+            "item_desc1": "Better Heat Dissipation"
+          }
+        }
+      },
+      "block_order": [
+        "products_accessory_FykEdD",
+        "products_accessory_VdwVcL",
+        "products_accessory_Ri9CpP",
+        "products_material_H3PR3y",
+        "products_material_z9qwgD",
+        "products_material_44yQ6y",
+        "products_material_UKagHR",
+        "products_accessory_iYPNyN",
+        "products_accessory_c7WWWz",
+        "products_newcomers_R8qwCx",
+        "products_newcomers_RY8cDY",
+        "products_newcomers_ARKCgt",
+        "gifts_lists_ndm6Vz",
+        "gifts_lists_8bEa9J",
+        "gifts_lists_cfVjDd"
+      ],
+      "settings": {
+        "banner1_image": "shopify://shop_images/1000_1000_4_360.jpg",
+        "image_link_60w": "//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/laserengravercutter60wprosafercrealityfalcon2pro01.png?v=1715226704",
+        "title_60w": "Falcon2 Pro 60W Enclosed Laser Cutter And Engraver Pro Safer",
+        "old_price_60w": "$3769.00",
+        "new_price_60w": "$3199.00",
+        "save_price_60w": "$570",
+        "addcart_code_60w": "                                                                                                                                                                                                                Buy Now                                                           "
+      }
+    }
+  },
+  "order": [
+    "main",
+    "60w_activlity_options_tjxNAi"
+  ]
+}

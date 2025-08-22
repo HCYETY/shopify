@@ -1,0 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "creality_exhibition_YkG8t8": {
+      "type": "creality_exhibition",
+      "blocks": {
+        "block1_FTqffr": {
+          "type": "block1",
+          "settings": {
+            "image": "shopify://shop_images/20240428-173926.jpg",
+            "product_name": "k2 puls",
+            "product_link": ""
+          }
+        },
+        "block1_QHg4bD": {
+          "type": "block1",
+          "settings": {
+            "image": "shopify://shop_images/1_8ff0bce9-a77e-4d6a-9bf4-6335c93f6e0c.jpg",
+            "product_name": "k2 puls",
+            "product_link": ""
+          }
+        },
+        "block1_am8id3": {
+          "type": "block1",
+          "settings": {
+            "image": "shopify://shop_images/4_2edd51ae-6015-44ca-add4-5c0337d2ebb2.jpg",
+            "product_name": "k2 puls",
+            "product_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "block1_FTqffr",
+        "block1_QHg4bD",
+        "block1_am8id3"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "creality_exhibition_YkG8t8"
+  ]
+}

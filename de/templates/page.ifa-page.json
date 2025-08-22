@@ -1,0 +1,94 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "creality_exhibition_ybwHU4": {
+      "type": "creality_exhibition",
+      "blocks": {
+        "block1_dBDYTW": {
+          "type": "block1",
+          "settings": {
+            "image": "shopify://shop_images/6_creality_falcon2_Pro_22W_and_40w.jpg",
+            "product_name": "CrealityFalcon2 Pro 60W",
+            "product_link": "shopify://products/falcon2-pro-60w-geschlossener-laser-gravierer-pro-sicherer"
+          }
+        },
+        "block1_aFPPeh": {
+          "type": "block1",
+          "settings": {
+            "image": "shopify://shop_images/6crealityfalcon222w_6d9ba5ae-f588-46e7-b0ba-dc997a051bc0.jpg",
+            "product_name": "CrealityFalcon2 22W",
+            "product_link": "shopify://products/falcon2-22w-laser-engraver-cutter"
+          }
+        },
+        "block1_TyRkYr": {
+          "type": "block1",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/1crealityfalcon240w.jpg",
+            "product_name": "Falcon2 40W",
+            "product_link": "shopify://products/falcon2-40w-laser-engraver-cutter"
+          }
+        },
+        "block1_c3aQNP": {
+          "type": "block1",
+          "disabled": true,
+          "settings": {
+            "product_name": "k2 puls",
+            "product_link": ""
+          }
+        },
+        "block1_9yRYXN": {
+          "type": "block1",
+          "settings": {
+            "image": "shopify://shop_images/2crealityfalconpro10w.jpg",
+            "product_name": "CrealityFalcon Pro 10W",
+            "product_link": "shopify://products/creality-falcon-10w-pro-laser-engraver"
+          }
+        },
+        "block1_k4wN8w": {
+          "type": "block1",
+          "settings": {
+            "image": "shopify://shop_images/1CrealityFalconSmokePurifier.jpg",
+            "product_name": "Falcon Luftreiniger",
+            "product_link": "shopify://products/creality-falcon-smoke-purifier"
+          }
+        },
+        "block1_9atG9r": {
+          "type": "block1",
+          "settings": {
+            "image": "shopify://shop_images/1crealityfalconRotaryKitPro_0309af65-180a-455c-b2a5-40b7e446c4c7.jpg",
+            "product_name": "Falcon Rotationshalter mit Spannfutter Pro",
+            "product_link": "shopify://products/rotary-kit-pro-for-curved-surface-engraving"
+          }
+        }
+      },
+      "block_order": [
+        "block1_dBDYTW",
+        "block1_aFPPeh",
+        "block1_TyRkYr",
+        "block1_c3aQNP",
+        "block1_9yRYXN",
+        "block1_k4wN8w",
+        "block1_9atG9r"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "creality_exhibition_ybwHU4"
+  ]
+}

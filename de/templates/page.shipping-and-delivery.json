@@ -1,0 +1,168 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c": {
+          "type": "paragraph",
+          "settings": {
+            "title": "1. Versand & Lieferung",
+            "question_1": "Bearbeitungszeit",
+            "answer_1": "Normalerweise benötigen wir 1–2 Werktage, um Ihre Produkte vor dem Versand vorzubereiten. Aufgrund von Lagerbeständen kann die Bearbeitung einiger Artikel jedoch bis zu 7–10 Werktage dauern.",
+            "question_2": "Lieferländer",
+            "answer_2": "Wir liefern nach Deutschland, Österreich, Belgien, und in die Schweiz.\n<br>Auf Inseln ist keine Lieferung möglich.",
+            "question_3": "Vorverkaufsartikel",
+            "answer_3": "Bei Artikeln, die im Vorverkauf angeboten werden, beachten Sie bitte das auf der jeweiligen Produktseite angegebene Versanddatum.",
+            "question_4": "Lieferzeit",
+            "answer_4": "Standardversand: Bestellungen kommen in der Regel innerhalb von 2–4 Werktagen an, Lieferungen in abgelegene Gebiete können möglich sein",
+            "question_5": "Versandregeln",
+            "answer_5": "Unser System sendet Ihnen eine E-Mail-Benachrichtigung, sobald Ihr Paket versandt wurde. Wir bemühen uns, nach Möglichkeit alle Artikel einer Bestellung zusammen zu versenden. Wir können Ihre Bestellung jedoch in mehrere Pakete aufteilen, um sicherzustellen, dass Sie Ihre Artikel schneller erhalten In diesem Fall erhalten Sie für jedes Paket eine separate Sendungsverfolgungsnummer. Selbst wenn wir Ihre Bestellung in mehreren Paketen versenden, werden Ihnen nicht mehr als die Versandkosten berechnet, die Sie beim Bezahlen angegeben haben. Sollten Probleme mit Ihrem Paket auftreten ( s), kontaktieren Sie uns bitte innerhalb von 180 Tagen nach dem Kauf. Wir werden Ihre Anfrage innerhalb eines Werktages beantworten.",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "paragraph_xYtctB": {
+          "type": "paragraph",
+          "settings": {
+            "title": "2. Lieferung und Versanddienste",
+            "question_1": "Versanddienste",
+            "answer_1": "<p>Der Versand der Bestellungen erfolgt je nach Gewicht und Größe entweder mit DHL oder DDP.</p>",
+            "question_2": "Versandkosten",
+            "answer_2": "1. Bestellungen mit einem Gesamtbestellwert von 49,99 € oder mehr sind versandkostenfrei.\n2. Für Bestellungen unter 49,99 € fällt eine Versandkostenpauschale von 12 € pro Bestellung an, unabhängig vom Gewicht oder der Anzahl der Artikel in der Bestellung.\n\nDiese Richtlinie vereinfacht den Versandprozess, indem eine einheitliche Gebührenstruktur angewendet wird, die ausschließlich auf dem Gesamtbestellwert und nicht auf dem Gewicht oder der Menge einzelner Artikel basiert.",
+            "question_3": "Hinweise zum Versand",
+            "answer_3": "<p>Für spezielle Versandwünsche kontaktieren Sie bitte den Creality-Support. Bitte überprüfen Sie Ihre Lieferadresse vor der Zahlung sorgfältig. Im Falle einer falschen Adresse wenden Sie sich bitte umgehend an den CrealityFalcon Support. Wir werden das Logistikteam kontaktieren, um das Problem zu lösen. Crealityfalcon Aufträge können nur in das Land versandt werden, in dem die Bestellung aufgegeben wurde. Nach dem Versand können wir Änderungen an der Lieferadresse nicht garantieren und Sie sind für jegliche zusätzliche Risiken oder Kosten verantwortlich, die durch solche Änderungen entstehen.\n\n</p><p></p>Beachten Sie bei der Auftragserteilung, dass Sie die korrekten Informationen (Name, Adresse, Kontaktdaten) angeben, um eine erfolgreiche Lieferung zu gewährleisten.<p></p>",
+            "question_4": "Weitere Hinweise:",
+            "answer_4": "<p>1. Die Lieferzeit in abgelegene Regionen kann um 1-2 Tage länger sein.\n</p><p></p><p>\n2. Verzögerungen oder fehlgeschlagene Lieferungen aufgrund von Empfängerfehlern wie Adressänderungen nach dem Versand, falschen oder unbekannten Adressen, falschen Kontaktdaten oder Ablehnung der Lieferung sind möglich.</p><p></p><p>\n\n3. Verzögerungen aufgrund höherer Gewalt wie Naturkatastrophen, Transportstörungen oder staatliche Maßnahmen können auftreten.</p><p></p><p>\n\n4. Einige Produkte dürfen aufgrund von Sicherheitsregelungen nicht per Luftfracht verschickt werden.</p><p></p><p>\n\n5. Sendungen können beschlagnahmt oder entsorgt werden, wenn sie gegen Transportregelungen verstoßen.</p><p></p><p>\n\n6. Lieferungen erfolgen nicht an Wochenenden, Feiertagen oder Festtagen.</p><p></p><p>\n\n7. Wenn die Lieferadresse nicht erreichbar ist (z.B. Schulen, Einrichtungen ohne Zugang für Kurierdienste), kann die Zustellung beeinträchtigt sein.</p>",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "f4d12560-a07c-4bd4-a934-2a8eddeaccc9": {
+          "type": "paragraph",
+          "settings": {
+            "title": "3. Auftrags- und Logistikverfolgung",
+            "question_1": "Benachrichtigung",
+            "answer_1": "<p>Nach dem Versand erhalten Sie eine Benachrichtigung per E-Mail oder SMS mit der Sendungsnummer. Sie können den Versandstatus Ihres Pakets auf der offiziellen Website des Expressunternehmens verfolgen. </p>",
+            "question_2": "So verfolgen Sie Ihre Bestellung:",
+            "answer_2": "1. Melden Sie sich in Ihrem CrealityFalcon-Konto an und überprüfen Sie den Bereich \"Meine Bestellungen\".\n\n2. Kontaktieren Sie den CrealityFalcon Support bei Fragen zur Bestellung.",
+            "question_3": "",
+            "answer_3": "",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "paragraph_HgRfrG": {
+          "type": "paragraph",
+          "settings": {
+            "title": "4. VAT und Tarife",
+            "question_1": "VAT",
+            "answer_1": "<p>Laut Gesetz müssen wir Steuern an das europäische Land zahlen, in dem Sie leben. Die angezeigten Produktpreise im CrealityFalcon DE-Shop verstehen sich inklusive Mehrwertsteuer. Der spezifische Steuerbetrag ist unterschiedlich.</p>",
+            "question_2": "Zölle",
+            "answer_2": "<p>CrealityFalcon übernimmt alle Zölle. Unsere Kunden müssen keine Zollgebühren zahlen. Sollten Ihnen vom Zoll Zölle berechnet werden, kontaktieren Sie uns bitte für Hilfe oder Erstattung. (de.support@crealityfalcon.com)</p>",
+            "question_3": "",
+            "answer_3": "",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c",
+        "paragraph_xYtctB",
+        "f4d12560-a07c-4bd4-a934-2a8eddeaccc9",
+        "paragraph_HgRfrG"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "1170",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "show_faqs_filter": true,
+        "faqs_text": "<p>Unten sind einige häufige Anliegen unserer Kunden, bevor sie das Thema kaufen.</p>\n<p>Wenn Sie andere Fragen haben, senden Sie diese bitte einfach an <a href=\"mailto:example@domain.com\" style=\"text-decoration: underline;\">de.support@crealityfalcon.com</a>.</p>",
+        "faqs_message_heading": "Brauchen Sie Hilfe?",
+        "faqs_message_text": "<p style=\"line-height: 30px; margin-bottom: 0px;margin-top: 5px;\">\n<span class=\"icon\">\n<svg style=\"position: relative; top: 0px; width: 20px;height: 20px\" aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"comment-alt-dots\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\" class=\"svg-inline--fa fa-comment-alt-dots fa-w-16 fa-7x\"><path fill=\"currentColor\" d=\"M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zM128 240c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z\" class=\"\"></path></svg>\n</span>\n<span style=\"margin-left: 7px\">CALL US：+86 400-613-3882 <a href=\"tel:%20%20091-123-ELLA\"></a></span>\n</p>\n<p style=\"line-height:30px; margin-top: 0\">\n<span class=\"icon\">\n<svg style=\"width: 20px;height: 20px\" aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"envelope\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\" class=\"svg-inline--fa fa-envelope fa-w-16 fa-7x\"><path fill=\"currentColor\" d=\"M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z\" class=\"\"></path></svg></span>\n<span style=\"margin-left: 7px\"><a href=\"mailto:de.support@crealityfalcon.com\">de.support@crealityfalcon.com</a></span>\n</p>Geschäftszeiten:\nMonday-Friday 9:00-18:00 BJT\n<br><br>\nName der Firma: Shenzhen Chuangxiang 3D Technology Co., Ltd.\n<br>Firmennummer: 91440300094231378E\n<br>Firmenanschrift: Room 1808, Jinxiu Hongdu Building, Meilong Avenue, Xinniu Community, Minzhi Street, Longhua District, Shenzhen (office address); Factory Building No. 156, Huawang Road, Langkou Community, Dalang Street, Longhua District, Shenzhen (production address)<br>\n<br><span>Wenn Sie ein Anliegen oder eine Frage haben, die sofortige Unterstützung erfordert, können Sie unten auf die Schaltfläche klicken, um live mit einem Kundenservicemitarbeiter zu chatten.\n<br> \n<br>\nWenn wir nicht verfügbar sind, senden Sie uns eine E-Mail und wir werden uns innerhalb von 20-36 Stunden bei Ihnen melden!</span>\n<br> \n<br>\nWenn Sie weitere Zweifel zur Verwendung der Graviermaschine haben, empfehlen wir Ihnen, sich direkt unserer Community anzuschließen und Hilfe von den Benutzern der Maschine zu suchen.",
+        "message_method_icon_1": "shopify://shop_images/facebook-notification-gift-in-stocking.jpg",
+        "message_method_link_1": "https://www.facebook.com/groups/falconlaserengraver/",
+        "message_method_text_1": "Beitritt zur Gruppe",
+        "message_method_link_2": "https://www.facebook.com/groups/falconlaserengraver/",
+        "message_method_text_2": "Join Our Group",
+        "contact_content_text": "Können Sie keine zufriedenstellenden Antworten finden?",
+        "contact_text": "Kontakt zum Support",
+        "contact_link": "shopify://pages/contact",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#14a9de",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#e93d29",
+        "contact_color_bg_hover": "#e93d29",
+        "contact_color_bg_gradient_hover": ""
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

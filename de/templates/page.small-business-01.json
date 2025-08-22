@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "e8076aa0-ee39-4e17-a4de-a4889be31d62": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14613175697498__e8076aa0-ee39-4e17-a4de-a4889be31d62-167359887819eaa55b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<div class=\"message\">\n  Sale up to   <b style=\"text-decoration: underline;text-underline-offset: 0.2rem;text-decoration-color: rgba(5, 28, 66, 0.3);\">60% OFF</b>   on everything*<span class=\"btn hidden-mobile\" style=\" background: #e1732c; color: #fff;padding: 7px 20px;border-radius: 30px;margin-left: 10px;font-weight:700; text-decoration: none;\">Shop now!</span>\n</div>",
+            "text_size": 18,
+            "text_line_height": 1,
+            "margin_top_text": 0,
+            "text_color": "#000000",
+            "text_width": "800px"
+          }
+        }
+      },
+      "block_order": [
+        "template--14613175697498__e8076aa0-ee39-4e17-a4de-a4889be31d62-167359887819eaa55b-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "mg_top_desktop": 5,
+        "mg_top_tablet": 5,
+        "mg_top_mobile": 10,
+        "mg_bottom_desktop": 5,
+        "mg_bottom_tablet": 5,
+        "mg_bottom_mobile": 10,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false
+      }
+    },
+    "creality_2024_05_small_business_de_reGXKz": {
+      "type": "creality_2024_05_small_business_de",
+      "settings": {
+        "product1": "creality-falcon2-pro-geschlossener-laser-gravierer-cutter",
+        "product1_2": "falcon2-pro-60w-geschlossener-laser-gravierer-pro-sicherer",
+        "product2": "falcon2-22w-laser-engraver-cutter",
+        "product2_2": "falcon2-40w-laser-engraver-cutter",
+        "product3": "10w-cr-laser-falcon-engraver",
+        "product3_2": "5w-cr-laser-falcon-engraver"
+      }
+    }
+  },
+  "order": [
+    "e8076aa0-ee39-4e17-a4de-a4889be31d62",
+    "creality_2024_05_small_business_de_reGXKz"
+  ]
+}

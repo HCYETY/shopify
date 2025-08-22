@@ -1,0 +1,114 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c": {
+          "type": "paragraph",
+          "settings": {
+            "title": "DATENSCHUTZPOLITIK",
+            "question_1": "Datenschutzerklärung",
+            "answer_1": "<p>Wir nehmen Ihren Datenschutz ernst, und diese Datenschutzerklärung erklärt, wie de.crealityfalcon.com Ihre Informationen sammelt, verwendet, teilt und verarbeitet.</p>",
+            "question_2": "Erhebung und Verwendung personenbezogener Daten",
+            "answer_2": "<p>Personenbezogene Daten sind Informationen, mit denen Sie direkt oder indirekt identifiziert werden können. Zu den personenbezogenen Daten gehören auch anonyme Daten, die mit Informationen verknüpft sind, mit denen Sie direkt oder indirekt identifiziert werden können. Zu den personenbezogenen Daten gehören keine Daten, die unwiderruflich anonymisiert oder aggregiert wurden, sodass wir Sie weder in Kombination mit anderen Informationen noch auf andere Weise identifizieren können.</p>",
+            "question_3": "Förderung von Sicherheit und Schutz",
+            "answer_3": "<p>Hier ist eine Beschreibung der Arten personenbezogener Daten, die wir erfassen können, und wie wir sie verwenden können:\n\nWir halten uns an die Grundsätze der Rechtmäßigkeit, Legitimität und Transparenz, verwenden und verarbeiten die geringstmöglichen Daten innerhalb eines begrenzten Zweckrahmens und ergreifen technische und administrative Maßnahmen, um die Sicherheit der Daten zu schützen. Wir verwenden personenbezogene Daten, um Konten und Benutzeraktivitäten zu verifizieren und um Sicherheit zu fördern, beispielsweise durch die Überwachung von Betrug und die Untersuchung verdächtiger oder potenziell illegaler Aktivitäten oder Verstöße gegen unsere Bedingungen oder Richtlinien. Diese Verarbeitung basiert auf unserem berechtigten Interesse, die Sicherheit unserer Produkte und Dienste zu gewährleisten.\n\nWir verwenden für viele unserer Dienste SSL-Verschlüsselung (Secure Sockets Layer), um die Datenübertragung zu sichern. Wenn ein Browser versucht, eine durch SSL geschützte Website zu besuchen, stellen er und der Webserver durch Schlüsselaustausch eine SSL-Verbindung her. SSL gewährleistet Sicherheit durch die Einrichtung einer verschlüsselten Verbindung.</p><p></p>",
+            "question_4": "Welche persönlichen Daten sammeln wir?",
+            "answer_4": "ⅰ. Von Ihnen bereitgestellte Daten:\n\nWir erfassen die personenbezogenen Daten, die Sie bereitstellen, wenn Sie unsere Produkte und Dienste nutzen oder anderweitig mit uns interagieren, z. B. wenn Sie ein Konto erstellen, uns kontaktieren, an einer Online-Umfrage teilnehmen und unsere Online-Hilfe oder unser Online-Chat-Tool verwenden. Wenn Sie einen Kauf tätigen, erfassen wir im Zusammenhang mit dem Kauf personenbezogene Daten. Zu diesen Daten gehören Ihre Zahlungsdaten, z. B. Ihre Kredit- oder Debitkartennummer und andere Karteninformationen, und andere Konto- und Authentifizierungsinformationen sowie Rechnungs-, Versand- und Kontaktdaten.\n\nⅱ. Daten zur Nutzung unserer Dienste und Produkte:\n\nWenn Sie unsere Websites besuchen, erfassen wir möglicherweise Daten über den von Ihnen verwendeten Gerätetyp, die eindeutige Kennung Ihres Geräts, die IP-Adresse Ihres Geräts, Ihr Betriebssystem, den von Ihnen verwendeten Internetbrowsertyp, Nutzungsinformationen, Diagnoseinformationen und Standortinformationen von oder über die Computer, Telefone oder anderen Geräte, auf denen Sie unsere Produkte oder Dienste installieren oder darauf zugreifen. Sofern verfügbar, können unsere Dienste GPS, Ihre IP-Adresse und andere Technologien verwenden, um den ungefähren Standort eines Geräts zu bestimmen, damit wir unsere Produkte und Dienste verbessern können.\n\nWir verkaufen keine Kontaktinformationen von Benutzern und verwenden keine persönlichen Informationen oder Bilder von Benutzern für Werbezwecke ohne deren Zustimmung.",
+            "question_5": "Wie verwenden wir Ihre persönlichen Daten?",
+            "answer_5": "Im Allgemeinen verwenden wir personenbezogene Daten, um unsere Produkte und Dienstleistungen bereitzustellen, zu verbessern und zu entwickeln, um mit Ihnen zu kommunizieren, Ihnen gezielte Werbung und Dienstleistungen anzubieten und um uns und unsere Kunden zu schützen.\n\nⅰ. Bereitstellung, Verbesserung und Entwicklung unserer Produkte und Dienstleistungen:\n\nWir verwenden personenbezogene Daten, um unsere Produkte, Dienstleistungen und Werbung bereitzustellen, zu verbessern und zu entwickeln. Dies umfasst die Verwendung personenbezogener Daten für Zwecke wie Datenanalyse, Forschung und Audits. Diese Verarbeitung basiert auf unserem berechtigten Interesse, Ihnen Produkte und Dienstleistungen anzubieten und die Geschäftskontinuität sicherzustellen. Wenn Sie an einem Wettbewerb oder einer anderen Werbeaktion teilnehmen, können wir die von Ihnen bereitgestellten personenbezogenen Daten zur Verwaltung dieser Programme verwenden. Für einige dieser Aktivitäten gelten zusätzliche Regeln, die weitere Daten darüber enthalten können, wie wir personenbezogene Daten verwenden. Wir empfehlen Ihnen daher, diese Regeln vor der Teilnahme sorgfältig durchzulesen.\n\nⅱ. Kommunikation mit Ihnen:\n\nVorbehaltlich Ihrer vorherigen ausdrücklichen Zustimmung können wir personenbezogene Daten verwenden, um Ihnen Marketingmitteilungen in Bezug auf unsere eigenen Produkte und Dienstleistungen zu senden, mit Ihnen über Ihr Konto oder Ihre Transaktionen zu kommunizieren und Sie über unsere Richtlinien und Bedingungen zu informieren. Wenn Sie keine E-Mail-Nachrichten mehr zu Marketingzwecken erhalten möchten, kontaktieren Sie uns bitte, um sich abzumelden. Wir können Ihre Daten auch verwenden, um Ihre Anfragen zu bearbeiten und zu beantworten, wenn Sie uns kontaktieren. Vorbehaltlich Ihrer vorherigen ausdrücklichen Zustimmung können wir Ihre persönlichen Daten an Partner von Drittanbietern weitergeben, die Ihnen Marketingnachrichten in Bezug auf ihre Produkte und Dienstleistungen senden können. Vorbehaltlich Ihrer vorherigen ausdrücklichen Zustimmung können wir personenbezogene Daten verwenden, um Ihre Erfahrung mit unseren Produkten und Dienstleistungen und denen von Websites und Anwendungen von Drittanbietern zu personalisieren und die Wirksamkeit unserer Werbekampagnen zu bestimmen.\n\nHINWEIS: Beachten Sie, dass Sie Ihre Zustimmung für alle oben beschriebenen Verwendungen Ihrer Daten, die Ihre vorherige ausdrückliche Zustimmung erfordern, widerrufen können, indem Sie uns kontaktieren.",
+            "question_6": "Definition von „Cookies“",
+            "answer_6": "Cookies sind kleine Textdateien, die zum Speichern von Informationen in Webbrowsern verwendet werden. Cookies werden häufig verwendet, um Kennungen und andere Informationen auf Computern, Telefonen und anderen Geräten zu speichern und zu empfangen. Wir verwenden auch andere Technologien, darunter Daten, die wir in Ihrem Webbrowser oder Gerät speichern, mit Ihrem Gerät verknüpfte Kennungen und andere Software für ähnliche Zwecke. In dieser Cookie-Erklärung bezeichnen wir alle diese Technologien als „Cookies“.",
+            "question_7": "Verwendung von Cookies",
+            "answer_7": "Wir verwenden Cookies, um unsere Produkte und Dienstleistungen bereitzustellen, zu schützen und zu verbessern, beispielsweise indem wir Inhalte personalisieren, Werbung anbieten und messen, das Nutzerverhalten verstehen und ein sichereres Erlebnis bieten. Bitte beachten Sie, dass die spezifischen Cookies, die wir verwenden, je nach den von Ihnen genutzten Websites und Diensten variieren können.",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "paragraph_xYtctB": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Persönliche Daten",
+            "question_1": "Weitergabe personenbezogener Daten",
+            "answer_1": "Wir stellen bestimmte personenbezogene Daten strategischen Partnern zur Verfügung, die mit uns zusammenarbeiten, um unsere Produkte und Dienstleistungen bereitzustellen oder uns bei der Vermarktung gegenüber Kunden zu unterstützen. Personenbezogene Daten werden von uns nur an diese Unternehmen weitergegeben, um unsere Produkte, Dienstleistungen und Werbung bereitzustellen oder zu verbessern; sie werden ohne Ihre vorherige ausdrückliche Zustimmung nicht an Dritte für deren eigene Marketingzwecke weitergegeben.",
+            "question_2": "Offenlegung, Speicherung, Übertragung und Verarbeitung von Daten",
+            "answer_2": "<p>ⅰ. Erfüllung gesetzlicher Verpflichtungen:\n\n\n<br><br>Aufgrund der zwingenden Gesetze des Europäischen Wirtschaftsraums oder des Landes, in dem der Nutzer lebt, bestehen oder sind bestimmte Rechtsakte eingetreten und bestimmte rechtliche Verpflichtungen müssen in Bezug auf die Behandlung der personenbezogenen Daten von EWR-Bürgern erfüllt werden, wenn Sie dort ansässig sind Als Mitglied des Europäischen Wirtschaftsraums (EWR) wird unsere Verarbeitung Ihrer personenbezogenen Daten wie folgt legitimiert: Wenn wir für die Verarbeitung Ihrer personenbezogenen Daten Ihre Einwilligung benötigen, ist diese Verarbeitung gemäß Artikel 6 Absatz 1 der Datenschutz-Grundverordnung gerechtfertigt Verordnung (EU) („DSGVO“).\n\n\n<br><br>ⅱ Zum Zweck einer angemessenen Umsetzung oder Anwendung dieses Artikels:\n\n\n<br><br>Im Falle einer Fusion, Umstrukturierung, Übernahme, eines Joint Ventures, einer Abtretung, Abspaltung, Übertragung oder eines Verkaufs oder einer Veräußerung unseres gesamten Unternehmens oder eines Teils davon können wir personenbezogene Daten an alle unsere verbundenen Unternehmen weitergeben Im Falle eines Konkursverfahrens oder eines ähnlichen Verfahrens können wir sämtliche personenbezogenen Daten an den entsprechenden Dritten weitergeben. Wir können personenbezogene Daten auch offenlegen, wenn wir nach Treu und Glauben entscheiden, dass die Offenlegung angemessenerweise erforderlich ist, um unsere Rechte zu schützen und verfügbare Rechtsmittel durchzusetzen und unsere Bedingungen durchzusetzen und Bedingungen, um Betrug zu untersuchen oder unseren Betrieb oder unsere Benutzer zu schützen.\n\n\n<br><br>ⅲ. Einhaltung gesetzlicher Vorschriften, Sicherheit und Schutz anderer Rechte\n\n\n<br><br>Es kann erforderlich sein – aufgrund von Gesetzen, rechtlichen Verfahren, Rechtsstreitigkeiten und/oder Anfragen von öffentlichen und staatlichen Behörden innerhalb oder außerhalb Ihres Wohnsitzlandes –, dass wir personenbezogene Daten offenlegen, wenn wir dies zu bestimmten Zwecken festlegen B. der nationalen Sicherheit, der Strafverfolgung oder anderer Angelegenheiten von öffentlicher Bedeutung, ist eine Offenlegung erforderlich oder angemessen.</p>",
+            "question_3": "Minderjährige",
+            "answer_3": "<p>Unsere Produkte und Dienstleistungen sind für Erwachsene bestimmt. Dementsprechend erfassen, verwenden oder veröffentlichen wir wissentlich keine Daten von Kindern unter 16 Jahren. Wenn wir erfahren, dass wir personenbezogene Daten eines Kindes unter 16 Jahren oder dem entsprechenden Mindestalter je nach Gerichtsbarkeit erfasst haben, ergreifen wir Maßnahmen, um die Daten so schnell wie möglich zu löschen. Bitte kontaktieren Sie uns umgehend, wenn Sie feststellen, dass ein Kind unter 16 Jahren uns personenbezogene Daten zur Verfügung gestellt hat.</p>",
+            "question_4": "Definition von \"Cookies\"",
+            "answer_4": "<p>Cookies sind kleine Textstücke, die verwendet werden, um Informationen auf Webbrowsern zu speichern. Cookies werden weit verbreitet verwendet, um Identifikatoren und andere Informationen auf Computern, Telefonen und anderen Geräten zu speichern und zu empfangen. Wir verwenden auch andere Technologien, einschließlich Daten, die wir auf Ihrem Webbrowser oder Gerät speichern, Identifikatoren, die mit Ihrem Gerät verknüpft sind, und andere Software, zu ähn</p>",
+            "question_5": "Third-Party Websites and Services",
+            "answer_5": "<p>When a customer operates a link to a third-party website that has a relationship with us, we do not assume any obligation or responsibility for personal data given thereafter because of the third party's privacy policy. Our websites, products, and services may contain links to or the ability for you to access third-party websites, products, and services. We are not responsible for the privacy practices employed by those third parties, nor are we responsible for the information or content their products and services contain. This Privacy Statement applies solely to data collected by us through our products and services. We encourage you to read the privacy policies of any third party before proceeding to use their websites, products, or services.</p>",
+            "question_6": "Ihre Rechte",
+            "answer_6": "Wir unternehmen angemessene Schritte, um sicherzustellen, dass Ihre personenbezogenen Daten richtig, vollständig und aktuell sind. Sie haben das Recht, auf die von uns erhobenen personenbezogenen Daten zuzugreifen, diese zu korrigieren oder zu löschen. Sie sind außerdem jederzeit berechtigt, die weitere Verarbeitung Ihrer personenbezogenen Daten einzuschränken oder ihr zu widersprechen. Sie haben das Recht, Ihre personenbezogenen Daten in einem strukturierten und standardisierten Format zu erhalten. Sie können bei der zuständigen Datenschutzbehörde eine Beschwerde bezüglich der Verarbeitung Ihrer personenbezogenen Daten einreichen. Um die Privatsphäre und die Sicherheit Ihrer personenbezogenen Daten zu schützen, können wir Daten von Ihnen anfordern, damit wir Ihre Identität und Ihr Recht auf Zugriff auf diese Daten bestätigen sowie die von uns gespeicherten personenbezogenen Daten suchen und Ihnen bereitstellen können. Es gibt Fälle, in denen geltende Gesetze oder behördliche Anforderungen es uns erlauben oder vorschreiben, die Bereitstellung einiger oder aller von uns gespeicherten personenbezogenen Daten zu verweigern oder diese zu löschen. Sie können uns kontaktieren, um Ihre Rechte auszuüben. Wir werden Ihre Anfrage innerhalb eines angemessenen Zeitrahmens oder, falls dies nicht möglich ist, in weniger als 30 Tagen beantworten.",
+            "question_7": "Datensicherheit, -integrität und -aufbewahrung",
+            "answer_7": "Wir verwenden angemessene technische, administrative und physische Sicherheitsmaßnahmen, um Ihre Daten vor unbefugtem Zugriff zu schützen und zu verhindern und die von uns erfassten Daten korrekt zu verwenden. Wir bewahren Ihre personenbezogenen Daten so lange auf, wie dies zur Erfüllung der in dieser Datenschutzrichtlinie genannten Zwecke erforderlich ist, es sei denn, eine längere Aufbewahrungsfrist ist gesetzlich vorgeschrieben oder zulässig.",
+            "question_8": "Änderungen dieser Datenschutzerklärung",
+            "answer_8": "Datenaufbewahrung\n<br>Wenn Sie über die Website eine Bestellung aufgeben, bewahren wir Ihre Bestellinformationen für unsere Unterlagen auf, es sei denn, Sie bitten uns, diese Informationen zu löschen.\n<br>Klarna-Datenschutzrichtlinie\nAb sofort steht sowohl auf unserer Website als auch in der App eine neue Einkaufsmöglichkeit zur Verfügung, mit der Sie sofort kaufen und in 4 zinslosen Raten bezahlen oder in 30 Tagen ab Kaufdatum mit <br>Klarna bezahlen können.\n<br>Wenn Sie weitere Fragen zu Klarna haben, besuchen Sie bitte https://www.klarna.com/international/privacy-policy/",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c",
+        "paragraph_xYtctB"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "1170",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "show_faqs_filter": true,
+        "faqs_text": "<p>Unten sind einige häufige Anliegen unserer Kunden, bevor sie das Thema kaufen.</p>\n<p>Wenn Sie andere Fragen haben, senden Sie diese bitte einfach an <a href=\"mailto:example@domain.com\" style=\"text-decoration: underline;\">de.support@crealityfalcon.com</a>.</p>",
+        "faqs_message_heading": "Brauchen Sie Hilfe?",
+        "faqs_message_text": "<p style=\"line-height: 30px; margin-bottom: 0px;margin-top: 5px;\">\n<span class=\"icon\">\n<svg style=\"position: relative; top: 0px; width: 20px;height: 20px\" aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"comment-alt-dots\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\" class=\"svg-inline--fa fa-comment-alt-dots fa-w-16 fa-7x\"><path fill=\"currentColor\" d=\"M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zM128 240c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z\" class=\"\"></path></svg>\n</span>\n<span style=\"margin-left: 7px\">CALL US：+86 400-613-3882 <a href=\"tel:%20%20091-123-ELLA\"></a></span>\n</p>\n<p style=\"line-height:30px; margin-top: 0\">\n<span class=\"icon\">\n<svg style=\"width: 20px;height: 20px\" aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"envelope\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\" class=\"svg-inline--fa fa-envelope fa-w-16 fa-7x\"><path fill=\"currentColor\" d=\"M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z\" class=\"\"></path></svg></span>\n<span style=\"margin-left: 7px\"><a href=\"mailto:de.support@crealityfalcon.com\">de.support@crealityfalcon.com</a></span>\n</p>\n<br><span>\n<br> Geschäftszeiten:\nMonday-Friday 9:00-18:00 BJT\n<br><br>\nName der Firma: Shenzhen Chuangxiang 3D Technology Co., Ltd.\n<br>Firmennummer: 91440300094231378E\n<br>Firmenanschrift: Room 1808, Jinxiu Hongdu Building, Meilong Avenue, Xinniu Community, Minzhi Street, Longhua District, Shenzhen (office address); Factory Building No. 156, Huawang Road, Langkou Community, Dalang Street, Longhua District, Shenzhen (production address)\n<br>\nWenn wir nicht verfügbar sind, senden Sie uns eine E-Mail und wir werden uns innerhalb von 20-36 Stunden bei Ihnen melden!</span>\n<br> \n<br>\nWenn Sie weitere Zweifel zur Verwendung der Graviermaschine haben, empfehlen wir Ihnen, sich direkt unserer Community anzuschließen und Hilfe von den Benutzern der Maschine zu suchen.",
+        "message_method_icon_1": "shopify://shop_images/facebook-notification-gift-in-stocking.jpg",
+        "message_method_link_1": "shopify://pages/facebook-group",
+        "message_method_text_1": "Join Our Group",
+        "message_method_link_2": "https://www.facebook.com/groups/falconlaserengraver/",
+        "message_method_text_2": "Join Our Group",
+        "contact_content_text": "Können Sie keine zufriedenstellenden Antworten finden?",
+        "contact_text": "Kontakt zum Support",
+        "contact_link": "shopify://pages/contact",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#14a9de",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#e93d29",
+        "contact_color_bg_hover": "#e93d29",
+        "contact_color_bg_gradient_hover": ""
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

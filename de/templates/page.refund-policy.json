@@ -1,0 +1,114 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Rückgaberecht",
+            "question_1": "Wie erhalte ich einen Kundendienst?",
+            "answer_1": "<p>CrealityFalcon garantiert, dass die von Ihnen erworbenen CrealityFalcon-Produkte während der Garantiezeit frei von Material- und Verarbeitungsfehlern sind, unter normaler Verwendung.</p>\n\n<p></p>Wenn ein Produkt innerhalb der Garantiezeit seine garantierte Funktion nicht erfüllt, wenden Sie sich bitte an den Kundendienst von CrealityFalcon, um entsprechende Unterstützung zu erhalten.<p></p>\n<br>Teilen Sie uns mit, was wir für Sie tun können, indem Sie uns Ihre Bestellnummer, Informationen zum Defekt sowie Bilder oder Videos per E-Mail schicken.",
+            "question_2": "Kontaktinformationen für den Kundenservice:",
+            "answer_2": "<p>E-Mail: de.support@crealityfalcon.com</p><p>\n\n</p>Teilen Sie uns bitte Ihre Bestellnummer, Fehlerinformationen sowie Abbildungen oder Videos des Problems per E-Mail mit, damit wir Ihnen bestmöglich helfen können.<p></p><p>\n\n</p><p>In einigen Regionen bietet CrealityFalcon möglicherweise keinen Kundenservice an, und die Richtlinien können von Standort zu Standort variieren. Zusätzliche Gebühren können für Dienstleistungen außerhalb des üblichen Leistungsumfangs anfallen.</p><p>\n\n</p>",
+            "question_3": "Unterstützung durch CrealityFalcon",
+            "answer_3": "<p>Wenn Sie sich an den technischen Support von CrealityFalcon wenden, beschreiben Sie bitte ausführlich das Problem Ihres Produkts und geben Sie dabei Produktinformationen, Kaufdetails, Fehlerbeschreibungen sowie Abbildungen/Videos an.</p><p>\n\n</p><p>Ein Techniker des technischen Supports wird versuchen, Ihr Problem telefonisch, per E-Mail oder mit Fernunterstützung zu diagnostizieren und zu lösen.</p><p>\n\n</p><p>Bei Kundenserviceleistungen wie Rückgabe, Umtausch und Garantie übernimmt CrealityFalcon keine Transportkosten, sofern der Fehler nicht beim Drucker selbst liegt. Und wenn es nach China zurückgeschickt werden muss, übernimmt Creality Falcon nicht die möglichen Steuern.</p><p>\n\n</p><p>Eventuell sind Sie jedoch für die Versand- und Rücksendekosten des Pakets verantwortlich, wenn Sie es nach Erhalt (im Originalzustand) nicht behalten möchten oder aus persönlichen Gründen zurücksenden.</p><p></p>",
+            "question_4": "Rückerstattungsprozess",
+            "answer_4": "<p></p>Nach der Rücksendung des Produkts benötigen wir 15 Tage, um die Rückerstattung zu bearbeiten, nachdem unser Abwicklungszentrum die Ware erhalten hat. Es dauert dann 3 bis 5 Werktage, bis der Rückerstattungsbetrag auf Ihrem Konto erscheint.\n<p></p>\n<p></p>CrealityFalcon organisiert den Kundenservice je nach Art der Produktgarantie. Die spezifischen Bedingungen sind in der jeweiligen Kundenservicekategorie aufgeführt.<p></p>",
+            "question_5": "Nicht abgedeckte Fälle",
+            "answer_5": "<p></p>Kollisionen und Verbrennungsunfälle, die durch menschliche Fehler und nicht produktbezogene Qualitätsprobleme verursacht wurden.<p></p>\n\n<p></p>Schäden aufgrund unbefugter Änderungen, Demontage oder anderer nicht autorisierter Eingriffe, wie im inoffiziellen Handbuch angegeben.<p></p>\n\n<p></p>Schäden durch unsachgemäßen Einbau, Verwendung oder Betrieb, der nicht den Anweisungen des Handbuchs entspricht.<p></p>\n\n<p></p>Schäden durch Reparaturen oder Installationen ohne offizielle Anweisungen und Anleitungen.<p></p>\n\n<p></p>Probleme durch die Verwendung von Drittanbieterkomponenten, die nicht von CrealityFalcon zertifiziert sind.<p></p>\n\n<p></p>Fehlfunktionen oder Schäden durch Produkte von Drittanbietern.<p></p>\n\n<p></p>Technische oder sonstige Unterstützung, die nicht im Rahmen des Produkts angeboten wird.<p></p>\n\n<p></p>Produkte oder Teile mit geänderten oder entfernten Identifikationsetiketten.<p></p>",
+            "question_6": "Sie können die Rückgabe beantragen, wenn die folgenden Bedingungen erfüllt sind",
+            "answer_6": "√ Innerhalb von 14 natürlichen Tagen nach Erhalt der Ware durch den Kunden sind die Produktverpackung, das Zubehör, die Geschenke und die Anweisungen vollständig, es liegen keine künstlichen Schäden vor und es wurde nicht zur Verwendung aktiviert, was keine Auswirkungen auf den Zweitverkauf hat;\n<br>√ Innerhalb von 14 natürlichen Tagen nach Erhalt der Ware durch den Kunden wird festgestellt, dass das Produkt einen Leistungsmangel aufweist, der nicht künstlich beschädigt ist.",
+            "question_7": "Wir haben das Recht, den Rückgabeantrag des Kunden in folgenden Fällen abzulehnen",
+            "answer_7": "× Wenn die Ersatzanfrage mehr als 30 natürliche Tage nach dem Eingangsdatum gestellt wird;\n<br>× Beim Umtausch von Waren können keine rechtsgültigen Kaufbelege oder Dokumente vorgelegt werden oder die Dokumente sind gefälscht oder verändert;\n<br>× Das Ersatzprodukt ist unvollständig oder das Erscheinungsbild ist aus künstlichen Gründen beschädigt.\n<br>× Von der technischen Supportabteilung von CrealityFalcon getestet, es gibt kein Qualitätsproblem;\n<br>× Kollisionen und Verbrennungen, die durch nicht selbst verursachte Qualitätsprobleme verursacht werden, sowie Produktqualitätsprobleme, die durch vom Menschen verursachte, nicht autorisierte Änderungen, Eindringen von Fremdkörpern (Wasser usw.), fehlerhafte Installation oder Nichtbeachtung der Vorschriften verursacht werden Anweisungen im Handbuch;\n<br>× Etiketten, Maschinenseriennummern, wasserfeste Markierungen, Fälschungsschutzmarkierungen usw. zerreißen oder verändern;\n<br>× Produktschäden aufgrund unvermeidbarer Faktoren wie Feuer, Überschwemmung und anderer höherer Gewalt;\n<br>× Nach der Kontaktaufnahme mit CrealityFalcon zur Bestätigung des Umtauschservices wird der entsprechende Artikel nicht innerhalb von 7 natürlichen Tagen versendet;\n<br>× Wenn die Ware durch den Transport beschädigt wird, schlagen sie einen Umtausch der Ware vor, legen jedoch keine vom Transportunternehmen ausgestellte Frachtschadensbescheinigung vor;\n<br>× Andere in der Richtlinie beschriebene Situationen.",
+            "question_8": "Ein Umtausch kann beantragt werden, wenn eine der folgenden Bedingungen ISM ET vorliegt",
+            "answer_8": "√ Der Kunde stellt innerhalb von 30 natürlichen Tagen nach Erhalt der Ware fest, dass das Produkt während des Transports beschädigt wurde, und kann die vom Transportunternehmen bereitgestellte Bescheinigung über die Beschädigung der Ware vorlegen;\n<br>√ Der Kunde stellt innerhalb von 30 natürlichen Tagen nach Erhalt der Ware fest, dass das Produkt in einem oder mehreren wichtigen Aspekten erheblich von der ursprünglichen Produktbeschreibung abweicht;\n<br>√ Innerhalb von 30 natürlichen Tagen nach Erhalt der Ware durch den Kunden wird festgestellt, dass das Produkt einen Leistungsmangel aufweist, der nicht künstlich beschädigt ist.",
+            "question_9": "Wir haben das Recht, den Umtauschantrag des Kunden in den folgenden Fällen abzulehnen:",
+            "answer_9": "× Wenn die Anforderung für einen Austausch mehr als 30 natürliche Tage nach Erhalt erfolgt;\n<br>× Beim Austausch von Waren können der rechtsgültige Kaufnachweis oder die Dokumente nicht vorgelegt werden oder die Dokumente sind gefälscht oder verändert;\n<br>× Das Austauschprodukt ist unvollständig oder das Erscheinungsbild ist aus künstlichen Gründen beschädigt;\n<br>× Von der technischen Supportabteilung von CrealityFalcon getestet, es gibt kein Qualitätsproblem; × Kollisionen und Verbrennungen aufgrund von Qualitätsproblemen, die nicht mit der Qualität zusammenhängen, sowie Produktqualitätsprobleme aufgrund von unbefugten Änderungen durch den Menschen, Eindringen von Fremdkörpern (Wasser usw.), falscher Installation oder Nichtverwendung und -bedienung gemäß den Anweisungen im Handbuch;\n<br>× Zerreißen oder Verändern von Etiketten, Maschinenseriennummern, wasserfesten Markierungen, Fälschungsschutzmarkierungen usw.;\n<br>× Produktschäden aufgrund unvermeidbarer Faktoren wie Feuer, Überschwemmung und anderer höherer Gewalt; × Nach Kontaktaufnahme mit CrealityFalcon zur Bestätigung des Austauschservices wird der entsprechende Artikel nicht innerhalb von 7 natürlichen Tagen versendet;\n<br>× Wenn die Waren durch den Transport beschädigt wurden, bieten sie einen Umtausch der Waren an, können jedoch kein vom Transportunternehmen ausgestelltes Zertifikat für Frachtschäden vorlegen;\n<br>× Andere in der Police beschriebene Situationen.",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "paragraph_Y8nYBJ": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Beachten",
+            "question_1": "Werden die Versandkosten von der Rückerstattung abgezogen?",
+            "answer_1": "Wenn zum Zeitpunkt des Kaufs Versandkosten anfallen, werden die zum Zeitpunkt des Kaufs angefallenen Versandkosten von der Rückerstattung abgezogen. Wenn zum Zeitpunkt des Kaufs keine Versandkosten angefallen sind, erfolgt eine vollständige Rückerstattung.",
+            "question_2": "",
+            "answer_2": "",
+            "question_3": "",
+            "answer_3": "",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c",
+        "paragraph_Y8nYBJ"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "1170",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "show_faqs_filter": true,
+        "faqs_text": "<p>Unten sind einige häufige Anliegen unserer Kunden, bevor sie das Thema kaufen.</p>\n<p>Wenn Sie andere Fragen haben, senden Sie diese bitte einfach an <a href=\"mailto:example@domain.com\" style=\"text-decoration: underline;\">de.support@crealityfalcon.com</a>.</p>",
+        "faqs_message_heading": "Brauchen Sie Hilfe?",
+        "faqs_message_text": "<p style=\"line-height: 30px; margin-bottom: 0px;margin-top: 5px;\">\n<span class=\"icon\">\n<svg style=\"position: relative; top: 0px; width: 20px;height: 20px\" aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"comment-alt-dots\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\" class=\"svg-inline--fa fa-comment-alt-dots fa-w-16 fa-7x\"><path fill=\"currentColor\" d=\"M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zM128 240c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z\" class=\"\"></path></svg>\n</span>\n<span style=\"margin-left: 7px\">CALL US：+86 400-613-3882 <a href=\"tel:%20%20091-123-ELLA\"></a></span>\n</p>\n<p style=\"line-height:30px; margin-top: 0\">\n<span class=\"icon\">\n<svg style=\"width: 20px;height: 20px\" aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"envelope\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\" class=\"svg-inline--fa fa-envelope fa-w-16 fa-7x\"><path fill=\"currentColor\" d=\"M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z\" class=\"\"></path></svg></span>\n<span style=\"margin-left: 7px\"><a href=\"mailto:de.support@crealityfalcon.com\">de.support@crealityfalcon.com</a></span>\n</p>\n<br><span>\n<br> Geschäftszeiten:\nMonday-Friday 9:00-18:00 BJT\n<br><br>\nName der Firma: Shenzhen Chuangxiang 3D Technology Co., Ltd.\n<br>Firmennummer: 91440300094231378E\n<br>Firmenanschrift: Room 1808, Jinxiu Hongdu Building, Meilong Avenue, Xinniu Community, Minzhi Street, Longhua District, Shenzhen (office address); Factory Building No. 156, Huawang Road, Langkou Community, Dalang Street, Longhua District, Shenzhen (production address)\n<br>\nWenn wir nicht verfügbar sind, senden Sie uns eine E-Mail und wir werden uns innerhalb von 20-36 Stunden bei Ihnen melden!</span>\n<br> \n<br>\nWenn Sie weitere Zweifel zur Verwendung der Graviermaschine haben, empfehlen wir Ihnen, sich direkt unserer Community anzuschließen und Hilfe von den Benutzern der Maschine zu suchen.",
+        "message_method_icon_1": "shopify://shop_images/facebook-notification-gift-in-stocking.jpg",
+        "message_method_link_1": "https://www.facebook.com/groups/falconlaserengraver/",
+        "message_method_text_1": "Kontakt zum Support",
+        "message_method_link_2": "https://www.facebook.com/groups/falconlaserengraver/",
+        "message_method_text_2": "Beitritt zur Gruppe",
+        "contact_content_text": "Können Sie keine zufriedenstellenden Antworten finden?",
+        "contact_text": "Kontakt zum Support",
+        "contact_link": "shopify://pages/contact",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#14a9de",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#e93d29",
+        "contact_color_bg_hover": "#e93d29",
+        "contact_color_bg_gradient_hover": ""
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
