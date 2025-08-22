@@ -168,7 +168,7 @@ body.show-mobile-options {
 }
 
 /* 添加额外的响应式优化 */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
     .sticky-product-mobile .sticky-product-mobile-content {
         max-height: calc(85vh - 100px); 
     }
