@@ -577,6 +577,13 @@
 
 /* 自定义分期付款样式 */
 .shop-pay-installments {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+.shop-pay-installments {
     font-size: 14px;
     line-height: 1.4;
 }
