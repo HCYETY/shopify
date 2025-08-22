@@ -169,7 +169,7 @@
     "type_page_title_font_size": 36,
     "type_page_title_font_weight": "700",
     "type_page_title_text_transform": "capitalize",
-    "favicon": "shopify://shop_images/crealityfalcon-brand-logo_6ad20140-b792-4d25-8278-f1c78ee02f50.jpg",
+    "favicon": "shopify://shop_images/1__1_20.jpg",
     "show_effect_close": true,
     "show_global_checkbox": false,
     "global_checkbox_text": "I agree with",
@@ -882,7 +882,7 @@
       },
       "3858362188138068296": {
         "type": "shopify://apps/subscribe/blocks/star_rating/1efc7024-8d78-4631-9f82-48f49971ccd0",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "url": "https://support.creality.com/?site=FALCON_AU"
         }
