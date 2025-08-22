@@ -871,13 +871,6 @@
         "disabled": true,
         "settings": {}
       },
-      "3858362188138068296": {
-        "type": "shopify://apps/subscribe/blocks/star_rating/1efc7024-8d78-4631-9f82-48f49971ccd0",
-        "disabled": false,
-        "settings": {
-          "url": "https://support.creality.com/?site=FALCON_EU"
-        }
-      },
       "13057235355128461448": {
         "type": "shopify://apps/cozy-country-redirect/blocks/CozyStaticScript/7b44aa65-e072-42a4-8594-17bbfd843785",
         "disabled": false,
@@ -887,6 +880,13 @@
         "type": "shopify://apps/hextom-translate-and-currency/blocks/app-block/b927a799-be04-4b97-9efb-5c8f0290a68e",
         "disabled": false,
         "settings": {}
+      },
+      "3858362188138068296": {
+        "type": "shopify://apps/subscribe/blocks/star_rating/1efc7024-8d78-4631-9f82-48f49971ccd0",
+        "disabled": true,
+        "settings": {
+          "url": "https://support.creality.com/?site=FALCON_EU"
+        }
       }
     }
   }
