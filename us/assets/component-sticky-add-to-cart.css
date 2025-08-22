@@ -569,9 +569,32 @@
     }
 }
 
+/* 自定义分期付款样式 */
+.shop-pay-installments {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.installment-text {
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.financing-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: underline;
+}
+
+.financing-link:hover {
+    color: var(--btn-1-bg);
+}
+
+
 /* 分期付款样式 - 新增 */
 .installment {
-    margin: 8px 0;
     font-size: 14px;
     line-height: 1.4;
 }

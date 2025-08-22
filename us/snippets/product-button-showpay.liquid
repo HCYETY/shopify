@@ -1,5 +1,31 @@
-{%- assign product_form_installment_id = 'product-form-installment-' | append: product.id -%}
-{%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
-    <input type="hidden" name="id" value="{{ current_variant.id }}">
-    {{ form | payment_terms }}
-{%- endform -%}
+
+{%- if product.available and current_variant.price > 0 -%}
+    {%- assign product_form_installment_id = 'product-form-installment-' | append: product.id -%}
+    {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
+        <input type="hidden" name="id" value="{{ current_variant.id }}">
+        <div class="shop-pay-installments">
+            <span class="installment-text">
+                <div class="financing-link" onclick="simulateCheckPurchasingPower();">
+                    Get it now, pay later
+                </div>
+            </span>
+        </div>
+        <div style="display: none;">
+            {{ form | payment_terms }}
+        </div>
+    {%- endform -%}
+{%- endif -%}
+
+<script>
+function simulateCheckPurchasingPower() {
+    const shopifyPaymentTerms = document.querySelector('shopify-payment-terms');
+    if (shopifyPaymentTerms && shopifyPaymentTerms.shadowRoot) {
+        const button = shopifyPaymentTerms.shadowRoot.querySelector('#shopify-installments-cta');
+        if (button) {
+            button.click();
+            return;
+        }
+    }
+    return false;
+}
+</script>
