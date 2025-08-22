@@ -197,7 +197,7 @@
         "main_image_arrows_desktop": true,
         "main_image_arrows_mobile": true,
         "main_image_counter_mobile": true,
-        "main_image_enable_parallax_mb": false,
+        "main_image_enable_parallax_mb": true,
         "main_image_show_zoom_icon_mb": true,
         "main_image_position": "left",
         "main_image_layout": "1",

@@ -24,7 +24,7 @@
         "item_bgcolor_url": "",
         "font_size": 14,
         "item_bgcolor_pd_tb": 9,
-        "item_title": "Best Prices  · Local Shipping· Great Support – UK Official Web",
+        "item_title": "Best Deal  · Local Shipping· Great Support – UK Official Web",
         "item_title_color": "#ffffff",
         "item_btn_text": "",
         "item_btn_url": "",
@@ -134,21 +134,89 @@
     },
     "home_s_header_rXULBG": {
       "type": "home-s-header",
+      "blocks": {
+        "custom_block_one_DBzydE": {
+          "type": "custom_block_one",
+          "settings": {
+            "option_image_one": "shopify://shop_images/20250822-104630.jpg",
+            "option_title_one": "Firmware & User Manual",
+            "option_subtitle_one": "",
+            "option_link_one": "https://uk.crealityfalcon.com/pages/download"
+          }
+        },
+        "custom_block_one_kFxF8k": {
+          "type": "custom_block_one",
+          "settings": {
+            "option_image_one": "shopify://shop_images/20250822-104620.jpg",
+            "option_title_one": "Free Design Software",
+            "option_subtitle_one": "",
+            "option_link_one": "https://webapp.craftseek.com/?utm_source=Falconsite&utm_medium=Guide&utm_campaign=regular#/download"
+          }
+        },
+        "custom_block_one_py4Ff8": {
+          "type": "custom_block_one",
+          "settings": {
+            "option_image_one": "shopify://shop_images/20250822-104626.jpg",
+            "option_title_one": "Design Files",
+            "option_subtitle_one": "",
+            "option_link_one": "https://webapp.craftseek.com/?utm_source=Falconsite&utm_medium=Guide&utm_campaign=regular#/category?categoryId="
+          }
+        }
+      },
+      "block_order": [
+        "custom_block_one_DBzydE",
+        "custom_block_one_kFxF8k",
+        "custom_block_one_py4Ff8"
+      ],
       "settings": {
         "menu": "main-menu-1",
         "logo": "shopify://shop_images/crealityfalcon-logo-png.png",
-        "sale_page_one": "",
+        "sale_page_one": "Download",
         "sale_page_two": "",
         "sale_page_three": ""
       }
     },
     "home_s_header_mobile_qF6FgN": {
       "type": "home-s-header-mobile",
+      "blocks": {
+        "custom_block_one_zGCwyx": {
+          "type": "custom_block_one",
+          "settings": {
+            "option_image_one": "shopify://shop_images/20250822-104630.jpg",
+            "option_title_one": "Firmware & User Manual",
+            "option_subtitle_one": "",
+            "option_link_one": "https://uk.crealityfalcon.com/pages/download"
+          }
+        },
+        "custom_block_one_k6nPwG": {
+          "type": "custom_block_one",
+          "settings": {
+            "option_image_one": "shopify://shop_images/20250822-104620.jpg",
+            "option_title_one": "Free Design Software",
+            "option_subtitle_one": "",
+            "option_link_one": "https://webapp.craftseek.com/?utm_source=Falconsite&utm_medium=Guide&utm_campaign=regular#/download"
+          }
+        },
+        "custom_block_one_RmkW6K": {
+          "type": "custom_block_one",
+          "settings": {
+            "option_image_one": "shopify://shop_images/20250822-104626.jpg",
+            "option_title_one": "Design Files",
+            "option_subtitle_one": "",
+            "option_link_one": "https://webapp.craftseek.com/?utm_source=Falconsite&utm_medium=Guide&utm_campaign=regular#/category?categoryId="
+          }
+        }
+      },
+      "block_order": [
+        "custom_block_one_zGCwyx",
+        "custom_block_one_k6nPwG",
+        "custom_block_one_RmkW6K"
+      ],
       "name": "Home S Header mobile 顶部导航栏",
       "settings": {
         "menu": "main-menu-1",
         "logo": "shopify://shop_images/2_c909e4cb-d4dc-4121-a3f5-38d42ba22f65.png",
-        "sale_page_one": "",
+        "sale_page_one": "Download",
         "sale_page_two": "",
         "sale_page_three": ""
       }
