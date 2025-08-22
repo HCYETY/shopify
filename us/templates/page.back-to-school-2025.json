@@ -1556,6 +1556,7 @@
       "blocks": {
         "heading_ywGnY7": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Back to School Event Details",
             "heading_size": 30,
@@ -1567,7 +1568,7 @@
         "text_TY7P6e": {
           "type": "text",
           "settings": {
-            "text": "<h3 style=\"font-size:18px; color:#111; margin-bottom:10px;\">🎓 Back to School Event Details</h3>\n\n<div style=\"text-align: left; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333;\">\n\n  <p><strong style=\"line-height:2;\">1. Limited-Time Offers</strong><br>\n  Promotions valid from <strong>23 Aug. to 31 Aug. 2025</strong> on select products. Available while supplies last. No price adjustments for prior purchases.</p>\n  \n  <p><strong style=\"line-height:2;\">2. Gift Card Terms</strong><br>\n  Gift cards will be delivered via email as virtual cards.<br>\n  Valid for all <strong>Creality Falcon</strong> products in stock.</p>\n  \n  <p><strong style=\"line-height:2;\">3. Shipping & Returns</strong><br>\n  Over <strong>$49.99</strong>, free US shipping.<br>\n  All purchases follow our  \n  <a href=\"https://www.crealityfalcon.com/policies/refund-policy\" style=\"color: #A9CDF9; text-decoration: none;\">Refund Policy</a>.\n  </p>\n\n  <p><strong style=\"line-height:2;\">4. Price Guarantee</strong><br>\n  If an item’s price drops within <strong>30 days</strong> of purchase, please contact us and we’ll refund the difference.</p>\n  \n  <p><strong style=\"line-height:2;\">5. Policy Changes</strong><br>\n  Creality Falcon reserves the right to modify or cancel this promotion at any time without notice.</p>\n</div>",
+            "text": "<h3 style=\"font-size:20px; color:#111; margin-bottom:10px; line-height:1.6;\">🎓 Back to School Event Details</h3>\n\n<div style=\"text-align: left; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333;\">\n\n  <p><strong style=\"line-height:2;\">1. Limited-Time Offers</strong><br>\n  Promotions valid from <strong>23 Aug. to 31 Aug. 2025</strong> on select products. Available while supplies last. No price adjustments for prior purchases.</p>\n  \n  <p><strong style=\"line-height:2;\">2. Gift Card Terms</strong><br>\n  Gift cards will be delivered via email as virtual cards.<br>\n  Valid for all <strong>Creality Falcon</strong> products in stock.</p>\n  \n  <p><strong style=\"line-height:2;\">3. Shipping & Returns</strong><br>\n  Over <strong>$49.99</strong>, free US shipping.<br>\n  All purchases follow our  \n  <a href=\"https://www.crealityfalcon.com/policies/refund-policy\" style=\"color: #4D9BFA; text-decoration: none;\">Refund Policy</a>.\n  </p>\n\n  <p><strong style=\"line-height:2;\">4. Price Guarantee</strong><br>\n  If an item’s price drops within <strong>30 days</strong> of purchase, please contact us and we’ll refund the difference.</p>\n  \n  <p><strong style=\"line-height:2;\">5. Policy Changes</strong><br>\n  Creality Falcon reserves the right to modify or cancel this promotion at any time without notice.</p>\n</div>",
             "text_size": 16,
             "text_line_height": 1,
             "margin_top_text": 20,
@@ -1578,19 +1579,19 @@
         "button_URNjxK": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Visit Store",
             "margin_top_button": 30,
-            "button_link": "",
-            "button_color": "#fff",
+            "button_link": "https://www.crealityfalcon.com/collections/engravers",
+            "button_color": "#000000",
             "enable_underline_button": false,
-            "button_border_color": "#000",
-            "button_bg_color": "#000",
-            "button_bg_gradient": "",
-            "button_color_hover": "#000",
-            "button_border_color_hover": "#000",
-            "button_bg_color_hover": "#fff",
+            "button_border_color": "#a9cdf9",
+            "button_bg_color": "#6faffd",
+            "button_bg_gradient": "linear-gradient(357deg, rgba(115, 171, 243, 1) 13%, rgba(253, 253, 253, 1) 98%)",
+            "button_color_hover": "#000000",
+            "button_border_color_hover": "#dcecffff",
+            "button_bg_color_hover": "#6faffd",
             "button_bg_gradient_hover": "",
-            "button_width": "270px"
+            "button_width": "150px"
           }
         }
       },
@@ -1601,7 +1602,7 @@
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "container": "1170",
+        "container": "container",
         "padding_full_width": 0,
         "enable_border_top": false,
         "enable_border_bottom": false,
