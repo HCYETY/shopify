@@ -856,13 +856,6 @@
           "czcrd_custom_css": ""
         }
       },
-      "3858362188138068296": {
-        "type": "shopify://apps/subscribe/blocks/star_rating/1efc7024-8d78-4631-9f82-48f49971ccd0",
-        "disabled": false,
-        "settings": {
-          "url": "https://support.creality.com/?site=FALCON_UK"
-        }
-      },
       "5090109986002810125": {
         "type": "shopify://apps/mag-form-builder/blocks/formBuilder/a1074dc9-da75-4be4-856f-aa55cf4ede25",
         "disabled": false,
@@ -921,6 +914,13 @@
           "enable_reload_on_bundle_auto_match": true,
           "use_h2_header": true,
           "match_cart_discount_title": true
+        }
+      },
+      "3858362188138068296": {
+        "type": "shopify://apps/subscribe/blocks/star_rating/1efc7024-8d78-4631-9f82-48f49971ccd0",
+        "disabled": true,
+        "settings": {
+          "url": "https://support.creality.com/?site=FALCON_UK"
         }
       }
     }

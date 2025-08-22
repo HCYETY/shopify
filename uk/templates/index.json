@@ -29,6 +29,26 @@
               "type": "home-banner-card-big",
               "name": "Home Banner Card Big",
               "settings": {
+                "image": "shopify://shop_images/1880X600_UK_38834ad0-256c-4b01-ae8d-9b868b914b5f.jpg",
+                "image_mobile": "shopify://shop_images/957X1050_UK_b9019ee2-6246-4705-b260-c0a58dee02f6.jpg",
+                "link": "shopify://pages/promotion-sale",
+                "subtitle": "",
+                "subtitle_color": "#f96d32",
+                "subtitle_color_mobile": "#f96d32",
+                "title": "",
+                "title_color": "#ffffff",
+                "title_color_mobile": "#ffffff",
+                "desc": "",
+                "desc_color": "#ffffff",
+                "desc_color_mobile": "#ffffff",
+                "btn_text": ""
+              },
+              "blocks": {}
+            },
+            "home_banner_card_big_R7fF4r": {
+              "type": "home-banner-card-big",
+              "name": "Home Banner Card Big",
+              "settings": {
                 "image": "shopify://shop_images/20250806-100210.jpg",
                 "image_mobile": "shopify://shop_images/20250806-100203.jpg",
                 "link": "shopify://products/falcon-a1-pro-20w-dual-laser-engraver",
@@ -105,6 +125,7 @@
           },
           "block_order": [
             "home_banner_card_big_n6yPKx",
+            "home_banner_card_big_R7fF4r",
             "home_banner_card_big_dargAH",
             "home_banner_card_big_UfCy7i",
             "home_banner_card_big_9DChDp"
@@ -605,7 +626,7 @@
             "home_gallery_card_6KHrBf": {
               "type": "home-gallery-card",
               "settings": {
-                "image": "shopify://shop_images/Fab_Thiaw-Woaye-_1_1abde0d8-431d-4a40-bdc4-92d487f0f44a.jpg",
+                "image": "shopify://shop_images/DSC04310.jpg",
                 "link": ""
               },
               "blocks": {}
@@ -629,7 +650,7 @@
             "home_gallery_card_YzwKQf": {
               "type": "home-gallery-card",
               "settings": {
-                "image": "shopify://shop_images/DSC00559.jpg",
+                "image": "shopify://shop_images/DSC06976.jpg",
                 "link": ""
               },
               "blocks": {}
@@ -645,7 +666,7 @@
             "home_gallery_card_9cCRRp": {
               "type": "home-gallery-card",
               "settings": {
-                "image": "shopify://shop_images/Graham_Green-puzzle_falcon_10W.jpg",
+                "image": "shopify://shop_images/452A9823.jpg",
                 "link": ""
               },
               "blocks": {}
@@ -672,7 +693,7 @@
               "type": "home-gallery-card",
               "name": "Home Gallery Card 作品卡片",
               "settings": {
-                "image": "shopify://shop_images/DSC04989.jpg",
+                "image": "shopify://shop_images/1_84c34e00-e586-4f55-b0f6-a5701f7dee5b.jpg",
                 "link": ""
               },
               "blocks": {}
@@ -702,7 +723,7 @@
             "home_gallery_card_EJBU97": {
               "type": "home-gallery-card",
               "settings": {
-                "image": "shopify://shop_images/halloween-candy-box.jpg",
+                "image": "shopify://shop_images/DSC06980_1___1.jpg",
                 "link": ""
               },
               "blocks": {}
@@ -710,7 +731,7 @@
             "home_gallery_card_mwgGPp": {
               "type": "home-gallery-card",
               "settings": {
-                "image": "shopify://shop_images/bat-halloween-Candlestick.jpg",
+                "image": "shopify://shop_images/452A9860.jpg",
                 "link": ""
               },
               "blocks": {}
@@ -718,7 +739,7 @@
             "home_gallery_card_P6zhBC": {
               "type": "home-gallery-card",
               "settings": {
-                "image": "shopify://shop_images/halloween-decoration.jpg",
+                "image": "shopify://shop_images/DSC07011___1.jpg",
                 "link": ""
               },
               "blocks": {}
@@ -726,7 +747,7 @@
             "home_gallery_card_6KBkTG": {
               "type": "home-gallery-card",
               "settings": {
-                "image": "shopify://shop_images/halloween-candle-holder.jpg",
+                "image": "shopify://shop_images/DSC06983___1.jpg",
                 "link": ""
               },
               "blocks": {}
@@ -734,7 +755,7 @@
             "home_gallery_card_Cg6EqX": {
               "type": "home-gallery-card",
               "settings": {
-                "image": "shopify://shop_images/halloween-calendar.jpg",
+                "image": "shopify://shop_images/452A3006.jpg",
                 "link": ""
               },
               "blocks": {}
@@ -760,7 +781,7 @@
               "type": "home-gallery-card",
               "name": "Home Gallery Card 作品卡片",
               "settings": {
-                "image": "shopify://shop_images/Halloween_ruler_with_laser_engraver.jpg",
+                "image": "shopify://shop_images/10_eb762aef-7dce-4d4f-bec8-086266d35c89.jpg",
                 "link": ""
               },
               "blocks": {}
