@@ -3,6 +3,12 @@
     {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
         <input type="hidden" name="id" value="{{ current_variant.id }}">
         <div class="shop-pay-installments">
+            <img
+                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/klarna.svg?v=1720747526" 
+                alt="klarna"
+                class="shop-pay-installments-img"
+            >
+
             <span class="installment-text">
                 <div class="financing-link" onclick="simulateKlarnaClick();">
                     Get it now, pay later
