@@ -380,12 +380,17 @@
 }
 
 @media (max-width: 767px) {
+    .productView-stickyCart.style-1 .sticky-product{
+        flex-direction: column;
+    }
+
     .productView-stickyCart.style-1 .container {
         padding: 0 10px;
     }
 
     .productView-stickyCart.style-1 .sticky-left {
-        display: none;
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .productView-stickyCart.style-1 .sticky-right {
@@ -450,6 +455,7 @@
         width: 100%;
         background-color: white;
         height: 50vh;
+        opacity: 0;
     }
 
     .sticky-product-mobile .slick-arrow,
@@ -566,5 +572,77 @@
 @media (min-width: 1920px){
     .productView-stickyCart.style-2 {
         right: calc((100% - 1770px)/ 2)!important;
+    }
+}
+
+
+/* 自定义分期付款样式 */
+.shop-pay-installments {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.installment-text {
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.financing-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-decoration: underline;
+}
+
+.financing-link:hover {
+    color: var(--btn-1-bg);
+}
+
+
+/* 分期付款样式 - 新增 */
+.installment {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.installment.caption-large {
+    font-size: 14px;
+}
+
+/* Shop Pay 分期付款样式 */
+.shopify-payment-terms {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.shopify-payment-terms__message {
+    color: #666;
+    margin: 0;
+}
+
+.shopify-payment-terms__message a {
+    color: #5a31f4;
+    text-decoration: none;
+}
+
+.shopify-payment-terms__message a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .installment {
+        font-size: 13px;
+    }
+    
+    .installment.caption-large {
+        font-size: 13px;
+    }
+}
+
+/* 深色主题支持 */
+@media (prefers-color-scheme: dark) {
+    .shopify-payment-terms__message {
+        color: #ccc;
     }
 }

@@ -1,0 +1,36 @@
+{%- if product.available and current_variant.price > 0 -%}
+    {%- assign product_form_installment_id = 'product-form-installment-' | append: product.id -%}
+    {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
+        <input type="hidden" name="id" value="{{ current_variant.id }}">
+        <div class="shop-pay-installments">
+            <span class="installment-text">
+                <div class="financing-link" onclick="simulateKlarnaClick();">
+                    Get it now, pay later
+                </div>
+            </span>
+        </div>
+        <div style="display: none;">
+            {{ form | payment_terms }}
+        </div>
+    {%- endform -%}
+{%- endif -%}
+
+<script>
+function simulateKlarnaClick() {
+    const klarnaBlock = document.querySelector('[id*="klarna_on_site_messaging_app_block"]');
+    
+    if (klarnaBlock) {
+        const klarnaPlacement = klarnaBlock.querySelector('klarna-placement');
+        
+        if (klarnaPlacement && klarnaPlacement.shadowRoot) {
+            const learnMoreButton = klarnaPlacement.shadowRoot.querySelector('button[aria-label*="Learn more"]');
+            
+            if (learnMoreButton) {
+                learnMoreButton.click();
+                return true;
+            }
+        }
+    }
+    return false;
+}
+</script>
