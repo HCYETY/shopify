@@ -200,6 +200,9 @@
       {{ 'custom.js' | asset_url | script_tag }}
     {%- endif -%}
 
+    <!--chat-app  -->
+    {% render "chat-app" %}
+
     <div class="background-overlay">
       {%- if settings.show_effect_close -%}
         <div class="background-cursor-wrapper">
