@@ -1,0 +1,425 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "9da20430-b562-46f1-9f28-e5592eeec567": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "🎉<a href=\"https://ca.crealityfalcon.com/pages/monthly-sale\"><span style=\"color: #000000;\"><span style=\"color: #e03e2d;\">Monthly Sale, Special Offer</span>-</span><span style=\"color: #ecf0f1;\"> <strong>Auto C$70-C$400 Off &amp; Free Gift</strong></span></a>",
+            "btn_color": "#3c3c3c",
+            "btn_border_color": "#ffffff",
+            "btn_bg_color": "#ffffff",
+            "btn_bg_color_gradient": ""
+          }
+        },
+        "announcement_dLMWL8": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong><span style=\"color: #ffffff;\">⏰Aug 8-Aug 18 | A1 Pro Dual Laser Engraver-🎁$1247   <span style=\"background-color: #e03e2d;\"><a style=\"background-color: #e03e2d; color: #ffffff;\" href=\"https://ca.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver\"> Shop Now </a></span></span></strong></p>",
+            "btn_color": "#ff8b21",
+            "btn_border_color": "#ffffff",
+            "btn_bg_color": "#ffffff",
+            "btn_bg_color_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "9da20430-b562-46f1-9f28-e5592eeec567",
+        "announcement_dLMWL8"
+      ],
+      "settings": {
+        "enable_announcement": true,
+        "layout": "slider",
+        "enable_close": false,
+        "color_text": "#ffffff",
+        "bg_color_text": "#232323",
+        "bg_color_text_gradient": "",
+        "font_size_text": 15,
+        "font_style_text": "normal",
+        "font_weight_text": "400",
+        "arrow_active": true,
+        "content_max_width": 100,
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "0827887c-0743-496d-b06a-55cd8d659ff4": {
+      "type": "header-navigation-utility",
+      "blocks": {
+        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-0": {
+          "type": "logo",
+          "settings": {
+            "logo_position": "always",
+            "logo": "shopify://shop_images/0e44a1e857d737112dc14a2239bda79c.png",
+            "logo_width": 200,
+            "logo_width_fixed": 100,
+            "logo_text": "",
+            "logo_font_size": 20,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#000000"
+          }
+        },
+        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-1": {
+          "type": "main_menu",
+          "settings": {
+            "menu": "main-mega-menu",
+            "menu_top_spacing": 27,
+            "menu_bottom_spacing": 27,
+            "grid_gap_menu_item": 20,
+            "alignment": "center",
+            "bg_mega_menu": "#ffffff",
+            "bg_mega_menu_gradient": "",
+            "lv_1_color": "#3c3c3c",
+            "lv_1_color_hover": "#14a9de",
+            "lv_2_color": "#3c3c3c",
+            "lv_2_color_hover": "#14a9de",
+            "lv_3_color": "#3c3c3c",
+            "lv_3_color_hover": "#14a9de",
+            "sale_item_1": "",
+            "sale_item_2": "",
+            "sale_item_3": "",
+            "sale_item_color": "#f44336",
+            "label_position": "main_menu",
+            "show_label_blink": true,
+            "new_label_1": "",
+            "new_label_2": "",
+            "new_label_3": "",
+            "new_label_color": "#ffffff",
+            "new_label_bg": "#06bfe2",
+            "new_label_bg_gradient": "",
+            "sale_label_1": "60W Pre-order",
+            "sale_label_2": "",
+            "sale_label_3": "",
+            "sale_label_color": "#ffffff",
+            "sale_label_bg": "#ef6454",
+            "sale_label_bg_gradient": "",
+            "hot_label_1": "Special Offer Latest",
+            "hot_label_2": "",
+            "hot_label_3": "",
+            "hot_label_color": "#ffffff",
+            "hot_label_bg": "#ffbb49",
+            "hot_label_bg_gradient": ""
+          }
+        },
+        "megamenu_style_3_HJ4Hd4": {
+          "type": "megamenu_style_3",
+          "name": "Engravers",
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1400,
+            "mega_tyle": "style1",
+            "item": "Engraver",
+            "column": 4,
+            "show_banner_1": true,
+            "banner_1": "shopify://shop_images/A1_pro_20W_product.png",
+            "banner_url_1": "https://ca.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver",
+            "show_banner_2": true,
+            "banner_2": "shopify://shop_images/crealityfalcon-falcon-pro-10w-engraver-02_df719d02-d34e-41ce-afe8-828b3e95afcd_2.jpg",
+            "banner_url_2": "shopify://collections/cr-laser-falcon-5w-10w-pro-10w-engraver",
+            "show_banner_3": true,
+            "banner_3": "shopify://shop_images/falcon2-22w-engraver-02_1.jpg",
+            "banner_url_3": "https://ca.crealityfalcon.com/collections/falcon2-engraver",
+            "show_banner_4": true,
+            "banner_4": "shopify://shop_images/falcon2-pro-40w-and-22w-engraver_1.jpg",
+            "banner_url_4": "https://ca.crealityfalcon.com/collections/falcon2-pro-engraver",
+            "show_banner_5": true,
+            "banner_url_5": "https://ca.crealityfalcon.com/collections/falcon2-pro-engraver"
+          }
+        },
+        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-2": {
+          "type": "header_icons",
+          "settings": {
+            "show_language_currency": true,
+            "show_search": true,
+            "show_customer": true,
+            "show_wishlist": true,
+            "show_cart": true,
+            "text_font_size": 14,
+            "show_language_currency_sticky": true,
+            "show_search_sticky": true,
+            "show_customer_sticky": true,
+            "show_wishlist_sticky": true,
+            "show_cart_sticky": true,
+            "header_icons_color": "#232323",
+            "header_icons_color_hover": "#232323",
+            "cart_count_bubble_color": "#ffffff",
+            "cart_count_bubble_bg": "#1a2531",
+            "cart_count_bubble_bg_gradient": ""
+          }
+        },
+        "2504d97c-d2e8-4203-a55a-aff8b17b5498": {
+          "type": "megamenu_style_1",
+          "disabled": true,
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1280,
+            "item": "Special Offer Latest",
+            "column": 2,
+            "show_banner_1": false,
+            "banner_1": "shopify://shop_images/Falcon2_Series_675x975_38272a0c-82e1-4584-832e-7cd445d4a08e_1.jpg",
+            "banner_url_1": "shopify://pages/combo-sale",
+            "show_product": false,
+            "product_title": "Combo",
+            "product_collection": "falcon-a1-pro-20w-dual-laser-engraver"
+          }
+        },
+        "24d4b595-9d92-4b04-ac3c-62b2f599d20f": {
+          "type": "megamenu_style_1",
+          "disabled": true,
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1200,
+            "item": "product",
+            "column": 5,
+            "show_banner_1": false,
+            "banner_url_1": "",
+            "show_product": false,
+            "product_title": "Featured Products",
+            "product_collection": ""
+          }
+        },
+        "6c368518-bedd-4b8b-b9ba-bb542219267a": {
+          "type": "megamenu_style_1",
+          "disabled": true,
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1200,
+            "item": "Shop",
+            "column": 4,
+            "show_banner_1": false,
+            "banner_url_1": "",
+            "show_product": false,
+            "product_title": "Featured Products",
+            "product_collection": ""
+          }
+        },
+        "49459ccc-e7bb-40e5-8544-bf7b8e3000b5": {
+          "type": "megamenu_style_1",
+          "disabled": true,
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1200,
+            "item": "new in",
+            "column": 3,
+            "show_banner_1": true,
+            "banner_url_1": "shopify://collections/blazero",
+            "show_product": true,
+            "product_title": "Featured Products",
+            "product_collection": "class-mapten-tacitos-del-sociosques"
+          }
+        },
+        "a95ae51a-e02d-42cd-8e35-232434188ac6": {
+          "type": "megamenu_style_2",
+          "disabled": true,
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1200,
+            "item": "trend",
+            "column": 3,
+            "show_banner_1": true,
+            "banner_url_1": "shopify://collections/congue",
+            "show_banner_2": true,
+            "banner_url_2": "shopify://collections/scarvero",
+            "show_banner_3": false,
+            "banner_url_3": ""
+          }
+        },
+        "97694fad-9988-43b2-9b94-417b1bf997cc": {
+          "type": "megamenu_style_4",
+          "disabled": true,
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1200,
+            "item": "hy-menu",
+            "column": 5,
+            "menu_text_left": "",
+            "menu_text_left_sale": "hy-menu",
+            "show_banner_1": true,
+            "banner_url_1": "shopify://collections/congue",
+            "show_banner_2": true,
+            "banner_url_2": "shopify://collections/cosmopolis",
+            "show_az_brand": true,
+            "az_brand_title": "All Brands A-Z",
+            "az_brand_link_text": "See All Brands",
+            "az_brand_url": "",
+            "bg_mega_menu_bottom": "#f8f8f8",
+            "az_brand_link_text_color": "#000000"
+          }
+        },
+        "megamenu_style_3_C3itHU": {
+          "type": "megamenu_style_3",
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1400,
+            "mega_tyle": "style1",
+            "item": "Accessories",
+            "column": 5,
+            "show_banner_1": true,
+            "banner_1": "shopify://shop_images/1aabc5a240853da4c5dca55687176c75_6dd13764-c8e6-4695-9a55-487f4d8b5c78.webp",
+            "banner_url_1": "shopify://collections/honeycomb-workbench",
+            "show_banner_2": true,
+            "banner_2": "shopify://shop_images/1CrealityFalconLaserEngraverEnclosurePro.jpg",
+            "banner_url_2": "shopify://collections/protection-enclosure",
+            "show_banner_3": true,
+            "banner_3": "shopify://shop_images/1CrealityFalcon240WLaserModule.jpg",
+            "banner_url_3": "shopify://collections/laser-module",
+            "show_banner_4": true,
+            "banner_4": "shopify://shop_images/1600_1600-4.jpg",
+            "banner_url_4": "shopify://collections/rotary-for-laser-engraver-and-cutter",
+            "show_banner_5": true,
+            "banner_5": "shopify://shop_images/210W_5WCR-LaserFalconEngraverRiser.jpg",
+            "banner_url_5": "shopify://collections/risers-for-laser-engraver-and-cutter"
+          }
+        },
+        "megamenu_style_3_gBqjfH": {
+          "type": "megamenu_style_3",
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1400,
+            "mega_tyle": "style1",
+            "item": "Materials",
+            "column": 5,
+            "show_banner_1": true,
+            "banner_1": "shopify://shop_images/GS109212-20.jpg",
+            "banner_url_1": "shopify://collections/plywood",
+            "show_banner_2": true,
+            "banner_2": "shopify://shop_images/4_b0831643-2400-4b2b-b985-6bc9b4c873c9.jpg",
+            "banner_url_2": "shopify://collections/acrylic",
+            "show_banner_3": true,
+            "banner_3": "shopify://shop_images/GS108511-1.jpg",
+            "banner_url_3": "shopify://collections/paper",
+            "show_banner_4": true,
+            "banner_4": "shopify://shop_images/GS109188-1.jpg",
+            "banner_url_4": "shopify://collections/leather",
+            "show_banner_5": true,
+            "banner_5": "shopify://shop_images/GS108608-1.jpg",
+            "banner_url_5": "shopify://collections/metal"
+          }
+        },
+        "megamenu_style_5_6w7YaH": {
+          "type": "megamenu_style_5",
+          "disabled": true,
+          "settings": {
+            "layout_block": "custom_width",
+            "header_custom_width_size": 1200,
+            "mega_tyle": "style2",
+            "item": "Support",
+            "column": 6,
+            "menu_text_left": "",
+            "menu_text_left_sale": "",
+            "show_banner_1": false,
+            "banner_1": "shopify://shop_images/Falcon2_Series_675x975_38272a0c-82e1-4584-832e-7cd445d4a08e_1.jpg",
+            "banner_url_1": "shopify://pages/support",
+            "product_limit": 4,
+            "show_product": false,
+            "product_title": "Featured Products",
+            "product_collection": "falcon-engraver",
+            "bg_mega_menu_bottom": "#f8f8f8"
+          }
+        }
+      },
+      "block_order": [
+        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-0",
+        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-1",
+        "megamenu_style_3_HJ4Hd4",
+        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-2",
+        "2504d97c-d2e8-4203-a55a-aff8b17b5498",
+        "24d4b595-9d92-4b04-ac3c-62b2f599d20f",
+        "6c368518-bedd-4b8b-b9ba-bb542219267a",
+        "49459ccc-e7bb-40e5-8544-bf7b8e3000b5",
+        "a95ae51a-e02d-42cd-8e35-232434188ac6",
+        "97694fad-9988-43b2-9b94-417b1bf997cc",
+        "megamenu_style_3_C3itHU",
+        "megamenu_style_3_gBqjfH",
+        "megamenu_style_5_6w7YaH"
+      ],
+      "settings": {
+        "container": "1770",
+        "padding_full_width": 0,
+        "header_navigation_bg": "#ffffff",
+        "header_navigation_bg_gradient": "",
+        "sticky_header_type": "always",
+        "sticky_header_width": "default"
+      }
+    },
+    "header-mobile": {
+      "type": "header-mobile",
+      "blocks": {
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944": {
+          "type": "menu",
+          "settings": {
+            "color": "#232323"
+          }
+        },
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53": {
+          "type": "search",
+          "settings": {
+            "color": "#232323"
+          }
+        },
+        "550fbd21-75fb-4051-9dee-77d91b5239f0": {
+          "type": "logo",
+          "settings": {
+            "logo_mobile": "shopify://shop_images/280x80.jpg",
+            "logo_width_mobile": 100,
+            "logo_text": "",
+            "logo_font_size": 20,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#232323"
+          }
+        },
+        "20dae707-64c0-4ea3-a05e-561cae9836d8": {
+          "type": "customer",
+          "settings": {
+            "icon": "1",
+            "color": "#232323"
+          }
+        },
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d": {
+          "type": "cart",
+          "settings": {
+            "icon": "4",
+            "color": "#3c3c3c",
+            "color_bubble": "#ffffff",
+            "bg_bubble": "#3c3c3c"
+          }
+        }
+      },
+      "block_order": [
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944",
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53",
+        "550fbd21-75fb-4051-9dee-77d91b5239f0",
+        "20dae707-64c0-4ea3-a05e-561cae9836d8",
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d"
+      ],
+      "settings": {
+        "background": "#ffffff",
+        "gradient": "",
+        "sticky_header_type": "on_scroll",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "0827887c-0743-496d-b06a-55cd8d659ff4",
+    "header-mobile"
+  ]
+}

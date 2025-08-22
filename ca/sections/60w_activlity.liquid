@@ -1,0 +1,3346 @@
+<style>
+  @charset "UTF-8";
+  .en .fontBold {
+    font-family: HarmonyOS_Sans_SC_Bold, sans-serif;
+  }
+  .en .fontRegular {
+    font-family: HarmonyOS_Sans_SC_Regular, sans-serif;
+  }
+  .en .fontLight {
+    font-family: HarmonyOS_Sans_SC_Light, sans-serif;
+  }
+  .en .fontMedium {
+    font-family: HarmonyOS_Sans_SC_Medium, sans-serif;
+  }
+  
+  .cn .fontBold {
+    font-family: HarmonyOS_Sans_SC_Bold, sans-serif;
+  }
+  .cn .fontRegular {
+    font-family: HarmonyOS_Sans_SC_Regular, sans-serif;
+  }
+  .cn .fontLight {
+    font-family: HarmonyOS_Sans_SC_Light, sans-serif;
+  }
+  .cn .fontMedium {
+    font-family: HarmonyOS_Sans_SC_Medium, sans-serif;
+  }
+  
+  #container {
+    width: 100%;
+    font-family: HarmonyOS_Sans_SC_Regular;
+    font-size: 0;
+    line-height: 1;
+    background: linear-gradient(to bottom, #d5eef6, #e7f6ec);
+  }
+  #container .swiper-container {
+    overflow: hidden;
+  }
+  #container * {
+    box-sizing: border-box;
+  }
+  #container .mb {
+    display: none;
+  }
+  #container img {
+    width: 100%;
+    height: auto;
+    max-width: inherit;
+  }
+  #container a {
+    text-decoration: none;
+  }
+  #container .title {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-weight: 900;
+    font-size: 2.13vw;
+    color: #000000;
+    text-align: center;
+    line-height: 1.2;
+  }
+  #container .desc {
+    text-align: center;
+    font-family: HarmonyOS_Sans_SC_Regular;
+    font-weight: 400;
+    font-size: 1.06vw;
+    color: #000000;
+    line-height: 1.2;
+    margin-top: 1.2vw;
+  }
+  #container .package-item {
+    display: flex;
+    gap: 0.32vw;
+    margin-bottom: 0.2vw;
+  }
+  #container .package-item .star-img {
+    width: 1.06vw;
+    padding-top: 0.2vw;
+    height: auto;
+    flex-shrink: 0;
+  }
+  #container .package-item span {
+    display: block;
+    font-size: 1.06vw;
+    color: #000000;
+    line-height: 1.2;
+    opacity: 0.7;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  #container .product-item .pic {
+    width: 13.3vw;
+    position: relative;
+    background-color: #fff;
+  }
+  #container .product-item .pic .discount {
+    position: absolute;
+    left: -1vw;
+    top: -2.15vw;
+    width: 3.6vw;
+  }
+  #container .product-item .pic .discount img {
+    width: 100%;
+    height: auto;
+  }
+  #container .product-item .pic .discount .discount_text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding-top: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #container .product-item .pic .discount .discount_text .t1 {
+    font-weight: 900;
+    font-size: 1.2vw;
+    color: #ffffff;
+  }
+  #container .product-item .pic .discount .discount_text .t2 {
+    font-size: 1.06vw;
+    color: #ffffff;
+    margin-top: 0.5vw;
+  }
+  #container .product-item .pic .product-img {
+    width: 100%;
+    height: 100%;
+  }
+  #container .product-item form.caption-large {
+    margin-top: 1vw;
+    font-size: 0.9vw;
+    line-height: 1.2;
+  }
+  #container .product-item .product-myinfo {
+    padding-top: 1.8vw;
+  }
+  #container .product-item .product-myinfo .product-tag {
+    font-weight: 400;
+    font-size: 1.06vw;
+    color: #000000;
+    opacity: 0.7;
+  }
+  #container .product-item .product-myinfo .product-name {
+    font-weight: 400;
+    font-size: 1.6vw;
+    color: #000000;
+    margin-top: 0.6vw;
+    height: 4vw;
+  }
+  #container .product-item .product-myinfo .product-name .product-name-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    height: auto;
+    padding-bottom: 0.15vw;
+    line-height: 1.2;
+  }
+  #container .product-item .product-myinfo .price_wrap {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 0.9vw;
+    gap: 0.2vw;
+  }
+  #container .product-item .product-myinfo .price_wrap .old_price {
+    font-size: 0.78vw;
+    color: #686868;
+    position: relative;
+    padding: 0 1vw;
+    padding-bottom: 0.2vw;
+  }
+  #container .product-item .product-myinfo .price_wrap .old_price::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-0.1vw);
+    width: 100%;
+    height: 1px;
+    background-color: #686868;
+  }
+  #container .product-item .product-myinfo .price_wrap .new_price {
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-weight: 900;
+    font-size: 2.13vw;
+    color: #14a9de;
+  }
+  #container .product-item .product-myinfo .event-wrap {
+    width: 18.5vw;
+    height: 2.67vw;
+    border-radius: 32px;
+    display: flex;
+    margin-top: 1.65vw;
+    background-color: #14a9de;
+    overflow: hidden;
+    border: 1px solid #14a9de;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, 0.5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  #container .product-item .product-myinfo .event-wrap:hover {
+    border: 2px solid #14a9de;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #14a9de;
+  }
+  #container .product-item .product-myinfo .event-wrap button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    height: 100%;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+  }
+  #container .product-item .product-myinfo .event-wrap .addcart {
+    height: 100%;
+    width: 5.5vw;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #container .product-item .product-myinfo .event-wrap .addcart img {
+    width: 1.7vw;
+  }
+  #container .product-item .product-myinfo .event-wrap .buynow {
+    flex: 1;
+    display: flex;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.28vw;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+  }
+  #container .product-item .save_price {
+    background: #de1414;
+    border-radius: 4px;
+    padding: 0.32vw;
+    font-weight: 400;
+    font-size: 1.06vw;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+  #container .section1 {
+    width: 100%;
+    min-height: 29vw;
+    position: relative;
+    overflow: hidden;
+  }
+  #container .section1 .ender_wrap {
+    position: absolute;
+    left: 15vw;
+    top: 28vw;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #container .section1 .ender_wrap .text1 {
+    font-size: 2.13vw;
+    color: #000;
+    font-family: HarmonyOS_Sans_SC_Bold;
+    margin-right: 1vw;
+  }
+  #container .section1 .ender_wrap .time-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+  }
+  #container .section1 .ender_wrap .time-wrap span {
+    font-size: 3.2vw;
+    color: #14a9de;
+  }
+  #container .section1 .ender_wrap .time-wrap .time-item {
+    position: relative;
+  }
+  #container .section1 .ender_wrap .time-wrap .time-item:first-child {
+    margin-right: 1vw;
+  }
+  #container .section1 .ender_wrap .time-wrap .time-item .unit_text {
+    font-size: 1vw;
+    margin-bottom: 0.5vw;
+    color: #14a9de;
+    font-family: HarmonyOS_Sans_SC_Bold;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -150%);
+  }
+  #container .section1 .ender_wrap .time-wrap .time-item .time-text {
+    width: 5vw;
+    height: 5vw;
+    font-size: 2.4vw;
+    color: #de1414;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: HarmonyOS_Sans_SC_Bold;
+  }
+  #container .section2 {
+    height: 4vw;
+    background-color: #14a9de;
+    padding: 0 14.3vw;
+  }
+  #container .section2 .icon_list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+  }
+  #container .section2 .icon_list .icon_item {
+    display: flex;
+    align-items: center;
+  }
+  #container .section2 .icon_list .icon_item:nth-child(1) img {
+    height: 2.3vw;
+    width: auto;
+  }
+  #container .section2 .icon_list .icon_item:nth-child(2) img {
+    height: 2.7vw;
+    width: auto;
+  }
+  #container .section2 .icon_list .icon_item:nth-child(3) img {
+    height: 2.7vw;
+    width: auto;
+  }
+  #container .section2 .icon_list .icon_item .text {
+    font-weight: 400;
+    font-size: 1.28vw;
+    color: #ffffff;
+    margin-left: 0.4vw;
+  }
+  #container .section3 {
+    padding: 5vw 13.6vw;
+  }
+  #container .section3 .product-wrap {
+    border-radius: 16px;
+    margin-top: 2.5vw;
+    display: flex;
+    height: 19.8vw;
+    overflow: hidden;
+  }
+  #container .section3 .product-wrap .title {
+    color: #de1414;
+  }
+  #container .section3 .product-wrap .product-item {
+    display: flex;
+    gap: 1.65vw;
+    width: 38.3vw;
+    background-color: #fff;
+    align-items: center;
+    padding-left: 2.3vw;
+    flex-shrink: 0;
+  }
+  #container .section3 .product-wrap .product-item .pic {
+    width: 34vw;
+  }
+  #container .section3 .product-wrap .product-item .discount {
+    top: -1.15vw;
+  }
+  #container .section3 .product-wrap .right-item {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    flex: 1;
+    padding-left: 1.2vw;
+    padding-right: 3.5vw;
+  }
+  #container .section3 .product-wrap .right-item .package-item {
+    margin-bottom: 1vw;
+  }
+  #container .section4 {
+    padding: 4vw 12.2vw;
+    position: relative;
+  }
+  #container .section4 .product-item {
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+  }
+  #container .section4 .product-item .product-myinfo {
+    padding-top: 1.8vw;
+  }
+  #container .section4 .product-item .product-myinfo .event-wrap {
+    margin-top: 1.6vw;
+  }
+  #container .section4 .product-wrap {
+    margin-top: 2.7vw;
+    display: flex;
+    gap: 1.1vw;
+    height: 38vw;
+  }
+  #container .section4 .product-wrap .product-item {
+    width: 29vw;
+    height: 100%;
+    padding: 0 5vw;
+    padding-top: 3vw;
+  }
+  #container .section4 .product-wrap .product-item .pic {
+    width: 15vw;
+    position: relative;
+    background-color: #fff;
+  }
+  #container .section4 .product-wrap .product-item .product-img {
+    width: 100%;
+    height: 100%;
+  }
+  #container .section4 .product-wrap .product-item .price_wrap {
+    margin-top: 3vw;
+  }
+  #container .section4 .product-wrap .right-item {
+    flex: 1;
+    height: 100%;
+    padding: 0 2.9vw;
+    padding-top: 1.3vw;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  #container .section4 .product-wrap .right-item .swiper-tablist {
+    width: 100%;
+    display: flex;
+  }
+  #container .section4 .product-wrap .right-item .swiper-tablist .swiper-tabitem {
+    flex: 1;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.6vw;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+  #container .section4 .product-wrap .right-item .swiper-tablist .swiper-tabitem::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    bottom: 0;
+    height: 2vw;
+  }
+  #container .section4 .product-wrap .right-item .progress-wrap {
+    margin-top: 0.5vw;
+    width: 100%;
+    border-radius: 32px;
+    height: 0.61vw;
+    background-color: #f5f5f5;
+    display: flex;
+    position: relative;
+  }
+  #container .section4 .product-wrap .right-item .progress-wrap .progress-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #14a9de;
+    border-radius: 32px;
+  }
+  #container .section4 .product-wrap .right-item .s3_swiper_1 {
+    margin-top: 1.4vw;
+    height: 36vw;
+    width: 100%;
+  }
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1,
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container,
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide,
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide {
+    width: 50%;
+    height: 100%;
+  }
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide .product-item,
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide .product-item {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    padding-top: 1vw;
+  }
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide .product-item .star-wrap,
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide .product-item .star-wrap {
+    overflow: hidden;
+    margin-top: 1vw;
+    height: 4.2vw;
+  }
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide .product-item .pic,
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide .product-item .pic {
+    width: 11vw;
+  }
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide .product-item .product-name,
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide .product-item .product-name {
+    font-size: 1.2vw;
+    height: 3vw;
+  }
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide .product-item .price_wrap,
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide .product-item .price_wrap {
+    margin-top: 1vw;
+  }
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .navigation-wrap {
+    position: absolute;
+    left: 50%;
+    top: 23%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0;
+    padding: 0 0vw;
+  }
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .navigation-wrap .prev-btn svg {
+    transform: rotate(180deg);
+  }
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .navigation-wrap .prev-btn,
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .navigation-wrap .next-btn {
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    width: 3.5vw;
+    height: 3.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .navigation-wrap .prev-btn svg,
+  #container .section4 .product-wrap .right-item .s3_swiper_1 .navigation-wrap .next-btn svg {
+    width: 1.5vw;
+    height: 2.4vw;
+  }
+  #container .section4_1 {
+    height: 17.5vw;
+    overflow: hidden;
+    position: relative;
+  }
+  #container .section4_1 img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    transform-origin: center center;
+  }
+  #container .section4_1 img:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  #container .section5 {
+    padding: 0 18.5vw;
+  }
+  #container .section5 .product-mylist {
+    display: flex;
+    margin-top: 2.6vw;
+    gap: 0.9vw;
+    height: 28.8vw;
+  }
+  #container .section5 .product-mylist .product-item2 {
+    height: 100%;
+    flex: 1;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  #container .section5 .product-mylist .product-item2 .price-myinfo {
+    background-color: #14a9de;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.2vw;
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-weight: bold;
+    font-size: 1.28vw;
+    color: #ffffff;
+  }
+  #container .section5 .product-mylist .product-item2 .product-myinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 1.2vw;
+  }
+  #container .section5 .product-mylist .product-item2 .product-myinfo .product-img {
+    width: 13.2vw;
+    margin-top: 2vw;
+  }
+  #container .section5 .product-mylist .product-item2 .product-myinfo .price-text {
+    margin-top: 1.3vw;
+    font-weight: 900;
+    font-size: 2.13vw;
+    color: #000000;
+  }
+  #container .section5 .product-mylist .product-item2 .product-myinfo .product-desc {
+    margin-top: 1.5vw;
+    font-weight: 400;
+    font-size: 1.06vw;
+    color: #000000;
+    opacity: 0.7;
+    line-height: 1.2;
+  }
+  #container .section6 {
+    padding: 7vw 18.6vw;
+  }
+  #container .section6 .product-mylist {
+    display: flex;
+    gap: 0.9vw;
+    height: 42.3vw;
+    margin-top: 2.7vw;
+  }
+  #container .section6 .product-mylist .product-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 0 1.3vw;
+    padding-top: 1.8vw;
+    flex: 1;
+  }
+  #container .section6 .product-mylist .product-item .product-name {
+    font-size: 1.4vw;
+  }
+  #container .section6 .product-mylist .product-item .product-myinfo {
+    width: 100%;
+  }
+  #container .section6 .product-mylist .product-item .product-myinfo .star-wrap {
+    overflow: hidden;
+    overflow: hidden;
+    margin-top: 1.3vw;
+    height: 9.6vw;
+    width: 100%;
+  }
+  #container .section6 .product-mylist .product-item .product-myinfo .star-wrap .package-item {
+    width: 100%;
+  }
+  #container .section6 .product-mylist .product-item .product-myinfo .star-wrap .package-item span {
+    font-size: 0.9vw;
+    margin-top: 0.1vw;
+  }
+  #container .section6 .product-mylist .product-item .product-myinfo .event-wrap {
+    width: 100%;
+  }
+  #container .section7 .swiper-tablist {
+    padding: 0 28vw;
+    display: flex;
+    height: 4.2vw;
+    margin-top: 2.5vw;
+  }
+  #container .section7 .swiper-tablist .swiper-tabitem {
+    flex: 1;
+    height: 100%;
+    background-color: #c1c1c1;
+    font-family: HarmonyOS_Sans_SC_Bold;
+    font-weight: bold;
+    font-size: 1.28vw;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  #container .section7 .swiper-tablist .swiper-tabitem.tab-active {
+    background-color: #14a9de;
+  }
+  #container .section7 .s7_wrap {
+    margin-top: 1.5vw;
+    padding: 4.4vw;
+    gap: 0.9vw;
+    background-color: #c2ead1;
+  }
+  #container .section7 .s7_wrap .s7_swiper {
+    width: 100%;
+    height: 39.5vw;
+  }
+  #container .section7 .s7_wrap .s7_swiper .s7_swiper_1,
+  #container .section7 .s7_wrap .s7_swiper .s7_swiper_2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  #container .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container,
+  #container .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  #container .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide,
+  #container .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide {
+    height: 100%;
+    width: 22vw;
+  }
+  #container .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item,
+  #container .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    padding-top: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.3vw;
+    padding-top: 4vw;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  #container .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .star-wrap,
+  #container .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .star-wrap {
+    overflow: hidden;
+    margin-top: 1vw;
+    height: 6vw;
+  }
+  #container .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .pic,
+  #container .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .pic {
+    width: 12.5vw;
+  }
+  #container .section7 .s7_wrap .s7_swiper .navigation-wrap {
+    position: absolute;
+    left: 50%;
+    top: 28%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0;
+    padding: 0 0vw;
+  }
+  #container .section7 .s7_wrap .s7_swiper .navigation-wrap .prev-btn svg {
+    transform: rotate(180deg);
+  }
+  #container .section7 .s7_wrap .s7_swiper .navigation-wrap .prev-btn,
+  #container .section7 .s7_wrap .s7_swiper .navigation-wrap .next-btn {
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    width: 3.5vw;
+    height: 3.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  #container .section7 .s7_wrap .s7_swiper .navigation-wrap .prev-btn svg,
+  #container .section7 .s7_wrap .s7_swiper .navigation-wrap .next-btn svg {
+    width: 1.5vw;
+    height: 2.4vw;
+  }
+  #container .section8 {
+    padding-top: 8.3vw;
+    background-color: #e7f6e9;
+    padding-bottom: 2.6vw;
+  }
+  @media (max-width: 769px) {
+    #container .pc {
+      display: none;
+    }
+    #container .mb {
+      display: block;
+    }
+    #container .title {
+      font-size: 5vw;
+    }
+    #container .desc {
+      font-size: 2.96vw;
+      line-height: 1.2;
+      margin-top: 2vw;
+    }
+    #container .package-item {
+      display: flex;
+      gap: 0.8vw;
+      margin-bottom: 2.6vw;
+    }
+    #container .package-item .star-img {
+      width: 2.96vw;
+      padding-top: 0.6vw;
+      height: auto;
+      flex-shrink: 0;
+    }
+    #container .package-item span {
+      display: block;
+      font-size: 2.96vw;
+      color: #000000;
+      line-height: 1.2;
+      opacity: 0.7;
+      flex: 1;
+    }
+    #container .product-item .pic {
+      width: 30vw;
+      position: relative;
+      background-color: #fff;
+    }
+    #container .product-item .pic .discount {
+      position: absolute;
+      left: -2vw;
+      top: -4.4vw;
+      width: 8.5vw;
+    }
+    #container .product-item .pic .discount img {
+      width: 100%;
+      height: auto;
+    }
+    #container .product-item .pic .discount .discount_text {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      padding-top: 1vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    #container .product-item .pic .discount .discount_text .t1 {
+      font-weight: 900;
+      font-size: 2.8vw;
+      color: #ffffff;
+    }
+    #container .product-item .pic .discount .discount_text .t2 {
+      font-size: 2.96vw;
+      color: #ffffff;
+      margin-top: 1vw;
+    }
+    #container .product-item .pic .product-img {
+      width: 100%;
+      height: 100%;
+    }
+    #container .product-item form.caption-large {
+      margin-top: 1vw;
+      font-size: 3vw;
+      line-height: 1.2;
+    }
+    #container .product-item .product-myinfo {
+      padding-top: 3.2vw;
+    }
+    #container .product-item .product-myinfo .product-tag {
+      font-weight: 400;
+      font-size: 2.96vw;
+      color: #000000;
+      opacity: 0.7;
+    }
+    #container .product-item .product-myinfo .product-name {
+      font-weight: 400;
+      font-size: 3.4vw;
+      color: #000000;
+      margin-top: 1.2vw;
+      height: 10vw;
+    }
+    #container .product-item .product-myinfo .price_wrap {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 3vw;
+      gap: 2.2vw;
+    }
+    #container .product-item .product-myinfo .price_wrap .old_price {
+      font-size: 2.96vw;
+      color: #686868;
+      position: relative;
+      padding: 0 1vw;
+      padding-bottom: 0.4vw;
+    }
+    #container .product-item .product-myinfo .price_wrap .old_price::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-0.2vw);
+      width: 100%;
+      height: 1px;
+      background-color: #686868;
+    }
+    #container .product-item .product-myinfo .price_wrap .new_price {
+      font-family: HarmonyOS_Sans_SC_Bold;
+      font-weight: 900;
+      font-size: 4.5vw;
+      color: #14a9de;
+    }
+    #container .product-item .product-myinfo .event-wrap {
+      width: 42vw;
+      height: 6vw;
+      border-radius: 32px;
+      display: flex;
+      margin-top: 3.5vw;
+      overflow: hidden;
+    }
+    #container .product-item .product-myinfo .event-wrap .addcart {
+      width: 15.1vw;
+    }
+    #container .product-item .product-myinfo .event-wrap .addcart img {
+      width: 3.8vw;
+    }
+    #container .product-item .product-myinfo .event-wrap .buynow {
+      font-size: 3.56vw;
+    }
+    #container .product-item .save_price {
+      background: #de1414;
+      border-radius: 4px;
+      padding: 0.5vw 0.6vw;
+      font-weight: 400;
+      font-size: 2.06vw;
+      color: #ffffff;
+      margin-left: -1vw;
+    }
+    #container .section1 {
+      width: 100%;
+      min-height: 145vw;
+      position: relative;
+      overflow: hidden;
+    }
+    #container .section1 .ender_wrap {
+      position: absolute;
+      left: 7vw;
+      top: 54vw;
+      width: 100%;
+      z-index: 2;
+      display: flex;
+    }
+    #container .section1 .ender_wrap .text1 {
+      font-size: 5vw;
+      margin-right: 2vw;
+    }
+    #container .section1 .ender_wrap .time-wrap {
+      gap: 1.5vw;
+    }
+    #container .section1 .ender_wrap .time-wrap span {
+      font-size: 3.6vw;
+    }
+    #container .section1 .ender_wrap .time-wrap .time-item:first-child {
+      margin-right: 1.5vw;
+    }
+    #container .section1 .ender_wrap .time-wrap .time-item .unit_text {
+      font-size: 2vw;
+      margin-bottom: 1.5vw;
+      transform: translate(-50%, -150%);
+    }
+    #container .section1 .ender_wrap .time-wrap .time-item .time-text {
+      width: 8vw;
+      height: 8vw;
+      font-size: 3.6vw;
+    }
+    #container .section2 {
+      height: 36vw;
+      padding: 0 0;
+    }
+    #container .section2 .icon_list {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5vw;
+    }
+    #container .section2 .icon_list .icon_item {
+      display: flex;
+      align-items: center;
+    }
+    #container .section2 .icon_list .icon_item:nth-child(1) img {
+      height: 6.4vw;
+      width: auto;
+    }
+    #container .section2 .icon_list .icon_item:nth-child(2) img {
+      height: 7.5vw;
+      width: auto;
+    }
+    #container .section2 .icon_list .icon_item:nth-child(3) img {
+      height: 7.5vw;
+      width: auto;
+    }
+    #container .section2 .icon_list .icon_item .text {
+      font-size: 3.56vw;
+      margin-left: 1vw;
+      white-space: nowrap;
+    }
+    #container .section3 {
+      padding: 8vw 4.4vw;
+    }
+    #container .section3 .product-wrap {
+      margin-top: 5vw;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    #container .section3 .product-wrap .product-item {
+      display: flex;
+      gap: 5vw;
+      width: 100%;
+      background-color: #fff;
+      align-items: center;
+      padding-left: 4.4vw;
+      flex-shrink: 0;
+      padding-top: 4.3vw;
+      padding-bottom: 7.5vw;
+    }
+    #container .section3 .product-wrap .product-item .pic {
+      width: 55vw;
+    }
+    #container .section3 .product-wrap .product-item .discount {
+      top: -6.15vw;
+    }
+    #container .section3 .product-wrap .right-item {
+      background-color: #fafafa;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      flex: 1;
+      padding: 5vw 0;
+      padding-left: 6vw;
+      padding-right: 3.6w;
+    }
+    #container .section3 .product-wrap .right-item .package-item {
+      margin-bottom: 2.6vw;
+    }
+    #container .section4 {
+      padding: 8vw 4.4vw;
+      position: relative;
+    }
+    #container .section4 .product-item {
+      background-color: #fff;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-radius: 8px 8px 0 0;
+    }
+    #container .section4 .product-item .product-myinfo {
+      padding-top: 1.8vw;
+      margin-left: 6.5vw;
+    }
+    #container .section4 .product-item .product-myinfo .event-wrap {
+      margin-top: 1.6vw;
+    }
+    #container .section4 .product-wrap {
+      margin-top: 2.7vw;
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      height: auto;
+    }
+    #container .section4 .product-wrap .product-item {
+      width: 100%;
+      height: auto;
+      padding-top: 4.3vw;
+      padding-bottom: 7.5vw;
+      padding-left: 4.7vw;
+    }
+    #container .section4 .product-wrap .product-item .pic {
+      width: 60vw;
+      position: relative;
+    }
+    #container .section4 .product-wrap .product-item .product-img {
+      width: 100%;
+      height: 100%;
+    }
+    #container .section4 .product-wrap .right-item {
+      border-radius: 0 0 8px 8px;
+      flex: auto;
+      width: 100%;
+      height: 96vw;
+      padding: 0 3.4vw;
+      padding-top: 5vw;
+      background-color: #fff;
+      overflow: hidden;
+    }
+    #container .section4 .product-wrap .right-item .swiper-tablist {
+      width: 100%;
+      display: flex;
+    }
+    #container .section4 .product-wrap .right-item .swiper-tablist .swiper-tabitem {
+      font-size: 3.6vw;
+    }
+    #container .section4 .product-wrap .right-item .swiper-tablist .swiper-tabitem::after {
+      height: 5vw;
+    }
+    #container .section4 .product-wrap .right-item .progress-wrap {
+      margin-top: 3.5vw;
+      width: 100%;
+      height: 1.7vw;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 {
+      margin-top: 3.5vw;
+      height: 86vw;
+      width: 100%;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1,
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container,
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide,
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide {
+      width: 50%;
+      height: 100%;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide .product-item,
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide .product-item {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      padding-top: 1vw;
+      flex-direction: column;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide .product-item .product-myinfo,
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide .product-item .product-myinfo {
+      margin-left: 0;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide .product-item .star-wrap,
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide .product-item .star-wrap {
+      margin-top: 1vw;
+      height: 14vw;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide .product-item .star-wrap .package-item,
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide .product-item .star-wrap .package-item {
+      margin-bottom: 0;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide .product-item .price_wrap,
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide .product-item .price_wrap {
+      gap: 1.6vw;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide .product-item .event-wrap,
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide .product-item .event-wrap {
+      width: 90%;
+      height: 6vw;
+      margin-top: 3vw;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide .product-item .event-wrap .addcart,
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide .product-item .event-wrap .addcart {
+      width: 12vw;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide .product-item .product-name,
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide .product-item .product-name {
+      font-size: 2.8vw;
+      height: 8vw;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_1 .swiper-container .swiper-slide .product-item .pic,
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .s3_swiper_2_2 .swiper-container .swiper-slide .product-item .pic {
+      width: 28vw;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .navigation-wrap {
+      position: absolute;
+      left: 50%;
+      top: 23%;
+      transform: translateX(-50%);
+      width: 100%;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0;
+      padding: 0 0vw;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .navigation-wrap .prev-btn svg {
+      transform: rotate(180deg);
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .navigation-wrap .prev-btn,
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .navigation-wrap .next-btn {
+      cursor: pointer;
+      position: relative;
+      z-index: 3;
+      width: 8vw;
+      height: 8vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .navigation-wrap .prev-btn svg,
+    #container .section4 .product-wrap .right-item .s3_swiper_1 .navigation-wrap .next-btn svg {
+      width: 3.2vw;
+      height: 4.8vw;
+    }
+    #container .section4_1 {
+      height: 148vw;
+    }
+    #container .section5 {
+      padding: 0 4.4vw;
+    }
+    #container .section5 .product-mylist {
+      display: flex;
+      flex-direction: column;
+      margin-top: 5.6vw;
+      gap: 1vw;
+      height: auto;
+    }
+    #container .section5 .product-mylist .product-item2 {
+      height: 36vw;
+      flex: 1;
+      border-radius: 8px;
+      width: 100%;
+      position: relative;
+    }
+    #container .section5 .product-mylist .product-item2 .price-myinfo {
+      position: absolute;
+      top: 0;
+      left: 53vw;
+      width: 24vw;
+      height: 5vw;
+      font-size: 2.96vw;
+    }
+    #container .section5 .product-mylist .product-item2 .product-myinfo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+      padding: 0 0 0 6.5vw;
+      height: 30vw;
+      gap: 5vw;
+    }
+    #container .section5 .product-mylist .product-item2 .product-myinfo .product-img {
+      width: 22vw;
+      margin-top: 0;
+      flex-shrink: 0;
+    }
+    #container .section5 .product-mylist .product-item2 .product-myinfo .price-text {
+      margin-top: 0;
+      font-size: 4.4vw;
+    }
+    #container .section5 .product-mylist .product-item2 .product-myinfo .product-desc {
+      margin-top: 2vw;
+      font-size: 2.96vw;
+    }
+    #container .section6 {
+      padding: 14vw 4.4vw;
+    }
+    #container .section6 .product-mylist {
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      height: auto;
+      margin-top: 5vw;
+    }
+    #container .section6 .product-mylist .product-item {
+      height: auto;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #fff;
+      padding: 5.3vw 4.4vw 6.5vw 4.4vw;
+      width: 100%;
+      gap: 5vw;
+    }
+    #container .section6 .product-mylist .product-item .pic {
+      width: 28vw;
+    }
+    #container .section6 .product-mylist .product-item .product-myinfo {
+      width: auto;
+      flex: 1;
+    }
+    #container .section6 .product-mylist .product-item .product-myinfo .product-name {
+      font-size: 3.4vw;
+    }
+    #container .section6 .product-mylist .product-item .product-myinfo .star-wrap {
+      flex: 1;
+      overflow: hidden;
+      margin-top: 1vw;
+      height: auto;
+      width: 100%;
+    }
+    #container .section6 .product-mylist .product-item .product-myinfo .star-wrap .package-item {
+      width: 100%;
+      margin-bottom: 1vw;
+    }
+    #container .section6 .product-mylist .product-item .product-myinfo .star-wrap .package-item span {
+      font-size: 2.4vw;
+      margin-top: 0.6vw;
+    }
+    #container .section6 .product-mylist .product-item .product-myinfo .price_wrap {
+      margin-top: 1vw;
+    }
+    #container .section6 .product-mylist .product-item .product-myinfo .event-wrap {
+      width: 42vw;
+      height: 6vw;
+    }
+    #container .section6 .product-mylist .product-item .product-myinfo .event-wrap .addcart {
+      width: 15vw;
+    }
+    #container .section7 .swiper-tablist {
+      padding: 0 4.4vw;
+      display: flex;
+      height: 8.2vw;
+      margin-top: 4.2vw;
+    }
+    #container .section7 .swiper-tablist .swiper-tabitem {
+      font-size: 3.56vw;
+    }
+    #container .section7 .swiper-tablist .swiper-tabitem.tab-active {
+      background-color: #14a9de;
+    }
+    #container .section7 .s7_wrap {
+      margin-top: 6.6vw;
+      padding: 7.2vw 4.4vw;
+      gap: 0.9vw;
+      background-color: #c2ead1;
+    }
+    #container .section7 .s7_wrap .s7_swiper {
+      width: 100%;
+      height: 85vw;
+    }
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide,
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide {
+      height: 100%;
+      width: 49.5%;
+    }
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item,
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item {
+      padding-top: 1vw;
+      padding: 0 2.6vw;
+      padding-top: 4vw;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .product-myinfo,
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .product-myinfo {
+      width: 100%;
+    }
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .product-myinfo .product-name,
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .product-myinfo .product-name {
+      font-size: 3.4vw;
+    }
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .event-wrap,
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .event-wrap {
+      width: 100%;
+      height: 6vw;
+    }
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .star-wrap,
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .star-wrap {
+      margin-top: 1vw;
+      height: 12vw;
+    }
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .star-wrap .package-item,
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .star-wrap .package-item {
+      margin-bottom: 1vw;
+    }
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_1 .swiper-container .swiper-slide .product-item .pic,
+    #container .section7 .s7_wrap .s7_swiper .s7_swiper_2 .swiper-container .swiper-slide .product-item .pic {
+      width: 28vw;
+    }
+    #container .section7 .s7_wrap .s7_swiper .navigation-wrap {
+      position: absolute;
+      left: 50%;
+      top: 28%;
+      transform: translateX(-50%);
+      width: 100%;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0;
+      padding: 0 0vw;
+    }
+    #container .section7 .s7_wrap .s7_swiper .navigation-wrap .prev-btn svg {
+      transform: rotate(180deg);
+    }
+    #container .section7 .s7_wrap .s7_swiper .navigation-wrap .prev-btn,
+    #container .section7 .s7_wrap .s7_swiper .navigation-wrap .next-btn {
+      cursor: pointer;
+      position: relative;
+      z-index: 3;
+      width: 7vw;
+      height: 7vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+    #container .section7 .s7_wrap .s7_swiper .navigation-wrap .prev-btn svg,
+    #container .section7 .s7_wrap .s7_swiper .navigation-wrap .next-btn svg {
+      width: 3.6vw;
+      height: 4.8vw;
+    }
+    #container .section8 {
+      padding-top: 14vw;
+      padding-bottom: 4.5vw;
+    }
+  }
+</style>
+        <div id="container" class="fontRegular en">
+        <div class="banner-pic section1">
+            <img data-srcset="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/20240526-102917.jpg?v=1716690644 768w, https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/20240524-192034.jpg?v=1716549645"
+                data-sizes="100vw" class="lazyload" alt="Responsive Image" />
+            <div class="ender_wrap">
+                <div class="text1">Ends in</div>
+                <div class="time-wrap">
+                    <div class="time-item">
+                        <div class="unit_text">Days</div>
+                        <div class="time-text time-days">00</div>
+                    </div>
+                    <span> </span>
+                    <div class="time-item">
+                        <div class="unit_text">Hours</div>
+                        <div class="time-text time-hours">00</div>
+                    </div>
+                    <span>:</span>
+                    <div class="time-item">
+                        <div class="unit_text">Minutes</div>
+                        <div class="time-text time-minutes">00</div>
+                    </div>
+                    <span>:</span>
+                    <div class="time-item">
+                        <div class="unit_text">Seconds</div>
+                        <div class="time-text time-seconds">00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="icon_list">
+                <div class="icon_item">
+                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_icon1.png"
+                        alt="icon1.png">
+                    <div class="text">
+                        Free Shipping Over <span class="fontBold">$49.99</span>
+                    </div>
+                </div>
+                <div class="icon_item">
+                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_icon2.png"
+                        alt="icon2.png">
+                    <div class="text">
+                        <span class="fontBold">14-Day</span> Money-Back Guarantee
+                    </div>
+                </div>
+                <div class="icon_item">
+                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_icon3.png"
+                        alt="icon3.png">
+                    <div class="text">
+                        <span class="fontBold">12-Month</span> Warranty Offer
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section3">
+            <div class="title">
+                Be among the first batch 200 worldwide to <br class="pc">
+                grab our latest release! <br class="mb">Pre Order Now!
+            </div>
+            <div class="product-wrap">
+                <div class="left-item product-item">
+                    <div class="pic">
+                        <div class="discount">
+                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon_4af36afc-df71-47fb-b3a3-f57e5afe012d.png?v=1716462908"
+                                alt="discount_icon.jpg">
+                            <div class="discount_text">
+                                <span class="t1 fontBold">SAVE</span> <br>
+                                <span class="t2">$570</span>
+                            </div>
+                        </div>
+                        <img class="product-img"
+                            src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/laserengravercutter60wprosafercrealityfalcon2pro01.png?v=1715226704"
+                            alt="">
+                    </div>
+                    <div class="product-myinfo">
+                        <div class="product-tag">Creality Falcon</div>
+                        <div class="product-name">
+                            <div class="product-name-text">Falcon2 Pro 60W Enclosed Laser Cutter And Engraver Pro Safer
+                            </div>
+                        </div>
+                        <div class="price_wrap">
+                            <span class="old_price">$3769.00</span>
+                            <span class="new_price">$3199.00</span>
+                        </div>
+                        <form method="post" action="/cart/add" id="product-form-9674079961393" accept-charset="UTF-8"
+                            class="event-wrap" enctype="multipart/form-data" novalidate="novalidate"
+                            data-type="add-to-cart-form"><input type="hidden" name="id" value="49163614978353">
+                            <button type="submit" name="add" data-btn-addtocart="" data-inventory-quantity="5"
+                                data-available="false" class="" id="product-add-to-cart">
+                                <div class="addcart">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                        alt="cart.png">
+                                </div>
+                                <div class="buynow">Buy Now</div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="right-item">
+                    <div class="package-item">
+                        <div class="star-img"><img
+                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                alt=""></div>
+                        <span>Super cutting power up to 60W (Smart Three-Level adjustable laser power 60W, 40W and 22W
+                            )</span>
+                    </div>
+                    <div class="package-item">
+                        <div class="star-img"><img
+                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                alt=""></div>
+                        <span>Safe First: Fully enclosed designed</span>
+                    </div>
+                    <div class="package-item">
+                        <div class="star-img"><img
+                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                alt=""></div>
+                        <span>Built-in Camera for Auto-positioning</span>
+                    </div>
+                    <div class="package-item">
+                        <div class="star-img"><img
+                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                alt=""></div>
+                        <span>Laser speed x3: Super-higher working efficiency</span>
+                    </div>
+                    <div class="package-item">
+                        <div class="star-img"><img
+                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                alt=""></div>
+                        <span>Package comes with a free 1.6W Laser Module</span>
+                    </div>
+                    <div class="package-item">
+                        <div class="star-img"><img
+                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                alt=""></div>
+                        <span>Comes with one free CA$279 Father's Day Beer Bottle DIY Gift Set!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-pic section4_1">
+            <img data-srcset="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/20240524-192021.jpg?v=1716549645 768w, https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/20240524-192030.jpg?v=1716549644"
+                data-sizes="100vw" class="lazyload" alt="Responsive Image" />
+        </div>
+        <div class="section4">
+            <div class="title">
+                Shop Great Deals for Newcomers!
+            </div>
+            <div class="product-wrap">
+                <div class="left-item product-item">
+                    <div class="pic">
+                        <div class="discount">
+                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon_4af36afc-df71-47fb-b3a3-f57e5afe012d.png?v=1716462908"
+                                alt="discount_icon.jpg">
+                            <div class="discount_text">
+                                <span class="t1 fontBold">SAVE</span> <br>
+                                <span class="t2">$570</span>
+                            </div>
+                        </div>
+                        <img class="product-img"
+                            src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/laserengravercutter60wprosafercrealityfalcon2pro01.png?v=1715226704"
+                            alt="">
+                    </div>
+                    <div class="product-myinfo">
+                        <div class="product-tag">Creality Falcon</div>
+                        <div class="product-name">
+                            <div class="product-name-text">Falcon2 Pro 60W Enclosed Laser Cutter And Engraver Pro Safer
+                            </div>
+                        </div>
+                        <div class="price_wrap">
+                            <span class="old_price">$3769.00</span>
+                            <span class="new_price">$3199.00</span>
+                        </div>
+                        <form method="post" action="/cart/add" id="product-form-9674079961393" accept-charset="UTF-8"
+                            class="event-wrap" enctype="multipart/form-data" novalidate="novalidate"
+                            data-type="add-to-cart-form"><input type="hidden" name="id" value="49163614978353">
+                            <button type="submit" name="add" data-btn-addtocart="" data-inventory-quantity="5"
+                                data-available="false" class="" id="product-add-to-cart">
+                                <div class="addcart">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                        alt="cart.png">
+                                </div>
+                                <div class="buynow">Buy Now</div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="right-item">
+                    <div class="swiper-tablist">
+                        <div class="swiper-tabitem">
+                            Accessory <span class="fontBold" style="color: #DE1414;">On Sale</span>
+                        </div>
+                        <div class="swiper-tabitem">
+                            Material <span class="fontBold" style="color: #DE1414;">On Sale</span>
+                        </div>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="progress-line" style="width: 50%;"></div>
+                    </div>
+                    <div class="swiper-container s3_swiper_1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide s3_swiper_2_1">
+                                <div class="swiper-container ">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="product-item">
+                                                <div class="pic">
+                                                    <img class="product-img"
+                                                        src="//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864"
+                                                        alt="">
+                                                </div>
+                                                <div class="product-myinfo">
+                                                    <div class="product-tag">Creality Falcon</div>
+                                                    <div class="product-name">
+                                                        <div class="product-name-text">Honeycomb Workbench For Laser
+                                                            Engraver 500mm * 500mm
+                                                        </div>
+                                                    </div>
+                                                    <div class="star-wrap">
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Better Heat Dissipation</span>
+                                                        </div>
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Double Desktop Protection</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_wrap">
+                                                        <span class="old_price">$169.00</span>
+                                                        <span class="new_price">$119.00</span>
+                                                        <span class="save_price">save $50</span>
+                                                    </div>
+                                                    <form method="post" action="/cart/add"
+                                                        id="product-form-9245054337329" accept-charset="UTF-8"
+                                                        class="event-wrap" enctype="multipart/form-data"
+                                                        novalidate="novalidate" data-type="add-to-cart-form"><input
+                                                            type="hidden" name="id" value="47925198324017">
+                                                        <button type="submit" name="add" data-btn-addtocart=""
+                                                            data-inventory-quantity="9" data-available="false" class=""
+                                                            id="product-add-to-cart">
+                                                            <div class="addcart">
+                                                                <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                    alt="cart.png">
+                                                            </div>
+                                                            <div class="buynow">Buy Now</div>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-item">
+                                                <div class="pic">
+                                                    <img class="product-img"
+                                                        src="////cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/1crealityfalconRotaryKitPro.jpg?v=1715562198"
+                                                        alt="">
+                                                </div>
+                                                <div class="product-myinfo">
+                                                    <div class="product-tag">Creality Falcon</div>
+                                                    <div class="product-name">
+                                                        <div class="product-name-text">Rotary Kit Pro For Curved Surface
+                                                            Engraving</div>
+                                                    </div>
+                                                    <div class="star-wrap">
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>One-handed Clamping of Engraved Items</span>
+                                                        </div>
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Work Better with Risers</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_wrap">
+                                                        <span class="old_price">$239.00</span>
+                                                        <span class="new_price">$191.00</span>
+                                                        <span class="save_price">save $48</span>
+                                                    </div>
+                                                    <form method="post" action="/cart/add"
+                                                        id="product-form-9245051683121" accept-charset="UTF-8"
+                                                        class="event-wrap" enctype="multipart/form-data"
+                                                        novalidate="novalidate" data-type="add-to-cart-form"><input
+                                                            type="hidden" name="id" value="47925194588465">
+                                                        <button type="submit" name="add" data-btn-addtocart=""
+                                                            data-inventory-quantity="5" data-available="false" class=""
+                                                            id="product-add-to-cart">
+                                                            <div class="addcart">
+                                                                <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                    alt="cart.png">
+                                                            </div>
+                                                            <div class="buynow">Buy Now</div>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-item">
+                                                <div class="pic">
+                                                    <img class="product-img"
+                                                        src="//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/210W_5WCR-LaserFalconEngraverRiser.jpg?v=1714298686"
+                                                        alt="">
+                                                </div>
+                                                <div class="product-myinfo">
+                                                    <div class="product-tag">Creality Falcon</div>
+                                                    <div class="product-name">
+                                                        <div class="product-name-text">Riser For 5W And 10W CR-Laser
+                                                            Falcon Engravers</div>
+                                                    </div>
+                                                    <div class="star-wrap">
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Raising the height of the Falcon2</span>
+                                                        </div>
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Easy Installation</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_wrap">
+                                                        <span class="old_price">$21.99</span>
+                                                        <span class="new_price">$17.59</span>
+                                                        <span class="save_price">save $4.4</span>
+                                                    </div>
+                                                    <form method="post" action="/cart/add"
+                                                        id="product-form-9245053649201" accept-charset="UTF-8"
+                                                        class="event-wrap" enctype="multipart/form-data"
+                                                        novalidate="novalidate" data-type="add-to-cart-form"><input
+                                                            type="hidden" name="id" value="47925197373745">
+                                                        <button type="submit" name="add" data-btn-addtocart=""
+                                                            data-inventory-quantity="10" data-available="false" class=""
+                                                            id="product-add-to-cart">
+                                                            <div class="addcart">
+                                                                <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                    alt="cart.png">
+                                                            </div>
+                                                            <div class="buynow">Buy Now</div>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-item">
+                                                <div class="pic">
+                                                    <img class="product-img"
+                                                        src="//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/2CrealityFalcon2ExtraRaisers.jpg?v=1715334494"
+                                                        alt="">
+                                                </div>
+                                                <div class="product-myinfo">
+                                                    <div class="product-tag">Creality Falcon</div>
+                                                    <div class="product-name">
+                                                        <div class="product-name-text">Extra Raisers (4 Packs) For
+                                                            Falcon2 Series Engravers
+                                                        </div>
+                                                    </div>
+                                                    <div class="star-wrap">
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Raise The Engraver Up to 150mm In Total</span>
+                                                        </div>
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Hardened Metal Material</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_wrap">
+                                                        <span class="old_price">$48.99</span>
+                                                        <span class="new_price">$39.00</span>
+                                                        <span class="save_price">save $9.99</span>
+                                                    </div>
+                                                    <form method="post" action="/cart/add"
+                                                        id="product-form-9274706493745" accept-charset="UTF-8"
+                                                        class="event-wrap" enctype="multipart/form-data"
+                                                        novalidate="novalidate" data-type="add-to-cart-form"><input
+                                                            type="hidden" name="id" value="48017196286257">
+                                                        <button type="submit" name="add" data-btn-addtocart=""
+                                                            data-inventory-quantity="10" data-available="false" class=""
+                                                            id="product-add-to-cart">
+                                                            <div class="addcart">
+                                                                <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                    alt="cart.png">
+                                                            </div>
+                                                            <div class="buynow">Buy Now</div>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-item">
+                                                <div class="pic">
+                                                    <img class="product-img"
+                                                        src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1crealityfalconProtectiveCoverforLaserEngraver.jpg?v=1714296888"
+                                                        alt="">
+                                                </div>
+                                                <div class="product-myinfo">
+                                                    <div class="product-tag">Creality Falcon</div>
+                                                    <div class="product-name">
+                                                        <div class="product-name-text">Falcon Protective Cover For Laser
+                                                            Engraver</div>
+                                                    </div>
+                                                    <div class="star-wrap">
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Expel Smoke, Keep Clean</span>
+                                                        </div>
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Large Viewing Design for Real-time Observation</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_wrap">
+                                                        <span class="old_price">$139.00</span>
+                                                        <span class="new_price">$109.00</span>
+                                                        <span class="save_price">save $30</span>
+                                                    </div>
+                                                    <form method="post" action="/cart/add"
+                                                        id="product-form-9245055942961" accept-charset="UTF-8"
+                                                        class="event-wrap" enctype="multipart/form-data"
+                                                        novalidate="novalidate" data-type="add-to-cart-form"><input
+                                                            type="hidden" name="id" value="47925201731889">
+                                                        <button type="submit" name="add" data-btn-addtocart=""
+                                                            data-inventory-quantity="10" data-available="false" class=""
+                                                            id="product-add-to-cart">
+                                                            <div class="addcart">
+                                                                <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                    alt="cart.png">
+                                                            </div>
+                                                            <div class="buynow">Buy Now</div>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-item">
+                                                <div class="pic">
+                                                    <img class="product-img"
+                                                        src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1CrealityFalconLaserEngraverEnclosurePro.jpg?v=1714296836"
+                                                        alt="">
+                                                </div>
+                                                <div class="product-myinfo">
+                                                    <div class="product-tag">Creality Falcon</div>
+                                                    <div class="product-name">
+                                                        <div class="product-name-text">Falcon Laser Engraver Enclosure
+                                                            Pro</div>
+                                                    </div>
+                                                    <div class="star-wrap">
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Waterproof and Fireproof Stable and Reliable</span>
+                                                        </div>
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Dual-view Window Design </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_wrap">
+                                                        <span class="old_price">$150.00</span>
+                                                        <span class="new_price">$120.00</span>
+                                                        <span class="save_price">save $30</span>
+                                                    </div>
+                                                    <form method="post" action="/cart/add"
+                                                        id="product-form-9245050929457" accept-charset="UTF-8"
+                                                        class="event-wrap" enctype="multipart/form-data"
+                                                        novalidate="novalidate" data-type="add-to-cart-form"><input
+                                                            type="hidden" name="id" value="47925193769265">
+                                                        <button type="submit" name="add" data-btn-addtocart=""
+                                                            data-inventory-quantity="5" data-available="false" class=""
+                                                            id="product-add-to-cart">
+                                                            <div class="addcart">
+                                                                <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                    alt="cart.png">
+                                                            </div>
+                                                            <div class="buynow">Buy Now</div>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-item">
+                                                <div class="pic">
+                                                    <img class="product-img"
+                                                        src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2CrealityFalcon10WFalconEngraverAccessoryKit.jpg?v=1714296753"
+                                                        alt="">
+                                                </div>
+                                                <div class="product-myinfo">
+                                                    <div class="product-tag">Creality Falcon</div>
+                                                    <div class="product-name">
+                                                        <div class="product-name-text">10W Falcon Engraver Accessory Kit
+                                                        </div>
+                                                    </div>
+                                                    <div class="star-wrap">
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Neater and Cleaner Wood Edge & Better Carving
+                                                                Results</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_wrap">
+                                                        <span class="old_price">$239.00</span>
+                                                        <span class="new_price">$191.00</span>
+                                                        <span class="save_price">save $48</span>
+                                                    </div>
+                                                    <form method="post" action="/cart/add"
+                                                        id="product-form-9245051683121" accept-charset="UTF-8"
+                                                        class="event-wrap" enctype="multipart/form-data"
+                                                        novalidate="novalidate" data-type="add-to-cart-form"><input
+                                                            type="hidden" name="id" value="47925194588465">
+                                                        <button type="submit" name="add" data-btn-addtocart=""
+                                                            data-inventory-quantity="5" data-available="false" class=""
+                                                            id="product-add-to-cart">
+                                                            <div class="addcart">
+                                                                <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                    alt="cart.png">
+                                                            </div>
+                                                            <div class="buynow">Buy Now</div>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-item">
+                                                <div class="pic">
+                                                    <img class="product-img"
+                                                        src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1Falcon2ReplaceProtectiveLens.jpg?v=1714297024"
+                                                        alt="">
+                                                </div>
+                                                <div class="product-myinfo">
+                                                    <div class="product-tag">Creality Falcon</div>
+                                                    <div class="product-name">
+                                                        <div class="product-name-text">Falcon2 Replace Protective Lens
+                                                        </div>
+                                                    </div>
+                                                    <div class="star-wrap">
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>protect lens</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_wrap">
+                                                        <span class="old_price">$99.00</span>
+                                                        <span class="new_price">$89.10</span>
+                                                        <span class="save_price">save $9.9</span>
+                                                    </div>
+                                                    <form method="post" action="/cart/add"
+                                                        id="product-form-9245053157681" accept-charset="UTF-8"
+                                                        class="event-wrap" enctype="multipart/form-data"
+                                                        novalidate="novalidate" data-type="add-to-cart-form"><input
+                                                            type="hidden" name="id" value="47925196456241">
+                                                        <button type="submit" name="add" data-btn-addtocart=""
+                                                            data-inventory-quantity="5" data-available="false" class=""
+                                                            id="product-add-to-cart">
+                                                            <div class="addcart">
+                                                                <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                    alt="cart.png">
+                                                            </div>
+                                                            <div class="buynow">Buy Now</div>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add Navigation -->
+                                <div class="navigation-wrap">
+                                    <div class="prev-btn">
+                                        <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                                            <path
+                                                d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z"
+                                                p-id="8092" fill="#000"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="next-btn">
+                                        <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                                            <path
+                                                d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z"
+                                                p-id="8092" fill="#000"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide s3_swiper_2_2">
+                                <div class="swiper-container ">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="product-item">
+                                                <div class="pic">
+                                                    <img class="product-img"
+                                                        src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1_61e6920f-8633-4a52-b129-a5ebf9accda6.jpg?v=1701315080"
+                                                        alt="">
+                                                </div>
+                                                <div class="product-myinfo">
+                                                    <div class="product-tag">Creality Falcon</div>
+                                                    <div class="product-name">
+                                                        <div class="product-name-text">
+                                                            Falcon Walnut Plywood Sheets For Laser Engraver And Cutter
+                                                        </div>
+                                                    </div>
+                                                    <div class="star-wrap">
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>made of natural wood</span>
+                                                        </div>
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Transform Ideas into Wooden Wonders</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_wrap">
+                                                        <span class="old_price">$49.50</span>
+                                                        <span class="new_price">$49.50</span>
+                                                        <span class="save_price">save $0</span>
+                                                    </div>
+                                                    <form method="post" action="/cart/add"
+                                                        id="product-form-9245049258289" accept-charset="UTF-8"
+                                                        class="event-wrap" enctype="multipart/form-data"
+                                                        novalidate="novalidate" data-type="add-to-cart-form"><input
+                                                            type="hidden" name="id" value="47925190132017">
+                                                        <button type="submit" name="add" data-btn-addtocart=""
+                                                            data-inventory-quantity="10" data-available="false" class=""
+                                                            id="product-add-to-cart">
+                                                            <div class="addcart">
+                                                                <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                    alt="cart.png">
+                                                            </div>
+                                                            <div class="buynow">Buy Now</div>
+                                                        </button>
+                                                    </form>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-item">
+                                                <div class="pic">
+                                                    <img class="product-img"
+                                                        src="//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconplywood_b6eba884-e22e-42e0-ab5f-3a43667c5a6f.jpg?v=1714298381"
+                                                        alt="">
+                                                </div>
+                                                <div class="product-myinfo">
+                                                    <div class="product-tag">Creality Falcon</div>
+                                                    <div class="product-name">
+                                                        <div class="product-name-text">
+                                                            Falcon Basswood Plywood Sheets For Laser Engraver
+                                                        </div>
+                                                    </div>
+                                                    <div class="star-wrap">
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>does not warp or deform</span>
+                                                        </div>
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Smooth Surface for Detailed Engravings</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_wrap">
+                                                        <span class="old_price">$39.99</span>
+                                                        <span class="new_price">$31.99</span>
+                                                        <span class="save_price">save $8</span>
+                                                    </div>
+                                                    <form method="post" action="/cart/add"
+                                                        id="product-form-9245055025457" accept-charset="UTF-8"
+                                                        class="event-wrap" enctype="multipart/form-data"
+                                                        novalidate="novalidate" data-type="add-to-cart-form"><input
+                                                            type="hidden" name="id" value="47925199929649">
+                                                        <button type="submit" name="add" data-btn-addtocart=""
+                                                            data-inventory-quantity="10" data-available="false" class=""
+                                                            id="product-add-to-cart">
+                                                            <div class="addcart">
+                                                                <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                    alt="cart.png">
+                                                            </div>
+                                                            <div class="buynow">Buy Now</div>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product-item">
+                                                <div class="pic">
+                                                    <img class="product-img"
+                                                        src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/3CrealityFalconOpaqueGlossyColorfulAcrylic.jpg?v=1714296137"
+                                                        alt="">
+                                                </div>
+                                                <div class="product-myinfo">
+                                                    <div class="product-tag">Creality Falcon</div>
+                                                    <div class="product-name">
+                                                        <div class="product-name-text">
+                                                            Falcon Opaque Glossy Colorful Acrylic Sheets For Laser
+                                                            Engraver And Cutter（10pcs）
+                                                        </div>
+                                                    </div>
+                                                    <div class="star-wrap">
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Easy to Cut and Engrave</span>
+                                                        </div>
+                                                        <div class="package-item">
+                                                            <div class="star-img"><img
+                                                                    src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                    alt=""></div>
+                                                            <span>Five Colors to Choose From</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_wrap">
+                                                        <span class="old_price">$82.50</span>
+                                                        <span class="new_price">$54.00</span>
+                                                        <span class="save_price">save $28.5</span>
+                                                    </div>
+                                                    <form method="post" action="/cart/add"
+                                                        id="product-form-9245047914801" accept-charset="UTF-8"
+                                                        class="event-wrap" enctype="multipart/form-data"
+                                                        novalidate="novalidate" data-type="add-to-cart-form"><input
+                                                            type="hidden" name="id" value="47925187969329">
+                                                        <button type="submit" name="add" data-btn-addtocart=""
+                                                            data-inventory-quantity="10" data-available="false" class=""
+                                                            id="product-add-to-cart">
+                                                            <div class="addcart">
+                                                                <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                    alt="cart.png">
+                                                            </div>
+                                                            <div class="buynow">Buy Now</div>
+                                                        </button>
+                                                    </form>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add Navigation -->
+                                <div class="navigation-wrap">
+                                    <div class="prev-btn">
+                                        <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                                            <path
+                                                d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z"
+                                                p-id="8092" fill="#000"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="next-btn">
+                                        <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                                            <path
+                                                d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z"
+                                                p-id="8092" fill="#000"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section5">
+            <div class="title">
+                Shop In-Store and Enjoy Tier Gifts
+            </div>
+            <div class="desc">
+                Experience Our Budget-friendly Engravers for Easy Operation!
+            </div>
+            <div class="product-mylist">
+                <div class="product-item2">
+                    <div class="price-myinfo">≥ CA$499</div>
+                    <div class="product-myinfo">
+                        <div class="product-img">
+                            <img src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2crealityfalconplywood.jpg?v=1714296172"
+                                alt="">
+                        </div>
+                        <div class="info-wrap">
+                            <div class="price-text fontBold">
+                                <span style="color: #000000;">Value</span> <span style="color: #14A9DE;">CA$39.99</span>
+                            </div>
+                            <div class="product-desc">
+                                Spend over CA$499 and receive a free set of 10 pieces of wood filament.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item2">
+                    <div class="price-myinfo">≥ CA$799</div>
+                    <div class="product-myinfo">
+                        <div class="product-img">
+                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/20240524-144152.png?v=1716532929"
+                                alt="">
+                        </div>
+                        <div class="info-wrap">
+                            <div class="price-text fontBold">
+                                <span style="color: #000000;">Value</span> <span style="color: #14A9DE;">CA$68.00</span>
+                            </div>
+                            <div class="product-desc">
+                                Spend over CA$799 and receive 2PCS Blue Slightly Curved Caps with 4 Self-Adhesive
+                                Hat Patches and 3 pcs wood materials.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item2">
+                    <div class="price-myinfo">≥ CA$3299</div>
+                    <div class="product-myinfo">
+                        <div class="product-img">
+                            <img src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1crealityfalcon10w.jpg?v=1714295966"
+                                alt="">
+                        </div>
+                        <div class="info-wrap">
+                            <div class="price-text fontBold">
+                                <span style="color: #000000;">Value</span> <span style="color: #14A9DE;">CA$669.00</span>
+                            </div>
+                            <div class="product-desc">
+                                Spend over CA$3299 and receive one CR-Laser 7.5W machine (limited to 5 units).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="desc">
+                Notice: While supplies last <br class="mb">(gifts may be adjusted based on actual inventory)
+            </div>
+        </div>
+
+        <div class="section6">
+            <div class="title">
+                Shop Great Deals for Newcomers!
+            </div>
+            <div class="desc">
+                Experience Our Budget-friendly Engravers for Easy Operation!
+            </div>
+            <div class="product-mylist">
+                <div class="product-item">
+                    <div class="pic">
+                        <img class="product-img"
+                            src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/5crealityfalcon7.5w.jpg?v=1714295699"
+                            alt="">
+                        <div class="discount">
+                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon_4af36afc-df71-47fb-b3a3-f57e5afe012d.png?v=1716462908"
+                                alt="discount_icon.jpg">
+                            <div class="discount_text">
+                                <span class="t1 fontBold">SAVE</span> <br>
+                                <span class="t2">$210</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-myinfo">
+                        <div class="product-tag">Creality Falcon</div>
+                        <div class="product-name">
+                            <div class="product-name-text">Falcon 10W Laser Engraver</div>
+                        </div>
+                        <div class="star-wrap">
+                            <div class="package-item">
+                                <div class="star-img"><img
+                                        src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                        alt=""></div>
+                                <span>6 Times Faster, Up To 0.1 Mm High Precision</span>
+                            </div>
+                            <div class="package-item">
+                                <div class="star-img"><img
+                                        src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                        alt=""></div>
+                                <span>Quick And Accurate Starting Point Location</span>
+                            </div>
+                            <div class="package-item">
+                                <div class="star-img"><img
+                                        src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                        alt=""></div>
+                                <span>Create artwork on materials including wood, acrylic, and stainless steel</span>
+                            </div>
+                        </div>
+                        <div class="price_wrap">
+                            <span class="old_price">$689.00</span>
+                            <span class="new_price">$479.00</span>
+                        </div>
+                        <form method="post" action="/cart/add" id="product-form-9245059514673" accept-charset="UTF-8"
+                            class="event-wrap" enctype="multipart/form-data" novalidate="novalidate"
+                            data-type="add-to-cart-form"><input type="hidden" name="id" value="47925209694513">
+                            <button type="submit" name="add" data-btn-addtocart="" data-inventory-quantity="5"
+                                data-available="false" class="" id="product-add-to-cart">
+                                <div class="addcart">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                        alt="cart.png">
+                                </div>
+                                <div class="buynow">Buy Now</div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="pic">
+                        <img class="product-img"
+                            src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/6crealityfalcon222w.jpg?v=1714295740"
+                            alt="">
+                        <div class="discount">
+                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon_4af36afc-df71-47fb-b3a3-f57e5afe012d.png?v=1716462908"
+                                alt="discount_icon.jpg">
+                            <div class="discount_text">
+                                <span class="t1 fontBold">SAVE</span> <br>
+                                <span class="t2">$150</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-myinfo">
+                        <div class="product-tag">Creality Falcon</div>
+                        <div class="product-name">
+                            <div class="product-name-text">Falcon2 22W Laser Engraver And Cutter</div>
+                        </div>
+                        <div class="star-wrap">
+                            <div class="package-item">
+                                <div class="star-img"><img
+                                        src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                        alt=""></div>
+
+                                <span>22W Cutting Power Offline Creation: Create Anytime, Anywhere with A TF Card</span>
+                            </div>
+                            <div class="package-item">
+                                <div class="star-img"><img
+                                        src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                        alt=""></div>
+                                <span>Engrave at 25000mm/min for Faster Creation</span>
+                            </div>
+                            <div class="package-item">
+                                <div class="star-img"><img
+                                        src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                        alt=""></div>
+                                <span>Ensures A Cleaner Result and Protects the Laser Lens</span>
+                            </div>
+                        </div>
+                        <div class="price_wrap">
+                            <span class="old_price">$999.00</span>
+                            <span class="new_price">$849.00</span>
+                        </div>
+                        <form method="post" action="/cart/add" id="product-form-9245060432177" accept-charset="UTF-8"
+                            class="event-wrap" enctype="multipart/form-data" novalidate="novalidate"
+                            data-type="add-to-cart-form"><input type="hidden" name="id" value="48176736403761">
+                            <button type="submit" name="add" data-btn-addtocart="" data-inventory-quantity="10"
+                                data-available="false" class="" id="product-add-to-cart">
+                                <div class="addcart">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                        alt="cart.png">
+                                </div>
+                                <div class="buynow">Buy Now</div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="pic">
+                        <img class="product-img"
+                            src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1crealityfalcon240w.jpg?v=1714295894"
+                            alt="">
+                        <div class="discount">
+                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon_4af36afc-df71-47fb-b3a3-f57e5afe012d.png?v=1716462908"
+                                alt="discount_icon.jpg">
+                            <div class="discount_text">
+                                <span class="t1 fontBold">SAVE</span> <br>
+                                <span class="t2">$280</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-myinfo">
+                        <div class="product-tag">Creality Falcon</div>
+                        <div class="product-name">
+                            <div class="product-name-text">Falcon2 40W Laser Engraver And Cutter</div>
+                        </div>
+                        <div class="star-wrap">
+                            <div class="package-item">
+                                <div class="star-img"><img
+                                        src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                        alt=""></div>
+                                <span>Powerful 40W Laser Output</span>
+                            </div>
+                            <div class="package-item">
+                                <div class="star-img"><img
+                                        src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                        alt=""></div>
+                                <span> The laser cutting machine has an ultra fast cutting speed of 25000mm/min</span>
+                            </div>
+                            <div class="package-item">
+                                <div class="star-img"><img
+                                        src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                        alt=""></div>
+                                <span>State-of-the-art Engravings and Cuttings</span>
+                            </div>
+                        </div>
+                        <div class="price_wrap">
+                            <span class="old_price">$1869.00</span>
+                            <span class="new_price">$1589.00</span>
+                        </div>
+                        <form method="post" action="/cart/add" id="product-form-9245061153073" accept-charset="UTF-8"
+                            class="event-wrap" enctype="multipart/form-data" novalidate="novalidate"
+                            data-type="add-to-cart-form"><input type="hidden" name="id" value="48176892838193">
+                            <button type="submit" name="add" data-btn-addtocart="" data-inventory-quantity="10"
+                                data-available="false" class="" id="product-add-to-cart">
+                                <div class="addcart">
+                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                        alt="cart.png">
+                                </div>
+                                <div class="buynow">Buy Now</div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section7">
+            <div class="title">
+                Get 20% off all accessories and materials.
+            </div>
+            <div class="desc">
+                Shop to your heart's content! Don't miss out.
+            </div>
+            <div class="swiper-tablist">
+                <div class="swiper-tabitem tab-active">Accessories</div>
+                <div class="swiper-tabitem">Materials</div>
+            </div>
+            <div class="s7_wrap">
+                <div class="swiper-container s7_swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide s7_swiper_1">
+                            <div class="swiper-container ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="pic">
+                                                <img class="product-img"
+                                                    src="//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconHoneycombWorkbench500mmx500mm.jpg?v=1714298864"
+                                                    alt="">
+                                                <div class="discount">
+                                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon2.png"
+                                                        alt="discount_icon.jpg">
+                                                    <div class="discount_text">
+                                                        <span class="t1 fontBold">SAVE</span> <br>
+                                                        <span class="t2">$50</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-myinfo">
+                                                <div class="product-tag">Creality Falcon</div>
+                                                <div class="product-name">
+                                                    <div class="product-name-text">Honeycomb Workbench For Laser
+                                                        Engraver 500mm * 500mm
+                                                    </div>
+                                                </div>
+                                                <div class="star-wrap">
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Better Heat Dissipation</span>
+                                                    </div>
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Double Desktop Protection</span>
+                                                    </div>
+                                                </div>
+                                                <div class="price_wrap">
+                                                    <span class="old_price">$169.00</span>
+                                                    <span class="new_price">$119.00</span>
+                                                </div>
+                                                <form method="post" action="/cart/add" id="product-form-9245054337329"
+                                                    accept-charset="UTF-8" class="event-wrap"
+                                                    enctype="multipart/form-data" novalidate="novalidate"
+                                                    data-type="add-to-cart-form"><input type="hidden" name="id"
+                                                        value="47925198324017">
+                                                    <button type="submit" name="add" data-btn-addtocart=""
+                                                        data-inventory-quantity="9" data-available="false" class=""
+                                                        id="product-add-to-cart">
+                                                        <div class="addcart">
+                                                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                alt="cart.png">
+                                                        </div>
+                                                        <div class="buynow">Buy Now</div>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="pic">
+                                                <img class="product-img"
+                                                    src="////cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/1crealityfalconRotaryKitPro.jpg?v=1715562198"
+                                                    alt="">
+                                                <div class="discount">
+                                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon2.png"
+                                                        alt="discount_icon.jpg">
+                                                    <div class="discount_text">
+                                                        <span class="t1 fontBold">SAVE</span> <br>
+                                                        <span class="t2">$48</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-myinfo">
+                                                <div class="product-tag">Creality Falcon</div>
+                                                <div class="product-name">
+                                                    <div class="product-name-text">Rotary Kit Pro For Curved Surface
+                                                        Engraving</div>
+                                                </div>
+                                                <div class="star-wrap">
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>One-handed Clamping of Engraved Items</span>
+                                                    </div>
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Work Better with Risers</span>
+                                                    </div>
+                                                </div>
+                                                <div class="price_wrap">
+                                                    <span class="old_price">$239.00</span>
+                                                    <span class="new_price">$191.00</span>
+                                                </div>
+                                                <form method="post" action="/cart/add" id="product-form-9245051683121"
+                                                    accept-charset="UTF-8" class="event-wrap"
+                                                    enctype="multipart/form-data" novalidate="novalidate"
+                                                    data-type="add-to-cart-form"><input type="hidden" name="id"
+                                                        value="47925194588465">
+                                                    <button type="submit" name="add" data-btn-addtocart=""
+                                                        data-inventory-quantity="5" data-available="false" class=""
+                                                        id="product-add-to-cart">
+                                                        <div class="addcart">
+                                                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                alt="cart.png">
+                                                        </div>
+                                                        <div class="buynow">Buy Now</div>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="pic">
+                                                <img class="product-img"
+                                                    src="//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/210W_5WCR-LaserFalconEngraverRiser.jpg?v=1714298686"
+                                                    alt="">
+                                                <div class="discount">
+                                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon2.png"
+                                                        alt="discount_icon.jpg">
+                                                    <div class="discount_text">
+                                                        <span class="t1 fontBold">SAVE</span> <br>
+                                                        <span class="t2">$4.4</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-myinfo">
+                                                <div class="product-tag">Creality Falcon</div>
+                                                <div class="product-name">
+                                                    <div class="product-name-text">Riser For 5W And 10W CR-Laser Falcon
+                                                        Engravers</div>
+                                                </div>
+                                                <div class="star-wrap">
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Raising the height of the Falcon2</span>
+                                                    </div>
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Easy Installation</span>
+                                                    </div>
+                                                </div>
+                                                <div class="price_wrap">
+                                                    <span class="old_price">$21.99</span>
+                                                    <span class="new_price">$17.59</span>
+                                                </div>
+                                                <form method="post" action="/cart/add" id="product-form-9245053649201"
+                                                    accept-charset="UTF-8" class="event-wrap"
+                                                    enctype="multipart/form-data" novalidate="novalidate"
+                                                    data-type="add-to-cart-form"><input type="hidden" name="id"
+                                                        value="47925197373745">
+                                                    <button type="submit" name="add" data-btn-addtocart=""
+                                                        data-inventory-quantity="10" data-available="false" class=""
+                                                        id="product-add-to-cart">
+                                                        <div class="addcart">
+                                                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                alt="cart.png">
+                                                        </div>
+                                                        <div class="buynow">Buy Now</div>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="pic">
+                                                <img class="product-img"
+                                                    src="//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/2CrealityFalcon2ExtraRaisers.jpg?v=1715334494"
+                                                    alt="">
+                                                <div class="discount">
+                                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon2.png"
+                                                        alt="discount_icon.jpg">
+                                                    <div class="discount_text">
+                                                        <span class="t1 fontBold">SAVE</span> <br>
+                                                        <span class="t2">$9.9</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-myinfo">
+                                                <div class="product-tag">Creality Falcon</div>
+                                                <div class="product-name">
+                                                    <div class="product-name-text">Extra Raisers (4 Packs) For Falcon2
+                                                        Series Engravers
+                                                    </div>
+                                                </div>
+                                                <div class="star-wrap">
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Raise The Engraver Up to 150mm In Total</span>
+                                                    </div>
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Hardened Metal Material</span>
+                                                    </div>
+                                                </div>
+                                                <div class="price_wrap">
+                                                    <span class="old_price">$48.99</span>
+                                                    <span class="new_price">$39.00</span>
+                                                </div>
+                                                <form method="post" action="/cart/add" id="product-form-9274706493745"
+                                                    accept-charset="UTF-8" class="event-wrap"
+                                                    enctype="multipart/form-data" novalidate="novalidate"
+                                                    data-type="add-to-cart-form"><input type="hidden" name="id"
+                                                        value="48017196286257">
+                                                    <button type="submit" name="add" data-btn-addtocart=""
+                                                        data-inventory-quantity="10" data-available="false" class=""
+                                                        id="product-add-to-cart">
+                                                        <div class="addcart">
+                                                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                alt="cart.png">
+                                                        </div>
+                                                        <div class="buynow">Buy Now</div>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="pic">
+                                                <img class="product-img"
+                                                    src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1crealityfalconProtectiveCoverforLaserEngraver.jpg?v=1714296888"
+                                                    alt="">
+                                                <div class="discount">
+                                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon2.png"
+                                                        alt="discount_icon.jpg">
+                                                    <div class="discount_text">
+                                                        <span class="t1 fontBold">SAVE</span> <br>
+                                                        <span class="t2">$30</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-myinfo">
+                                                <div class="product-tag">Creality Falcon</div>
+                                                <div class="product-name">
+                                                    <div class="product-name-text">Falcon Protective Cover For Laser
+                                                        Engraver</div>
+                                                </div>
+                                                <div class="star-wrap">
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Expel Smoke, Keep Clean</span>
+                                                    </div>
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Large Viewing Design for Real-time Observation</span>
+                                                    </div>
+                                                </div>
+                                                <div class="price_wrap">
+                                                    <span class="old_price">$139.00</span>
+                                                    <span class="new_price">$109.00</span>
+                                                </div>
+                                                <form method="post" action="/cart/add" id="product-form-9245055942961"
+                                                    accept-charset="UTF-8" class="event-wrap"
+                                                    enctype="multipart/form-data" novalidate="novalidate"
+                                                    data-type="add-to-cart-form"><input type="hidden" name="id"
+                                                        value="47925201731889">
+                                                    <button type="submit" name="add" data-btn-addtocart=""
+                                                        data-inventory-quantity="10" data-available="false" class=""
+                                                        id="product-add-to-cart">
+                                                        <div class="addcart">
+                                                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                alt="cart.png">
+                                                        </div>
+                                                        <div class="buynow">Buy Now</div>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="pic">
+                                                <img class="product-img"
+                                                    src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1CrealityFalconLaserEngraverEnclosurePro.jpg?v=1714296836"
+                                                    alt="">
+                                                <div class="discount">
+                                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon2.png"
+                                                        alt="discount_icon.jpg">
+                                                    <div class="discount_text">
+                                                        <span class="t1 fontBold">SAVE</span> <br>
+                                                        <span class="t2">$30</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-myinfo">
+                                                <div class="product-tag">Creality Falcon</div>
+                                                <div class="product-name">
+                                                    <div class="product-name-text">Falcon Laser Engraver Enclosure Pro
+                                                    </div>
+                                                </div>
+                                                <div class="star-wrap">
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Waterproof and Fireproof Stable and Reliable</span>
+                                                    </div>
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Dual-view Window Design </span>
+                                                    </div>
+                                                </div>
+                                                <div class="price_wrap">
+                                                    <span class="old_price">$150.00</span>
+                                                    <span class="new_price">$120.00</span>
+                                                </div>
+                                                <form method="post" action="/cart/add" id="product-form-9245050929457"
+                                                    accept-charset="UTF-8" class="event-wrap"
+                                                    enctype="multipart/form-data" novalidate="novalidate"
+                                                    data-type="add-to-cart-form"><input type="hidden" name="id"
+                                                        value="47925193769265">
+                                                    <button type="submit" name="add" data-btn-addtocart=""
+                                                        data-inventory-quantity="5" data-available="false" class=""
+                                                        id="product-add-to-cart">
+                                                        <div class="addcart">
+                                                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                alt="cart.png">
+                                                        </div>
+                                                        <div class="buynow">Buy Now</div>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="pic">
+                                                <img class="product-img"
+                                                    src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2CrealityFalcon10WFalconEngraverAccessoryKit.jpg?v=1714296753"
+                                                    alt="">
+                                                <div class="discount">
+                                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon2.png"
+                                                        alt="discount_icon.jpg">
+                                                    <div class="discount_text">
+                                                        <span class="t1 fontBold">SAVE</span> <br>
+                                                        <span class="t2">$48</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-myinfo">
+                                                <div class="product-tag">Creality Falcon</div>
+                                                <div class="product-name">
+                                                    <div class="product-name-text">10W Falcon Engraver Accessory Kit
+                                                    </div>
+                                                </div>
+                                                <div class="star-wrap">
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Neater and Cleaner Wood Edge & Better Carving
+                                                            Results</span>
+                                                    </div>
+                                                </div>
+                                                <div class="price_wrap">
+                                                    <span class="old_price">$239.00</span>
+                                                    <span class="new_price">$191.00</span>
+                                                </div>
+                                                <form method="post" action="/cart/add" id="product-form-9245051683121"
+                                                    accept-charset="UTF-8" class="event-wrap"
+                                                    enctype="multipart/form-data" novalidate="novalidate"
+                                                    data-type="add-to-cart-form"><input type="hidden" name="id"
+                                                        value="47925194588465">
+                                                    <button type="submit" name="add" data-btn-addtocart=""
+                                                        data-inventory-quantity="5" data-available="false" class=""
+                                                        id="product-add-to-cart">
+                                                        <div class="addcart">
+                                                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                alt="cart.png">
+                                                        </div>
+                                                        <div class="buynow">Buy Now</div>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="pic">
+                                                <img class="product-img"
+                                                    src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1Falcon2ReplaceProtectiveLens.jpg?v=1714297024"
+                                                    alt="">
+                                                <div class="discount">
+                                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon2.png"
+                                                        alt="discount_icon.jpg">
+                                                    <div class="discount_text">
+                                                        <span class="t1 fontBold">SAVE</span> <br>
+                                                        <span class="t2">$9.9</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-myinfo">
+                                                <div class="product-tag">Creality Falcon</div>
+                                                <div class="product-name">
+                                                    <div class="product-name-text">Falcon2 Replace Protective Lens</div>
+                                                </div>
+                                                <div class="star-wrap">
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>protect lens</span>
+                                                    </div>
+                                                </div>
+                                                <div class="price_wrap">
+                                                    <span class="old_price">$99.00</span>
+                                                    <span class="new_price">$89.10</span>
+                                                </div>
+                                                <form method="post" action="/cart/add" id="product-form-9245053157681"
+                                                    accept-charset="UTF-8" class="event-wrap"
+                                                    enctype="multipart/form-data" novalidate="novalidate"
+                                                    data-type="add-to-cart-form"><input type="hidden" name="id"
+                                                        value="47925196456241">
+                                                    <button type="submit" name="add" data-btn-addtocart=""
+                                                        data-inventory-quantity="5" data-available="false" class=""
+                                                        id="product-add-to-cart">
+                                                        <div class="addcart">
+                                                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                alt="cart.png">
+                                                        </div>
+                                                        <div class="buynow">Buy Now</div>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add Navigation -->
+                            <div class="navigation-wrap">
+                                <div class="prev-btn">
+                                    <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                                        <path
+                                            d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z"
+                                            p-id="8092" fill="#000"></path>
+                                    </svg>
+                                </div>
+                                <div class="next-btn">
+                                    <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                                        <path
+                                            d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z"
+                                            p-id="8092" fill="#000"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide s7_swiper_2">
+                            <div class="swiper-container ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="pic">
+                                                <img class="product-img"
+                                                    src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/3CrealityFalconOpaqueGlossyColorfulAcrylic.jpg?v=1714296137"
+                                                    alt="">
+                                                <div class="discount">
+                                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon2.png"
+                                                        alt="discount_icon.jpg">
+                                                    <div class="discount_text">
+                                                        <span class="t1 fontBold">SAVE</span> <br>
+                                                        <span class="t2">$28.5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-myinfo">
+                                                <div class="product-tag">Creality Falcon</div>
+                                                <div class="product-name">
+                                                    <div class="product-name-text">
+                                                        Falcon Opaque Glossy Colorful Acrylic Sheets For Laser
+                                                        Engraver And Cutter（10pcs）
+                                                    </div>
+                                                </div>
+                                                <div class="star-wrap">
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Easy to Cut and Engrave</span>
+                                                    </div>
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Five Colors to Choose From</span>
+                                                    </div>
+                                                </div>
+                                                <div class="price_wrap">
+                                                    <span class="old_price">$82.50</span>
+                                                    <span class="new_price">$54.00</span>
+                                                </div>
+                                                <form method="post" action="/cart/add" id="product-form-9245047914801"
+                                                    accept-charset="UTF-8" class="event-wrap"
+                                                    enctype="multipart/form-data" novalidate="novalidate"
+                                                    data-type="add-to-cart-form"><input type="hidden" name="id"
+                                                        value="47925187969329">
+                                                    <button type="submit" name="add" data-btn-addtocart=""
+                                                        data-inventory-quantity="10" data-available="false" class=""
+                                                        id="product-add-to-cart">
+                                                        <div class="addcart">
+                                                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                alt="cart.png">
+                                                        </div>
+                                                        <div class="buynow">Buy Now</div>
+                                                    </button>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="pic">
+                                                <img class="product-img"
+                                                    src="//cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1_61e6920f-8633-4a52-b129-a5ebf9accda6.jpg?v=1701315080"
+                                                    alt="">
+                                                <div class="discount">
+                                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon2.png"
+                                                        alt="discount_icon.jpg">
+                                                    <div class="discount_text">
+                                                        <span class="t1 fontBold">SAVE</span> <br>
+                                                        <span class="t2">$0</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-myinfo">
+                                                <div class="product-tag">Creality Falcon</div>
+                                                <div class="product-name">
+                                                    <div class="product-name-text">
+                                                        Falcon Walnut Plywood Sheets For Laser Engraver And Cutter
+                                                    </div>
+                                                </div>
+                                                <div class="star-wrap">
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>made of natural wood</span>
+                                                    </div>
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Transform Ideas into Wooden Wonders</span>
+                                                    </div>
+                                                </div>
+                                                <div class="price_wrap">
+                                                    <span class="old_price">$49.50</span>
+                                                    <span class="new_price">$49.50</span>
+                                                </div>
+                                                <form method="post" action="/cart/add" id="product-form-9245049258289"
+                                                    accept-charset="UTF-8" class="event-wrap"
+                                                    enctype="multipart/form-data" novalidate="novalidate"
+                                                    data-type="add-to-cart-form"><input type="hidden" name="id"
+                                                        value="47925190132017">
+                                                    <button type="submit" name="add" data-btn-addtocart=""
+                                                        data-inventory-quantity="10" data-available="false" class=""
+                                                        id="product-add-to-cart">
+                                                        <div class="addcart">
+                                                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                alt="cart.png">
+                                                        </div>
+                                                        <div class="buynow">Buy Now</div>
+                                                    </button>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="pic">
+                                                <img class="product-img"
+                                                    src="//cdn.shopifycdn.net/s/files/1/0850/5776/5681/files/3crealityfalconplywood_b6eba884-e22e-42e0-ab5f-3a43667c5a6f.jpg?v=1714298381"
+                                                    alt="">
+                                                <div class="discount">
+                                                    <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_discount_icon2.png"
+                                                        alt="discount_icon.jpg">
+                                                    <div class="discount_text">
+                                                        <span class="t1 fontBold">SAVE</span> <br>
+                                                        <span class="t2">$8</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-myinfo">
+                                                <div class="product-tag">Creality Falcon</div>
+                                                <div class="product-name">
+                                                    <div class="product-name-text">
+                                                        Falcon Basswood Plywood Sheets For Laser Engraver
+                                                    </div>
+                                                </div>
+                                                <div class="star-wrap">
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>does not warp or deform</span>
+                                                    </div>
+                                                    <div class="package-item">
+                                                        <div class="star-img"><img
+                                                                src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/2dcad5961ff0ad69319655d8496f80ee.png?v=1716531614"
+                                                                alt=""></div>
+                                                        <span>Smooth Surface for Detailed Engravings</span>
+                                                    </div>
+                                                </div>
+                                                <div class="price_wrap">
+                                                    <span class="old_price">$39.99</span>
+                                                    <span class="new_price">$31.99</span>
+                                                </div>
+                                                <form method="post" action="/cart/add" id="product-form-9245055025457"
+                                                    accept-charset="UTF-8" class="event-wrap"
+                                                    enctype="multipart/form-data" novalidate="novalidate"
+                                                    data-type="add-to-cart-form"><input type="hidden" name="id"
+                                                        value="47925199929649">
+                                                    <button type="submit" name="add" data-btn-addtocart=""
+                                                        data-inventory-quantity="10" data-available="false" class=""
+                                                        id="product-add-to-cart">
+                                                        <div class="addcart">
+                                                            <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/60w_activlity_cart.png"
+                                                                alt="cart.png">
+                                                        </div>
+                                                        <div class="buynow">Buy Now</div>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add Navigation -->
+                            <div class="navigation-wrap">
+                                <div class="prev-btn">
+                                    <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                                        <path
+                                            d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z"
+                                            p-id="8092" fill="#000"></path>
+                                    </svg>
+                                </div>
+                                <div class="next-btn">
+                                    <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                                        <path
+                                            d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z"
+                                            p-id="8092" fill="#000"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section8">
+            <div class="title">
+                5,000+ Facebook Group Happy Customers And Counting
+            </div>
+        </div>
+    </div>
+<script>
+
+        let docWidth = document.documentElement.clientWidth;
+        // 每秒更新活动倒计时
+        function getActivityCountdown(countryCode) {
+            // 创建时区偏移量对象
+            var timeZoneOffsets = {
+                'us': -4, // 美国东部时间偏移量为 -4 小时
+                'uk': 1, // 英国时间偏移量为 +1 小时
+                'es': 2, // 西班牙时间偏移量为 +2 小时
+                'eu': 2 // 欧洲中部时间偏移量为 +2 小时
+            };
+
+            // 获取当前时间和活动开始时间
+            var currentTime = new Date();
+            var activityStartTime = new Date(currentTime.getFullYear(), 5, 15, 22, 0, 0); // 3 月 26 日凌晨 0 点
+
+            // 根据国家代码获取时区偏移量
+            var timeZoneOffset = timeZoneOffsets[countryCode];
+
+            // 根据时区偏移量调整活动开始时间
+            activityStartTime.setHours(activityStartTime.getHours() + timeZoneOffset);
+
+            // 计算活动开始倒计时
+            var countdown = Math.max(0, activityStartTime - currentTime);
+            var days = Math.floor(countdown / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((countdown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((countdown % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((countdown % (1000 * 60)) / 1000);
+            console.log(hours)
+
+            return {
+                days,
+                hours: ("0" + hours).slice(-2),
+                minutes: ("0" + minutes).slice(-2),
+                seconds: ("0" + seconds).slice(-2),
+            };
+        }
+
+        // 更新活动倒计时
+        function updateCountdown() {
+            var countryCode = 'us'; // 替换为你希望的国家代码
+            var countdownResult = getActivityCountdown(countryCode);
+            // console.log("活动开始倒计时 " + countdownResult); // 打印活动开始倒计时
+            $('.time-days').text(countdownResult.days)
+            $('.time-hours').text(countdownResult.hours)
+            $('.time-minutes').text(countdownResult.minutes)
+            $('.time-seconds').text(countdownResult.seconds)
+
+
+
+            // 检查是否到达活动开始时间，如果是则停止计时器
+            var currentTime = new Date();
+            var activityStartTime = new Date(currentTime.getFullYear(), 5, 15, 22, 0, 0); // 3 月 26 日凌晨 0 点
+            if (currentTime >= activityStartTime) {
+                clearInterval(timer); // 停止计时器
+                window.location.reload(); // 刷新页面
+            }
+        }
+        // 开始更新倒计时
+        var timer = setInterval(updateCountdown, 1000); // 每秒更新一次
+        var swiper1 = new Swiper('.section4 .s3_swiper_1', {
+            allowTouchMove: false, // Disable dragging
+            direction: 'vertical',
+        });
+        $('.section4 .swiper-tabitem').click(function () {
+            var index = $(this).index();
+            $('.progress-wrap .progress-line').css('transform', `translateX(${(index) * 100}%)`)
+
+            swiper1.slideTo(index); // Change to the specified slide index
+        })
+
+        let spaceNum = docWidth < 960 ? 0.02 : 0.005;
+        var mySwiper2 = new Swiper('.section4 .s3_swiper_2_1 .swiper-container', {
+            allowTouchMove: true, // Disable dragging
+            slidesPerView: 'auto',
+            spaceBetween: docWidth * spaceNum,
+            on: {
+                resize: function () { // 监听窗口大小变化
+                    docWidth = document.documentElement.clientWidth;
+                    this.params.spaceBetween = docWidth * spaceNum; // 动态设置间距
+                    this.update(); // 更新Swiper
+                }
+            },
+            loop: true,
+            // autoplay: {
+            //     delay: 2500
+            // },
+            navigation: {
+                "nextEl": ".section4 .s3_swiper_2_1 .navigation-wrap .next-btn",
+                "prevEl": ".section4 .s3_swiper_2_1 .navigation-wrap .prev-btn"
+            }
+        });
+
+        var mySwiper3 = new Swiper('.section4 .s3_swiper_2_2 .swiper-container', {
+            allowTouchMove: true, // Disable dragging
+            slidesPerView: 'auto',
+            spaceBetween: docWidth * spaceNum,
+            on: {
+                resize: function () { // 监听窗口大小变化
+                    docWidth = document.documentElement.clientWidth;
+                    this.params.spaceBetween = docWidth * spaceNum; // 动态设置间距
+                    this.update(); // 更新Swiper
+                }
+            },
+            loop: true,
+            // autoplay: {
+            //     delay: 2500
+            // },
+            navigation: {
+                "nextEl": ".section4 .s3_swiper_2_2 .navigation-wrap .next-btn",
+                "prevEl": ".section4 .s3_swiper_2_2 .navigation-wrap .prev-btn"
+            }
+        });
+        var swiper2 = new Swiper('.section7 .s7_swiper', {
+            allowTouchMove: false, // Disable dragging
+            direction: 'vertical',
+        });
+        $('.section7 .swiper-tabitem').click(function () {
+            var index = $(this).index();
+            $(this).addClass('tab-active').siblings().removeClass('tab-active')
+
+            swiper2.slideTo(index); // Change to the specified slide index
+        })
+
+        let slidesPerView = docWidth < 960 ? 2 : 4;
+        var mySwiper2 = new Swiper('.section7 .s7_swiper_1 .swiper-container', {
+            allowTouchMove: true, // Disable dragging
+            slidesPerView,
+            spaceBetween: docWidth * spaceNum,
+            on: {
+                resize: function () { // 监听窗口大小变化
+                    docWidth = document.documentElement.clientWidth;
+                    this.params.spaceBetween = docWidth * spaceNum; // 动态设置间距
+                    this.update(); // 更新Swiper
+                }
+            },
+            loop: true,
+            // autoplay: {
+            //     delay: 2500
+            // },
+            navigation: {
+                "nextEl": ".section7 .s7_swiper_1 .navigation-wrap .next-btn",
+                "prevEl": ".section7 .s7_swiper_1 .navigation-wrap .prev-btn"
+            }
+        });
+
+        var mySwiper3 = new Swiper('.section7 .s7_swiper_2 .swiper-container', {
+            allowTouchMove: true, // Disable dragging
+            slidesPerView,
+            spaceBetween: docWidth * spaceNum,
+            on: {
+                resize: function () { // 监听窗口大小变化
+                    docWidth = document.documentElement.clientWidth;
+                    this.params.spaceBetween = docWidth * spaceNum; // 动态设置间距
+                    this.update(); // 更新Swiper
+                }
+            },
+            loop: false,
+            // autoplay: {
+            //     delay: 2500
+            // },
+            navigation: {
+                "nextEl": ".section7 .s7_swiper_2 .navigation-wrap .next-btn",
+                "prevEl": ".section7 .s7_swiper_2 .navigation-wrap .prev-btn"
+            }
+        });
+
+</script>
+{% schema %}
+  {
+    "name": "60w_activlity",
+    "settings": [    ],
+    "blocks": [    ],
+    "presets": [
+      {
+        "name": "60w_activlity"
+      }
+    ]
+  }
+{% endschema %}

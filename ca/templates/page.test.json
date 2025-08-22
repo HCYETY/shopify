@@ -1,0 +1,36 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "creality_falcon2_pro_page_Xc8TQc": {
+      "type": "creality_falcon2_pro_page",
+      "disabled": true,
+      "settings": {}
+    },
+    "blog_template_plain_B7eWnR": {
+      "type": "blog-template-plain",
+      "settings": {
+        "h1": "一级标题",
+        "blogAuthor": "",
+        "tags": "分类"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "creality_falcon2_pro_page_Xc8TQc",
+    "blog_template_plain_B7eWnR"
+  ]
+}

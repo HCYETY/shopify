@@ -1,0 +1,271 @@
+<style>
+ body{width:100%;margin:0;padding:0}.web-push{position:fixed;background-color:#fff;display:none;z-index:9999}.web-push .web-push-content{display:flex}.web-push .web-push-content-right-title{font-weight:700;color:#1e1e1e;line-height:120%}.web-push .web-push-content-right-text{line-height:120%;color:#8D9095;font-weight:500}.web-push .web-push-btn{display:flex;justify-content:flex-end}.web-push .web-push-btn-no,.web-push .web-push-btn-allow{text-align:center;cursor:pointer;transition:all 0.3s;opacity:1;font-weight:700}.web-push .web-push-btn-no:hover,.web-push .web-push-btn-allow:hover{opacity:0.7}.web-push .web-push-btn-no{background-color:#F5F6F7;color:#75C4D8}.web-push .web-push-btn-allow{background-color:#75C4D8;color:#FFF}@media screen and (min-width: 1920px){.web-push{width:18.33vw;padding:1.25vw 1.25vw;top:1.98vw;left:1.25vw;border-radius:1.25vw;box-shadow:0px .21vw 1.25vw 0px rgba(20,22,32,0.1)}.web-push .web-push-content{gap:.83vw}.web-push .web-push-content-left svg{width:2.92vw;height:2.92vw}.web-push .web-push-content-right-title{font-size:.94vw}.web-push .web-push-content-right-text{margin-top:.42vw;font-size:.73vw}.web-push .web-push-btn{gap:.52vw;margin-top:.83vw}.web-push .web-push-btn-no,.web-push .web-push-btn-allow{padding:.42vw .83vw;min-width:4.58vw;border-radius:2.29vw;font-size:.73vw}}@media screen and (max-width: 900px){.web-push{width:auto;padding:6.4vw 6.4vw;bottom:0vw;border-radius:6.4vw 6.4vw 0 0;box-shadow:0px 1.07vw 6.4vw 0px rgba(20,22,32,0.1)}.web-push .web-push-content{gap:4.27vw}.web-push .web-push-content-left svg{width:14.93vw;height:14.93vw}.web-push .web-push-content-right-title{font-size:5.33vw}.web-push .web-push-content-right-text{margin-top:2.13vw;font-size:3.73vw}.web-push .web-push-btn{gap:2.67vw;margin-top:4.27vw}.web-push .web-push-btn-no,.web-push .web-push-btn-allow{padding:2.13vw 4.27vw;min-width:23.47vw;border-radius:11.73vw;font-size:4.27vw;flex:1}}@media screen and (min-width: 901px) and (max-width: 1920px){.web-push{width:352px;padding:24px 24px;top:38px;left:24px;border-radius:24px;box-shadow:0px 4px 24px 0px rgba(20,22,32,0.1)}.web-push .web-push-content{gap:16px}.web-push .web-push-content-left svg{width:56px;height:56px}.web-push .web-push-content-right-title{font-size:18px}.web-push .web-push-content-right-text{margin-top:8px;font-size:14px}.web-push .web-push-btn{gap:10px;margin-top:16px}.web-push .web-push-btn-no,.web-push .web-push-btn-allow{padding:8px 16px;min-width:88px;border-radius:44px;font-size:14px}}
+
+</style>
+<div class="web-push">
+    <div>
+        <div class="web-push-content">
+            <div class="web-push-content-left">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <path
+                            d="M21.7778 5.10015C21.7778 3.87285 22.7727 2.87793 24 2.87793C25.2273 2.87793 26.2222 3.87285 26.2222 5.10015V5.72235C26.2222 5.72942 26.2165 5.73515 26.2094 5.73515H21.7906C21.7835 5.73515 21.7778 5.72942 21.7778 5.72235V5.10015Z"
+                            fill="url(#paint0_linear_6787_60975)" />
+                        <path d="M21.7778 5.73513H26.2222V8.27488H21.7778V5.73513Z"
+                            fill="url(#paint1_linear_6787_60975)" />
+                        <path
+                            d="M9.83347 20.7252C9.83347 13.0162 16.0828 6.76682 23.7918 6.76682C31.5008 6.76682 37.7501 13.0162 37.7501 20.7252V38.1297H9.83347V20.7252Z"
+                            fill="url(#paint2_linear_6787_60975)" />
+                        <path
+                            d="M4 34.8284C4 33.0051 5.47807 31.527 7.30136 31.527H40.6986C42.5219 31.527 44 33.0051 44 34.8284C44 36.6517 42.5219 38.1297 40.6986 38.1297H7.30136C5.47807 38.1297 4 36.6517 4 34.8284Z"
+                            fill="url(#paint3_linear_6787_60975)" />
+                        <path
+                            d="M31.2222 37.8779C31.2222 41.8666 27.9887 45.1002 24 45.1002C20.0113 45.1002 16.7778 41.8666 16.7778 37.8779C16.7778 33.8892 20.0113 30.6557 24 30.6557C27.9887 30.6557 31.2222 33.8892 31.2222 37.8779Z"
+                            fill="url(#paint4_linear_6787_60975)" />
+                        <defs>
+                            <linearGradient id="paint0_linear_6787_60975" x1="24" y1="2.87793" x2="24" y2="45.1002"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#75C4D8" />
+                                <stop offset="1" stop-color="#E8F3F7" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_6787_60975" x1="24" y1="2.87793" x2="24" y2="45.1002"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#75C4D8" />
+                                <stop offset="1" stop-color="#E8F3F7" />
+                            </linearGradient>
+                            <linearGradient id="paint2_linear_6787_60975" x1="24" y1="2.87793" x2="24" y2="45.1002"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#75C4D8" />
+                                <stop offset="1" stop-color="#E8F3F7" />
+                            </linearGradient>
+                            <linearGradient id="paint3_linear_6787_60975" x1="24" y1="2.87793" x2="24" y2="45.1002"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#75C4D8" />
+                                <stop offset="1" stop-color="#E8F3F7" />
+                            </linearGradient>
+                            <linearGradient id="paint4_linear_6787_60975" x1="24" y1="2.87793" x2="24" y2="45.1002"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#75C4D8" />
+                                <stop offset="1" stop-color="#E8F3F7" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+            </div>
+            <div class="web-push-content-right">
+                <div class="web-push-content-right-title">Welcome to Creality Falcon Store</div>
+                <div class="web-push-content-right-text">Be the first to receive our latest product updates and
+                    newest
+                    offerings.</div>
+            </div>
+
+        </div>
+        <div class="web-push-btn">
+            <div class="web-push-btn-no">No, thanks</div>
+            <div class="web-push-btn-allow">Allow</div>
+        </div>
+    </div>
+</div>
+<script>
+    // dummy variable - please replace with your customer ID variable
+    var customerId = "{{ customer.email }}"?CryptoJS.MD5("{{ customer.email }}").toString():""
+    var fieldId = 1655;
+    var isGeneralSubscribe = false;
+    //function - subscribe() - to trigger premission popup by browser and sync browser token to Emarsys - [all pages]
+    // new subscriber - start
+    function generalSubscribe() {
+        WebEmarsysSdk.push(function (res) {
+          isGeneralSubscribe = true;
+            WebEmarsysSdk.subscribe();
+
+            WebEmarsysSdk.push(["onSubscribe", function (res) {
+                //Result: The user has subscribed web push
+                localStorage.setItem('emarsysSubscribe', 'subscribe');
+
+                if (customerId) { // for user in login status
+                    WebEmarsysSdk.push(function (res) {
+                        WebEmarsysSdk.isSubscribed().then(function (res) {
+                            const contactInfo = {
+                                fieldId: Number(fieldId),
+                                fieldValue: customerId
+                            };
+                            loginResult = WebEmarsysSdk.login(contactInfo).then(function (res) {
+                                console.log("generalSubscribe: login result: " + res);
+                                if (res) {
+                                    localStorage.setItem('emarsysLogin', 'login');
+                                }
+                            })
+                        }).catch(function (err) {
+                            console.error('Is subscribed error', err)
+                        })
+                    });
+                }
+            }])
+        })
+    }
+    // new subscriber - end
+
+
+    // existing subscriber - start
+    function isSafari() {
+        var userAgent = navigator.userAgent.toLowerCase();
+        return userAgent.includes('safari') && !userAgent.includes('chrome');
+    }
+
+    function isIOS() {
+        userAgent = window.navigator.userAgent.toLowerCase();
+        return /iphone|ipad|ipod/.test(userAgent);
+    }
+
+    function isStandaloneWebApp() {
+        var isStandaloneWebAppValue = false;
+
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            // The website is being viewed as a standalone web app
+            console.log('Website is being viewed as a web app');
+            isStandaloneWebAppValue = true;
+        }
+      return isStandaloneWebAppValue;
+    }
+
+    //if (isSafari()) {
+    if (isIOS() && (!isStandaloneWebApp())) {
+        // no auto-subscription for existing iOS browser users (non - web app users)
+    } else {
+        WebEmarsysSdk.push(["onReady", function (res) {
+            WebEmarsysSdk.push(["onPermissionGranted", function (res) {
+               if ((!localStorage.getItem("emarsysSubscribe")) && (!isGeneralSubscribe)){
+                    console.log("existing subscriber: web push migration")
+                    WebEmarsysSdk.subscribe()
+                    localStorage.setItem("emarsysSubscribe", "subscribe")
+                }
+            }])
+        }])
+    }
+    // existing subscriber - end
+
+    // login / Logout - start
+
+    //login() - map existing contact to this browser - [all pages]
+    //suggest to run once only
+    if (customerId) { // for user in login status
+        if (!localStorage.getItem('emarsysLogin')) {
+            WebEmarsysSdk.push(function (res) {
+                WebEmarsysSdk.isSubscribed().then(function (res) {
+                    const contactInfo = {
+                        fieldId: Number(fieldId),
+                        fieldValue: customerId
+                    };
+                    loginResult = WebEmarsysSdk.login(contactInfo).then(function (res) {
+                        console.log("Login Result: " + res);
+                        if (res) {
+                            localStorage.setItem('emarsysLogin', 'login');
+                        }
+                    })
+                }).catch(function (err) {
+                    console.error('Is subscribed error', err)
+                })
+            });
+        }
+    } else { //for visitor (anonymous)
+        if (localStorage.getItem('emarsysLogin')) {
+            WebEmarsysSdk.push(function (res) {
+                WebEmarsysSdk.isSubscribed().then(function (res) {
+                    logoutResult = WebEmarsysSdk.logout().then(function (res) {
+                        console.log("Logout Result: " + res);
+                        if (res) {
+                            localStorage.removeItem('emarsysLogin');
+                        }
+                    })
+                }).catch(function (err) {
+                    console.error('Is subscribed error', err);
+                })
+            })
+        }
+    }
+    // login / Logout - end
+
+
+    // unsubscribe() - [the page after web push opt-out]
+    // unsubscribe - start
+    /*
+            WebEmarsysSdk.push(function(res) {
+                WebEmarsysSdk.unsubscribe();
+                localStorage.removeItem('emarsysSubscribe');
+            })
+    */
+    // unsubscribe - end
+</script>
+<script type="text/javascript">
+    // logic to display HTML popup
+    var permissionGrantedRejectedWebPush = false;
+    var permissionGrantedWebPush = false;
+    var isSubscribedStatus = false;
+     // 时间函数
+    function setWithExpire(expireHours = 48) {
+    const data = Date.now() + expireHours * 60 * 60 * 1000;
+    localStorage.setItem('web_push_expiration_date', JSON.stringify(data));
+    }
+    // If it is not an iOS device, it will run the following logic for HTML pop-up window.
+    if (isIOS() && (!isStandaloneWebApp())) {
+        // no action for iOS and browser
+    } else {
+        WebEmarsysSdk.push(["onReady", function (res) {
+            WebEmarsysSdk.push(["onPermissionGranted", function (res) {
+                //Result: The user has subscribed web push
+                console.log("EVENT: onPermissionGranted")
+                permissionGrantedRejectedWebPush = true
+                permissionGrantedWebPush = true
+            }
+            ])
+            WebEmarsysSdk.push(["onPermissionDenied", function (res) {
+                //result: The user has rejected web push
+                console.log("EVENT: onPermissionDenied")
+                permissionGrantedRejectedWebPush = true
+            }
+            ])
+            WebEmarsysSdk.isSubscribed().then(function (e) {
+                //result: the user subscribes to Emarsys web push
+                isSubscribedStatus = e;
+            }).catch(function (err) {
+            })
+            setTimeout(funcHTMLPopup, 2000) //Since above asynchronous function may take time to call back, it setup to wait for 2 seconds to the next logic.
+        }])
+    }
+
+    function funcHTMLPopup() {
+        console.log("funcHTMLPopup")
+        //Re-subscribe web push
+        if (permissionGrantedWebPush == true && isSubscribedStatus == false) {
+            WebEmarsysSdk.subscribe();
+            console.log("Resubscribe: WebEmarsysSdk.subscribe()");
+        }
+
+        if (!permissionGrantedRejectedWebPush) {
+            // If the web push has not been subscribed or rejected in this browser, you can run your logic for HTML popup.
+            showHTMLPopup();
+        }
+ if (Notification.permission == 'default') {
+            const data = localStorage.getItem('web_push_expiration_date');
+            if (!data || Date.now() > JSON.parse(data)) {
+                document.querySelector(".web-push").style.display = "block";
+                const btn_no = document.querySelector(".web-push-btn-no")
+                const btn_allow = document.querySelector(".web-push-btn-allow")
+                btn_no.addEventListener("click", function () {
+                    $(".web-push").css("display", "none");
+                });
+                btn_allow.addEventListener("click", function () {
+                    $(".web-push").css("display", "none");
+                    generalSubscribe()
+                });
+                localStorage.removeItem('web_push_expiration_date');
+                setWithExpire();
+            }
+
+        }
+    }
+
+      function showHTMLPopup() {
+        // generalSubscribe()
+    }
+
+
+</script>

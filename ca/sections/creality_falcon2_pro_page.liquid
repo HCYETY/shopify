@@ -1,0 +1,3622 @@
+<style>
+  @charset "UTF-8";
+
+  .blur-up {
+      filter: blur(1.25rem);
+      transition: filter 0.4s, -webkit-filter 0.4s;
+  }
+
+  .blur-up.loaded {
+      filter: blur(0rem);
+  }
+
+  .Creality-Falcon2-Pro .blur-up {
+      filter: blur(20px);
+      transition: filter 0.4s, -webkit-filter 0.4s;
+  }
+
+  .video-close svg {
+    fill: inherit;
+    stroke: inherit;
+    width: 100%;
+    height: 100%;
+    transition: inherit;
+}
+
+
+  .Creality-Falcon2-Pro .blur-up.loaded {
+      filter: blur(0px);
+  }
+
+  .Creality-Falcon2-Pro .fit_picture {
+      display: block;
+      width: 100%;
+      height: auto;
+      position: relative;
+  }
+
+  .Creality-Falcon2-Pro .fit_picture img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      left: 0;
+      top: 0;
+      object-fit: contain;
+  }
+
+  @media (min-width:0px) {
+      .Creality-Falcon2-Pro .fit_picture .placeholderTag {
+          display: none;
+      }
+
+      .Creality-Falcon2-Pro .fit_picture ._large {
+          display: block;
+      }
+  }
+
+  @media (max-width:1440px) {
+      .Creality-Falcon2-Pro .fit_picture .placeholderTag {
+          display: none;
+      }
+
+      .Creality-Falcon2-Pro .fit_picture ._medium {
+          display: block;
+      }
+  }
+
+  @media (max-width:960px) {
+      .Creality-Falcon2-Pro .fit_picture .placeholderTag {
+          display: none;
+      }
+
+      .Creality-Falcon2-Pro .fit_picture ._small {
+          display: block;
+      }
+  }
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+
+  .en .fontBold {
+    font-family: Montserrat-SemiBold, sans-serif;
+  }
+  .en .fontRegular {
+    font-family: Montserrat-Regular, sans-serif;
+  }
+  .en .fontLight {
+    font-family: Montserrat-Light, sans-serif;
+  }
+  .en .fontMedium {
+    font-family: Montserrat-Medium, sans-serif;
+  }
+
+  .cn .fontBold {
+    font-family: HarmonyOS_Sans_SC_Bold, sans-serif;
+  }
+  .cn .fontRegular {
+    font-family: HarmonyOS_Sans_SC_Regular, sans-serif;
+  }
+  .cn .fontLight {
+    font-family: HarmonyOS_Sans_SC_Light, sans-serif;
+  }
+  .cn .fontMedium {
+    font-family: HarmonyOS_Sans_SC_Medium, sans-serif;
+  }
+
+  .scroll-no {
+    overflow-y: hidden;
+  }
+
+  .Creality-Falcon2-Pro {
+    width: 100%;
+    font-size: 0;
+    position: relative;
+    background-color: #000000;
+    font-family: Montserrat-Regular;
+    line-height: 1;
+  }
+  .Creality-Falcon2-Pro .mbold2 {
+    font-family: Montserrat-SemiBold;
+  }
+  .Creality-Falcon2-Pro .mbold {
+    font-family: Montserrat-Medium;
+  }
+  .Creality-Falcon2-Pro * {
+    box-sizing: border-box;
+  }
+  .Creality-Falcon2-Pro > * {
+    position: relative;
+  }
+  .Creality-Falcon2-Pro .play_btn {
+    width: 2vw;
+    height: 2vw;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(data:image/png;base64,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);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+  .Creality-Falcon2-Pro img {
+    width: 100%;
+    height: auto;
+  }
+  .Creality-Falcon2-Pro .mb {
+    display: none;
+  }
+  .Creality-Falcon2-Pro a {
+    text-decoration: none;
+  }
+  .Creality-Falcon2-Pro h1,
+  .Creality-Falcon2-Pro h2,
+  .Creality-Falcon2-Pro h3,
+  .Creality-Falcon2-Pro h4,
+  .Creality-Falcon2-Pro h5,
+  .Creality-Falcon2-Pro h6,
+  .Creality-Falcon2-Pro p {
+    margin: 0;
+    padding: 0;
+  }
+  .Creality-Falcon2-Pro h1 {
+    font-family: Montserrat-SemiBold;
+    font-size: 4.69vw;
+    white-space: nowrap;
+    color: #58c73f;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: -0.15vw;
+  }
+  .Creality-Falcon2-Pro h2 {
+    font-family: Montserrat-Medium;
+    font-size: 2.34vw;
+    color: #ffffff;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  .Creality-Falcon2-Pro h3 {
+    font-family: Montserrat-Medium;
+    font-size: 1.95vw;
+    color: #ffffff;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  .Creality-Falcon2-Pro h4 {
+    font-size: 0.98vw;
+    font-family: Montserrat-SemiBold;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  .Creality-Falcon2-Pro .block_title {
+    font-family: Montserrat-Medium;
+    font-weight: 500;
+    font-size: 1.88vw;
+    color: #5ac543;
+    line-height: 1;
+  }
+  .Creality-Falcon2-Pro .desc {
+    font-size: 0.98vw;
+    font-family: Montserrat-Medium;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.4;
+  }
+  .Creality-Falcon2-Pro .abs_wrap,
+  .Creality-Falcon2-Pro .abs_div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+  }
+  .Creality-Falcon2-Pro .section2_1 {
+    padding-top: 4vw;
+    margin-bottom: 4vw;
+  }
+  .Creality-Falcon2-Pro .section2_1 h2 {
+    padding: 0 21.88vw;
+    text-align: center;
+  }
+  .Creality-Falcon2-Pro .section2_1 .wrapcenter {
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section2_1 .desc {
+    text-align: center;
+    margin-top: 1vw;
+  }
+  .Creality-Falcon2-Pro .section2_1 .email_wrap {
+    margin: 0 auto;
+    width: 32vw;
+    display: none;
+  }
+  .Creality-Falcon2-Pro .section2_1 .email_wrap .embed_enquiry {
+    width: 100%;
+    position: relative;
+  }
+  .Creality-Falcon2-Pro .section2 {
+    padding: 0 21.88vw;
+    padding-top: 4vw;
+  }
+  .Creality-Falcon2-Pro .section2 h2 {
+    text-align: center;
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap {
+    margin-top: 3vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item:nth-child(1) {
+    width: 19.67%;
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item:nth-child(2) {
+    width: 38.1%;
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item:nth-child(3) {
+    width: 40.8%;
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.half {
+    width: 49%;
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.hastop {
+    margin-top: 0.4vw;
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item .s2_pic2_1 {
+    width: 8.9vw;
+    margin-top: 0.8vw;
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item .text-wrap {
+    position: absolute;
+    top: 1.25vw;
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.item1 .text-wrap {
+    left: 2vw;
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.item2 .text-wrap, .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.item3 .text-wrap {
+    left: 1.5vw;
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.item4 .text-wrap, .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.item5 .text-wrap {
+    left: 1vw;
+    top: 0.5vw;
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.item6 .text-wrap {
+    top: 0.5vw;
+    left: 1.7vw;
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item:hover .sellpoint-item-jump svg {
+    transform: translateY(0);
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item .sellpoint-item-jump {
+    position: absolute;
+    bottom: 0.4vw;
+    right: 0.4vw;
+    width: 1.75vw;
+    height: 1.75vw;
+    background-color: #2e2e2e;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 9;
+    transform: translate3d(0, 0, 0);
+  }
+  .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item .sellpoint-item-jump svg {
+    width: 100%;
+    height: auto;
+    transition: all 1s;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  .Creality-Falcon2-Pro .section3 .abs_wrap {
+    padding: 0 21.88vw;
+    padding-top: 21vw;
+  }
+  .Creality-Falcon2-Pro .section3 .abs_wrap h1 {
+    margin: 1vw 0;
+  }
+  .Creality-Falcon2-Pro .section4 {
+    position: relative;
+    padding-top: 4vw;
+    padding-bottom: 6vw;
+    text-align: center;
+  }
+  .Creality-Falcon2-Pro .section4 .desc {
+    margin-top: 0.7vw;
+  }
+  .Creality-Falcon2-Pro .section4 h1 {
+    margin-top: 0.7vw;
+  }
+  .Creality-Falcon2-Pro .section4 .text2 {
+    font-weight: 400;
+    font-size: 2.15vw;
+    color: #ffffff;
+    margin-top: 0.5vw;
+  }
+  .Creality-Falcon2-Pro .section4 .swiper-container {
+    position: relative;
+    margin-top: 3vw;
+    width: 100%;
+    height: auto;
+  }
+  .Creality-Falcon2-Pro .section4 .swiper-container .swiper-wrapper {
+    height: 100%;
+  }
+  .Creality-Falcon2-Pro .section4 .swiper-container .swiper-wrapper .swiper-slide {
+    position: relative;
+    width: 52.7vw;
+    height: 100%;
+    opacity: 0.3;
+    transition: opacity 0.3 ease;
+  }
+  .Creality-Falcon2-Pro .section4 .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
+    opacity: 1;
+  }
+  .Creality-Falcon2-Pro .section4 .swiper-container .swiper-wrapper .text_wrap {
+    position: absolute;
+    left: 1.25vw;
+    bottom: 0.9vw;
+    z-index: 2;
+  }
+  .Creality-Falcon2-Pro .section4 .swiper-container .swiper-wrapper .text_wrap .text {
+    text-align: left;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.68vw;
+  }
+  .Creality-Falcon2-Pro .section4 .swiper-container .play_btn {
+    cursor: pointer;
+  }
+  .Creality-Falcon2-Pro .section4 .swiper-container .navigation-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -1.5vw);
+    width: 0;
+    z-index: 1;
+    font-size: 0;
+    padding: 0 1.84vw;
+  }
+  .Creality-Falcon2-Pro .section4 .swiper-container .navigation-wrap .prev-btn,
+  .Creality-Falcon2-Pro .section4 .swiper-container .navigation-wrap .next-btn {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(22vw);
+    z-index: 3;
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .Creality-Falcon2-Pro .section4 .swiper-container .navigation-wrap .prev-btn:hover,
+  .Creality-Falcon2-Pro .section4 .swiper-container .navigation-wrap .next-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .Creality-Falcon2-Pro .section4 .swiper-container .navigation-wrap .prev-btn svg,
+  .Creality-Falcon2-Pro .section4 .swiper-container .navigation-wrap .next-btn svg {
+    width: 1.5vw;
+    height: 2.4vw;
+  }
+  .Creality-Falcon2-Pro .section4 .swiper-container .navigation-wrap .prev-btn {
+    transform: translateX(-22vw);
+  }
+  .Creality-Falcon2-Pro .section4 .swiper-container .navigation-wrap .prev-btn svg {
+    transform: rotate(180deg);
+  }
+  .Creality-Falcon2-Pro .section4 .swiper-pagination {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 1.5vw;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    gap: 0.75vw;
+    bottom: 0;
+  }
+  .Creality-Falcon2-Pro .section4 .swiper-pagination .swiper-pagination-bullet {
+    background-color: #fff;
+    width: 0.5vw;
+    height: 0.5vw;
+  }
+  .Creality-Falcon2-Pro .section4_2 {
+    overflow:hidden;
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section4_2 h2 {
+    text-align: center;
+  }
+  .Creality-Falcon2-Pro .section4_2 .desc {
+    text-align: center;
+    margin-top: 1vw;
+  }
+  .Creality-Falcon2-Pro .section4_2 .video_wrap {
+    margin-top: 2.5vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  .Creality-Falcon2-Pro .section4_2 .video_wrap .video_item {
+    width: 49.5%;
+    position: relative;
+  }
+  .Creality-Falcon2-Pro .section4_2 .video_wrap .video_item video {
+    width: 100%;
+    height: auto;
+  }
+  .Creality-Falcon2-Pro .section4_2 .video_wrap .video_item .video_text {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(150%);
+    text-align: center;
+    left: 0;
+    width: 100%;
+  }
+  .Creality-Falcon2-Pro .section4_2 .mblock {
+    margin-top: 4.5vw;
+  }
+  .Creality-Falcon2-Pro .section4_2 .mblock .block_title {
+    margin-bottom: 1.5vw;
+  }
+  .Creality-Falcon2-Pro .section4_2 .mblock .desc {
+    text-align: left;
+    margin-top: 0;
+  }
+  .Creality-Falcon2-Pro .section4_2 .mblock .flex_wrap {
+    margin-top: 1vw;
+    display: flex;
+    gap: 1vw;
+  }
+  .Creality-Falcon2-Pro .section4_2 .mblock .flex_wrap .flex_item {
+    flex: 1;
+  }
+  .Creality-Falcon2-Pro .section4_2 .mblock .flex_wrap .flex_item .pic_desc {
+    margin-top: 0.4vw;
+    font-weight: 400;
+    font-size: 1.41vw;
+    color: #ffffff;
+  }
+  .Creality-Falcon2-Pro .section5 {
+    padding: 0 21.88vw;
+    margin-top: 12vw;
+  }
+  .Creality-Falcon2-Pro .section5 h1 {
+    margin-top: 0.5vw;
+  }
+  .Creality-Falcon2-Pro .section5 .desc {
+    margin-top: 1vw;
+  }
+  .Creality-Falcon2-Pro .section5 .flex_wrap {
+    margin-top: 3vw;
+    display: flex;
+    gap: 1.5vw;
+  }
+  .Creality-Falcon2-Pro .section5 .flex_wrap .flex_item {
+    flex: 1;
+  }
+  .Creality-Falcon2-Pro .section6 {
+    margin-top: 12vw;
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section6 h3 {
+    margin-top: 0.5vw;
+  }
+  .Creality-Falcon2-Pro .section6 .desc {
+    margin-top: 1vw;
+  }
+  .Creality-Falcon2-Pro .section6 .video_wrap {
+    margin-top: 3vw;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .Creality-Falcon2-Pro .section6 .video_wrap video {
+    width: 100%;
+    height: auto;
+  }
+  .Creality-Falcon2-Pro .section7 {
+    margin-top: 12vw;
+  }
+  .Creality-Falcon2-Pro .section7 .text_wrap {
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section7 .text_wrap .desc {
+    margin-top: 1vw;
+  }
+  .Creality-Falcon2-Pro .section7 .picture_wrap {
+    margin-top: 1vw;
+  }
+  .Creality-Falcon2-Pro .section8 {
+    margin-top: 2vw;
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section8 h1 {
+    margin-top: 1vw;
+  }
+  .Creality-Falcon2-Pro .section8 .desc {
+    margin-top: 1vw;
+  }
+  .Creality-Falcon2-Pro .section8 .picture_wrap {
+    margin-top: 3vw;
+  }
+  .Creality-Falcon2-Pro .section9 {
+    margin-top: 12vw;
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section9 .picture_wrap {
+    margin-top: 3vw;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .Creality-Falcon2-Pro .section9 .wrap2 {
+    margin-top: 4vw;
+  }
+  .Creality-Falcon2-Pro .section9 .wrap2 .warp_item {
+    display: flex;
+    align-items: center;
+  }
+  .Creality-Falcon2-Pro .section9 .wrap2 .warp_item:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+  .Creality-Falcon2-Pro .section9 .wrap2 .warp_item .fit_picture {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .Creality-Falcon2-Pro .section9 .wrap2 .warp_item .fit_picture,
+  .Creality-Falcon2-Pro .section9 .wrap2 .warp_item .text_wrap {
+    width: 50%;
+  }
+  .Creality-Falcon2-Pro .section9 .wrap2 .warp_item .text_wrap {
+    text-align: left;
+    padding-left: 0.5vw;
+  }
+  .Creality-Falcon2-Pro .section9 .wrap2 .warp_item .text_wrap .desc {
+    white-space: nowrap;
+    color: #808080;
+  }
+  .Creality-Falcon2-Pro .section10 {
+    margin-top: 12vw;
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section10 .video_wrap {
+    margin-top: 3vw;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .Creality-Falcon2-Pro .section10 .video_wrap video {
+    width: 100%;
+    height: auto;
+  }
+  .Creality-Falcon2-Pro .section10 .flex_wrap {
+    margin-top: 1.5vw;
+    display: flex;
+    gap: 1vw;
+  }
+  .Creality-Falcon2-Pro .section10 .flex_wrap .flex_item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Creality-Falcon2-Pro .section10 .flex_wrap .flex_item .text {
+    margin-top: 1vw;
+    font-weight: 500;
+    font-size: 1.17vw;
+    color: #58c73f;
+  }
+  .Creality-Falcon2-Pro .section11 {
+    margin-top: 10vw;
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section11 .desc {
+    margin-top: 1vw;
+    text-align: center;
+  }
+  .Creality-Falcon2-Pro .section11 .flex_wrap {
+    margin-top: 3vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .Creality-Falcon2-Pro .section11 .flex_wrap .flex_item {
+    width: 49%;
+    margin-bottom: 0.7vw;
+    position: relative;
+    background: #1b1b1b;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-left: 1.8vw;
+    padding-top: 2vw;
+    height: 11.72vw;
+  }
+  .Creality-Falcon2-Pro .section11 .flex_wrap .flex_item:last-child {
+    width: 100%;
+  }
+  .Creality-Falcon2-Pro .section11 .flex_wrap .flex_item .fit_picture {
+    width: 2.3vw;
+  }
+  .Creality-Falcon2-Pro .section11 .flex_wrap .flex_item .desc {
+    text-align: left;
+    margin-top: 0;
+  }
+  .Creality-Falcon2-Pro .section11 .flex_wrap .flex_item .desc2 {
+    margin-top: 1vw;
+  }
+  .Creality-Falcon2-Pro .section12 {
+    margin-top: 10vw;
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section12 .pic1 {
+    width: 21.45vw;
+    margin: 0 auto;
+    margin-top: 2.5vw;
+    position: relative;
+  }
+  .Creality-Falcon2-Pro .section12 .flex_wrap {
+    display: flex;
+    gap: 0.7vw;
+    position: relative;
+    z-index: 2;
+    margin-top: -7vw;
+  }
+  .Creality-Falcon2-Pro .section12 .flex_wrap .flex_item {
+    flex: 1;
+    height: 23vw;
+    background-color: #242424;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .Creality-Falcon2-Pro .section12 .flex_wrap .flex_item .text_wrap {
+    padding-top: 0.5vw;
+    padding-left: 0.8vw;
+  }
+  .Creality-Falcon2-Pro .section12 .flex_wrap .flex_item .text_wrap .text1 {
+    font-size: 0.94vw;
+    color: #58c73f;
+  }
+  .Creality-Falcon2-Pro .section12 .flex_wrap .flex_item .text_wrap .text2 {
+    margin-top: 0.5vw;
+    font-size: 0.55vw;
+    line-height: 1.2;
+    color: #fff;
+    opacity: 0.5;
+  }
+  .Creality-Falcon2-Pro .section12 .tips_text {
+    text-align: center;
+    margin-top: 1.5vw;
+    font-weight: 500;
+    font-size: 0.94vw;
+    color: #ffffff;
+    opacity: 0.5;
+  }
+  .Creality-Falcon2-Pro .section13 {
+    margin-top: 12vw;
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section13 .desc {
+    margin-top: 2vw;
+  }
+  .Creality-Falcon2-Pro .section13 .video_wrap {
+    margin-top: 3vw;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .Creality-Falcon2-Pro .section13 .video_wrap video {
+    width: 100%;
+    height: auto;
+  }
+  .Creality-Falcon2-Pro .section14 {
+    margin-top: 6vw;
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section14 .flex_wrap {
+    margin-top: 3vw;
+    display: flex;
+    gap: 0.5vw;
+  }
+  .Creality-Falcon2-Pro .section14 .flex_wrap .flex_item {
+    flex: 1;
+  }
+  .Creality-Falcon2-Pro .section14 .flex_wrap .flex_item .text_wrap {
+    margin-top: 0.5vw;
+    text-align: center;
+    font-size: 1.56vw;
+    line-height: 1.2;
+    color: #58c73f;
+  }
+  .Creality-Falcon2-Pro .section15 {
+    margin-top: 6vw;
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section15 h3 {
+    margin-top: 1vw;
+  }
+  .Creality-Falcon2-Pro .section15 .desc {
+    margin-top: 1.5vw;
+  }
+  .Creality-Falcon2-Pro .section15 .picture_wrap {
+    /* margin: 0 auto; */
+    margin-top: 5vw;
+    /* width: 85%; */
+  }
+  .Creality-Falcon2-Pro .section15 .picture_wrap img {
+    border-radius: 10px;
+  }
+  .Creality-Falcon2-Pro .section16 {
+    margin-top: 6vw;
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section16 .desc {
+    margin-top: 1.5vw;
+  }
+  .Creality-Falcon2-Pro .section16 .video_wrap {
+    margin-top: 3vw;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .Creality-Falcon2-Pro .section16 .video_wrap video {
+    width: 100%;
+    height: auto;
+  }
+  .Creality-Falcon2-Pro .section17 {
+    margin-top: 6vw;
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section17 .desc {
+    margin-top: 1.5vw;
+  }
+  .Creality-Falcon2-Pro .section17 .picture_wrap {
+    margin-top: 4vw;
+  }
+  .Creality-Falcon2-Pro .section18 {
+    margin-top: 6vw;
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section18 .flex_wrap {
+    margin-top: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .Creality-Falcon2-Pro .section18 .flex_wrap .flex_item {
+    width: 49.5%;
+    margin-bottom: 0.5vw;
+  }
+  .Creality-Falcon2-Pro .section18 .flex_wrap .flex_item:last-child {
+    width: 100%;
+  }
+  .Creality-Falcon2-Pro .section19 {
+    margin-top: 6vw;
+  }
+  .Creality-Falcon2-Pro .section19 h1 {
+    padding: 0 21.88vw;
+  }
+  .Creality-Falcon2-Pro .section19 .s19-swiper {
+    margin-top: 1.5vw;
+    overflow: hidden;
+    height: 26vw;
+    position: relative;
+  }
+  .Creality-Falcon2-Pro .section19 .s19-swiper .swiper-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    display: flex;
+    height: auto;
+    width: auto;
+    animation: scrollX 30s linear infinite; /* 自定义动画，30秒内水平匀速滚动 */
+  }
+  @keyframes scrollX {
+    0% {
+      transform: translateX(0);
+    }
+    95% {
+      transform: translateX(calc(-100% + 100vw));
+    } /* 水平移动到最左边 */
+    100% {
+      transform: translateX(calc(-100% + 100vw));
+    }
+  }
+  .Creality-Falcon2-Pro .section19 .s19-swiper .swiper-wrapper .swiper-slide {
+    position: relative;
+    width: 14vw;
+    border-radius: 16px;
+    overflow: hidden;
+    height: auto;
+    margin: 0 0.25vw;
+  }
+  .Creality-Falcon2-Pro .section19 .s19-swiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: auto;
+  }
+  .Creality-Falcon2-Pro .section20 {
+    padding: 0 21.88vw;
+    margin-top: 5vw;
+    padding-bottom: 3vw;
+  }
+  .Creality-Falcon2-Pro .section20 h2 {
+    color: #58c73f;
+  }
+  .Creality-Falcon2-Pro .section20 .param_wrap {
+    width: auto;
+    margin-top: 2vw;
+  }
+  .Creality-Falcon2-Pro .section20 .param_wrap .param_flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .Creality-Falcon2-Pro .section20 .param_wrap .param_flex:first-child {
+    border-top: 1px solid #505050;
+  }
+  .Creality-Falcon2-Pro .section20 .param_wrap .param_flex .param_item {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 0.94vw;
+    color: #575757;
+    height: 2.4vw;
+    border-bottom: 1px solid #505050;
+  }
+  .Creality-Falcon2-Pro .section20 .param_wrap .param_flex .param_item .name {
+    color: #fff;
+    width: 35%;
+    flex-shrink: 0;
+    letter-spacing: -0.05vw;
+  }
+  .Creality-Falcon2-Pro .section20 .param_wrap .param_flex .param_item .value {
+    line-height: 1.2;
+    color: #7f7f7f;
+  }
+  .Creality-Falcon2-Pro .section30 {
+    display: none;
+  }
+
+  .video-dialog {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    --plyr-color-main: #fff;
+    --plyr-video-control-background-hover: #fff;
+    --plyr-video-control-color-hover: #fff;
+  }
+  .video-dialog .video-main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+  }
+  .video-dialog .video-main video {
+    width: 100%;
+    cursor: pointer;
+  }
+  .video-dialog .video-main .plyr__control--overlaid svg {
+    color: #000;
+  }
+  .video-dialog .video-main .plyr__controls .plyr__control {
+    background-color: transparent;
+  }
+  .video-dialog .video-main .video-button {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    border: none;
+  }
+  .video-dialog .video-main .video-button span {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .video-dialog .video-main .video-button span svg {
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+  .video-dialog .close {
+    right: 19.5vw;
+    top: 2vw;
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .toTop {
+    position: fixed;
+    z-index: 999;
+    cursor: pointer;
+    bottom: 8.75vw;
+    right: 2%;
+    transform: rotate(180deg);
+    width: 2vw;
+    height: 2vw;
+  }
+  .toTop:hover .sellpoint-item-jump svg {
+    transform: translateY(0);
+  }
+  .toTop .sellpoint-item-jump {
+    width: 100%;
+    height: 100%;
+    background-color: #2e2e2e;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 9;
+    transform: translate3d(0, 0, 0);
+  }
+  .toTop .sellpoint-item-jump svg {
+    width: 100%;
+    height: auto;
+    transition: all 1s;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  @media (max-width: 960px) {
+    .Creality-Falcon2-Pro .play_btn {
+      width: 7.6vw;
+      height: 7.6vw;
+      display: inline-block;
+      vertical-align: middle;
+      background-image: url(data:image/png;base64,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);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+    }
+    .Creality-Falcon2-Pro a {
+      text-decoration: none;
+    }
+    .Creality-Falcon2-Pro .mb {
+      display: block;
+    }
+    .Creality-Falcon2-Pro .pc {
+      display: none !important;
+    }
+    .Creality-Falcon2-Pro h1 {
+      font-family: Montserrat-SemiBold;
+      font-size: 8vw;
+      white-space: nowrap;
+      color: #58c73f;
+      line-height: 1.2;
+      font-weight: 500;
+      letter-spacing: -0.15vw;
+    }
+    .Creality-Falcon2-Pro h2 {
+      font-family: Montserrat-Medium;
+      font-size: 4.8vw;
+      color: #ffffff;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+    .Creality-Falcon2-Pro h3 {
+      font-family: Montserrat-Medium;
+      font-size: 4vw;
+      color: #ffffff;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+    .Creality-Falcon2-Pro h4 {
+      font-size: 3.4vw;
+      font-family: Montserrat-SemiBold;
+      color: #fff;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+    .Creality-Falcon2-Pro .block_title {
+      font-family: Montserrat-Medium;
+      font-weight: 500;
+      font-size: 4vw;
+      color: #5ac543;
+      line-height: 1;
+    }
+    .Creality-Falcon2-Pro .desc {
+      font-size: 2.7vw;
+      font-family: Montserrat-Medium;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.4;
+    }
+    .Creality-Falcon2-Pro .abs_wrap,
+    .Creality-Falcon2-Pro .abs_div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 2;
+    }
+    .Creality-Falcon2-Pro .section2_1 {
+      padding-top: 10vw;
+    }
+    .Creality-Falcon2-Pro .section2_1 h2 {
+      padding: 0 6.6vw;
+      text-align: center;
+    }
+    .Creality-Falcon2-Pro .section2_1 .wrapcenter {
+      padding: 0 6.6vw;
+    }
+    .Creality-Falcon2-Pro .section2_1 .desc {
+      text-align: center;
+      margin-top: 4vw;
+    }
+    .Creality-Falcon2-Pro .section2_1 .email_wrap {
+      margin: 0;
+      width: 100%;
+      margin-top: 4vw;
+      padding: 0 6.6vw;
+    }
+    .Creality-Falcon2-Pro .section2_1 .email_wrap .embed_enquiry {
+      width: 100%;
+    }
+    .Creality-Falcon2-Pro .section2 {
+      padding: 0 6.6vw;
+      padding-top: 8vw;
+    }
+    .Creality-Falcon2-Pro .section2 h2 {
+      text-align: center;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap {
+      margin-top: 8vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 1vw;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item:nth-child(1) {
+      width: 100%;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item:nth-child(2) {
+      width: 100%;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item:nth-child(3) {
+      width: 100%;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item {
+      position: relative;
+      cursor: pointer;
+      width: 100%;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item h4.mtitle {
+      font-size: 3.4vw;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item h4.mtitle .t1 {
+      font-size: 8vw;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item h4.mtitle .t2 {
+      font-size: 2.4vw;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item:nth-child(1) {
+      width: 49.6%;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item:nth-child(2) {
+      width: 49.6%;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item:nth-child(3) {
+      width: 100%;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.half {
+      width: 49.6%;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.hastop {
+      margin-top: 1vw;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item .s2_pic2_1 {
+      width: 16vw;
+      margin-top: 18vw;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item .text-wrap {
+      position: absolute;
+      top: 2.5vw;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.item1 .text-wrap {
+      left: 5vw;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.item2 .text-wrap, .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.item3 .text-wrap {
+      left: 3.6vw;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.item4 .text-wrap, .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.item5 .text-wrap {
+      left: 3.2vw;
+      top: 2.5vw;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item.item6 .text-wrap {
+      top: 1.8vw;
+      left: 9.6vw;
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item:hover .sellpoint-item-jump svg {
+      transform: translateY(0);
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item .sellpoint-item-jump {
+      position: absolute;
+      bottom: 2vw;
+      right: 2vw;
+      width: 6vw;
+      height: 6vw;
+      background-color: #2e2e2e;
+      border-radius: 50%;
+      overflow: hidden;
+      z-index: 9;
+      transform: translate3d(0, 0, 0);
+    }
+    .Creality-Falcon2-Pro .section2 .flex-wrap .col-item .flex-item .sellpoint-item-jump svg {
+      width: 100%;
+      height: auto;
+      transition: all 1s;
+      transform: translateY(-50%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+    .Creality-Falcon2-Pro .section3 .abs_wrap {
+      padding: 0 6.6vw;
+      padding-top: 15vw;
+      text-align: center;
+    }
+    .Creality-Falcon2-Pro .section3 .abs_wrap h1 {
+      margin: 1vw 0;
+    }
+    .Creality-Falcon2-Pro .section4 {
+      padding-top: 4vw;
+      padding-bottom: 6vw;
+      text-align: center;
+    }
+    .Creality-Falcon2-Pro .section4 .desc {
+      margin-top: 4vw;
+    }
+    .Creality-Falcon2-Pro .section4 h1 {
+      margin-top: 3vw;
+      font-size: 16vw;
+    }
+    .Creality-Falcon2-Pro .section4 .text2 {
+      font-weight: 400;
+      font-size: 4vw;
+      color: #ffffff;
+      margin-top: 0;
+    }
+    .Creality-Falcon2-Pro .section4 .swiper-container {
+      margin-top: 10vw;
+      width: 100%;
+      height: auto;
+    }
+    .Creality-Falcon2-Pro .section4 .swiper-container .swiper-wrapper {
+      height: 100%;
+    }
+    .Creality-Falcon2-Pro .section4 .swiper-container .swiper-wrapper .swiper-slide {
+      position: relative;
+      width: 100%;
+      height: 65vw;
+      opacity: 0.3;
+      background-color: #000;
+      transition: opacity 0.3 ease;
+    }
+    .Creality-Falcon2-Pro .section4 .swiper-container .swiper-wrapper .swiper-slide::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5);
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+    .Creality-Falcon2-Pro .section4 .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
+      opacity: 1;
+    }
+    .Creality-Falcon2-Pro .section4 .swiper-container .swiper-wrapper .text_wrap {
+      position: absolute;
+      left: 0;
+      bottom: 2vw;
+      z-index: 3;
+      width: 100%;
+    }
+    .Creality-Falcon2-Pro .section4 .swiper-container .swiper-wrapper .text_wrap .text {
+      text-align: center;
+      color: #fff;
+      font-weight: 500;
+      font-size: 2.4vw;
+    }
+    .Creality-Falcon2-Pro .section4 .swiper-container .play_btn {
+      cursor: pointer;
+    }
+    .Creality-Falcon2-Pro .section4 .swiper-container .navigation-wrap {
+      display: none;
+    }
+    .Creality-Falcon2-Pro .section4 .swiper-pagination {
+      display: flex;
+      margin: 0 auto;
+      margin-top: -12vw;
+      width: 100%;
+      justify-content: center;
+      position: relative;
+      gap: 1.5vw;
+      bottom: 0;
+    }
+    .Creality-Falcon2-Pro .section4 .swiper-pagination .swiper-pagination-bullet {
+      background-color: #fff;
+      width: 1.5vw;
+      height: 1.5vw;
+    }
+    .Creality-Falcon2-Pro .section4_2 {
+      margin-top: 16vw;
+      padding: 0 0;
+    }
+    .Creality-Falcon2-Pro .section4_2 h2 {
+      text-align: center;
+      padding: 0 6.6vw;
+    }
+    .Creality-Falcon2-Pro .section4_2 .desc {
+      text-align: center;
+      margin-top: 4vw;
+    }
+    .Creality-Falcon2-Pro .section4_2 .video_wrap {
+      padding: 0 6.6vw;
+      margin-top: 5vw;
+      display: flex;
+    }
+    .Creality-Falcon2-Pro .section4_2 .video_wrap .video_item {
+      flex: 1;
+      position: relative;
+    }
+    .Creality-Falcon2-Pro .section4_2 .video_wrap .video_item video {
+      width: 100%;
+      height: auto;
+    }
+    .Creality-Falcon2-Pro .section4_2 .mblock {
+      margin-top: 12vw;
+    }
+    .Creality-Falcon2-Pro .section4_2 .mblock .block_title {
+      margin-bottom: 3vw;
+      padding: 0 6.6vw;
+    }
+    .Creality-Falcon2-Pro .section4_2 .mblock .desc {
+      padding: 0 6.6vw;
+      text-align: left;
+      margin-top: 0;
+    }
+    .Creality-Falcon2-Pro .section4_2 .mblock .picture_wrap {
+      padding: 0 6.6vw;
+    }
+    .Creality-Falcon2-Pro .section4_2 .mblock .s4-swiper2 {
+      padding-left: 6.6vw;
+    }
+    .Creality-Falcon2-Pro .section4_2 .mblock .s4-swiper2 .flex_wrap {
+      margin-top: 4vw;
+      display: flex;
+      gap: inherit;
+    }
+    .Creality-Falcon2-Pro .section4_2 .mblock .s4-swiper2 .flex_wrap .flex_item {
+      flex: inherit;
+      flex-shrink: 0;
+      width: 86vw;
+    }
+    .Creality-Falcon2-Pro .section4_2 .mblock .s4-swiper2 .flex_wrap .flex_item .pic_desc {
+      margin-top: 2vw;
+      font-weight: 400;
+      font-size: 3.2vw;
+      color: #ffffff;
+    }
+    .Creality-Falcon2-Pro .section5 {
+      padding: 0 6.6vw;
+      margin-top: 16vw;
+    }
+    .Creality-Falcon2-Pro .section5 h1 {
+      margin-top: 2vw;
+      color: #fff;
+    }
+    .Creality-Falcon2-Pro .section5 .desc {
+      margin-top: 4vw;
+    }
+    .Creality-Falcon2-Pro .section5 .flex_wrap {
+      margin-top: 6vw;
+      display: flex;
+      gap: 1.5vw;
+    }
+    .Creality-Falcon2-Pro .section5 .flex_wrap .flex_item {
+      flex: 1;
+    }
+    .Creality-Falcon2-Pro .section6 {
+      margin-top: 12vw;
+      padding: 0 6.6vw;
+      padding: 0 6vw;
+    }
+    .Creality-Falcon2-Pro .section6 h1 {
+      color: #fff;
+    }
+    .Creality-Falcon2-Pro .section6 h3 {
+      margin-top: 4vw;
+    }
+    .Creality-Falcon2-Pro .section6 .desc {
+      margin-top: 5vw;
+    }
+    .Creality-Falcon2-Pro .section6 .video_wrap {
+      margin-top: 5vw;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .Creality-Falcon2-Pro .section6 .video_wrap video {
+      width: 100%;
+      height: auto;
+    }
+    .Creality-Falcon2-Pro .section7 {
+      margin-top: 16vw;
+    }
+    .Creality-Falcon2-Pro .section7 h1 {
+      color: #fff;
+    }
+    .Creality-Falcon2-Pro .section7 .text_wrap {
+      padding: 0 6.6vw;
+    }
+    .Creality-Falcon2-Pro .section7 .text_wrap .desc {
+      margin-top: 4vw;
+    }
+    .Creality-Falcon2-Pro .section7 .picture_wrap {
+      margin-top: 1vw;
+    }
+    .Creality-Falcon2-Pro .section8 {
+      margin-top: 10vw;
+      padding: 0;
+    }
+    .Creality-Falcon2-Pro .section8 h3 {
+      padding: 0 6.6vw;
+    }
+    .Creality-Falcon2-Pro .section8 h1 {
+      padding: 0 6.6vw;
+      margin-top: 3vw;
+      color: #fff;
+    }
+    .Creality-Falcon2-Pro .section8 .desc {
+      padding: 0 6.6vw;
+      margin-top: 3vw;
+    }
+    .Creality-Falcon2-Pro .section8 .picture_wrap {
+      margin-top: 3vw;
+    }
+    .Creality-Falcon2-Pro .section9 {
+      margin-top: 10vw;
+      padding: 0 4vw;
+    }
+    .Creality-Falcon2-Pro .section9 h1 {
+      color: #fff;
+    }
+    .Creality-Falcon2-Pro .section9 .picture_wrap {
+      margin-top: 4vw;
+      border-radius: 8px;
+    }
+    .Creality-Falcon2-Pro .section9 .wrap2 {
+      margin-top: 2vw;
+      display: flex;
+      justify-content: space-between;
+    }
+    .Creality-Falcon2-Pro .section9 .wrap2 .warp_item {
+      width: 49%;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    .Creality-Falcon2-Pro .section9 .wrap2 .warp_item:nth-child(2) {
+      flex-direction: column;
+    }
+    .Creality-Falcon2-Pro .section9 .wrap2 .warp_item .fit_picture {
+      border-radius: 8px;
+    }
+    .Creality-Falcon2-Pro .section9 .wrap2 .warp_item .fit_picture,
+    .Creality-Falcon2-Pro .section9 .wrap2 .warp_item .text_wrap {
+      width: 100%;
+    }
+    .Creality-Falcon2-Pro .section9 .wrap2 .warp_item .text_wrap {
+      text-align: left;
+      padding-left: 0;
+      padding-top: 3vw;
+    }
+    .Creality-Falcon2-Pro .section9 .wrap2 .warp_item .text_wrap .desc {
+      white-space: nowrap;
+      font-size: 1.6vw;
+      color: #fff;
+      margin-top: 1vw;
+    }
+    .Creality-Falcon2-Pro .section10 {
+      margin-top: 12vw;
+      padding: 0 4vw;
+    }
+    .Creality-Falcon2-Pro .section10 h1 {
+      color: #fff;
+    }
+    .Creality-Falcon2-Pro .section10 .video_wrap {
+      margin-top: 5vw;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .Creality-Falcon2-Pro .section10 .video_wrap video {
+      width: 100%;
+      height: auto;
+    }
+    .Creality-Falcon2-Pro .section10 .flex_wrap {
+      margin-top: 2vw;
+      display: flex;
+      gap: 2vw;
+    }
+    .Creality-Falcon2-Pro .section10 .flex_wrap .flex_item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .Creality-Falcon2-Pro .section10 .flex_wrap .flex_item .text {
+      margin-top: 3vw;
+      font-size: 2vw;
+    }
+    .Creality-Falcon2-Pro .section11 {
+      margin-top: 16vw;
+      padding: 0 4vw;
+    }
+    .Creality-Falcon2-Pro .section11 h1 {
+      color: #fff;
+      text-align: center;
+    }
+    .Creality-Falcon2-Pro .section11 .desc {
+      margin-top: 4vw;
+      text-align: center;
+    }
+    .Creality-Falcon2-Pro .section11 .flex_wrap {
+      margin-top: 3vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .Creality-Falcon2-Pro .section11 .flex_wrap .flex_item {
+      width: 49.5%;
+      margin-bottom: 2vw;
+      position: relative;
+      background: #1b1b1b;
+      border-radius: 8px;
+      overflow: hidden;
+      padding-left: 2vw;
+      padding-top: 4vw;
+      height: 26vw;
+    }
+    .Creality-Falcon2-Pro .section11 .flex_wrap .flex_item:last-child {
+      width: 100%;
+    }
+    .Creality-Falcon2-Pro .section11 .flex_wrap .flex_item .fit_picture {
+      width: 4.5vw;
+      position: absolute;
+      left: 2vw;
+      top: 4vw;
+    }
+    .Creality-Falcon2-Pro .section11 .flex_wrap .flex_item:nth-child(3) .desc {
+      padding-left: 6vw;
+    }
+    .Creality-Falcon2-Pro .section11 .flex_wrap .flex_item .desc {
+      text-align: left;
+      margin-top: 1vw;
+      letter-spacing: -0.12vw;
+    }
+    .Creality-Falcon2-Pro .section11 .flex_wrap .flex_item .desc br {
+      display: none;
+    }
+    .Creality-Falcon2-Pro .section11 .flex_wrap .flex_item .desc2 {
+      color: #58c73f;
+      margin-top: 1vw;
+      padding-left: 6vw;
+    }
+    .Creality-Falcon2-Pro .section12 {
+      margin-top: 16vw;
+      padding: 0 4vw;
+    }
+    .Creality-Falcon2-Pro .section12 h1 {
+      color: #fff;
+    }
+    .Creality-Falcon2-Pro .section12 .pic1 {
+      width: 37vw;
+      margin: 0 auto;
+      margin-top: 4vw;
+      position: relative;
+    }
+    .Creality-Falcon2-Pro .section12 .flex_wrap {
+      display: flex;
+      gap: 2vw;
+      position: relative;
+      z-index: 2;
+      margin-top: -14vw;
+    }
+    .Creality-Falcon2-Pro .section12 .flex_wrap .flex_item {
+      flex: 1;
+      height: 44vw;
+      background-color: #242424;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .Creality-Falcon2-Pro .section12 .flex_wrap .flex_item .text_wrap {
+      padding-top: 1.5vw;
+      padding-left: 2vw;
+    }
+    .Creality-Falcon2-Pro .section12 .flex_wrap .flex_item .text_wrap .text1 {
+      font-size: 2.4vw;
+      color: #58c73f;
+    }
+    .Creality-Falcon2-Pro .section12 .flex_wrap .flex_item .text_wrap .text2 {
+      margin-top: 1.5vw;
+      font-size: 1.6vw;
+      line-height: 1.2;
+      color: #fff;
+      opacity: 0.5;
+    }
+    .Creality-Falcon2-Pro .section12 .flex_wrap .flex_item .text_wrap .text2 br {
+      display: none;
+    }
+    .Creality-Falcon2-Pro .section12 .tips_text {
+      text-align: center;
+      margin-top: 2.5vw;
+      font-weight: 500;
+      font-size: 1.87vw;
+      color: #ffffff;
+      opacity: 0.5;
+    }
+    .Creality-Falcon2-Pro .section13 {
+      margin-top: 12vw;
+      padding: 0 6.6vw;
+    }
+    .Creality-Falcon2-Pro .section13 h1 {
+      color: #fff;
+    }
+    .Creality-Falcon2-Pro .section13 .desc {
+      margin-top: 4vw;
+    }
+    .Creality-Falcon2-Pro .section13 .video_wrap {
+      margin-top: 6vw;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .Creality-Falcon2-Pro .section13 .video_wrap video {
+      width: 100%;
+      height: auto;
+    }
+    .Creality-Falcon2-Pro .section14 {
+      margin-top: 12vw;
+      padding: 0 6.6vw;
+    }
+    .Creality-Falcon2-Pro .section14 h1 {
+      color: #fff;
+    }
+    .Creality-Falcon2-Pro .section14 .flex_wrap {
+      margin-top: 6vw;
+      display: flex;
+      gap: 2vw;
+    }
+    .Creality-Falcon2-Pro .section14 .flex_wrap .flex_item {
+      flex: 1;
+    }
+    .Creality-Falcon2-Pro .section14 .flex_wrap .flex_item .text_wrap {
+      margin-top: 2vw;
+      text-align: center;
+      font-size: 2.7vw;
+      line-height: 1.2;
+      color: #58c73f;
+    }
+    .Creality-Falcon2-Pro .section15 {
+      margin-top: 13vw;
+      padding: 0 4vw;
+    }
+    .Creality-Falcon2-Pro .section15 h1 {
+      color: #fff;
+      padding: 0 4vw;
+    }
+    .Creality-Falcon2-Pro .section15 h3 {
+      margin-top: 3vw;
+      padding: 0 4vw;
+    }
+    .Creality-Falcon2-Pro .section15 .desc {
+      margin-top: 4vw;
+      padding: 0 4vw;
+    }
+    .Creality-Falcon2-Pro .section15 .picture_wrap {
+      margin: 0 auto;
+      margin-top: 5vw;
+      width: 100%;
+    }
+    .Creality-Falcon2-Pro .section16 {
+      margin-top: 6vw;
+      padding: 0 4vw;
+    }
+    .Creality-Falcon2-Pro .section16 h1 {
+      color: #fff;
+    }
+    .Creality-Falcon2-Pro .section16 .desc {
+      margin-top: 4vw;
+    }
+    .Creality-Falcon2-Pro .section16 .video_wrap {
+      margin-top: 6vw;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .Creality-Falcon2-Pro .section16 .video_wrap video {
+      width: 100%;
+      height: auto;
+    }
+    .Creality-Falcon2-Pro .section17 {
+      margin-top: 13vw;
+      padding: 0 4vw;
+    }
+    .Creality-Falcon2-Pro .section17 h1 {
+      color: #fff;
+    }
+    .Creality-Falcon2-Pro .section17 .desc {
+      margin-top: 4vw;
+    }
+    .Creality-Falcon2-Pro .section17 .desc br {
+      display: none;
+    }
+    .Creality-Falcon2-Pro .section17 .picture_wrap {
+      margin-top: 6vw;
+    }
+    .Creality-Falcon2-Pro .section18 {
+      margin-top: 13vw;
+      padding: 0 4vw;
+    }
+    .Creality-Falcon2-Pro .section18 h1 {
+      color: #fff;
+    }
+    .Creality-Falcon2-Pro .section18 .flex_wrap {
+      margin-top: 4vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .Creality-Falcon2-Pro .section18 .flex_wrap .flex_item {
+      width: 49.5%;
+      margin-bottom: 1vw;
+    }
+    .Creality-Falcon2-Pro .section18 .flex_wrap .flex_item:last-child {
+      width: 100%;
+    }
+    .Creality-Falcon2-Pro .section19 {
+      margin-top: 13vw;
+    }
+    .Creality-Falcon2-Pro .section19 h1 {
+      padding: 0 6.6vw;
+      font-size: 4vw;
+    }
+    .Creality-Falcon2-Pro .section19 .s19-swiper {
+      margin-top: 6vw;
+      overflow: hidden;
+      height: 27vw;
+    }
+    .Creality-Falcon2-Pro .section19 .s19-swiper .swiper-wrapper {
+      position: absolute;
+      left: 0;
+      top: 0;
+      white-space: nowrap;
+      display: flex;
+      height: auto;
+      width: auto;
+      animation: scrollX 15s linear infinite; /* 自定义动画，30秒内水平匀速滚动 */
+    }
+    @keyframes scrollX {
+      0% {
+        transform: translateX(0);
+      }
+      95% {
+        transform: translateX(calc(-100% + 100vw));
+      } /* 水平移动到最左边 */
+      100% {
+        transform: translateX(calc(-100% + 100vw));
+      }
+    }
+    .Creality-Falcon2-Pro .section19 .s19-swiper .swiper-wrapper .swiper-slide {
+      position: relative;
+      width: 40vw;
+      border-radius: 8px;
+      overflow: hidden;
+      height: auto;
+      margin: 0 0.5vw;
+    }
+    .Creality-Falcon2-Pro .section19 .s19-swiper .swiper-wrapper .swiper-slide img {
+      width: 100%;
+      height: auto;
+    }
+    .Creality-Falcon2-Pro .section20 {
+      padding: 0 6.6vw;
+      margin-top: 12vw;
+      padding-bottom: 20vw;
+    }
+    .Creality-Falcon2-Pro .section20 h2 {
+      color: #58c73f;
+    }
+    .Creality-Falcon2-Pro .section20 .param_wrap {
+      width: auto;
+      margin-top: 5vw;
+    }
+    .Creality-Falcon2-Pro .section20 .param_wrap .param_flex {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .Creality-Falcon2-Pro .section20 .param_wrap .param_flex:first-child {
+      border-top: 1px solid #505050;
+    }
+    .Creality-Falcon2-Pro .section20 .param_wrap .param_flex .param_item {
+      height: 100%;
+      display: flex;
+      width: 100%;
+      padding: 2vw 0;
+      padding-left: 3vw;
+      align-items: flex-start;
+      font-size: 2.7vw;
+      color: #575757;
+      height: auto;
+      border-bottom: 1px solid #505050;
+    }
+    .Creality-Falcon2-Pro .section20 .param_wrap .param_flex .param_item .name {
+      color: #fff;
+      width: 45%;
+      flex-shrink: 0;
+      letter-spacing: -0.05vw;
+    }
+    .Creality-Falcon2-Pro .section20 .param_wrap .param_flex .param_item .value {
+      font-size: 2.3vw;
+      line-height: 1.6;
+      color: #7f7f7f;
+    }
+    .Creality-Falcon2-Pro .section30 {
+      display: none;
+    }
+    .toTop {
+      position: fixed;
+      z-index: 999;
+      cursor: pointer;
+      bottom: 140px;
+      right: 2%;
+      transform: rotate(180deg);
+      width: 8vw;
+      height: 8vw;
+    }
+    .toTop:hover .sellpoint-item-jump svg {
+      transform: translateY(0);
+    }
+    .toTop .sellpoint-item-jump {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      z-index: 9;
+      transform: translate3d(0, 0, 0);
+    }
+    .toTop .sellpoint-item-jump svg {
+      width: 100%;
+      height: auto;
+      transition: all 1s;
+      transform: translateY(-50%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+    .video-dialog .video-main {
+      width: 100%;
+    }
+    .video-dialog .video-main .video-button {
+      width: 12vw;
+      height: 12vw;
+    }
+    .video-dialog .close {
+      right: 50%;
+      transform: translateX(50%);
+      bottom: 10vw;
+      top: auto;
+      width: 18vw;
+      height: 18vw;
+      position: absolute;
+      z-index: 999;
+      cursor: pointer;
+    }
+  }
+</style>
+
+<div id="container-{{section.id}}" class="Creality-Falcon2-Pro main-contain en">
+  <div class="section1">
+      <picture class="fit_picture">
+          <div style="padding-bottom: 133.33%;" class="_small placeholderTag"></div>
+          <div style="padding-bottom: 39.11%;" class="_medium placeholderTag"></div>
+          <div style="padding-bottom: 39.11%;" class="_large placeholderTag"></div>
+          <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/f8592ce72571c929c3b0019ffafe3359.jpg, https://cdn.shoplazza.com/eeee842d680d8be612442a3a86753be9.jpg 2x" media="(max-width:960px)">
+          <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/24507a6de68944a65974a7768f4dec83.jpg">
+          <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/e673f5476fa6c9f5aba279f020a14975.jpg, https://cdn.shoplazza.com/7373e940472fae89882b10303971296e.jpg 2x" media="(max-width:1440px)">
+          <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/06b8510ad117043fbfe5cf4a7750539e.jpg, https://cdn.shoplazza.com/f0647da3829e657e5590c5c37da454df.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/b7ebd24a860d46ff4afd49a2b17956d1.jpg" alt="s1_pic.jpg">
+      </picture>
+  </div>
+
+  <div class="section2_1">
+      <h2 class="title ">Surprising Launch Event</h2>
+      <div class="desc wrapcenter ">
+          <span style="color: #58C73F">Only 200 units available for pre-order.</span><br>
+          Act fast! Be among the first batch 200 to grab our latest
+          release and enjoy the biggest discount.
+      </div>
+      <picture class="fit_picture fadein">
+          <div style="padding-bottom: 186.67%;" class="_small placeholderTag"></div>
+          <div style="padding-bottom: 31.46%;" class="_medium placeholderTag"></div>
+          <div style="padding-bottom: 31.46%;" class="_large placeholderTag"></div>
+          <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/024be6693e53a2dd0b35dc03af0fffe6.jpg, https://cdn.shoplazza.com/14e1db69f4e275d0e4eb92c0f7f28b05.jpg 2x" media="(max-width:960px)">
+          <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/a321963c55cc24ed7d579b9a2e256e61.jpg">
+          <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/db5f1e32be0afd863a17ad6ff0b1eace.jpg, https://cdn.shoplazza.com/b0cb7c39bdb0a81cc11e2af6ea968f74.jpg 2x" media="(max-width:1440px)">
+          <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/fe2165b4a5312c042768e0717442d993.jpg, https://cdn.shoplazza.com/131f7da84bf5ca7bd9ee7176141711fa.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/3eb2a05140490084fe8b197e9f2d15d8.jpg" alt="Creality-Falcon2-Pro_s2_1_pic1_blur.jpg">
+      </picture>
+      <div class="email_wrap">
+          <div class="embed_enquiry" data-form-id="b6860c9e-cf84-4ac4-8f4d-8da8c16e407f"></div>
+          <div class="desc fadein">
+              Get informed of the up-to-date product information, <br>the surprisingly discount and various
+              activities.
+          </div>
+      </div>
+  </div>
+
+  <div class="section2">
+      <h2 class="title">Highlight Key Features</h2>
+      <div class="flex-wrap delay-fadein">
+          <div class="col-item pc">
+              <div class="flex-item item1" data-target=".section8">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 109.38%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 200.00%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 200.00%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/3ba41cd7e3cdbccef6f78696b5971377.jpg, https://cdn.shoplazza.com/0211138980541d0deefdd9ca3bef1586.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/c50bfbcf557573be9f2e4af918ccffd4.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/f4a7ff999160a2fb1abe0a37e26a8514.jpg, https://cdn.shoplazza.com/7de97093b5e063e01b26f050d6abff7c.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/e542e3f32e595beeb91c096292ec6144.jpg, https://cdn.shoplazza.com/a7dd8d98d1659a4be1afb714843a6a09.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/d576dd9e32ee95f85a5e02d271f08674.jpg" alt="Creality-Falcon2-Pro_s2_pic1_blur.jpg">
+                  </picture>
+                  <div class="text-wrap">
+                      <h4 class="mtitle fontBold">
+                          Bonus with <br>
+                          <span style="color: #58C73F;">1.6W</span><br>
+                          <span style="color: #58C73F;">Laser Module</span>
+                      </h4>
+                  </div>
+                  <div class="sellpoint-item-jump">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="92" viewBox="0 0 46 92">
+                          <defs>
+                              <clipPath id="clip-path">
+                                  <rect id="pash_17131" data-name="pash 17131" width="46" height="92" transform="translate(9802 -12581)" fill="#2E2E2E" stroke="#707070" stroke-width="1"></rect>
+                              </clipPath>
+                          </defs>
+                          <g id="sdf_3084" data-name="sdf 3084" transform="translate(-9802 12581)" clip-path="url(#clip-path)">
+                              <g id="gds_48908" data-name="gds 48908" transform="translate(34 2)">
+                                  <g id="gds_9" data-name="gds 9" transform="translate(8728 -14303)">
+                                      <path id="uutyu_24" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                                      </path>
+                                  </g>
+                                  <g id="gds_9-2" data-name="gds 9" transform="translate(8728 -14257)">
+                                      <path id="uutyu_24-2" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                                      </path>
+                                  </g>
+                              </g>
+                          </g>
+                      </svg>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-item">
+
+              <div class="flex-item item2" data-target=".section3">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 109.38%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 63.68%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 63.68%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/be6b58f8d99ee55b408fc60d6c5b0f75.jpg, https://cdn.shoplazza.com/ca4ff3aaf9ef7a334e55bf81831e0298.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/0a06ad8d4d3dac0a1c28b2522ca113e4.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/5c504f2c403e7e5e817a2a7f0fefdc2f.jpg, https://cdn.shoplazza.com/dfc6506438782ec6ca57388faa211fa9.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/d2aac9c3f28031ad160eaffd8c17923b.jpg, https://cdn.shoplazza.com/199ed61eb2867fbb8370225d2bd89849.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/23f507870d7a2dce456f79d3f226329e.jpg" alt="Creality-Falcon2-Pro_s2_pic2_blur.jpg">
+                  </picture>
+                  <div class="text-wrap">
+                      <h4 class="mtitle fontBold pc">
+                          Cutting Power up to
+                      </h4>
+                      <div class="picture_wrap s2_pic2_1">
+                          <picture class="fit_picture">
+                              <div style="padding-bottom: 30.00%;" class="_small placeholderTag"></div>
+                              <div style="padding-bottom: 30.00%;" class="_medium placeholderTag"></div>
+                              <div style="padding-bottom: 30.00%;" class="_large placeholderTag"></div>
+                              <source type="image/png" data-srcset="https://cdn.shoplazza.com/a952b5ccbc073e5ce007fba4073a1a0f.png, https://cdn.shoplazza.com/207fe52726146b39b1a8b7ef4ae61a98.png 2x" media="(max-width:960px)">
+                              <source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/a233efffa918067fd18fa5b78c054387.png">
+                              <source type="image/png" data-srcset="https://cdn.shoplazza.com/055908b11a20a8ca620e48cd21e7cd8e.png, https://cdn.shoplazza.com/103f67302349c03ea36952abcdb20481.png 2x" media="(max-width:1440px)">
+                              <source type="image/png" data-srcset="https://cdn.shoplazza.com/22358f442df0fa6e1a536e236711afec.png, https://cdn.shoplazza.com/5536c7ba4f11407f86ce97136eb53375.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/c6f92b2a875e2b88de2e6c037b683f1c.png" alt="60W">
+                          </picture>
+                      </div>
+                  </div>
+                  <div class="sellpoint-item-jump">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="92" viewBox="0 0 46 92">
+                          <defs>
+                              <clipPath id="clip-path">
+                                  <rect id="pash_17131" data-name="pash 17131" width="46" height="92" transform="translate(9802 -12581)" fill="#2E2E2E" stroke="#707070" stroke-width="1"></rect>
+                              </clipPath>
+                          </defs>
+                          <g id="sdf_3084" data-name="sdf 3084" transform="translate(-9802 12581)" clip-path="url(#clip-path)">
+                              <g id="gds_48908" data-name="gds 48908" transform="translate(34 2)">
+                                  <g id="gds_9" data-name="gds 9" transform="translate(8728 -14303)">
+                                      <path id="uutyu_24" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                                      </path>
+                                  </g>
+                                  <g id="gds_9-2" data-name="gds 9" transform="translate(8728 -14257)">
+                                      <path id="uutyu_24-2" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                                      </path>
+                                  </g>
+                              </g>
+                          </g>
+                      </svg>
+                  </div>
+              </div>
+              <div class="flex-item item1 mb" data-target=".section8">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 109.38%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 200.00%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 200.00%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/3ba41cd7e3cdbccef6f78696b5971377.jpg, https://cdn.shoplazza.com/0211138980541d0deefdd9ca3bef1586.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/c50bfbcf557573be9f2e4af918ccffd4.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/f4a7ff999160a2fb1abe0a37e26a8514.jpg, https://cdn.shoplazza.com/7de97093b5e063e01b26f050d6abff7c.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/e542e3f32e595beeb91c096292ec6144.jpg, https://cdn.shoplazza.com/a7dd8d98d1659a4be1afb714843a6a09.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/d576dd9e32ee95f85a5e02d271f08674.jpg" alt="Creality-Falcon2-Pro_s2_pic1_blur.jpg">
+                  </picture>
+                  <div class="text-wrap">
+                      <h4 class="mtitle fontBold">
+                          Bonus with <br>
+                          <span class="t1" style="color: #58C73F;">1.6W</span><br class="pc">
+                          <span class="t2" style="color: #58C73F;">Laser Module</span>
+                      </h4>
+                  </div>
+                  <div class="sellpoint-item-jump">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="92" viewBox="0 0 46 92">
+                          <defs>
+                              <clipPath id="clip-path">
+                                  <rect id="pash_17131" data-name="pash 17131" width="46" height="92" transform="translate(9802 -12581)" fill="#2E2E2E" stroke="#707070" stroke-width="1"></rect>
+                              </clipPath>
+                          </defs>
+                          <g id="sdf_3084" data-name="sdf 3084" transform="translate(-9802 12581)" clip-path="url(#clip-path)">
+                              <g id="gds_48908" data-name="gds 48908" transform="translate(34 2)">
+                                  <g id="gds_9" data-name="gds 9" transform="translate(8728 -14303)">
+                                      <path id="uutyu_24" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                                      </path>
+                                  </g>
+                                  <g id="gds_9-2" data-name="gds 9" transform="translate(8728 -14257)">
+                                      <path id="uutyu_24-2" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                                      </path>
+                                  </g>
+                              </g>
+                          </g>
+                      </svg>
+                  </div>
+              </div>
+              <div class="flex-item item3 hastop" data-target=".section5">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 30.77%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 36.32%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 36.32%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/a7fe9945cb33deace9dff5561ad3bc5a.jpg, https://cdn.shoplazza.com/52e1b6c2b4b489e82e110a9fb5f3e04c.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/18692986bfdf8708b8a6567de943d546.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/75518d63e52b75555e4428e00f0baa83.jpg, https://cdn.shoplazza.com/dff753a9e5653cf5e7d8a55f18e0d3b2.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/d6de0cc1b2c0101964577aefd219ceab.jpg, https://cdn.shoplazza.com/74f257b6555810b0a46c9a3cd8b1dd28.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/23ed22562eb4b46c2ae2c62190473f22.jpg" alt="Creality-Falcon2-Pro_s2_pic3_blur.jpg">
+                  </picture>
+                  <div class="text-wrap">
+                      <h4 class="mtitle fontBold">
+                          Intelligent <span style="color: #58C73F;">Three-level</span> <br>
+                          Adjustable Beam
+                      </h4>
+                  </div>
+                  <div class="sellpoint-item-jump">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="92" viewBox="0 0 46 92">
+                          <defs>
+                              <clipPath id="clip-path">
+                                  <rect id="pash_17131" data-name="pash 17131" width="46" height="92" transform="translate(9802 -12581)" fill="#2E2E2E" stroke="#707070" stroke-width="1"></rect>
+                              </clipPath>
+                          </defs>
+                          <g id="sdf_3084" data-name="sdf 3084" transform="translate(-9802 12581)" clip-path="url(#clip-path)">
+                              <g id="gds_48908" data-name="gds 48908" transform="translate(34 2)">
+                                  <g id="gds_9" data-name="gds 9" transform="translate(8728 -14303)">
+                                      <path id="uutyu_24" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                                      </path>
+                                  </g>
+                                  <g id="gds_9-2" data-name="gds 9" transform="translate(8728 -14257)">
+                                      <path id="uutyu_24-2" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                                      </path>
+                                  </g>
+                              </g>
+                          </g>
+                      </svg>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-item">
+              <div class="flex-item item4 half" data-target=".section9">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 84.38%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 93.12%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 93.12%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/128502875b896be17aff2b065b8da6bc.jpg, https://cdn.shoplazza.com/fa02a7096d9663eb8fdf7ed3e66f95c7.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/515d70edf24f69fd3e1e56975f5783dd.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/6020c0212f85ef8e8ee3bf1fb0e4d68f.jpg, https://cdn.shoplazza.com/febc1495e72beadf61bfb25904d6e799.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/34de66fcfdd250c36ce84e3e6044e48f.jpg, https://cdn.shoplazza.com/74ae7cfcca74594ea9e3ea5ed01dcc8b.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/83bfb1cac0461a9237bab896f991c07f.jpg" alt="Creality-Falcon2-Pro_s2_pic4_blur.jpg">
+                  </picture>
+                  <div class="text-wrap">
+                      <h4 class="mtitle fontBold">
+                          <span style="color: #58C73F">Fully Enclosed</span> <br>
+                          Design
+                      </h4>
+                  </div>
+                  <div class="sellpoint-item-jump">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="92" viewBox="0 0 46 92">
+                          <defs>
+                              <clipPath id="clip-path">
+                                  <rect id="pash_17131" data-name="pash 17131" width="46" height="92" transform="translate(9802 -12581)" fill="#2E2E2E" stroke="#707070" stroke-width="1"></rect>
+                              </clipPath>
+                          </defs>
+                          <g id="sdf_3084" data-name="sdf 3084" transform="translate(-9802 12581)" clip-path="url(#clip-path)">
+                              <g id="gds_48908" data-name="gds 48908" transform="translate(34 2)">
+                                  <g id="gds_9" data-name="gds 9" transform="translate(8728 -14303)">
+                                      <path id="uutyu_24" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                                      </path>
+                                  </g>
+                                  <g id="gds_9-2" data-name="gds 9" transform="translate(8728 -14257)">
+                                      <path id="uutyu_24-2" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                                      </path>
+                                  </g>
+                              </g>
+                          </g>
+                      </svg>
+                  </div>
+              </div>
+
+              <div class="flex-item item5 half" data-target=".section6">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 84.38%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 93.12%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 93.12%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/b86d0a8139a453b8e83c7ac1e3269f1f.jpg, https://cdn.shoplazza.com/1627a12d51689f26e4667c0557e5e103.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/de592dcd0e77bfe259deb182a654d161.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/154f6b62b109a047110cde5c39390ec5.jpg, https://cdn.shoplazza.com/ae925b22c4cbef7f95432a37c7c67288.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/87e0e64dcd831de44de88aa5e817989d.jpg, https://cdn.shoplazza.com/d132d40225d29a639a09d0c3a0c584a1.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/7820faf6549553a81d451e451cd9ea1b.jpg" alt="Creality-Falcon2-Pro_s2_pic5_blur.jpg">
+                  </picture>
+                  <div class="text-wrap">
+                      <h4 class="mtitle fontBold">
+                          Built-in Camera for <br>
+                          <span style="color: #58C73F">Auto-positioning</span>
+                      </h4>
+                  </div>
+                  <div class="sellpoint-item-jump">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="92" viewBox="0 0 46 92">
+                          <defs>
+                              <clipPath id="clip-path">
+                                  <rect id="pash_17131" data-name="pash 17131" width="46" height="92" transform="translate(9802 -12581)" fill="#2E2E2E" stroke="#707070" stroke-width="1"></rect>
+                              </clipPath>
+                          </defs>
+                          <g id="sdf_3084" data-name="sdf 3084" transform="translate(-9802 12581)" clip-path="url(#clip-path)">
+                              <g id="gds_48908" data-name="gds 48908" transform="translate(34 2)">
+                                  <g id="gds_9" data-name="gds 9" transform="translate(8728 -14303)">
+                                      <path id="uutyu_24" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                                      </path>
+                                  </g>
+                                  <g id="gds_9-2" data-name="gds 9" transform="translate(8728 -14257)">
+                                      <path id="uutyu_24-2" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                                      </path>
+                                  </g>
+                              </g>
+                          </g>
+                      </svg>
+                  </div>
+              </div>
+
+              <div class="flex-item item6 hastop" data-target=".section4_2">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 43.08%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 47.40%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 47.40%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/9a2913e91c8ff942a7c2d51519b06701.jpg, https://cdn.shoplazza.com/d207693f3dcc6fa3e424dbf112aa4296.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/77948c1e3110019ef74137d71b7476f5.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/a71434430c9ba7218c9903587ae40e32.jpg, https://cdn.shoplazza.com/cebe2b529be91c57089bfa5366145ccf.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/58de3015707b103894cb222268fd2ce4.jpg, https://cdn.shoplazza.com/d75bd41917d2b98a40c52f58e0f332f9.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/7bc9fb6927550bcd8f8ad68863082918.jpg" alt="Creality-Falcon2-Pro_s2_pic6_blur.jpg">
+                  </picture>
+                  <div class="text-wrap">
+                      <h4 class="mtitle fontBold">
+                          Super-higher Working Efficiency <br>
+                          <span style="color: #58C73F">SPEED</span>
+                          <span style="color: #58C73F" class="x3">X3</span>
+                      </h4>
+                  </div>
+                  <div class="sellpoint-item-jump">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="92" viewBox="0 0 46 92">
+                          <defs>
+                              <clipPath id="clip-path">
+                                  <rect id="pash_17131" data-name="pash 17131" width="46" height="92" transform="translate(9802 -12581)" fill="#2E2E2E" stroke="#707070" stroke-width="1"></rect>
+                              </clipPath>
+                          </defs>
+                          <g id="sdf_3084" data-name="sdf 3084" transform="translate(-9802 12581)" clip-path="url(#clip-path)">
+                              <g id="gds_48908" data-name="gds 48908" transform="translate(34 2)">
+                                  <g id="gds_9" data-name="gds 9" transform="translate(8728 -14303)">
+                                      <path id="uutyu_24" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                                      </path>
+                                  </g>
+                                  <g id="gds_9-2" data-name="gds 9" transform="translate(8728 -14257)">
+                                      <path id="uutyu_24-2" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                                      </path>
+                                  </g>
+                              </g>
+                          </g>
+                      </svg>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="section3">
+      <picture class="fit_picture">
+          <div style="padding-bottom: 133.33%;" class="_small placeholderTag"></div>
+          <div style="padding-bottom: 58.59%;" class="_medium placeholderTag"></div>
+          <div style="padding-bottom: 58.59%;" class="_large placeholderTag"></div>
+          <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/88fb1a915cf3122a5b527caf44007696.jpg, https://cdn.shoplazza.com/bcc78bc2a64bc6eb80859ea062c21e4b.jpg 2x" media="(max-width:960px)">
+          <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/4064ae5dcf30c0196ab684d3530bffd2.jpg">
+          <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/04c806bb7f7fd64008a6185d9f97abdb.jpg, https://cdn.shoplazza.com/7127172fdb283f5f49745edd70ce3bd9.jpg 2x" media="(max-width:1440px)">
+          <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/7bf0faac53525472d13bbd88af9c9eb1.jpg, https://cdn.shoplazza.com/96a29ae60f28efef16ca404ef93a3118.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/05582ea3335c55c382553d2dd039405f.jpg" alt="Creality-Falcon2-Pro_s3_pic1_blur.jpg">
+      </picture>
+      <div class="abs_wrap fadein">
+          <h2>Super Cutting Power</h2>
+          <h1>60W</h1>
+          <div class="desc">
+              Based on the advanced FAC spot compression technology, <br>
+              twelve 5.5W lasers are combined into 60W, <br>
+              realizing super high power cutting efficiency.
+          </div>
+      </div>
+  </div>
+
+  <div class="section4 fadein">
+      <h2>The Mightiest Cutting Ability</h2>
+      <div class="desc">
+          With its 60W laser, <br class="mb"> Creality Falcon2 Pro 60W can effortlessly cut through <br>
+          <span style="color: #58C73F">22mm basswood, 30mm black acrylic</span> <br class="mb">in a
+          single pass.
+      </div>
+      <h1>60W</h1>
+      <div class="text2 fontRegular">True Laser Power</div>
+      <div class="swiper-container s4-swiper">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <span data-video="s4-video1" class="play_btn"></span>
+                  <img class="fit_picture" src="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/creality_falcon2_pro_en_s4_poster1.jpg" alt="creality_falcon2_pro_en_s4_poster1.jpg">
+                  <div class="text_wrap">
+                      <div class="text fontMedium">
+                          Cut 22mm wood with one pass
+                      </div>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <span data-video="s4-video2" class="play_btn"></span>
+                  <img class="fit_picture" src="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/creality_falcon2_pro_en_s4_poster2.jpg" alt="creality_falcon2_pro_en_s4_poster2.jpg">
+                  <div class="text_wrap">
+                      <div class="text fontMedium">
+                          Cut 30mm black acrylic with one pass
+                      </div>
+                  </div>
+              </div>
+              <!-- <div class="swiper-slide">
+                  <span data-video="s4-video3" class="play_btn"></span>
+                  <img class="fit_picture" src="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/creality_falcon2_pro_en_s4_poster3.jpg" alt="creality_falcon2_pro_en_s4_poster3.jpg">
+                  <div class="text_wrap">
+                      <div class="text fontMedium">
+                          Cut 0.2mm stainless steel sheet with one pass
+                      </div>
+                  </div>
+              </div> -->
+          </div>
+          <!-- Add Navigation -->
+          <div class="navigation-wrap">
+              <div class="prev-btn">
+                  <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                      <path d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z" p-id="8092" fill="#fff"></path>
+                  </svg>
+              </div>
+              <div class="next-btn">
+                  <svg t="1700186987937" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8091" width="200" height="200">
+                      <path d="M245.034251 895.239428l383.063419-383.063419L240.001631 124.07997l0.070608-0.033769c-12.709463-13.137205-20.530592-31.024597-20.530592-50.731428 0-40.376593 32.736589-73.111135 73.115228-73.111135 19.705807 0 37.591153 7.819083 50.730405 20.528546l0.034792-0.035816 438.686251 438.681134-0.035816 0.034792c13.779841 13.281491 22.3838 31.915897 22.3838 52.586682 0 0.071631 0 0.106424 0 0.178055 0 0.072655 0 0.10847 0 0.144286 0 20.669762-8.603959 39.341007-22.3838 52.623521l0.035816 0.033769L343.426165 1003.661789l-0.180102-0.179079c-13.140275 12.565177-30.950919 20.313651-50.588165 20.313651-40.378639 0-73.115228-32.736589-73.115228-73.114205C219.544717 928.512229 229.432924 908.664182 245.034251 895.239428z" p-id="8092" fill="#fff"></path>
+                  </svg>
+              </div>
+          </div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+  </div>
+
+  <div class="section4_2">
+      <h2 class="fadein">Super-higher Working Efficiency</h2>
+      <div class="desc nowrap fadein">
+          Creality Falcon2 Pro 60W delivers faster cutting of common materials, <br>
+          <span style="color: #58C73F">elevating the efficiency of your small business to a new level.</span>
+      </div>
+      <div class="video_wrap">
+          <div class="video_item">
+              <video preload="auto" poster="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/creality_falcon2_pro_en_s4_poster4.jpg" class="plyr-video s4-video lazy-video" muted="" loop="" x5-playsinline="true" playsinline="true" webkit-playsinline="true" draggable="true">
+                  <!-- <source src="https://customer-30zc4hfqg1m9lcz1.cloudflarestream.com/934c0bec92b0c999d71cda3793706bc1/downloads/default.mp4" type="video/mp4">
+                  <source src="https://customer-30zc4hfqg1m9lcz1.cloudflarestream.com/934c0bec92b0c999d71cda3793706bc1/manifest/video.m3u8" type="application/x-mpegURL"> -->
+                  <source data-src="https://cdn.shopify.com/videos/c/o/v/c5c501f7592840dd8201545a5807270b.mp4" type="video/mp4">
+              </video>
+              <span class="play_btn"></span>
+              <div class="video_text desc">22W</div>
+          </div>
+          <div class="video_item">
+              <video preload="auto" poster="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/creality_falcon2_pro_en_s4_poster5.jpg" class="plyr-video s4-video lazy-video sss" muted="" loop="" x5-playsinline="true" playsinline="true" webkit-playsinline="true" draggable="true">
+                  <!-- <source src="https://customer-30zc4hfqg1m9lcz1.cloudflarestream.com/934c0bec92b0c999d71cda3793706bc1/downloads/default.mp4" type="video/mp4">
+                  <source src="https://customer-30zc4hfqg1m9lcz1.cloudflarestream.com/934c0bec92b0c999d71cda3793706bc1/manifest/video.m3u8" type="application/x-mpegURL"> -->
+                  <source data-src="https://cdn.shopify.com/videos/c/o/v/0b7e4a69d2af41218949b957485f922a.mp4" type="video/mp4">
+              </video>
+              <span class="play_btn"></span>
+              <div class="video_text desc">60W</div>
+          </div>
+      </div>
+      <div class="mblock">
+          <div class="block_title">The Speed Comparison</div>
+          <div class="picture_wrap">
+              <picture class="fit_picture">
+                  <div style="padding-bottom: 70.77%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 32.22%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 32.22%;" class="_large placeholderTag"></div>
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/68d63c441717ce948a997fa1bfe3e155.jpg, https://cdn.shoplazza.com/d2312c1f80e4fa93dcd842b40d6c7efb.jpg 2x" media="(max-width:960px)">
+                  <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/51b4aa2563dcbb72ab00bc5f9cd77bde.jpg">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/8a330ce3cce2d05694718ad1dcf5245e.jpg, https://cdn.shoplazza.com/4f999eeff9cdb6b1ec3c2388928b28ed.jpg 2x" media="(max-width:1440px)">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/595f9663df44ae05f60ba667c1e8a035.jpg, https://cdn.shoplazza.com/033340d44010edb6b8c2fea6fa5c26e2.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/8cb251b96ee216f91a6b5269f8e21565.jpg" alt="Creality-Falcon2-Pro_s4_pic3_blur.jpg">
+              </picture>
+          </div>
+      </div>
+      <div class="mblock">
+          <div class="block_title">Cleaner Surface</div>
+          <div class="desc">
+              Due to the 60W super-high power, the material vaporizes quickly to keep the clean surface, <br>
+              rather than carbonizing or turning yellow.
+          </div>
+          <div class="swiper-container s4-swiper2">
+              <div class="swiper-wrapper flex_wrap delay-fadein">
+                  <div class="swiper-slide flex_item">
+                     <picture class="fit_picture" data-loaded="true">
+                          <div style="padding-bottom: 58.46%;" class="_small placeholderTag"></div>
+                          <div style="padding-bottom: 55.88%;" class="_medium placeholderTag"></div>
+                          <div style="padding-bottom: 55.88%;" class="_large placeholderTag"></div>
+                          <source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/20250618-133706.png?v=1750226270" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/20250618-133706.png?v=1750226270">
+                          <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/20250618-133706.png?v=1750226270">
+                          <source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/20250618-133706.png?v=1750226270" media="(max-width:1440px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/20250618-133706.png?v=1750226270">
+                          <source type="image/jpeg" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/20250618-133706.png?v=1750226270" media="(min-width:0px)" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/20250618-133706.png?v=1750226270"><img class="blur-up loaded" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/20250618-133706.png?v=1750226270" alt="Creality-Falcon2-Pro_s4_pic1_blur.jpg">
+                      </picture>
+                      <div class="pic_desc">
+                          <span class="fontBold" style="color: #58C73F">60W</span> Cross-sectional Effect
+                      </div>
+                  </div>
+                  <div class="swiper-slide flex_item">
+                      <picture class="fit_picture">
+                          <div style="padding-bottom: 58.46%;" class="_small placeholderTag"></div>
+                          <div style="padding-bottom: 55.88%;" class="_medium placeholderTag"></div>
+                          <div style="padding-bottom: 55.88%;" class="_large placeholderTag"></div>
+                          <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/e50614a3b4fd559b532139840a9256a5.jpg, https://cdn.shoplazza.com/089ddb688caf385313d7e5a42c2e7928.jpg 2x" media="(max-width:960px)">
+                          <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/cef708db0357a1e9ccb7add540233b3a.jpg">
+                          <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/0149d7bdcf96aaff6e91587b27ae3270.jpg, https://cdn.shoplazza.com/d5582fb655fe4fedffb87c87cafbeffb.jpg 2x" media="(max-width:1440px)">
+                          <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/14796b2df297d3c3384504059416e4ff.jpg, https://cdn.shoplazza.com/83934c60f11e77400ba0bc48a8f6270e.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/aa433f8e7eee095397d23656fb34f627.jpg" alt="Creality-Falcon2-Pro_s4_pic2_blur.jpg">
+                      </picture>
+                      <div class="pic_desc">
+                          20W Cross-sectional Effect
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="section5">
+      <h3 class="">Blockbuster Patented Technology</h3>
+      <h1 class="">
+          Intelligent Beam <br>
+          Adjustment
+      </h1>
+      <div class="desc ">
+          The light beam can be adjusted through software or machine, perfectly adapting to the power of all laser
+          <br class="pc">
+          modules 22W, 40W, 60W. Adjustable lightbeam with one click, 3 laser power in one machine.
+      </div>
+      <div class="flex_wrap delay-fadein">
+          <div class="flex_item">
+              <picture class="fit_picture">
+                  <div style="padding-bottom: 183.78%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 183.78%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 183.78%;" class="_large placeholderTag"></div>
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/3a0905d1695107b4be5273a66567aaaa.png, https://cdn.shoplazza.com/d11e18b204deaa55b9e1ed423c936cbb.png 2x" media="(max-width:960px)">
+                  <source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/32966d7ad7a962a448b619ec0663a131.png">
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/6c2581d186348dd33f16209acac4365e.png, https://cdn.shoplazza.com/2c093e947a133aae7c49566f1499571d.png 2x" media="(max-width:1440px)">
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/20b79cd0e1fef30bc5f6ddfa2eba6897.png, https://cdn.shoplazza.com/96babf7ca7d90d70be6d3dcde97c8eff.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/029a3fa3f2b56f50c3f780c5c97ddf47.png" alt="Creality-Falcon2-Pro_s5_pic1_blur.png">
+              </picture>
+          </div>
+          <div class="flex_item">
+              <picture class="fit_picture">
+                  <div style="padding-bottom: 184.32%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 184.32%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 184.32%;" class="_large placeholderTag"></div>
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/a5e7a142056e647e581ca4e038c6a014.png, https://cdn.shoplazza.com/2ea22e3f8b9907cad2ec5604044f5750.png 2x" media="(max-width:960px)">
+                  <source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/c50ccb1c65676ea89da1a2cb20b123c6.png">
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/d95a50319be550ae123796c8fecb98e1.png, https://cdn.shoplazza.com/a6e5998f1f6aaf4bc8983e704411977a.png 2x" media="(max-width:1440px)">
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/1787829eeacd6d73ce0bd23ca4030678.png, https://cdn.shoplazza.com/922920851df2367f9f0d0655be5b2e74.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/2009a94ef8afd5457c969412134a84fb.png" alt="Creality-Falcon2-Pro_s5_pic2_blur.png">
+              </picture>
+          </div>
+          <div class="flex_item">
+              <picture class="fit_picture">
+                  <div style="padding-bottom: 184.02%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 184.02%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 184.02%;" class="_large placeholderTag"></div>
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/9c62e9b05f0ac4a03542c5f82918d883.png, https://cdn.shoplazza.com/afbbf85f7eebc91db1899671277083b5.png 2x" media="(max-width:960px)">
+                  <source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/1618d618db7061b1f9de7219e63e5712.png">
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/7ee722890e52815c5bab82728e659d36.png, https://cdn.shoplazza.com/a130bc668130cc914ed757d1d5edd8bd.png 2x" media="(max-width:1440px)">
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/848393da8fceb3bb52bb3a5a1d3cdfb6.png, https://cdn.shoplazza.com/8e5b3e6f0f4c0b58cf26a7f0622e183a.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/9212e509aefc8d81205cda6d562a619b.png" alt="Creality-Falcon2-Pro_s5_pic3_blur.png">
+              </picture>
+          </div>
+      </div>
+  </div>
+
+  <div class="section6">
+      <h1 class="">
+          Built-in Camera for <br>
+          Auto-positioning
+      </h1>
+      <h3 class="">Full-frame Working, Preview Batching</h3>
+      <div class="desc ">
+          Full-frame working view and high-definition camera makes all operations simple and visual. <br class="pc">
+          You can position multiple materials simultaneously with high-precision real-time preview.
+      </div>
+      <div class="video_wrap fadein">
+          <video preload="auto" poster="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/creality_falcon2_pro_en_s6_poster1.jpg" class="plyr-video lazy-video" autoplay="" muted="" loop="" x5-playsinline="true" playsinline="true" webkit-playsinline="true" draggable="true">
+              <!-- <source src="https://customer-30zc4hfqg1m9lcz1.cloudflarestream.com/934c0bec92b0c999d71cda3793706bc1/downloads/default.mp4" type="video/mp4">
+              <source src="https://customer-30zc4hfqg1m9lcz1.cloudflarestream.com/934c0bec92b0c999d71cda3793706bc1/manifest/video.m3u8" type="application/x-mpegURL"> -->
+              <source data-src="https://cdn.shopify.com/videos/c/o/v/01e611135292498da5415eab4aa6efea.mp4" type="video/mp4">
+          </video>
+          <span class="play_btn"></span>
+      </div>
+  </div>
+
+  <div class="section7">
+      <div class="text_wrap">
+          <h1>Large Workspace</h1>
+          <div class="desc">
+              wLarge working area of <span style="color: #58C73F">15.75*15.75 inches (400*400mm)</span>,
+              Matching high-definition camera for precise positioning, <br class="pc">
+              which allows you to process more materials in a batch.
+          </div>
+      </div>
+      <div class="picture_wrap fadein">
+          <picture class="fit_picture">
+              <div style="padding-bottom: 60.80%;" class="_small placeholderTag"></div>
+              <div style="padding-bottom: 33.23%;" class="_medium placeholderTag"></div>
+              <div style="padding-bottom: 33.23%;" class="_large placeholderTag"></div>
+              <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/81964a2cb20a20f83f81c24843c04367.jpg, https://cdn.shoplazza.com/273fc9b665461e187a754f382890c80d.jpg 2x" media="(max-width:960px)">
+              <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/b0d3b3f1cb05ff3250d0d59ad604f45e.jpg">
+              <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/a77a1928f5e2ab7f1bcf32c02c14fe22.jpg, https://cdn.shoplazza.com/5c226fbe289e62f7685f906172eec51d.jpg 2x" media="(max-width:1440px)">
+              <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/9fa88a37b0473a8db274404ff9202196.jpg, https://cdn.shoplazza.com/7aa46745bed5e66c3d1280771593bd98.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/4bbac623a2825ca93233595e640ae3e0.jpg" alt="Creality-Falcon2-Pro_s7_pic1_blur.jpg">
+          </picture>
+      </div>
+  </div>
+
+  <div class="section8">
+      <h3>Achieve Precise Engraving for Photos</h3>
+      <h1>Bonus <br class="mb">1.6W Laser Module</h1>
+      <div class="desc">
+          With a more delicate laser spot (0.06*0.06mm),<br class="mb"> the 1.6W enables ultrafine engraving and
+          impeccable
+          detail.
+      </div>
+      <div class="picture_wrap fadein">
+          <picture class="fit_picture">
+              <div style="padding-bottom: 64.00%;" class="_small placeholderTag"></div>
+              <div style="padding-bottom: 55.14%;" class="_medium placeholderTag"></div>
+              <div style="padding-bottom: 55.14%;" class="_large placeholderTag"></div>
+              <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/feb7cd3e9c0194435712cfc71268da8c.jpg, https://cdn.shoplazza.com/f0cb3433dbc0efd75ac74890c5107985.jpg 2x" media="(max-width:960px)">
+              <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/c9398be6ef85e43da56c9fa667ac3d14.jpg">
+              <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/13003b0f43fd01b1de6d48b7bca0e404.jpg, https://cdn.shoplazza.com/23bec8b8866731f266c644a2cb2f5bc6.jpg 2x" media="(max-width:1440px)">
+              <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/2dccf1d14e28d5bc9aa102df45941239.jpg, https://cdn.shoplazza.com/494dff932ec7be3f01811107366af221.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/b21cf4b2df08040949535ee30145f3fd.jpg" alt="Creality-Falcon2-Pro_s8_pic1_blur.jpg">
+          </picture>
+      </div>
+  </div>
+
+  <div class="section9">
+      <h1>
+          Approved by FDA <br>
+          Class 1 Laser Safety <br>
+          Certification
+      </h1>
+      <div class="picture_wrap fadein">
+          <picture class="fit_picture">
+              <div style="padding-bottom: 56.52%;" class="_small placeholderTag"></div>
+              <div style="padding-bottom: 56.30%;" class="_medium placeholderTag"></div>
+              <div style="padding-bottom: 56.30%;" class="_large placeholderTag"></div>
+              <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/4ea7a2352052d1564948e96e5b0c0193.jpg, https://cdn.shoplazza.com/798050851b151f78e16777fbd8d87a60.jpg 2x" media="(max-width:960px)">
+              <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/c53232a1f1459b5855c9f3b6b0c73cd2.jpg">
+              <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/150f5026d56988b67b817fd2db29a564.jpg, https://cdn.shoplazza.com/edf510103143492c89033e74253a8a64.jpg 2x" media="(max-width:1440px)">
+              <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/5cfc954dde038b976c58686f841f3370.jpg, https://cdn.shoplazza.com/e3ab3009f323ac95e8b5c41ee3da4961.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/1b8eb06754ecd8f305775be6b8ec8c47.jpg" alt="Creality-Falcon2-Pro_s9_pic1_blur.jpg">
+          </picture>
+      </div>
+      <div class="wrap2">
+          <div class="warp_item">
+              <picture class="fit_picture fadein">
+                  <div style="padding-bottom: 64.71%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 63.15%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 63.15%;" class="_large placeholderTag"></div>
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/117f17115377492469f346ea833a055a.jpg, https://cdn.shoplazza.com/91938a964e049615e4ebab4be68f78ff.jpg 2x" media="(max-width:960px)">
+                  <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/38c6e89d4a37930dd18330bb3f1c72be.jpg">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/fa4fb9a75f53d2b304c71f3dcd24dfa3.jpg, https://cdn.shoplazza.com/ba1db2876f12329ea449d15552011e87.jpg 2x" media="(max-width:1440px)">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/4af6fe6a66fc00652aa8055844a0a593.jpg, https://cdn.shoplazza.com/6829dc9fe120f5924bfd1301d6da4bc4.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/25874351719f00289ec56a902617cee9.jpg" alt="Creality-Falcon2-Pro_s9_pic2_blur.jpg">
+              </picture>
+              <div class="text_wrap">
+                  <h2 class="fontBold" style="color: #58C73F;">Enclosed Design</h2>
+                  <div class="desc">
+                      With the enclosed design and the light-filtering lid, <br>
+                      there is no need to worry about light or smoke leakage.
+                  </div>
+              </div>
+          </div>
+          <div class="warp_item">
+              <picture class="fit_picture fadein">
+                  <div style="padding-bottom: 64.71%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 63.15%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 63.15%;" class="_large placeholderTag"></div>
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/179a82e4b7eea7b9fe0629dffb541559.jpg, https://cdn.shoplazza.com/f9f632bae168a2d5691d975b751c2ef6.jpg 2x" media="(max-width:960px)">
+                  <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/8b129b5b91dc484a6e1d013f43679b6f.jpg">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/46fec6721941120bfb9286e373372b1a.jpg, https://cdn.shoplazza.com/a342796dda10e7dc3824cc1fadbfbf26.jpg 2x" media="(max-width:1440px)">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/5eb470dbd45fb9385094409f0449b291.jpg, https://cdn.shoplazza.com/45eac0721ad9304875ba620b4f79aed6.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/c4df848a4f889b83bb439a686297063c.jpg" alt="Creality-Falcon2-Pro_s9_pic3_blur.jpg">
+              </picture>
+              <div class="text_wrap">
+                  <h2 class="fontBold" style="color: #58C73F;">
+                      Laser Filtering<span class="pc">,</span><br class="pc">
+                      <span class="pc">
+                          Worry-free <br>
+                          Eye Viewing
+                      </span>
+                  </h2>
+                  <div class="desc mb">
+                      Worry-free Eye Viewing
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="section10">
+      <h1>
+          Lid-open Safety Stop, <br>
+          Designed to Prevent <br>
+          Laser Leakage
+      </h1>
+      <div class="video_wrap fadein">
+          <video preload="auto" poster="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/creality_falcon2_pro_en_s10_poster1.jpg" class="plyr-video lazy-video" autoplay="" muted="" loop="" x5-playsinline="true" playsinline="true" webkit-playsinline="true" draggable="true">
+              <!-- <source src="https://customer-30zc4hfqg1m9lcz1.cloudflarestream.com/934c0bec92b0c999d71cda3793706bc1/downloads/default.mp4" type="video/mp4">
+              <source src="https://customer-30zc4hfqg1m9lcz1.cloudflarestream.com/934c0bec92b0c999d71cda3793706bc1/manifest/video.m3u8" type="application/x-mpegURL"> -->
+              <source data-src="https://cdn.shopify.com/videos/c/o/v/7b20f6ab3b424fdd953d3b959232d3eb.mp4" type="video/mp4">
+          </video>
+          <span class="play_btn"></span>
+      </div>
+      <div class="flex_wrap delay-fadein">
+          <div class="flex_item">
+              <picture class="fit_picture">
+                  <div style="padding-bottom: 64.71%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 54.29%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 54.29%;" class="_large placeholderTag"></div>
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/bcc415b77ad818cddf42ff4bad9243fe.jpg, https://cdn.shoplazza.com/a86d8855e503ef2569b8bd896b9de030.jpg 2x" media="(max-width:960px)">
+                  <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/9ca509438cf16443bffbc79b1b3736ec.jpg">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/cb0527f8fb0f88cbca54415d3e9d8cbc.jpg, https://cdn.shoplazza.com/c13c987f525e22fcfc0d5d5ce404e430.jpg 2x" media="(max-width:1440px)">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/3c6922a25c8775aa322f142551b3e687.jpg, https://cdn.shoplazza.com/9b341f46511abd27ce5db665972894a6.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/207593359ba419d7341016d20c744016.jpg" alt="Creality-Falcon2-Pro_s10_pic1_blur.jpg">
+              </picture>
+              <span class="text fontMedium">Dual Sealing Sensors</span>
+          </div>
+          <div class="flex_item">
+              <picture class="fit_picture">
+                  <div style="padding-bottom: 64.71%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 54.29%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 54.29%;" class="_large placeholderTag"></div>
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/2cc57bb5c3e8d5990c3a2c6553c859fc.jpg, https://cdn.shoplazza.com/66783b830877a0973a3b5233b95612ad.jpg 2x" media="(max-width:960px)">
+                  <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/c3203117061b6f7e563ffec50b123a64.jpg">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/0138e9628d459a6dbdcd6051519a1b5b.jpg, https://cdn.shoplazza.com/f9712e2c6e1b8d4c43d4834de55875ad.jpg 2x" media="(max-width:1440px)">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/b65b072472c9d1ee0fb56218cf31ba2d.jpg, https://cdn.shoplazza.com/6d9a5ffbb0758f393733d3cc2f687ca4.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/474cdb5d076635c9586762fcb0a3f192.jpg" alt="Creality-Falcon2-Pro_s10_pic2_blur.jpg">
+              </picture>
+              <span class="text fontMedium">Warning Light Alerts</span>
+          </div>
+      </div>
+  </div>
+
+  <div class="section11">
+      <h1>
+          5 Safety Guarantees
+      </h1>
+      <div class="desc">
+          Enhanced detection ability and safety
+      </div>
+      <div class="flex_wrap fadein">
+          <div class="flex_item">
+              <img class="fit_picture" src="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/Creality-Falcon2_s11_icon1.png" alt="Creality-Falcon2_s11_icon1.png">
+              <div class="desc desc2 fontRegular">
+                  5-direction Sensors
+              </div>
+              <div class="desc">
+                  <span class="fontLight">
+                      If the laser head hits the boundary, the machine <br>
+                      wiilstop automatically and a buzzer will <br>
+                      sound an alarm.
+                  </span>
+              </div>
+          </div>
+
+          <div class="flex_item">
+              <img class="fit_picture" src="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/Creality-Falcon2_s11_icon2.png" alt="Creality-Falcon2_s11_icon2.png">
+              <div class="desc desc2 fontRegular">
+                  Active Stop Function
+              </div>
+              <div class="desc">
+                  <span class="fontLight">
+                      The machine will stop working in case of <br>
+                      accidental tilt, flip or drop, with the buzzer <br>
+                      and indicator sending alert.
+                  </span>
+              </div>
+          </div>
+
+          <div class="flex_item">
+              <img class="fit_picture" src="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/Creality-Falcon2_s11_icon3.png" alt="Creality-Falcon2_s11_icon3.png">
+              <div class="desc desc2 fontRegular">
+                  Security Lock Design
+              </div>
+              <div class="desc">
+                  <span class="fontLight">
+                      Professional use only.
+                  </span>
+              </div>
+          </div>
+
+          <div class="flex_item">
+              <img class="fit_picture" src="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/Creality-Falcon2_s11_icon4.png" alt="Creality-Falcon2_s11_icon4.png">
+              <div class="desc desc2 fontRegular">
+                  Emergency Stop Button
+              </div>
+              <div class="desc">
+                  <span class="fontLight">
+                      If an emergency occurs during operation, <br>
+                      you can also manually stop the machine <br>
+                      immediately.
+                  </span>
+              </div>
+          </div>
+
+          <div class="flex_item">
+              <img class="fit_picture" src="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/Creality-Falcon2_s11_icon5.png" alt="Creality-Falcon2_s11_icon5.png">
+              <div class="desc desc2 fontRegular">
+                  Laser Protective Cover
+              </div>
+              <div class="desc">
+                  <span class="fontLight">
+                      Made of high-efficiency colored filter glass material, the protective cover around the laser
+                      head will <br>
+                      effectively prevent the laser from dazzling the eyes.
+                  </span>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="section12">
+      <h1>
+          Triple Monitoring <br>
+          Systems
+      </h1>
+      <div class="pic1">
+          <picture class="fit_picture">
+              <div style="padding-bottom: 102.68%;" class="_small placeholderTag"></div>
+              <div style="padding-bottom: 102.68%;" class="_medium placeholderTag"></div>
+              <div style="padding-bottom: 102.68%;" class="_large placeholderTag"></div>
+              <source type="image/png" data-srcset="https://cdn.shoplazza.com/653db2f260ebc4da03c719db372e8692.png, https://cdn.shoplazza.com/d2f3f2b0f7d20667281509c03b1598ec.png 2x" media="(max-width:960px)">
+              <source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/c124e7d94b8afc0236e45849302c23b1.png">
+              <source type="image/png" data-srcset="https://cdn.shoplazza.com/a7c2805bcdb8bed4b43b869d55a841a6.png, https://cdn.shoplazza.com/0a90fcdfd11db98c8143142cbdd316b8.png 2x" media="(max-width:1440px)">
+              <source type="image/png" data-srcset="https://cdn.shoplazza.com/2889dcc5542af7c3b79d718c781b59f4.png, https://cdn.shoplazza.com/2635526bf550ec6c5761cf71bc181d86.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/5292930e4bee04e6969a5cf68c842451.png" alt="Creality-Falcon2-Pro_s12_pic1_blur.png">
+          </picture>
+      </div>
+      <div class="flex_wrap delay-fadein">
+          <div class="flex_item">
+              <picture class="fit_picture">
+                  <div style="padding-bottom: 99.41%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 99.41%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 99.41%;" class="_large placeholderTag"></div>
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/6d15a70e608e33d892c7ea5d5ad53036.png, https://cdn.shoplazza.com/11df80507e185423d569b5b49cb5be64.png 2x" media="(max-width:960px)">
+                  <source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/516bbe0e2e34ce1f988894fbcc8db32a.png">
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/fd6442356773474bc793ff3d3e4db60f.png, https://cdn.shoplazza.com/5b83d4e52fd6a62d8b50d0796f6f6a34.png 2x" media="(max-width:1440px)">
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/64e7c5df960dfdc51e830b96d0dc652c.png, https://cdn.shoplazza.com/9c23cddbf200357f032ee8b8d92f56b2.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/64e4628c7aec1d1c3dfdac92b06e5927.png" alt="Creality-Falcon2-Pro_s12_pic2_blur.png">
+              </picture>
+              <div class="text_wrap">
+                  <div class="text1 fontBold">Airflow Monitoring</div>
+                  <div class="text2 fontMedium">
+                      Indicates the current airflow volume. It enables you <br>
+                      to adjust the airflow based on your engraving needs.
+                  </div>
+              </div>
+          </div>
+          <div class="flex_item">
+              <picture class="fit_picture">
+                  <div style="padding-bottom: 98.82%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 98.82%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 98.82%;" class="_large placeholderTag"></div>
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/a454cab6b59f219e75bedbe5901b45ed.png, https://cdn.shoplazza.com/54cf8abb9ed21e4ab740bcf348944ee9.png 2x" media="(max-width:960px)">
+                  <source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/88ebdb4f77c26dd63b390fe068db027a.png">
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/4cf96036af733a759c40531fa29a5914.png, https://cdn.shoplazza.com/268907838030908e228bdd84147e4103.png 2x" media="(max-width:1440px)">
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/1f4ef3dddf6d30b45126e1e04670e8dd.png, https://cdn.shoplazza.com/6d2524ba9deb1b52f4127eb75310a14c.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/66a428101823f6c35aa71afa2aff7a7a.png" alt="Creality-Falcon2-Pro_s12_pic3_blur.png">
+              </picture>
+              <div class="text_wrap">
+                  <div class="text1 fontBold">Flame Monitoring</div>
+                  <div class="text2 fontMedium">
+                      When a flame is detected, the indicator will flash <br>
+                      red with an alarm and the machine will stop <br>
+                      immediately.
+                  </div>
+              </div>
+          </div>
+          <div class="flex_item">
+              <picture class="fit_picture">
+                  <div style="padding-bottom: 99.41%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 99.41%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 99.41%;" class="_large placeholderTag"></div>
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/cff9ee0845f67966d154a5f3e2cb2669.png, https://cdn.shoplazza.com/44c5c70b91d564872b7a54bbfd712f63.png 2x" media="(max-width:960px)">
+                  <source type="image/png" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/d9e71bded24a241d84bf060c72840736.png">
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/9e32b2ac89183662765df1fcd3dec24b.png, https://cdn.shoplazza.com/7376e48a7888306fed91902555417ef6.png 2x" media="(max-width:1440px)">
+                  <source type="image/png" data-srcset="https://cdn.shoplazza.com/b445623045e7e1327e2d4fcf03e93808.png, https://cdn.shoplazza.com/21bede40180bed93e83abf9dd31d1a9c.png 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/f16c7f1036831b2d99362bff0950d396.png" alt="Creality-Falcon2-Pro_s12_pic4_blur.png">
+              </picture>
+              <div class="text_wrap">
+                  <div class="text1 fontBold">Lens Monitoring</div>
+                  <div class="text2 fontMedium">
+                      Built-in lens monitoring system will trigger an alarm <br>
+                      when the lens is dirty enough, which helps avoid lens <br>
+                      breakage and frequent replacement.
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="tips_text fontMedium">
+          (Note: The alarm function is disabled by default. Please enable it in the settings if needed.)
+      </div>
+  </div>
+
+  <div class="section13">
+      <h1>
+          Drawer Design, <br>
+          Good Helper for You
+      </h1>
+      <div class="desc">
+          The metal drawer can store the debris generated by working. <br>
+          Simply pull, pour and wipe to easily clean up.
+      </div>
+      <div class="video_wrap fadein">
+          <video preload="auto" poster="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/creality_falcon2_pro_en_s13_poster1.jpg" class="plyr-video lazy-video" autoplay="" muted="" loop="" x5-playsinline="true" playsinline="true" webkit-playsinline="true" draggable="true">
+              <!-- <source src="https://customer-30zc4hfqg1m9lcz1.cloudflarestream.com/934c0bec92b0c999d71cda3793706bc1/downloads/default.mp4" type="video/mp4">
+              <source src="https://customer-30zc4hfqg1m9lcz1.cloudflarestream.com/934c0bec92b0c999d71cda3793706bc1/manifest/video.m3u8" type="application/x-mpegURL"> -->
+              <source data-src="https://cdn.shopify.com/videos/c/o/v/5d689185291f419caab100e99c25805a.mp4" type="video/mp4">
+          </video>
+          <span class="play_btn"></span>
+      </div>
+  </div>
+
+  <div class="section14">
+      <h1>
+          User-friendly Design
+      </h1>
+      <div class="flex_wrap delay-fadein">
+          <div class="flex_item">
+              <picture class="fit_picture">
+                  <div style="padding-bottom: 124.44%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 123.23%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 123.23%;" class="_large placeholderTag"></div>
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/83e0ef296bb8a8cee28ccb4d1e5815c5.jpg, https://cdn.shoplazza.com/9f83c1e1e8cfbda43449aebc7bf4e65d.jpg 2x" media="(max-width:960px)">
+                  <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/81dfadade23564cdc637fb60db7966d8.jpg">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/b7ba07ba565ff0fe77d3b89bb3635fe6.jpg, https://cdn.shoplazza.com/4482cf98397da87920f66f7cd8c341c8.jpg 2x" media="(max-width:1440px)">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/1831efe2161b126ac52baa02f98f4826.jpg, https://cdn.shoplazza.com/f4c3c35e112c5a2661e86670819a2bfe.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/ba6a03c65f121b225251e82bd151060b.jpg" alt="Creality-Falcon2-Pro_s14_pic1_blur.jpg">
+              </picture>
+              <div class="text_wrap">
+                  <div class="text1 fontMedium">Suitable for small studio</div>
+              </div>
+          </div>
+          <div class="flex_item">
+              <picture class="fit_picture">
+                  <div style="padding-bottom: 124.44%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 123.58%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 123.58%;" class="_large placeholderTag"></div>
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/59ad2b810198fd2c9792494a2224ddc8.jpg, https://cdn.shoplazza.com/fc43672e41e5aafad7944245c636da2d.jpg 2x" media="(max-width:960px)">
+                  <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/38f06429b3d6c0b5ca636cfd0e387cca.jpg">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/5bc774fa31fb4b34d0236e11ecdef738.jpg, https://cdn.shoplazza.com/b1ad8ab52068d96ec00b1e55a6d2a596.jpg 2x" media="(max-width:1440px)">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/26bf4c19cc9fba5d1bb459d1c40580df.jpg, https://cdn.shoplazza.com/7aeda4533bd6a861b8bd24c50d72ebcc.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/90f05b1ca6a83d94c46a6be56024156b.jpg" alt="Creality-Falcon2-Pro_s14_pic2_blur.jpg">
+              </picture>
+              <div class="text_wrap">
+                  <div class="text1 fontMedium">Air assist for <br> better work</div>
+              </div>
+          </div>
+          <div class="flex_item">
+              <picture class="fit_picture">
+                  <div style="padding-bottom: 124.44%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 123.23%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 123.23%;" class="_large placeholderTag"></div>
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/9ae696d0b69e6019d775000cc0346ca9.jpg, https://cdn.shoplazza.com/4ba5d4ff371be74adc7fe6a7bd1703b0.jpg 2x" media="(max-width:960px)">
+                  <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/a8e209c54901fc8c167f81c1983ae739.jpg">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/b70fbe46d7f23a2f792c9bad588e08b9.jpg, https://cdn.shoplazza.com/05cde7c7770f0c743fe423742b24ec91.jpg 2x" media="(max-width:1440px)">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/4b0b1a5d7b20f88864de51735dfad19c.jpg, https://cdn.shoplazza.com/43ec3c46cc615afcf1262456901ff49b.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/90c7ac8caf8828a35431a8acb5aff6b7.jpg" alt="Creality-Falcon2-Pro_s14_pic3_blur.jpg">
+              </picture>
+              <div class="text_wrap">
+                  <div class="text1 fontMedium">
+                      Support <br>
+                      offline creating
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="section15">
+      {% comment %} <h1 class="fadein">Powerful Software</h1>
+      <h3 class="fadein">Multiple functions turn your ideas into reality</h3>
+      <div class="desc fadein">
+          Supports importing images in common vectors and formats such as SVG, DXF, PNG, JPG, BMP, dxf, etc.
+      </div> {% endcomment %}
+      <div class="picture_wrap">
+        <a href="https://webapp.craftseek.com/#/download" target="_blank">
+            <picture class="fit_picture">
+                <div style="padding-bottom: 133.33%;" class="_small placeholderTag"></div>
+                <div style="padding-bottom: 53.19%;" class="_medium placeholderTag"></div>
+                <div style="padding-bottom: 39.06%;" class="_large placeholderTag"></div>
+                <source type="image/jpeg" media="(max-width:960px)" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/750x1000_ab6d5624-e1a7-4144-a0d7-f7fe350e0a4f.jpg?v=1754278823">
+                <source type="image/jpeg" media="(max-width:960px)" data-srcset="" srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/750x1000_ab6d5624-e1a7-4144-a0d7-f7fe350e0a4f.jpg?v=1754278823">
+                <source type="image/jpeg" media="(max-width:1440px)" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/1880x.jpg?v=1754278823">
+                <source type="image/jpeg" media="(min-width:0px)" data-srcset="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/2560x1000.jpg?v=1754278823">
+                <img class="blur-up" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/publicity-s-blur-up.jpg?v=1754287973" alt="Creality-Falcon2-Pro_s15_pic1_blur.jpg">
+            </picture>
+        </a>
+      </div>
+  </div>
+
+  <div class="section16">
+      <h1 class="fadein">Rotary Engraving</h1>
+      <div class="desc fadein">
+          Engraving exclusive marks on items such as water cups and baseball paired with Creality Rotary Kit Pro.
+      </div>
+      <div class="video_wrap">
+          <video preload="auto" poster="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/creality_falcon2_pro_en_s16_poster1.jpg" class="plyr-video lazy-video" autoplay="" muted="" loop="" x5-playsinline="true" playsinline="true" webkit-playsinline="true" draggable="true">
+              <!-- <source src="https://customer-30zc4hfqg1m9lcz1.cloudflarestream.com/934c0bec92b0c999d71cda3793706bc1/downloads/default.mp4" type="video/mp4">
+              <source src="https://customer-30zc4hfqg1m9lcz1.cloudflarestream.com/934c0bec92b0c999d71cda3793706bc1/manifest/video.m3u8" type="application/x-mpegURL"> -->
+              <source data-src="https://cdn.shopify.com/videos/c/o/v/6ce6c3ac693c45b5b6e194d70cd08a83.mp4" type="video/mp4">
+          </video>
+          <span class="play_btn"></span>
+      </div>
+  </div>
+
+  <div class="section17">
+      <h1 class="fadein">Air Purification System</h1>
+      <div class="desc fadein">
+          High-performance air purification system, work with the built-in fan efficiently filters smoke and dust
+          during <br>
+          operation, achieve 99.97% purification rate, breath fresh air at home.
+      </div>
+      <div class="picture_wrap">
+          <picture class="fit_picture">
+              <div style="padding-bottom: 52.17%;" class="_small placeholderTag"></div>
+              <div style="padding-bottom: 52.13%;" class="_medium placeholderTag"></div>
+              <div style="padding-bottom: 52.13%;" class="_large placeholderTag"></div>
+              <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/6c7e286ac33528393720ed577fe19117.jpg, https://cdn.shoplazza.com/2ffa10903907978169bf57336a6b269d.jpg 2x" media="(max-width:960px)">
+              <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/f3fb708c7ad65ee53479886d8c3fc0b2.jpg">
+              <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/cdcc9f0bd1f32589a6f9707986248793.jpg, https://cdn.shoplazza.com/95c3ed8a910a436c1ab865971e573884.jpg 2x" media="(max-width:1440px)">
+              <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/9922bed303b449573c05b413bf277353.jpg, https://cdn.shoplazza.com/672c2ebcf4390bdef11a4476bf33e095.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/44a5ad20e54bf44e24895ed17217850f.jpg" alt="Creality-Falcon2-Pro_s17_pic1_blur.jpg">
+          </picture>
+      </div>
+  </div>
+
+  <div class="section18">
+      <h1 class="fadein">A One-stop Solution</h1>
+      <div class="flex_wrap">
+          <div class="flex_item">
+              <picture class="fit_picture">
+                  <div style="padding-bottom: 98.82%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 98.50%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 98.50%;" class="_large placeholderTag"></div>
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/74cde3eafa9d9ead92ffd63f56c62e19.jpg, https://cdn.shoplazza.com/1eaf67488dfdbfa10ba742c1ff48ad3b.jpg 2x" media="(max-width:960px)">
+                  <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/c949a02a7fb3a222a468c7309c7c94a1.jpg">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/e19bddbc63d97534eb5f51674c9a9244.jpg, https://cdn.shoplazza.com/96bc253aab384f7eb12063895dde436d.jpg 2x" media="(max-width:1440px)">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/d8b6917fdefd120e72898b2c23694284.jpg, https://cdn.shoplazza.com/a61f0452a67690a0985851c64756b202.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/65cf1613b7263f9c88ad5f0260379813.jpg" alt="Creality-Falcon2-Pro_s18_pic1_blur.jpg">
+              </picture>
+          </div>
+          <div class="flex_item">
+              <picture class="fit_picture">
+                  <div style="padding-bottom: 98.82%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 98.50%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 98.50%;" class="_large placeholderTag"></div>
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/56c477d73b11bf698c4a8c6ae08bcd37.jpg, https://cdn.shoplazza.com/23f62e00b160b6b842af7af61923ce15.jpg 2x" media="(max-width:960px)">
+                  <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/aeca51614da10f9aa1ff15d9393461d8.jpg">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/4719bed4b7ac6e65eeaba05e547d8323.jpg, https://cdn.shoplazza.com/605bd426686e67aab1a2d3b27d51c3f9.jpg 2x" media="(max-width:1440px)">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/2da926a7ad386dd42603638e3f6ff037.jpg, https://cdn.shoplazza.com/62cbe2fa0d945a2e9aa7529779c4fa1a.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/08c47883ab7c5c269352777e793bb04b.jpg" alt="Creality-Falcon2-Pro_s18_pic2_blur.jpg">
+              </picture>
+          </div>
+          <div class="flex_item">
+              <picture class="fit_picture">
+                  <div style="padding-bottom: 48.70%;" class="_small placeholderTag"></div>
+                  <div style="padding-bottom: 48.61%;" class="_medium placeholderTag"></div>
+                  <div style="padding-bottom: 48.61%;" class="_large placeholderTag"></div>
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/27ad42ed79d4779d2ed605b5fe843c3a.jpg, https://cdn.shoplazza.com/e2a2cd8b7f7476ef30abffffc9dbc61c.jpg 2x" media="(max-width:960px)">
+                  <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/901e59bd89ad7b88178e62a6c9fe123b.jpg">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/c1e572b6b9638ffe9309bc3b421d7c10.jpg, https://cdn.shoplazza.com/9c611b7cc00b425b237f9cb207fe3d35.jpg 2x" media="(max-width:1440px)">
+                  <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/2ecb1de02fb4082a023182992574cc35.jpg, https://cdn.shoplazza.com/c19604c421a123a9dc3e3c1637bdbbea.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/a29c750a09170a3adee4c7390d64b4ab.jpg" alt="Creality-Falcon2-Pro_s18_pic3_blur.jpg">
+              </picture>
+          </div>
+      </div>
+  </div>
+
+  <div class="section19">
+      <h1>Unlock Various Creations</h1>
+      <div class="swiper-container s19-swiper">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 66.67%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/4e2f898abda2c79dbf6b6affc673c4ae.jpg, https://cdn.shoplazza.com/ef2d438aecd9f61ed020173ccedc1567.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/8870af671c626b3acc5d064aa5a97c30.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/27adada3716581b36cc508e9c5800712.jpg, https://cdn.shoplazza.com/19d2bc1e12a3806944ea5b313c2c302d.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/e1329e1bf621a40a2711e062f15d88ba.jpg, https://cdn.shoplazza.com/e7871eef68a541c803a5f958b04613f7.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/e8df18350daffd3f588d38775a9c93b1.jpg" alt="Creality-Falcon2-Pro_s19_pic1_blur.jpg">
+                  </picture>
+              </div>
+              <div class="swiper-slide">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 66.67%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/7082eb979afe082e56ccdd800e8607e5.jpg, https://cdn.shoplazza.com/f3035f358307c1e78d56731a0b488e8b.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/a5897c0a4547dfbdb9e3ad6e27df6d54.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/76090f3693d059c164f9612e683551a6.jpg, https://cdn.shoplazza.com/88bb8963241e9315d3bab68546171db9.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/a4bda7712b39ba3b553898c82c846c96.jpg, https://cdn.shoplazza.com/7c3c20f3b75749a59a2bdffcb7e3f609.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/733a7c61475b83a0af859e167997ef27.jpg" alt="Creality-Falcon2-Pro_s19_pic2_blur.jpg">
+                  </picture>
+              </div>
+              <div class="swiper-slide">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 66.67%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/b70cd309b06bb405d51bf6115ebf3ff5.jpg, https://cdn.shoplazza.com/fcd3449856dfd70acdb06a2c2a56da81.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/12efbb38beb79561dd2ef706bb737e16.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/4b6f942c163f0baa820f61cfdda28c65.jpg, https://cdn.shoplazza.com/68c9d249254c7a7595f178b4393ac4df.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/e2849a6a00583557eb3f991e30379c79.jpg, https://cdn.shoplazza.com/978a25b12ef54dc803d3f6949be50e08.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/79580f570762bbcbfcf41aa046b936a0.jpg" alt="Creality-Falcon2-Pro_s19_pic3_blur.jpg">
+                  </picture>
+              </div>
+              <div class="swiper-slide">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 66.67%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/6bbafdd7731439177c1616bf481ac688.jpg, https://cdn.shoplazza.com/c2c60b539746009a2654ae453f1cba89.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/627b6cd208e5a7b1b8813a39f934fa39.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/c5859b2d41f1da6e90c5bd6cbfc36cc1.jpg, https://cdn.shoplazza.com/d4c9556763dd41a38afcf9bb754e8517.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/b0f7704d63b44fde7482e7b3504d79e0.jpg, https://cdn.shoplazza.com/66902cedcb31a213f050d83d9e3e8b1e.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/fd88a9b278f795a3fb9f88d65cf7908d.jpg" alt="Creality-Falcon2-Pro_s19_pic4_blur.jpg">
+                  </picture>
+              </div>
+              <div class="swiper-slide">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 66.67%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/4b5e33cbbb68da3d11fb7876f1f16563.jpg, https://cdn.shoplazza.com/70dae978cda3aa3b36a5e889141842c7.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/2cf76c851b966a6e213c6a92e75decc3.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/f5281db00539b2bfbf11df421a05efb2.jpg, https://cdn.shoplazza.com/125464560c65ece6116d5fc26d02ca84.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/74f524d0bc6a4f46802480620cea2199.jpg, https://cdn.shoplazza.com/b6d1c7059ade984d6341efd335dc3f45.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/70adfd1f18a84079a2c13e68e3126824.jpg" alt="Creality-Falcon2-Pro_s19_pic5_blur.jpg">
+                  </picture>
+              </div>
+              <div class="swiper-slide pc">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 150.00%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/ca1fd22c81721f312c12b85fd31a4581.jpg, https://cdn.shoplazza.com/11d30ba590de1f8eb868b973f4aafce9.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/2c0ea2626bef9a0808c3d439f1e356a9.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/a67b2f4584fc72b7b07f84e8753e1fcf.jpg, https://cdn.shoplazza.com/e7fcad5b774196a8dcfb3fd3f27a6db9.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/7d0359419a297ce5315fa4d7fff8b1b1.jpg, https://cdn.shoplazza.com/dc3d94c8992567b2ae080a61a6d17102.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/c63aefb5d02b1a7609bd9fccae2fd7d7.jpg" alt="Creality-Falcon2-Pro_s19_pic6_blur.jpg">
+                  </picture>
+              </div>
+              <div class="swiper-slide pc">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 150.00%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/be2198e81365a913940bc3a43daa296e.jpg, https://cdn.shoplazza.com/5b073f0998778be0a99001ad33e2b75e.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/df6258ee2d0369572ade694a3d301bfd.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/a8fed2d3dfa0343dff3f84ab1b5f43d2.jpg, https://cdn.shoplazza.com/c42cce8a4dd638662e03a4d1ceba6415.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/f03048c0d46febe4f6083c308bdd3707.jpg, https://cdn.shoplazza.com/816dfcc805cfa109918fc56cfd479202.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/6fa77f1ca9a4ab00f25b9f5170eca5ef.jpg" alt="Creality-Falcon2-Pro_s19_pic7_blur.jpg">
+                  </picture>
+              </div>
+              <div class="swiper-slide pc">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 150.00%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/d9c16af404bc32670cc4c971e4d0cdd4.jpg, https://cdn.shoplazza.com/8cc6dd3240393fa9a444019b5cb76538.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/4b6cf07757126648476f763ca8dfe822.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/aa213d6da55ff14843160a45d4930e7b.jpg, https://cdn.shoplazza.com/9cbdeb9d08c48ed70dbefdd9e02c75fb.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/eef004cd4ed33476a8f76db607270b2d.jpg, https://cdn.shoplazza.com/fabc0c8dd7b144322b7c179f1dbb542e.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/0491e592f793be9289491329fb312607.jpg" alt="Creality-Falcon2-Pro_s19_pic8_blur.jpg">
+                  </picture>
+              </div>
+              <div class="swiper-slide pc">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 150.00%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/c53b81cbe0abb771fb372c77369d307a.jpg, https://cdn.shoplazza.com/739a736418dfc3aef48db13916962ecd.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/280de6354ad4c3331f06f903f3426520.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/2f0e888cfa26753bbbaf5270d7c89644.jpg, https://cdn.shoplazza.com/62b27fbbb43721a5030d9105914c606d.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/59e486f1f5da7f68d47c7aaaa4af6ca2.jpg, https://cdn.shoplazza.com/9f669f860e69895ca7ffd7fdbba3bd84.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/9dff544c58426a6620cdd0fccbce780c.jpg" alt="Creality-Falcon2-Pro_s19_pic9_blur.jpg">
+                  </picture>
+              </div>
+              <div class="swiper-slide pc">
+                  <picture class="fit_picture">
+                      <div style="padding-bottom: 150.00%;" class="_small placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_medium placeholderTag"></div>
+                      <div style="padding-bottom: 150.00%;" class="_large placeholderTag"></div>
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/260ecd022b6e35e2320643894de3a216.jpg, https://cdn.shoplazza.com/a326e594587f5c2938be4a2f2fcab009.jpg 2x" media="(max-width:960px)">
+                      <source type="image/jpeg" data-srcset="" media="(max-width:960px)" srcset="https://cdn.shoplazza.com/4edd7b58b748c1e0aeab6c1143b2eb69.jpg">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/f8ef404a488462e8dc48c1888ac70d6f.jpg, https://cdn.shoplazza.com/f7e5565c80b8f603f74261a440289af1.jpg 2x" media="(max-width:1440px)">
+                      <source type="image/jpeg" data-srcset="https://cdn.shoplazza.com/a830f32c06d25aabad4d58a065149572.jpg, https://cdn.shoplazza.com/48c41efa94e952aa4cd1eeae712344e4.jpg 2x" media="(min-width:0px)"><img class="blur-up" src="https://cdn.shoplazza.com/4762b691bddcfeaa4f13f496f0db5372.jpg" alt="Creality-Falcon2-Pro_s19_pic10_blur.jpg">
+                  </picture>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="section20">
+      <h2 class="fontBold fadein">Specifications</h2>
+      <div class="param_wrap fadein" data-start="90">
+          <div class="param_flex">
+              <div class="param_item">
+                  <span class="name fontMedium">Product Name</span>
+                  <span class="value mr">Creality Falcon2 Pro 60W</span>
+              </div>
+              <div class="param_item">
+                  <span class="name fontMedium">Machine Power (MAX)</span>
+                  <span class="value mr">360W</span>
+              </div>
+          </div>
+
+          <div class="param_flex">
+              <div class="param_item">
+                  <span class="name fontMedium">Optical Power</span>
+                  <span class="value mr">60W+1.6W</span>
+              </div>
+              <div class="param_item">
+                  <span class="name fontMedium">Product Size</span>
+                  <span class="value mr">664*570*328.4mm</span>
+              </div>
+          </div>
+
+          <div class="param_flex">
+              <div class="param_item">
+                  <span class="name fontMedium">Equipment Weight</span>
+                  <span class="value mr">19.51kg</span>
+              </div>
+              <div class="param_item">
+                  <span class="name fontMedium">Input Voltage</span>
+                  <span class="value mr">100-240V~ 50-60Hz</span>
+              </div>
+          </div>
+
+          <div class="param_flex">
+              <div class="param_item">
+                  <span class="name fontMedium">Output Voltage</span>
+                  <span class="value mr">DC 24.0V 15.0A</span>
+              </div>
+              <div class="param_item">
+                  <span class="name fontMedium">Operating Temperature</span>
+                  <span class="value mr">5℃-35℃</span>
+              </div>
+          </div>
+
+          <div class="param_flex">
+              <div class="param_item">
+                  <span class="name fontMedium">Engraving Area</span>
+                  <span class="value mr">400mm*400mm</span>
+              </div>
+              <div class="param_item">
+                  <span class="name fontMedium">Laser Source</span>
+                  <span class="value mr">Diode Laser</span>
+              </div>
+          </div>
+
+          <div class="param_flex">
+              <div class="param_item">
+                  <span class="name fontMedium">Laser Spot</span>
+                  <span class="value mr">0.08*0.15mm</span>
+              </div>
+              <div class="param_item">
+                  <span class="name fontMedium">Laser Wavelength</span>
+                  <span class="value mr">455±5nm</span>
+              </div>
+          </div>
+
+          <div class="param_flex">
+              <div class="param_item">
+                  <span class="name fontMedium">Laser Class</span>
+                  <span class="value mr">Class 1(FDA)</span>
+              </div>
+              <div class="param_item">
+                  <span class="name fontMedium">Laser Engraving Software</span>
+                  <span class="value mr">LightBurn、LaserGRBL、Falcon Design Space</span>
+              </div>
+          </div>
+
+          <div class="param_flex">
+              <div class="param_item">
+                  <span class="name fontMedium">Operating System</span>
+                  <span class="value mr">Windows/MacOS</span>
+              </div>
+              <div class="param_item">
+                  <span class="name fontMedium">Supported File Formats</span>
+                  <span class="value mr">Jpeg, jpg, png, bmp, svg, dxf, etc. </span>
+              </div>
+          </div>
+
+          <div class="param_flex">
+              <div class="param_item">
+                  <span class="name fontMedium">Supported Materials</span>
+                  <span class="value mr">Cardboard, wood, bamboo, rubber <br> leather, fabric, acrylic, plastic,
+                      etc.</span>
+              </div>
+              <div class="param_item">
+                  <span class="name fontMedium">Certifications</span>
+                  <span class="value mr">EC60825、FDA、CE、ROHS、FCC、 <br> UKCA、UL Report、PSE</span>
+              </div>
+          </div>
+
+          <div class="param_flex">
+              <div class="param_item">
+                  <span class="name fontMedium">Gross Weight</span>
+                  <span class="value mr">25.74KG</span>
+              </div>
+              <div class="param_item">
+                  <span class="name fontMedium">Package Size</span>
+                  <span class="value mr">770*645*285</span>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div>
+
+<!-- 回到顶部 -->
+<div class="toTop" data-target=".section2">
+  <div class="sellpoint-item-jump">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="92" viewBox="0 0 46 92">
+          <defs>
+              <clipPath id="clip-path">
+                  <rect id="pash_17131" data-name="pash 17131" width="46" height="92" transform="translate(9802 -12581)" fill="#2E2E2E" stroke="#707070" stroke-width="1"></rect>
+              </clipPath>
+          </defs>
+          <g id="sdf_3084" data-name="sdf 3084" transform="translate(-9802 12581)" clip-path="url(#clip-path)">
+              <g id="gds_48908" data-name="gds 48908" transform="translate(34 2)">
+                  <g id="gds_9" data-name="gds 9" transform="translate(8728 -14303)">
+                      <path id="uutyu_24" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                      </path>
+                  </g>
+                  <g id="gds_9-2" data-name="gds 9" transform="translate(8728 -14257)">
+                      <path id="uutyu_24-2" data-name="uutyu 24" d="M3994,24549a2,2,0,0,1-2-2v-8a2,2,0,0,1,4,0v6h6a2,2,0,0,1,0,4Z" transform="translate(-19118.535 -12785.508) rotate(-45)" fill="#fff">
+                      </path>
+                  </g>
+              </g>
+          </g>
+      </svg>
+  </div>
+</div>
+
+<div class="video-dialog s4-video1">
+  <div class="video-main">
+      <video class="lazy-video" autoplay="" crossorigin="" x5-playsinline="true" playsinline="true" webkit-playsinline="true" data-poster="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/creality_falcon2_pro_en_s4_poster1.jpg">
+          <source data-src="https://cdn.shopify.com/videos/c/o/v/9250fcde30824e15abb56098c4fd59e0.mp4" type="video/mp4">
+          <!-- Fallback for browsers that don't support the <video> element -->
+      </video>
+  </div>
+  <div class="close video-close">
+      <!--?xml version="1.0" encoding="utf-8"?-->
+      <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      <svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0rem" y="0rem" viewBox="0 0 46 42.6" style="enable-background:new 0 0 46 42.6;" xml:space="preserve">
+          <style type="text/css">
+              .st0 {
+                  fill: #CECECE;
+              }
+          </style>
+          <g id="gds_9" transform="translate(8728 -14303)">
+              <path id="uutyu_24" class="st0" d="M-8703.6,14326.3c-0.8,0.8-2,0.8-2.8,0l-5.7-5.7c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2-0.8,2.8,0
+l4.2,4.2l4.2-4.2c0.8-0.8,2-0.8,2.8,0c0.8,0.8,0.8,2,0,2.8L-8703.6,14326.3z"></path>
+          </g>
+          <g id="gds_9_1_" transform="translate(8728 -14303)">
+              <path id="uutyu_24_1_" class="st0" d="M-8706.4,14322.7c0.8-0.8,2-0.8,2.8,0l5.7,5.7c0.8,0.8,0.8,2,0,2.8s-2,0.8-2.8,0l-4.2-4.2
+l-4.2,4.2c-0.8,0.8-2,0.8-2.8,0c-0.8-0.8-0.8-2,0-2.8L-8706.4,14322.7z"></path>
+          </g>
+      </svg>
+
+  </div>
+</div>
+
+<div class="video-dialog s4-video2">
+  <div class="video-main">
+      <video class="lazy-video" autoplay="" crossorigin="" x5-playsinline="true" playsinline="true" webkit-playsinline="true" data-poster="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/creality_falcon2_pro_en_s4_poster2.jpg">
+          <source data-src="https://cdn.shopify.com/videos/c/o/v/4391fe33c0b0437b8b3b762d77dfa529.mp4" type="video/mp4">
+          <!-- Fallback for browsers that don't support the <video> element -->
+      </video>
+  </div>
+  <div class="close video-close">
+      <!--?xml version="1.0" encoding="utf-8"?-->
+      <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      <svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0rem" y="0rem" viewBox="0 0 46 42.6" style="enable-background:new 0 0 46 42.6;" xml:space="preserve">
+          <style type="text/css">
+              .st0 {
+                  fill: #CECECE;
+              }
+          </style>
+          <g id="gds_9" transform="translate(8728 -14303)">
+              <path id="uutyu_24" class="st0" d="M-8703.6,14326.3c-0.8,0.8-2,0.8-2.8,0l-5.7-5.7c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2-0.8,2.8,0
+l4.2,4.2l4.2-4.2c0.8-0.8,2-0.8,2.8,0c0.8,0.8,0.8,2,0,2.8L-8703.6,14326.3z"></path>
+          </g>
+          <g id="gds_9_1_" transform="translate(8728 -14303)">
+              <path id="uutyu_24_1_" class="st0" d="M-8706.4,14322.7c0.8-0.8,2-0.8,2.8,0l5.7,5.7c0.8,0.8,0.8,2,0,2.8s-2,0.8-2.8,0l-4.2-4.2
+l-4.2,4.2c-0.8,0.8-2,0.8-2.8,0c-0.8-0.8-0.8-2,0-2.8L-8706.4,14322.7z"></path>
+          </g>
+      </svg>
+
+  </div>
+</div>
+
+<div class="video-dialog s4-video3">
+  <div class="video-main">
+      <video class="lazy-video" autoplay="" crossorigin="" x5-playsinline="true" playsinline="true" webkit-playsinline="true" data-poster="https://cdn.shopifycdn.net/s/files/1/0853/7944/9135/files/creality_falcon2_pro_en_s4_poster3.jpg">
+          <source data-src="https://cdn.shopify.com/videos/c/o/v/7c5e5b4f0b8b4acf90e20d0870639e18.mp4" type="video/mp4">
+          <!-- Fallback for browsers that don't support the <video> element -->
+      </video>
+  </div>
+  <div class="close video-close">
+      <!--?xml version="1.0" encoding="utf-8"?-->
+      <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      <svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0rem" y="0rem" viewBox="0 0 46 42.6" style="enable-background:new 0 0 46 42.6;" xml:space="preserve">
+          <style type="text/css">
+              .st0 {
+                  fill: #CECECE;
+              }
+          </style>
+          <g id="gds_9" transform="translate(8728 -14303)">
+              <path id="uutyu_24" class="st0" d="M-8703.6,14326.3c-0.8,0.8-2,0.8-2.8,0l-5.7-5.7c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2-0.8,2.8,0
+l4.2,4.2l4.2-4.2c0.8-0.8,2-0.8,2.8,0c0.8,0.8,0.8,2,0,2.8L-8703.6,14326.3z"></path>
+          </g>
+          <g id="gds_9_1_" transform="translate(8728 -14303)">
+              <path id="uutyu_24_1_" class="st0" d="M-8706.4,14322.7c0.8-0.8,2-0.8,2.8,0l5.7,5.7c0.8,0.8,0.8,2,0,2.8s-2,0.8-2.8,0l-4.2-4.2
+l-4.2,4.2c-0.8,0.8-2,0.8-2.8,0c-0.8-0.8-0.8-2,0-2.8L-8706.4,14322.7z"></path>
+          </g>
+      </svg>
+
+  </div>
+</div>
+
+<script>
+gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger)
+const delay = function (timer) {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      res()
+    }, timer)
+  })
+}
+
+
+let diaLoginit = function () {
+  $('[data-open]').click(function (e) {
+    e.preventDefault();
+    let dialog_name = $(this).data('open')
+    $(`.${dialog_name}`).fadeIn()
+    $('html').addClass('scroll-no')
+  })
+  $('.close').click(function () {
+    $(this).parents('.dialog').fadeOut();
+    $('html').removeClass('scroll-no')
+  })
+}
+
+let tarGetinit = function () {
+  $('[data-target]').click(function (e) {
+    e.preventDefault();
+    // $('.page-pagination li').removeClass('active')
+    // $(this).addClass('active')
+    let target = $(this).data('target')
+    gsap.to(window, {
+      duration: 0.5,
+      scrollTo: {
+        y: target
+      }
+    });
+  })
+  let pagePagination = $(".page-pagination")
+
+  $(window).scroll(function () {
+    if (docWidth > 960) {
+      var scrollPos = $(window).scrollTop();
+      let docHeight = document.documentElement.clientHeight
+
+      $(".page-pagination li").each(function (key) {
+        var target = $(this).data("target");
+        var targetPos = $(target).offset().top;
+        var targetHeight = $(target).outerHeight();
+
+        // 检查元素是否在视图中
+        if (scrollPos >= (targetPos - docHeight * (1 - 0.3))) {
+          pagePagination.fadeIn();
+          $('.page-pagination li').removeClass('active')
+          $(this).addClass("active"); // 如果在视图中，添加"active"类
+        } else if (key === 0) {
+          pagePagination.fadeOut()
+        }
+      });
+    }
+  });
+}
+
+var fadeInListen = function () {
+  var fadeIn = $('.main-contain').find('.fadein');
+
+  fadeIn.each(function () {
+    let element = this;
+    let {
+      scrub,
+      reverse,
+      duration,
+      actions,
+      fn
+    } = $(this).data()
+
+    gsap.set(element, {
+      opacity: 0,
+      y: 30
+    });
+    let toggleActions = "play none none none";
+    let start = $(this).data('start') || 70;
+    duration ? '' : duration = 0.8
+    let tl = gsap.to(element, {
+      opacity: 1,
+      y: 0,
+      duration
+    });
+    if (reverse) {
+      toggleActions = "play none none reverse"
+    }
+
+    ScrollTrigger.create({
+      animation: tl,
+      trigger: element,
+      toggleActions,
+      start: `top ${start}%`, // 调整触发点，视情况而定
+      onEnter: function () {
+
+      },
+      once: true // 只触发一次
+    });
+  });
+
+  var delayFadeIn = $('.delay-fadein');
+  delayFadeIn.each(function () {
+    let element = this;
+    let {
+      parent,
+      el,
+      scrub,
+      reverse,
+      duration,
+      actions,
+      fn
+    } = $(this).data()
+    let parentEl = $(parent);
+    parentEl.length ? '' : parentEl = $(element)
+    let delayEl = [];
+    if (el) {
+      el.split(',').forEach((selector) => delayEl.push(...parentEl.find(
+        selector)))
+    } else {
+      delayEl = parentEl.children();
+    }
+
+    let toggleActions = "play none none none";
+    scrub ? scrub = true : scrub = false;
+
+    duration ? '' : duration = 0.8
+    console.log(duration)
+    let start = $(this).data('start') || 70;
+    let stagger = $(this).data('delay') || 0.3;
+
+
+    gsap.set(delayEl, {
+      opacity: 0,
+      y: 30
+    });
+
+    let tl = gsap.timeline();
+    tl.to(delayEl, {
+      stagger,
+      opacity: 1,
+      y: 0,
+      duration
+    })
+    if (fn) {
+      console.log(fn)
+      tl = k1c_tl[fn](tl)
+    }
+    if (reverse) {
+      toggleActions = "play none none reverse"
+      gsap.set(element, {
+        opacity: 0,
+        y: 30
+      });
+      let t2 = gsap.to(element, {
+        opacity: 1,
+        y: 0,
+        duration
+      })
+      ScrollTrigger.create({
+        animation: t2,
+        toggleActions,
+        trigger: element,
+        scrub,
+        start: `top ${start}%`, // 调整触发点，视情况而定
+      });
+    }
+    actions ? toggleActions = actions : ''
+
+
+    ScrollTrigger.create({
+      animation: tl,
+      toggleActions,
+      trigger: element,
+      scrub,
+      start: `top ${start}%`, // 调整触发点，视情况而定
+      // marker: true
+      // once: true // 只触发一次
+    });
+  });
+
+}
+
+
+const docWidth = document.documentElement.clientWidth;
+const docHeight = document.documentElement.clientHeight;
+const vw = docWidth / 100;
+const vh = docHeight / 100;
+let spaceBetween = 1.3 * vw;
+
+let swiper1_options = {
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  spaceBetween,
+}
+
+let adjust_options = {
+  effect: 'fade',
+  allowTouchMove: false // Disable dragging
+}
+if (docWidth < 960) {
+  swiper1_options = {
+    effect: 'fade'
+  }
+  let spaceNum = 0.02;
+
+  var mySwiper2 = new Swiper('.Creality-Falcon2-Pro .s4-swiper2', {
+    spaceBetween: docWidth * spaceNum,
+    slidesPerView: "auto",
+    on: {
+      resize: function () { // 监听窗口大小变化
+        this.params.spaceBetween = docWidth * spaceNum; // 动态设置间距
+        this.update(); // 更新Swiper
+      }
+    }
+  });
+}
+
+var mySwiper1 = new Swiper('.section4 .s4-swiper', {
+  ...swiper1_options,
+  loop: true,
+  autoplay: {
+    delay: 2500
+  },
+  pagination: {
+    el: '.section4 .swiper-pagination'
+  },
+  navigation: {
+    "nextEl": ".section4 .navigation-wrap .next-btn",
+    "prevEl": ".section4 .navigation-wrap .prev-btn"
+  }
+});
+
+
+function calculateSpace() {
+  var docWidth = document.documentElement.clientWidth;
+  // 根据窗口宽度计算间距，这里简单演示，你可以根据需求进行更复杂的计算
+
+  let data = {
+    slidesPerView: docWidth <= 960 ? 1 : 3,
+    spaceBetween: docWidth <= 960 ? 0 : 10,
+  } // 举例，窄屏间距较小，宽屏间距较大
+  console.log(data)
+  return data;
+}
+
+
+const swiperWrapper = $('.section19 .s19-swiper .swiper-wrapper');
+
+// 鼠标悬停时暂停动画
+swiperWrapper.hover(
+  function () {
+    $(this).css('animation-play-state', 'paused');
+  },
+  function () {
+    $(this).css('animation-play-state', 'running');
+  }
+);
+
+
+
+let plyr_video = $('.plyr-video');
+$('.play_btn').parent().click(function () {
+  plyr_video.each(function () {
+    this.play();
+  })
+}) 
+
+plyr_video.on('timeupdate', function () {
+  // console.log(this.currentTime)
+  if (!this.flag && this.currentTime) {
+    // alert(this.src)
+    $(this).parent().find('.play_btn').hide(); //当视频加载完毕时开始播放
+    this.flag = true;
+  }
+});
+
+let s4_video_ready = 0;
+$('.s4-video').on('canplaythrough', function () {
+  s4_video_ready++;
+  // debugger
+  if (s4_video_ready === $('.s4-video').length) {
+    console.log('all ready')
+    $('.s4-video').each(function () {
+      this.play()
+    })
+  }
+})
+
+let tlEvent = {
+
+}
+
+
+// 淡入淡出 初始化
+fadeInListen();
+diaLoginit(); //弹框初始化
+tarGetinit() //跳转初始化
+
+
+
+new Plyr('.s4-video1 video', { captions: { active: true } });
+new Plyr('.s4-video2 video', { captions: { active: true } });
+new Plyr('.s4-video3 video', { captions: { active: true } });
+
+// Expose player so it can be used from the console
+// window.player = player;
+
+let videos = $('.video-button').parent().find('video');
+$('[data-video]').click(function (e) {
+    e.preventDefault();
+    let dialog_name = $(this).data('video')
+    $(`.${dialog_name}`).fadeIn()
+    // console.log($(`.${dialog_name}`).find('video')[0])
+    $(`.${dialog_name}`).find('video')[0].play();
+})
+$('.video-close').click(function () {
+    $(this).parents('.video-dialog').fadeOut();
+    $(this).parents('.video-dialog').find('video')[0].pause()
+})
+
+const picture_observer = lozad('.fit_picture,.lazy-video', {
+    rootMargin: '1500px 0px', // syntax similar to that of CSS Margin
+    load: function (el) {
+        // console.log(el)
+        if (el.tagName === 'PICTURE' || el.tagName === 'IMG') {
+            let image = el.tagName === 'IMG' ? el : el.querySelector('img');
+            if (el.tagName === 'IMG') image = el;
+
+            image.onload = function () {
+                this.classList.add('loaded')
+            }
+            el.querySelectorAll('source').forEach(source => {
+                let srcset = source.getAttribute('data-srcset');
+                srcset ? source.setAttribute('srcset', srcset) : ''
+            });
+        } else if (el.tagName === 'VIDEO') {
+            el.onloadeddata = function () {
+                console.log('loaded...')
+                this.classList.add('loaded');
+            };
+            const poster = el.getAttribute('data-poster');
+            if (poster) el.setAttribute('poster', poster);
+
+            el.querySelectorAll('source').forEach(source => {
+                const src = source.getAttribute('data-src');
+                if (src) {
+                    source.setAttribute('src', src);
+                    el.load()
+                }
+            });
+        }
+    }
+});
+picture_observer.observe();
+</script>
+
+{% schema %}
+  {
+    "name": "creality_falcon2_pro_page",
+    "settings": [],
+    "presets": [
+      {
+        "name": "creality_falcon2_pro_page"
+      }
+    ]
+  }
+{% endschema %}

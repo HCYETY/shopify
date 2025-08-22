@@ -1,0 +1,81 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_510878016113476546": {
+      "type": "gp-section-510878016113476546",
+      "settings": {
+        "section_preload": "true",
+        "checksum": ""
+      }
+    },
+    "gp_section_510878016583238594": {
+      "type": "gp-section-510878016583238594",
+      "settings": {
+        "checksum": ""
+      }
+    },
+    "gp_section_510878016650347726": {
+      "type": "gp-section-510878016650347726",
+      "settings": {}
+    },
+    "gp_section_510878017287881934": {
+      "type": "gp-section-510878017287881934",
+      "settings": {}
+    },
+    "gp_section_510878016499352782": {
+      "type": "gp-section-510878016499352782",
+      "settings": {}
+    },
+    "gp_section_510878017690535118": {
+      "type": "gp-section-510878017690535118",
+      "settings": {}
+    },
+    "gp_section_510878016902071234": {
+      "type": "gp-section-510878016902071234",
+      "settings": {
+        "checksum": ""
+      }
+    },
+    "gp_section_510891536972514510": {
+      "type": "gp-section-510891536972514510",
+      "settings": {
+        "checksum": ""
+      }
+    },
+    "gp_section_510878016902005966": {
+      "type": "gp-section-510878016902005966",
+      "settings": {}
+    },
+    "gp_section_510878016902005698": {
+      "type": "gp-section-510878016902005698",
+      "settings": {}
+    },
+    "gp_section_510878017673757634": {
+      "type": "gp-section-510878017673757634",
+      "settings": {
+        "checksum": ""
+      }
+    }
+  },
+  "order": [
+    "gp_section_510878016113476546",
+    "gp_section_510878016583238594",
+    "gp_section_510878016650347726",
+    "gp_section_510878017287881934",
+    "gp_section_510878016499352782",
+    "gp_section_510878017690535118",
+    "gp_section_510878016902071234",
+    "gp_section_510891536972514510",
+    "gp_section_510878016902005966",
+    "gp_section_510878016902005698",
+    "gp_section_510878017673757634"
+  ]
+}

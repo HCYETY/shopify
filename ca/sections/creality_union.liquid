@@ -1,0 +1,506 @@
+<style>
+  .section-block-{{section.id}} {
+    line-height: normal;
+  }
+  .p-reative {
+    position: relative;
+  }
+  .banner-text-box {
+    position: absolute;
+    width: 62.500vw;
+    left: 50%;
+    top: 12%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .section-block-{{section.id}} .banner-title {
+    position: relative;
+    font-size: 3.125vw;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+  }
+  .section-block-{{section.id}} .banner-subtitle {
+    margin-top: 0.833vw;
+    position: relative;
+    font-size: 1.667vw;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+  }
+  .section-block-{{section.id}} .banner-button {
+    cursor: pointer;
+    width: 10.417vw;
+    margin: 0 auto;
+    margin-top: 2.604vw;
+    height: 2.500vw;
+    border-radius: 52.031vw;
+    background-color: #00D3F0;
+    color: #ffffff;
+    font-size: 1.094vw;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-block-{{section.id}} .common-title {
+    position: relative;
+    font-size: 1.779vw;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.563vw;
+  }
+  .section-block-{{section.id}} .common-subtitle {
+    font-size: 1.042vw;
+    color: #4C4D4D;
+    font-weight: 500;
+    text-align: center;
+  }
+  .section-block-{{section.id}} .common-text {
+    font-size: 0.729vw;
+    text-align: center;
+  }
+  .section-block-{{section.id}} .text-color {
+    color: #3F7149;
+  }
+  .section-block-{{section.id}} .color-block {
+    height: 0.260vw;
+    width: 5.208vw;
+    border-radius: 1.042vw;
+    bottom: 0.313vw;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FDDC7F;
+    position: absolute; 
+  }
+  .section-block-{{section.id}} .content { 
+    width: 62.500vw;
+    margin: 0 auto;
+  } 
+  .section-block-{{section.id}} .section2 {
+    padding: 3.125vw 0;
+    background: linear-gradient(135deg,#CCFBF1 0%, #B9F5F3 50% ,#65E0F2 100% );
+  } 
+  .section-block-{{section.id}} .section-img {
+    margin-top: 1.563vw;
+    width: 52.083vw;
+    margin: 0 auto;
+    margin-top: 2.604vw; 
+  }
+  .section-block-{{section.id}} .section3 {
+    padding: 3.125vw 0;
+  }
+  .section-block-{{section.id}} .section3 .section3-boxs {
+    width: 72.917vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .section-block-{{section.id}} .section3 .box-item {
+    padding: 1.042vw;
+    position: relative;
+    width: 10.417vw;
+    height: 5.729vw;
+    border-radius: 0.521vw;
+    background-color: #DAF7FD;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-block-{{section.id}} .section3 .icon-img {
+    position: absolute;
+    width: 2.604vw;
+    top: -1.042vw;
+    left: -1.042vw;
+  } 
+  .section-block-{{section.id}} .section3 .text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.042vw;
+    font-weight: 600; 
+  }
+  .section-block-{{section.id}} .section3 .text-span {
+    width: 100%;
+    font-size: 0.729vw;
+    font-weight: 500; 
+  }
+  .section-block-{{section.id}} .section4 {
+    padding: 3.125vw 0;
+    background: linear-gradient(135deg,#CCFBF1 0%, #B9F5F3 50% ,#65E0F2 100% );
+  } 
+  .section-block-{{section.id}} .section4 .bottom-note {
+    margin-top: 20px;
+  }
+  .section-block-{{section.id}} .section4 .note-text {
+    margin-top: 8px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .section-block-{{section.id}} .section4 .join-btn {
+    cursor: pointer;
+    width: 6.250vw;
+    height: 1.667vw;
+    border-radius: 52.031vw;
+    background-color: #FAB417;
+    color: #ffffff;
+    font-size: 1.094vw;
+    font-weight: 500;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 1.042vw;
+  }
+  .section-block-{{section.id}} .section5 .form-wrap {
+    position: relative;
+    width: 41.667vw;
+    margin: 0 auto;
+    padding-top: 2.083vw;
+  }
+  .section-block-{{section.id}} .section5 .form-wrap .hide {
+    background-color: #ffffff;
+    z-index: 10;
+    width: 12.938vw;
+    height: 4.688vw;
+    position: absolute;
+    bottom: 0.260vw;
+    right: 0.521vw; 
+  }
+  .section-block-{{section.id}} .section6 { 
+    padding-bottom: 3.125vw;
+  }
+  .section-block-{{section.id}} .section6 .rule-box {
+    width: 52.083vw;
+    margin: 0 auto;
+    margin-top: 1.563vw;
+  }
+  .section-block-{{section.id}} .section6 .rule-title { 
+    margin: 1.042vw 0 0.521vw 0.000vw;
+    font-size: 0.833vw;
+    font-weight: 600;
+  }
+  .section-block-{{section.id}} .section6 .rule-text {
+    margin: 0.156vw 0;
+    font-size: 0.729vw;
+  }
+  @media (min-width: 768px) {
+    .section-block-{{section.id}} .mb {
+      display: none;
+    }
+    .section-block-{{section.id}} .mt-60 {
+      margin-top: 60px; 
+    }
+    .section-block-{{section.id}} .mt-30 {
+      margin-top: 30px;
+    }
+    .section-block-{{section.id}} .vertical-center {
+      margin-top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  @media (max-width: 768px) {
+    .section-block-{{section.id}} .section4 .join-btn {
+        cursor: pointer;
+        width: 26.25vw;
+        height: 6.667vw;
+        border-radius: 52.031vw;
+        background-color: #FAB417;
+        color: #ffffff;
+        font-size: 4.094vw;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 1.042vw;
+    }
+    .section-block-{{section.id}} .section-img {
+      width: 100%; 
+    }
+    .section-block-{{section.id}} .mt-60 {
+      margin-top: 10.667vw;
+    }
+    .section-block-{{section.id}} .pc { 
+      display: none;
+    }
+    .section-block-{{section.id}} .common-title {
+      font-size: 6vw;
+      margin-bottom: 0.563vw; 
+    }
+    .section-block-{{section.id}} .common-subtitle {
+      font-size: 3.667vw;
+    }
+    .section-block-{{section.id}} .content {
+      width: 100%;
+      padding: 0 4.267vw;
+    }
+    .section-block-{{section.id}} .banner-text-box {
+      width: 100%;
+      padding: 20px;
+    }
+    .section-block-{{section.id}} .banner-title {
+      position: relative;
+      font-size: 8.125vw;
+    } 
+    .section-block-{{section.id}} .banner-subtitle {
+      font-size: 3.667vw;
+    }
+    .section-block-{{section.id}} .banner-button {
+      width: 30.417vw;
+      margin-top: 2.604vw;
+      height: 6.5vw;
+      border-radius: 52.031vw;
+      font-size: 4.094vw;
+    } 
+    .section-block-{{section.id}} .section3 .section3-boxs {
+      width: 100%;
+      padding: 0 4.267vw; 
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .section-block-{{section.id}} .section3 .section3-boxs .box-item {
+      width: 160px;
+      height: 80px;
+      margin-bottom: 16px; 
+      border-radius: 12px;
+    }
+    .section-block-{{section.id}} .section3 .section3-boxs .box-item:nth-child(odd) {
+      margin-right: 20px;
+    }
+    .section-block-{{section.id}} .section3 .icon-img {
+      width: 30px;
+      top: -10px;
+      left: -10px;
+    } 
+    .section-block-{{section.id}} .section3 .icon-img2 {
+      top: -10px;
+      right: -10px !important;
+      left: auto;
+    }
+    .section-block-{{section.id}} .section3 .text-span {
+      font-size: 2.729vw;
+    } 
+    .section-block-{{section.id}} .section3 .text-box {
+      font-size: 4.042vw;
+    }
+    .section-block-{{section.id}} .section5 .form-wrap {
+      width: 100%;
+      padding-top: 16px;
+    }
+    .section-block-{{section.id}} .section5 .form-wrap .hide {
+      background-color: #ffffff;
+      z-index: 10;
+      width: 200px;
+      height: 55px;
+      position: absolute;
+      bottom: 0.26vw;
+      right: 0.521vw;
+    }
+    .section-block-{{section.id}}  .section6 .rule-box {
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 1.563vw;
+    }
+    .section-block-{{section.id}}  .section6 .rule-title {
+      margin: 0.456vw 0;
+      font-size: 3.729vw;
+    }
+    .section-block-{{section.id}}  .section6 .rule-text {
+      margin: 0.256vw 0;
+      font-size: 2.929vw;
+    }
+  }
+  @keyframes scale {
+    0% {
+      transform: translateX(-50%) scale(1);
+    }
+    50% {
+      transform: translateX(-50%) scale(1.08);
+    }
+    100% {
+      transform: translateX(-50%) scale(1);
+    }
+  }
+</style> 
+  <div id="container" class="section-block-{{section.id}}"> 
+    <div class="section1 p-reative">
+      <div class="banner-text-box">
+        <div class="banner-title">Become CrealityFalcon Affiliate Partner</div>
+        <div class="banner-subtitle">Earn Commission From Your Recommendations!</div>
+        <a href="https://www.shareasale.com/shareasale.cfm?merchantid=150021" target="_blank" rel="noopener noreferrer">
+          <div class="banner-button">Sign Up Now</div>
+        </a>
+      </div>
+      <img 
+        data-srcset="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/M-DE.png?v=1713773875 768w, https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/PC-EN.png?v=1713773754"
+        data-sizes="100vw" class="lazyload banner-img" alt="Banner img" 
+      />
+    </div>
+    <div class="section2">
+      <div class="content">
+        <div class="common-title">Falcon Affiliate Program Benefits</div>
+        <div class="common-subtitle">Earn Wealth Through Your Passion and Recommendation!</div>
+        <img 
+          data-srcset="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/We_will_keep_you_updated_about_latest_product_news_promotions.png?v=1713858402 768w, https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/Detailed_guidelines_help_you_start_off_quickly_and_make_earning.png?v=1713775755"
+          data-sizes="100vw" class="lazyload section-img" alt="Banner img" 
+        />
+      </div>
+    </div>
+    <div class="section3"> 
+      <div class="common-title">Whether I can become Falcon ShareASale Affiliate and earn?</div>
+      <div class="section3-boxs">
+        <div class="box-item">
+          <img class="icon-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1_2.png?v=1713776980" alt="">
+          <div class="text-box">Blogs</div>
+        </div>
+        <div class="box-item">
+          <img class="icon-img icon-img2" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1_2.png?v=1713776980" alt="">
+          <div class="text-box">Forum</div>
+        </div>
+        <div class="box-item">
+          <img class="icon-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1_2.png?v=1713776980" alt="">
+          <div class="text-box">
+            Social Midia
+            <div class="text-span">Youtube/ Facebook/ Ins /Tiktok/ Pinterest</div>
+          </div>
+        </div>
+        <div class="box-item">
+          <img class="icon-img icon-img2" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1_2.png?v=1713776980" alt="">
+          <div class="text-box">
+            Own Website
+            <div class="text-span">Deal/ Coupon/ Shopping Comparison/ Review site</div>
+          </div>
+        </div>
+        <div class="box-item">
+          <img class="icon-img" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1_2.png?v=1713776980" alt="">
+          <div class="text-box">Sub-affilite Network</div>
+        </div>
+        <div class="box-item">
+          <img class="icon-img icon-img2" src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/1_2.png?v=1713776980" alt="">
+          <div class="text-box">Email/Newsletter</div>
+        </div>
+      </div>
+    </div>
+    <div class="section4">
+      <div class="content">
+        <div class="common-title">How to become Falcon ShareASale Affiliate Partner?</div>
+        <img 
+          data-srcset="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/12_a19dbcae-1ca6-43ab-8122-aa7b9394c539.png?v=1713858402 768w, https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/12_b82eb462-0858-432f-9e3b-5ba0845a3107.png?v=1713778811"
+          data-sizes="100vw" class="lazyload section-img" alt="Banner img" 
+        />
+        <div class="bottom-note">
+          <a href="https://www.shareasale.com/shareasale.cfm?merchantid=150021" target="_blank" rel="noopener noreferrer">
+            <div class="join-btn">JOIN</div>
+          </a>
+          <div class="note-text">Search our program's name <strong>"CREALITY FALCON"</strong> or Merchant ID <strong>150021</strong> to join.</div>
+        </div>
+      </div> 
+    </div>
+    <div class="section5 mt-60">
+      <div class="content">
+        <div class="common-title">More details to become Falcon ShareASale Affiliate Partner</div>
+        <div class="common-subtitle">Leave your email and your channel to let us contact you and send you more information and guidelines!</div>
+        <div class="form-wrap">
+          <div class="hide"></div>
+          <mag-form><div class="mag-form" data-token="Lz7fnnupnJx1K6IdJIXdCdSe0iqkOJl3"></div></mag-form>
+        </div> 
+     </div>
+    </div>
+    <div class="section6 mt-60">
+      <div class="content">
+        <div class="common-title">Frequently Asked Questions</div>
+        <div class="rule-box">
+          <div class="rule-title">1. Detailed precedures to join Creality Falcon affiliate program? </div>
+          <div class="rule-text">(1) Sign up one affiliate account: It takes 5-7 days for ShareASale official to review your application. Please provide accurate and complete details information when applying.</div>
+          <div class="rule-text">(2) Search our program's name "CREALITY FALCON" or our merchant id 150021 to join.</div>
+          <div class="rule-text">(3) Get unique link and promote.</div>
+          <div class="rule-title">2. How do I get started? </div>
+          <div class="rule-text">(1) Click on the links above to join Creality Falcon affiliate program.</div>
+          <div class="rule-text">(2) Leave your email address for us to send you Quck Start Guide for Affiliate Beginner.</div>
+          <div class="rule-title">3. What types of promotions are not permitted?</div>
+          <div class="rule-text">(1) False links: The use of illegal means to tamper with the target user link.</div>
+          <div class="rule-text">(2) Creation of programs or scripts to simulate genuine purchase patterns.</div>
+          <div class="rule-text">(3) Persistent pop-ups and full screen popups.</div>
+          <div class="rule-text">(4) Hiding links under other content.</div>
+          <div class="rule-text">(5) Putting links directly into search engines, including but not limited to Google, Yahoo, and Bing</div>
+          <div class="rule-text">(6) Tricking people into clicking links.</div>
+          <div class="rule-text">(7) Creating seemingly official Creality Falcon websites in order to mislead people into purchasing.</div>
+          <div class="rule-text">(8) Any actions in violation of Creality Falcon Affiliate Program terms. </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  
+  <script type="module">
+    (function() {
+      var iconItems = $(".section-block-{{section.id}} .tab-item")
+      iconItems.each(function(item,i) {
+        let _index = i;
+        $(this).click(function() {
+          var listing = $(this).attr("data-to");
+          $('.section-block-{{section.id}} .listing').each(function(ele,index){
+            $(this).removeClass("checked");
+          })
+          iconItems.each(function(){
+            $(this).removeClass("active");
+          })
+          $(this).addClass("active");
+          $(`.section-block-{{section.id}} [data-listing='${listing}']`).addClass('checked');
+        })
+      })
+       
+    }) ()
+    
+  </script>
+  
+  {% schema %}
+    {
+      "name": "creality union",
+      "settings": [
+      ],
+      "blocks": [
+        { 
+          "type":"product",
+          "name": "product",
+          "settings": [
+            {
+              "type": "product",
+              "id": "product",
+              "label": "产品"
+            },
+            {
+              "type": "textarea",
+              "id": "bottom_text",
+              "label": "底部文案"
+            }
+          ]
+        },
+        {
+          "type":"rule_item",
+          "name": "FAQ",
+          "settings": [
+            {
+              "type": "text",
+              "id": "rule_title",
+              "label": "标题"
+            },
+            {
+              "type": "text",
+              "id": "rule_text",
+              "label": "正文"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "creality union"
+        }
+      ]
+    }
+  {% endschema %}

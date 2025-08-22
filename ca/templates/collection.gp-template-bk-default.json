@@ -1,0 +1,677 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "order": [
+    "banner",
+    "product-grid",
+    "featured_product_QAfBUP",
+    "product_block_9Uywjm",
+    "product-recently-viewed",
+    "search_block_7XTnQV",
+    "customer_review_block_an9Nrf"
+  ],
+  "sections": {
+    "banner": {
+      "disabled": true,
+      "settings": {
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "rgba(0,0,0,0)",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_color": "#999999",
+        "breadcrumb_color_mb": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_gradient_mb": "",
+        "container": "1170",
+        "layout": "1",
+        "mg_bottom_desktop": 0,
+        "mg_bottom_mobile": 0,
+        "mg_bottom_tablet": 0,
+        "mg_top_desktop": 0,
+        "mg_top_mobile": 0,
+        "mg_top_tablet": 0,
+        "page_title_alignment": "left",
+        "show_breadcrumb": true,
+        "show_page_title": false
+      },
+      "type": "main-collection-banner"
+    },
+    "customer_review_block_an9Nrf": {
+      "block_order": [
+        "review_mrBJfn",
+        "review_Mqcg6x",
+        "review_jqGQEc"
+      ],
+      "blocks": {
+        "review_Mqcg6x": {
+          "settings": {
+            "body": "Nam tempus turpis at metus scelerisque placerat nulla deumantos delo sollicitudin delos felis. Pellentesque diam dolor an elementum et lobortis at mollis ut risus. Curabitur semper sagittis mi condimentum...",
+            "date": "Wednesday, Jan 26, 2019",
+            "heading": "Awesome...",
+            "name": "",
+            "rating": "star5",
+            "sub_heading": ""
+          },
+          "type": "review"
+        },
+        "review_jqGQEc": {
+          "settings": {
+            "body": "Nam tempus turpis at metus scelerisque placerat nulla deumantos delo sollicitudin delos felis. Pellentesque diam dolor an elementum et lobortis at mollis ut risus. Curabitur semper sagittis mi condimentum...",
+            "date": "Wednesday, Jan 26, 2019",
+            "heading": "Awesome...",
+            "name": "",
+            "rating": "star5",
+            "sub_heading": ""
+          },
+          "type": "review"
+        },
+        "review_mrBJfn": {
+          "settings": {
+            "body": "Nam tempus turpis at metus scelerisque placerat nulla deumantos delo sollicitudin delos felis. Pellentesque diam dolor an elementum et lobortis at mollis ut risus. Curabitur semper sagittis mi condimentum...",
+            "date": "Wednesday, Jan 26, 2019",
+            "heading": "Awesome...",
+            "name": "",
+            "rating": "star5",
+            "sub_heading": ""
+          },
+          "type": "review"
+        }
+      },
+      "disabled": true,
+      "settings": {
+        "avatar_margin_bottom": 10,
+        "bg_color_icon": "#cbcbcb",
+        "block_layout_style": "layout1",
+        "body_margin_bottom": 24,
+        "center_mode": false,
+        "color_body": "#202020",
+        "color_date": "#808080",
+        "color_des": "#3c3c3c",
+        "color_heading": "#202020",
+        "color_icon": "#ffffff",
+        "color_name": "#202020",
+        "color_sub_heading": "#808080",
+        "color_title": "#232323",
+        "container": "container",
+        "fontsize_body": 16,
+        "fontsize_date": 13,
+        "fontsize_des": 16,
+        "fontsize_heading": 20,
+        "fontsize_name": 14,
+        "fontsize_sub_heading": 13,
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "heading_font_weight": "400",
+        "heading_margin_bottom": 14,
+        "margin_bottom_des": 35,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_mobile": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_title": 18,
+        "mg_top_desktop": 50,
+        "mg_top_mobile": 50,
+        "mg_top_tablet": 50,
+        "name_margin_bottom": 0,
+        "padding_full_width": 0,
+        "review_bg": "#fafafa",
+        "review_bg_gradient": "",
+        "review_des": "",
+        "review_rows": "1",
+        "review_title": "Top Reviews",
+        "scroll_height": 4,
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "scroll_track_bg": "#f1f1f1",
+        "section_style": "style_1",
+        "show_arrow": true,
+        "show_avatar": true,
+        "star_color": "",
+        "star_font_size": 25,
+        "star_margin_bottom": 0,
+        "start_position": "below_title",
+        "sub_heading_margin_bottom": 20,
+        "title_align": "center"
+      },
+      "type": "customer-review-block"
+    },
+    "featured_product_QAfBUP": {
+      "block_order": [
+        "title_MkNakX",
+        "meta_ttCKAP",
+        "vendor_YjWKXj",
+        "short_description_KwKpCk",
+        "quantity_selector_dUymLt",
+        "variant_picker_aipWt4",
+        "price_f4LLAC",
+        "buy_buttons_76AeQX",
+        "product_text_ePNnQH"
+      ],
+      "blocks": {
+        "buy_buttons_76AeQX": {
+          "settings": {
+            "atc_animation": "horizontal-shaking",
+            "atc_bg_color": "rgba(0,0,0,0)",
+            "atc_bg_color_gradient": "linear-gradient(90deg, rgba(48, 188, 237, 1), rgba(127, 72, 176, 1) 50%, rgba(229, 26, 203, 1) 100%)",
+            "atc_bg_color_gradient_hover": "linear-gradient(#000, #000) padding-box,        linear-gradient(90deg, rgba(48, 188, 237, 1), rgba(127, 72, 176, 1) 50%, rgba(229, 26, 203, 1) 100%) border-box",
+            "atc_bg_color_hover": "rgba(0,0,0,0)",
+            "atc_border_color": "rgba(0,0,0,0)",
+            "atc_border_color_hover": "rgba(0,0,0,0)",
+            "atc_color": "#ffffff",
+            "atc_color_hover": "#ffffff",
+            "bg_color_qty_input": "rgba(0,0,0,0)",
+            "bin_bg_color": "#f44336",
+            "bin_bg_color_gradient": "",
+            "bin_bg_color_hover": "rgba(0,0,0,0)",
+            "bin_bg_color_hover_gradient": "linear-gradient(90deg, rgba(48, 188, 237, 1), rgba(127, 72, 176, 1) 50%, rgba(229, 26, 203, 1) 100%)",
+            "bin_border_color": "rgba(0,0,0,0)",
+            "bin_border_color_hover": "rgba(0,0,0,0)",
+            "bin_color": "#ffffff",
+            "bin_color_hover": "#ffffff",
+            "checkbox_border_color": "#494a4d",
+            "checkbox_color": "#ffffff",
+            "color_qty_input": "#f2f5ff",
+            "color_qty_label": "#ffffff",
+            "fontsize_text": 14,
+            "show_dynamic_checkout": true,
+            "spacing_bottom": 15,
+            "spacing_top": 0,
+            "wishlist_bg_color": "#ffffff",
+            "wishlist_bg_color_hover": "#3faeea",
+            "wishlist_border_color": "#3c3c3c",
+            "wishlist_border_color_hover": "#3faeea",
+            "wishlist_color": "#3c3c3c",
+            "wishlist_color_hover": "#ffffff"
+          },
+          "type": "buy_buttons"
+        },
+        "meta_ttCKAP": {
+          "settings": {
+            "color_text_sold_in": "#b60b32",
+            "show_review": true,
+            "show_sold_in": false,
+            "sold_in_hours": "10,15,16,17,18,20,25,35",
+            "sold_in_number": "3,5,6,7,8,10,12,15",
+            "spacing_bottom": 0,
+            "spacing_top": 0
+          },
+          "type": "meta"
+        },
+        "price_f4LLAC": {
+          "settings": {
+            "fontsize_text": 20,
+            "spacing_bottom": 10,
+            "spacing_top": 0
+          },
+          "type": "price"
+        },
+        "product_text_ePNnQH": {
+          "settings": {
+            "background_color_block": "rgba(0,0,0,0)",
+            "background_gradient_color_block": "",
+            "color_title": "#3c3c3c",
+            "content_spacing": 0,
+            "custom_block_align": "left",
+            "fontsize_text": 16,
+            "spacing_bottom": 5,
+            "spacing_top": 0,
+            "text": "",
+            "text_description": "<strong>Shipping</strong> calculated at checkout.",
+            "text_icon": ""
+          },
+          "type": "product_text"
+        },
+        "quantity_selector_dUymLt": {
+          "settings": {
+            "bg_color_qty_input": "#ffffff",
+            "color_qty_input": "#f2f5ff",
+            "color_qty_label": "#ffffff",
+            "qty_layout": "2",
+            "qty_style": "1",
+            "spacing_bottom": 0,
+            "spacing_top": 0
+          },
+          "type": "quantity_selector"
+        },
+        "short_description_KwKpCk": {
+          "settings": {
+            "color_text": "#3c3c3c",
+            "fontsize_text": 16,
+            "spacing_bottom": 10,
+            "spacing_top": 0,
+            "word_number": "30"
+          },
+          "type": "short_description"
+        },
+        "title_MkNakX": {
+          "settings": {
+            "color_title": "#3c3c3c",
+            "fontsize_text": 20,
+            "fontsize_text_mb": 18,
+            "spacing_bottom": 0,
+            "spacing_top": 0
+          },
+          "type": "title"
+        },
+        "variant_picker_aipWt4": {
+          "settings": {
+            "color_border": "#e6e6e6",
+            "color_label": "#3c3c3c",
+            "enable_border_bottom": false,
+            "enable_border_top": false,
+            "picker_type": "button",
+            "show_variant_image_group": true,
+            "spacing_bottom": 2,
+            "spacing_top": 0
+          },
+          "type": "variant_picker"
+        },
+        "vendor_YjWKXj": {
+          "settings": {
+            "color_title": "#232323",
+            "fontsize_text": 14,
+            "spacing_bottom": 0,
+            "spacing_top": 0,
+            "text_transform": "normal"
+          },
+          "type": "vendor"
+        }
+      },
+      "disabled": true,
+      "settings": {
+        "bg_color_product": "#ffffff",
+        "color_des": "#ffffff",
+        "color_title": "#ffffff",
+        "container": "container",
+        "des": "",
+        "featured_product": "falcon-pro-10w-laser-engraver",
+        "fontsize_des": 16,
+        "fontsize_title": 60,
+        "fontsize_title_mb": 34,
+        "id_section": "",
+        "main_image_arrows_desktop": true,
+        "main_image_bg_color": "#121212",
+        "main_image_counter_mobile": false,
+        "main_image_position": "left",
+        "margin_bottom_des": 45,
+        "margin_bottom_des_mb": 30,
+        "margin_bottom_title": 43,
+        "margin_bottom_title_mb": 20,
+        "media_fit": "unset",
+        "mg_bottom_desktop": 50,
+        "mg_bottom_mobile": 30,
+        "mg_bottom_tablet": 30,
+        "mg_top_desktop": 60,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 50,
+        "padding_full_width": 0,
+        "portrait_aspect_ratio": 100,
+        "product_image_popup": "fancybox",
+        "product_image_ratio": "adapt",
+        "show_badge": true,
+        "show_qty": true,
+        "show_sticky_info": false,
+        "show_thumbnail_mobile": true,
+        "thumbnail_active_color": "#e11ecb",
+        "thumbnail_arrow_color_mb": "#3c3c3c",
+        "thumbnail_image_bg_color": "#121212",
+        "thumbnail_to_show": 5,
+        "thumnail_layout": "1",
+        "title": "",
+        "title_align": "center",
+        "video_layout": "thumbnail"
+      },
+      "type": "featured-product"
+    },
+    "product-grid": {
+      "block_order": [
+        "8472dad8-3289-4746-8b7f-e6ebe3175dd5",
+        "80b0a11c-fb01-4b89-8a29-1dbb2a1db16a",
+        "ce351101-2c54-4627-b740-b2c592067b4a",
+        "6684d566-6940-4457-9cf9-f1a8a6e80573",
+        "3978fd59-b580-49e1-9893-38d762f48f10",
+        "dc4f771a-d1ea-42a7-8792-b895132fa9fe",
+        "34930b49-8499-46d3-bf41-2cbb334ca73d",
+        "2f7f02ac-4072-40ea-844f-59943e256971"
+      ],
+      "blocks": {
+        "2f7f02ac-4072-40ea-844f-59943e256971": {
+          "disabled": true,
+          "settings": {
+            "heading": "Custom Block",
+            "show_block": true,
+            "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... or whatever you like.</p>\n\n<p>There are many similar sample content placeholders across the store. All editable from admin panel.</p>"
+          },
+          "type": "text"
+        },
+        "34930b49-8499-46d3-bf41-2cbb334ca73d": {
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "link": "",
+            "show_block": true
+          },
+          "type": "image"
+        },
+        "3978fd59-b580-49e1-9893-38d762f48f10": {
+          "settings": {
+            "heading": "Featured Products",
+            "product_block_arrows": true,
+            "product_block_collection": "engraver",
+            "product_block_dots": true,
+            "product_block_layout": "slider",
+            "product_block_limit": 3,
+            "show_block": true
+          },
+          "type": "product_block"
+        },
+        "6684d566-6940-4457-9cf9-f1a8a6e80573": {
+          "settings": {
+            "heading": "Size",
+            "list_tags": "S,XS,M,L,XL"
+          },
+          "type": "filter"
+        },
+        "80b0a11c-fb01-4b89-8a29-1dbb2a1db16a": {
+          "settings": {
+            "heading": "Categories",
+            "link_list": "footer-products",
+            "show_block": true,
+            "type": "1_level"
+          },
+          "type": "category"
+        },
+        "8472dad8-3289-4746-8b7f-e6ebe3175dd5": {
+          "settings": {
+            "des_color": "#3c3c3c",
+            "desc_alignment": "left",
+            "desc_pos": "top",
+            "fontsize_des": 12,
+            "fontsize_title": 24,
+            "image": "shopify://shop_images/accessory-for-engravers-and-cutters-by-crealityfalcon-web.jpg",
+            "link": "",
+            "margin_bottom": 25,
+            "margin_top_des": 12,
+            "margin_top_title": 30,
+            "page_title_alignment": "left",
+            "page_title_text_transform": "none",
+            "show_collection_description": true,
+            "show_image": true,
+            "show_title": true,
+            "title_color": "#232323"
+          },
+          "type": "lookbook"
+        },
+        "ce351101-2c54-4627-b740-b2c592067b4a": {
+          "settings": {
+            "heading": "Color",
+            "list_tags": "White,Black,Blue,Invory,Beige,Brown,Silver,Olive,Gainsboro,DimGray,Burlywood,Lightblue,Salmon,LightPink,LightCoral"
+          },
+          "type": "filter"
+        },
+        "dc4f771a-d1ea-42a7-8792-b895132fa9fe": {
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "link": "",
+            "show_block": true
+          },
+          "type": "image"
+        }
+      },
+      "settings": {
+        "banner_position_1": "1",
+        "banner_position_2": "3",
+        "banner_position_3": "12",
+        "colors_bg": "rgba(0,0,0,0)",
+        "colors_bg_gradient": "",
+        "container": "1170",
+        "enable_sticky": true,
+        "filter_display_type": "show-more",
+        "filter_hidden_tag_list": "",
+        "filter_label_all": "",
+        "filter_rectangle": "Size",
+        "filter_swatch": "Color",
+        "filter_swatch_type": "color",
+        "layout": "3",
+        "link_banner_1": "shopify://products/falcon2-40w-laser-engraver-cutter",
+        "link_banner_2": "shopify://products/creality-falcon-2-pro-enclosed-laser",
+        "link_banner_3": "",
+        "max_item_per_filter": 10,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_mobile": 0,
+        "mg_bottom_tablet": 0,
+        "mg_top_desktop": 20,
+        "mg_top_mobile": 20,
+        "mg_top_tablet": 20,
+        "products_per_page": "15",
+        "show_banner": false,
+        "show_banner_1": false,
+        "show_banner_2": false,
+        "show_banner_3": false,
+        "show_filter": true,
+        "show_infinite_scrolling": "show_more",
+        "show_item_per_page": true,
+        "show_sidebar": true,
+        "show_sidebar_collapse": true,
+        "show_sorting": false,
+        "show_toolbar": true,
+        "show_view_as": true,
+        "sidebar_collapse_default": "expand",
+        "sidebar_heading_font": "font_1",
+        "sidebar_heading_font_size": 15,
+        "sidebar_heading_font_weight": "400",
+        "sidebar_heading_text_transform": "capitalize",
+        "sidebar_layout": "layout_1",
+        "sidebar_position": "left",
+        "sidebar_type": "vertical"
+      },
+      "type": "main-collection-product-grid"
+    },
+    "product-recently-viewed": {
+      "disabled": true,
+      "settings": {
+        "bg_card": "#ffffff",
+        "border_color_card": "#f0f1f4",
+        "border_color_title": "#232323",
+        "border_layout_card": "full",
+        "border_radius_card": 5,
+        "border_style": "container",
+        "border_width_card": 5,
+        "color_border_bottom": "#e8e8e8",
+        "color_title": "#232323",
+        "display_product_recently_viewed": true,
+        "enable_border_bottom": false,
+        "enable_border_title": false,
+        "enable_border_top": true,
+        "enable_hover_drag_icon": true,
+        "enable_layout_special": false,
+        "fontsize_title": 18,
+        "fontsize_title_mb": 18,
+        "grid_gap": 30,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_mobile": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_title": 3,
+        "mg_top_desktop": 0,
+        "mg_top_mobile": 0,
+        "mg_top_tablet": 0,
+        "mg_top_title": 26,
+        "padding_card": 15,
+        "padding_full_width": 0,
+        "product_bg": "#ffffff",
+        "product_bg_gradient": "",
+        "product_block_per_view": "4",
+        "product_recently_viewed_arrows": true,
+        "product_recently_viewed_arrows_mb": false,
+        "product_recently_viewed_container": "container",
+        "product_recently_viewed_dots": false,
+        "product_recently_viewed_dots_mb": true,
+        "product_recently_viewed_image_ratio": "adapt",
+        "product_recently_viewed_layout": "slider",
+        "product_recently_viewed_limit": 10,
+        "product_recently_viewed_per_row": "4",
+        "product_recently_viewed_show": "4",
+        "product_recently_viewed_swipe_on_mobile": true,
+        "product_recently_viewed_title": "Highly Recommended Products",
+        "product_recently_viewed_title_align": "center",
+        "scroll_height": 4,
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "scroll_track_bg": "#f1f1f1",
+        "show_half": true,
+        "style_block_header": "style1"
+      },
+      "type": "product-recently-viewed"
+    },
+    "product_block_9Uywjm": {
+      "settings": {
+        "bg_card": "#ffffff",
+        "bg_color_button": "#232323",
+        "bg_color_button_hover": "",
+        "bg_color_gradient_button": "",
+        "bg_color_gradient_button_hover": "",
+        "border_color_button": "#232323",
+        "border_color_button_hover": "",
+        "border_color_card": "#f0f1f4",
+        "border_color_title": "#232323",
+        "border_height": 1,
+        "border_layout_card": "full",
+        "border_radius_card": 5,
+        "border_width_card": 5,
+        "button_icon": "",
+        "button_text": "Show More",
+        "button_text_font_size": 14,
+        "button_text_font_weight": "500",
+        "button_text_text_transform": "capitalize",
+        "collection_bg_color": "#ffffff",
+        "collection_bg_color_gradient": "",
+        "collection_color": "#202020",
+        "collection_color_hover": "#3e8cc4",
+        "color_border_bottom": "#e8e8e8",
+        "color_button": "#ffffff",
+        "color_button_hover": "",
+        "color_countdown": "#f42b23",
+        "color_title": "#232323",
+        "color_view_all": "#3c3c3c",
+        "color_view_all_icon": "#eb492f",
+        "container": "1170",
+        "countdown": "",
+        "countdown_margin_left": 15,
+        "disable_padding_content": false,
+        "display_list_collection": false,
+        "enable_border_bottom": false,
+        "enable_border_title": true,
+        "enable_border_title_style2": false,
+        "enable_border_top": false,
+        "enable_border_view_all": true,
+        "enable_button_shadow": false,
+        "enable_hover_drag_icon": true,
+        "enable_layout_special": false,
+        "enable_minus_mg_top": false,
+        "enable_product_card_pd_bottom": false,
+        "font_size_countdown_text": 14,
+        "font_weight_view_all": "400",
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "grid_gap": 30,
+        "icon_view_all": "",
+        "link_view_all": "",
+        "mg_bottom_button": 55,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_mobile": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_title": 12,
+        "mg_bottom_title_mb": 12,
+        "mg_bottom_view": 30,
+        "mg_bottom_view_mb": 0,
+        "mg_top_desktop": 50,
+        "mg_top_mobile": 50,
+        "mg_top_tablet": 50,
+        "minus_spacing_top": -100,
+        "padding_card": 15,
+        "padding_full_width": 0,
+        "pb_style": "style1",
+        "pd_bottom_product_button": 12,
+        "pd_top_product_button": 12,
+        "pd_top_title": 30,
+        "position": "left",
+        "position_vertical_arrow": "70px",
+        "product_bg": "#ffffff",
+        "product_bg_gradient": "",
+        "product_block_arrows": true,
+        "product_block_arrows_mb": false,
+        "product_block_collection": "materials",
+        "product_block_counter_number": false,
+        "product_block_dots": false,
+        "product_block_dots_mb": true,
+        "product_block_infinite_scroll": true,
+        "product_block_layout": "slider",
+        "product_block_limit": 20,
+        "product_block_per_row": "4",
+        "product_block_per_view": "4",
+        "product_block_progress_bar": false,
+        "product_block_show": "4",
+        "product_block_swipe_on_mobile": true,
+        "product_block_title": "Related Products",
+        "product_button_width": 155,
+        "product_card_pd_bottom": 25,
+        "scroll_height": 4,
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "scroll_track_bg": "#f1f1f1",
+        "show_half": true,
+        "spacing_top_dots": 0,
+        "style_block_header": "style3",
+        "style_countdown": "style_1",
+        "text_list": "View all categories",
+        "title_align": "center",
+        "url_list": "",
+        "view_all": "",
+        "view_all_align": "center",
+        "width_banner": 40
+      },
+      "type": "product-block"
+    },
+    "search_block_7XTnQV": {
+      "settings": {
+        "color_des": "#3c3c3c",
+        "color_title": "#232323",
+        "container": "fullwidth",
+        "content_align": "center",
+        "content_max_width": 400,
+        "enable_border_title": false,
+        "fontsize_des": 16,
+        "fontsize_title": 14,
+        "fontsize_title_mb": 14,
+        "margin_bottom_des": 30,
+        "margin_bottom_title": 20,
+        "mg_bottom_desktop": 30,
+        "mg_bottom_mobile": 30,
+        "mg_bottom_tablet": 30,
+        "mg_top_desktop": 30,
+        "mg_top_mobile": 30,
+        "mg_top_tablet": 30,
+        "padding_bottom_input": 13,
+        "padding_full_width": 0,
+        "padding_top_input": 12,
+        "search_block_des": "",
+        "search_block_placeholder": "Search entire store here",
+        "search_block_title": "Discover the perfect match for your needs.",
+        "search_input_align": "center",
+        "search_input_bg": "",
+        "search_input_border": "",
+        "search_input_color": "",
+        "search_input_gradient": "",
+        "text_align": "center",
+        "title_text_transform": "capitalize"
+      },
+      "type": "search-block"
+    }
+  }
+}

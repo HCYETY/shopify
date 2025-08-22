@@ -1,0 +1,169 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c": {
+          "type": "paragraph",
+          "disabled": true,
+          "settings": {
+            "title": "Pre Sale Questions",
+            "question_1": "Q: “Do you offer any special pricing for bulk orders?”",
+            "answer_1": "<p>Yes, we have separate discounts for bulk purchases. Discounts will be given for purchases of more than 5 machines and more than 15 accessories or consumables of the same model. Please contact our customer service for specific discount gradients.</p>",
+            "question_2": "Q: “How does this product compare to similar products on the market?”",
+            "answer_2": "<p>Our brand offers a unique appeal in the realm of carving machines. We stand out by providing machines at various price points, catering to beginners and enthusiasts alike. With a range of products spanning multiple price ranges, customers can choose according to their needs.</p>",
+            "question_3": "Q: “What payment methods do you accept?”",
+            "answer_3": "<p>We accept a variety of payment methods including credit cards, shop pay, PayPal and more. You can choose the payment method that works best for you at checkout.</p>",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "paragraph_xYtctB": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Device Questions",
+            "question_1": "Q: “What will happen when the device loses power during operation?”",
+            "answer_1": "<p>When the device loses power while performing an engraving task, the laser head stays in place. When the device is powered on again, it initializes and does not continue to perform the original task.</p>",
+            "question_2": "Q: “Why is the engraved pattern so different from the original drawing?”",
+            "answer_2": "<p>(e.g., straight lines are not straight, crooked)? Please check whether the screws of the device have been tightened, and whether the belt is properly loosened. Judgment method:\n</p>1. When the laser module is under the action of gravity, it can be exactly perpendicular to the desktop of the X-axis profile slowly gliding;.<p></p>\n\n<p></p>2. when any of the pulleys in the laser head assembly have no empty sliding;<p></p>\n\n<p></p>3. the tightness of the belt.<p></p>\n\n<p></p>4. the belt is properly elasticized; otherwise, please adjust the belt elasticity manually.<p></p>",
+            "question_3": "Q: “How do I focus the unit?”",
+            "answer_3": "<p>Place the multi-stage focusing bar between the laser module and the processed material, follow the laser engraving on the surface of the focusing bar to make the bottom of the laser module's eyecup contact with the corresponding position of the multi-stage focusing bar, and then finally use the hand screw on the right side to lock it.</p>",
+            "question_4": "Q: “What should I do if the buzzer emits a sharp alarm sound?”",
+            "answer_4": "<p>1. During the working process, if the device overturns or moves, the device will turn off the laser, the motor stops moving, the indicator light blinks, and the buzzer emits a sharp alarm sound at the same time. Please check the status of the device, clear the abnormality and press the button to restart.</p><p>\n\n</p><p>2. Destruction of the confined space during the working process of the device will also generate an alarm sound and stop working. After restoring the confined space, please press the button to restart.</p>",
+            "question_5": "Q: “When the device is working, the beeper suddenly emits a \"drop\" sound and then stops working, how to deal with it?”",
+            "answer_5": "<p>When the laser module exceeds the working range of the device, the limit switch of the device will be triggered and the buzzer will alarm and stop working.\nAt this time, you need to adjust the laser module position and check the graphic size.</p>",
+            "question_6": "Q: “How does the tightness of the synchronous belt of the equipment affect the engraving or cutting effect?”",
+            "answer_6": "<p>The engraved image will be distorted with obvious misalignment: e.g. a square circle becomes an ellipse.</p>",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "f4d12560-a07c-4bd4-a934-2a8eddeaccc9": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Engraving and Cutting  Questions",
+            "question_1": "Q: “What materials can be engraved or cut by laser engraving machine?”",
+            "answer_1": "<p>Engraving: cardboard, wood, bamboo, rubber sheet, leather, fabric, acrylic, lacquered metal, plastic and so on;</p>\n\n<p></p>Cutting: cardboard, wood panels, bamboo panels, cloth, leather, fabric, acrylic (can not cut transparent acrylic), plastics, etc.<p></p>",
+            "question_2": "Q: “Can you engrave on curved materials?”",
+            "answer_2": "<p>Yes, but the curvature of the material as well as the area of the engraved image is not easy to be too big, otherwise there will be slight deformation.</p>",
+            "question_3": "Q: “Can I engrave on reflective/transparent materials such as ceramic/glass?”",
+            "answer_3": "<p>Yes, but you need to coat the surface of the material with anti-reflective material before engraving to ensure the engraving effect and prevent the reflected light from damaging the laser module.</p>",
+            "question_4": "Q: “Why is there a big difference in the processing effect of the same material with different colors using the same G-code file?”",
+            "answer_4": "<p>Different color materials will have different optical properties, the absorption and reflection of laser energy are different. It is recommended to set different power and speed in the software when engraving the same material with different colors.</p>",
+            "question_5": "Q: “There is a lot of soot on the material after cutting. How to deal with it?”",
+            "answer_5": "<p>Please reduce the laser power appropriately, speed up the speed and use the air-assisted kit.</p>",
+            "question_6": "Q: “Why the cutting does not penetrate the material?”",
+            "answer_6": "<p>A. Make sure the equipment and engraving material are parallel to the working table;</p>\n\n<p></p>B. Make sure the protective lens of the laser module is clean;<p></p>\n\n<p></p>C. Ensure that the unit is properly focused as described in the Quick Start Guide;<p></p>\n\n<p></p>D. Reconfirm the material thickness and refer to the recommended parameters in the supplied literature for settings;<p></p>\n\n<p></p>E. Gradually increase the number of cuts or reduce the cutting speed appropriately;<p></p>",
+            "question_7": "Q: “How should I use the air assist?”",
+            "answer_7": "<p>It is recommended to turn on a weak air flow when engraving and a larger air flow when cutting (the effect depends on the specific material).\n\n</p>The main role of air-assisted equipment:<p></p>\n\n<p></p>A. Effectively blow away the smoke and dust generated during the cutting process, protect the laser module lens, and ensure the stability of laser energy;<p></p>\n\n<p></p>B. Rapidly reduce the surface temperature of the cutting material, blow away the high temperature soot, keep the material surface clean, make the cutting edge more flat and delicate.<p></p>",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "paragraph_VJLpLJ": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Software Questions",
+            "question_1": "Q: “What software does the CR-Laser Falcon laser engraver support?”",
+            "answer_1": "<p>LaserGRBL (free) - real time\n\n<br>LightBurn (paid) - real-time/offline 30-day trial period\n\n<br>Real-time engraving note that the computer does not lag, can not enter standby mode (do not lock the screen), so as not to affect the engraving.</p>",
+            "question_2": "Q: “From where can I download those software?”",
+            "answer_2": "<p>LaserGRBL（https://lasergrbl.com/download/）\n\n<br>LightBurn（https://lightburnsoftware.com/pages/trial-version-try-before-you-buy）</p>",
+            "question_3": "Q: “What image formats does the software support?”",
+            "answer_3": "<p>LaserGRBL（bmp/png/jpg/gif/svg）\n\n<br>LightBurn（bmp/png/jpg/jpeg/gif/tif/tiff/tga/ai/pdf/sc/dxf/hpgl/plt/rd/svg）</p>",
+            "question_4": "Q: “Where can I get software related tutorials?”",
+            "answer_4": "<p>LaserGRBL（https://lasergrbl.com/usage/）\n\n<br>LightBurn（https://lightburnsoftware.github.io/NewDocs/）</p>",
+            "question_5": "Q: “What should I do if I can't recognize the COM port of my engraving machine in WIN7 system?”",
+            "answer_5": "<p>Unzip the Drivers for Win7 in the package, and enter the device manager to install it manually.</p>",
+            "question_6": "Q: “What should I do if the software is not responding or not connecting when engraving online?”",
+            "answer_6": "<p>A. Make sure the data cable has a communication function and that the end of the cable connected to the computer has a USB-A port. If the computer does not have a USB-A port, you will need to use an A to C adapter to convert it, or use a hub with a USB-A port.</p><p>\n\n</p><p>B. Ensure that the Creality Falcon2.lbdev file has been successfully imported according to the LightBurn software tutorial on the TF card.</p><p>\n\n</p><p>C. Make sure the COM port of the engraver is not occupied.</p><p>\n\n</p><p>D. If you still can't connect, please record a small video of the connection operation, and feedback the relevant system information and software version number, so that you can troubleshoot the problem more quickly.</p>",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c",
+        "paragraph_xYtctB",
+        "f4d12560-a07c-4bd4-a934-2a8eddeaccc9",
+        "paragraph_VJLpLJ"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "1170",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "show_faqs_filter": true,
+        "faqs_text": "<p>Below FAQ are some common concerns of our clients before purchasing the theme.\n</p><p> If you have other questions, please just send it to <a href=\"mailto:example@domain.com\" style=\"text-decoration: underline;\">support@crealityfalcon.com</a>.</p>",
+        "faqs_message_heading": "Need Help?",
+        "faqs_message_text": "<p style=\"line-height: 30px; margin-bottom: 0px;margin-top: 5px;\">\n<span class=\"icon\">\n<svg style=\"position: relative; top: 0px; width: 20px;height: 20px\" aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"comment-alt-dots\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\" class=\"svg-inline--fa fa-comment-alt-dots fa-w-16 fa-7x\"><path fill=\"currentColor\" d=\"M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zM128 240c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z\" class=\"\"></path></svg>\n</span>\n<span style=\"margin-left: 7px\">CALL US：+86 400-613-3882 <a href=\"tel:%20%20091-123-ELLA\"></a></span>\n</p>\n<p style=\"line-height:30px; margin-top: 0\">\n<span class=\"icon\">\n<svg style=\"width: 20px;height: 20px\" aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"envelope\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\" class=\"svg-inline--fa fa-envelope fa-w-16 fa-7x\"><path fill=\"currentColor\" d=\"M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z\" class=\"\"></path></svg></span>\n<span style=\"margin-left: 7px\"><a href=\"mailto:ca.support@crealityfalcon.com\">ca.support@crealityfalcon.com</a></span>\n</p><br>Business Hours: Monday-Friday 9:00-18:00 BJT<br><br>Company Name: Shenzhen Chuangxiang 3D Technology Co., Ltd.<br>\nCompany Number: 91440300094231378E\n<br>Company Address: Room 1808, Jinxiu Hongdu Building, Meilong Avenue, Xinniu Community, Minzhi Street, Longhua District, Shenzhen (office address); Factory Building No. 156, Huawang Road, Langkou Community, Dalang Street, Longhua District, Shenzhen (production address)<br>\n<br><span>If you have an issue or question that requires immediate assistance, you can click the button below to chat live with a Customer Service representative.   \n<br> \n<br>\nIf we aren’t available, drop us an email and we will get back to you within 20-36 hours!</span>\n<br> \n<br>\nIf you have more doubts about the use of the engraving machine, we recommend that you join our community directly and seek help from the users of the machine.",
+        "message_method_icon_1": "shopify://shop_images/facebook-notification-gift-in-stocking.jpg",
+        "message_method_link_1": "shopify://pages/facebook-group",
+        "message_method_text_1": "Join Our Group",
+        "message_method_link_2": "https://www.facebook.com/groups/falconlaserengraver/",
+        "message_method_text_2": "Join Our Group",
+        "contact_content_text": "Unable to find satisfactory answers ?",
+        "contact_text": "Contact Support",
+        "contact_link": "shopify://pages/contact",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#14a9de",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#e93d29",
+        "contact_color_bg_hover": "#e93d29",
+        "contact_color_bg_gradient_hover": ""
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
