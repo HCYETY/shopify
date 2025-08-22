@@ -582,6 +582,9 @@
     align-items: center;
     gap: 5px;
 }
+.shop-pay-installments-img {
+    width: 30px;
+}
 
 .shop-pay-installments {
     font-size: 14px;
