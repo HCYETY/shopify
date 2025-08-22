@@ -202,11 +202,45 @@
     },
     "home_s_header_mobile_niFEx3": {
       "type": "home-s-header-mobile",
+      "blocks": {
+        "custom_block_one_NibFhL": {
+          "type": "custom_block_one",
+          "settings": {
+            "option_image_one": "shopify://shop_images/20250819-182147.jpg",
+            "option_title_one": "Falcon Design Space",
+            "option_subtitle_one": "Free Design Software",
+            "option_link_one": "https://webapp.craftseek.com/?utm_source=Falconsite&utm_medium=Guide&utm_campaign=regular#/download"
+          }
+        },
+        "custom_block_one_igrqiK": {
+          "type": "custom_block_one",
+          "settings": {
+            "option_image_one": "shopify://shop_images/20250819-182155.jpg",
+            "option_title_one": "Craftseek",
+            "option_subtitle_one": "Design Files",
+            "option_link_one": "https://webapp.craftseek.com/?utm_source=Falconsite&utm_medium=Guide&utm_campaign=regular#/category?categoryId="
+          }
+        },
+        "custom_block_one_zMza3D": {
+          "type": "custom_block_one",
+          "settings": {
+            "option_image_one": "shopify://shop_images/20250819-182204.jpg",
+            "option_title_one": "Download Center",
+            "option_subtitle_one": "Firmware & User Manual",
+            "option_link_one": "https://www.crealityfalcon.com/pages/download"
+          }
+        }
+      },
+      "block_order": [
+        "custom_block_one_NibFhL",
+        "custom_block_one_igrqiK",
+        "custom_block_one_zMza3D"
+      ],
       "name": "Home S Header 顶部导航栏",
       "settings": {
         "menu": "main-menu",
         "logo": "shopify://shop_images/crealityfalcon-logo-png_bf4d7a0b-e65e-4317-979a-8b68524e3052.png",
-        "sale_page_one": "",
+        "sale_page_one": "Download",
         "sale_page_two": "",
         "sale_page_three": ""
       }
