@@ -11,13 +11,15 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {}
     },
     "custom_liquid_xJM6gi": {
       "type": "custom-liquid",
-      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
-      "settings": {}
+      "settings": {
+        "custom_liquid": "<style type=\"text/css\">\n  body > main > section.shopify-section {\n    margin: 0;\n  }\n\n\n  body > main > section.shopify-section > .page-width {\n    width: 100%;\n    max-width: none;\n    padding: 0;\n  }\n\n  body h1 {\n    display: none;\n  }\n\n  body #beans-id-root h1 {\n    display: block;\n  }\n</style>\n\n<div id=\"beans-id-root\"></div>"
+      }
     }
   },
   "order": [

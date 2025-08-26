@@ -69,8 +69,8 @@
         "d98e243b-3682-495a-965a-1c7f7d460880": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "dropdown",
-            "show_variant_image_group": true,
+            "picker_type": "button",
+            "show_variant_image_group": false,
             "enable_border_top": true,
             "enable_border_bottom": false,
             "color_border": "#05d1ee",

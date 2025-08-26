@@ -231,12 +231,12 @@
     "show_compare": false,
     "hide_compare_homepage": false,
     "product_compare_type": "default",
-    "show_wishlist_card": true,
+    "show_wishlist_card": false,
     "show_wishlist_card_mb": false,
     "show_quick_view": true,
     "show_quick_view_mb": true,
-    "product_quick_view_type": "default",
-    "group_quickview_wishlist": "left",
+    "product_quick_view_type": "icon",
+    "group_quickview_wishlist": "right",
     "product_content_text_align": "center",
     "show_badge": true,
     "badge_postion": "left",
@@ -336,10 +336,13 @@
     "word_number_short_desc": "25",
     "fontsize_short_desc": 14,
     "show_quick_view_vendor": false,
-    "show_quick_view_product_type": true,
+    "show_quick_view_availability": false,
+    "show_quick_view_product_type": false,
     "stock_level_display": "show",
-    "show_quick_view_variant_image_group": true,
+    "show_quick_view_variant_image_group": false,
     "size_chart_type": "product_type",
+    "show_compare_color": false,
+    "show_compare_color_drop_drap": false,
     "show_quick_view_customer_viewing": false,
     "show_quick_view_share": true,
     "show_countdown": true,
@@ -911,27 +914,6 @@
         "disabled": false,
         "settings": {}
       },
-      "14305174654594977286": {
-        "type": "shopify://apps/beans-id-verification/blocks/discount-hub/5c736972-c385-431c-8cbb-05726b7a1739",
-        "disabled": true,
-        "settings": {
-          "header_toggle": true,
-          "page_title": "Unlock exclusive discounts",
-          "sub_heading_text": "We’ve teamed up with Beans iD to offer exclusive discounts. Click through to verify and receive your discount for free!",
-          "hero_image": "shopify://shop_images/falcon_design_space_e1051b92-e74b-4c6c-b320-8711f110ffb9.png",
-          "background_color": "#f6f6f7",
-          "text_color": "#202223",
-          "heading_text_size_desktop": 42,
-          "heading_text_size_mobile": 32,
-          "body_text_size_desktop": 16,
-          "body_text_size_mobile": 12,
-          "cta_background_colour": "#ffffff",
-          "cta_text_colour": "#000000",
-          "card_title_text_size_desktop": 26,
-          "card_title_text_size_mobile": 21,
-          "card_conditions_text_size": 14
-        }
-      },
       "15820462083712392141": {
         "type": "shopify://apps/beans-id-verification/blocks/discount-redeem/5c736972-c385-431c-8cbb-05726b7a1739",
         "disabled": false,
@@ -961,6 +943,27 @@
         "type": "shopify://apps/gsc-countdown-timer/blocks/countdown-bar/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
         "disabled": false,
         "settings": {}
+      },
+      "14305174654594977286": {
+        "type": "shopify://apps/beans-id-verification/blocks/discount-hub/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": false,
+        "settings": {
+          "header_toggle": true,
+          "page_title": "Unlock exclusive discounts",
+          "sub_heading_text": "We’ve teamed up with Beans iD to offer exclusive discounts. Click through to verify and receive your discount for free!",
+          "hero_image": "shopify://shop_images/falcon_design_space_e1051b92-e74b-4c6c-b320-8711f110ffb9.png",
+          "background_color": "#f6f6f7",
+          "text_color": "#202223",
+          "heading_text_size_desktop": 42,
+          "heading_text_size_mobile": 32,
+          "body_text_size_desktop": 16,
+          "body_text_size_mobile": 12,
+          "cta_background_colour": "#ffffff",
+          "cta_text_colour": "#000000",
+          "card_title_text_size_desktop": 26,
+          "card_title_text_size_mobile": 21,
+          "card_conditions_text_size": 14
+        }
       }
     }
   },
