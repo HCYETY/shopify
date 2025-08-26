@@ -47,23 +47,23 @@
               },
               "blocks": {}
             },
-            "home_banner_card_big_3hgmeM": {
+            "home_banner_card_big_dp8zfX": {
               "type": "home-banner-card-big",
               "settings": {
-                "image": "shopify://shop_images/Falcon_A1_Pro_20W_Dual-laser_Engraver_4.jpg",
-                "image_mobile": "shopify://shop_images/Falcon_A1_Pro_20W_Dual-laser_Engraver_3.jpg",
-                "link": "shopify://products/falcon-a1-pro-20w-dual-laser-engraver",
-                "subtitle": "New",
-                "subtitle_color": "#e95144",
-                "subtitle_color_mobile": "#e95144",
-                "title": "Falcon A1 Pro 20W",
+                "image": "shopify://shop_images/Creality_Falcon_A1_1880X600_f5a3586e-27b8-4cb9-bd31-603d5b02fc1b.jpg",
+                "image_mobile": "shopify://shop_images/Creality_Falcon_A1_957x1305_1.jpg",
+                "link": "shopify://products/falcon-a1-10w-enclosed-laser-cutter-and-engraver",
+                "subtitle": "Auto Recognition Materials",
+                "subtitle_color": "#ff8b21",
+                "subtitle_color_mobile": "#ff8b21",
+                "title": "Falcon A1 10W",
                 "title_color": "#ffffff",
                 "title_color_mobile": "#ffffff",
-                "desc": "Go Pro, Go Smart, Go Earn",
+                "desc": "Smarter Camera, Craft Easier.",
                 "desc_color": "#ffffff",
                 "desc_color_mobile": "#ffffff",
                 "btn_text": "Shop Now",
-                "button_color": "#3c3c3c",
+                "button_color": "#ff8b21",
                 "button_background_color": "#ffffff",
                 "button_background_gradient": ""
               },
@@ -114,6 +114,28 @@
               },
               "blocks": {}
             },
+            "home_banner_card_big_3hgmeM": {
+              "type": "home-banner-card-big",
+              "settings": {
+                "image": "shopify://shop_images/Falcon_A1_Pro_20W_Dual-laser_Engraver_4.jpg",
+                "image_mobile": "shopify://shop_images/Falcon_A1_Pro_20W_Dual-laser_Engraver_3.jpg",
+                "link": "shopify://products/falcon-a1-pro-20w-dual-laser-engraver",
+                "subtitle": "New",
+                "subtitle_color": "#e95144",
+                "subtitle_color_mobile": "#e95144",
+                "title": "Falcon A1 Pro 20W",
+                "title_color": "#ffffff",
+                "title_color_mobile": "#ffffff",
+                "desc": "Go Pro, Go Smart, Go Earn",
+                "desc_color": "#ffffff",
+                "desc_color_mobile": "#ffffff",
+                "btn_text": "Shop Now",
+                "button_color": "#3c3c3c",
+                "button_background_color": "#ffffff",
+                "button_background_gradient": ""
+              },
+              "blocks": {}
+            },
             "home_banner_card_big_VBNE6J": {
               "type": "home-banner-card-big",
               "disabled": true,
@@ -159,28 +181,6 @@
               },
               "blocks": {}
             },
-            "home_banner_card_big_dp8zfX": {
-              "type": "home-banner-card-big",
-              "settings": {
-                "image": "shopify://shop_images/Creality_Falcon_A1_1880X600_f5a3586e-27b8-4cb9-bd31-603d5b02fc1b.jpg",
-                "image_mobile": "shopify://shop_images/Creality_Falcon_A1_957x1305_1.jpg",
-                "link": "shopify://products/falcon-a1-10w-enclosed-laser-cutter-and-engraver",
-                "subtitle": "Auto Recognition Materials are In Stock",
-                "subtitle_color": "#ff8b21",
-                "subtitle_color_mobile": "#ff8b21",
-                "title": "Falcon A1 10W",
-                "title_color": "#ffffff",
-                "title_color_mobile": "#ffffff",
-                "desc": "Smarter Camera, Craft Easier. Newbie 100% Success Commitment.",
-                "desc_color": "#ffffff",
-                "desc_color_mobile": "#ffffff",
-                "btn_text": "Shop Now",
-                "button_color": "#ff8b21",
-                "button_background_color": "#ffffff",
-                "button_background_gradient": ""
-              },
-              "blocks": {}
-            },
             "home_banner_card_big_L6QyYC": {
               "type": "home-banner-card-big",
               "settings": {
@@ -206,12 +206,12 @@
           },
           "block_order": [
             "home_banner_card_big_QPxkC6",
-            "home_banner_card_big_3hgmeM",
+            "home_banner_card_big_dp8zfX",
             "home_banner_card_big_m6Tnfk",
             "home_banner_card_big_8jgFLm",
+            "home_banner_card_big_3hgmeM",
             "home_banner_card_big_VBNE6J",
             "home_banner_card_big_ttVVJc",
-            "home_banner_card_big_dp8zfX",
             "home_banner_card_big_L6QyYC"
           ]
         }

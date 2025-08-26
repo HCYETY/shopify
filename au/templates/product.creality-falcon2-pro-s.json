@@ -364,6 +364,7 @@
       "block_order": [
         "youtube_video_slider_CcVrCF"
       ],
+      "disabled": true,
       "settings": {
         "background_color": "#ffffff",
         "headline": "Creaters Reviews"
