@@ -13,16 +13,15 @@
   "sections": {
     "creality_2024_header_advertisement_zawwM4": {
       "type": "creality_2024_header_advertisement",
-      "disabled": true,
       "settings": {
         "item_bgcolor": "#000000",
         "item_bgcolor_url": "",
         "font_size": 17,
         "item_bgcolor_pd_tb": 12,
-        "item_title": "⏰ Aug 8– Aug 18 | A1 Pro Dual Laser Engraver – €943",
+        "item_title": "⏰ Aug 23– Aug 31 | Back to School Sale – Up to 60% Off",
         "item_title_color": "#ff8b21",
         "item_btn_text": "SHOP NOW!",
-        "item_btn_url": "https://eu.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver",
+        "item_btn_url": "https://eu.crealityfalcon.com/pages/monthly-sale",
         "item_btn_color": "#ffffff",
         "item_btn_bgcolor": "#f44336",
         "item_btn_brr_size": 3,
@@ -32,7 +31,7 @@
         "item_position": "center",
         "is_countDown": true,
         "item_count_down_start": "2025-4-1 15:00:00",
-        "item_count_down_end": "2025-8-18 18:00:00",
+        "item_count_down_end": "2025-8-31 18:00:00",
         "item_count_down_color": "#ffffff",
         "item_count_down_text_sieze": 12
       }

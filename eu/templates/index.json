@@ -14,10 +14,9 @@
       "blocks": {
         "image_4eUUEd": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image_slide": "shopify://shop_images/EU_DE_CA-750X375.png",
-            "image_slide_mb": "shopify://shop_images/EU_DE_CA-1000x1000.png",
+            "image_slide": "shopify://shop_images/EU-1880X600_e1004b37-db4d-4842-b288-134070f19b6b.png",
+            "image_slide_mb": "shopify://shop_images/EU-957x1350_fb0c6d3f-1109-4b74-8bab-32260563c486.png",
             "alignment": "left",
             "enable_custom_position": true,
             "custom_horizontal": "10",
@@ -84,7 +83,7 @@
             "enable_underline": true,
             "font_size_link": 36,
             "button_slide": "",
-            "link": "https://eu.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver",
+            "link": "shopify://pages/monthly-sale",
             "button_style": "button_1",
             "button_slide_2": "",
             "link_2": "",
