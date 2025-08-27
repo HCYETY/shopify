@@ -113,6 +113,8 @@
   }
   .slider-container .swiper-button-prev svg,
   .slider-container .swiper-button-next svg {
+    width: 20px;
+    height: 20px;
     fill: none;
     stroke: #fff;
   }
@@ -337,9 +339,16 @@
     }
     .slider-container .swiper-button-next,
     .slider-container .swiper-button-prev {
-      width: 12.8vw;
-      height: 12.8vw;
+      visibility: visible;
+      width: 5vw;
+      height: 5vw;
     }
+    .slider-container .swiper-button-prev svg,
+    .slider-container .swiper-button-next svg {
+      width: 10px;
+      height: 10px;
+    }
+
     .slider-container .swiper-button-prev.inside {
       left: 3.2vw;
     }
@@ -410,7 +419,7 @@
 
     /* mobile */
     .home-product-list-tabs .slider-container {
-      height: calc(74.133vw * 2 + 2.133vw + 12.8vw);
+      height: calc(74.133vw * 1 + 2.133vw + 12.8vw);
     }
     .home-product-list-tabs .swiper {
       height: 100%;
@@ -758,7 +767,7 @@
               spaceBetween: 8,
               grid: {
                 fill: 'row',
-                rows: 2,
+                rows: 1,
               },
             },
             900: {

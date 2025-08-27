@@ -73,7 +73,7 @@
             "show_variant_image_group": false,
             "enable_border_top": true,
             "enable_border_bottom": false,
-            "color_border": "#05d1ee",
+            "color_border": "#e7e7e7",
             "spacing_top": 10,
             "spacing_bottom": 10
           }
