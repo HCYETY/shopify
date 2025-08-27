@@ -25,6 +25,88 @@
   <style>
     .button__cell { background: {{ shop.email_accent_color }}; }
     a, a:hover, a:active, a:visited { color: {{ shop.email_accent_color }}; }
+        .flex {
+      display: flex;
+      justify-content: center;
+    }
+    .gap-24 {
+      gap: 24px;
+    }
+    @media (max-width: 425px) {
+      .flex {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+      }
+    }
+    .top-link {
+      text-decoration: underline; 
+      color: #000; 
+      font-size: 14px;        
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+    }
+    .button__text {
+      display: flex;
+      height: 40px;
+      padding: 8px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      align-self: stretch;
+      border-radius: 44px;
+      background: #0BB3FB;
+      color: #FFF;
+      font-family: Arial;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .sub_button__text {
+      display: flex;
+      height: 40px;
+      padding: 8px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      border-radius: 44px;
+      background: #EAEBED;
+      color: #1E1E1E;
+      font-family: Arial;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .font-base {
+      font-family: Arial;
+      font-style: normal;
+      line-height: normal;
+    }
+    .gift-money {
+      color: #0BB3FB;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .small-text {
+      color: #8D9095;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .code-text {
+      color: #8D9095;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .pt-8 {
+      padding-top: 8px;
+    }
+    .pt-24 {
+      padding-top: 24px;
+    }
   </style>
 </head>
 
@@ -48,10 +130,20 @@
               
             
 {% if shop.email_logo_url %}
-  <table align="center" class="giftcard__doubletopmargin">
+  <table align="center" class="giftcard__doubletopmargin" style="text-align: center;">
     <tr>
       <td>
-        <img src="{{shop.email_logo_url}}" alt="{{ shop.name }}" class="giftcard__logosize" width="{{ shop.email_logo_width }}">
+        <img src="{{shop.email_logo_url}}" alt="{{ shop.name }}" class="giftcard__logosize" width="145">
+      </td>
+      
+    </tr>
+    <tr>
+      <td>
+        <div class="flex gap-24">
+          <a href="https://uk.crealityfalcon.com/collections/engraver" class="top-link">Laser Engraver</a>
+          <a href="https://uk.crealityfalcon.com/collections/accessories" class="top-link">Accessories</a>
+          <a href="https://uk.crealityfalcon.com/pages/materials-sale-for-laser-engraver" class="top-link">Materials</a>
+        </div>
       </td>
     </tr>
   </table>
@@ -73,9 +165,21 @@
   </table>
 {% endif %}
 
+<table align="center" class="giftcard__topmargin" style="margin-top: 30px">
+  <tr>
+    <table align="center" class="row footer giftcard__doubletopmargin">
+      <tr>
+        <td style="text-align: center; padding-top: 24px;">
+          <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Gift_card_100.jpg?v=1746848310" alt="Gift card image" width="240">
+        </td>
+      </tr>
+    </table>
+  </tr>
+</table>
+
 <table align="center" class="giftcard__topmargin">
   <tr>
-    <td class="giftcard__balance">{{ gift_card.initial_value | money_with_currency }}</td>
+    <td class="giftcard__balance gift-money font-base">{{ gift_card.initial_value | money_with_currency }}</td>
   </tr>
   {% if gift_card.expires_on %}
     <tr>
@@ -86,44 +190,27 @@
   {% endif %}
 </table>
 
-<table align="center" class="giftcard__doubletopmargin">
+<table align="center" class="row giftcard__topmargin" style="margin: 0 auto;">
+  <tr >
+    <td class="giftcard__shop_name small-text font-base pt-8">{{ shop.name }} Gift Card</td>
+  </tr>
+</table>
+
+<table align="center" class="row giftcard__topmargin" style="margin: 0 auto;">
   <tr>
-    <td>
-      <img src="{{ 'gift-card/card.jpg' | shopify_asset_url }}" alt="Gift card image" width="240" height="160">
+    <td class="giftcard__smalltext small-text font-base pt-24">
+      Gift Card Number:<span class="code-text font-base">{{ gift_card.code | format_code }}</span>
     </td>
   </tr>
 </table>
 
-<table align="center" class="row giftcard__topmargin">
-  <tr>
-    <td class="giftcard__shop_name">{{ shop.name }}</td>
-  </tr>
-</table>
-
-<table align="center" class="row giftcard__topmargin">
-  <tr>
-    <td class="giftcard__smalltext">
-      Use the gift card code online
-    </td>
-  </tr>
-  <tr>
-    <td class="giftcard__code">
-      {{ gift_card.code | format_code }}
-    </td>
-  </tr>
-</table>
-
-<table class="row actions">
-  <tr>
+<table class="row actions container">
+  <tr >
     <td class="actions__cell">
       <table align="center" class="button">
-        <tr>
-          <td class="button__cell"><a href="{{ shop.url }}" class="button__text">Visit online store</a></td>
-        </tr>
-      </table>
-      <table align="center" class="button">
-        <tr>
-          <td class="link__cell"><a href="{{ gift_card.url }}" class="link__text">View gift card balance</a></td>
+        <tr class="flex" style="gap: 8px; flex-direction: column;">
+          <td class="button__cell" style="background: transparent;flex: 1; width: 100%"><a href="{{ shop.url }}" class="button__text">Visit our store</a></td>
+          <td class="link__cell" style="flex: 1; width: 100%"><a href="{{ gift_card.url }}" class="sub_button__text">Gift card balance</a></td>
         </tr>
       </table>
     </td>
@@ -150,15 +237,74 @@
     </td>
   </tr>
 </table>
-          <table class="row footer">
+
+          <table class="row footer container" style="margin: 0 auto">
   <tr>
-    <td class="footer__cell">
+    <td class="footer__cell" style="padding: 24px 0;">
       <center>
         <table class="container">
           <tr>
             <td>
               
-              <p class="disclaimer__subtext">If you have any questions, reply to this email or contact us at <a href="mailto:{{ shop.email }}">{{ shop.email }}</a></p>
+                <tr e-block-id="67ab038700f85ae0ef000006">
+            <td bgcolor="#ffffff" align="center">
+              <table role="presentation" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td width="24" class="rw16"></td>
+                    <td class="mwn vam rw50" style="vertical-align: middle;" valign="middle">
+                      <a e-editable="image_url_1" href="https://www.facebook.com/CrealityFalconOfficial" target="_blank">
+                        <img e-editable="image_1" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Facebook.png?v=1756093936" width="40" border="0" style="display: block; width: 32px; max-width: none !important;" class="image" alt="Facebook">
+                      </a>
+                    </td>
+                    <td width="24" class="rw16"></td>
+                    <td class="mwn vam rw50" style="vertical-align: middle;" valign="middle">
+                      <a e-editable="image_url_2" href="https://x.com/CrealityFalcon" target="_blank">
+                        <img e-editable="image_2" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/X.png?v=1756093936" width="40" border="0" style="display: block; width: 32px; max-width: none !important;" class="image" alt="Facebook">
+                      </a>
+                    </td>
+                    <td width="24" class="rw16"></td>
+                    <td class="mwn vam rw50" style="vertical-align: middle;" valign="middle">
+                      <a e-editable="image_url_3" href="https://www.instagram.com/falconlaser.official" target="_blank">
+                        <img e-editable="image_3" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Instagram.png?v=1756093936" width="40" border="0" style="display: block; width: 32px; max-width: none !important;" class="image" alt="Facebook">
+                      </a>
+                    </td>
+                    <td width="24" class="rw16"></td>
+                    <td class="mwn vam rw50" style="vertical-align: middle;" valign="middle">
+                      <a e-editable="image_url_4" href="https://www.youtube.com/@FalconLaserOfficial" target="_blank">
+                        <img e-editable="image_4" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Youtube.png?v=1756093936" width="40" border="0" style="display: block; width: 32px; max-width: none !important;" class="image" alt="Facebook">
+                      </a>
+                    </td>
+                    <td width="24" class="rw16"></td>
+                    <td class="mwn vam rw50" style="vertical-align: middle;" valign="middle">
+                      <a e-editable="image_url_5" href="https://www.tiktok.com/@falconlaserofficial target="_blank">
+                        <img e-editable="image_5" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/TikTok.png?v=1756093936" width="40" border="0" style="display: block; width: 32px; max-width: none !important;" class="image" alt="Facebook">
+                      </a>
+                    </td>
+                    <td width="25" class="rw16"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Existing footer content -->
+          <table class="row footer" style="border: none;">
+            <tr>
+              <td class="footer__cell" style="padding: 0px;">
+                <center>
+                  <table class="container" >
+                    <tr>
+                      <td style="padding-top: 14px; padding-bottom: 40px;">
+                        <p class="disclaimer__subtext">If you have any questions, reply to this email or contact us at <a href="mailto:{{ shop.email }}" style="color: #0BB3FB;text-decoration: underline;">{{ shop.email }}</a></p>
+                      </td>
+                    </tr>
+                  </table>
+                </center>
+              </td>
+            </tr>
+          </table>
+
             </td>
           </tr>
         </table>
