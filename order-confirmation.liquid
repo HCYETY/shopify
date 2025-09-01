@@ -69,13 +69,164 @@
   <style>
     .button__cell { background: {{ shop.email_accent_color }}; }
     a, a:hover, a:active, a:visited { color: {{ shop.email_accent_color }}; }
+    .border {
+      border-bottom: 1px solid #eee;
+    }
+    .no-border {
+      border: none;
+    }
+
+    .falcon-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0 40px 0;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .falcon-logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: #000;
+      text-decoration: none;
+    }
+    
+    .falcon-nav {
+      display: flex;
+      gap: 24px;
+    }
+    
+    .big__text{
+      font-family: Arial;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 24px;
+      leading-trim: NONE;
+      line-height: 100%;
+      letter-spacing: 0%;
+      margin-bottom: 16px;
+    }
+     .key {
+      color: #666;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .value {
+      color: #000; 
+      font-size: 14px;
+      font-weight: 500;
+      text-align: right;
+    }
+
+    .order-details-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .order-details-row {
+      /* 基础行样式 */
+    }
+
+    .order-details-row--spaced {
+      margin-top: 16px;
+    }
+
+    .order-details-row--spaced .key,
+    .order-details-row--spaced .value {
+      padding-top: 16px;
+    }
+
+
+    .flex {
+      display: flex;
+      justify-content: center;
+    }
+    .gap-24 {
+      gap: 24px;
+    }
+    @media (max-width: 425px) {
+      .flex {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+      }
+    }
+    .top-link {
+      text-decoration: underline; 
+      color: #000; 
+      font-size: 14px;        
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+    }
+    .button__text {
+      display: flex;
+      height: 40px;
+      padding: 8px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      align-self: stretch;
+      border-radius: 44px;
+      background: #0BB3FB;
+      color: #FFF;
+      font-family: Arial;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .sub_button__text {
+      display: flex;
+      height: 40px;
+      padding: 8px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      border-radius: 44px;
+      background: #EAEBED;
+      color: #1E1E1E;
+      font-family: Arial;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .font-base {
+      font-family: Arial;
+      font-style: normal;
+      line-height: normal;
+    }
+    .gift-money {
+      color: #0BB3FB;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .small-text {
+      color: #8D9095;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .code-text {
+      color: #8D9095;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .pt-8 {
+      padding-top: 8px;
+    }
+    .pt-24 {
+      padding-top: 24px;
+    }
   </style>
 </head>
 
   <body>
     <table class="body">
       <tr>
-        <td>
+        <td style="display: flex; gap: 24px; flex-direction: column;">
           <table class="header row">
   <tr>
     <td class="header__cell">
@@ -85,38 +236,27 @@
           <tr>
             <td>
 
-              <table class="row">
+                            <table class="row falcon-header">
                 <tr>
-                  <td class="shop-name__cell">
+                  <td class="shop-name__cell" style="text-align: center;">
                     {%- if shop.email_logo_url %}
-                      <img src="{{shop.email_logo_url}}" alt="{{ shop.name }}" width="{{ shop.email_logo_width }}">
+                      <img src="{{shop.email_logo_url}}" alt="{{ shop.name }}" width="144px">
                     {%- else %}
                       <h1 class="shop-name__text">
                         <a href="{{shop.url}}">{{ shop.name }}</a>
                       </h1>
                     {%- endif %}
                   </td>
-
-                    <td>
-                      <table class="order-po-number__container">
-                        <tr>
-                          <td class="order-number__cell">
-                            <span class="order-number__text">
-                              Order {{ order_name }}
-                            </span>
-                          </td>
-                        </tr>
-                        {%- if po_number %}
-                            <tr>
-                              <td class="po-number__cell">
-                                <span class="po-number__text">
-                                  PO number #{{ po_number }}
-                                </span>
-                              </td>
-                            </tr>
-                        {%- endif %}
-                      </table>
-                    </td>
+                </tr>
+                
+                <tr>
+                  <td>
+                    <div class="falcon-nav">
+                      <a href="https://uk.crealityfalcon.com/collections/engraver" class="top-link">Laser Engraver</a>
+                      <a href="https://uk.crealityfalcon.com/collections/accessories" class="top-link">Accessories</a>
+                      <a href="https://uk.crealityfalcon.com/pages/materials-sale-for-laser-engraver" class="top-link">Materials</a>
+                    </div>
+                  </td>
                 </tr>
               </table>
 
@@ -131,13 +271,13 @@
 
           <table class="row content">
   <tr>
-    <td class="content__cell">
+    <td class="content__cell" style="padding: 0;">
       <center>
         <table class="container">
           <tr>
             <td>
               
-            <h2>{{ email_title }}</h2>
+            <div class="big__text">{{ email_title }}</div>
             <p>{{ email_body }}</p>
             {% assign transaction_count = transactions | size %}
   {% if transaction_count > 0 %}
@@ -171,26 +311,21 @@
   </tr>
   <tr>
     <td class="actions__cell">
-      <table class="button main-action-cell">
-        <tr>
-          <td class="button__cell"><a href="{{ order_status_url }}" class="button__text">View your order</a></td>
+      <table class="button main-action-cell border">
+        <tr style="display: flex; gap: 8px; padding-bottom: 40px;">
+          <td class="button__cell" style="background: transparent; flex: 1;"><a href="{{ order_status_url }}" class="button__text">View your order</a></td>
+          {% if shop.url %}
+          <td class="link__cell" style="flex: 1;"><a href="{{ shop.url }}" class="sub_button__text">Visit our store</a></td>
+          {% endif %}
         </tr>
       </table>
-        {% if shop.url %}
-    <table class="link secondary-action-cell">
-      <tr>
-        <td class="link__cell">or <a href="{{ shop.url }}">Visit our store</a></td>
-      </tr>
-    </table>
-{% endif %}
-
     </td>
   </tr>
 </table>
 
             {% else %}
               {% if shop.url %}
-    <table class="row actions">
+    <table class="row actions border">
       <tr>
         <td class="actions__cell">
           <table class="button main-action-cell">
@@ -213,14 +348,41 @@
   </tr>
 </table>
 
+<table class="row section">
+  <tr>
+    <td class="section__cell" style="padding: 0;">
+      <center>
+        <table class="container border">
+          <tr>
+            <td style="padding-bottom: 40px;">
+              <div class="big__text">Order details</div>
+              <table class="order-details-table">
+                <tr class="order-details-row">
+                  <td class="key">Order ID:</td>
+                  <td class="value">{{ order_name  }}</td>
+                </tr>
+                <tr class="order-details-row order-details-row--spaced">
+                  <td class="key">Order Date:</td>
+                  <td class="value">{{ order.created_at | date: '%d %B %Y, %H:%M:%S'}}</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+      </td>
+  </tr>
+  </table>
+
+
           <table class="row section">
   <tr>
-    <td class="section__cell">
+    <td class="section__cell" style="padding: 0px;">
       <center>
         <table class="container">
           <tr>
             <td>
-              <h3>Order summary</h3>
+              <div class="big__text">Order summary</div>
             </td>
           </tr>
         </table>
@@ -251,20 +413,20 @@
         {% if false and is_parent %}
           <td class="order-list__parent-image-cell">
             {% if line.image %}
-              <img src="{{ line | img_url: 'compact_cropped' }}" align="left" width="60" height="60" class="order-list__product-image"/>
+              <img src="{{ line | img_url: 'compact_cropped' }}" align="left" width="60" height="60" class="order-list__product-image no-border"/>
             {% else %}
               <div class="order-list__no-image-cell">
-                <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="60" height="60" class="order-list__no-product-image"/>
+                <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="60" height="60" class="order-list__no-product-image no-border"/>
               </div>
             {% endif %}
           </td>
         {% else %}
           <td class="order-list__image-cell">
             {% if line.image %}
-              <img src="{{ line | img_url: 'compact_cropped' }}" align="left" width="60" height="60" class="order-list__product-image"/>
+              <img src="{{ line | img_url: 'compact_cropped' }}" align="left" width="60" height="60" class="order-list__product-image no-border"/>
             {% else %}
               <div class="order-list__no-image-cell">
-                <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="60" height="60" class="order-list__no-product-image"/>
+                <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="60" height="60" class="order-list__no-product-image no-border"/>
               </div>
             {% endif %}
           </td>
@@ -285,7 +447,7 @@
             {% assign line_display = line.quantity %}
           {% endif %}
 
-          <span class="order-list__item-title">{{ line_title }}&nbsp;&times;&nbsp;{{ line_display }}</span><br/>
+          <span class="order-list__item-title">{{ line_title }}</span><br/>
 
           {% if line.variant.title != 'Default Title' and is_parent == false %}
             <span class="order-list__item-variant">{{ line.variant.title }}</span><br/>
@@ -310,10 +472,10 @@
       <table>
         <td class="order-list__image-cell">
           {% if child_line.image %}
-            <img src="{{ child_line | img_url: 'compact_cropped' }}" align="left" width="40" height="40" class="order-list__product-image small"/>
+            <img src="{{ child_line | img_url: 'compact_cropped' }}" align="left" width="40" height="40" class="order-list__product-image small no-border"/>
           {% else %}
             <div class="order-list__no-image-cell small">
-              <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="40" height="40" class="order-list__no-product-image small"/>
+              <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="40" height="40" class="order-list__no-product-image small no-border"/>
             </div>
           {% endif %}
         </td>
@@ -393,6 +555,9 @@
             {% endfor %}
           {% endif %}
         </td>
+          <td>
+            <span class="order-list__item-title">{{ line_title }}&nbsp;&times;&nbsp;{{ line_display }}</span><br/>
+          </td>
           {% if false and is_parent %}
             <td class="order-list__parent-price-cell">
           {% else %}
