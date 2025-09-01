@@ -1,133 +1,237 @@
-{% if fulfillment.item_count == item_count %} 
-  {% capture email_title %}Your order is on the way{% endcapture %}
-  {% capture email_body %}Your order is on the way. Track your shipment to see the delivery status.{% endcapture %}
-{% elsif fulfillment.item_count > 1 %} 
-  {% if fulfillment_status == 'fulfilled' %}
-    {% capture email_title %}The last items in your order are on the way{% endcapture %}
-    {% capture email_body %}The last items in your order are on the way. Track your shipment to see the delivery status.{% endcapture %}
-  {% else %}
-    {% capture email_title %}Some items in your order are on the way{% endcapture %}
-    {% capture email_body %}Some items in your order are on the way. Track your shipment to see the delivery status.{% endcapture %}
-  {% endif %}
-{% else %} 
-  {% if fulfillment_status == 'fulfilled' %}
-    {% capture email_title %}The last item in your order is on the way{% endcapture %}
-    {% capture email_body %}The last item in your order is on the way. Track your shipment to see the delivery status.{% endcapture %}
-  {% else %}
-    {% capture email_title %}One item in your order is on the way{% endcapture %}
-    {% capture email_body %}One item in your order is on the way. Track your shipment to see the delivery status.{% endcapture %}
-  {% endif %}
-{% endif %}
+    {% if fulfillment.item_count == item_count %} 
+    {% capture email_title %}Your order is on the way{% endcapture %}
+    {% capture email_body %}Your order is on the way. Track your shipment to see the delivery status.{% endcapture %}
+    {% elsif fulfillment.item_count > 1 %} 
+    {% if fulfillment_status == 'fulfilled' %}
+        {% capture email_title %}The last items in your order are on the way{% endcapture %}
+        {% capture email_body %}The last items in your order are on the way. Track your shipment to see the delivery status.{% endcapture %}
+    {% else %}
+        {% capture email_title %}Some items in your order are on the way{% endcapture %}
+        {% capture email_body %}Some items in your order are on the way. Track your shipment to see the delivery status.{% endcapture %}
+    {% endif %}
+    {% else %} 
+    {% if fulfillment_status == 'fulfilled' %}
+        {% capture email_title %}The last item in your order is on the way{% endcapture %}
+        {% capture email_body %}The last item in your order is on the way. Track your shipment to see the delivery status.{% endcapture %}
+    {% else %}
+        {% capture email_title %}One item in your order is on the way{% endcapture %}
+        {% capture email_body %}One item in your order is on the way. Track your shipment to see the delivery status.{% endcapture %}
+    {% endif %}
+    {% endif %}
 
-{% capture email_emphasis %}Estimated delivery date: <strong>{{fulfillment.estimated_delivery_at | date: format: 'date'}}</strong>{% endcapture %}
+    {% capture email_emphasis %}Estimated delivery date: <strong>{{fulfillment.estimated_delivery_at | date: format: 'date'}}</strong>{% endcapture %}
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  <title>{{ email_title }}</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" type="text/css" href="/assets/notifications/styles.css">
-  <style>
-    .button__cell { background: {{ shop.email_accent_color }}; }
-    a, a:hover, a:active, a:visited { color: {{ shop.email_accent_color }}; }
-  </style>
-</head>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <title>{{ email_title }}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="/assets/notifications/styles.css">
+    <style>
+        .button__cell { background: {{ shop.email_accent_color }}; }
+        a, a:hover, a:active, a:visited { color: {{ shop.email_accent_color }}; }
+        .border {
+        border-bottom: 1px solid #eee;
+        }
+        .no-border {
+        border: none;
+        }
 
-  <body>
+        .falcon-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0 40px 0;
+        border-bottom: 1px solid #eee;
+        }
+        
+        .falcon-logo {
+        font-weight: bold;
+        font-size: 20px;
+        color: #000;
+        text-decoration: none;
+        }
+        
+        .falcon-nav {
+        display: flex;
+        gap: 24px;
+        }
+        .a-link {
+            font-family: Arial;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 14px;
+            leading-trim: NONE;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-offset: 0%;
+            text-decoration-thickness: 0%;
+            color: #51545A;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        }
 
-    <table class="body">
-      <tr>
-        <td>
-          <table class="header row">
-  <tr>
-    <td class="header__cell">
-      <center>
+        .regular__text {
+            font-family: Arial;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 14px;
+            leading-trim: NONE;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #8D9095;
+        }
+        
+        .big__text{
+        font-family: Arial;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 24px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+        margin-bottom: 16px;
+        }
+        .key {
+        text-align: left;
+        }
 
-        <table class="container">
-          <tr>
-            <td>
+        .value {
+        color: #1E1E1E; 
+        font-weight: 500;
+        text-align: right;
+        }
+        .order-details-table {
+        width: 100%;
+        border-collapse: collapse;
+        }
 
-              <table class="row">
-                <tr>
-                  <td class="shop-name__cell">
-                    {%- if shop.email_logo_url %}
-                      <img src="{{shop.email_logo_url}}" alt="{{ shop.name }}" width="{{ shop.email_logo_width }}">
-                    {%- else %}
-                      <h1 class="shop-name__text">
-                        <a href="{{shop.url}}">{{ shop.name }}</a>
-                      </h1>
-                    {%- endif %}
-                  </td>
 
-                    <td>
-                      <table class="order-po-number__container">
-                        <tr>
-                          <td class="order-number__cell">
-                            <span class="order-number__text">
-                              Order {{ order_name }}
-                            </span>
-                          </td>
-                        </tr>
-                        {%- if po_number %}
-                            <tr>
-                              <td class="po-number__cell">
-                                <span class="po-number__text">
-                                  PO number #{{ po_number }}
-                                </span>
-                              </td>
-                            </tr>
-                        {%- endif %}
-                      </table>
-                    </td>
-                </tr>
-              </table>
+    .button__text {
+        display: flex;
+        padding: 8px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        align-self: stretch;
+        border-radius: 44px;
+        background: #0BB3FB;
+        color: #FFF;
+        font-family: Arial;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding: 11px 23px;
+    }
+        .sub_button__text {
+        display: flex;
+        padding: 8px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        border-radius: 44px;
+        background: #EAEBED;
+        color: #1E1E1E;
+        font-family: Arial;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding: 11px 23px;
+    }
 
-            </td>
-          </tr>
-        </table>
+        .discount_text {
+            font-family: Arial;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 14px;
+            leading-trim: NONE;
+            line-height: 100%;
+            letter-spacing: 0%;
+        }
+    </style>
+    </head>
 
-      </center>
-    </td>
-  </tr>
-</table>
+    <body>
 
-          <table class="row content">
-  <tr>
-    <td class="content__cell">
-      <center>
-        <table class="container">
-          <tr>
-            <td>
-              
-            <h2>{{ email_title }}</h2>
-            <p>{{ email_body }}</p>
-            {% if fulfillment.estimated_delivery_at %}
-              <p>{{ email_emphasis }}</p>
-            {% endif %}
-            {% if order_status_url %}
-              <table class="row actions">
-  <tr>
-    <td class="empty-line">&nbsp;</td>
-  </tr>
-  <tr>
-    <td class="actions__cell">
-      <table class="button main-action-cell">
+        <table class="body">
         <tr>
-          <td class="button__cell"><a href="{{ order_status_url }}" class="button__text">View your order</a></td>
-        </tr>
-      </table>
-        {% if shop.url %}
-    <table class="link secondary-action-cell">
-      <tr>
-        <td class="link__cell">or <a href="{{ shop.url }}">Visit our store</a></td>
-      </tr>
-    </table>
-{% endif %}
+            <td style="display: flex; gap: 24px; flex-direction: column;">
+            <table class="header row">
+    <tr>
+        <td class="header__cell">
+        <center>
 
-    </td>
-  </tr>
-</table>
+            <table class="container">
+            <tr>
+                <td>
+
+                <table class="row falcon-header">
+                    <tr>
+                    <td class="shop-name__cell" style="text-align: center;">
+                        {%- if shop.email_logo_url %}
+                        <img src="{{shop.email_logo_url}}" alt="{{ shop.name }}" width="144px">
+                        {%- else %}
+                        <h1 class="shop-name__text">
+                            <a href="{{shop.url}}">{{ shop.name }}</a>
+                        </h1>
+                        {%- endif %}
+                    </td>
+                    </tr>
+                    
+                    <tr>
+                    <td>
+                        <div class="falcon-nav">
+                        <a href="https://uk.crealityfalcon.com/collections/engraver" class="a-link">Laser Engraver</a>
+                        <a href="https://uk.crealityfalcon.com/collections/accessories" class="a-link">Accessories</a>
+                        <a href="https://uk.crealityfalcon.com/pages/materials-sale-for-laser-engraver" class="a-link">Materials</a>
+                        </div>
+                    </td>
+                    </tr>
+                </table>
+
+                </td>
+            </tr>
+            </table>
+
+        </center>
+        </td>
+    </tr>
+    </table>
+
+            <table class="row content border">
+    <tr>
+        <td class="content__cell" style="padding: 0;">
+        <center>
+            <table class="container">
+            <tr>
+                <td>
+                
+                <div class="big__text">{{ email_title }}</div>
+                <p class="regular__text">{{ email_body }}</p>
+                {% if fulfillment.estimated_delivery_at %}
+                <p>{{ email_emphasis }}</p>
+                {% endif %}
+                {% if order_status_url %}
+                <table class="row actions" style="margin-top: 24px;">
+    <tr>
+        <td class="empty-line">&nbsp;</td>
+    </tr>
+            <tr >
+                <td class="actions__cell" style="padding-bottom: 40px;">
+                <table align="center" class="button">
+                    <tr style="display: flex; gap: 8px; ">
+                    <td class="button__cell" style="background: transparent;flex: 1;"><a href="{{ order_status_url }}" class="button__text">View your order</a></td>
+                    <td class="link__cell" style="flex: 1;"><a href="{{ shop.url }}" class="sub_button__text">Visit our store</a></td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+    </table>
 
             {% else %}
               {% if shop.url %}
@@ -144,278 +248,370 @@
     </table>
 {% endif %}
 
-            {% endif %}
-            {% if fulfillment.tracking_numbers.size > 0 %}
-  <p class="disclaimer__subtext">
-    <br/>
-    {% if fulfillment.tracking_numbers.size == 1 and fulfillment.tracking_company and fulfillment.tracking_url %}
-      {{ fulfillment.tracking_company }} tracking number: <a href="{{ fulfillment.tracking_url }}">{{ fulfillment.tracking_numbers.first }}</a>
-    {% elsif fulfillment.tracking_numbers.size == 1 %}
-      Tracking number: {{ fulfillment.tracking_numbers.first }}
-    {% else %}
-      {{ fulfillment.tracking_company }} tracking numbers:<br />
-      {% for tracking_number in fulfillment.tracking_numbers %}
-        {% if fulfillment.tracking_urls[forloop.index0] %}
-          <a href="{{ fulfillment.tracking_urls[forloop.index0] }}">
-            {{ tracking_number }}
-          </a>
-        {% else %}
-            {{ tracking_number }}
-        {% endif %}
-        <br/>
-      {% endfor %}
-    {% endif %}
-  </p>
-{% endif %}
+                {% endif %}
 
 
-            </td>
-          </tr>
-        </table>
-      </center>
-    </td>
-  </tr>
-</table>
-
-          <table class="row section">
-  <tr>
-    <td class="section__cell">
-      <center>
-        <table class="container">
-          <tr>
-            <td>
-              <h3>Items in this shipment</h3>
-            </td>
-          </tr>
-        </table>
-        <table class="container">
-          <tr>
-            <td>
-              
-            
-  <table class="row">
-    {% for line in fulfillment.fulfillment_line_items %}
-      
-{% comment %} Skip child add-ons since they will be rendered under the parent line item {% endcomment %}
-{% unless line.line_item.nested_line_child? %}
-
-  {% assign is_parent = false %}
-  {% if line.line_item.bundle_parent? or line.line_item.nested_line_parent? %}
-    {% assign is_parent = true %}
-  {% endif %}
-
-  <tr class="order-list__item">
-    <td class="order-list__item__cell">
-      <table>
-
-        {% if false and is_parent %}
-          <td class="order-list__parent-image-cell">
-            {% if line.line_item.image %}
-              <img src="{{ line.line_item | img_url: 'compact_cropped' }}" align="left" width="60" height="60" class="order-list__product-image"/>
-            {% else %}
-              <div class="order-list__no-image-cell">
-                <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="60" height="60" class="order-list__no-product-image"/>
-              </div>
-            {% endif %}
-          </td>
-        {% else %}
-          <td class="order-list__image-cell">
-            {% if line.line_item.image %}
-              <img src="{{ line.line_item | img_url: 'compact_cropped' }}" align="left" width="60" height="60" class="order-list__product-image"/>
-            {% else %}
-              <div class="order-list__no-image-cell">
-                <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="60" height="60" class="order-list__no-product-image"/>
-              </div>
-            {% endif %}
-          </td>
-        {% endif %}
-        <td class="order-list__product-description-cell">
-          {% if line.line_item.presentment_title %}
-            {% assign line_title = line.line_item.presentment_title %}
-          {% elsif line.line_item.title %}
-            {% assign line_title = line.line_item.title %}
-          {% else %}
-            {% assign line_title = line.line_item.product.title %}
-          {% endif %}
-          {% if line.quantity < line.line_item.quantity %}
-            {% capture line_display %}
-              {{ line.quantity }} of {{ line.line_item.quantity }}
-            {% endcapture %}
-          {% else %}
-            {% assign line_display = line.line_item.quantity %}
-          {% endif %}
-
-          <span class="order-list__item-title">{{ line_title }}&nbsp;&times;&nbsp;{{ line_display }}</span><br/>
-
-          {% if line.line_item.variant.title != 'Default Title' and is_parent == false %}
-            <span class="order-list__item-variant">{{ line.line_item.variant.title }}</span><br/>
-          {% elsif line.line_item.variant.title != 'Default Title' and line.line_item.nested_line_parent? %}
-            <span class="order-list__item-variant">{{ line.line_item.variant.title }}</span><br/>
-          {% elsif line.line_item.variant.title != 'Default Title' and line.line_item.bundle_parent? and false == false %}
-            <span class="order-list__item-variant">{{ line.line_item.variant.title }}</span><br/>
-          {% endif %}
-
-          {% if false %}
-            {% for child_line in line.line_item.bundle_components %}
-              
-{% if true %}
-  {% assign css_class = 'order-list__bundle-item' %}
-{% else %}
-  {% assign css_class = 'order-list__deliverable-item_abandoned' %}
-{% endif %}
-
-<table>
-  <tr class="order-list__item">
-    <td class="{{ css_class }}">
-      <table>
-        <td class="order-list__image-cell">
-          {% if child_line.image %}
-            <img src="{{ child_line | img_url: 'compact_cropped' }}" align="left" width="40" height="40" class="order-list__product-image small"/>
-          {% else %}
-            <div class="order-list__no-image-cell small">
-              <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="40" height="40" class="order-list__no-product-image small"/>
-            </div>
-          {% endif %}
+                </td>
+            </tr>
+            </table>
+        </center>
         </td>
-
-        <td class="order-list__product-description-cell">
-          {% if child_line.product.title %}
-            {% assign item_title = child_line.product.title %}
-          {% else %}
-            {% assign item_title = child_line.title %}
-          {% endif %}
-
-          {% assign item_display = child_line.quantity %}
-
-            <span class="order-list__item-title">{{ item_display }}&nbsp;&times;&nbsp;{{ item_title }}</span><br>
-
-          {% if child_line.variant.title != 'Default Title'%}
-            <span class="order-list__item-variant">{{ child_line.variant.title }}</span>
-          {% endif %}
-        </td>
-      </table>
-    </td>
-  </tr>
-</table>
-            {% endfor %}
-          {% else %}
-            {% for group in line.line_item.groups %}
-              {% if group.deliverable? %}
-                <span class="order-list__item-variant">For: {{ group.display_title }}</span><br/>
-              {% else %}
-                <span class="order-list__item-variant">Part of: {{ group.display_title }}</span><br/>
-              {% endif %}
-            {% endfor %}
-          {% endif %}
-
-
-          {% if line.line_item.selling_plan_allocation %}
-            <span class="order-list__item-variant">{{ line.line_item.selling_plan_allocation.selling_plan.name }}</span><br/>
-          {% endif %}
-
-          {% if line.line_item.refunded_quantity > 0 %}
-            <span class="order-list__item-refunded">Refunded</span>
-          {% endif %}
-
-          {% if line.line_item.discount_allocations %}
-            {% for discount_allocation in line.line_item.discount_allocations %}
-              {% if discount_allocation.discount_application.target_selection != 'all' %}
-              <p>
-                <span class="order-list__item-discount-allocation">
-                  <img src="{{ 'notifications/discounttag.png' | shopify_asset_url }}" width="18" height="18" class="discount-tag-icon" />
-                  <span>
-                    {{ discount_allocation.discount_application.title | upcase }}
-                    (-{{ discount_allocation.amount | money }})
-                  </span>
-                </span>
-              </p>
-              {% endif %}
-            {% endfor %}
-          {% endif %}
-        </td>
-        {% if line.line_item.nested_line_parent? %}
-          {% for child_line in line.line_item.nested_lines %}
-            
-{% if false %}
-  {% assign css_class = 'order-list__bundle-item' %}
-{% else %}
-  {% assign css_class = 'order-list__deliverable-item_abandoned' %}
-{% endif %}
-
-<table>
-  <tr class="order-list__item">
-    <td class="{{ css_class }}">
-      <table>
-        <td class="order-list__image-cell">
-          {% if child_line.image %}
-            <img src="{{ child_line | img_url: 'compact_cropped' }}" align="left" width="40" height="40" class="order-list__product-image small"/>
-          {% else %}
-            <div class="order-list__no-image-cell small">
-              <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="40" height="40" class="order-list__no-product-image small"/>
-            </div>
-          {% endif %}
-        </td>
-
-        <td class="order-list__product-description-cell">
-          {% if child_line.product.title %}
-            {% assign item_title = child_line.product.title %}
-          {% else %}
-            {% assign item_title = child_line.title %}
-          {% endif %}
-
-          {% assign item_display = child_line.quantity %}
-
-            <span class="order-list__item-title">{{ item_title }}&nbsp;&times;&nbsp;{{ item_display }}</span><br>
-
-          {% if child_line.variant.title != 'Default Title'%}
-            <span class="order-list__item-variant">{{ child_line.variant.title }}</span>
-          {% endif %}
-        </td>
-      </table>
-    </td>
-  </tr>
-</table>
-          {% endfor %}
-        {% endif %}
-      </table>
-    </td>
-  </tr>
-
-{% endunless %}
-
-    {% endfor %}
-  </table>
-
-
-            </td>
-          </tr>
-        </table>
-      </center>
-    </td>
-  </tr>
-</table>
-
-          <table class="row footer">
-  <tr>
-    <td class="footer__cell">
-      <center>
-        <table class="container">
-          <tr>
-            <td>
-              
-              <p class="disclaimer__subtext">If you have any questions, reply to this email or contact us at <a href="mailto:{{ shop.email }}">{{ shop.email }}</a></p>
-            </td>
-          </tr>
-        </table>
-      </center>
-    </td>
-  </tr>
-</table>
-
-<img src="{{ 'notifications/spacer.png' | shopify_asset_url }}" class="spacer" height="1" />
-
-        </td>
-      </tr>
+    </tr>
     </table>
-  </body>
-</html>
+                {% if fulfillment.tracking_numbers.size > 0 %}
+                <table class="row section">
+    <tr>
+        <td class="section__cell" style="padding: 0;">
+        <center>
+            <table class="container border">
+            <tr>
+                <td style="padding-bottom: 40px;">
+                <div class="big__text">Order details</div>
+                <table class="order-details-table">
+                    <tr class="order-details-row">
+                            {% if fulfillment.tracking_numbers.size == 1 and fulfillment.tracking_company and fulfillment.tracking_url %}
+                            <td class="key regular__text">{{ fulfillment.tracking_company }} tracking number: </td>
+                            <td class="regular__text value">
+                                <a href="{{ fulfillment.tracking_url }}" class="a-link value">{{ fulfillment.tracking_numbers.first }}</a>
+                            </td>
+                            {% elsif fulfillment.tracking_numbers.size == 1 %}
+                            <td class="key regular__text">Tracking number: </td>
+                            <td class="regular__text value">
+                                {{ fulfillment.tracking_numbers.first }}
+                            </td>
+                            {% else %}
+                            <td class="key regular__text">{{ fulfillment.tracking_company }} tracking numbers:<br /></td>
+                            <td class="regular__text value">
+                                {% for tracking_number in fulfillment.tracking_numbers %}
+                                    {% if fulfillment.tracking_urls[forloop.index0] %}
+                                    <a href="{{ fulfillment.tracking_urls[forloop.index0] }}" class="a-link value">
+                                        {{ tracking_number }}
+                                    </a>
+                                    {% else %}
+                                        {{ tracking_number }}
+                                    {% endif %}
+                                    <br/>
+                                {% endfor %}
+                            </td>
+                            {% endif %}
+                    </td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+            </table>
+        </center>
+        </td>
+    </tr>
+    </table>
+    {% endif %}
+
+            <table class="row section">
+    <tr>
+        <td class="section__cell" style="padding: 0px;">
+        <center>
+            <table class="container">
+            <tr>
+                <td>
+                <div class="big__text">Order summary</div>
+                </td>
+            </tr>
+            </table>
+            <table class="container">
+            <tr>
+                <td>
+                
+                
+    <table class="row">
+        {% for line in fulfillment.fulfillment_line_items %}
+        
+    {% comment %} Skip child add-ons since they will be rendered under the parent line item {% endcomment %}
+    {% unless line.line_item.nested_line_child? %}
+
+    {% assign is_parent = false %}
+    {% if line.line_item.bundle_parent? or line.line_item.nested_line_parent? %}
+        {% assign is_parent = true %}
+    {% endif %}
+
+    <tr class="order-list__item">
+        <td class="order-list__item__cell">
+        <table>
+
+            {% if false and is_parent %}
+            <td class="order-list__parent-image-cell">
+                {% if line.line_item.image %}
+                <img src="{{ line.line_item | img_url: 'compact_cropped' }}" align="left" width="60" height="60" class="order-list__product-image no-border"/>
+                {% else %}
+                <div class="order-list__no-image-cell">
+                    <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="60" height="60" class="order-list__no-product-image no-border"/>
+                </div>
+                {% endif %}
+            </td>
+            {% else %}
+            <td class="order-list__image-cell">
+                {% if line.line_item.image %}
+                <img src="{{ line.line_item | img_url: 'compact_cropped' }}" align="left" width="60" height="60" class="order-list__product-image no-border"/>
+                {% else %}
+                <div class="order-list__no-image-cell">
+                    <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="60" height="60" class="order-list__no-product-image no-border"/>
+                </div>
+                {% endif %}
+            </td>
+            {% endif %}
+            <td class="order-list__product-description-cell">
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+            {% if line.line_item.presentment_title %}
+                {% assign line_title = line.line_item.presentment_title %}
+            {% elsif line.line_item.title %}
+                {% assign line_title = line.line_item.title %}
+            {% else %}
+                {% assign line_title = line.line_item.product.title %}
+            {% endif %}
+            {% if line.quantity < line.line_item.quantity %}
+                {% capture line_display %}
+                {{ line.quantity }} of {{ line.line_item.quantity }}
+                {% endcapture %}
+            {% else %}
+                {% assign line_display = line.line_item.quantity %}
+            {% endif %}
+
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">{{ line_title }}</span>
+                    <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">&times;{{ line_display }}</span>
+                </div>
+
+            {% if line.line_item.variant.title != 'Default Title' and is_parent == false %}
+                <span class="order-list__item-variant regular__text">{{ line.line_item.variant.title }}</span>
+            {% elsif line.line_item.variant.title != 'Default Title' and line.line_item.nested_line_parent? %}
+                <span class="order-list__item-variant regular__text">{{ line.line_item.variant.title }}</span>
+            {% elsif line.line_item.variant.title != 'Default Title' and line.line_item.bundle_parent? and false == false %}
+                <span class="order-list__item-variant regular__text">{{ line.line_item.variant.title }}</span>
+            {% endif %}
+
+            {% if false %}
+                {% for child_line in line.line_item.bundle_components %}
+                
+    {% if true %}
+    {% assign css_class = 'order-list__bundle-item' %}
+    {% else %}
+    {% assign css_class = 'order-list__deliverable-item_abandoned' %}
+    {% endif %}
+
+    <table>
+    <tr class="order-list__item">
+        <td class="{{ css_class }}">
+        <table>
+            <td class="order-list__image-cell">
+            {% if child_line.image %}
+                <img src="{{ child_line | img_url: 'compact_cropped' }}" align="left" width="40" height="40" class="order-list__product-image small no-border"/>
+            {% else %}
+                <div class="order-list__no-image-cell small">
+                <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}"align="left" width="40" height="40" class="order-list__no-product-image small no-border"/>
+                </div> 
+            {% endif %}
+            </td>
+
+            <td class="order-list__product-description-cell">
+            {% if child_line.product.title %}
+                {% assign item_title = child_line.product.title %}
+            {% else %}
+                {% assign item_title = child_line.title %}
+            {% endif %}
+
+            {% assign item_display = child_line.quantity %}
+
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">{{ item_title }}</span>
+                    <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">&times;{{ item_display }}</span>
+                </div>
+
+            {% if child_line.variant.title != 'Default Title'%}
+                <span class="order-list__item-variant regular__text">{{ child_line.variant.title }}</span>
+            {% endif %}
+            </td>
+        </table>
+        </td>
+    </tr>
+    </table>
+                {% endfor %}
+            {% else %}
+                {% for group in line.line_item.groups %}
+                {% if group.deliverable? %}
+                    <span class="order-list__item-variant regular__text">For: {{ group.display_title }}</span>
+                {% else %}
+                    <span class="order-list__item-variant regular__text">Part of: {{ group.display_title }}</span>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+
+
+            {% if line.line_item.selling_plan_allocation %}
+                <span class="order-list__item-variant regular__text">{{ line.line_item.selling_plan_allocation.selling_plan.name }}</span>
+            {% endif %}
+
+            {% if line.line_item.refunded_quantity > 0 %}
+                <span class="order-list__item-refunded">Refunded</span>
+            {% endif %}
+
+            {% if line.line_item.discount_allocations %}
+                {% for discount_allocation in line.line_item.discount_allocations %}
+                {% if discount_allocation.discount_application.target_selection != 'all' %}
+                    <span class="order-list__item-variant regular__text">
+                        Coupon Code&nbsp;:&nbsp;
+                        <span class="discount_text">
+                            {{ discount_allocation.discount_application.title | upcase }}
+                            (-{{ discount_allocation.amount | money }})
+                        </span>
+                    </span>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+            </div>
+            </td>
+            {% if line.line_item.nested_line_parent? %}
+            {% for child_line in line.line_item.nested_lines %}
+                
+    {% if false %}
+    {% assign css_class = 'order-list__bundle-item' %}
+    {% else %}
+    {% assign css_class = 'order-list__deliverable-item_abandoned' %}
+    {% endif %}
+
+    <table>
+    <tr class="order-list__item">
+        <td class="{{ css_class }}">
+        <table>
+            <td class="order-list__image-cell">
+            {% if child_line.image %}
+                <img src="{{ child_line | img_url: 'compact_cropped' }}" align="left" width="40" height="40" class="order-list__product-image small no-border"/>
+            {% else %}
+                <div class="order-list__no-image-cell small">
+                <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="40" height="40" class="order-list__no-product-image small no-border"/>
+                </div>
+            {% endif %}
+            </td>
+
+            <td class="order-list__product-description-cell">
+            {% if child_line.product.title %}
+                {% assign item_title = child_line.product.title %}
+            {% else %}
+                {% assign item_title = child_line.title %}
+            {% endif %}
+
+            {% assign item_display = child_line.quantity %}
+
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">{{ item_title }}</span>
+                    <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">&times;{{ item_display }}</span>
+                </div>
+
+            {% if child_line.variant.title != 'Default Title'%}
+                <span class="order-list__item-variant regular__text">{{ child_line.variant.title }}</span>
+            {% endif %}
+            </td>
+        </table>
+        </td>
+    </tr>
+    </table>
+            {% endfor %}
+            {% endif %}
+        </table>
+        </td>
+    </tr>
+
+    {% endunless %}
+
+        {% endfor %}
+    </table>
+
+
+                </td>
+            </tr>
+            </table>
+        </center>
+        </td>
+    </tr>
+    </table>
+
+            <table class="row footer container" style="margin: 0 auto">
+    <tr>
+        <td class="footer__cell" style="padding: 24px 0;">
+        <center>
+            <table class="container">
+            <tr>
+                <td>
+                
+                    <tr e-block-id="67ab038700f85ae0ef000006">
+                <td bgcolor="#ffffff" align="center">
+                <table role="presentation" cellpadding="0" cellspacing="0">
+                    <tbody>
+                    <tr>
+                        <td width="24" class="rw16"></td>
+                        <td class="mwn vam rw50" style="vertical-align: middle;" valign="middle">
+                        <a e-editable="image_url_1" href="https://www.facebook.com/CrealityFalconOfficial" target="_blank">
+                            <img e-editable="image_1" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Facebook.png?v=1756093936" width="40" border="0" style="display: block; width: 32px; max-width: none !important;" class="image" alt="Facebook">
+                        </a>
+                        </td>
+                        <td width="24" class="rw16"></td>
+                        <td class="mwn vam rw50" style="vertical-align: middle;" valign="middle">
+                        <a e-editable="image_url_2" href="https://x.com/CrealityFalcon" target="_blank">
+                            <img e-editable="image_2" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/X.png?v=1756093936" width="40" border="0" style="display: block; width: 32px; max-width: none !important;" class="image" alt="Facebook">
+                        </a>
+                        </td>
+                        <td width="24" class="rw16"></td>
+                        <td class="mwn vam rw50" style="vertical-align: middle;" valign="middle">
+                        <a e-editable="image_url_3" href="https://www.instagram.com/falconlaser.official" target="_blank">
+                            <img e-editable="image_3" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Instagram.png?v=1756093936" width="40" border="0" style="display: block; width: 32px; max-width: none !important;" class="image" alt="Facebook">
+                        </a>
+                        </td>
+                        <td width="24" class="rw16"></td>
+                        <td class="mwn vam rw50" style="vertical-align: middle;" valign="middle">
+                        <a e-editable="image_url_4" href="https://www.youtube.com/@FalconLaserOfficial" target="_blank">
+                            <img e-editable="image_4" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Youtube.png?v=1756093936" width="40" border="0" style="display: block; width: 32px; max-width: none !important;" class="image" alt="Facebook">
+                        </a>
+                        </td>
+                        <td width="24" class="rw16"></td>
+                        <td class="mwn vam rw50" style="vertical-align: middle;" valign="middle">
+                        <a e-editable="image_url_5" href="https://www.tiktok.com/@falconlaserofficial target="_blank">
+                            <img e-editable="image_5" src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/TikTok.png?v=1756093936" width="40" border="0" style="display: block; width: 32px; max-width: none !important;" class="image" alt="Facebook">
+                        </a>
+                        </td>
+                        <td width="25" class="rw16"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                </td>
+            </tr>
+
+            <!-- Existing footer content -->
+            <table class="row footer" style="border: none;">
+                <tr>
+                <td class="footer__cell" style="padding: 0px;">
+                    <center>
+                    <table class="container" >
+                        <tr>
+                        <td style="padding-top: 14px; padding-bottom: 40px;">
+                            <p class="disclaimer__subtext">If you have any questions, reply to this email or contact us at <a href="mailto:{{ shop.email }}" style="color: #0BB3FB;text-decoration: underline;">{{ shop.email }}</a></p>
+                        </td>
+                        </tr>
+                    </table>
+                    </center>
+                </td>
+                </tr>
+            </table>
+
+                </td>
+            </tr>
+            </table>
+        </center>
+        </td>
+    </tr>
+    </table>
+
+    <img src="{{ 'notifications/spacer.png' | shopify_asset_url }}" class="spacer" height="1" />
+
+            </td>
+        </tr>
+        </table>
+    </body>
+    </html>
