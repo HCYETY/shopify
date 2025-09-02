@@ -56,6 +56,7 @@
         .falcon-nav {
         display: flex;
         gap: 24px;
+        margin-top: 14px;
         }
         .a-link {
             font-family: Arial;
@@ -161,7 +162,7 @@
         <table class="body">
         <tr>
             <td style="display: flex; gap: 24px; flex-direction: column;">
-            <table class="header row">
+            <table class="header row" style="margin: 40px 0 0 0">
     <tr>
         <td class="header__cell">
         <center>
@@ -173,13 +174,7 @@
                 <table class="row falcon-header">
                     <tr>
                     <td class="shop-name__cell" style="text-align: center;">
-                        {%- if shop.email_logo_url %}
-                        <img src="{{shop.email_logo_url}}" alt="{{ shop.name }}" width="144px">
-                        {%- else %}
-                        <h1 class="shop-name__text">
-                            <a href="{{shop.url}}">{{ shop.name }}</a>
-                        </h1>
-                        {%- endif %}
+                        <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/logo.png?v=1755582950" alt="{{ shop.name }}" width="144px">
                     </td>
                     </tr>
                     
@@ -203,11 +198,11 @@
     </tr>
     </table>
 
-            <table class="row content border">
+            <table class="row content">
     <tr>
         <td class="content__cell" style="padding: 0;">
         <center>
-            <table class="container">
+            <table class="container border">
             <tr>
                 <td>
                 
@@ -223,8 +218,8 @@
     </tr>
             <tr >
                 <td class="actions__cell" style="padding-bottom: 40px;">
-                <table align="center" class="button">
-                    <tr style="display: flex; gap: 8px; flex-direction: column;">
+                <table align="center" class="row button">
+                    <tr style="display: flex; gap: 8px; justify-content: center;">
                     <td class="button__cell" style="background: transparent;flex: 1;"><a href="{{ order_status_url }}" class="button__text">View your order</a></td>
                     <td class="link__cell" style="flex: 1;"><a href="{{ shop.url }}" class="sub_button__text">Visit our store</a></td>
                     </tr>
@@ -590,7 +585,7 @@
                     <center>
                     <table class="container" >
                         <tr>
-                        <td style="padding-top: 14px; padding-bottom: 40px;">
+                        <td style="padding-top: 14px; padding-bottom: 40px; text-align: center;">
                             <p class="disclaimer__subtext">If you have any questions, reply to this email or contact us at <a href="mailto:{{ shop.email }}" style="color: #0BB3FB;text-decoration: underline;">{{ shop.email }}</a></p>
                         </td>
                         </tr>

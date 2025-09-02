@@ -57,8 +57,7 @@
     }
     .button__text {
       display: flex;
-      height: 40px;
-      padding: 8px 20px;
+      padding: 11px 20px;
       justify-content: center;
       align-items: center;
       gap: 4px;
@@ -74,8 +73,7 @@
     }
     .sub_button__text {
       display: flex;
-      height: 40px;
-      padding: 8px 20px;
+      padding: 11px 20px;
       justify-content: center;
       align-items: center;
       gap: 4px;
@@ -139,17 +137,16 @@
               
             {% if gift_card.recipient %}
               
-{% if shop.email_logo_url %}
   <table align="center" class="giftcard__doubletopmargin" style="text-align: center;">
     <tr>
       <td>
-        <img src="{{shop.email_logo_url}}" alt="{{ shop.name }}" class="giftcard__logosize" width="145">
+        <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/logo.png?v=1755582950" alt="{{ shop.name }}" class="giftcard__logosize" width="145">
       </td>
       
     </tr>
     <tr>
       <td>
-        <div class="flex gap-24">
+        <div class="flex gap-24" style="margin-top: 10px;">
           <a href="https://uk.crealityfalcon.com/collections/engraver" class="top-link">Laser Engraver</a>
           <a href="https://uk.crealityfalcon.com/collections/accessories" class="top-link">Accessories</a>
           <a href="https://uk.crealityfalcon.com/pages/materials-sale-for-laser-engraver" class="top-link">Materials</a>
@@ -157,7 +154,6 @@
       </td>
     </tr>
   </table>
-{% endif %}
 
   <table align="center" class="row giftcard__topmargin">
     <tr>
@@ -178,7 +174,7 @@
 <table align="center" class="giftcard__doubletopmargin" style="margin-top: 30px">
   <tr>
     <td style="text-align: center; padding-top: 24px;">
-      <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Gift_card_100.jpg?v=1746848310" alt="Gift card image" width="240">
+      <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/20250902-145951.jpg?v=1756796407" alt="Gift card image" width="240">
     </td>
   </tr>
 </table>
@@ -214,10 +210,10 @@
 <table class="row actions container">
   <tr >
     <td class="actions__cell">
-      <table align="center" class="button">
-        <tr class="flex" style="gap: 8px; flex-direction: column;">
+      <table align="center" class="row button">
+        <tr class="flex" style="gap: 8px; justify-content: center;">
           <td class="button__cell" style="background: transparent;flex: 1;"><a href="{{ shop.url }}" class="button__text">Visit our store</a></td>
-          <td class="link__cell" style="flex: 1;"><a href="{{ gift_card.url }}" class="sub_button__text">Gift card balance</a></td>
+          <td class="link__cell" style="flex: 1;"><a href="{{ gift_card.url }}" class="sub_button__text">View gift card balance</a></td>
         </tr>
       </table>
     </td>
@@ -238,17 +234,16 @@
 
             {% else %}
               
-{% if shop.email_logo_url %}
   <table align="center" class="giftcard__doubletopmargin" style="text-align: center;">
     <tr>
       <td>
-        <img src="{{shop.email_logo_url}}" alt="{{ shop.name }}" class="giftcard__logosize" width="145">
+        <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/logo.png?v=1755582950" alt="{{ shop.name }}" class="giftcard__logosize" width="145">
       </td>
       
     </tr>
     <tr>
       <td>
-        <div class="flex gap-24">
+        <div class="flex gap-24" style="margin-top: 10px;">
           <a href="https://uk.crealityfalcon.com/collections/engraver" class="top-link">Laser Engraver</a>
           <a href="https://uk.crealityfalcon.com/collections/accessories" class="top-link">Accessories</a>
           <a href="https://uk.crealityfalcon.com/pages/materials-sale-for-laser-engraver" class="top-link">Materials</a>
@@ -256,7 +251,6 @@
       </td>
     </tr>
   </table>
-{% endif %}
 
 
 {% if gift_card.recipient and gift_card.message != blank %}
@@ -269,15 +263,11 @@
   </table>
 {% endif %}
 
-<table align="center" class="giftcard__topmargin" style="margin-top: 30px">
+<table align="center" class="row footer giftcard__doubletopmargin" style="margin-top: 30px">
   <tr>
-    <table align="center" class="row footer giftcard__doubletopmargin">
-      <tr>
-        <td style="text-align: center; padding-top: 24px;">
-          <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Gift_card_100.jpg?v=1746848310" alt="Gift card image" width="240">
-        </td>
-      </tr>
-    </table>
+    <td style="text-align: center; padding-top: 24px;">
+      <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Gift_card_100.jpg?v=1746848310" alt="Gift card image" width="240">
+    </td>
   </tr>
 </table>
 
@@ -311,10 +301,10 @@
 <table class="row actions container">
   <tr >
     <td class="actions__cell">
-      <table align="center" class="button">
-        <tr class="flex" style="gap: 8px; flex-direction: column;">
+      <table align="center" class="row button">
+        <tr class="flex" style="gap: 8px; justify-content: center;">
           <td class="button__cell" style="background: transparent;flex: 1; width: 100%"><a href="{{ shop.url }}" class="button__text">Visit our store</a></td>
-          <td class="link__cell" style="flex: 1; width: 100%"><a href="{{ gift_card.url }}" class="sub_button__text">Gift card balance</a></td>
+          <td class="link__cell" style="flex: 1; width: 100%"><a href="{{ gift_card.url }}" class="sub_button__text">View gift card balance</a></td>
         </tr>
       </table>
     </td>
