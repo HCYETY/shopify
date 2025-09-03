@@ -63,6 +63,9 @@
             display: flex;
             gap: 24px;
             }
+            .price-pc-show {
+              display: none;
+            }
         }
         
         @media screen and (max-width: 599px) {
@@ -74,6 +77,9 @@
             display: flex;
             gap: 24px;
             margin-top: 14px;
+            }
+            .price-mb-show {
+              display: none;
             }
         }
 
@@ -173,6 +179,46 @@
             line-height: 100%;
             letter-spacing: 0%;
         }
+
+            .price-bold {
+      font-family: Arial;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 14px;
+      leading-trim: NONE;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: #1E1E1E; 
+    }
+
+
+            /* 订单列表表格列宽控制 */
+    .order-list__item__cell table {
+      width: 100%;
+      table-layout: fixed;
+    }
+    .order-list__item__cell-row {
+        display: flex;
+        align-items: center;
+    }
+    
+    .order-list__product-description-cell {
+      flex: 1;
+    }
+    
+    /* 数量和价格列强制对齐 */
+    .order-list__item__cell table .number-cell {
+      width: 40px !important;
+      min-width: 40px !important;
+      max-width: 40px !important;
+      text-align: right !important;
+    }
+    
+    /* 确保产品描述单元格内容正确布局 */
+    .order-list__product-description-cell > div {
+      width: 100%;
+    }
+
     </style>
     </head>
 
@@ -343,7 +389,8 @@
 
     <tr class="order-list__item">
         <td class="order-list__item__cell">
-        <table>
+        <table >
+        <tr class='order-list__item__cell-row'>
 
             {% if false and is_parent %}
             <td class="order-list__parent-image-cell">
@@ -383,10 +430,7 @@
                 {% assign line_display = line.line_item.quantity %}
             {% endif %}
 
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">{{ line_title }}</span>
-                    <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">&times;{{ line_display }}</span>
-                </div>
+            <span class="order-list__item-title price-bold">{{ line_title }}</span>
 
             {% if line.line_item.variant.title != 'Default Title' and is_parent == false %}
                 <span class="order-list__item-variant regular__text">{{ line.line_item.variant.title }}</span>
@@ -428,14 +472,15 @@
 
             {% assign item_display = child_line.quantity %}
 
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">{{ item_title }}</span>
-                    <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">&times;{{ item_display }}</span>
-                </div>
+              <span class="order-list__item-title price-bold">{{ item_title }}</span>
 
             {% if child_line.variant.title != 'Default Title'%}
                 <span class="order-list__item-variant regular__text">{{ child_line.variant.title }}</span>
             {% endif %}
+            </td>
+
+            <td class="number-cell">
+            <span class="number price-bold">&times;{{ item_display }}</span>
             </td>
         </table>
         </td>
@@ -474,8 +519,14 @@
                 {% endif %}
                 {% endfor %}
             {% endif %}
-            </div>
+
+                </div>
             </td>
+
+            <td class="number-cell">
+                <span class="number price-bold">&times;{{ line_display }}</span>
+            </td>
+
             {% if line.line_item.nested_line_parent? %}
             {% for child_line in line.line_item.nested_lines %}
                 
@@ -530,6 +581,7 @@
     {% endunless %}
 
         {% endfor %}
+    </tr>
     </table>
 
 

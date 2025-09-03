@@ -55,6 +55,9 @@
             display: flex;
             gap: 24px;
             }
+            .price-pc-show {
+              display: none;
+            }
         }
         
         @media screen and (max-width: 599px) {
@@ -66,6 +69,9 @@
             display: flex;
             gap: 24px;
             margin-top: 14px;
+            }
+            .price-mb-show {
+              display: none;
             }
         }
 
@@ -144,7 +150,41 @@
     .order-details-row--spaced .value {
       padding-top: 16px;
     }
+    
+    /* 订单列表表格列宽控制 */
+    .order-list__item__cell table {
+      width: 100%;
+      table-layout: fixed;
+    }
+      .order-list__item__cell-row {
+        display: flex;
+        align-items: center;
+    }
 
+    .order-list__product-description-cell {
+      flex: 1;
+    }
+    
+    /* 数量和价格列强制对齐 */
+    .order-list__item__cell table .number-cell {
+      width: 40px !important;
+      min-width: 40px !important;
+      max-width: 40px !important;
+      text-align: right !important;
+    }
+    .order-list__item__cell table .price-cell {
+      width: 80px !important;
+      min-width: 80px !important;
+      max-width: 80px !important;
+      text-align: right !important;
+    }
+    
+    /* 确保产品描述单元格内容正确布局 */
+    .order-list__product-description-cell > div {
+      width: 100%;
+    }
+    
+    
         .button__text {
         display: flex;
         padding: 8px 20px;
@@ -204,6 +244,13 @@
       leading-trim: NONE;
       line-height: 100%;
       letter-spacing: 0%;
+      color: #1E1E1E; 
+    }
+    
+    .font-bold {
+      color: #1E1E1E; 
+      font-family: Arial; 
+      font-weight: 700;
     }
 
   </style>
@@ -366,29 +413,31 @@
   <tr class="order-list__item">
     <td class="order-list__item__cell">
       <table class="row">
+        <tr class='order-list__item__cell-row'>
 
         {% if true and is_parent %}
-          <td class="order-list__parent-image-cell" style="width: 15%;">
+          <td class="order-list__parent-image-cell">
             {% if line.image %}
               <img src="{{ line | img_url: 'compact_cropped' }}" align="left" width="60" height="60" class="order-list__product-image no-border"/>
             {% else %}
-              <div class="order-list__no-image-cell" style="width: 15%;">
+              <div class="order-list__no-image-cell">
                 <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="60" height="60" class="order-list__no-product-image no-border"/>
               </div>
             {% endif %}
           </td>
         {% else %}
-          <td class="order-list__image-cell" style="width: 15%;">
+          <td class="order-list__image-cell">
             {% if line.image %}
               <img src="{{ line | img_url: 'compact_cropped' }}" align="left" width="60" height="60" class="order-list__product-image no-border"/>
             {% else %}
-              <div class="order-list__no-image-cell" style="width: 15%;">
+              <div class="order-list__no-image-cell">
                 <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="60" height="60" class="order-list__no-product-image no-border"/>
               </div>
             {% endif %}
           </td>
         {% endif %}
-        <td class="order-list__product-description-cell" style="display: flex; flex-direction: column; gap: 8px;">
+        <td class="order-list__product-description-cell">
+          <div  style="display: flex; flex-direction: column; gap: 8px;">
           {% if line.presentment_title %}
             {% assign line_title = line.presentment_title %}
           {% elsif line.title %}
@@ -404,10 +453,7 @@
             {% assign line_display = line.quantity %}
           {% endif %}
 
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">{{ line_title }}</span>
-            <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">&times;{{ line_display }}</span>
-        </div>
+            <span class="order-list__item-title price-bold">{{ line_title }}</span>
 
           {% if line.variant.title != 'Default Title' and is_parent == false %}
             <span class="order-list__item-variant">{{ line.variant.title }}</span>
@@ -430,11 +476,11 @@
   <tr class="order-list__item">
     <td class="{{ css_class }}">
       <table class="row">
-        <td class="order-list__image-cell"  style="width: 15%;">
+        <td class="order-list__image-cell">
           {% if child_line.image %}
             <img src="{{ child_line | img_url: 'compact_cropped' }}" align="left" width="40" height="40" class="order-list__product-image small no-border"/>
           {% else %}
-            <div class="order-list__no-image-cell small"  style="width: 15%;">
+            <div class="order-list__no-image-cell small">
               <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="40" height="40" class="order-list__no-product-image small no-border"/>
             </div>
           {% endif %}
@@ -449,14 +495,15 @@
 
           {% assign item_display = child_line.quantity %}
 
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">{{ item_title }}</span>
-            <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">&times;{{ item_display }}</span>
-        </div>
+            <span class="order-list__item-title price-bold">{{ item_title }}</span>
 
           {% if child_line.variant.title != 'Default Title'%}
             <span class="order-list__item-variant">{{ child_line.variant.title }}</span>
           {% endif %}
+        </td>
+
+        <td class="number-cell">
+            <span class="number price-bold">&times;{{ item_display }}</span>
         </td>
       </table>
     </td>
@@ -516,6 +563,7 @@
             {% endfor %}
           {% endif %}
 
+          <div class="price-pc-show">
           <div style="display: flex; align-items: center; gap: 4px;">
             <p class="order-list__item-price price-bold" style="margin: 0;">
               {% if line.final_line_price > 0 %}
@@ -533,8 +581,34 @@
               <del class="order-list__item-original-price">{{ line.original_line_price | money }}</del>
             {% endif %}
           </div>
+          </div>
+          </div>
+        </td>
+        <td class="number-cell">
+            <span class="number price-bold">&times;{{ line_display }}</span>
         </td>
 
+          {% if true and is_parent %}
+            <td class="order-list__parent-price-cell price-cell price-mb-show">
+          {% else %}
+            <td class="order-list__price-cell price-cell price-mb-show">
+          {% endif %}
+          {% if line.original_line_price != line.final_line_price %}
+            <del class="order-list__item-original-price">{{ line.original_line_price | money }}</del>
+          {% endif %}
+            <span class="order-list__item-price price-bold">
+              {% if line.final_line_price > 0 %}
+                {{ line.final_line_price | money }}
+                {% if line.unit_price_measurement %}
+              <div class="order-list__unit-price">
+                {{- line.unit_price | unit_price_with_measurement: line.unit_price_measurement -}}
+              </div>
+            {% endif %}
+              {% else %}
+                Free
+              {% endif %}
+            </span>
+          </td>
 
 
 
@@ -554,11 +628,11 @@
   <tr class="order-list__item">
     <td class="{{ css_class }}">
       <table class="row">
-        <td class="order-list__image-cell"  style="width: 15%;">
+        <td class="order-list__image-cell">
           {% if child_line.image %}
             <img src="{{ child_line | img_url: 'compact_cropped' }}" align="left" width="40" height="40" class="order-list__product-image small no-border"/>
           {% else %}
-            <div class="order-list__no-image-cell small"  style="width: 15%;">
+            <div class="order-list__no-image-cell small">
               <img src="{{ 'notifications/no-image.png' | shopify_asset_url }}" align="left" width="40" height="40" class="order-list__no-product-image small no-border"/>
             </div>
           {% endif %}
@@ -573,14 +647,15 @@
 
           {% assign item_display = child_line.quantity %}
 
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-              <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">{{ item_title }}</span>
-              <span class="order-list__item-title" style="font-family: Arial; color: #1E1E1E; font-weight: 700;">&times;{{ item_display }}</span>
-          </div>
+              <span class="order-list__item-title price-bold">{{ item_title }}</span>
 
           {% if child_line.variant.title != 'Default Title'%}
             <span class="order-list__item-variant">{{ child_line.variant.title }}</span>
           {% endif %}
+        </td>
+
+        <td class="number-cell">
+          <span class="number price-bold">&times;{{ item_display }}</span>
         </td>
       </table>
     </td>
@@ -867,6 +942,7 @@
 
       {% endunless %}
     </td>
+  </tr>
   </tr>
 </table>
 
