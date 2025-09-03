@@ -105,6 +105,63 @@
     .pt-24 {
       padding-top: 24px;
     }
+
+            .falcon-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px 0 40px 0;
+        border-bottom: 1px solid #eee;
+        }
+        
+        .falcon-logo {
+        font-weight: bold;
+        font-size: 20px;
+        color: #000;
+        text-decoration: none;
+        }
+        
+        @media screen and (min-width: 600px) {
+          .falcon-header {
+            flex-direction: row !important;
+            justify-content: space-between !important;
+          }
+            .falcon-nav {
+            display: flex;
+            gap: 24px;
+            }
+        }
+        
+        @media screen and (max-width: 599px) {
+          .falcon-header {
+            flex-direction: column !important;
+            justify-content: center !important;
+          }
+            .falcon-nav {
+            display: flex;
+            gap: 24px;
+            margin-top: 14px;
+            }
+        }
+        
+        .a-link {
+            font-family: Arial;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 14px;
+            leading-trim: NONE;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-offset: 0%;
+            text-decoration-thickness: 0%;
+            color: #51545A;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        }
+
   </style>
 </head>
 
@@ -127,25 +184,20 @@
             <td>
               
             
-<table align="center" class="giftcard__doubletopmargin" style="text-align: center;">
-  <tr>
-    <td>
-      <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/logo.png?v=1755582950" alt="{{ shop.name }}" class="giftcard__logosize" width="145">
-    </td>
-    
-  </tr>
-  <tr>
-    <td>
-      <div class="flex gap-24" style="margin-top: 10px;">
-        <a href="https://uk.crealityfalcon.com/collections/engraver" class="top-link">Laser Engraver</a>
-        <a href="https://uk.crealityfalcon.com/collections/accessories" class="top-link">Accessories</a>
-        <a href="https://uk.crealityfalcon.com/pages/materials-sale-for-laser-engraver" class="top-link">Materials</a>
-      </div>
-    </td>
-  </tr>
-</table>
+                                                        <div class=" falcon-header">
+                  <div class="shop-name__cell" style="text-align: center;">
+                      <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/logo.png?v=1755582950" alt="{{ shop.name }}" width="144px">
+                  </div>
+                
+                    <div class="falcon-nav">
+                      <a href="https://uk.crealityfalcon.com/collections/engraver" class="a-link">Laser Engraver</a>
+                      <a href="https://uk.crealityfalcon.com/collections/accessories" class="a-link">Accessories</a>
+                      <a href="https://uk.crealityfalcon.com/pages/materials-sale-for-laser-engraver" class="a-link">Materials</a>
+                    </div>
+                    </div>
 
-  <table align="center" class="row giftcard__topmargin">
+
+  <table align="center" class="row giftcard__topmargin" style="margin-top: 24px;">
     <tr>
       <td class="giftcard__title">{{ email_title }}</td>
     </tr>
@@ -161,9 +213,9 @@
   </table>
 {% endif %}
 
-<table align="center" class="row footer giftcard__doubletopmargin" style="margin-top: 30px">
+<table align="center" class="row footer giftcard__doubletopmargin" style="border: none;">
   <tr>
-    <td style="text-align: center; padding-top: 24px;">
+    <td style="text-align: center;">
       <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/20250902-145951.jpg?v=1756796407" alt="Gift card image" width="240">
     </td>
   </tr>

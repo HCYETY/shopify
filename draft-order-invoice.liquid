@@ -32,6 +32,7 @@
 
         .falcon-header {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 10px 0 40px 0;
@@ -45,11 +46,29 @@
         text-decoration: none;
         }
         
-        .falcon-nav {
-        display: flex;
-        gap: 24px;
-        margin-top: 14px;
+        @media screen and (min-width: 600px) {
+          .falcon-header {
+            flex-direction: row !important;
+            justify-content: space-between !important;
+          }
+            .falcon-nav {
+            display: flex;
+            gap: 24px;
+            }
         }
+        
+        @media screen and (max-width: 599px) {
+          .falcon-header {
+            flex-direction: column !important;
+            justify-content: center !important;
+          }
+            .falcon-nav {
+            display: flex;
+            gap: 24px;
+            margin-top: 14px;
+            }
+        }
+
         .a-link {
             font-family: Arial;
             font-weight: 400;
@@ -203,23 +222,17 @@
           <tr>
             <td>
 
-                <table class="row falcon-header">
-                    <tr>
-                    <td class="shop-name__cell" style="text-align: center;">
-                        <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/logo.png?v=1755582950" alt="{{ shop.name }}" width="144px">
-                    </td>
-                    </tr>
-                    
-                    <tr>
-                    <td>
-                        <div class="falcon-nav">
-                        <a href="https://uk.crealityfalcon.com/collections/engraver" class="a-link">Laser Engraver</a>
-                        <a href="https://uk.crealityfalcon.com/collections/accessories" class="a-link">Accessories</a>
-                        <a href="https://uk.crealityfalcon.com/pages/materials-sale-for-laser-engraver" class="a-link">Materials</a>
-                        </div>
-                    </td>
-                </tr>
-              </table>
+                                                        <div class=" falcon-header">
+                  <div class="shop-name__cell" style="text-align: center;">
+                      <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/logo.png?v=1755582950" alt="{{ shop.name }}" width="144px">
+                  </div>
+                
+                    <div class="falcon-nav">
+                      <a href="https://uk.crealityfalcon.com/collections/engraver" class="a-link">Laser Engraver</a>
+                      <a href="https://uk.crealityfalcon.com/collections/accessories" class="a-link">Accessories</a>
+                      <a href="https://uk.crealityfalcon.com/pages/materials-sale-for-laser-engraver" class="a-link">Materials</a>
+                    </div>
+                    </div>
 
             </td>
           </tr>
