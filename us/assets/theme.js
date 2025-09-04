@@ -855,12 +855,6 @@
                     });
                 });
 
-                var canonical = $('[canonical-shop-url]').attr('canonical-shop-url'),
-                    pageUrl = $.cookie('page-url'),
-                    menuTabItem,
-                    logoTabItem,
-                    menuItem;
-
                 if ((window.location.pathname.indexOf('/pages/') !== -1) && window.page_active && (window.page_active != pageUrl))  {
                     this.setCookie('page-url', window.page_active, 1);
                     pageUrl = window.page_active;

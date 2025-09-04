@@ -1,0 +1,38 @@
+{%- comment -%} Canonical URL 映射配置  {%- endcomment -%}
+
+{%- liquid
+  assign mapped_canonical_url = canonical_url
+  
+  # 5W CR Laser Falcon 产品映射
+  if canonical_url contains '5w-cr-laser-falcon-engraver-upgrade-package'
+    assign mapped_canonical_url = 'https://www.crealityfalcon.com/products/low-wattage-laser-engraver-cutter-cr-falcon-5w'
+  endif
+  
+  # 10W CR Laser Falcon 产品映射
+  if canonical_url contains '10w-cr-laser-falcon-engraver-upgrade-package' or canonical_url contains '10w-cr-laser-falcon-laser-engraver-and-cutter-for-sale' or canonical_url contains 'low-wattage-laser-engraver-cutter-cr-falcon-all-in-one-kits-10w' or canonical_url contains 'low-wattage-laser-engraver-cutter-cr-falcon-basic-kits-10w'
+    assign mapped_canonical_url = 'https://www.crealityfalcon.com/products/low-wattage-laser-engraver-cutter-cr-falcon-10w-machine'
+  endif
+  
+  # Falcon A1 10W 产品映射
+  if canonical_url contains 'falcon-a1-10w-enclosed-laser-engraver-and-cutter-1'
+    assign mapped_canonical_url = 'https://www.crealityfalcon.com/products/falcon-a1-10w-enclosed-laser-engraver-and-cutter'
+  endif
+  
+  # Falcon2 22W 产品映射
+  if canonical_url contains 'laser-engraver-cutter-falcon2-22w-protection-kits' or canonical_url contains 'falcon2-22w-laser-engraver-and-cutter-ultimate-engraving-package' or canonical_url contains 'falcon2-22w-laser-engraver-cutter-bundle-all-in-one-kits' or canonical_url contains 'falcon2-22w-laser-engraver-cutter-bundle-for-glass-engraving' or canonical_url contains 'falcon2-22w-laser-engraver-and-cutter-for-sale'
+    assign mapped_canonical_url = 'https://www.crealityfalcon.com/products/falcon2-22w-laser-engraver-cutter'
+  endif
+  
+  # Falcon2 40W 产品映射
+  if canonical_url contains 'falcon2-40w-laser-engraver-and-cutter-for-sale' or canonical_url contains 'falcon2-40w-laser-engraver-and-cutter-complete-crafting-engraver-set' or canonical_url contains 'laser-engraver-cutter-falcon2-40w-engraving-machine-all-in-one-kits' or canonical_url contains 'laser-engraver-cutter-falcon2-40w-engraving-machine-extension-kits' or canonical_url contains 'laser-engraver-cutter-falcon2-40w-engraving-machine-protection-kits'
+    assign mapped_canonical_url = 'https://www.crealityfalcon.com/products/laser-engraver-cutter-falcon2-40w-engraving-machine'
+  endif
+  
+  # Falcon2 Pro 系列产品映射
+  if canonical_url contains 'falcon2-pro-22w-enclosed-laser-engraver-and-cutter-basic-kits-for-wood-engraving' or canonical_url contains 'falcon2-pro-22w-enclosed-laser-engraver-and-cutter-bundle-perfect-for-bottle-engraving' or canonical_url contains 'falcon2-pro-22w-enclosed-laser-engraver-and-cutter-for-multiple-project-engraving' or canonical_url contains 'bundle-falcon2-pro-22w-enclosed-laser-engraver-and-cutter' or canonical_url contains 'bundle-falcon2-pro-40w-enclosed-laser-engraver-and-cutter' or canonical_url contains 'falcon2-pro-40w-enclosed-laser-engraver-and-cutter-basic-kits-for-wood-engraving' or canonical_url contains 'falcon2-pro-40w-enclosed-laser-engraver-and-cutter-for-bottle-engraving' or canonical_url contains 'falcon2-pro-40w-enclosed-laser-engraver-and-cutter-for-multiple-project-engraving' or canonical_url contains 'falcon2-pro-40w-and-22w-enclosed-laser-engraver-and-cutter-for-sale' or canonical_url contains 'falcon2-pro-60w-enclosed-laser-cutter-and-engraver-for-sale'
+    assign mapped_canonical_url = 'https://www.crealityfalcon.com/products/falcon-2-pro-40w-enclosed-laser-engraver-and-cutter'
+  endif
+  
+-%}
+
+{{ mapped_canonical_url }}

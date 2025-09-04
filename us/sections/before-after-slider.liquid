@@ -1,0 +1,397 @@
+{%- comment -%}
+  最终版：修复了由于重构而遗漏的图片间距调整功能。
+  - 支持通过编辑器调整桌面端和移动端的图片间距，可设置为0来消除空隙。
+  - 所有之前的功能和设置都完整保留。
+{%- endcomment -%}
+
+<style>
+  /* 可编辑的标题和描述样式 */
+  .ba-header {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  .ba-title {
+    font-size: {{ section.settings.title_size }}px;
+    color: {{ section.settings.title_color }};
+  }
+
+  .ba-description {
+    font-size: {{ section.settings.description_size }}px;
+    color: {{ section.settings.description_color }};
+  }
+
+  /* 动态调整 Section 区域的宽度和居中 */
+  .ba-section-wrapper {
+    max-width: none;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+  }
+
+  {%- case section.settings.section_width -%}
+    {%- when 'default' -%}
+      .ba-section-wrapper {
+        max-width: 1200px; /* 设置一个标准的默认宽度，可根据主题调整 */
+      }
+    {%- when 'width_1170' -%}
+      .ba-section-wrapper {
+        max-width: 1170px;
+      }
+    {%- when 'width_1770' -%}
+      .ba-section-wrapper {
+        max-width: 1770px;
+      }
+    {%- when 'full_width' -%}
+      .ba-section-wrapper {
+        max-width: 100%;
+        padding: 3rem 0; /* 全宽模式下移除内边距 */
+      }
+  {%- endcase -%}
+
+  /* 负责背景颜色的内层容器 */
+  .ba-section-inner {
+    background-color: {{ section.settings.background_color }};
+    padding: 0;
+  }
+
+  /* Flexbox 布局实现固定3列和居中 */
+  .ba-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: {{ section.settings.block_spacing_desktop }}px; /* 桌面端网格间距 */
+    padding: 3rem 0;
+  }
+
+  /* 固定3列布局 */
+  .ba-grid-item {
+    flex-basis: calc(33.333% - {{ section.settings.block_spacing_desktop | plus: 0 }}px * 0.666); /* 3列布局 */
+    max-width: 33.333%;
+    position: relative;
+    overflow: hidden;
+    /* 通过 CSS 变量动态调整图片大小 */
+    width: {{ section.settings.image_width_desktop }}px;
+    height: {{ section.settings.img_height_desktop }}px;
+  }
+
+  /* 确保图片居中且保持宽高比 */
+  .ba-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 关键：保持比例并居中，多余部分留白 */
+    background-color: transparent; /* 容器背景色透过 */
+  }
+
+  /* 前后图片层叠布局 */
+  .ba-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .ba-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out; /* 切换过渡效果 */
+  }
+
+  /* 初始状态：before图片在上层，after图片在下层 */
+  .ba-slide--before {
+    z-index: 2;
+  }
+  .ba-slide--after {
+    z-index: 1;
+  }
+
+  /* 移动端响应式样式 */
+  @media (max-width: 768px) {
+    .ba-grid {
+      gap: {{ section.settings.block_spacing_mobile }}px; /* 移动端网格间距 */
+      flex-direction: column; /* 手机端强制单列 */
+    }
+
+    .ba-grid-item {
+      width: 100%;
+      height: {{ section.settings.img_height_mobile }}px;
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+</style>
+
+<div class="ba-section-wrapper">
+  <div class="ba-section-inner">
+    {% if section.settings.title != blank or section.settings.description != blank %}
+      <div class="ba-header">
+        {% if section.settings.title != blank %}
+          <h2 class="ba-title">{{ section.settings.title }}</h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <p class="ba-description">{{ section.settings.description }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="ba-grid">
+      {%- for block in section.blocks -%}
+        {% if block.type == 'compare' %}
+          <div class="ba-grid-item"
+               data-interval="{{ section.settings.interval }}"
+               style="border: 1px solid #eee;">
+            <div class="ba-wrapper">
+              <div class="ba-slide ba-slide--before" style="z-index:2; opacity:1;">
+                <img src="{{ block.settings.before_image | img_url: 'master' }}"
+                     alt="Before"
+                     class="ba-image ba-image--before" />
+              </div>
+              <div class="ba-slide ba-slide--after" style="z-index:1; opacity:1;">
+                <img src="{{ block.settings.after_image | img_url: 'master' }}"
+                     alt="After"
+                     class="ba-image ba-image--after" />
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const containers = document.querySelectorAll('.ba-grid-item');
+    const totalBlocks = containers.length;
+    let timer = null;
+
+    if (totalBlocks === 0) return;
+
+    const interval = parseInt(containers[0].dataset.interval, 10);
+
+    const switchImages = () => {
+      containers.forEach(container => {
+        const beforeImg = container.querySelector('.ba-slide--before');
+        
+        if (!beforeImg) return;
+
+        if (beforeImg.style.opacity === '1') {
+          beforeImg.style.opacity = '0';
+        } else {
+          beforeImg.style.opacity = '1';
+        }
+      });
+    };
+
+    const startTimer = () => {
+      stopTimer();
+      timer = setInterval(switchImages, interval);
+    };
+
+    const stopTimer = () => {
+      if (timer) {
+        clearInterval(timer);
+      }
+    };
+
+    startTimer();
+
+    containers.forEach(container => {
+      container.addEventListener('mouseenter', stopTimer);
+      container.addEventListener('mouseleave', startTimer);
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Before & After Slider",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section Width",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "width_1170",
+          "label": "Width (1170px)"
+        },
+        {
+          "value": "width_1770",
+          "label": "Width (1770px)"
+        },
+        {
+          "value": "full_width",
+          "label": "Full Width"
+        }
+      ],
+      "default": "default",
+      "info": "Adjust the maximum width of the entire section container."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Before & After"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title Font Size (px)",
+      "min": 16,
+      "max": 64,
+      "step": 2,
+      "default": 32
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#333333"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "See the amazing transformation."
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Description Font Size (px)",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description Color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Desktop Slider Settings"
+    },
+    {
+      "type": "range",
+      "id": "interval",
+      "label": "Auto Switch Interval (ms)",
+      "min": 500,
+      "max": 9500,
+      "step": 500,
+      "default": 3000,
+      "info": "Controls how fast the images switch."
+    },
+    {
+      "type": "range",
+      "id": "block_spacing_desktop",
+      "label": "Image Spacing (px)",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 24,
+      "info": "Spacing between each image block on desktop."
+    },
+    {
+      "type": "range",
+      "id": "image_width_desktop",
+      "label": "Image Width (px)",
+      "min": 100,
+      "max": 1000,
+      "step": 50,
+      "default": 500,
+      "info": "Sets the maximum width of each image container on desktop. (This will be overridden by the 3-column layout's flex-basis calculation for consistency, but kept for potential future use or custom overrides.)"
+    },
+    {
+      "type": "range",
+      "id": "img_height_desktop",
+      "label": "Image Height (px)",
+      "min": 100,
+      "max": 1000,
+      "step": 50,
+      "default": 400,
+      "info": "Sets the fixed height of each image container on desktop."
+    },
+    {
+      "type": "header",
+      "content": "Mobile Slider Settings"
+    },
+    {
+      "type": "range",
+      "id": "block_spacing_mobile",
+      "label": "Image Spacing (px)",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 16,
+      "info": "Spacing between each image block on mobile."
+    },
+    {
+      "type": "range",
+      "id": "img_height_mobile",
+      "label": "Image Height (px)",
+      "min": 100,
+      "max": 1000,
+      "step": 50,
+      "default": 250,
+      "info": "Sets the fixed height of each image container on mobile."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "compare",
+      "name": "Image Comparison",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "before_image",
+          "label": "Before Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "after_image",
+          "label": "After Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Before & After Slider",
+      "blocks": [
+        {
+          "type": "compare"
+        },
+        {
+          "type": "compare"
+        },
+        {
+          "type": "compare"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

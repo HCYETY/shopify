@@ -215,7 +215,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_7d7fVH": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [
@@ -289,13 +292,6 @@
             "collection": "craft-wood-and-sheets-for-laser-cutting-engraving"
           }
         },
-        "product_tabs_tR7HBi": {
-          "type": "ProductTabs",
-          "settings": {
-            "title": "Art & Craft Paper",
-            "collection": "quality-art-and-craft-paper-for-laser-engraving"
-          }
-        },
         "product_tabs_jdF7cJ": {
           "type": "ProductTabs",
           "settings": {
@@ -303,18 +299,25 @@
             "collection": "premium-craft-acrylic-sheets-for-laser-engraving"
           }
         },
+        "product_tabs_tR7HBi": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Engraving Metals",
+            "collection": "quality-metalworking-supplies-for-laser-engraving"
+          }
+        },
         "product_tabs_6N6MPx": {
           "type": "ProductTabs",
           "settings": {
-            "title": "Leather Crafting Supplies",
-            "collection": "premium-leather-crafting-supplies-for-laser-engraving"
+            "title": "Material Combo Pack",
+            "collection": "material-kit"
           }
         }
       },
       "block_order": [
         "product_tabs_baXeRp",
-        "product_tabs_tR7HBi",
         "product_tabs_jdF7cJ",
+        "product_tabs_tR7HBi",
         "product_tabs_6N6MPx"
       ],
       "settings": {

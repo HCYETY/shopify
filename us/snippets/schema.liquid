@@ -148,7 +148,7 @@
   "@id": "{{ canonical_url }}#article",
   "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ canonical_url }}" },
   "headline": "{{ article.title }}",
-  "description": "{% if page_description != blank %}{{ page_description | strip_html }}{% else %}{{ article.excerpt_or_content | strip_html | truncate: 160 }}{% endif %}",
+  "description": "{{ page_description | strip_html | escape }}",
   "author": { "@type": "Person", "name": "{{ article.author }}" }
   {% if article.image %},
   "image": ["{{ article.image | img_url: '1024x1024' }}"]

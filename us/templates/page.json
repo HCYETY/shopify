@@ -15,8 +15,22 @@
     },
     "page_8wHFpU": {
       "type": "page",
+      "disabled": true,
       "name": "导航栏",
-      "settings": {}
+      "settings": {
+        "page": "",
+        "container": "container",
+        "padding_full_width": 0,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "heading_size": 30,
+        "heading_size_mb": 24,
+        "heading_color": "#000000"
+      }
     }
   },
   "order": [

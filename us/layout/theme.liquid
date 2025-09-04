@@ -26,6 +26,7 @@
   </script>
 
   <head>
+   
     <!-- SEO START -->
     {% assign falcon_a1_10w = '/products/falcon-a1-10w-enclosed-laser-engraver-and-cutter' %}
 
@@ -269,8 +270,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
-    <link rel="canonical" href="{{ canonical_url }}">
-    <link rel="canonical" href="{{ canonical_url }}" canonical-shop-url="{{ shop.url }}/">
+    <link rel="canonical" href="{% render 'canonical-url-mapping' %}">
     {%- if settings.favicon != blank -%}
       <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
     {%- endif -%}
