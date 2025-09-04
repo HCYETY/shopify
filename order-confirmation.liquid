@@ -150,11 +150,16 @@
       font-weight: 500;
       text-align: right;
     }
-    .subtotal-line:nth-child(odd) .subtotal-line__value {
+    .subtotal-line .subtotal-line__value {
+      font-family: Arial;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 14px;
+      leading-trim: NONE;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: right;
       color: #1E1E1E; 
-    }
-    .subtotal-line:nth-child(even) .subtotal-line__value {
-      color: #8D9095;
     }
     .subtotal-line .key,
     .subtotal-line .value {
@@ -2868,7 +2873,7 @@
             {% endif %}
             <table class="row subtotal-lines">
   <tr>
-    <td class="subtotal-spacer"></td>
+    <td class="subtotal-spacer" style="width: 35%;"></td>
     <td>
       <table class="row subtotal-table">
 
@@ -2974,7 +2979,7 @@
     Shipping:
   </td>
   <td class="subtotal-line__value regular__text value">
-    <del>{% if shipping_price != 0 %}{{ shipping_price | money}}{% endif %} </del>
+    <del class="price-del">{% if shipping_price != 0 %}{{ shipping_price | money}}{% endif %} </del>
       Free
   </td>
 </tr>

@@ -120,11 +120,17 @@
         font-weight: 500;
         text-align: right;
         }
-        .subtotal-line:nth-child(odd) .subtotal-line__value {
+        .subtotal-line .subtotal-line__value {
+          font-family: Arial;
+          font-weight: 700;
+          font-style: Bold;
+          font-size: 14px;
+          leading-trim: NONE;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: right;
           color: #1E1E1E; 
-        }
-        .subtotal-line:nth-child(even) .subtotal-line__value {
-          color: #8D9095;
+          color: #1E1E1E; 
         }
     .subtotal-line .key,
     .subtotal-line .value {
@@ -243,6 +249,17 @@
       line-height: 100%;
       letter-spacing: 0%;
       color: #1E1E1E; 
+    }
+    .price-del {
+      font-family: Arial;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 12px;
+      leading-trim: NONE;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-decoration: line-through;
+      text: #8D9095;
     }
     
     .font-bold {
@@ -578,7 +595,7 @@
               {% endif %}
             </p>
             {% if line.original_line_price != line.final_line_price %}
-              <del class="order-list__item-original-price">{{ line.original_line_price | money }}</del>
+              <del class="order-list__item-original-price price-del">{{ line.original_line_price | money }}</del>
             {% endif %}
           </div>
           </div>
@@ -594,7 +611,7 @@
             <td class="order-list__price-cell price-cell price-mb-show">
           {% endif %}
           {% if line.original_line_price != line.final_line_price %}
-            <del class="order-list__item-original-price">{{ line.original_line_price | money }}</del>
+            <del class="order-list__item-original-price price-del">{{ line.original_line_price | money }}</del>
           {% endif %}
             <span class="order-list__item-price price-bold">
               {% if line.final_line_price > 0 %}
@@ -674,7 +691,7 @@
 
             <table class="row subtotal-lines border">
   <tr>
-    <td class="subtotal-spacer"></td>
+    <td class="subtotal-spacer" style="width: 35%;"></td>
     <td style="padding-bottom: 40px;">
       <table class="row subtotal-table">
 
