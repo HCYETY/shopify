@@ -92,5 +92,3 @@ class CustomerAddresses extends HTMLElement{
         }
     }
 }
-
-customElements.define('customer-addresses', CustomerAddresses);

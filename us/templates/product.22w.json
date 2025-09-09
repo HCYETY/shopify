@@ -199,7 +199,7 @@
         "zoomed_image": true,
         "media_fit": "contain",
         "product_image_popup": "fancybox",
-        "video_layout": "thumbnail",
+        "video_layout": "popup",
         "show_badge": true,
         "show_qty": true,
         "show_subtotal": true,
@@ -3393,7 +3393,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_VnfX8t": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

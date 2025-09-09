@@ -75,7 +75,7 @@
         "mg_bottom_desktop": 0,
         "mg_bottom_tablet": 0,
         "mg_bottom_mobile": 0,
-        "layout": "1"
+        "layout": "3"
       }
     },
     "product-grid": {
@@ -95,7 +95,7 @@
       "settings": {
         "colors_bg": "rgba(0,0,0,0)",
         "colors_bg_gradient": "",
-        "container": "1170",
+        "container": "container",
         "mg_top_desktop": 20,
         "mg_top_tablet": 20,
         "mg_top_mobile": 20,
@@ -111,7 +111,7 @@
         "sidebar_position": "left",
         "sidebar_heading_font": "font_1",
         "sidebar_heading_font_size": 14,
-        "sidebar_heading_font_weight": "400",
+        "sidebar_heading_font_weight": "700",
         "sidebar_heading_text_transform": "capitalize",
         "show_filter": true,
         "filter_swatch": "Color",
@@ -124,10 +124,10 @@
         "show_toolbar": false,
         "show_sorting": true,
         "show_item_per_page": false,
-        "show_view_as": false,
-        "products_per_page": "20",
+        "show_view_as": true,
+        "products_per_page": "10",
         "layout": "4",
-        "show_infinite_scrolling": "infinite",
+        "show_infinite_scrolling": "show_more",
         "show_banner": false,
         "show_banner_1": false,
         "banner_position_1": "1",
@@ -257,7 +257,7 @@
         "color_des": "#3c3c3c",
         "fontsize_des": 16,
         "fontsize_des_mb": 12,
-        "max_width_des": 700,
+        "max_width_des": 1000,
         "title_align": "left",
         "enable_image_right": false,
         "bg_content_color": "#ffffff",

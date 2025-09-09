@@ -1,0 +1,24 @@
+{% comment %}
+  robots.txt.liquid - Shopify主题的robots.txt模板
+  使用Shopify提供的Liquid对象来生成robots.txt规则
+{% endcomment %}
+
+{% comment %} 输出Shopify默认的robots规则 {% endcomment %}
+{% for group in robots.default_groups %}
+{{- group.user_agent -}}
+
+{% for rule in group.rules %}
+{{- rule -}}
+{% endfor %}
+
+{%- if group.sitemap != blank -%}
+{{ group.sitemap }}
+{%- endif -%}
+
+{% endfor %}
+
+{% comment %} 添加自定义规则 {% endcomment %}
+User-agent: *
+Crawl-delay: 10
+Disallow: /search?q=*%2A*   # 禁止 q 含 *（编码后）
+Disallow: /search?q=**    # 禁止 q 含 *（未编码）
