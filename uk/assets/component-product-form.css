@@ -1,4 +1,6 @@
 .product-form__input {
+  display: flex;
+  flex-wrap: wrap;
   font-size: 0;
   letter-spacing: 0;
   border: none;

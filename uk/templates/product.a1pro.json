@@ -74,7 +74,7 @@
           "settings": {
             "text": "",
             "text_icon": "",
-            "text_description": "<b>⏰Aug 8, 3:00 PM – Aug 18, 3:00 PM (BST)</b><br><br>\n1.20W Blue / 2W IR Laser Modules <b>(purchased separately)</b>, Work with 350+ Materials<br>\n2.Smart Camera for Auto Focus <0.012\" Precision<br>\n3.App Control: Real-time Monitoring\n8 Safety Shields, 3X Faster<br>\n4.Smart Touch Screen: Convenient Working<br>\n5.Compact All-in-One Modular Design<br>\n6.All-New Smart Workflow<br><br>\n\n● Official Free Knowledge-sharing Platform 👉: \n<a href=\"https://wiki.creality.com/en/laser-engraver/falcon-a1-pro\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Creality Wiki</strong></a><br>\n● Download Free Software👉: \n<a href=\"https://webapp.craftseek.com/#/download\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Falcon Design Space</strong></a><br>\n●<b>✅VAT Included<br>\n●📦UK Stock – Fast local dispatch<br>\n●⏱ Ships in 2 Working Days(excl. pre-sale)<br></b>",
+            "text_description": "➤20W Blue / 2W IR Laser Modules <b>(purchased separately)</b>, Work with 350+ Materials<br>\n➤Smart Camera for Auto Focus <0.012\" Precision<br>\n➤App Control: Real-time Monitoring\n8 Safety Shields, 3X Faster<br>\n➤Smart Touch Screen: Convenient Working<br>\n➤Compact All-in-One Modular Design<br>\n➤All-New Smart Workflow<br><br>\n\n● Official Free Knowledge-sharing Platform 👉: \n<a href=\"https://wiki.creality.com/en/laser-engraver/falcon-a1-pro\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Creality Wiki</strong></a><br>\n● Download Free Software👉: \n<a href=\"https://webapp.craftseek.com/#/download\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Falcon Design Space</strong></a><br>\n● <b>✅VAT Included<br>\n● 📦UK Stock – Fast local dispatch<br>\n● ⏱ Ships in 2 Working Days(excl. pre-sale)<br></b>",
             "fontsize_text": 14,
             "content_spacing": 25,
             "custom_block_align": "left",
@@ -285,19 +285,45 @@
         "include_margins": false
       }
     },
-    "creality_falcon2_pro_page_WA6hJR": {
-      "type": "creality_falcon2_pro_page",
-      "disabled": true,
+    "creality_fa_icon_a1_pro_BVWhXH": {
+      "type": "creality_faIcon_a1_pro",
+      "name": "creality_faIcon_a1_pro",
       "settings": {}
     },
-    "cv40_6hYjg6": {
-      "type": "CV40",
-      "disabled": true,
-      "settings": {}
+    "video_block_nhzYP8": {
+      "type": "video-block",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "container": "1170",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "spotlight_bg": "#ffffff",
+        "spotlight_bg_gradient": "",
+        "video_block_title": "Unboxing Video",
+        "color_title": "#232323",
+        "fontsize_title": 16,
+        "fontsize_title_mb": 22,
+        "margin_bottom_title": 45,
+        "video_block_des": "",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "title_align": "center",
+        "autoplay": true,
+        "border_radius": "0",
+        "video_height": "54",
+        "style_video": "youtube",
+        "video_url": "https://www.youtube.com/watch?v=oQYa74Klr8k",
+        "url_mp4": "",
+        "description": "",
+        "full_width": false
+      }
     },
     "product-recommendations": {
       "type": "product-recommendations",
-      "disabled": true,
       "settings": {
         "display_product_block": true,
         "product_block_container": "1170",
@@ -347,38 +373,6 @@
         "border_layout_card": "full",
         "border_width_card": 5,
         "border_color_card": "#f0f1f4"
-      }
-    },
-    "video_block_nhzYP8": {
-      "type": "video-block",
-      "name": "t:sections.video.presets.name",
-      "settings": {
-        "container": "1170",
-        "mg_top_desktop": 50,
-        "mg_top_tablet": 50,
-        "mg_top_mobile": 50,
-        "mg_bottom_desktop": 50,
-        "mg_bottom_tablet": 50,
-        "mg_bottom_mobile": 50,
-        "spotlight_bg": "#ffffff",
-        "spotlight_bg_gradient": "",
-        "video_block_title": "Unboxing Video",
-        "color_title": "#232323",
-        "fontsize_title": 16,
-        "fontsize_title_mb": 22,
-        "margin_bottom_title": 45,
-        "video_block_des": "",
-        "color_des": "#3c3c3c",
-        "fontsize_des": 16,
-        "title_align": "center",
-        "autoplay": true,
-        "border_radius": "0",
-        "video_height": "54",
-        "style_video": "youtube",
-        "video_url": "https://www.youtube.com/watch?v=oQYa74Klr8k",
-        "url_mp4": "",
-        "description": "",
-        "full_width": false
       }
     },
     "product_block_YexXFa": {
@@ -536,10 +530,9 @@
   "order": [
     "main",
     "1752820638fc5b2941",
-    "creality_falcon2_pro_page_WA6hJR",
-    "cv40_6hYjg6",
-    "product-recommendations",
+    "creality_fa_icon_a1_pro_BVWhXH",
     "video_block_nhzYP8",
+    "product-recommendations",
     "product_block_YexXFa",
     "join_facebook_button_shopify_DRQaAj",
     "17116063070cdb3445",

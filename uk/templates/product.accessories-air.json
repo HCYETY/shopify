@@ -355,59 +355,6 @@
         "total_btn_bg_gradient_hover": ""
       }
     },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "settings": {
-        "display_product_block": true,
-        "product_block_container": "1170",
-        "padding_full_width": 0,
-        "enable_border_top": true,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#e8e8e8",
-        "border_style": "container",
-        "mg_top_desktop": 50,
-        "mg_top_tablet": 35,
-        "mg_top_mobile": 35,
-        "mg_bottom_desktop": 0,
-        "mg_bottom_tablet": 0,
-        "mg_bottom_mobile": 0,
-        "product_block_layout": "slider",
-        "product_bg": "#ffffff",
-        "style_block_header": "style1",
-        "product_block_title": "Related Products",
-        "enable_border_title": false,
-        "mg_top_title": 30,
-        "mg_bottom_title": 5,
-        "fontsize_title": 16,
-        "fontsize_title_mb": 16,
-        "color_title": "#232323",
-        "border_color_title": "#232323",
-        "product_block_title_align": "left",
-        "product_block_limit": 10,
-        "grid_gap": 30,
-        "product_block_per_row": "4",
-        "product_block_swipe_on_mobile": true,
-        "product_block_dots": false,
-        "product_block_dots_mb": true,
-        "product_block_arrows": true,
-        "product_block_arrows_mb": false,
-        "product_block_show": "4",
-        "product_block_per_view": "4",
-        "show_half": true,
-        "scroll_height": 4,
-        "scroll_track_bg": "#f1f1f1",
-        "scroll_thumb_color": "#000000",
-        "scroll_thumb_hover_color": "#444444",
-        "enable_hover_drag_icon": true,
-        "enable_layout_special": false,
-        "bg_card": "#ffffff",
-        "padding_card": 15,
-        "border_radius_card": 5,
-        "border_layout_card": "full",
-        "border_width_card": 5,
-        "border_color_card": "#f0f1f4"
-      }
-    },
     "image_banner_qEawgx": {
       "type": "image-banner",
       "blocks": {
@@ -1495,12 +1442,68 @@
         "enable_autoplay": false
       }
     },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "display_product_block": true,
+        "product_block_container": "1170",
+        "padding_full_width": 0,
+        "enable_border_top": true,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "border_style": "container",
+        "mg_top_desktop": 45,
+        "mg_top_tablet": 35,
+        "mg_top_mobile": 35,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "product_block_layout": "slider",
+        "product_bg": "#ffffff",
+        "style_block_header": "style1",
+        "product_block_title": "Related Products",
+        "enable_border_title": false,
+        "mg_top_title": 30,
+        "mg_bottom_title": 5,
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "color_title": "#232323",
+        "border_color_title": "#232323",
+        "product_block_title_align": "left",
+        "product_block_limit": 10,
+        "grid_gap": 30,
+        "product_block_per_row": "4",
+        "product_block_swipe_on_mobile": true,
+        "product_block_dots": false,
+        "product_block_dots_mb": true,
+        "product_block_arrows": true,
+        "product_block_arrows_mb": false,
+        "product_block_show": "4",
+        "product_block_per_view": "4",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_hover_drag_icon": true,
+        "enable_layout_special": false,
+        "bg_card": "#ffffff",
+        "padding_card": 15,
+        "border_radius_card": 5,
+        "border_layout_card": "full",
+        "border_width_card": 5,
+        "border_color_card": "#f0f1f4"
+      }
+    },
     "171160664926137983": {
       "type": "apps",
       "blocks": {
         "judge_me_reviews_review_widget_VnfX8t": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [
@@ -1527,7 +1530,6 @@
   },
   "order": [
     "main",
-    "product-recommendations",
     "image_banner_qEawgx",
     "video_block_DayHbg",
     "slide_show_JnKzEk",
@@ -1536,6 +1538,7 @@
     "slide_show_DLiWCL",
     "image_banner_HnpQdG",
     "image_banner_d36et9",
+    "product-recommendations",
     "171160664926137983",
     "join_facebook_button_shopify_gHdCgU"
   ]

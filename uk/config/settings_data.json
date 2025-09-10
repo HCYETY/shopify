@@ -211,6 +211,7 @@
     "trust_image_product_3": "shopify://shop_images/security-image-3.png",
     "trust_image_product_4": "shopify://shop_images/security-image-4.png",
     "trust_image_cart_1": "shopify://shop_images/image-trust.jpg",
+    "show_dynamic_browser_title": false,
     "show_saved_price": false,
     "show_scroll_down_section": false,
     "enable_view_documentation": false,

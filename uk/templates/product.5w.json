@@ -62,7 +62,7 @@
           "settings": {
             "text": "",
             "text_icon": "",
-            "text_description": "1.Ultra-Fine Precision: 0.06mm accuracy captures intricate details.<br>\n2.High-Speed Productivity: Engraves at 10,000mm/min for efficient output.<br>\n3.Large Working Area: 400x415mm with optional 150mm height support for big projects.<br>\n4.Robust Safety: Eye-protective cover and active stop for safe use.<br>\n5.Supported Materials: Cardboard, wood, bamboo, rubber,\nleather, fabric, acrylic,\nplastic, etc.<br><br>\n● Official Free Knowledge-sharing Platform 👉: \n<a href=\"https://wiki.creality.com/en/laser-engraver/cr-laser-falcon\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Creality Wiki</strong></a><br>\n● Download Free Software👉: \n<a href=\"https://webapp.craftseek.com/#/download\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Falcon Design Space</strong></a><br>\n●<b>✅VAT Included<br>\n●📦UK Stock – Fast local dispatch<br>\n●⏱ Ships in 2 Working Days(excl. pre-sale)<br></b>",
+            "text_description": "➤Ultra-Fine Precision: 0.06mm accuracy captures intricate details.<br>\n➤High-Speed Productivity: Engraves at 10,000mm/min for efficient output.<br>\n➤Large Working Area: 400x415mm with optional 150mm height support for big projects.<br>\n➤Robust Safety: Eye-protective cover and active stop for safe use.<br>\n➤Supported Materials: Cardboard, wood, bamboo, rubber,\nleather, fabric, acrylic,\nplastic, etc.<br><br>\n● Official Free Knowledge-sharing Platform 👉: \n<a href=\"https://wiki.creality.com/en/laser-engraver/cr-laser-falcon\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Creality Wiki</strong></a><br>\n● Download Free Software👉: \n<a href=\"https://webapp.craftseek.com/#/download\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Falcon Design Space</strong></a><br>\n● <b>✅VAT Included<br>\n● 📦UK Stock – Fast local dispatch<br>\n● ⏱ Ships in 2 Working Days(excl. pre-sale)<br></b>",
             "fontsize_text": 14,
             "content_spacing": 25,
             "custom_block_align": "left",
@@ -93,6 +93,7 @@
         },
         "unlimited_bundles_embed_TrDVUY": {
           "type": "shopify://apps/unlimited-bundles/blocks/embed/d33d0f48-dee0-42a0-b156-2a5dce91814a",
+          "disabled": true,
           "settings": {
             "embed_bundle_uuid": "f5d791c3-9c86-4201-9464-7dd8dd1343d1"
           }
@@ -136,7 +137,6 @@
         },
         "f1b31d90-1e43-4948-9fe3-97ba43f6fb34": {
           "type": "buy_buttons",
-          "disabled": true,
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": false,

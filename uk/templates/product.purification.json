@@ -41,6 +41,22 @@
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         },
+        "info_VNzpX4": {
+          "type": "info",
+          "settings": {
+            "show_vendor": false,
+            "show_sku": true,
+            "show_barcode": false,
+            "show_availability": false,
+            "show_product_type": false,
+            "stock_level_display": "none",
+            "enable_border_top": false,
+            "enable_border_bottom": false,
+            "color_border": "#e6e6e6",
+            "spacing_top": 10,
+            "spacing_bottom": 0
+          }
+        },
         "product_text_jqa9nc": {
           "type": "product_text",
           "settings": {
@@ -153,6 +169,7 @@
         "2e8c7c14-a0ad-4930-a1d8-3def05310426",
         "b0ea69b7-8a54-4a3c-9abd-0fcceeabaaa0",
         "judge_me_reviews_preview_badge_ingm8R",
+        "info_VNzpX4",
         "product_text_jqa9nc",
         "4f95b592-8369-4ab0-b30d-24e463fb6890",
         "klarna_on_site_messaging_app_block_rA6WVk",
@@ -1111,7 +1128,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_VnfX8t": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

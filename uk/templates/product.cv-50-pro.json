@@ -74,7 +74,7 @@
           "settings": {
             "text": "",
             "text_icon": "",
-            "text_description": "1. Powerful & Fast: 25000mm/min engraving speed for efficient work<br>\n2. Class 1 Safety: FDA-certified safety with 360° visibility<br>\n3. Precise Positioning: Pilot technology for accurate alignment<br>\n4. Durable Build: Sturdy aluminum structure for lasting use<br>\n5. Smart Design: Drawer and protective features for easy organization and safety<br><br>\n● Official Free Knowledge-sharing Platform 👉: \n<a href=\"https://wiki.creality.com/en/laser-engraver/falcon2-pro\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Creality Wiki</strong></a><br>\n● Download Free Software👉: \n<a href=\"https://webapp.craftseek.com/#/download\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Falcon Design Space</strong></a><br>\n●<b>✅VAT Included<br>\n●📦UK Stock – Fast local dispatch<br>\n●⏱ Ships in 2 Working Days(excl. pre-sale)<br></b>",
+            "text_description": "➤Safe and Visible: FDA Class 1 Safety Certification；Dual sensors, showing the sealing status<br>\n➤Multiple Security Monitoring, Worry-free Creation<br>\n➤360° Visual Design, Combines Aesthetics with Versatility<br>\n➤Full-field Protection, Unleash Unlimited Creative Space<br>\n *Note: 1.6W laser module is a free gift for the 40W option to realize higher engraving accuracy<br><br>\n● Official Free Knowledge-sharing Platform 👉: \n<a href=\"https://wiki.creality.com/en/laser-engraver/falcon2-pro\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Creality Wiki</strong></a><br>\n● Download Free Software👉: \n<a href=\"https://webapp.craftseek.com/#/download\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Falcon Design Space</strong></a><br>\n● <b>✅VAT Included<br>\n● 📦UK Stock – Fast local dispatch<br>\n● ⏱ Ships in 2 Working Days(excl. pre-sale)<br></b>",
             "fontsize_text": 14,
             "content_spacing": 25,
             "custom_block_align": "left",
@@ -322,12 +322,12 @@
     },
     "60w_Yqya3h": {
       "type": "60w",
+      "disabled": true,
       "name": "60W",
       "settings": {}
     },
     "shopify_falcon_cv50_pro_bM8BME": {
       "type": "shopify_falcon_cv50_pro",
-      "disabled": true,
       "settings": {}
     },
     "product-recommendations": {
@@ -402,7 +402,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_VnfX8t": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

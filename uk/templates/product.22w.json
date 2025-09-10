@@ -62,7 +62,7 @@
           "settings": {
             "text": "",
             "text_icon": "",
-            "text_description": "1.Powerful Cutting: 22W laser cuts 0.1mm metal effortlessly.<br>\n2.Fast Engraving: Operates at 25000mm/min for rapid creation.<br>\n3.Integrated Air Assist: Cleaner results and lens protection.<br>\n4.Easy Assembly: Simple 3-step setup for beginners.<br>\n5.Colorful Engraving: Produces hundreds of vibrant colors.<br><br>\n● Official Free Knowledge-sharing Platform 👉: \n<a href=\"https://wiki.creality.com/en/laser-engraver/falcon2\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Creality Wiki</strong></a><br>\n● Download Free Software👉: \n<a href=\"https://webapp.craftseek.com/#/download\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Falcon Design Space</strong></a><br>\n●<b>✅VAT Included<br>\n●📦UK Stock – Fast local dispatch<br>\n●⏱ Ships in 2 Working Days(excl. pre-sale)<br></b>",
+            "text_description": "➤<b>Powerful Cutting</b>: 22W laser cuts 0.1mm metal effortlessly.<br>\n➤<b>Fast Engraving</b>: Operates at 25000mm/min for rapid creation.<br>\n➤<b>Integrated Air Assist</b>: Cleaner results and lens protection.<br>\n➤<b>Easy Assembly</b>: Simple 3-step setup for beginners.<br>\n➤<b>Colorful Engraving</b>: Produces hundreds of vibrant colors.<br><br>\n● Official Free Knowledge-sharing Platform 👉: \n<a href=\"https://wiki.creality.com/en/laser-engraver/falcon2\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Creality Wiki</strong></a><br>\n● Download Free Software👉: \n<a href=\"https://webapp.craftseek.com/#/download\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Falcon Design Space</strong></a><br>\n● <b>✅VAT Included<br>\n●  📦UK Stock – Fast local dispatch<br>\n● ⏱ Ships in 2 Working Days(excl. pre-sale)<br></b>",
             "fontsize_text": 14,
             "content_spacing": 25,
             "custom_block_align": "left",
@@ -3488,7 +3488,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_VnfX8t": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

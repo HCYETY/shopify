@@ -62,7 +62,7 @@
           "settings": {
             "text": "",
             "text_icon": "",
-            "text_description": "1.High Cutting Power: 40W laser cuts 20mm cork and 0.15mm stainless steel in one pass.<br>\n2.Fast Operation: Cutting speed up to 25000 mm/min.<br>\n3.Versatile Engraving: Works on mirror stainless steel, ceramics, and opaque glass.<br>\n4.Sturdy Build: Durable anodized aluminum alloy structure for stability.<br>\n5.Offline & Software-Friendly: Supports TF card use and works with LightBurn and LaserGRBL.<br><br>\n● Official Free Knowledge-sharing Platform 👉: \n<a href=\"https://wiki.creality.com/en/laser-engraver/falcon2\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Creality Wiki</strong></a><br>\n● Download Free Software👉: \n<a href=\"https://webapp.craftseek.com/#/download\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Falcon Design Space</strong></a><br>\n●<b>✅VAT Included<br>\n●📦UK Stock – Fast local dispatch<br>\n●⏱ Ships in 2 Working Days(excl. pre-sale)<br></b>",
+            "text_description": "➤<b>High Cutting Power</b>: 40W laser cuts 20mm cork and 0.15mm stainless steel in one pass.<br>\n➤<b>Fast Operation</b>: Cutting speed up to 25000 mm/min.<br>\n➤<b>Versatile Engraving</b>: Works on mirror stainless steel, ceramics, and opaque glass.<br>\n➤<b>Sturdy Build</b>: Durable anodized aluminum alloy structure for stability.<br>\n➤<b>Offline & Software-Friendly</b>: Supports TF card use and works with LightBurn and LaserGRBL.<br><br>\n● Official Free Knowledge-sharing Platform 👉: \n<a href=\"https://wiki.creality.com/en/laser-engraver/falcon2\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Creality Wiki</strong></a><br>\n● Download Free Software👉: \n<a href=\"https://webapp.craftseek.com/#/download\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Falcon Design Space</strong></a><br>\n● <b>✅VAT Included<br>\n● 📦UK Stock – Fast local dispatch<br>\n● ⏱ Ships in 2 Working Days(excl. pre-sale)<br></b>",
             "fontsize_text": 14,
             "content_spacing": 25,
             "custom_block_align": "left",
@@ -370,7 +370,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_VnfX8t": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

@@ -74,7 +74,7 @@
           "settings": {
             "text": "",
             "text_icon": "",
-            "text_description": "1. Adjustable Power: 22W/40W/60W settings in one machine for versatile use<br>\n2. High-Speed Engraving: Works at 25000mm/min for fast results<br>\n3. Built-in Camera: Auto-positioning for precise engravings<br>\n4. Safe Design: Fully enclosed with Class 1 safety and 360° visibility<br>\n5. Bonus Module: Includes 1.6W laser for detailed engraving tasks.<br>",
+            "text_description": "➤Intelligent Three-level adjustable beam<br>\n➤Cutting Power Up to 60w<br>\n➤3 Lasers in one Machine<br>\n➤Super-higher Working Efficiency<br>\n➤Fully Enclosed Design<br>\n➤Built-in Camera for Auto-positioning<br>\n➤Bonus with 1.6W Laser Module.<br><br>\n● Official Free Knowledge-sharing Platform 👉: \n<a href=\"https://wiki.creality.com/en/laser-engraver/falcon2-pro\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Creality Wiki</strong></a><br>\n● Download Free Software👉: \n<a href=\"https://webapp.craftseek.com/#/download\" target=\"_blank\">\n<strong style=\"color: #14A9DE;\">Falcon Design Space</strong></a><br>\n● <b>✅VAT Included<br>\n● 📦UK Stock – Fast local dispatch<br>\n● ⏱ Ships in 2 Working Days(excl. pre-sale)<br></b>",
             "fontsize_text": 14,
             "content_spacing": 25,
             "custom_block_align": "left",
@@ -396,7 +396,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_cjzCiA": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

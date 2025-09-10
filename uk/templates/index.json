@@ -22,12 +22,13 @@
             "nav_position": "inside",
             "show_pagination": true,
             "pagination_position": "inside",
-            "show_scrollbar": true
+            "show_scrollbar": false
           },
           "blocks": {
             "home_banner_card_big_n6yPKx": {
               "type": "home-banner-card-big",
               "name": "Home Banner Card Big",
+              "disabled": true,
               "settings": {
                 "image": "shopify://shop_images/1880X600_UK_38834ad0-256c-4b01-ae8d-9b868b914b5f.jpg",
                 "image_mobile": "shopify://shop_images/957X1050_UK_b9019ee2-6246-4705-b260-c0a58dee02f6.jpg",
@@ -42,26 +43,6 @@
                 "desc_color": "#ffffff",
                 "desc_color_mobile": "#ffffff",
                 "btn_text": ""
-              },
-              "blocks": {}
-            },
-            "home_banner_card_big_R7fF4r": {
-              "type": "home-banner-card-big",
-              "name": "Home Banner Card Big",
-              "settings": {
-                "image": "shopify://shop_images/20250806-100210.jpg",
-                "image_mobile": "shopify://shop_images/20250806-100203.jpg",
-                "link": "shopify://products/falcon-a1-pro-20w-dual-laser-engraver",
-                "subtitle": "Go Pro, Go Smart, Go Earn",
-                "subtitle_color": "#f96d32",
-                "subtitle_color_mobile": "#f96d32",
-                "title": "Falcon A1 PRO",
-                "title_color": "#ffffff",
-                "title_color_mobile": "#ffffff",
-                "desc": "New Arrival",
-                "desc_color": "#ffffff",
-                "desc_color_mobile": "#ffffff",
-                "btn_text": "Learn More"
               },
               "blocks": {}
             },
@@ -81,6 +62,26 @@
                 "desc_color": "#1e1e1e",
                 "desc_color_mobile": "#1e1e1e",
                 "btn_text": "Shop Now"
+              },
+              "blocks": {}
+            },
+            "home_banner_card_big_R7fF4r": {
+              "type": "home-banner-card-big",
+              "name": "Home Banner Card Big",
+              "settings": {
+                "image": "shopify://shop_images/20250806-100210.jpg",
+                "image_mobile": "shopify://shop_images/20250806-100203.jpg",
+                "link": "shopify://products/falcon-a1-pro-20w-dual-laser-engraver",
+                "subtitle": "Go Pro, Go Smart, Go Earn",
+                "subtitle_color": "#f96d32",
+                "subtitle_color_mobile": "#f96d32",
+                "title": "Falcon A1 PRO",
+                "title_color": "#ffffff",
+                "title_color_mobile": "#ffffff",
+                "desc": "New Arrival",
+                "desc_color": "#ffffff",
+                "desc_color_mobile": "#ffffff",
+                "btn_text": "Buy Now"
               },
               "blocks": {}
             },
@@ -125,8 +126,8 @@
           },
           "block_order": [
             "home_banner_card_big_n6yPKx",
-            "home_banner_card_big_R7fF4r",
             "home_banner_card_big_dargAH",
+            "home_banner_card_big_R7fF4r",
             "home_banner_card_big_UfCy7i",
             "home_banner_card_big_9DChDp"
           ]
