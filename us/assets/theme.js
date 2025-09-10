@@ -23,6 +23,21 @@
     var halo = {
         haloTimeout: null,
         isAjaxLoading: false,
+        lastCartRequestTime: 0,
+        minCartRequestInterval: 1000, // 最小购物车请求间隔1秒
+
+        // 检查是否可以发送购物车请求（防抖）
+        canMakeCartRequest: function() {
+            const now = Date.now();
+            const timeSinceLastRequest = now - this.lastCartRequestTime;
+            
+            if (timeSinceLastRequest < this.minCartRequestInterval) {
+                return false;
+            }
+            
+            this.lastCartRequestTime = now;
+            return true;
+        },
 
         ready: function (){
             this.loaderScript();
@@ -2100,6 +2115,7 @@
                     event.stopPropagation();
                     
                     var $target = $(event.target),
+                        $button = $target.closest('[data-quickshop-popup]'),
                         product = $target.parents('.product-item'),
                         productJson = product.data('json-product'),
                         variantPopup = product.find('.variants-popup');
@@ -2151,9 +2167,11 @@
                                 halo.appendProductQuickShopOption2(product);
                             }
                         } else if ($body.hasClass('quick_shop_option_3')) {
-                            const handle = $target.data('product-handle');
-                            if (!$('.productListing').hasClass('productList')){
+                            const handle = $button.data('product-handle');
+                            if (handle && !$('.productListing').hasClass('productList')){
                                 halo.updateContentQuickshopOption3(handle);
+                            } else if (!handle) {
+                                console.error('Product handle not found for quick shop. Button:', $button[0]);
                             }
                             
                             $doc.on('click', '[data-close-quick-shop-popup]', (event) => {
@@ -2768,9 +2786,9 @@
                 event.stopPropagation();
 
                 var $target = $(event.target),
-                    product = $target.parents('.product-item'),
-                    MobilePopup_Option_2 = $doc.find('#halo-card-mobile-popup'),
-                    ProductQuickShopShown_Option_2 = $doc.find('.quickshop-popup-show');
+product = $target.parents('.product-item'),
+                        MobilePopup_Option_2 = $doc.find('#halo-card-mobile-popup'),
+                        ProductQuickShopShown_Option_2 = $doc.find('.quickshop-popup-show');
 
                 if($target.closest('product-form').length > 0){
                     var productForm = $target.closest('form');
@@ -2948,11 +2966,19 @@
             }
 
             const addItemToCart = (variantId) => {
+                // 检查是否可以发送请求（防抖）
+                if (!halo.canMakeCartRequest()) {
+                    return;
+                }
+
                 fetch(window.Shopify.routes.root + 'cart/add.js', {
                     method: 'POST',
                     body: formData
                 })
                 .then(response => {
+                    if (response.status === 429) {
+                        throw new Error('TOO_MANY_REQUESTS');
+                    }
                     return response.json();
                 })
                 .catch((error) => {
@@ -3057,6 +3083,11 @@
         },  
 
         updateContentQuickshopOption3: function(handle){
+            if (!handle) {
+                console.error('Product handle is required for quick shop');
+                return;
+            }
+            
             var quickShopPopup = $('#halo-quickshop-popup-option-3'),
                 quickShopPopupContent = quickShopPopup.find('.halo-popup-content');
 
@@ -4570,7 +4601,10 @@
                 }
 
                 if (sliderNav.find('[data-youtube]').length > 0) {
-                    if (typeof window.onYouTubeIframeAPIReady === 'undefined') {
+                    if (typeof YT !== 'undefined' && YT.Player) {
+                        // YouTube API already loaded
+                        halo.initYoutubeCarousel(sliderNav);
+                    } else if (typeof window.onYouTubeIframeAPIReady === 'undefined') {
                         window.onYouTubeIframeAPIReady = halo.initYoutubeCarousel.bind(window, sliderNav);
 
                         const tag = document.createElement('script');
@@ -4578,7 +4612,13 @@
                         const firstScriptTag = document.getElementsByTagName('script')[0];
                         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
                     } else {
-                        halo.initYoutubeCarousel(sliderNav);
+                        // Wait for API to load
+                        const checkYT = setInterval(() => {
+                            if (typeof YT !== 'undefined' && YT.Player) {
+                                clearInterval(checkYT);
+                                halo.initYoutubeCarousel(sliderNav);
+                            }
+                        }, 100);
                     }
                 }
 
@@ -4855,6 +4895,10 @@
             }
 
             function onPlayerStateChange(event) {
+                if (typeof YT === 'undefined' || !YT.PlayerState) {
+                    return;
+                }
+                
                 if (event.data === YT.PlayerState.PLAYING) {
                     $slick.slick('slickPause');
                 }
@@ -4870,6 +4914,11 @@
                     const id = `youtube_player_${Math.floor(Math.random() * 100)}`;
 
                     $vid.attr('id', id);
+
+                    if (typeof YT === 'undefined' || !YT.Player) {
+                        console.error('YouTube API not loaded yet');
+                        return;
+                    }
 
                     const player = new YT.Player(id, {
                         host: 'http://www.youtube.com',
@@ -5867,6 +5916,12 @@
         },
 
         expressAjaxAddToCart: function(variant_id, quantity, cartBtn, form) {
+            // 检查是否可以发送请求（防抖）
+            if (!this.canMakeCartRequest()) {
+                console.log('请求过于频繁，跳过此次请求');
+                return;
+            }
+
             $.ajax({
                 type: "post",
                 url: "/cart/add.js",
@@ -5922,7 +5977,20 @@
                 },
 
                 error: function(xhr, text) {
-                    alert($.parseJSON(xhr.responseText).description);
+                    let errorMessage = '添加商品到购物车失败';
+                    
+                    if (xhr.status === 429) {
+                        errorMessage = '请求过于频繁，请稍后再试';
+                    } else {
+                        try {
+                            const response = $.parseJSON(xhr.responseText);
+                            errorMessage = response.description || errorMessage;
+                        } catch (e) {
+                            console.error('解析错误响应失败:', e);
+                        }
+                    }
+                    
+                    alert(errorMessage);
                     window.setTimeout(function() {
                         cartBtn.text(window.inventory_text.add_to_cart);
                     }, 400);
