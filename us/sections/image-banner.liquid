@@ -580,7 +580,7 @@
                                         {%- endif -%}
                                     </div>
                                     {%- if enable_scroll_down -%}
-                                        <button type="button" class="btn-scroll-down b-zero bg-none" data-scroll-down="" style="--btn-scroll_color: {{ heading_color }}" aria-label="{{'general.common.scroll_down' | t }}">{% render 'icon-chevron-down' %}</a>
+                                        <a type="button" class="btn-scroll-down b-zero bg-none" data-scroll-down="" style="--btn-scroll_color: {{ heading_color }}" aria-label="{{'general.common.scroll_down' | t }}">{% render 'icon-chevron-down' %}</a>
                                     {%- endif -%}
                                 </div>
                             {%- elsif block.type == 'smallImg' -%}
