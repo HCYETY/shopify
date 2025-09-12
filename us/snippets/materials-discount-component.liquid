@@ -1,0 +1,37 @@
+<materials-discount-component class="haloMaterialsDiscount" data-materials-discount-wrapper>
+    <div class="materials-savings-info" data-materials-savings-info>
+        <div class="savings-text" data-materials-savings-text></div>
+    </div>
+    <div class="materials-progress" data-text-enabled="false" data-materials-progress>
+        <div class="materials-progress-bar" role="progressbar">
+            <div class="materials-progress-meter" data-materials-progress-meter>
+            </div>
+        </div>
+    </div>
+    <div class="materials-bundle-info" data-materials-bundle-info>
+        <div class="bundle-title">YOUR MATERIALS BUNDLE</div>
+        <div class="bundle-count" data-materials-bundle-count>0 Item(s) in bundle</div>
+        <div class="bundle-pricing">
+            <div class="current-price" data-materials-current-price>¥0.00</div>
+            <div class="original-price" data-materials-original-price>¥0.00</div>
+        </div>
+    </div>
+    
+    <!-- 耗材商品ID列表，用于JavaScript识别 -->
+    <script type="application/json" data-materials-product-ids>
+    {%- if settings.materials_collection_handle != blank -%}
+        {%- assign materials_collection = collections[settings.materials_collection_handle] -%}
+        {%- if materials_collection -%}
+            [
+                {%- for product in materials_collection.products -%}
+                    {{ product.id }}{% unless forloop.last %},{% endunless %}
+                {%- endfor -%}
+            ]
+        {%- else -%}
+            []
+        {%- endif -%}
+    {%- else -%}
+        []
+    {%- endif -%}
+    </script>
+</materials-discount-component>

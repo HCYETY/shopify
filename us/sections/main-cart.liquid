@@ -1,5 +1,9 @@
 <link rel="stylesheet" href="{{ 'component-cart.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-summary.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- if settings.show_materials_discount_progress -%}
+    <link rel="stylesheet" href="{{ 'component-materials-discount.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript>{{ 'component-materials-discount.css' | asset_url | stylesheet_tag }}</noscript>
+{%- endif -%}
 <noscript>{{ 'component-cart.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-summary.css' | asset_url | stylesheet_tag }}</noscript>
 {%- liquid
@@ -56,6 +60,11 @@
             {%- if settings.show_calculator_free_shipping_message -%}
                 {{ 'component-calculator-shipping.css' | asset_url | stylesheet_tag }}
                 <div class="cart-message">{% render 'free-shipping-component' %}</div>
+            {%- endif -%}
+            {%- if settings.show_materials_discount_progress -%}
+                <div class="cart-materials-discount">
+                    {% render 'materials-discount-component' %}
+                </div>
             {%- endif -%}
             {%- liquid
                 assign cartDiscounts = 'template ' | split: ' '
@@ -391,9 +400,23 @@
     #CartSection-{{ section.id }} .cart-container.container-full {padding-left: {{ side_padding_full_width }};padding-right: {{ side_padding_full_width }}}
     @media (max-width: 1024px) {#CartSection-{{ section.id }} .cart-container {padding-top: {{ padding_top_tablet }};padding-bottom: {{ padding_bottom_tablet }}}}
     @media (max-width: 550px) {#CartSection-{{ section.id }} .cart-container {padding-top: {{ padding_top_mobile }};padding-bottom: {{ padding_bottom_mobile }}}}
+    
+    {%- if settings.show_materials_discount_progress -%}
+        .cart-materials-discount {
+            margin: 20px 0;
+            padding: 0 15px;
+        }
+        
+        .cart-materials-discount .haloMaterialsDiscount {
+            padding: 0;
+        }
+    {%- endif -%}
 </style>
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
+{%- if settings.show_materials_discount_progress -%}
+    <script src="{{ 'materials-discount-message.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
 {% schema %}
 {
     "name": "t:sections.main_cart.name",

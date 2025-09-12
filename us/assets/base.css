@@ -3700,7 +3700,7 @@ summary::-webkit-details-marker {
     }
 
     .halo-cart-sidebar .halo-sidebar-wrapper{
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 
     .halo-sidebar.halo-sidebar-left{
