@@ -106,6 +106,16 @@
         "announcement_gYMmpP": {
           "type": "announcement",
           "settings": {
+            "text": "<a href=\"https://www.crealityfalcon.com/pages/fall-into-creation-2025\" style=\"color: #000; font-weight: bold; text-decoration: none;\">\n\n🍂 Fall Into Creation – Special Offers\n\n<span style=\"color:#ff4d00;\">\nLive Now!\n</span> \n</a>",
+            "btn_color": "#232323",
+            "btn_border_color": "#ffffff",
+            "btn_bg_color": "#ffffff",
+            "btn_bg_color_gradient": ""
+          }
+        },
+        "announcement_p8QznY": {
+          "type": "announcement",
+          "settings": {
             "text": "<a href=\"https://www.crealityfalcon.com/products/falcon-a1-10w-enclosed-laser-engraver-and-cutter?variant=50670072201513\" style=\"color: #000; font-weight: bold; text-decoration: none;\">\n💌 Fresh Look – Falcon A1 in White!     🛒\n<span style=\"color:#ff4d00;\">\nShop Now\n</span> \n</a>",
             "btn_color": "#232323",
             "btn_border_color": "#ffffff",
@@ -147,6 +157,7 @@
       },
       "block_order": [
         "announcement_gYMmpP",
+        "announcement_p8QznY",
         "announcement_8jVXmJ",
         "announcement_8gedGD",
         "announcement_HWTQYW"

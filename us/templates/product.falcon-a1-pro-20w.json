@@ -226,6 +226,59 @@
         "total_btn_bg_gradient_hover": ""
       }
     },
+    "2025_03_27_s7_M4qBrP": {
+      "type": "2025-03-27-s7",
+      "blocks": {
+        "youtube_video_slider_D99KwJ": {
+          "type": "youtube-video-slider",
+          "settings": {
+            "autoplay": true
+          },
+          "blocks": {
+            "youtube_video_card_D93zCf": {
+              "type": "youtube-video-card",
+              "name": "YouTube视频卡片",
+              "settings": {
+                "video_url": "https://www.youtube.com/watch?v=ro1gVlPe1v0",
+                "autoplay": false
+              },
+              "blocks": {}
+            },
+            "youtube_video_card_knbWK8": {
+              "type": "youtube-video-card",
+              "name": "YouTube视频卡片",
+              "settings": {
+                "video_url": "https://youtu.be/v1Wq4bbH1Vc",
+                "autoplay": false
+              },
+              "blocks": {}
+            },
+            "youtube_video_card_DMNaEM": {
+              "type": "youtube-video-card",
+              "name": "YouTube视频卡片",
+              "settings": {
+                "video_url": "https://www.youtube.com/watch?v=xRzL1hsOOzU",
+                "autoplay": false
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "youtube_video_card_D93zCf",
+            "youtube_video_card_knbWK8",
+            "youtube_video_card_DMNaEM"
+          ]
+        }
+      },
+      "block_order": [
+        "youtube_video_slider_D99KwJ"
+      ],
+      "name": "2025-周年庆-s7",
+      "settings": {
+        "background_color": "#fff",
+        "headline": "Product Video Center"
+      }
+    },
     "creality_fa_icon_a1_pro_Jriab7": {
       "type": "creality_faIcon_a1_pro",
       "name": "creality_faIcon_a1_pro",
@@ -412,6 +465,7 @@
   },
   "order": [
     "main",
+    "2025_03_27_s7_M4qBrP",
     "creality_fa_icon_a1_pro_Jriab7",
     "1740793738f445bb93",
     "product-recommendations",
