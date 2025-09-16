@@ -28,10 +28,9 @@
             "home_banner_card_big_n6yPKx": {
               "type": "home-banner-card-big",
               "name": "Home Banner Card Big",
-              "disabled": true,
               "settings": {
-                "image": "shopify://shop_images/1880X600_UK_38834ad0-256c-4b01-ae8d-9b868b914b5f.jpg",
-                "image_mobile": "shopify://shop_images/957X1050_UK_b9019ee2-6246-4705-b260-c0a58dee02f6.jpg",
+                "image": "shopify://shop_images/US_e10c8212-6626-4e93-b6bb-f113b7c2392d.jpg",
+                "image_mobile": "shopify://shop_images/US_9f5faf6e-3abc-4b2e-b557-5e7b9475d6fc.jpg",
                 "link": "shopify://pages/promotion-sale",
                 "subtitle": "",
                 "subtitle_color": "#f96d32",
