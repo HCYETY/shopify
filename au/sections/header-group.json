@@ -617,12 +617,11 @@
       "blocks": {
         "custom_block_one_dTULNc": {
           "type": "custom_block_one",
-          "disabled": true,
           "settings": {
-            "option_image_one": "shopify://shop_images/4fe46b8023771947dd7d0ffcdf636751_5fbb93d0-9c43-462f-9b2b-e5623988a5ef.png",
-            "option_title_one": "Back to School Sale",
+            "option_image_one": "shopify://shop_images/banner_48e968d2-a79d-4923-a589-abe7db52b257.png",
+            "option_title_one": "Spring Sale",
             "option_subtitle_one": "",
-            "option_link_one": "https://au.crealityfalcon.com/pages/back-to-school-sale"
+            "option_link_one": "https://au.crealityfalcon.com/pages/creality-falcon-spring-laser-jewelry-making"
           }
         },
         "custom_block_one_YDQHmT": {
