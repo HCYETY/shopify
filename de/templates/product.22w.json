@@ -85,14 +85,23 @@
         "4f95b592-8369-4ab0-b30d-24e463fb6890": {
           "type": "price",
           "settings": {
-            "fontsize_text": 18,
-            "spacing_top": 0,
-            "spacing_bottom": 22
+            "fontsize_text": 22,
+            "spacing_top": 10,
+            "spacing_bottom": 15
+          }
+        },
+        "klarna_on_site_messaging_app_block_wPBmG4": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
           }
         },
         "bd3a641e-98d0-4da1-ab57-d5e4b0391995": {
           "type": "countdown",
-          "disabled": true,
           "settings": {
             "spacing_top": 0,
             "spacing_bottom": 20
@@ -103,7 +112,7 @@
           "settings": {
             "text": "",
             "text_icon": "",
-            "text_description": "<p><span style=\"color: #ffffff;\"><strong><span style=\"font-size: 14pt;\">August Special Offer</span></strong></span></p>\n<p><span style=\"color: #ffffff;\">1.</span> <span style=\"color: #e03e2d;\"><strong>Engravers</strong></span><span style=\"color: #ffffff;\">: Auto </span><strong><span style=\"color: #e03e2d;\">€50 Off</span></strong> <span style=\"color: #ffffff;\">on orders over</span><span style=\"color: #e03e2d;\"> <strong>€500</strong></span><span style=\"color: #ffffff;\">;</span></p>\n<p><span style=\"color: #ffffff;\">2.</span> <span style=\"color: #e03e2d;\"><strong>Free Gift</strong><span style=\"color: #ffffff;\">:</span></span> <span style=\"color: #ffffff;\">Auto add to your cart;</span></p>\n<p><span style=\"color: #ffffff;\">3.</span> <span style=\"color: #e03e2d;\"><strong>Materials</strong></span><span style=\"color: #ffffff;\">: Buy</span> <strong><span style=\"color: #e03e2d;\">1</span></strong> <span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">20% Off</span></strong><span style=\"color: #ffffff;\">, buy</span> <strong><span style=\"color: #e03e2d;\">2</span> </strong><span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">30% Off</span><span style=\"color: #ffffff;\">.</span></strong></p>",
+            "text_description": "<p><span style=\"color: #ffffff;\"><strong><span style=\"font-size: 14pt;\">September Special Offer</span></strong></span></p>\n<p><span style=\"color: #ffffff;\">1.</span> <span style=\"color: #e03e2d;\"><strong>Special Offer Sitewide: </strong></span><span style=\"color: #ffffff;\">: Auto Auto €50 Off 600；€100 Off €1000；€150 Off €2000.</span>\n</p><p><span style=\"color: #ffffff;\">2.</span> <span style=\"color: #e03e2d;\"><strong>Materials</strong></span><span style=\"color: #ffffff;\">: Buy</span> <strong><span style=\"color: #e03e2d;\">1</span></strong> <span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">20% Off</span></strong><span style=\"color: #ffffff;\">, buy</span> <strong><span style=\"color: #e03e2d;\">2</span> </strong><span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">30% Off</span><span style=\"color: #ffffff;\">.</span></strong></p>",
             "fontsize_text": 14,
             "content_spacing": 10,
             "custom_block_align": "left",
@@ -188,14 +197,20 @@
             "bin_bg_color_hover_gradient": ""
           }
         },
-        "klarna_on_site_messaging_app_block_wPBmG4": {
-          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+        "product_text_X9pcdP": {
+          "type": "product_text",
           "settings": {
-            "data_key": "credit-promotion-badge",
-            "theme": "default",
-            "topPadding": "0",
-            "bottomPadding": "0",
-            "messagePrefix": ""
+            "text": "Produktdetails",
+            "text_icon": "",
+            "text_description": "- 22 W Stärkere Leistung als je zuvor<br>\n- 25000mm/min Schnell für höheres Gravur-Tempo<br>\n- Neue integrierte Air Assist<br>\n- Fünf Schutzmechanismen für mehr Sicherheit<br>\n- Unterstützt Offline-Erstellung<br>\n- Bringen Sie Farbe in Ihre Werke und in Ihr Leben<br>\n- Dynamische Offline-Vorschau<br>\n- Einfach zu installieren & verwenden<br>\n-  Hervorragende Bewegungsstabilität<br>\n- 400*415mm Arbeitsbereich",
+            "fontsize_text": 14,
+            "content_spacing": 25,
+            "custom_block_align": "left",
+            "color_title": "#232323",
+            "background_color_block": "#f7f8fa",
+            "background_gradient_color_block": "",
+            "spacing_top": 0,
+            "spacing_bottom": 0
           }
         },
         "683f2b15-db3b-4f63-8d0f-e688cc678581": {
@@ -243,6 +258,7 @@
         },
         "bd066b80-c8e3-4f3e-8280-b27fbf6e9423": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "open_tab_mobile": true,
             "title": "Product Details",
@@ -330,6 +346,7 @@
         "b87b5d94-d9c5-4d66-a99b-da56e65d25e9",
         "4e59f24a-8859-4579-a80a-d70e6f1bf66b",
         "4f95b592-8369-4ab0-b30d-24e463fb6890",
+        "klarna_on_site_messaging_app_block_wPBmG4",
         "bd3a641e-98d0-4da1-ab57-d5e4b0391995",
         "product_text_U6VErm",
         "d98e243b-3682-495a-965a-1c7f7d460880",
@@ -337,7 +354,7 @@
         "04ea8843-f461-4f1d-8ea4-43f62fdfb21e",
         "custom_information_pRGU3x",
         "f1b31d90-1e43-4948-9fe3-97ba43f6fb34",
-        "klarna_on_site_messaging_app_block_wPBmG4",
+        "product_text_X9pcdP",
         "683f2b15-db3b-4f63-8d0f-e688cc678581",
         "19de9abb-17c8-4d67-941d-b32706ed06fd",
         "product_text_VWbpQg",
@@ -2805,7 +2822,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_VnfX8t": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

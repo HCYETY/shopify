@@ -14,10 +14,9 @@
       "blocks": {
         "image_eADbzq": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image_slide": "shopify://shop_images/EU_DE_CA-750X375.png",
-            "image_slide_mb": "shopify://shop_images/EU_DE_CA-1000x1000.png",
+            "image_slide": "shopify://shop_images/DE-1880X600_23ce83f1-b9ea-4d7e-ba34-2115a54e2b65.png",
+            "image_slide_mb": "shopify://shop_images/DE-957x1350_923d6923-c891-42db-8314-a8abe4f8f919.png",
             "alignment": "left",
             "enable_custom_position": false,
             "custom_horizontal": "",
@@ -84,7 +83,7 @@
             "enable_underline": true,
             "font_size_link": 36,
             "button_slide": "",
-            "link": "https://de.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-geschlossener",
+            "link": "https://de.crealityfalcon.com/pages/monthly-sale",
             "button_style": "button_1",
             "button_slide_2": "",
             "link_2": "",

@@ -27,9 +27,8 @@
         },
         "announcement_NX9kq3": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "<p><a href=\"https://de.crealityfalcon.com/pages/2025-mid-year-sale\" target=\"_self\" style=\"text-decoration: underline; color: rgb(255, 192, 0);\"><span style=\"color: rgb(255, 192, 0);\">🎉2025 Mid-Year Sale🎉 Save Up To 60% Off on Engravers\n🔔</span></a></p>",
+            "text": "<p><a href=\"https://de.crealityfalcon.com/pages/monthly-sale\" target=\"_self\" style=\"text-decoration: underline; color: rgb(255, 192, 0);\"><span style=\"color: rgb(255, 192, 0);\">⏰ Sep. 15th – Sep. 23rd | 2025 Autumn Sale🎉 Save Up To 62% Off on Engravers\n🔔</span></a></p>",
             "btn_color": "#232323",
             "btn_border_color": "#ffffff",
             "btn_bg_color": "#232323",
@@ -38,6 +37,7 @@
         },
         "announcement_WztYTB": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Free shipping over €49.99 // 14-Day Money-Back Guarantee // 12-Month Warranty // Live Chat",
             "btn_color": "#f84248",
@@ -45,12 +45,24 @@
             "btn_bg_color": "#ffffff",
             "btn_bg_color_gradient": ""
           }
+        },
+        "countdown_XKWyHh": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "top_message_text": "",
+            "annou_countdown": "Sep 23, 2025 18:00:00",
+            "color_countdown_text": "#06142e",
+            "border_color_countdown": "#f7f8fa",
+            "bg_color_countdown": "#f7f8fa"
+          }
         }
       },
       "block_order": [
         "9da20430-b562-46f1-9f28-e5592eeec567",
         "announcement_NX9kq3",
-        "announcement_WztYTB"
+        "announcement_WztYTB",
+        "countdown_XKWyHh"
       ],
       "settings": {
         "enable_announcement": true,

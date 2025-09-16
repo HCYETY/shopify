@@ -85,14 +85,13 @@
         "4f95b592-8369-4ab0-b30d-24e463fb6890": {
           "type": "price",
           "settings": {
-            "fontsize_text": 18,
-            "spacing_top": 0,
-            "spacing_bottom": 22
+            "fontsize_text": 22,
+            "spacing_top": 10,
+            "spacing_bottom": 15
           }
         },
         "bd3a641e-98d0-4da1-ab57-d5e4b0391995": {
           "type": "countdown",
-          "disabled": true,
           "settings": {
             "spacing_top": 0,
             "spacing_bottom": 20
@@ -103,7 +102,7 @@
           "settings": {
             "text": "",
             "text_icon": "",
-            "text_description": "<p><span style=\"color: #ffffff;\"><strong><span style=\"font-size: 14pt;\">August Special Offer</span></strong></span></p>\n<p><span style=\"color: #ffffff;\">1.</span> <span style=\"color: #e03e2d;\"><strong>Engravers</strong></span><span style=\"color: #ffffff;\">: Auto </span><strong><span style=\"color: #e03e2d;\">€50 Off</span></strong> <span style=\"color: #ffffff;\">on orders over</span><span style=\"color: #e03e2d;\"> <strong>€500</strong></span><span style=\"color: #ffffff;\">;</span></p>\n<p><span style=\"color: #ffffff;\">2.</span> <span style=\"color: #e03e2d;\"><strong>Free Gift</strong><span style=\"color: #ffffff;\">:</span></span> <span style=\"color: #ffffff;\">Auto add to your cart;</span></p>\n<p><span style=\"color: #ffffff;\">3.</span> <span style=\"color: #e03e2d;\"><strong>Materials</strong></span><span style=\"color: #ffffff;\">: Buy</span> <strong><span style=\"color: #e03e2d;\">1</span></strong> <span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">20% Off</span></strong><span style=\"color: #ffffff;\">, buy</span> <strong><span style=\"color: #e03e2d;\">2</span> </strong><span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">30% Off</span><span style=\"color: #ffffff;\">.</span></strong></p>",
+            "text_description": "<p><span style=\"color: #ffffff;\"><strong><span style=\"font-size: 14pt;\">September Special Offer</span></strong></span></p>\n<p><span style=\"color: #ffffff;\">1.</span> <span style=\"color: #e03e2d;\"><strong>Special Offer Sitewide: </strong></span><span style=\"color: #ffffff;\">: Auto Auto €50 Off 600；€100 Off €1000；€150 Off €2000.</span>\n</p><p><span style=\"color: #ffffff;\">2.</span> <span style=\"color: #e03e2d;\"><strong>Materials</strong></span><span style=\"color: #ffffff;\">: Buy</span> <strong><span style=\"color: #e03e2d;\">1</span></strong> <span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">20% Off</span></strong><span style=\"color: #ffffff;\">, buy</span> <strong><span style=\"color: #e03e2d;\">2</span> </strong><span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">30% Off</span><span style=\"color: #ffffff;\">.</span></strong></p>",
             "fontsize_text": 14,
             "content_spacing": 10,
             "custom_block_align": "left",
@@ -198,6 +197,22 @@
             "bin_bg_color_hover_gradient": ""
           }
         },
+        "product_text_9xyyzV": {
+          "type": "product_text",
+          "settings": {
+            "text": "Produktdetails",
+            "text_icon": "",
+            "text_description": "- Einstellbarer Lichtpunkt<br>\n- 25000mm/min Erstaunliche Geschwindigkeit<br>\n- Bahnbrechende integrierte Luftunterstützung<br>\n- Steuerungssoftware: LightBurn, LaserGRBL<br>\n- Luftstromüberwachung & Linsenüberwachung<br>",
+            "fontsize_text": 14,
+            "content_spacing": 25,
+            "custom_block_align": "left",
+            "color_title": "#232323",
+            "background_color_block": "#f7f8fa",
+            "background_gradient_color_block": "",
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
         "product_text_Hp3QiV": {
           "type": "product_text",
           "disabled": true,
@@ -217,6 +232,7 @@
         },
         "683f2b15-db3b-4f63-8d0f-e688cc678581": {
           "type": "customer_viewing",
+          "disabled": true,
           "settings": {
             "customer_viewing_number": "283, 100, 59, 11, 14, 185, 193, 165, 50, 38, 99, 112, 46, 10, 125, 200, 250, 18",
             "customer_viewing_time": 5,
@@ -242,6 +258,7 @@
         },
         "bd066b80-c8e3-4f3e-8280-b27fbf6e9423": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "open_tab_mobile": true,
             "title": "Product Details",
@@ -337,6 +354,7 @@
         "klarna_on_site_messaging_app_block_3gqThD",
         "custom_information_9RxWwN",
         "f1b31d90-1e43-4948-9fe3-97ba43f6fb34",
+        "product_text_9xyyzV",
         "product_text_Hp3QiV",
         "683f2b15-db3b-4f63-8d0f-e688cc678581",
         "19de9abb-17c8-4d67-941d-b32706ed06fd",
@@ -3435,7 +3453,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_VnfX8t": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [
