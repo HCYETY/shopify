@@ -5921,30 +5921,7 @@
           }
         ],
         "default": "button"
-      },
-      {
-        "type": "header",
-        "content": "Materials Discount Progress"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_materials_discount_progress",
-        "label": "Show Materials Discount Progress?",
-        "default": true
-      },
-      {
-        "type": "collection",
-        "id": "materials_collection_handle",
-        "label": "Materials Collection",
-        "info": "Select the collection that contains all materials products"
-      },
-        {
-          "type": "text",
-          "id": "materials_discount_rules",
-          "label": "Discount Rules",
-          "default": "2:5,5:10,10:15",
-          "info": "Multiple discount rules in format 'quantity:percentage' separated by commas (e.g., '2:5,3:10,5:15' means 2 items=5% off, 3 items=10% off, 5 items=15% off)"
-        }
+      }
     ]
   },
   {

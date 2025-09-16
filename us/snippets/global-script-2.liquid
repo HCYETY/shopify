@@ -4,13 +4,3 @@
 {%- if settings.show_calculator_free_shipping_message -%}
     <script src="{{ 'free-shipping-message.js' | asset_url }}" defer="defer"></script>
 {% endif %}
-
-{%- if settings.show_materials_discount_progress -%}
-    <script>
-        window.materials_discount_settings = {
-            materials_collection_handle: '{{ settings.materials_collection_handle }}',
-            materials_discount_rules: '{{ settings.materials_discount_rules }}'
-        };
-    </script>
-    <script src="{{ 'materials-discount-message.js' | asset_url }}" defer="defer"></script>
-{% endif %}

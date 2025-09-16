@@ -202,7 +202,7 @@
     "type_arrow_height": 36,
     "type_arrow_size_icon": 17,
     "position_horizontal_slick_arrow": "-5%",
-    "pagination_style": "2",
+    "pagination_style": "1",
     "pagination_align": "center",
     "trust_image_product_1": "shopify://shop_images/security-image-1.png",
     "trust_image_product_2": "shopify://shop_images/security-image-2.png",
@@ -620,9 +620,6 @@
     "quick_cart_popular_product_type": "2",
     "calculator_free_shipping_message_style": "3",
     "free_shipping_borderw": 0,
-    "show_materials_discount_progress": true,
-    "materials_collection_handle": "Materials",
-    "materials_discount_rules": "2:5,5:10,10:15",
     "customer_login_type": "sidebar",
     "body_line_height": 50,
     "body_letter_spacing": ".02em",
@@ -867,43 +864,8 @@
           "czcrd_custom_css": ""
         }
       },
-      "14060646107696862457": {
-        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {}
-      },
-      "2104245418471043333": {
-        "type": "shopify://apps/17track/blocks/app-embed/1519e068-e330-4e0b-92dd-0a3263bfceda",
-        "disabled": false,
-        "settings": {}
-      },
-      "4015264832934714879": {
-        "type": "shopify://apps/ecomsend-popups/blocks/app/a5670cf8-5705-4b01-ad9e-447033feae26",
-        "disabled": false,
-        "settings": {}
-      },
-      "13375078075628245689": {
-        "type": "shopify://apps/powr-form-builder/blocks/app-embed/1412fe37-d89c-4706-a797-6e2b53cb4a69",
-        "disabled": false,
-        "settings": {}
-      },
-      "6588702529468458379": {
-        "type": "shopify://apps/ecomposer-builder/blocks/app-embed/a0fc26e1-7741-4773-8b27-39389b4fb4a0",
-        "disabled": false,
-        "settings": {}
-      },
-      "3138269044488530766": {
-        "type": "shopify://apps/uppromote-affiliate/blocks/core-script/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
-        "disabled": false,
-        "settings": {}
-      },
-      "1996061711396120121": {
-        "type": "shopify://apps/uppromote-affiliate/blocks/message-bar/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
-        "disabled": false,
-        "settings": {}
-      },
-      "9005256451184024879": {
-        "type": "shopify://apps/uppromote-affiliate/blocks/customer-referral/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+      "7147999719060634790": {
+        "type": "shopify://apps/gsc-countdown-timer/blocks/countdown-bar/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
         "disabled": false,
         "settings": {}
       },
@@ -913,6 +875,26 @@
         "settings": {
           "version": "v3"
         }
+      },
+      "13375078075628245689": {
+        "type": "shopify://apps/powr-form-builder/blocks/app-embed/1412fe37-d89c-4706-a797-6e2b53cb4a69",
+        "disabled": false,
+        "settings": {}
+      },
+      "2104245418471043333": {
+        "type": "shopify://apps/17track/blocks/app-embed/1519e068-e330-4e0b-92dd-0a3263bfceda",
+        "disabled": false,
+        "settings": {}
+      },
+      "6588702529468458379": {
+        "type": "shopify://apps/ecomposer-builder/blocks/app-embed/a0fc26e1-7741-4773-8b27-39389b4fb4a0",
+        "disabled": false,
+        "settings": {}
+      },
+      "4015264832934714879": {
+        "type": "shopify://apps/trustoo-email-popups/blocks/app/a5670cf8-5705-4b01-ad9e-447033feae26",
+        "disabled": false,
+        "settings": {}
       },
       "13057235355128461448": {
         "type": "shopify://apps/cozy-country-redirect/blocks/CozyStaticScript/7b44aa65-e072-42a4-8594-17bbfd843785",
@@ -924,28 +906,8 @@
         "disabled": false,
         "settings": {}
       },
-      "15549472988515247997": {
-        "type": "shopify://apps/beans-id-verification/blocks/banner/5c736972-c385-431c-8cbb-05726b7a1739",
-        "disabled": true,
-        "settings": {}
-      },
-      "449199394124024797": {
-        "type": "shopify://apps/beans-id-verification/blocks/modern-discount-hub/5c736972-c385-431c-8cbb-05726b7a1739",
-        "disabled": false,
-        "settings": {
-          "page_title": "Unlock Your Exclusive Discount",
-          "sub_heading_text": "We’ve teamed up with Beans ID to offer exclusive discounts. Click through to verify and receive your discount for free!",
-          "hero_image": "shopify://shop_images/1000X1000_US.jpg",
-          "mobile_hero_image": "shopify://shop_images/1200X628_US.jpg"
-        }
-      },
       "18121446316682264196": {
         "type": "shopify://apps/beans-id-verification/blocks/fab-embed/5c736972-c385-431c-8cbb-05726b7a1739",
-        "disabled": false,
-        "settings": {}
-      },
-      "7147999719060634790": {
-        "type": "shopify://apps/gsc-countdown-timer/blocks/countdown-bar/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
         "disabled": false,
         "settings": {}
       },
@@ -969,6 +931,41 @@
           "card_title_text_size_mobile": 21,
           "card_conditions_text_size": 14
         }
+      },
+      "449199394124024797": {
+        "type": "shopify://apps/beans-id-verification/blocks/modern-discount-hub/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": false,
+        "settings": {
+          "page_title": "Unlock Your Exclusive Discount",
+          "sub_heading_text": "We’ve teamed up with Beans ID to offer exclusive discounts. Click through to verify and receive your discount for free!",
+          "hero_image": "shopify://shop_images/1000X1000_US.jpg",
+          "mobile_hero_image": "shopify://shop_images/1200X628_US.jpg"
+        }
+      },
+      "1996061711396120121": {
+        "type": "shopify://apps/uppromote-affiliate/blocks/message-bar/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+        "disabled": false,
+        "settings": {}
+      },
+      "9005256451184024879": {
+        "type": "shopify://apps/uppromote-affiliate/blocks/customer-referral/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+        "disabled": false,
+        "settings": {}
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "3138269044488530766": {
+        "type": "shopify://apps/uppromote-affiliate/blocks/core-script/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+        "disabled": false,
+        "settings": {}
+      },
+      "15549472988515247997": {
+        "type": "shopify://apps/beans-id-verification/blocks/banner/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
