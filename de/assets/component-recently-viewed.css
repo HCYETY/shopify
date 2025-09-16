@@ -1,8 +1,9 @@
 .halo-recently-viewed-popup{
     overflow: initial;
-    top: 70%;
-    left: auto;
-    right: 60px !important;
+    position: static;
+    bottom: 0 !important;
+    left: auto !important;
+    right: 0 !important;
     transform: translate3d(20px,-50%,0);
     width: 44px;
     z-index: 99;
@@ -341,7 +342,7 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translate3d(0,-50%,0);
+    transform: translate3d(0,0%,0);
 }
 
 .recently-viewed-icon + .recently-viewed-icon{
@@ -588,7 +589,7 @@
     .recently-viewed-popup-mb{
         opacity: 0;
         z-index: -1;
-        visibility: visible;
+        display: none;
     }
 
     .recently-viewed-content .first-info .hidden-mobile{
