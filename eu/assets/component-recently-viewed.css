@@ -7,8 +7,14 @@
     width: 44px;
     z-index: 99;
     border-radius: 110px;
-    background: var(--Text-5, #FFF);
-    box-shadow: 0 4.4px 11px 0 rgba(0, 0, 0, 0.10);
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.halo-recently-viewed-popup .recently-viewed-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .recently-viewed-title{
@@ -27,7 +33,7 @@
     position: fixed;
     top: 0;
     left: auto;
-    right: 40px;
+    right: 44px;
     z-index: 99;
     opacity: 0;
     visibility: hidden;
@@ -295,7 +301,9 @@
     width: 44px;
     height: 44px;
     transition: var(--anchor-transition);
+    background-color: #fff;
     border-radius: 110px;
+    box-shadow: 0 4.4px 11px 0 rgba(0, 0, 0, 0.10);
 }
 
 .recently-viewed-icon .icon{
@@ -337,7 +345,7 @@
 }
 
 .recently-viewed-icon + .recently-viewed-icon{
-    border-top: 1px solid #cccccc;
+    /* border-top: 1px solid #cccccc; */
 }
 
 .halo-recently-viewed .recently-header .button__close{
