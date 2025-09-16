@@ -53,33 +53,14 @@
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         },
-        "4f95b592-8369-4ab0-b30d-24e463fb6890": {
-          "type": "price",
-          "settings": {
-            "fontsize_text": 24,
-            "spacing_top": 10,
-            "spacing_bottom": 0
-          }
-        },
-        "b87b5d94-d9c5-4d66-a99b-da56e65d25e9": {
-          "type": "short_description",
-          "settings": {
-            "word_number": "500",
-            "fontsize_text": 14,
-            "color_text": "#3c3c3c",
-            "spacing_top": 10,
-            "spacing_bottom": 10
-          }
-        },
         "4e59f24a-8859-4579-a80a-d70e6f1bf66b": {
           "type": "info",
-          "disabled": true,
           "settings": {
-            "show_vendor": true,
+            "show_vendor": false,
             "show_sku": false,
             "show_barcode": false,
             "show_availability": true,
-            "show_product_type": true,
+            "show_product_type": false,
             "stock_level_display": "show",
             "enable_border_top": true,
             "enable_border_bottom": false,
@@ -88,12 +69,20 @@
             "spacing_bottom": 0
           }
         },
+        "4f95b592-8369-4ab0-b30d-24e463fb6890": {
+          "type": "price",
+          "settings": {
+            "fontsize_text": 22,
+            "spacing_top": 10,
+            "spacing_bottom": 15
+          }
+        },
         "bd3a641e-98d0-4da1-ab57-d5e4b0391995": {
           "type": "countdown",
           "disabled": true,
           "settings": {
             "spacing_top": 0,
-            "spacing_bottom": 20
+            "spacing_bottom": 0
           }
         },
         "product_text_Qt7QQE": {
@@ -101,7 +90,7 @@
           "settings": {
             "text": "",
             "text_icon": "",
-            "text_description": "<p><span style=\"color: #ffffff;\"><strong><span style=\"font-size: 14pt;\">August Special Offer</span></strong></span></p>\n<p><span style=\"color: #ffffff;\">1.</span> <span style=\"color: #e03e2d;\"><strong>Engravers</strong></span><span style=\"color: #ffffff;\">: Auto </span><strong><span style=\"color: #e03e2d;\">C$20 Off</span></strong> <span style=\"color: #ffffff;\">on orders over</span><span style=\"color: #e03e2d;\"> <strong>C$300</strong></span><span style=\"color: #ffffff;\">;</span></p>\n<p><span style=\"color: #ffffff;\">2.</span> <span style=\"color: #e03e2d;\"><strong>Free Gift</strong><span style=\"color: #ffffff;\">:</span></span> <span style=\"color: #ffffff;\">Auto add to your cart;</span></p>\n<p><span style=\"color: #ffffff;\">3.</span> <span style=\"color: #e03e2d;\"><strong>Materials</strong></span><span style=\"color: #ffffff;\">: Buy</span> <strong><span style=\"color: #e03e2d;\">1</span></strong> <span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">20% Off</span></strong><span style=\"color: #ffffff;\">, buy</span> <strong><span style=\"color: #e03e2d;\">2</span> </strong><span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">30% Off</span><span style=\"color: #ffffff;\">.</span></strong></p>",
+            "text_description": "<p><span style=\"color: #ffffff;\"><strong><span style=\"font-size: 14pt;\">September Special Offer</span></strong></span></p>\n<p><span style=\"color: #ffffff;\">1.</span> <span style=\"color: #e03e2d;\"><strong>Engravers</strong></span><span style=\"color: #ffffff;\">: Auto </span><strong><span style=\"color: #e03e2d;\">C$20 Off</span></strong> <span style=\"color: #ffffff;\">on orders over</span><span style=\"color: #e03e2d;\"> <strong>C$300</strong></span><span style=\"color: #ffffff;\">;</span></p>\n<p><span style=\"color: #ffffff;\">2.</span> <span style=\"color: #e03e2d;\"><strong>Materials</strong></span><span style=\"color: #ffffff;\">: Buy</span> <strong><span style=\"color: #e03e2d;\">1</span></strong> <span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">20% Off</span></strong><span style=\"color: #ffffff;\">, buy</span> <strong><span style=\"color: #e03e2d;\">2</span> </strong><span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">30% Off</span><span style=\"color: #ffffff;\">.</span></strong></p><p><span style=\"color: #ffffff;\">3. <span style=\"color: #e03e2d;\"><strong>Free gift</strong></span> : Auto add to your cart</span></p>",
             "fontsize_text": 14,
             "content_spacing": 10,
             "custom_block_align": "left",
@@ -185,6 +174,16 @@
             "bin_border_color_hover": "#ff736b",
             "bin_bg_color_hover": "#ff736b",
             "bin_bg_color_hover_gradient": ""
+          }
+        },
+        "b87b5d94-d9c5-4d66-a99b-da56e65d25e9": {
+          "type": "short_description",
+          "settings": {
+            "word_number": "500",
+            "fontsize_text": 14,
+            "color_text": "#3c3c3c",
+            "spacing_top": 10,
+            "spacing_bottom": 10
           }
         },
         "04ea8843-f461-4f1d-8ea4-43f62fdfb21e": {
@@ -278,9 +277,8 @@
         "b0ea69b7-8a54-4a3c-9abd-0fcceeabaaa0",
         "0e4ea696-4820-4c98-aaa6-806d41782a3d",
         "judge_me_reviews_preview_badge_7JjqMP",
-        "4f95b592-8369-4ab0-b30d-24e463fb6890",
-        "b87b5d94-d9c5-4d66-a99b-da56e65d25e9",
         "4e59f24a-8859-4579-a80a-d70e6f1bf66b",
+        "4f95b592-8369-4ab0-b30d-24e463fb6890",
         "bd3a641e-98d0-4da1-ab57-d5e4b0391995",
         "product_text_Qt7QQE",
         "d98e243b-3682-495a-965a-1c7f7d460880",
@@ -288,6 +286,7 @@
         "custom_information_p7CX6F",
         "custom_information_Daxy9A",
         "f1b31d90-1e43-4948-9fe3-97ba43f6fb34",
+        "b87b5d94-d9c5-4d66-a99b-da56e65d25e9",
         "04ea8843-f461-4f1d-8ea4-43f62fdfb21e",
         "10093fcf-2053-47e9-bedb-841bb0d046fa",
         "683f2b15-db3b-4f63-8d0f-e688cc678581",
@@ -444,7 +443,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_cjzCiA": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

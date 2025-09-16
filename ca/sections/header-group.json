@@ -16,9 +16,8 @@
       "blocks": {
         "9da20430-b562-46f1-9f28-e5592eeec567": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "🎉<a href=\"https://ca.crealityfalcon.com/pages/monthly-sale\"><span style=\"color: #000000;\"><span style=\"color: #e03e2d;\">Monthly Sale, Special Offer</span>-</span><span style=\"color: #ecf0f1;\"> <strong>Auto C$70-C$400 Off &amp; Free Gift</strong></span></a>",
+            "text": "<p><a href=\"https://ca.crealityfalcon.com/pages/monthly-sale\" target=\"_self\" style=\"text-decoration: underline; color: rgb(255, 192, 0);\"><span style=\"color: rgb(255, 192, 0);\">⏰ Sep. 15th – Sep. 23rd | 2025 Autumn Sale🎉 Save Up To 60% Off on Engravers\n🔔</span></a></p>",
             "btn_color": "#3c3c3c",
             "btn_border_color": "#ffffff",
             "btn_bg_color": "#ffffff",
@@ -29,17 +28,29 @@
           "type": "announcement",
           "disabled": true,
           "settings": {
-            "text": "<p><strong><span style=\"color: #ffffff;\">⏰Aug 8-Aug 18 | A1 Pro Dual Laser Engraver-🎁$1247   <span style=\"background-color: #e03e2d;\"><a style=\"background-color: #e03e2d; color: #ffffff;\" href=\"https://ca.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver\"> Shop Now </a></span></span></strong></p>",
+            "text": "Free shipping over $79.99 // 14-Day Money-Back Guarantee // 12-Month Warranty // Live Chat",
             "btn_color": "#ff8b21",
             "btn_border_color": "#ffffff",
             "btn_bg_color": "#ffffff",
             "btn_bg_color_gradient": ""
           }
+        },
+        "countdown_zpMQDV": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "top_message_text": "⏰Limited-time Offer!",
+            "annou_countdown": "Sep 23, 2025 18:00:00",
+            "color_countdown_text": "#06142e",
+            "border_color_countdown": "#f7f8fa",
+            "bg_color_countdown": "#f7f8fa"
+          }
         }
       },
       "block_order": [
         "9da20430-b562-46f1-9f28-e5592eeec567",
-        "announcement_dLMWL8"
+        "announcement_dLMWL8",
+        "countdown_zpMQDV"
       ],
       "settings": {
         "enable_announcement": true,

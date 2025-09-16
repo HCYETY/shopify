@@ -54,6 +54,14 @@
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         },
+        "4f95b592-8369-4ab0-b30d-24e463fb6890": {
+          "type": "price",
+          "settings": {
+            "fontsize_text": 18,
+            "spacing_top": 10,
+            "spacing_bottom": 15
+          }
+        },
         "b87b5d94-d9c5-4d66-a99b-da56e65d25e9": {
           "type": "short_description",
           "disabled": true,
@@ -92,11 +100,10 @@
         },
         "product_text_RbRt4M": {
           "type": "product_text",
-          "disabled": true,
           "settings": {
             "text": "",
             "text_icon": "",
-            "text_description": "<p><span style=\"font-size: 14pt; color: #fdfdfd;\"><strong>May Special Offer</strong></span></p>\n<p><span style=\"color: #fdfdfd;\">Buy a</span> 👉<span style=\"text-decoration: underline;\"><a href=\"https://ca.crealityfalcon.com/products/gift-card\"><strong><em><span style=\"color: #e03e2d; text-decoration: underline;\">$25 Gift Card</span></em></strong></a></span>👈 <span style=\"color: #fdfdfd;\">at</span> <strong><span style=\"color: #e03e2d;\">$0.01</span></strong></p>\n<p><span style=\"color: #fdfdfd;\">Note: The gift card is</span> <span style=\"color: #e03e2d;\">only valid</span> <span style=\"color: #fdfdfd;\">for engraver purchases.</span></p>",
+            "text_description": "<p><span style=\"color: #ffffff;\"><strong><span style=\"font-size: 14pt;\">September Special Offer</span></strong></span></p>\n<p><span style=\"color: #ffffff;\">1.</span> <span style=\"color: #e03e2d;\"><strong>Engravers</strong></span><span style=\"color: #ffffff;\">: Auto </span><strong><span style=\"color: #e03e2d;\">C$20 Off</span></strong> <span style=\"color: #ffffff;\">on orders over</span><span style=\"color: #e03e2d;\"> <strong>C$300</strong></span><span style=\"color: #ffffff;\">;</span></p>\n<p><span style=\"color: #ffffff;\">2.</span> <span style=\"color: #e03e2d;\"><strong>Materials</strong></span><span style=\"color: #ffffff;\">: Buy</span> <strong><span style=\"color: #e03e2d;\">1</span></strong> <span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">20% Off</span></strong><span style=\"color: #ffffff;\">, buy</span> <strong><span style=\"color: #e03e2d;\">2</span> </strong><span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">30% Off</span><span style=\"color: #ffffff;\">.</span></strong></p>",
             "fontsize_text": 14,
             "content_spacing": 10,
             "custom_block_align": "left",
@@ -139,14 +146,6 @@
             "show_compare_color": true,
             "show_compare_color_drop_drap": true,
             "compare_layout": "1"
-          }
-        },
-        "4f95b592-8369-4ab0-b30d-24e463fb6890": {
-          "type": "price",
-          "settings": {
-            "fontsize_text": 18,
-            "spacing_top": 0,
-            "spacing_bottom": 22
           }
         },
         "f1b31d90-1e43-4948-9fe3-97ba43f6fb34": {
@@ -287,6 +286,7 @@
         "b0ea69b7-8a54-4a3c-9abd-0fcceeabaaa0",
         "0e4ea696-4820-4c98-aaa6-806d41782a3d",
         "judge_me_reviews_preview_badge_ingm8R",
+        "4f95b592-8369-4ab0-b30d-24e463fb6890",
         "b87b5d94-d9c5-4d66-a99b-da56e65d25e9",
         "4e59f24a-8859-4579-a80a-d70e6f1bf66b",
         "bd3a641e-98d0-4da1-ab57-d5e4b0391995",
@@ -294,7 +294,6 @@
         "d98e243b-3682-495a-965a-1c7f7d460880",
         "faa2b3e6-c0a1-4269-baa6-d2605efe4c05",
         "04ea8843-f461-4f1d-8ea4-43f62fdfb21e",
-        "4f95b592-8369-4ab0-b30d-24e463fb6890",
         "f1b31d90-1e43-4948-9fe3-97ba43f6fb34",
         "683f2b15-db3b-4f63-8d0f-e688cc678581",
         "19de9abb-17c8-4d67-941d-b32706ed06fd",
@@ -1714,7 +1713,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_VnfX8t": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

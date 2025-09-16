@@ -14,10 +14,9 @@
       "blocks": {
         "image_jTyyB6": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image_slide": "shopify://shop_images/CA-1880X600_3ae88cbb-f090-4e75-841b-7033be3b31b2.png",
-            "image_slide_mb": "shopify://shop_images/CA-957X1350_47d94eb0-46fd-4a16-a5f0-13a4c4cb9ead.png",
+            "image_slide": "shopify://shop_images/CA-1880X600_a23df72c-ff9b-41cf-bcc0-1e2b28e63af3.png",
+            "image_slide_mb": "shopify://shop_images/CA-957x1350_c6acb8e7-8db8-49ac-9039-d6117cd66c54.png",
             "alignment": "left",
             "enable_custom_position": false,
             "custom_horizontal": "",
@@ -73,7 +72,7 @@
             "font_style_heading_mb": "normal",
             "font_size_heading_mb": 24,
             "line_height_heading_mb": 24,
-            "heading_spacing_bottom_mb": 8,
+            "heading_spacing_bottom_mb": 11,
             "color_heading_mb": "#ffffff",
             "slide-des-mb": "",
             "font_size_des_mb": 12,
@@ -84,7 +83,7 @@
             "enable_underline": true,
             "font_size_link": 36,
             "button_slide": "",
-            "link": "https://ca.crealityfalcon.com/pages/2025-mid-year-sale",
+            "link": "https://ca.crealityfalcon.com/pages/monthly-sale",
             "button_style": "button_1",
             "button_slide_2": "",
             "link_2": "",

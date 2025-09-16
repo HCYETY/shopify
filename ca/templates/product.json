@@ -53,17 +53,6 @@
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         },
-        "b87b5d94-d9c5-4d66-a99b-da56e65d25e9": {
-          "type": "short_description",
-          "disabled": true,
-          "settings": {
-            "word_number": "30",
-            "fontsize_text": 14,
-            "color_text": "#3c3c3c",
-            "spacing_top": 0,
-            "spacing_bottom": 10
-          }
-        },
         "4e59f24a-8859-4579-a80a-d70e6f1bf66b": {
           "type": "info",
           "disabled": true,
@@ -142,6 +131,16 @@
             "bin_border_color_hover": "#ff736b",
             "bin_bg_color_hover": "#ff736b",
             "bin_bg_color_hover_gradient": ""
+          }
+        },
+        "b87b5d94-d9c5-4d66-a99b-da56e65d25e9": {
+          "type": "short_description",
+          "settings": {
+            "word_number": "30",
+            "fontsize_text": 14,
+            "color_text": "#3c3c3c",
+            "spacing_top": 0,
+            "spacing_bottom": 10
           }
         },
         "04ea8843-f461-4f1d-8ea4-43f62fdfb21e": {
@@ -270,13 +269,13 @@
         "b0ea69b7-8a54-4a3c-9abd-0fcceeabaaa0",
         "0e4ea696-4820-4c98-aaa6-806d41782a3d",
         "judge_me_reviews_preview_badge_7JjqMP",
-        "b87b5d94-d9c5-4d66-a99b-da56e65d25e9",
         "4e59f24a-8859-4579-a80a-d70e6f1bf66b",
         "bd3a641e-98d0-4da1-ab57-d5e4b0391995",
         "d98e243b-3682-495a-965a-1c7f7d460880",
         "faa2b3e6-c0a1-4269-baa6-d2605efe4c05",
         "4f95b592-8369-4ab0-b30d-24e463fb6890",
         "f1b31d90-1e43-4948-9fe3-97ba43f6fb34",
+        "b87b5d94-d9c5-4d66-a99b-da56e65d25e9",
         "04ea8843-f461-4f1d-8ea4-43f62fdfb21e",
         "10093fcf-2053-47e9-bedb-841bb0d046fa",
         "683f2b15-db3b-4f63-8d0f-e688cc678581",
@@ -432,7 +431,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_cjzCiA": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

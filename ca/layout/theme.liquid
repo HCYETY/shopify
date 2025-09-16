@@ -10,6 +10,7 @@
         endif
     endif
 -%}
+
 <html class="no-js" lang="{{ request.locale.iso_code }}"{% if settings.enable_layout_rtl and enable_iso_rtl %} dir="rtl"{% endif %}>
     <head>
       {%- render 'web-emarsys-sdk' -%}
@@ -48,6 +49,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {% render 'zbanx-script-head' %}
 
         <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+            <!-- 准备埋点获取的数据 -->     
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 
         {%- liquid
             if settings.layout_body == 'full'
@@ -165,8 +168,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         {%- if settings.enable_following_cursor -%}
           {% render 'cursor-fixed', style_cursor: settings.following_cursor_style %}
         {%- endif -%}
-            <!-- 准备埋点获取的数据 -->     
-  <script  src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
 <script>
 
   window.dataLayer = window.dataLayer || [];

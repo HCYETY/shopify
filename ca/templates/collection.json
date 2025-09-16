@@ -369,6 +369,7 @@
     },
     "product_block_9Uywjm": {
       "type": "product-block",
+      "disabled": true,
       "settings": {
         "container": "1170",
         "padding_full_width": 0,
@@ -480,10 +481,9 @@
     },
     "product-recently-viewed": {
       "type": "product-recently-viewed",
-      "disabled": true,
       "settings": {
         "display_product_recently_viewed": true,
-        "product_recently_viewed_container": "container",
+        "product_recently_viewed_container": "1170",
         "padding_full_width": 0,
         "enable_border_top": true,
         "enable_border_bottom": false,
@@ -499,11 +499,11 @@
         "product_bg": "#ffffff",
         "product_bg_gradient": "",
         "style_block_header": "style1",
-        "product_recently_viewed_title": "Highly Recommended Products",
+        "product_recently_viewed_title": "You May Also Like",
         "enable_border_title": false,
         "mg_top_title": 26,
         "mg_bottom_title": 3,
-        "fontsize_title": 18,
+        "fontsize_title": 24,
         "fontsize_title_mb": 18,
         "border_color_title": "#232323",
         "color_title": "#232323",
