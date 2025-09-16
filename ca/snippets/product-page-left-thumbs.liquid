@@ -1236,6 +1236,163 @@
                                         {% render block %}
                                 {%- endcase -%}
                             {%- endfor -%}
+                            <div class="product-info-sections">
+                                <style>
+                                    .product-info-sections {
+                                    margin: 20px auto;
+                                    display: grid;
+                                    grid-auto-rows: 1fr;
+                                    }
+                                    
+                                    .info-section {
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 16px 0;
+                                    border-bottom: 1px solid #e5e5e5;
+                                    }
+
+                                    .info-section-items {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: start;
+                                    padding: 16px 0;
+                                    border-bottom: 1px solid #e5e5e5;
+                                    }
+
+                                    .info-section-item {
+                                    display: flex;
+                                    align-items: start;
+                                    padding: 16px 0;
+                                    }
+                                    
+                                    .info-icon {
+                                    width: 24px;
+                                    height: 24px;
+                                    margin-right: 15px;
+                                    color: #333;
+                                    flex-shrink: 0;
+                                    }
+
+                                    .info-icon img, svg{
+                                    width: 100%;
+                                    height: 100%;
+                                    fill: none;
+                                    stroke: none;
+                                    }
+                                    
+                                    .info-text {
+                                    flex: 1;
+                                    color: #51545a;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    }
+                                    
+                                    .info-right {
+                                    color: #1E1E1E;
+                                    font-size: 14px;
+                                    text-align: right;
+                                    }
+
+                                    .info-right-text {
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    }
+
+                                    .info-right-item-grid {
+                                    display: grid;
+                                    grid-template-columns: repeat(3, 1fr);
+                                    gap: 24px;
+                                    }
+                                    
+                                    .payment-icons {
+                                    display: grid;
+                                    grid-template-columns: repeat(4, 1fr);
+                                    gap: 8px;
+                                    }
+                                    
+                                    .payment-icons img {
+                                    width: 32px;
+                                    height: 20px;
+                                    object-fit: contain;
+                                    }
+                                    
+                                    .social-icons {
+                                    display: flex;
+                                    gap: 12px;
+                                    }
+                                    
+                                    .social-icons a {
+                                    color: #333;
+                                    font-size: 16px;
+                                    text-decoration: none;
+                                    font-weight: 500;
+                                    }
+                                    
+                                    .social-icons a:hover {
+                                    color: #666;
+                                    }
+                                </style>
+                                
+                                <!-- Safe & Secure checkout -->
+                                <div class="info-section">
+                                    <div class="info-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4.0998" y="5.0002" width="16.1" height="14.3" rx="1.075" stroke="#51545A" stroke-width="1.6"></rect><path d="M9.375 14.25H15L13.6875 12.375" stroke="#51545A" stroke-width="1.6"></path><path d="M5.25 4.925H19.125C19.7187 4.925 20.2 5.40629 20.2 6V8.575H4.175V6C4.175 5.40629 4.65629 4.925 5.25 4.925Z" stroke="#51545A" stroke-width="1.6"></path></svg>                
+                                    </div>
+                                    <div class="info-text">Safe & Secure checkout</div>
+                                    <div class="info-right">
+                                    <div class="payment-icons">
+                                        <img src="https://cdn.shopify.com/s/files/1/0850/5776/5681/files/VISA.svg?v=1706239045" alt="VISA Icon">
+                                        <img src="https://cdn.shopify.com/s/files/1/0850/5776/5681/files/mastercard.svg?v=1706239044" alt="Mastercard Icon">
+                                        <img src="https://cdn.shopify.com/s/files/1/0850/5776/5681/files/american-express.svg?v=1706239045" alt="American Express Icon">
+                                        <img src="https://cdn.shopify.com/s/files/1/0850/5776/5681/files/googlepay.svg?v=1706239045" alt="Google Pay Icon">
+                                        <img src="https://cdn.shopify.com/s/files/1/0850/5776/5681/files/paypal_02bb5680-aac7-46e4-8b2b-4f563b3db699.svg?v=1706239045" alt="PayPal Icon">
+                                        <img src="https://cdn.shopifycdn.net/s/files/1/0799/8714/7049/files/Shop_Pay_1.svg?v=1713162275" alt="Shopify Pay Icon">                                    </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Estimated Delivery Date -->
+                                {%- if estimated_delivery_text != blank -%}
+                                <div class="info-section">
+                                    <div class="info-icon">
+                                    {{ settings.delivery_empty_icon }}
+                                    </div>
+                                    <div class="info-text">
+                                    Estimated Delivery Date
+                                    </div>
+                                    <div class="info-right info-right-text">
+                                    {{ estimated_delivery_text }}
+                                    </div>
+                                </div>
+                                {%- endif -%}
+                                
+
+                                <!-- Share -->
+                                <div class="info-section">
+                                    <div class="info-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20.6839 10.2727L20.1368 10.8563L20.1368 10.8563L20.6839 10.2727ZM20.6839 11.7317L20.1368 11.1481L20.1368 11.1481L20.6839 11.7317ZM15.3504 5.27245L14.8032 5.85608L14.8032 5.85608L15.3504 5.27245ZM13.6664 8.04857L13.8202 8.83365C14.1956 8.76014 14.4664 8.43112 14.4664 8.04857L13.6664 8.04857ZM3.28388 17.3128L4.05423 17.5286L3.28388 17.3128ZM4.95418 18.1371L5.49482 18.7268L4.95418 18.1371ZM13.6664 14.4731L14.4664 14.4731C14.4664 14.0397 14.1212 13.685 13.6878 13.6734L13.6664 14.4731ZM15.3504 16.732L15.8975 17.3156L15.8975 17.3156L15.3504 16.732ZM20.1368 10.8563C20.2211 10.9353 20.2211 11.0691 20.1368 11.1481L21.2311 12.3154C21.9896 11.6042 21.9896 10.4002 21.2311 9.68904L20.1368 10.8563ZM14.8032 5.85608L20.1368 10.8563L21.2311 9.68904L15.8975 4.68882L14.8032 5.85608ZM14.4664 6.00198C14.4664 5.82689 14.6755 5.73633 14.8032 5.85608L15.8975 4.68882C14.7479 3.61107 12.8664 4.42619 12.8664 6.00198L14.4664 6.00198ZM14.4664 8.04857L14.4664 6.00198L12.8664 6.00198L12.8664 8.04857L14.4664 8.04857ZM4.05423 17.5286C5.79609 11.3099 10.8407 9.41711 13.8202 8.83365L13.5127 7.26348C10.2798 7.89657 4.49446 10.0248 2.51352 17.0971L4.05423 17.5286ZM4.41353 17.5475C4.30411 17.6478 4.173 17.6499 4.08841 17.6098C4.04926 17.5912 4.04271 17.5742 4.04525 17.5792C4.05227 17.5933 4.03797 17.5866 4.05423 17.5286L2.51352 17.0971C2.2616 17.9965 2.73813 18.7403 3.40299 19.0555C4.03802 19.3566 4.87541 19.2947 5.49482 18.7268L4.41353 17.5475ZM13.6878 13.6734C11.4463 13.6134 8.01335 14.2469 4.41353 17.5475L5.49482 18.7268C8.76086 15.7322 11.7792 15.2229 13.645 15.2729L13.6878 13.6734ZM14.4664 16.0024L14.4664 14.4731L12.8664 14.4731L12.8664 16.0024L14.4664 16.0024ZM14.8032 16.1483C14.6755 16.2681 14.4664 16.1775 14.4664 16.0024L12.8664 16.0024C12.8664 17.5782 14.7479 18.3933 15.8975 17.3156L14.8032 16.1483ZM20.1368 11.1481L14.8032 16.1483L15.8975 17.3156L21.2311 12.3154L20.1368 11.1481Z" fill="#51545A"></path></svg>
+                                    </div>
+                                    <div class="info-text">Share</div>
+                                    <div class="info-right">
+                                    <div class="info-right-item-grid">
+                                        <a class="" href="https://www.facebook.com/OfficialCreality3d" target="_blank">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.6836 22.999H9.67448V11.999H7V8.20795H9.67448V5.97521C9.67448 2.88212 10.4896 0.999023 14.0326 0.999023H16.9783V4.79664H15.1355C13.7562 4.79664 13.6887 5.32045 13.6887 6.31569V8.21319H17L16.6077 11.999H13.6862L13.6836 22.999Z" fill="#51545A"></path>
+                                        </svg>
+                                        </a>
+                                        <a class="" href="https://www.instagram.com/creality3d/" target="_blank">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.9845 21.999H11.0165C10.0639 21.999 8.95784 21.999 7.87181 21.9336C6.3164 21.9685 4.81003 21.3884 3.67976 20.3192C2.61051 19.1891 2.03078 17.6825 2.06671 16.1271C2 14.9223 2 13.7028 2 12.522V11.472C2 10.2966 2 9.0704 2.06671 7.8696C2.0307 6.31396 2.61098 4.80714 3.68109 3.67748C4.81065 2.60922 6.3162 2.03001 7.87047 2.06573C8.93783 1.99902 10.0239 1.99902 10.9538 1.99902H13.0445C13.9784 1.99902 15.0551 1.99902 16.1278 2.0644C17.6839 2.02818 19.1912 2.60847 20.3212 3.67881C21.3895 4.80898 21.9691 6.31481 21.9343 7.8696C22.0023 9.08375 22.001 10.3139 21.9996 11.504V12.0057C21.9996 12.1898 21.9996 12.3739 21.9996 12.5581C21.9996 13.7282 21.9996 14.9383 21.9343 16.1324C21.9693 17.6883 21.3892 19.1952 20.3199 20.3259C19.1892 21.3952 17.6823 21.9754 16.1265 21.9403C15.0431 21.9937 13.9798 21.999 12.9845 21.999ZM11.9971 6.86894C10.9825 6.86894 9.99062 7.16976 9.14689 7.73337C8.30316 8.29698 7.64547 9.09808 7.25693 10.0354C6.8684 10.9728 6.76647 12.0042 6.96403 12.9995C7.16159 13.9947 7.64977 14.9091 8.36687 15.6269C9.08396 16.3448 9.99778 16.8339 10.9928 17.0325C11.9878 17.2311 13.0194 17.1303 13.9571 16.7427C14.8948 16.3551 15.6966 15.6983 16.2611 14.8551C16.8256 14.0119 17.1274 13.0204 17.1285 12.0057C17.1285 10.6443 16.588 9.33852 15.6259 8.37534C14.6637 7.41217 13.3585 6.87035 11.9971 6.86894ZM17.3339 5.46C17.0964 5.46 16.8643 5.53042 16.6668 5.66237C16.4694 5.79431 16.3154 5.98185 16.2246 6.20127C16.1337 6.42069 16.1099 6.66213 16.1562 6.89506C16.2026 7.12799 16.3169 7.34196 16.4849 7.50989C16.6528 7.67783 16.8668 7.79219 17.0997 7.83853C17.3326 7.88486 17.574 7.86108 17.7935 7.77019C18.0129 7.67931 18.2004 7.5254 18.3323 7.32793C18.4643 7.13046 18.5347 6.89829 18.5347 6.6608C18.5347 6.34394 18.4095 6.03992 18.1863 5.81499C17.9632 5.59006 17.6601 5.46246 17.3433 5.46H17.3339ZM11.9971 15.3332C11.3374 15.3332 10.6926 15.1376 10.144 14.7711C9.59553 14.4046 9.16801 13.8836 8.91555 13.2742C8.66309 12.6647 8.59704 11.994 8.72574 11.347C8.85444 10.6999 9.17212 10.1056 9.6386 9.63909C10.1051 9.17261 10.6994 8.85493 11.3464 8.72622C11.9934 8.59752 12.6641 8.66358 13.2736 8.91604C13.8831 9.1685 14.404 9.59602 14.7705 10.1446C15.137 10.6931 15.3326 11.338 15.3326 11.9977C15.3328 12.4358 15.2467 12.8697 15.0791 13.2746C14.9116 13.6794 14.6659 14.0473 14.3562 14.3571C14.0464 14.667 13.6787 14.9128 13.2739 15.0805C12.8691 15.2483 12.4353 15.3332 11.9971 15.3332Z" fill="#51545A"></path>
+                                        </svg>
+                                        </a>
+                                        <a class="" href="https://x.com/Creality3dP" target="_blank">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18.0227 1.99902H21.0895L14.3894 10.4708L22.2715 21.999H16.0999L11.2661 15.0072L5.73507 21.999H2.66642L9.83279 12.9375L2.27148 1.99902H8.59977L12.9691 8.38979L18.0227 1.99902ZM16.9463 19.9683H18.6457L7.67639 3.92313H5.85281L16.9463 19.9683Z" fill="#51545A"></path>
+                                        </svg>
+                                        </a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
                             {%- if show_tab -%}
                                 {%- if tab_layout == 'vertical' or tab_layout == 'vertical_sidebar' or tab_layout == 'popup' -%}
                                     {% render 'halo-product-tab',
