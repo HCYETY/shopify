@@ -81,18 +81,18 @@
             "spacing_bottom": 0
           }
         },
-        "bd3a641e-98d0-4da1-ab57-d5e4b0391995": {
-          "type": "countdown",
-          "settings": {
-            "spacing_top": 0,
-            "spacing_bottom": 20
-          }
-        },
         "4f95b592-8369-4ab0-b30d-24e463fb6890": {
           "type": "price",
           "settings": {
             "fontsize_text": 18,
             "spacing_top": 10,
+            "spacing_bottom": 0
+          }
+        },
+        "bd3a641e-98d0-4da1-ab57-d5e4b0391995": {
+          "type": "countdown",
+          "settings": {
+            "spacing_top": 0,
             "spacing_bottom": 0
           }
         },
@@ -331,8 +331,8 @@
         "judge_me_reviews_preview_badge_7JjqMP",
         "b87b5d94-d9c5-4d66-a99b-da56e65d25e9",
         "4e59f24a-8859-4579-a80a-d70e6f1bf66b",
-        "bd3a641e-98d0-4da1-ab57-d5e4b0391995",
         "4f95b592-8369-4ab0-b30d-24e463fb6890",
+        "bd3a641e-98d0-4da1-ab57-d5e4b0391995",
         "klarna_on_site_messaging_app_block_xwRQLE",
         "product_text_Tj3b4z",
         "d98e243b-3682-495a-965a-1c7f7d460880",

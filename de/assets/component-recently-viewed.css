@@ -371,10 +371,6 @@
 }
 
 @media(max-width:1024px){
-    .halo-recently-viewed-popup{
-        right: 24px !important;
-    }
-
     .recently-viewed-popup-mb{
         position: fixed;
         bottom: 0;
