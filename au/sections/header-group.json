@@ -619,13 +619,14 @@
           "type": "custom_block_one",
           "settings": {
             "option_image_one": "shopify://shop_images/banner_48e968d2-a79d-4923-a589-abe7db52b257.png",
-            "option_title_one": "Spring Sale",
-            "option_subtitle_one": "",
+            "option_title_one": "🌸Bloom Into Creation",
+            "option_subtitle_one": "Celebrate Spring with Up to 48% OFF",
             "option_link_one": "https://au.crealityfalcon.com/pages/creality-falcon-spring-laser-jewelry-making"
           }
         },
         "custom_block_one_YDQHmT": {
           "type": "custom_block_one",
+          "disabled": true,
           "settings": {
             "option_image_one": "shopify://shop_images/5_835df5df-fdc2-4555-b411-47c82b74b2e6.png",
             "option_title_one": "Combo Sale, Double Fun",
@@ -635,6 +636,7 @@
         },
         "custom_block_one_pNUhQ6": {
           "type": "custom_block_one",
+          "disabled": true,
           "settings": {
             "option_image_one": "shopify://shop_images/Save_A_1030_Top_Pick_Falcon2_40W.png",
             "option_title_one": "Save A$1030 - Top Pick Falcon2 40W",
@@ -654,6 +656,7 @@
         },
         "custom_block_one_CwGU6B": {
           "type": "custom_block_one",
+          "disabled": true,
           "settings": {
             "option_image_one": "shopify://shop_images/2_be5d9665-354d-4fc1-8a4a-deca9c8613cb.png",
             "option_title_one": "Low-Wattage Power Sale",
@@ -680,30 +683,21 @@
             "option_link_two": "https://au.crealityfalcon.com/pages/contact"
           }
         },
-        "custom_block_two_H8kLni": {
-          "type": "custom_block_two",
-          "settings": {
-            "option_image_two": "shopify://shop_images/Firmware_Download_for_Creality_Falcon_Laser_Cutter_and_Engraver.png",
-            "option_title_two": "Firmware Download",
-            "option_subtitle_two": "",
-            "option_link_two": "https://au.crealityfalcon.com/pages/download"
-          }
-        },
         "custom_block_three_BDc6pj": {
           "type": "custom_block_three",
           "settings": {
-            "option_image_three": "shopify://shop_images/img_v3_02p6_e1afd9b6-25f8-4fb3-a704-070b56aef61g.png",
-            "option_title_three": "✅Download Free Software",
-            "option_subtitle_three": "",
+            "option_image_three": "shopify://shop_images/Falcon_Design_Space.jpg",
+            "option_title_three": "Falcon Design Space",
+            "option_subtitle_three": "Free Design Software",
             "option_link_three": "https://webapp.craftseek.com/#/download"
           }
         },
         "custom_block_three_Dc9hH4": {
           "type": "custom_block_three",
           "settings": {
-            "option_image_three": "shopify://shop_images/Get_Free_Desgin_Files_for_Creality_Falcon_Laser_Cutter_and_Engraver.png",
-            "option_title_three": "🎁Get Free Desgin Files",
-            "option_subtitle_three": "",
+            "option_image_three": "shopify://shop_images/Craftseek.jpg",
+            "option_title_three": "Craftseek",
+            "option_subtitle_three": "Design Files",
             "option_link_three": "https://webapp.craftseek.com/#/home"
           }
         }
@@ -716,14 +710,13 @@
         "custom_block_one_CwGU6B",
         "custom_block_one_JyRkqK",
         "custom_block_two_gRmHfR",
-        "custom_block_two_H8kLni",
         "custom_block_three_BDc6pj",
         "custom_block_three_Dc9hH4"
       ],
       "settings": {
         "menu": "home-s-header",
         "logo": "shopify://shop_images/crealityfalcon-logo-png_7cc7df78-679e-4472-b13e-7ee2707a521a.png",
-        "sale_page_one": "🔅Sale",
+        "sale_page_one": "🌸Spring Sale",
         "sale_page_two": "Support",
         "sale_page_three": "CraftSeek"
       }
