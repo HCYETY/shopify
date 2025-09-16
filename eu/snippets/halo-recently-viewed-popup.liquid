@@ -114,7 +114,9 @@
             <div class="recently-viewed-icon open-popup recently-viewed-icon-ask-an-mb" data-open-ask-an-expert role="recently" aria-label="recently-icon">{% render 'icon-ask-an-expert' %}</div>
         {%- endif -%}
         {%- if btn_top -%}
-            <back-to-top-button class="recently-viewed-icon" data-scroll-to-top>{% render 'icon-back-to-top' %}</back-to-top-button>
+            <back-to-top-button class="recently-viewed-icon" data-scroll-to-top>
+                <div>{% render 'icon-back-to-top' %}</div>
+            </back-to-top-button>
         {%- endif -%}
     </div>
 </recently-viewed-popup>
