@@ -17,8 +17,9 @@
 
 {% endfor %}
 
-{% comment %} 添加自定义规则 {% endcomment %}
+{% comment %} 添加自定义规则 - 只禁止包含*号的路径 {% endcomment %}
 User-agent: *
 Crawl-delay: 10
-Disallow: /search?q=*%2A*   # 禁止 q 含 *（编码后）
-Disallow: /search?q=**    # 禁止 q 含 *（未编码）
+Disallow: /search?q=*%2A*
+Disallow: /search?q=%2A*
+Disallow: /search?q=*%2A

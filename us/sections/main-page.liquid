@@ -1,18 +1,2422 @@
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+* {
+  font-family: Montserrat;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.trade-in-page {
+  letter-spacing: 0;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  position: relative;
+}
+.trade-in-page .pc-show {
+  display: block;
+}
+.trade-in-page .m-show {
+  display: none !important;
+}
+.trade-in-page .text-bold {
+  font-weight: bold;
+}
+.trade-in-page .text-400 {
+  font-weight: 400;
+}
+.trade-in-page .text-600 {
+  font-weight: 600;
+}
+.trade-in-page .text-300 {
+  font-weight: 300;
+}
+.trade-in-page .fit_picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.trade-in-page .fit_picture img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 0;
+  object-fit: contain;
+}
+@keyframes antTooltipZoomIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+@keyframes antTooltipZoomOut {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.8);
+  }
+}
+.trade-in-page .tooltip-wrap {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
+  z-index: 99;
+  background-color: #fff;
+  border-radius: 10%;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.trade-in-page .tooltip-wrap .tooltip {
+  color: rgba(0, 0, 0, 0.85);
+  white-space: nowrap;
+}
+.trade-in-page .tooltip-wrap.show {
+  display: flex;
+  animation: antTooltipZoomIn 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.trade-in-page .tooltip-wrap.hide {
+  display: none;
+  animation: antTooltipZoomOut 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.trade-in-page .banner {
+  width: 100%;
+}
+.trade-in-page .banner .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.trade-in-page .banner .content .banner-text-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.trade-in-page .banner .content .banner-text-wrap .small-title span {
+  color: #0BB3FB;
+}
+.trade-in-page .banner .content .banner-text-wrap .subtitle {
+  text-align: center;
+}
+.trade-in-page .banner .content .banner-text-wrap .banner-btn-wrap {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0BB3FB;
+}
+.trade-in-page .save-big {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.trade-in-page .save-big .save-big-text-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.trade-in-page .save-big .save-big-text-wrap .small-title span {
+  color: #0BB3FB;
+}
+.trade-in-page .save-big .save-big-text-wrap .subtitle {
+  text-align: center;
+}
+.trade-in-page .save-big .save-big-text-wrap .save-big-btn-wrap {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0BB3FB;
+}
+.trade-in-page .new-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.trade-in-page .new-product .text-wrap {
+  display: flex;
+  flex-flow: column;
+}
+.trade-in-page .new-product .swiper-container .slide-wrap {
+  position: relative;
+}
+.trade-in-page .new-product .swiper-container .slide-wrap .slide-text-wrap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.trade-in-page .new-product .swiper-container .slide-wrap .slide-text-wrap .tag {
+  color: #0BB3FB;
+}
+.trade-in-page .new-product .swiper-container .slide-wrap .slide-text-wrap .product-name {
+  color: #fff;
+}
+.trade-in-page .new-product .swiper-container .slide-wrap .slide-text-wrap .slide-learn-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #0BB3FB;
+}
+.trade-in-page .enroll-machine-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.trade-in-page .enroll-machine-form .text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.trade-in-page .enroll-machine-form .form-wrap {
+  box-sizing: border-box;
+  background: #F9F9F9;
+}
+.trade-in-page .enroll-machine-form .form-wrap .custom-form {
+  margin: 0 auto;
+}
+.trade-in-page .enroll-machine-form .form-wrap .custom-form .form-group:nth-child(4) textarea {
+  width: 100%;
+  background: #F1F1F1;
+  box-sizing: border-box;
+  resize: vertical;
+}
+.trade-in-page .enroll-machine-form .form-wrap .custom-form .form-group:nth-child(4) textarea::placeholder {
+  color: #999;
+}
+.trade-in-page .enroll-machine-form .form-wrap .custom-form .form-group:nth-child(4) textarea:focus {
+  outline: none;
+}
+.trade-in-page .enroll-machine-form .form-wrap .form-group .select-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  background-color: #F1F1F1;
+}
+.trade-in-page .enroll-machine-form .form-wrap .form-group .select-trigger .selected-value {
+  color: #999;
+}
+.trade-in-page .enroll-machine-form .form-wrap .form-group .select-trigger .has-value {
+  color: #000;
+}
+.trade-in-page .enroll-machine-form .form-wrap .form-group .select-trigger svg {
+  position: absolute;
+}
+.trade-in-page .enroll-machine-form .form-wrap .form-group .select-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #F1F1F1;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;
+}
+.trade-in-page .enroll-machine-form .form-wrap .form-group .option {
+  cursor: pointer;
+}
+.trade-in-page .enroll-machine-form .form-wrap .form-group .option:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.trade-in-page .enroll-machine-form .form-wrap #upgrade-to {
+  width: 100%;
+  max-width: 100%;
+}
+.trade-in-page .enroll-machine-form .form-wrap #upgrade-to option {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.trade-in-page .enroll-machine-form .form-wrap .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.trade-in-page .enroll-machine-form .form-wrap label {
+  display: block;
+  color: #000;
+}
+.trade-in-page .enroll-machine-form .form-wrap input {
+  width: 100%;
+  box-sizing: border-box;
+  background: #F1F1F1;
+}
+.trade-in-page .enroll-machine-form .form-wrap .upload-wrap {
+  background-color: #f1f1f1;
+}
+.trade-in-page .enroll-machine-form .form-wrap .upload-wrap .upload-area {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.trade-in-page .enroll-machine-form .form-wrap .submit-group {
+  text-align: center;
+}
+.trade-in-page .enroll-machine-form .form-wrap .submit-btn {
+  background: #0BB3FB;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 80%;
+}
+.trade-in-page .enroll-machine-form .form-wrap .form-btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+.trade-in-page .enroll-machine-form .form-wrap .form-btn-wrap .form-submit-btn {
+  background-color: #0BB3FB;
+}
+.trade-in-page .enroll-machine-form .form-wrap .form-btn-wrap .form-submit-btn span {
+  color: #fff;
+}
+.trade-in-page .trade-in-steps {
+  display: flex;
+  flex-direction: column;
+}
+.trade-in-page .trade-in-steps .step-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.trade-in-page .trade-in-steps .step-container .step-wrap {
+  flex: 0 0 auto;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+}
+.trade-in-page .trade-in-steps .step-container .step-wrap .step-text-wrap {
+  position: absolute;
+}
+.trade-in-page .ant-input-outlined:focus,
+.trade-in-page .ant-input-outlined:focus-within,
+.trade-in-page .ant-input-outlined:hover,
+.trade-in-page .ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector,
+.trade-in-page :where(.css-dev-only-do-not-override-7ny38l).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
+  border-color: transparent;
+}
+
+@media screen and (min-width: 901px) and (max-width: 1920px) {
+  #trade-in .trade-in-page .ant-carousel .slick-prev,
+  #trade-in .trade-in-page .ant-carousel .slick-next {
+    border-radius: 50%;
+    background-color: #fff;
+    width: 41px;
+    height: 41px;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  #trade-in .trade-in-page .ant-carousel .slick-prev::after,
+  #trade-in .trade-in-page .ant-carousel .slick-next::after {
+    top: 14px;
+    width: 14px;
+    height: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    border-inline-width: 4px 0;
+    border-block-width: 4px 0;
+  }
+  #trade-in .trade-in-page .ant-carousel .slick-next::after {
+    inset-inline-start: 11px;
+  }
+  #trade-in .trade-in-page .ant-carousel .slick-prev::after {
+    inset-inline-start: 15px;
+  }
+  #trade-in .trade-in-page .ant-form-item .ant-form-item-label > label {
+    font-size: 23px;
+    font-weight: 400;
+  }
+  #trade-in .trade-in-page .container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 1200px;
+  }
+  #trade-in .trade-in-page .title {
+    font-size: 45px;
+    text-align: center;
+  }
+  #trade-in .trade-in-page .sub-title {
+    font-size: 30px;
+    text-align: center;
+  }
+  #trade-in .trade-in-page .tooltip-wrap {
+    padding: 5px 20px;
+    border-radius: 20px;
+    gap: 8px;
+  }
+  #trade-in .trade-in-page .tooltip-wrap .tooltip-icon {
+    width: 20px;
+    height: 20px;
+  }
+  #trade-in .trade-in-page .tooltip-wrap .tooltip {
+    font-size: 12px;
+  }
+  #trade-in .trade-in-page .banner {
+    padding: 169px 0 166px 0;
+  }
+  #trade-in .trade-in-page .banner .banner-text-wrap .small-title {
+    font-size: 30px;
+    line-height: 59px;
+  }
+  #trade-in .trade-in-page .banner .banner-text-wrap .title {
+    font-size: 75px;
+    line-height: 38px;
+    margin: 35px 0 50px 0;
+  }
+  #trade-in .trade-in-page .banner .banner-text-wrap .subtitle {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  #trade-in .trade-in-page .banner .banner-text-wrap .banner-btn-wrap {
+    width: 213px;
+    height: 47px;
+    margin: 39px 0 49px 0;
+    border-radius: 24px;
+  }
+  #trade-in .trade-in-page .banner .banner-img-wrap {
+    width: 1072px;
+    height: 347px;
+  }
+  #trade-in .trade-in-page .save-big .save-big-text-wrap .title {
+    font-size: 45px;
+    line-height: 38px;
+  }
+  #trade-in .trade-in-page .save-big .save-big-text-wrap .subtitle {
+    font-size: 30px;
+    line-height: 45px;
+    margin: 36px 0 48px 0;
+  }
+  #trade-in .trade-in-page .save-big .save-big-text-wrap .save-big-btn-wrap {
+    width: 213px;
+    height: 47px;
+    border-radius: 24px;
+  }
+  #trade-in .trade-in-page .save-big .save-big-table-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 0 60px 0;
+  }
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table {
+    border-collapse: collapse;
+    width: 861px;
+  }
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    border-left: none;
+    border-right: none;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:last-child td,
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:nth-child(3) td,
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:nth-child(4) td,
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:nth-child(5) td {
+    border-bottom: none;
+  }
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:first-child td {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  #trade-in .trade-in-page .save-big .save-big-img-wrap {
+    width: 1273px;
+    height: 596px;
+  }
+  #trade-in .trade-in-page .new-product {
+    margin: 0 0 94px 0;
+    gap: 39px;
+  }
+  #trade-in .trade-in-page .new-product .text-wrap {
+    gap: 23px;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container {
+    width: 1126px;
+    height: 627px;
+    border-radius: 18px;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .arrow-wrap {
+    width: 41px;
+    height: 41px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .arrow-wrap.right {
+    right: 0;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container img {
+    border-radius: 18px;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .slide-text-wrap {
+    top: 52px;
+    gap: 18px;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .slide-text-wrap .tag {
+    font-size: 30px;
+    line-height: 68px;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .slide-text-wrap .product-name {
+    font-size: 45px;
+    line-height: 68px;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .slide-text-wrap .slide-learn-more {
+    width: 171px;
+    height: 38px;
+    border-radius: 24px;
+    font-size: 18px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form {
+    gap: 54px;
+    margin-bottom: 277px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .text-wrap {
+    gap: 35px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap {
+    width: 1125px;
+    padding: 39px 55px 71px 57px;
+    box-shadow: 0px 0px 2px 0px rgba(7, 7, 7, 0.63);
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .custom-form {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .custom-form .form-group:nth-child(3) {
+    width: 49%;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .custom-form .form-group:nth-child(4) textarea {
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 12px;
+    min-height: 140px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .custom-form .form-group:nth-child(4) textarea:focus {
+    border: 1px solid #ddd;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group {
+    margin-bottom: 20px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .error-message {
+    font-size: 16px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .custom-select {
+    position: relative;
+    width: 100%;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-trigger {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #F1F1F1;
+    height: 53px;
+    padding: 0 12px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-trigger .selected-value {
+    font-size: 18px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-trigger svg {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 12px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-options {
+    position: absolute;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-height: 200px;
+    background: #fff;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-options::-webkit-scrollbar {
+    width: 4px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-options::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-options::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-options::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-options::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .option {
+    padding: 12px;
+    font-size: 18px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .option:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-row {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    margin-bottom: 20px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-row .form-group {
+    margin-bottom: 0;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap label {
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 18px;
+    height: 53px;
+    box-sizing: border-box;
+    background: #F1F1F1;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap input:hover {
+    border: 1px solid #ddd;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap input:focus {
+    outline: none;
+    border: 1px solid #ddd;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .upload-container {
+    width: 100%;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .upload-area {
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .upload-area .upload-icon-wrap {
+    width: 51px;
+    height: 51px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .upload-area .preview-image {
+    width: 100px;
+    height: 100px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .submit-btn {
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 80%;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-input-select {
+    height: 53px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-btn-wrap .form-submit-btn {
+    width: 953px;
+    height: 53px;
+    font-size: 23px;
+    font-weight: 600;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .upload-wrap {
+    height: 146px;
+    border-radius: 14px;
+    border: 1px solid #d9d9d9;
+    background: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container {
+    gap: 11px;
+    margin: 94px 0 113px 0;
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap .step-img-wrap {
+    width: 365px;
+    height: 490px;
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap .step-text-wrap {
+    padding: 17px 17px 17px 21px;
+    box-sizing: border-box;
+    height: 170px;
+    top: 314px;
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap .step-text-wrap .step-number {
+    font-size: 23px;
+    color: rgba(0, 0, 0, 0.3);
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap .step-text-wrap .step-title {
+    font-size: 23px;
+    line-height: 18px;
+    margin: 20px 0;
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap .step-text-wrap .step-desc {
+    font-size: 14px;
+    line-height: 15px;
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap:nth-child(3) {
+    transform: translateY(-60px);
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap:nth-child(3) .step-img-wrap {
+    height: 550px;
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap:nth-child(3) .step-text-wrap {
+    top: 371px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #trade-in .trade-in-page .pc-show {
+    display: none !important;
+  }
+  #trade-in .trade-in-page .m-show {
+    display: block !important;
+  }
+  #trade-in .trade-in-page .ant-select .ant-select-arrow {
+    font-size: 9px;
+    height: 13px;
+  }
+  #trade-in .trade-in-page .ant-carousel .slick-prev,
+  #trade-in .trade-in-page .ant-carousel .slick-next {
+    border-radius: 50%;
+    background-color: #fff;
+    width: 5.6vw;
+    height: 5.6vw;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  #trade-in .trade-in-page .ant-carousel .slick-prev::after,
+  #trade-in .trade-in-page .ant-carousel .slick-next::after {
+    top: 1.8666666667vw;
+    width: 2.1333333333vw;
+    height: 2.1333333333vw;
+    color: rgba(0, 0, 0, 0.6);
+    border-inline-width: 0.5333333333vw 0;
+    border-block-width: 0.5333333333vw 0;
+  }
+  #trade-in .trade-in-page .ant-carousel .slick-next::after {
+    inset-inline-start: 1.3333333333vw;
+  }
+  #trade-in .trade-in-page .ant-carousel .slick-prev::after {
+    inset-inline-start: 1.8666666667vw;
+  }
+  #trade-in .trade-in-page .ant-form-item .ant-form-item-label > label {
+    font-size: 1.8666666667vw;
+    font-weight: 400;
+  }
+  #trade-in .trade-in-page .ant-select-selection-placeholder {
+    line-height: normal !important;
+  }
+  #trade-in .trade-in-page .ant-form-item .ant-form-item-label {
+    padding: 0 0 0.2666666667vw !important;
+  }
+  #trade-in .trade-in-page .ant-form-item .ant-form-item-control-input {
+    min-height: auto;
+  }
+  #trade-in .trade-in-page .ant-input,
+  #trade-in .trade-in-page .ant-select-single .ant-select-selector {
+    border-radius: 0.5333333333vw;
+    font-size: 1.8666666667vw;
+  }
+  #trade-in .trade-in-page .ant-upload-wrapper.ant-upload-picture-card-wrapper .ant-upload.ant-upload-select {
+    width: 8.5333333333vw;
+    height: 8.5333333333vw;
+  }
+  #trade-in .trade-in-page .container {
+    margin: 0 auto;
+    max-width: 98.6666666667vw;
+    width: 98.6666666667vw;
+    padding: 0;
+  }
+  #trade-in .trade-in-page .title {
+    font-size: 6.1333333333vw;
+    text-align: center;
+  }
+  #trade-in .trade-in-page .sub-title {
+    font-size: 3.7333333333vw;
+    text-align: center;
+  }
+  #trade-in .trade-in-page .banner {
+    padding: 12.2666666667vw 0 16vw 0;
+  }
+  #trade-in .trade-in-page .banner .banner-text-wrap .small-title {
+    font-size: 4vw;
+    line-height: 4.8vw;
+  }
+  #trade-in .trade-in-page .banner .banner-text-wrap .title {
+    font-size: 6.1333333333vw;
+    line-height: 3.2vw;
+    margin: 2.9333333333vw 0 4.2666666667vw 0;
+  }
+  #trade-in .trade-in-page .banner .banner-text-wrap .subtitle {
+    font-size: 3.4666666667vw;
+    line-height: 4.8vw;
+  }
+  #trade-in .trade-in-page .banner .banner-text-wrap .banner-btn-wrap {
+    width: 26.9333333333vw;
+    height: 6.1333333333vw;
+    margin: 4vw 0 9.6vw 0;
+    border-radius: 3.2vw;
+    font-size: 3.2vw;
+  }
+  #trade-in .trade-in-page .banner .banner-img-wrap {
+    width: 83.4666666667vw;
+    height: 27.2vw;
+  }
+  #trade-in .trade-in-page .new-product {
+    margin: 7.2vw 0 15.2vw 0;
+    gap: 6.4vw;
+  }
+  #trade-in .trade-in-page .new-product .text-wrap {
+    gap: 5.6vw;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container {
+    width: 98.1333333333vw;
+    height: 55.7333333333vw;
+    border-radius: 3.2vw;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .arrow-wrap {
+    width: 5.6vw;
+    height: 5.6vw;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .arrow-wrap.right {
+    right: 0;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container img {
+    border-radius: 3.2vw;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .slide-text-wrap {
+    top: 4.2666666667vw;
+    gap: 1.8666666667vw;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .slide-text-wrap .tag {
+    font-size: 2.6666666667vw;
+    line-height: 5.8666666667vw;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .slide-text-wrap .product-name {
+    font-size: 4vw;
+    line-height: 5.8666666667vw;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .slide-text-wrap .slide-learn-more {
+    width: 14.9333333333vw;
+    height: 3.2vw;
+    border-radius: 3.2vw;
+    font-size: 1.6vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form {
+    gap: 6.1333333333vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .text-wrap {
+    gap: 2.4vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-container {
+    margin: 0 5.3333333333vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap {
+    width: 90.6666666667vw;
+    padding: 4.5333333333vw 6.1333333333vw 7.7333333333vw 6.1333333333vw;
+    box-shadow: 0 0 1.0666666667vw 0 rgba(0, 0, 0, 0.08);
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-input-select {
+    height: 4.5333333333vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-btn-wrap .form-submit-btn {
+    width: 79.2vw;
+    height: 4.2666666667vw;
+    font-size: 1.8666666667vw;
+    font-weight: 600;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .upload-wrap {
+    height: 12.8vw;
+    border-radius: 1.6vw;
+    border: 0.2666666667vw solid #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .custom-form {
+    max-width: 96.2666666667vw;
+    margin: 0 auto;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .custom-form .form-group:nth-child(4) textarea {
+    font-size: 1.8666666667vw;
+    border: 0.2666666667vw solid #ddd;
+    border-radius: 1.3333333333vw;
+    padding: 1.3333333333vw 3.2vw;
+    min-height: 11.4666666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .custom-form .form-group:nth-child(4) textarea:focus {
+    border: 0.2666666667vw solid #ddd;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-group {
+    margin-bottom: 5.3333333333vw;
+    position: relative;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-group .error-message {
+    font-size: 1.8666666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-group .select-trigger {
+    border: 0.2666666667vw solid #ddd;
+    border-radius: 1.0666666667vw;
+    height: 4.8vw;
+    padding: 0 3.2vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-group .select-trigger .selected-value {
+    font-size: 1.6vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-group .select-trigger svg {
+    position: absolute;
+    width: 3.2vw;
+    height: 3.2vw;
+    right: 1.0666666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-group .select-options {
+    position: absolute;
+    border: 0.2666666667vw solid #ddd;
+    border-radius: 1.0666666667vw;
+    max-height: 53.3333333333vw;
+    background: #fff;
+    box-shadow: 0 0.5333333333vw 2.1333333333vw 0 rgba(0, 0, 0, 0.15);
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-group .select-options::-webkit-scrollbar {
+    width: 0.5333333333vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-group .select-options::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-group .select-options::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0.2666666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-group .select-options::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-group .select-options::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-group .option {
+    padding: 1.6vw 3.2vw;
+    font-size: 1.6vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-group .option:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-row {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5.3333333333vw;
+    margin-bottom: 5.3333333333vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-row .form-group {
+    margin-bottom: 0;
+  }
+  #trade-in .trade-in-page .enroll-machine-form label {
+    margin-bottom: 1.8666666667vw;
+    font-weight: 400;
+    font-size: 1.8666666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form input {
+    width: 100%;
+    padding: 3.2vw;
+    border: 0.2666666667vw solid #ddd;
+    border-radius: 1.0666666667vw;
+    font-size: 1.6vw;
+    height: 4.5333333333vw;
+    box-sizing: border-box;
+  }
+  #trade-in .trade-in-page .enroll-machine-form input:hover {
+    border: 0.2666666667vw solid #ddd;
+  }
+  #trade-in .trade-in-page .enroll-machine-form input:focus {
+    outline: none;
+    border: 0.2666666667vw solid #ddd;
+  }
+  #trade-in .trade-in-page .upload-container {
+    width: 100%;
+  }
+  #trade-in .trade-in-page .upload-area {
+    border: 0.2666666667vw dashed #ddd;
+    border-radius: 2.1333333333vw;
+    box-sizing: border-box;
+  }
+  #trade-in .trade-in-page .upload-area .upload-icon-wrap {
+    width: 4.2666666667vw;
+    height: 4vw;
+  }
+  #trade-in .trade-in-page .upload-area .preview-image {
+    width: 10.6666666667vw;
+    height: 9.3333333333vw;
+  }
+  #trade-in .trade-in-page .submit-btn {
+    padding: 1.6vw 8vw;
+    border-radius: 1.0666666667vw;
+    font-size: 1.8666666667vw;
+    width: 80%;
+  }
+  #trade-in .trade-in-page .form-input-select {
+    height: 4.8vw;
+  }
+  .save-big .save-big-text-wrap .title {
+    font-size: 6.1333333333vw;
+    line-height: 3.2vw;
+  }
+  .save-big .save-big-text-wrap .subtitle {
+    font-size: 3.4666666667vw;
+    line-height: 4.8vw;
+    margin: 6.1333333333vw 0 5.3333333333vw 0;
+  }
+  .save-big .save-big-text-wrap .save-big-btn-wrap {
+    width: 26.9333333333vw;
+    height: 6.1333333333vw;
+    border-radius: 3.2vw;
+    font-size: 2.6666666667vw;
+  }
+  .save-big .save-big-table-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 8vw 0 10.6666666667vw 0;
+  }
+  .save-big .save-big-table-wrap .save-big-table {
+    border-collapse: collapse;
+    width: 96.8vw;
+  }
+  .save-big .save-big-table-wrap .save-big-table td {
+    padding: 2.6666666667vw;
+    border-bottom: 0.2666666667vw solid #ddd;
+    border-left: none;
+    border-right: none;
+    font-size: 3.7333333333vw;
+    font-weight: 600;
+  }
+  .save-big .save-big-table-wrap .save-big-table tr:last-child td,
+  .save-big .save-big-table-wrap .save-big-table tr:nth-child(3) td,
+  .save-big .save-big-table-wrap .save-big-table tr:nth-child(4) td,
+  .save-big .save-big-table-wrap .save-big-table tr:nth-child(5) td {
+    border-bottom: none;
+  }
+  .save-big .save-big-table-wrap .save-big-table tr:first-child td {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .save-big .save-big-img-wrap {
+    width: 100vw;
+    height: auto;
+  }
+  .trade-in-steps .step-container {
+    gap: 2.9333333333vw;
+    margin: 9.8666666667vw 0 10.1333333333vw 0;
+  }
+  .trade-in-steps .step-container .step-wrap {
+    width: 93.3333333333vw;
+  }
+  .trade-in-steps .step-container .step-wrap .step-img-wrap {
+    width: 100%;
+  }
+  .trade-in-steps .step-container .step-wrap .step-text-wrap {
+    padding: 5.6vw 0 0 6.4vw;
+    border-radius: 0 0 3.2vw 3.2vw;
+    box-sizing: border-box;
+    height: 45.3333333333vw;
+    top: 61.3333333333vw;
+  }
+  .trade-in-steps .step-container .step-wrap .step-text-wrap .step-number {
+    font-size: 4.8vw;
+    color: rgba(0, 0, 0, 0.3);
+    margin-bottom: 2.6666666667vw;
+  }
+  .trade-in-steps .step-container .step-wrap .step-text-wrap .step-title {
+    font-size: 5.3333333333vw;
+    line-height: 5.3333333333vw;
+    margin-bottom: 3.7333333333vw;
+  }
+  .trade-in-steps .step-container .step-wrap .step-text-wrap .step-desc {
+    font-size: 2.9333333333vw;
+    line-height: 5.0666666667vw;
+    max-width: 77.3333333333vw;
+  }
+  .trade-in-steps .step-container .step-wrap:nth-child(3) {
+    transform: translateY(calc(-1 * 5.3333333333vw));
+  }
+  .trade-in-steps .step-container .step-wrap:nth-child(3) .step-text-wrap {
+    top: 88vw;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #trade-in .trade-in-page .ant-carousel .slick-prev,
+  #trade-in .trade-in-page .ant-carousel .slick-next {
+    border-radius: 50%;
+    background-color: #fff;
+    width: 2.1354166667vw;
+    height: 2.1354166667vw;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  #trade-in .trade-in-page .ant-carousel .slick-prev::after,
+  #trade-in .trade-in-page .ant-carousel .slick-next::after {
+    top: 0.7291666667vw;
+    width: 0.7291666667vw;
+    height: 0.7291666667vw;
+    color: rgba(0, 0, 0, 0.6);
+    border-inline-width: 0.2083333333vw 0;
+    border-block-width: 0.2083333333vw 0;
+  }
+  #trade-in .trade-in-page .ant-carousel .slick-next::after {
+    inset-inline-start: 0.5729166667vw;
+  }
+  #trade-in .trade-in-page .ant-carousel .slick-prev::after {
+    inset-inline-start: 0.78125vw;
+  }
+  #trade-in .trade-in-page .ant-form-item .ant-form-item-label > label {
+    font-size: 1.1979166667vw;
+    font-weight: 400;
+  }
+  #trade-in .trade-in-page .container {
+    margin: 0 auto;
+    max-width: 62.5vw;
+    width: 62.5vw;
+  }
+  #trade-in .trade-in-page .title {
+    font-size: 2.34375vw;
+    text-align: center;
+  }
+  #trade-in .trade-in-page .sub-title {
+    font-size: 1.5625vw;
+    text-align: center;
+  }
+  #trade-in .trade-in-page .tooltip-wrap {
+    padding: 0.2604166667vw 1.0416666667vw;
+    border-radius: 1.0416666667vw;
+    gap: 0.4166666667vw;
+  }
+  #trade-in .trade-in-page .tooltip-wrap .tooltip-icon {
+    width: 1.0416666667vw;
+    height: 1.0416666667vw;
+  }
+  #trade-in .trade-in-page .tooltip-wrap .tooltip {
+    font-size: 0.625vw;
+  }
+  #trade-in .trade-in-page .banner {
+    padding: 8.8020833333vw 0 8.6458333333vw 0;
+  }
+  #trade-in .trade-in-page .banner .banner-text-wrap .small-title {
+    font-size: 1.5625vw;
+    line-height: 3.0729166667vw;
+  }
+  #trade-in .trade-in-page .banner .banner-text-wrap .title {
+    font-size: 3.90625vw;
+    line-height: 1.9791666667vw;
+    margin: 1.8229166667vw 0 2.6041666667vw 0;
+  }
+  #trade-in .trade-in-page .banner .banner-text-wrap .subtitle {
+    font-size: 1.5625vw;
+    line-height: 2.34375vw;
+  }
+  #trade-in .trade-in-page .banner .banner-text-wrap .banner-btn-wrap {
+    width: 11.09375vw;
+    height: 2.4479166667vw;
+    margin: 2.03125vw 0 2.5520833333vw 0;
+    border-radius: 1.25vw;
+  }
+  #trade-in .trade-in-page .banner .banner-img-wrap {
+    width: 55.8333333333vw;
+    height: 18.0729166667vw;
+  }
+  #trade-in .trade-in-page .save-big .save-big-text-wrap .title {
+    font-size: 2.34375vw;
+    line-height: 1.9791666667vw;
+  }
+  #trade-in .trade-in-page .save-big .save-big-text-wrap .subtitle {
+    font-size: 1.5625vw;
+    line-height: 2.34375vw;
+    margin: 1.875vw 0 2.5vw 0;
+  }
+  #trade-in .trade-in-page .save-big .save-big-text-wrap .save-big-btn-wrap {
+    width: 11.09375vw;
+    height: 2.4479166667vw;
+    border-radius: 1.25vw;
+  }
+  #trade-in .trade-in-page .save-big .save-big-table-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4.1666666667vw 0 3.125vw 0;
+  }
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table {
+    border-collapse: collapse;
+    width: 44.84375vw;
+  }
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table td {
+    padding: 0.78125vw;
+    border-bottom: 0.0520833333vw solid #ddd;
+    border-left: none;
+    border-right: none;
+    font-size: 1.5625vw;
+    font-weight: 600;
+  }
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:last-child td,
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:nth-child(3) td,
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:nth-child(4) td,
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:nth-child(5) td {
+    border-bottom: none;
+  }
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:first-child td {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  #trade-in .trade-in-page .save-big .save-big-img-wrap {
+    width: 66.3020833333vw;
+    height: 31.0416666667vw;
+  }
+  #trade-in .trade-in-page .new-product {
+    margin: 0 0 4.8958333333vw 0;
+    gap: 2.03125vw;
+  }
+  #trade-in .trade-in-page .new-product .text-wrap {
+    gap: 1.1979166667vw;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container {
+    width: 58.6458333333vw;
+    height: 32.65625vw;
+    border-radius: 0.9375vw;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .arrow-wrap {
+    width: 2.1354166667vw;
+    height: 2.1354166667vw;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .arrow-wrap.right {
+    right: 0;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container img {
+    border-radius: 0.9375vw;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .slide-text-wrap {
+    top: 2.7083333333vw;
+    gap: 0.9375vw;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .slide-text-wrap .tag {
+    font-size: 1.5625vw;
+    line-height: 3.5416666667vw;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .slide-text-wrap .product-name {
+    font-size: 2.34375vw;
+    line-height: 3.5416666667vw;
+  }
+  #trade-in .trade-in-page .new-product .swiper-container .slide-text-wrap .slide-learn-more {
+    width: 8.90625vw;
+    height: 1.9791666667vw;
+    border-radius: 1.25vw;
+    font-size: 0.9375vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form {
+    gap: 2.8125vw;
+    margin-bottom: 14.4270833333vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .text-wrap {
+    gap: 1.8229166667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap {
+    width: 58.59375vw;
+    padding: 2.03125vw 2.8645833333vw 3.6979166667vw 2.96875vw;
+    box-shadow: 0px 0px 0.1041666667vw 0px rgba(7, 7, 7, 0.63);
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .custom-form {
+    max-width: 52.0833333333vw;
+    margin: 0 auto;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .custom-form .form-group:nth-child(3) {
+    width: 49%;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .custom-form .form-group:nth-child(4) textarea {
+    font-size: 0.9375vw;
+    border: 0.0520833333vw solid #ddd;
+    border-radius: 0.2083333333vw;
+    padding: 0.625vw;
+    min-height: 7.2916666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .custom-form .form-group:nth-child(4) textarea:focus {
+    border: 0.0520833333vw solid #ddd;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group {
+    margin-bottom: 1.0416666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .error-message {
+    font-size: 0.8333333333vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .custom-select {
+    position: relative;
+    width: 100%;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-trigger {
+    border: 0.0520833333vw solid #ddd;
+    border-radius: 0.2083333333vw;
+    background: #F1F1F1;
+    height: 2.7604166667vw;
+    padding: 0 0.625vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-trigger .selected-value {
+    font-size: 0.9375vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-trigger svg {
+    position: absolute;
+    width: 1.6666666667vw;
+    height: 1.6666666667vw;
+    right: 0.625vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-options {
+    position: absolute;
+    border: 0.0520833333vw solid #ddd;
+    border-radius: 0.2083333333vw;
+    max-height: 10.4166666667vw;
+    background: #fff;
+    box-shadow: 0 0.3125vw 0.8333333333vw 0 rgba(0, 0, 0, 0.08), 0 0.15625vw 0.3125vw -0.2083333333vw rgba(0, 0, 0, 0.12), 0 0.46875vw 1.4583333333vw 0.4166666667vw rgba(0, 0, 0, 0.05);
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-options::-webkit-scrollbar {
+    width: 0.2083333333vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-options::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-options::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 0.1041666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-options::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .select-options::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .option {
+    padding: 0.625vw;
+    font-size: 0.9375vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-group .option:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-row {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.0416666667vw;
+    margin-bottom: 1.0416666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-row .form-group {
+    margin-bottom: 0;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap label {
+    margin-bottom: 0.4166666667vw;
+    font-weight: 400;
+    font-size: 1.0416666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap input {
+    width: 100%;
+    padding: 0.625vw;
+    border: 0.0520833333vw solid #ddd;
+    border-radius: 0.2083333333vw;
+    font-size: 0.9375vw;
+    height: 2.7604166667vw;
+    box-sizing: border-box;
+    background: #F1F1F1;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap input:hover {
+    border: 0.0520833333vw solid #ddd;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap input:focus {
+    outline: none;
+    border: 0.0520833333vw solid #ddd;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .upload-container {
+    width: 100%;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .upload-area {
+    border: 0.1041666667vw dashed #ddd;
+    border-radius: 0.4166666667vw;
+    box-sizing: border-box;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .upload-area .upload-icon-wrap {
+    width: 2.65625vw;
+    height: 2.65625vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .upload-area .preview-image {
+    width: 5.2083333333vw;
+    height: 5.2083333333vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .submit-btn {
+    padding: 0.625vw 1.5625vw;
+    border-radius: 0.2083333333vw;
+    font-size: 0.8333333333vw;
+    width: 80%;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-input-select {
+    height: 2.7604166667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .form-btn-wrap .form-submit-btn {
+    width: 49.6354166667vw;
+    height: 2.7604166667vw;
+    font-size: 1.1979166667vw;
+    font-weight: 600;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-wrap .upload-wrap {
+    height: 7.6041666667vw;
+    border-radius: 0.7291666667vw;
+    border: 0.0520833333vw solid #d9d9d9;
+    background: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container {
+    gap: 0.5729166667vw;
+    margin: 4.8958333333vw 0 5.8854166667vw 0;
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap .step-img-wrap {
+    width: 19.0104166667vw;
+    height: 25.5208333333vw;
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap .step-text-wrap {
+    padding: 0.8854166667vw 0.8854166667vw 0.8854166667vw 1.09375vw;
+    box-sizing: border-box;
+    height: 8.8541666667vw;
+    top: 16.3541666667vw;
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap .step-text-wrap .step-number {
+    font-size: 1.1979166667vw;
+    color: rgba(0, 0, 0, 0.3);
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap .step-text-wrap .step-title {
+    font-size: 1.1979166667vw;
+    line-height: 0.9375vw;
+    margin: 1.0416666667vw 0;
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap .step-text-wrap .step-desc {
+    font-size: 0.7291666667vw;
+    line-height: 0.78125vw;
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap:nth-child(3) {
+    transform: translateY(-3.125vw);
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap:nth-child(3) .step-img-wrap {
+    height: 28.6458333333vw;
+  }
+  #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap:nth-child(3) .step-text-wrap {
+    top: 19.3229166667vw;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
+
+</style>
+
 {% unless template.suffix contains 'landing' %}
-<div class="page-width page-width--narrow{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
-	<div class="container">
-	  <h1 class="main-page-title page-header{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
-	    {{ page.title | escape }}
-	  </h1>
-	  <div class="rte{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
-	    {{ page.content }}
-	  </div>
-  	</div>
-</div>
-{% endunless %}
+   <div id="trade-in">
+      <div class="trade-in-page">
+        <div class="tooltip-wrap hide"></div>
+
+        <div class="banner">
+          <div class="content contains">
+            <div class="banner-text-wrap">
+              <div class="small-title text-600">
+                Falcon <span>Trade In</span>
+              </div>
+              <div class="title text-bold">Save More. Create More.</div>
+              <div class="subtitle text-400">
+                Trade in your old machine!<br />
+                No returns needed, any brand accepte!<br />
+                Get ready for your next-level creation journey.
+              </div>
+              <div class="banner-btn-wrap text-400">Upgrade Now</div>
+            </div>
+            <div class="banner-img-wrap">
+              <picture>
+                <source
+                  srcset="
+                    https://cdn.shopify.com/s/files/1/0799/8714/7049/files/A1P_ba3a5980-15c6-488a-bd1c-577891e12aa3.png?v=1757572210
+                  "
+                  media="(max-width: 900px)"
+                />
+                <source
+                  srcset="
+                    https://cdn.shopify.com/s/files/1/0799/8714/7049/files/A1P.png?v=1757572199
+                  "
+                  media="(min-width: 901px)"
+                />
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/A1P.png?v=1757572199"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <div class="trade-in-steps container">
+          <p class="text-bold title">
+            Easy Trade-In in<br class="m-show" />
+            3 Simple Steps
+          </p>
+          <div class="step-container">
+            <div class="step-wrap">
+              <div class="step-img-wrap">
+                <picture>
+                  <source
+                    type="image/jpeg"
+                    srcset="
+                      https://cdn.shopify.com/s/files/1/0799/8714/7049/files/1_f4ac732d-1f80-4451-8457-38abc78381e3.png?v=1757573419
+                    "
+                    media="(max-width:900px)"
+                  />
+                  <source
+                    type="image/jpeg"
+                    srcset="
+                      https://cdn.shopify.com/s/files/1/0799/8714/7049/files/1_8bf30911-c00e-4fa4-ab28-2a46898f247a.png?v=1757573434
+                    "
+                    media="(min-width:901px)"
+                  />
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/1_8bf30911-c00e-4fa4-ab28-2a46898f247a.png?v=1757573434"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </picture>
+              </div>
+              <div class="step-text-wrap">
+                <div class="step-number text-bold">STEP 1</div>
+                <div class="step-title text-600">Submit Your Request</div>
+                <div class="step-desc text-600">
+                  Fill out the quick claim form and choose the Falcon laser
+                  you’d like to upgrade to.That’s it—no returns required!
+                </div>
+              </div>
+            </div>
+            <div class="step-wrap">
+              <div class="step-img-wrap">
+                <picture>
+                  <source
+                    type="image/jpeg"
+                    srcset="
+                      https://cdn.shopify.com/s/files/1/0799/8714/7049/files/2_64792e14-1e22-445e-b71d-c3a7c84ee833.png?v=1757573419
+                    "
+                    media="(max-width:900px)"
+                  />
+                  <source
+                    type="image/jpeg"
+                    srcset="
+                      https://cdn.shopify.com/s/files/1/0799/8714/7049/files/2_03ba2a36-7521-453f-a660-4e117de2b42c.png?v=1757573435
+                    "
+                    media="(min-width:901px)"
+                  />
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/2_03ba2a36-7521-453f-a660-4e117de2b42c.png?v=1757573435"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </picture>
+              </div>
+              <div class="step-text-wrap">
+                <div class="step-number text-bold">STEP 2</div>
+                <div class="step-title text-600">Get Your Reward</div>
+                <div class="step-desc text-600">
+                  Our team will review your application within 24 hours. Once
+                  approved,you'll receive a confirmation email with your
+                  exclusive reward.
+                </div>
+              </div>
+            </div>
+            <div class="step-wrap">
+              <div class="step-img-wrap">
+                <picture>
+                  <source
+                    type="image/jpeg"
+                    srcset="
+                      https://cdn.shopify.com/s/files/1/0799/8714/7049/files/3_b1a8adf1-388b-41a0-a4e7-19faba699388.png?v=1757573419
+                    "
+                    media="(max-width:900px)"
+                  />
+                  <source
+                    type="image/jpeg"
+                    srcset="
+                      https://cdn.shopify.com/s/files/1/0799/8714/7049/files/3_402c3d6e-c9e3-451f-a466-31d54fdc9d8b.png?v=1757573435
+                    "
+                    media="(min-width:901px)"
+                  />
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/3_402c3d6e-c9e3-451f-a466-31d54fdc9d8b.png?v=1757573435"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </picture>
+              </div>
+              <div class="step-text-wrap">
+                <div class="step-number text-bold">STEP 3</div>
+                <div class="step-title text-600">Upgrade and Save Big</div>
+                <div class="step-desc text-600">
+                  Ready to trade up to any Falcon new laser machine? Use your
+                  reward to save up to $300 on your new order.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-product">
+          <div class="swiper-container container">
+            <div class="slide-wrap">
+              <div class="slide-text-wrap">
+                <div class="tag text-400">New Release</div>
+
+                <div class="product-name text-bold">Creality Falcon A1 Pro</div>
+                <a
+                  class="slide-learn-more text-bold"
+                  href="https://www.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver"
+                >
+                  Learn More
+                </a>
+              </div>
+              <picture>
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    https://cdn.shopify.com/s/files/1/0893/0603/8637/files/Falcon_A1_Pro-2.jpg?v=1756806817
+                  "
+                  media="(max-width:900px)"
+                />
+
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    https://cdn.shopify.com/s/files/1/0893/0603/8637/files/Falcon_A1_Pro.jpg?v=1756690900
+                  "
+                  media="(min-width:901px)"
+                />
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0893/0603/8637/files/Falcon_A1_Pro.jpg?v=1756690900"
+                  alt=""
+                  height="auto"
+                  width="100%"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="save-big">
+          <div class="save-big-text-wrap">
+            <div class="title text-bold">Save Big, Level Up</div>
+            <div class="subtitle text-400">
+              Upgrade to any Falcon laser machine and get $500-$100in<br
+                class="pc-show"
+              />
+              rewards-noreturnneeded.
+            </div>
+            <div class="save-big-btn-wrap text-400">Upgrade Now</div>
+          </div>
+          <div class="save-big-table-wrap">
+            <table class="save-big-table">
+              <tr>
+                <td>Machine</td>
+                <td>You Receive</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver">Falcon A1 Pro</a>
+                </td>
+                <td>$100 off</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href=" https://www.crealityfalcon.com/products/falcon-a1-10w-enclosed-laser-engraver-and-cutter">Falcon A1</a>
+                </td>
+                <td>$50 off</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.crealityfalcon.com/products/falcon-2-pro-40w-enclosed-laser-engraver-and-cutter">Falcon2 Pro 22W</a>
+                </td>
+                <td>$100 off</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.crealityfalcon.com/products/falcon-2-pro-40w-enclosed-laser-engraver-and-cutter">Falcon2 Pro 40W</a>
+                </td>
+                <td>$150 off</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.crealityfalcon.com/products/falcon-2-pro-40w-enclosed-laser-engraver-and-cutter">Falcon2 Pro 60W</a>
+                </td>
+                <td>$200 off</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.crealityfalcon.com/products/falcon-ap1-smoke-purifier">AP1 Air Purifier</a>
+                </td>
+                <td>$50 off</td>
+              </tr>
+              
+            </table>
+          </div>
+          <div class="save-big-img-wrap">
+            <picture>
+              <source
+                type="image/jpeg"
+                srcset="
+                  https://cdn.shopify.com/s/files/1/0799/8714/7049/files/c13d6c4c212835aa671c1bf4d3599167_2f836d7f-eb98-48ef-839f-1d6e7430cd83.png?v=1757576501
+                "
+                media="(max-width:900px)"
+              />
+              <source
+                type="image/jpeg"
+                srcset="
+                  https://cdn.shopify.com/s/files/1/0799/8714/7049/files/c13d6c4c212835aa671c1bf4d3599167.png?v=1757576497
+                "
+                media="(min-width:901px)"
+              />
+              <img
+                src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/c13d6c4c212835aa671c1bf4d3599167.png?v=1757576497"
+                alt=""
+                width="100%"
+                height="100%"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="enroll-machine-form container">
+          <div class="text-wrap">
+            <p class="title text-bold">Enroll Machine Form</p>
+            <p class="sub-title text-400">
+              Complete the form below to unlock your<br />
+              upgrade reward
+            </p>
+          </div>
+
+          <div class="form-container">
+            <div class="form-wrap">
+              <form class="custom-form">
+                <!-- 第一行：Email -->
+                <div class="form-group">
+                  <label for="email"
+                    >Email<span style="color: red">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Your email address"
+                  />
+                  <div
+                    id="email-error"
+                    class="error-message"
+                    style="color: red; display: none"
+                  ></div>
+                </div>
+
+                <!-- 第二行：两列布局 -->
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="machine-type"
+                      >Your machine type<span style="color: red">*</span></label
+                    >
+                    <div class="custom-select">
+                      <div class="select-trigger">
+                        <svg
+                          t="1757390104463"
+                          class="icon"
+                          viewBox="0 0 1024 1024"
+                          version="1.1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          p-id="1457"
+                        >
+                          <path
+                            d="M511.993856 628.397287c-5.956358 0-11.910668-2.271137-16.454989-6.815458L262.823137 388.8661c-9.087618-9.087618-9.087618-23.822359 0-32.911002 9.087618-9.088642 23.823383-9.088642 32.911002 0l216.260741 216.259717 216.269957-216.260741c9.088642-9.088642 23.823383-9.087618 32.912026 0 9.087618 9.088642 9.086594 23.823383-0.001024 32.911002l-232.72597 232.714706C523.905548 626.125127 517.94919 628.397287 511.993856 628.397287z"
+                            fill="#999"
+                            p-id="1458"
+                          ></path>
+                        </svg>
+                        <span
+                          class="selected-value"
+                          data-value="default"
+                          id="machine-type"
+                          >Select Your Machine Type</span
+                        >
+                      </div>
+
+                      <div class="select-options">
+                        <div class="option" data-value="Diode Laser">
+                          Diode Laser
+                        </div>
+                        <div class="option" data-value="Fiber Laser">
+                          Fiber Laser
+                        </div>
+                        <div class="option" data-value="CO2 Laser">
+                          CO2 Laser
+                        </div>
+                        <div class="option" data-value="UV Laser">UV Laser</div>
+                        <div class="option" data-value="3D Printer">
+                          3D Printer
+                        </div>
+                        <div class="option" data-value="Others">Others</div>
+                      </div>
+                    </div>
+
+                    <div
+                      id="machine-type-error"
+                      class="error-message"
+                      style="color: red; display: none"
+                    ></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="printer-brand"
+                      >Your current model-Brand
+                      <span style="color: red">*</span></label
+                    >
+                    <div class="custom-select">
+                      <div class="select-trigger">
+                        <svg
+                          t="1757390104463"
+                          class="icon"
+                          viewBox="0 0 1024 1024"
+                          version="1.1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          p-id="1457"
+                        >
+                          <path
+                            d="M511.993856 628.397287c-5.956358 0-11.910668-2.271137-16.454989-6.815458L262.823137 388.8661c-9.087618-9.087618-9.087618-23.822359 0-32.911002 9.087618-9.088642 23.823383-9.088642 32.911002 0l216.260741 216.259717 216.269957-216.260741c9.088642-9.088642 23.823383-9.087618 32.912026 0 9.087618 9.088642 9.086594 23.823383-0.001024 32.911002l-232.72597 232.714706C523.905548 626.125127 517.94919 628.397287 511.993856 628.397287z"
+                            fill="#999"
+                            p-id="1458"
+                          ></path>
+                        </svg>
+                        <span
+                          class="selected-value"
+                          id="printer-brand"
+                          data-value="default"
+                          >Select Your current model-Brand</span
+                        >
+                      </div>
+
+                      <div class="select-options">
+                        <div class="option" data-value="Xtool">Xtool</div>
+                        <div class="option" data-value="Glowforge">
+                          Glowforge
+                        </div>
+                        <div class="option" data-value="Bambu Lab">
+                          Bambu Lab
+                        </div>
+                        <div
+                          class="option"
+                          data-value="All American Print Supply"
+                        >
+                          All American Print Supply
+                        </div>
+                        <div class="option" data-value="Atomstack">
+                          Atomstack
+                        </div>
+                        <div class="option" data-value="Ortur">Ortur</div>
+                        <div class="option" data-value="Creality">Creality</div>
+                        <div class="option" data-value="Omtech">Omtech</div>
+                        <div class="option" data-value="Laserpecker">
+                          Laserpecker
+                        </div>
+                        <div class="option" data-value="Wecreat">Wecreat</div>
+                        <div class="option" data-value="Twotrees">Twotrees</div>
+                        <div class="option" data-value="Neje">Neje</div>
+                        <div class="option" data-value="Elegoo">Elegoo</div>
+                        <div class="option" data-value="Silhouette">
+                          Silhouette
+                        </div>
+                        <div class="option" data-value="Cameo">Cameo</div>
+                        <div class="option" data-value="Cricut">Cricut</div>
+                        <div class="option" data-value="Brother">Brother</div>
+                        <div class="option" data-value="Prusa Research">
+                          Prusa Research
+                        </div>
+                        <div class="option" data-value="Anycubic">Anycubic</div>
+                        <div class="option" data-value="Flashforge">
+                          Flashforge
+                        </div>
+                        <div class="option" data-value="Procolored">
+                          Procolored
+                        </div>
+                        <div class="option" data-value="Epson">Epson</div>
+                        <div class="option" data-value="Lincoln">Lincoln</div>
+                        <div class="option" data-value="Miller">Miller</div>
+                        <div class="option" data-value="Everlast">Everlast</div>
+                        <div class="option" data-value="Riland">Riland</div>
+                        <div class="option" data-value="YesWelder">
+                          YesWelder
+                        </div>
+                        <div class="option" data-value="Coherent">Coherent</div>
+                        <div class="option" data-value="IPG Photonics">
+                          IPG Photonics
+                        </div>
+                        <div class="option" data-value="XLaserlab">
+                          XLaserlab
+                        </div>
+                        <div class="option" data-value="Geweike">Geweike</div>
+                        <div class="option" data-value="Herolaser">
+                          Herolaser
+                        </div>
+                        <div
+                          class="option"
+                          data-value="Not on the list, others"
+                        >
+                          Not on the list, others
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      id="printer-brand-error"
+                      class="error-message"
+                      style="color: red; display: none"
+                    ></div>
+                  </div>
+                </div>
+
+                <!-- 第三行：Upgrade to -->
+                <div class="form-group">
+                  <label for="upgrade-to"
+                    >Upgrade to<span style="color: red">*</span></label
+                  >
+
+                  <div class="custom-select">
+                    <div class="select-trigger">
+                      <svg
+                        t="1757390104463"
+                        class="icon"
+                        viewBox="0 0 1024 1024"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        p-id="1457"
+                      >
+                        <path
+                          d="M511.993856 628.397287c-5.956358 0-11.910668-2.271137-16.454989-6.815458L262.823137 388.8661c-9.087618-9.087618-9.087618-23.822359 0-32.911002 9.087618-9.088642 23.823383-9.088642 32.911002 0l216.260741 216.259717 216.269957-216.260741c9.088642-9.088642 23.823383-9.087618 32.912026 0 9.087618 9.088642 9.086594 23.823383-0.001024 32.911002l-232.72597 232.714706C523.905548 626.125127 517.94919 628.397287 511.993856 628.397287z"
+                          fill="#999"
+                          p-id="1458"
+                        ></path>
+                      </svg>
+                      <span
+                        class="selected-value"
+                        data-value="default"
+                        id="upgrade-to"
+                        >Select Your Upgrade Machine Type</span
+                      >
+                    </div>
+
+                    <div class="select-options">
+                      <div class="option" data-value="falcon-a1-pro">
+                        CrealityFalcon A1 Pro 20W | $200 OFF
+                      </div>
+                      <div class="option" data-value="falcon2-pro">
+                        CrealityFalcon2 Pro | $150 OFF
+                      </div>
+                      <div class="option" data-value="falcon-a1">
+                        CrealityFalcon A1 | $50 OFF
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    id="upgrade-to-error"
+                    class="error-message"
+                    style="color: red; display: none"
+                  ></div>
+                </div>
+                <div class="form-group">
+                  <label for="why-upgrade"
+                    >Why You Upgrade<span style="color: red">*</span></label
+                  >
+                  <textarea
+                    id="why-upgrade"
+                    name="why-upgrade"
+                    placeholder="Please enter your reason for upgrading"
+                  ></textarea>
+
+                  <div
+                    id="why-upgrade-error"
+                    class="error-message"
+                    style="color: red; display: none"
+                  ></div>
+                </div>
+                <!-- 第四行：文件上传 -->
+                <div class="form-group">
+                  <label for="purchase-proof"
+                    >A photo of your used machine<span style="color: red"
+                      >*</span
+                    ></label
+                  >
+                  <div class="upload-wrap">
+                    <input
+                      type="file"
+                      id="purchase-proof"
+                      name="purchase-proof"
+                      accept=".jpg,.png,.webp"
+                      style="display: none"
+                    />
+
+                    <div class="upload-area">
+                      <div class="upload-icon-wrap">
+                        <img
+                          id="upload-icon"
+                          src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/image_d3f7623e-56f2-4722-95ca-3a08142353e8.png?v=1758000869"
+                          alt=""
+                          width="100%"
+                          height="100%"
+                        />
+                      </div>
+
+                      <img
+                        id="preview-image"
+                        class="preview-image"
+                        width="100%"
+                        height="100%"
+                        style="display: none"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    id="purchase-proof-error"
+                    class="error-message"
+                    style="color: red; display: none"
+                  ></div>
+                </div>
+
+                <!-- 第五行：提交按钮 -->
+                <div class="form-group submit-group">
+                  <button type="button" class="submit-btn" id="submit-btn">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endunless %}
+ 
+ 
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const BASE_URL = "https://testmembership.creality.com";
+      let uploadedImageUrl = "";
+
+      const isMobile = window.innerWidth <= 900;
+
+      
+
+      // 校验
+      function validateForm() {
+        let isValid = true;
+
+        // Email validation
+        const email = document.getElementById("email");
+        const emailError = document.getElementById("email-error");
+        if (!email.value) {
+          emailError.textContent = "Email is required";
+          emailError.style.display = "block";
+          isValid = false;
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+          emailError.textContent = "Please enter a valid email address";
+          emailError.style.display = "block";
+          isValid = false;
+        } else if (email.value.length > 100) {
+          emailError.textContent =
+            "Exceeds the 100 character maximum length limit";
+          emailError.style.display = "block";
+          isValid = false;
+        }
+        const machineType = document.getElementById("machine-type");
+        const machineTypeError = document.getElementById("machine-type-error");
+        if (machineType.dataset.value === "default") {
+          machineTypeError.textContent = "Please Select your machine type";
+
+          machineTypeError.style.display = "block";
+          isValid = false;
+        }
+        const whyUpgrade = document.getElementById("why-upgrade");
+        const whyUpgradeError = document.getElementById("why-upgrade-error");
+
+        if (!whyUpgrade.value) {
+          whyUpgradeError.textContent = "Please input your upgrade reason";
+          whyUpgradeError.style.display = "block";
+          isValid = false;
+        } else if (whyUpgrade.value.length > 200) {
+          whyUpgradeError.textContent =
+            "Exceeds the 200 character maximum length limit";
+          whyUpgradeError.style.display = "block";
+          isValid = false;
+        }
+        const printerBrand = document.getElementById("printer-brand");
+        const printerBrandError = document.getElementById(
+          "printer-brand-error"
+        );
+        if (printerBrand.dataset.value === "default") {
+          printerBrandError.textContent =
+            "Please input your previous 3D printer brand ";
+          printerBrandError.style.display = "block";
+          isValid = false;
+        }
+        // Upgrade to validation
+
+        const upgradeTo = document.getElementById("upgrade-to");
+        const upgradeToError = document.getElementById("upgrade-to-error");
+
+        if (upgradeTo.dataset.value === "default") {
+          upgradeToError.textContent = "Please select your upgrade model";
+          upgradeToError.style.display = "block";
+          isValid = false;
+        }
+        // Purchase proof validation
+        const purchaseProof = document.getElementById("purchase-proof");
+        const purchaseProofError = document.getElementById(
+          "purchase-proof-error"
+        );
+        if (!purchaseProof.value) {
+          purchaseProofError.textContent = "Please upload purchase proof image";
+          purchaseProofError.style.display = "block";
+          isValid = false;
+        }
+
+        return isValid;
+      }
+
+      function hideError(input) {
+        const errorElement = document.getElementById(input.id + "-error");
+        errorElement.style.display = "none";
+      }
+      function checkMaxLength(input, maxLength) {
+        const lengthError = document.getElementById(input.id + "-length-error");
+        if (input.value.length > maxLength) {
+          lengthError.style.display = "block";
+        } else {
+          lengthError.style.display = "none";
+        }
+      }
+
+      //输入清除校验
+      document.getElementById("email").addEventListener("input", function () {
+        hideError(this);
+      });
+      document
+        .getElementById("machine-type")
+        .addEventListener("input", function () {
+          hideError(this);
+        });
+      document
+        .getElementById("why-upgrade")
+
+        .addEventListener("input", function () {
+          hideError(this);
+        });
+      // 添加文件上传区域点击事件
+      const purchaseProof = document.getElementById("purchase-proof");
+      purchaseProof.addEventListener("input", (e) => validateFile(e.target));
+      const uploadArea = document.querySelector(".upload-area");
+      uploadArea.addEventListener("click", function () {
+        document.getElementById("purchase-proof").click();
+      });
+      //验证图片格式和大小
+      async function validateFile(input) {
+        const file = input.files[0];
+        const purchaseProofError = document.getElementById(
+          "purchase-proof-error"
+        );
+
+        if (!file) return;
+
+        // 验证文件类型
+        const validTypes = ["image/jpeg", "image/png", "image/webp"];
+        if (!validTypes.includes(file.type)) {
+          purchaseProofError.textContent =
+            "Please upload files in JPEG, PNG or WebP format only";
+          purchaseProofError.style.display = "block";
+          input.value = "";
+          return;
+        }
+
+        // 验证文件大小 (10MB)
+        const maxSize = 10 * 1024 * 1024; // 10MB
+        if (file.size > maxSize) {
+          purchaseProofError.textContent = "File size must not exceed 10MB";
+          purchaseProofError.style.display = "block";
+          input.value = "";
+          return;
+        }
+        // 验证通过，隐藏上传图标，显示预览图
+        document.getElementById("upload-icon").style.display = "none";
+        const preview = document.getElementById("preview-image");
+        preview.style.display = "block";
+
+        if (file.type.includes("image")) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            preview.src = e.target.result;
+          };
+          document.querySelector(".upload-icon-wrap").style.display = "none";
+          reader.readAsDataURL(file);
+        } else {
+          preview.src = ""; // 非图片文件不显示预览
+        }
+        // 验证通过，隐藏错误信息
+        hideError(input);
+
+        try {
+          const formData = new FormData();
+          formData.append("file", file);
+
+          const response = await fetch(
+            `${BASE_URL}/personal-center/membershipPersonalCenterTradein/uploadImage`,
+            {
+              method: "POST",
+              body: formData,
+            }
+          );
+          const res = await response.json();
+          if (res.code === 200) {
+            uploadedImageUrl = res.data;
+          }
+        } catch (error) {
+          showTooltip(
+            "fail",
+            "Failed to upload file. Please check your file and try again."
+          );
+        }
+      }
+
+      // 节流函数
+      function throttle(func, delay) {
+        let timeoutId;
+        let lastExecTime = 0;
+        return function (...args) {
+          const currentTime = Date.now();
+
+          if (currentTime - lastExecTime > delay) {
+            func.apply(this, args);
+            lastExecTime = currentTime;
+          } else {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+              func.apply(this, args);
+              lastExecTime = Date.now();
+            }, delay - (currentTime - lastExecTime));
+          }
+        };
+      }
+      // 清除表单数据函数
+      function clearForm() {
+        // 清除输入框
+        document.getElementById("email").value = "";
+        document.getElementById("why-upgrade").value = "";
+
+        // 重置下拉框
+        document.getElementById("machine-type").textContent =
+          "Select Your Machine Type";
+        document.getElementById("machine-type").dataset.value = "default";
+        document.getElementById("machine-type").classList.remove("has-value");
+
+        document.getElementById("printer-brand").textContent =
+          "Select Your current model-Brand";
+        document.getElementById("printer-brand").dataset.value = "default";
+        document.getElementById("printer-brand").classList.remove("has-value");
+
+        document.getElementById("upgrade-to").textContent =
+          "Select Your Upgrade Machine Type";
+        document.getElementById("upgrade-to").dataset.value = "default";
+        document.getElementById("upgrade-to").classList.remove("has-value");
+
+        // 清除文件上传
+        document.getElementById("purchase-proof").value = "";
+        document.getElementById("upload-icon").style.display = "block";
+        document.getElementById("preview-image").style.display = "none";
+        document.querySelector(".upload-icon-wrap").style.display = "block";
+      }
+      // 收集表单数据
+      function collectFormData() {
+        const formData = {
+          email: document.getElementById("email").value,
+          oldModels:
+            document.getElementById("machine-type").dataset.value || "",
+          oldModelsType:
+            document.getElementById("printer-brand").dataset.value || "",
+          upgradeTheModel:
+            document.querySelector(".selected-value").dataset.value || "",
+          pictureUrl: uploadedImageUrl,
+          reason: document.getElementById("why-upgrade").value,
+          siteCode: "US",
+          platform: "falcon",
+        };
+
+        return formData;
+      }
+      //节流提交表单
+      let isSubmitting = false;
+      const submitBtn = document.getElementById("submit-btn");
+
+      const throttledHandleSubmit = throttle(async function (event) {
+        event.preventDefault();
+        const isvalidata = validateForm();
+        const formData = collectFormData();
+
+        if (isvalidata) {
+          if (uploadedImageUrl) {
+            let isSubmitting = true;
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Submitting...";
+            try {
+              const response = await fetch(
+                `${BASE_URL}/personal-center/membershipPersonalCenterTradein/saveApply`,
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(formData),
+                }
+              );
+              const res = await response.json();
+              if (res.code === 200) {
+                showTooltip(
+                  "success",
+                  "Thanks! Your application is in.We'll review it within 24 hours and send you the upgrade offer via email."
+                );
+                setTimeout(() => {
+                  clearForm();
+                }, 10);
+              }
+            } catch (err) {
+              showTooltip("fail", "Failed to submit form. Please try again.");
+            } finally {
+              uploadedImageUrl = "";
+              isSubmitting = false; // 重置提交状态
+              submitBtn.disabled = false; // 重新启用按钮
+              submitBtn.textContent = "Submit"; // 恢复按钮文本
+            }
+          } else {
+            showTooltip("fail", "Failed to submit form. Please try again.");
+          }
+        }
+      }, 1000);
+      submitBtn.addEventListener("click", throttledHandleSubmit);
+
+    
+
+      function showTooltip(type, customText) {
+        const tooltipWrap = document.querySelector(".tooltip-wrap");
+
+        const message =
+          customText ||
+          (type === "success"
+            ? "Thanks! Your application is in.We'll review it within 24 hours and send you the upgrade offer via email."
+            : "Sorry, something went wrong. Please try again.");
+
+        const iconSrc =
+          type === "success"
+            ? "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/AntD-check-circle.png?v=1758000872"
+            : "https://cdn.shopify.com/s/files/1/0799/8714/7049/files/merchant_del.png?v=1758000880";
+
+        tooltipWrap.innerHTML = `
+    <div class="tooltip-icon">
+      <img src="${iconSrc}" alt="" width="100%" height="100%" />
+    </div>
+    <div class="tooltip">${message}</div>
+  `;
+
+        tooltipWrap.classList.remove("hide");
+        tooltipWrap.classList.add("show");
+
+        setTimeout(() => {
+          tooltipWrap.classList.remove("show");
+          tooltipWrap.classList.add("hide");
+        }, 3000);
+      }
+
+      // 下拉框
+      const selectTrigger = document.querySelectorAll(".select-trigger");
+      const selectOptions = document.querySelectorAll(".select-options");
+      selectTrigger.forEach((item, index) =>
+        item.addEventListener("click", function () {
+          // 先关闭所有其他下拉框
+          selectOptions.forEach((option, i) => {
+            if (i !== index) {
+              option.style.display = "none";
+            }
+          });
+
+          // 切换当前下拉框
+          selectOptions[index].style.display =
+            selectOptions[index].style.display === "block" ? "none" : "block";
+        })
+      );
+
+      document.querySelectorAll(".option").forEach((option) => {
+        option.addEventListener("click", function () {
+          const selectedValue =
+            this.closest(".custom-select").querySelector(".selected-value");
+          selectedValue.textContent = this.textContent;
+          selectedValue.dataset.value = this.dataset.value;
+
+          if (selectedValue.dataset.value !== "default") {
+            hideError(selectedValue);
+          }
+
+          selectedValue.classList.add("has-value");
+          this.closest(".select-options").style.display = "none";
+        });
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!e.target.closest(".custom-select")) {
+          selectOptions.forEach((option) => {
+            option.style.display = "none";
+          });
+        }
+      });
+
+      // upgradenow
+
+      document
+        .querySelectorAll(".save-big-btn-wrap, .banner-btn-wrap")
+        .forEach((btn) => {
+          btn.addEventListener("click", () => {
+            document.querySelector(".enroll-machine-form").scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        });
+    });
+  </script>
+
 
 {% schema %}
 {
