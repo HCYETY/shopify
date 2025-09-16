@@ -1,12 +1,14 @@
 .halo-recently-viewed-popup{
     overflow: initial;
-    top: 50%;
+    top: 73%;
     left: auto;
-    right: 0;
+    right: 60px !important;
     transform: translate3d(20px,-50%,0);
-    width: 40px;
-    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.2);
+    width: 44px;
     z-index: 99;
+    border-radius: 110px;
+    background: var(--Text-5, #FFF);
+    box-shadow: 0 4.4px 11px 0 rgba(0, 0, 0, 0.10);
 }
 
 .recently-viewed-title{
@@ -290,10 +292,10 @@
     align-items: center;
     position: relative;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
-    background-color: var(--bg-white);
+    width: 44px;
+    height: 44px;
     transition: var(--anchor-transition);
+    border-radius: 110px;
 }
 
 .recently-viewed-icon .icon{
@@ -349,7 +351,7 @@
 
 [data-scroll-to-top]:only-child {
     opacity: 0;
-    margin-top: -40px;
+    margin-top: -44px;
     pointer-events: none;
 }
 
@@ -360,6 +362,10 @@
 }
 
 @media(max-width:1024px){
+    .halo-recently-viewed-popup{
+        right: 24px !important;
+    }
+
     .recently-viewed-popup-mb{
         position: fixed;
         bottom: 0;
