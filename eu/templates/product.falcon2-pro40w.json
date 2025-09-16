@@ -102,8 +102,8 @@
         "countdown_PgirJQ": {
           "type": "countdown",
           "settings": {
-            "spacing_top": 5,
-            "spacing_bottom": 5
+            "spacing_top": 0,
+            "spacing_bottom": 0
           }
         },
         "product_text_YWXrbx": {
@@ -111,7 +111,7 @@
           "settings": {
             "text": "",
             "text_icon": "",
-            "text_description": "<p><span style=\"color: #ffffff;\"><strong><span style=\"font-size: 14pt;\">September Special Offer</span></strong></span></p>\n<p><span style=\"color: #ffffff;\">1.</span> <span style=\"color: #e03e2d;\"><strong>Special Offer Sitewide: </strong></span><span style=\"color: #ffffff;\">: Auto Auto €50 Off 600；€100 Off €1000；€150 Off €2000.</span>\n</p><p><span style=\"color: #ffffff;\">2.</span> <span style=\"color: #e03e2d;\"><strong>Materials</strong></span><span style=\"color: #ffffff;\">: Buy</span> <strong><span style=\"color: #e03e2d;\">1</span></strong> <span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">20% Off</span></strong><span style=\"color: #ffffff;\">, buy</span> <strong><span style=\"color: #e03e2d;\">2</span> </strong><span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">30% Off</span><span style=\"color: #ffffff;\">.</span></strong></p>",
+            "text_description": "<p><span style=\"color: #ffffff;\"><strong><span style=\"font-size: 14pt;\">September Special Offer</span></strong></span></p>\n<p><span style=\"color: #ffffff;\">1.</span> <span style=\"color: #e03e2d;\"><strong>Special Offer Sitewide: </strong></span><span style=\"color: #ffffff;\">: Auto €50 Off 600；€100 Off €1000；€150 Off €2000.</span>\n</p><p><span style=\"color: #ffffff;\">2.</span> <span style=\"color: #e03e2d;\"><strong>Materials</strong></span><span style=\"color: #ffffff;\">: Buy</span> <strong><span style=\"color: #e03e2d;\">1</span></strong> <span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">20% Off</span></strong><span style=\"color: #ffffff;\">, buy</span> <strong><span style=\"color: #e03e2d;\">2</span> </strong><span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">30% Off</span><span style=\"color: #ffffff;\">.</span></strong></p>",
             "fontsize_text": 14,
             "content_spacing": 10,
             "custom_block_align": "left",
