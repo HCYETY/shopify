@@ -190,6 +190,7 @@
 
       {% render 'global-script-2' %}
     </div>
+    {% render 'halo-popup' %}
 
     {%- if settings.enable_view_documentation -%}
       {% render 'theme-editor-notification' %}
@@ -199,12 +200,8 @@
       {{ 'custom.js' | asset_url | script_tag }}
     {%- endif -%}
 
-    <div class="theme-right-bottom-button">
-      {% render 'halo-popup' %}
-
       <!--chat-app  -->
       {% render "chat-app" %}
-    </div>
 
     <div class="background-overlay">
       {%- if settings.show_effect_close -%}

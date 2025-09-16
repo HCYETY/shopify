@@ -1,9 +1,8 @@
 .halo-recently-viewed-popup{
     overflow: initial;
-    position: static;
-    bottom: 0 !important;
-    left: auto !important;
-    right: 0 !important;
+    top: 70%;
+    left: auto;
+    right: 60px !important;
     transform: translate3d(20px,-50%,0);
     width: 44px;
     z-index: 99;
@@ -342,7 +341,7 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translate3d(0,0%,0);
+    transform: translate3d(0,-50%,0);
 }
 
 .recently-viewed-icon + .recently-viewed-icon{
@@ -371,6 +370,10 @@
 }
 
 @media(max-width:1024px){
+    .halo-recently-viewed-popup{
+        right: 24px !important;
+    }
+
     .recently-viewed-popup-mb{
         position: fixed;
         bottom: 0;
@@ -585,7 +588,7 @@
     .recently-viewed-popup-mb{
         opacity: 0;
         z-index: -1;
-        display: none;
+        visibility: visible;
     }
 
     .recently-viewed-content .first-info .hidden-mobile{

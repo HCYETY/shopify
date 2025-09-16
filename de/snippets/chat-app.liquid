@@ -11,8 +11,11 @@
     border-radius: 110px;
     background: var(--Brand-1, #0BB3FB);
     box-shadow: 0 4.4px 11px 0 rgba(0, 0, 0, 0.10);
+    position: fixed;
     width: 44px;
     height: 44px;
+    top: 77%;
+    right: 60px;
 
     .img-wrap {
       width: 56%;
@@ -22,6 +25,12 @@
       align-items: center;
     }
     z-index:99;
+  }
+  
+  @media (max-width: 1024px) {
+    .chat-app {
+      right: 24px;
+    }
   }
 </style>
 <a class="chat-app" href="https://support.creality.com/?site=FALCON_US">
