@@ -75,7 +75,17 @@
           "settings": {
             "fontsize_text": 24,
             "spacing_top": 10,
-            "spacing_bottom": 0
+            "spacing_bottom": 15
+          }
+        },
+        "klarna_on_site_messaging_app_block_V8z7CD": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
           }
         },
         "product_text_ab9fhi": {
@@ -97,36 +107,26 @@
         },
         "bd3a641e-98d0-4da1-ab57-d5e4b0391995": {
           "type": "countdown",
-          "settings": {
-            "spacing_top": 0,
-            "spacing_bottom": 20
-          }
-        },
-        "product_text_NVyLAe": {
-          "type": "product_text",
           "disabled": true,
           "settings": {
-            "text": "",
-            "text_icon": "",
-            "text_description": "<p><span style=\"font-size: 14pt; color: #ffffff;\">Super Early Bird Offer</span></p>\n<p><span style=\"color: #ffffff;\">🔥<span style=\"font-size: 10pt;\"><strong> 20% Off</strong>, Aug 8, 4:00 PM – Aug 18, 4:00 PM (CEST)</span></span></p>\n<p><span style=\"font-size: 10pt; color: #ffffff;\">🌍 Only <strong>600 Units</strong> World wide;</span></p>\n<p><span style=\"font-size: 10pt; color: #ffffff;\">🎫Buy A1 Pro 20W get <strong>50% Off</strong> for materials.</span></p>\n<p><span style=\"font-size: 10pt; color: #ffffff;\">📌Note: Cannot be combined with other discounts.</span></p>",
-            "fontsize_text": 14,
-            "content_spacing": 15,
-            "custom_block_align": "left",
-            "color_title": "#232323",
-            "background_color_block": "#f7f8fa",
-            "background_gradient_color_block": "linear-gradient(165deg, rgba(56, 78, 197, 1) 34%, rgba(203, 68, 194, 1) 75%, rgba(255, 201, 104, 1) 94%)",
             "spacing_top": 0,
             "spacing_bottom": 0
           }
         },
-        "b87b5d94-d9c5-4d66-a99b-da56e65d25e9": {
-          "type": "short_description",
+        "product_text_NVyLAe": {
+          "type": "product_text",
           "settings": {
-            "word_number": "500",
+            "text": "",
+            "text_icon": "",
+            "text_description": "<p><span style=\"color: #ffffff;\"><strong><span style=\"font-size: 14pt;\">September Special Offer</span></strong></span></p>\n<p><span style=\"color: #ffffff;\">1.</span> <span style=\"color: #e03e2d;\"><strong>Special Offer Sitewide: </strong></span><span style=\"color: #ffffff;\">: Auto Auto €50 Off 600；€100 Off €1000；€150 Off €2000.</span>\n</p><p><span style=\"color: #ffffff;\">2.</span> <span style=\"color: #e03e2d;\"><strong>Materials</strong></span><span style=\"color: #ffffff;\">: Buy</span> <strong><span style=\"color: #e03e2d;\">1</span></strong> <span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">20% Off</span></strong><span style=\"color: #ffffff;\">, buy</span> <strong><span style=\"color: #e03e2d;\">2</span> </strong><span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">30% Off</span><span style=\"color: #ffffff;\">.</span></strong></p>",
             "fontsize_text": 14,
-            "color_text": "#3c3c3c",
-            "spacing_top": 10,
-            "spacing_bottom": 5
+            "content_spacing": 15,
+            "custom_block_align": "left",
+            "color_title": "#232323",
+            "background_color_block": "#ff8b21",
+            "background_gradient_color_block": "linear-gradient(154deg, rgba(218, 141, 35, 1), rgba(235, 183, 91, 1) 75%, rgba(255, 244, 166, 1) 100%)",
+            "spacing_top": 0,
+            "spacing_bottom": 0
           }
         },
         "product_text_BTYfkt": {
@@ -179,6 +179,34 @@
             "compare_layout": "1"
           }
         },
+        "custom_information_KLTdLR": {
+          "type": "custom_information",
+          "settings": {
+            "icon": "",
+            "text": "Order now for dispatch in 2 working days from DE warehouse",
+            "color_title": "#232323",
+            "text_description": "",
+            "color_des": "#999999",
+            "content_popup": "",
+            "fontsize_text": 14,
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "custom_information_VdGYD7": {
+          "type": "custom_information",
+          "settings": {
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d=\"M32 448c0 17.7 14.3 32 32 32h160V320H32v128zm256 32h160c17.7 0 32-14.3 32-32V320H288v160zm192-320h-42.1c6.2-12.1 10.1-25.5 10.1-40 0-48.5-39.5-88-88-88-41.6 0-68.5 21.3-103 68.3-34.5-47-61.4-68.3-103-68.3-48.5 0-88 39.5-88 88 0 14.5 3.8 27.9 10.1 40H32c-17.7 0-32 14.3-32 32v80c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-80c0-17.7-14.3-32-32-32zm-326.1 0c-22.1 0-40-17.9-40-40s17.9-40 40-40c19.9 0 34.6 3.3 86.1 80h-86.1zm206.1 0h-86.1c51.4-76.5 65.7-80 86.1-80 22.1 0 40 17.9 40 40s-17.9 40-40 40z\"></path></svg>",
+            "text": "5% Discount Code for New Subscribers",
+            "color_title": "#f44336",
+            "text_description": "",
+            "color_des": "#999999",
+            "content_popup": "",
+            "fontsize_text": 14,
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
         "f1b31d90-1e43-4948-9fe3-97ba43f6fb34": {
           "type": "buy_buttons",
           "settings": {
@@ -205,8 +233,19 @@
             "bin_bg_color_hover_gradient": ""
           }
         },
+        "b87b5d94-d9c5-4d66-a99b-da56e65d25e9": {
+          "type": "short_description",
+          "settings": {
+            "word_number": "500",
+            "fontsize_text": 14,
+            "color_text": "#3c3c3c",
+            "spacing_top": 10,
+            "spacing_bottom": 5
+          }
+        },
         "custom_information_qV8XxT": {
           "type": "custom_information",
+          "disabled": true,
           "settings": {
             "icon": "",
             "text": "",
@@ -330,15 +369,18 @@
         "judge_me_reviews_preview_badge_ingm8R",
         "4e59f24a-8859-4579-a80a-d70e6f1bf66b",
         "4f95b592-8369-4ab0-b30d-24e463fb6890",
+        "klarna_on_site_messaging_app_block_V8z7CD",
         "product_text_ab9fhi",
         "bd3a641e-98d0-4da1-ab57-d5e4b0391995",
         "product_text_NVyLAe",
-        "b87b5d94-d9c5-4d66-a99b-da56e65d25e9",
         "product_text_BTYfkt",
         "d98e243b-3682-495a-965a-1c7f7d460880",
         "faa2b3e6-c0a1-4269-baa6-d2605efe4c05",
         "04ea8843-f461-4f1d-8ea4-43f62fdfb21e",
+        "custom_information_KLTdLR",
+        "custom_information_VdGYD7",
         "f1b31d90-1e43-4948-9fe3-97ba43f6fb34",
+        "b87b5d94-d9c5-4d66-a99b-da56e65d25e9",
         "custom_information_qV8XxT",
         "683f2b15-db3b-4f63-8d0f-e688cc678581",
         "19de9abb-17c8-4d67-941d-b32706ed06fd",

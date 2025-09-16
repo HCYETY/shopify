@@ -61,12 +61,55 @@
             "spacing_bottom": 0
           }
         },
+        "klarna_on_site_messaging_app_block_TQtYA4": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
         "bd3a641e-98d0-4da1-ab57-d5e4b0391995": {
           "type": "countdown",
           "disabled": true,
           "settings": {
             "spacing_top": 0,
             "spacing_bottom": 20
+          }
+        },
+        "info_fQLCiE": {
+          "type": "info",
+          "disabled": true,
+          "settings": {
+            "show_vendor": true,
+            "show_sku": true,
+            "show_barcode": false,
+            "show_availability": true,
+            "show_product_type": true,
+            "stock_level_display": "none",
+            "enable_border_top": false,
+            "enable_border_bottom": false,
+            "color_border": "#e6e6e6",
+            "spacing_top": 0,
+            "spacing_bottom": 18
+          }
+        },
+        "product_text_yYkWgQ": {
+          "type": "product_text",
+          "settings": {
+            "text": "",
+            "text_icon": "",
+            "text_description": "<p><span style=\"color: #ffffff;\"><strong><span style=\"font-size: 14pt;\">September Special Offer</span></strong></span></p>\n<p><span style=\"color: #ffffff;\">1.</span> <span style=\"color: #e03e2d;\"><strong>Special Offer Sitewide: </strong></span><span style=\"color: #ffffff;\">: Auto Auto €50 Off 600；€100 Off €1000；€150 Off €2000.</span>\n</p><p><span style=\"color: #ffffff;\">2.</span> <span style=\"color: #e03e2d;\"><strong>Materials</strong></span><span style=\"color: #ffffff;\">: Buy</span> <strong><span style=\"color: #e03e2d;\">1</span></strong> <span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">20% Off</span></strong><span style=\"color: #ffffff;\">, buy</span> <strong><span style=\"color: #e03e2d;\">2</span> </strong><span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">30% Off</span><span style=\"color: #ffffff;\">.</span></strong></p>",
+            "fontsize_text": 14,
+            "content_spacing": 10,
+            "custom_block_align": "left",
+            "color_title": "#232323",
+            "background_color_block": "#f7f8fa",
+            "background_gradient_color_block": "linear-gradient(154deg, rgba(218, 141, 35, 1), rgba(235, 183, 91, 1) 75%, rgba(255, 244, 166, 1) 100%)",
+            "spacing_top": 0,
+            "spacing_bottom": 0
           }
         },
         "b87b5d94-d9c5-4d66-a99b-da56e65d25e9": {
@@ -77,22 +120,6 @@
             "color_text": "#3c3c3c",
             "spacing_top": 10,
             "spacing_bottom": 5
-          }
-        },
-        "product_text_yYkWgQ": {
-          "type": "product_text",
-          "settings": {
-            "text": "",
-            "text_icon": "",
-            "text_description": "<p><span style=\"color: #ffffff;\"><strong><span style=\"font-size: 14pt;\">August Special Offer</span></strong></span></p>\n<p><span style=\"color: #ffffff;\">1.</span> <span style=\"color: #e03e2d;\"><strong>Engravers</strong></span><span style=\"color: #ffffff;\">: Auto </span><strong><span style=\"color: #e03e2d;\">€50 Off</span></strong> <span style=\"color: #ffffff;\">on orders over</span><span style=\"color: #e03e2d;\"> <strong>€500</strong></span><span style=\"color: #ffffff;\">;</span></p>\n<p><span style=\"color: #ffffff;\">2.</span> <span style=\"color: #e03e2d;\"><strong>Free Gift</strong><span style=\"color: #ffffff;\">:</span></span> <span style=\"color: #ffffff;\">Auto add to your cart;</span></p>\n<p><span style=\"color: #ffffff;\">3.</span> <span style=\"color: #e03e2d;\"><strong>Materials</strong></span><span style=\"color: #ffffff;\">: Buy</span> <strong><span style=\"color: #e03e2d;\">1</span></strong> <span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">20% Off</span></strong><span style=\"color: #ffffff;\">, buy</span> <strong><span style=\"color: #e03e2d;\">2</span> </strong><span style=\"color: #ffffff;\">get</span> <strong><span style=\"color: #e03e2d;\">30% Off</span><span style=\"color: #ffffff;\">.</span></strong></p>",
-            "fontsize_text": 14,
-            "content_spacing": 10,
-            "custom_block_align": "left",
-            "color_title": "#232323",
-            "background_color_block": "#f7f8fa",
-            "background_gradient_color_block": "linear-gradient(154deg, rgba(218, 141, 35, 1), rgba(235, 183, 91, 1) 75%, rgba(255, 244, 166, 1) 100%)",
-            "spacing_top": 0,
-            "spacing_bottom": 0
           }
         },
         "d98e243b-3682-495a-965a-1c7f7d460880": {
@@ -128,16 +155,6 @@
             "fontsize_text": 14,
             "spacing_top": 0,
             "spacing_bottom": 0
-          }
-        },
-        "klarna_on_site_messaging_app_block_TQtYA4": {
-          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "settings": {
-            "data_key": "credit-promotion-badge",
-            "theme": "default",
-            "topPadding": "0",
-            "bottomPadding": "0",
-            "messagePrefix": ""
           }
         },
         "custom_information_6Ce4AJ": {
@@ -293,6 +310,7 @@
         },
         "complementary_products_XCNTtf": {
           "type": "complementary_products",
+          "disabled": true,
           "settings": {
             "show_complementary_product": true,
             "complementary_product_title": "Pairs well with",
@@ -313,13 +331,14 @@
         "0e4ea696-4820-4c98-aaa6-806d41782a3d",
         "judge_me_reviews_preview_badge_7JjqMP",
         "4f95b592-8369-4ab0-b30d-24e463fb6890",
+        "klarna_on_site_messaging_app_block_TQtYA4",
         "bd3a641e-98d0-4da1-ab57-d5e4b0391995",
-        "b87b5d94-d9c5-4d66-a99b-da56e65d25e9",
+        "info_fQLCiE",
         "product_text_yYkWgQ",
+        "b87b5d94-d9c5-4d66-a99b-da56e65d25e9",
         "d98e243b-3682-495a-965a-1c7f7d460880",
         "faa2b3e6-c0a1-4269-baa6-d2605efe4c05",
         "custom_information_kTNwnr",
-        "klarna_on_site_messaging_app_block_TQtYA4",
         "custom_information_6Ce4AJ",
         "10093fcf-2053-47e9-bedb-841bb0d046fa",
         "04ea8843-f461-4f1d-8ea4-43f62fdfb21e",
@@ -491,7 +510,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_cjzCiA": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

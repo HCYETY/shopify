@@ -875,6 +875,12 @@
       },
       "shipping": {
         "shipping_method_notice": " "
+      },
+      "general": {
+        "remove_chip": "Rimuovi articolo"
+      },
+      "thank_you": {
+        "thank_you_from_shop": "Da %{shop_name}"
       }
     }
   }

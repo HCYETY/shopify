@@ -1060,22 +1060,6 @@
             "spacing_bottom": 24
           }
         },
-        "product_text_pXyAHz": {
-          "type": "product_text",
-          "settings": {
-            "text": "",
-            "text_icon": "",
-            "text_description": "<p><span style=\"color: #e03e2d;\">🎁Add to Cart Now Get Extra Gifts-Acrylic Sheet（Value<strong> €64.99</strong>）</span></p>",
-            "fontsize_text": 16,
-            "content_spacing": 0,
-            "custom_block_align": "left",
-            "color_title": "#ffffff",
-            "background_color_block": "rgba(0,0,0,0)",
-            "background_gradient_color_block": "",
-            "spacing_top": 0,
-            "spacing_bottom": 26
-          }
-        },
         "variant_picker_pxzwB7": {
           "type": "variant_picker",
           "settings": {
@@ -1144,7 +1128,6 @@
         "meta_pbdMNe",
         "short_description_GmFKaG",
         "price_fGwPxA",
-        "product_text_pXyAHz",
         "variant_picker_pxzwB7",
         "quantity_selector_j3wTmG",
         "buy_buttons_PVmag8"

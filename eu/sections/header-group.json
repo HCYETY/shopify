@@ -18,7 +18,7 @@
         "item_bgcolor_url": "",
         "font_size": 17,
         "item_bgcolor_pd_tb": 12,
-        "item_title": "⏰ Aug 23– Aug 31 | Back to School Sale – Up to 60% Off",
+        "item_title": "⏰ Sep 15– Sep 23 | 2025 Autumn Sale – Up to 60% Off",
         "item_title_color": "#ff8b21",
         "item_btn_text": "SHOP NOW!",
         "item_btn_url": "https://eu.crealityfalcon.com/pages/monthly-sale",
@@ -30,7 +30,7 @@
         "item_btn_text_size": 13,
         "item_position": "center",
         "is_countDown": true,
-        "item_count_down_start": "2025-4-1 15:00:00",
+        "item_count_down_start": "2025-9-23 15:00:00",
         "item_count_down_end": "2025-8-31 18:00:00",
         "item_count_down_color": "#ffffff",
         "item_count_down_text_sieze": 12
