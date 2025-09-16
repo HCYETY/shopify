@@ -1,0 +1,1768 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_H3cKVh": {
+      "type": "image-banner",
+      "blocks": {
+        "large_img_kxqm7C": {
+          "type": "largeImg",
+          "settings": {
+            "image": "shopify://shop_images/US_8ed006dd-2597-4cfe-a909-04a2ed197391.jpg",
+            "mobile_image": "shopify://shop_images/US_50c2c75a-cba4-4f34-b5ef-317ccfcb4610.jpg",
+            "enable_max_width_image": false,
+            "custom_width_image": 1170,
+            "enable_scroll_down": false,
+            "enable_custom_image": false,
+            "image_behavior": "none",
+            "sub_title": "Spring Into Creation",
+            "border_sub_title": false,
+            "font_size_sub_title": 29,
+            "font_size_sub_title_mb": 14,
+            "margin_bottom_sub_title": 14,
+            "sub_heading_font": "font_1",
+            "font_weight_sub_title": "700",
+            "sub_title_position": "sub_title_above",
+            "color_sub_title": "#336d61",
+            "color_sub_title_mb": "#336d61",
+            "heading": "UP to 48% OFF",
+            "letter_spacing_heading": "",
+            "enable_style_italic": false,
+            "font_size_heading": 42,
+            "font_size_heading_mb": 24,
+            "margin_bottom_heading": 20,
+            "font_weight_heading": "600",
+            "color_heading": "#336d61",
+            "color_heading_mb": "#336d61",
+            "border_title": "border_s1",
+            "border_color_title": "rgba(0,0,0,0)",
+            "border_color_title_mobile": "#ffffff",
+            "text": "",
+            "font_size_des": 12,
+            "font_size_des_mb": 12,
+            "line_height_des": 26,
+            "margin_bottom_des": 35,
+            "color_des": "#232323",
+            "color_des_mb": "#ffffff",
+            "countdown": "",
+            "hide_countdown_fc": "countdown",
+            "countdown_style": "round",
+            "countdown_position": "countdown_below_desc",
+            "font_size_countdown_number": 30,
+            "font_size_countdown_text": 14,
+            "color_countdown": "#232323",
+            "color_countdown_mb": "#ffffff",
+            "countdown_margin_bottom": 35,
+            "content_width": 475,
+            "align": "center",
+            "align_items": "center",
+            "position": "left",
+            "custom_horizontal": "",
+            "custom_vertical": "",
+            "btn_text": "",
+            "link": "",
+            "btn_icon": "",
+            "button_1_width": 235,
+            "enable_button_custom_border": false,
+            "button_color": "#ffffff",
+            "button_border": "#232323",
+            "button_background": "#232323",
+            "button_background_gradient": "",
+            "button_color_hover": "#ffffff",
+            "button_border_hover": "#232323",
+            "button_background_hover": "#232323",
+            "button_background_gradient_hover": "",
+            "btn_text_2": "",
+            "link_2": "",
+            "btn_icon_2": "",
+            "button_color_2": "#ffffff",
+            "button_border_2": "#232323",
+            "button_background_2": "#232323",
+            "button_background_2_gradient": "",
+            "button_color_hover_2": "#ffffff",
+            "button_border_hover_2": "#232323",
+            "button_background_hover_2": "#232323",
+            "button_background_gradient_hover_2": "",
+            "video_link": "",
+            "adaptive_height_video": "56",
+            "icon_style": "style_1",
+            "color_icon": "#ffffff",
+            "bg_color_icon": "#000000",
+            "enable_custom_video_icon_position": false,
+            "video_icon_horizontal_position": "",
+            "video_icon_vertical_position": "",
+            "video_icon_horizontal_position_mb": "",
+            "video_icon_vertical_position_mb": ""
+          }
+        }
+      },
+      "block_order": [
+        "large_img_kxqm7C"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "id_section": "",
+        "container": "fullwidth",
+        "padding_full_width": 0,
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "image_banner_title": "",
+        "enable_border_title": false,
+        "color_title": "#202020",
+        "fontsize_title": 10,
+        "fontsize_title_mb": 10,
+        "margin_bottom_title": 0,
+        "image_banner_des": "",
+        "color_des": "#202020",
+        "fontsize_des": 16,
+        "title_align": "center",
+        "style_bg": "none",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "display_type": "slide",
+        "list_gap": 0,
+        "enable_arrows": false,
+        "arrows_position": "",
+        "enable_dots": false,
+        "enable_autoplay": false
+      }
+    },
+    "image_banner_6iyCYX": {
+      "type": "image-banner",
+      "blocks": {
+        "large_img_nypE3B": {
+          "type": "largeImg",
+          "settings": {
+            "image": "shopify://shop_images/banner_48e968d2-a79d-4923-a589-abe7db52b257.png",
+            "mobile_image": "shopify://shop_images/banner-_1.png",
+            "enable_max_width_image": false,
+            "custom_width_image": 1170,
+            "enable_scroll_down": false,
+            "enable_custom_image": false,
+            "image_behavior": "none",
+            "sub_title": "",
+            "border_sub_title": false,
+            "font_size_sub_title": 14,
+            "font_size_sub_title_mb": 14,
+            "margin_bottom_sub_title": 14,
+            "sub_heading_font": "font_1",
+            "font_weight_sub_title": "700",
+            "sub_title_position": "sub_title_above",
+            "color_sub_title": "#232323",
+            "color_sub_title_mb": "#ffffff",
+            "heading": "",
+            "letter_spacing_heading": "",
+            "enable_style_italic": false,
+            "font_size_heading": 40,
+            "font_size_heading_mb": 24,
+            "margin_bottom_heading": 20,
+            "font_weight_heading": "600",
+            "color_heading": "#232323",
+            "color_heading_mb": "#ffffff",
+            "border_title": "border_s1",
+            "border_color_title": "#232323",
+            "border_color_title_mobile": "#ffffff",
+            "text": "",
+            "font_size_des": 12,
+            "font_size_des_mb": 12,
+            "line_height_des": 26,
+            "margin_bottom_des": 35,
+            "color_des": "#232323",
+            "color_des_mb": "#ffffff",
+            "countdown": "",
+            "hide_countdown_fc": "countdown",
+            "countdown_style": "round",
+            "countdown_position": "countdown_below_desc",
+            "font_size_countdown_number": 30,
+            "font_size_countdown_text": 14,
+            "color_countdown": "#232323",
+            "color_countdown_mb": "#ffffff",
+            "countdown_margin_bottom": 35,
+            "content_width": 475,
+            "align": "center",
+            "align_items": "center",
+            "position": "left",
+            "custom_horizontal": "",
+            "custom_vertical": "",
+            "btn_text": "",
+            "link": "",
+            "btn_icon": "",
+            "button_1_width": 235,
+            "enable_button_custom_border": false,
+            "button_color": "#ffffff",
+            "button_border": "#232323",
+            "button_background": "#232323",
+            "button_background_gradient": "",
+            "button_color_hover": "#ffffff",
+            "button_border_hover": "#232323",
+            "button_background_hover": "#232323",
+            "button_background_gradient_hover": "",
+            "btn_text_2": "",
+            "link_2": "",
+            "btn_icon_2": "",
+            "button_color_2": "#ffffff",
+            "button_border_2": "#232323",
+            "button_background_2": "#232323",
+            "button_background_2_gradient": "",
+            "button_color_hover_2": "#ffffff",
+            "button_border_hover_2": "#232323",
+            "button_background_hover_2": "#232323",
+            "button_background_gradient_hover_2": "",
+            "video_link": "",
+            "adaptive_height_video": "56",
+            "icon_style": "style_1",
+            "color_icon": "#ffffff",
+            "bg_color_icon": "#000000",
+            "enable_custom_video_icon_position": false,
+            "video_icon_horizontal_position": "",
+            "video_icon_vertical_position": "",
+            "video_icon_horizontal_position_mb": "",
+            "video_icon_vertical_position_mb": ""
+          }
+        }
+      },
+      "block_order": [
+        "large_img_nypE3B"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "id_section": "",
+        "container": "fullwidth",
+        "padding_full_width": 0,
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "image_banner_title": "",
+        "enable_border_title": false,
+        "color_title": "#202020",
+        "fontsize_title": 10,
+        "fontsize_title_mb": 10,
+        "margin_bottom_title": 0,
+        "image_banner_des": "",
+        "color_des": "#202020",
+        "fontsize_des": 16,
+        "title_align": "center",
+        "style_bg": "none",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "display_type": "slide",
+        "list_gap": 0,
+        "enable_arrows": false,
+        "arrows_position": "",
+        "enable_dots": false,
+        "enable_autoplay": false
+      }
+    },
+    "1644400438a4a3ac04": {
+      "type": "policies-block",
+      "blocks": {
+        "42da5be0-ceb2-4dfe-8de3-ff0116edaa8f": {
+          "type": "Text",
+          "settings": {
+            "icon_type": "text",
+            "icon": "<svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"shipping-fast\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 640 512\" class=\"svg-inline--fa fa-shipping-fast fa-w-20 fa-3x\"><path fill=\"#2F7348\" d=\"M624 352h-16V243.9c0-12.7-5.1-24.9-14.1-33.9L494 110.1c-9-9-21.2-14.1-33.9-14.1H416V48c0-26.5-21.5-48-48-48H112C85.5 0 64 21.5 64 48v48H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h272c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H40c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h208c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h208c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H64v128c0 53 43 96 96 96s96-43 96-96h128c0 53 43 96 96 96s96-43 96-96h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM160 464c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm320 0c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-208H416V144h44.1l99.9 99.9V256z\" class=\"\"></path></svg>",
+            "icon_width": 34,
+            "icon_height": 34,
+            "icon_mg_right": 20,
+            "text": "Free Shipping Over A$69.99",
+            "font_size_text": 16,
+            "font_size_text_mb": 16,
+            "mg_bottom_text": 0,
+            "font_weight_text": "700",
+            "font_style_text": "normal",
+            "description": "",
+            "link": ""
+          }
+        },
+        "e9b780cb-12f1-43fd-8872-cb8cf4652df6": {
+          "type": "Text",
+          "settings": {
+            "icon_type": "text",
+            "icon": "<svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"award\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 384 512\" class=\"svg-inline--fa fa-award fa-w-12 fa-3x\"><path fill=\"#2F7348\" d=\"M97.12 362.63c-8.69-8.69-4.16-6.24-25.12-11.85-9.51-2.55-17.87-7.45-25.43-13.32L1.2 448.7c-4.39 10.77 3.81 22.47 15.43 22.03l52.69-2.01L105.56 507c8 8.44 22.04 5.81 26.43-4.96l52.05-127.62c-10.84 6.04-22.87 9.58-35.31 9.58-19.5 0-37.82-7.59-51.61-21.37zM382.8 448.7l-45.37-111.24c-7.56 5.88-15.92 10.77-25.43 13.32-21.07 5.64-16.45 3.18-25.12 11.85-13.79 13.78-32.12 21.37-51.62 21.37-12.44 0-24.47-3.55-35.31-9.58L252 502.04c4.39 10.77 18.44 13.4 26.43 4.96l36.25-38.28 52.69 2.01c11.62.44 19.82-11.27 15.43-22.03zM263 340c15.28-15.55 17.03-14.21 38.79-20.14 13.89-3.79 24.75-14.84 28.47-28.98 7.48-28.4 5.54-24.97 25.95-45.75 10.17-10.35 14.14-25.44 10.42-39.58-7.47-28.38-7.48-24.42 0-52.83 3.72-14.14-.25-29.23-10.42-39.58-20.41-20.78-18.47-17.36-25.95-45.75-3.72-14.14-14.58-25.19-28.47-28.98-27.88-7.61-24.52-5.62-44.95-26.41-10.17-10.35-25-14.4-38.89-10.61-27.87 7.6-23.98 7.61-51.9 0-13.89-3.79-28.72.25-38.89 10.61-20.41 20.78-17.05 18.8-44.94 26.41-13.89 3.79-24.75 14.84-28.47 28.98-7.47 28.39-5.54 24.97-25.95 45.75-10.17 10.35-14.15 25.44-10.42 39.58 7.47 28.36 7.48 24.4 0 52.82-3.72 14.14.25 29.23 10.42 39.59 20.41 20.78 18.47 17.35 25.95 45.75 3.72 14.14 14.58 25.19 28.47 28.98C104.6 325.96 106.27 325 121 340c13.23 13.47 33.84 15.88 49.74 5.82a39.676 39.676 0 0 1 42.53 0c15.89 10.06 36.5 7.65 49.73-5.82zM97.66 175.96c0-53.03 42.24-96.02 94.34-96.02s94.34 42.99 94.34 96.02-42.24 96.02-94.34 96.02-94.34-42.99-94.34-96.02z\" class=\"\"></path></svg>",
+            "icon_width": 34,
+            "icon_height": 34,
+            "icon_mg_right": 15,
+            "text": "14-Day Money-Back Guarantee",
+            "font_size_text": 16,
+            "font_size_text_mb": 16,
+            "mg_bottom_text": 0,
+            "font_weight_text": "700",
+            "font_style_text": "normal",
+            "description": "",
+            "link": ""
+          }
+        },
+        "f4750cba-f9c8-46bd-886b-3d56aaafe9e5": {
+          "type": "Text",
+          "settings": {
+            "icon_type": "text",
+            "icon": "<svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"trophy-alt\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 576 512\" class=\"svg-inline--fa fa-trophy-alt fa-w-18 fa-3x\"><path fill=\"#2F7348\" d=\"M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 66.5 77.9 131.7 171.9 142.4C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6C498.4 275.6 576 210.3 576 144V88c0-13.3-10.7-24-24-24zM64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-47.5-16.4-77-49.9-77-70.2zm448 0c0 20.2-29.4 53.8-77 70.2 7-25 11.8-53.6 12.8-86.2H512v16zm-127.3 4.7l-39.6 38.6 9.4 54.6c1.7 9.8-8.7 17.2-17.4 12.6l-49-25.8-49 25.8c-8.8 4.6-19.1-2.9-17.4-12.6l9.4-54.6-39.6-38.6c-7.1-6.9-3.2-19 6.7-20.5l54.8-8 24.5-49.6c4.4-8.9 17.1-8.9 21.5 0l24.5 49.6 54.8 8c9.6 1.5 13.5 13.6 6.4 20.5z\" class=\"\"></path></svg>",
+            "icon_width": 34,
+            "icon_height": 34,
+            "icon_mg_right": 20,
+            "text": "12-Month Warranty Offer",
+            "font_size_text": 16,
+            "font_size_text_mb": 16,
+            "mg_bottom_text": 0,
+            "font_weight_text": "700",
+            "font_style_text": "normal",
+            "description": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "42da5be0-ceb2-4dfe-8de3-ff0116edaa8f",
+        "e9b780cb-12f1-43fd-8872-cb8cf4652df6",
+        "f4750cba-f9c8-46bd-886b-3d56aaafe9e5"
+      ],
+      "settings": {
+        "container": "fullwidth",
+        "padding_full_width": 0,
+        "policies_block_swipe_on_mobile": "slider",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "policies_bg": "#ffffff",
+        "policies_bg_gradient": "",
+        "border_item": "style_2",
+        "align_items": "center",
+        "text_align_items": "center",
+        "enable_item_distance": false,
+        "item_color_border": "#dadada",
+        "item_padding_top": 17,
+        "item_padding_bottom": 17,
+        "item_padding_left_right": 20,
+        "item_radius": 0,
+        "bg_color_block": "#ffffff",
+        "border_block": "#ffffff",
+        "color_block": "#3c3c3c",
+        "color_icon": "#6b3ea7"
+      }
+    },
+    "d12dad15-f09f-4ca3-9ba4-e6497c941aa1": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14613118550106__d12dad15-f09f-4ca3-9ba4-e6497c941aa1-1668152871842157a2-1": {
+          "type": "text",
+          "settings": {
+            "text": "BUY NOW, PAY LATER, Starting at 4 Interest-Free Installments with Afterpay at Your Checkout Page.",
+            "text_size": 14,
+            "text_line_height": 1,
+            "margin_top_text": 0,
+            "text_color": "#ffffff",
+            "text_width": "800px"
+          }
+        }
+      },
+      "block_order": [
+        "template--14613118550106__d12dad15-f09f-4ca3-9ba4-e6497c941aa1-1668152871842157a2-1"
+      ],
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "rgba(0,0,0,0)",
+        "mg_top_desktop": 10,
+        "mg_top_tablet": 10,
+        "mg_top_mobile": 10,
+        "mg_bottom_desktop": 10,
+        "mg_bottom_tablet": 10,
+        "mg_bottom_mobile": 10,
+        "rich_text_bg": "#2f7348",
+        "rich_text_bg_gradient": "",
+        "enable_column": false
+      }
+    },
+    "navbar_YeNHqL": {
+      "type": "navbar",
+      "blocks": {
+        "text_yJ9kB3": {
+          "type": "text",
+          "settings": {
+            "title": "Bonus⚡",
+            "title_id": "Bonus",
+            "item_color": "",
+            "active_color": ""
+          }
+        },
+        "text_n6k86J": {
+          "type": "text",
+          "settings": {
+            "title": "Top 3 Pick🏆",
+            "title_id": "Top 3 Pick",
+            "item_color": "",
+            "active_color": ""
+          }
+        },
+        "text_9gyD3x": {
+          "type": "text",
+          "settings": {
+            "title": "Bundle📦",
+            "title_id": "Bundle",
+            "item_color": "",
+            "active_color": ""
+          }
+        },
+        "text_miCQBB": {
+          "type": "text",
+          "settings": {
+            "title": "Shop By Creativity🏷️",
+            "title_id": "Shop By Creativity",
+            "item_color": "",
+            "active_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_yJ9kB3",
+        "text_n6k86J",
+        "text_9gyD3x",
+        "text_miCQBB"
+      ],
+      "name": "导航栏",
+      "settings": {
+        "background_color": "#deffd0",
+        "default_text_color": "#3c3c3c",
+        "active_text_color": "#ff8b21",
+        "height": 45,
+        "item_font_size": 20
+      }
+    },
+    "navbar_id_U8g6hU": {
+      "type": "navbar-id",
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "Bonus"
+      }
+    },
+    "spotlight_block_eUMKCp": {
+      "type": "spotlight-block",
+      "blocks": {
+        "image_wfeb9U": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/UKFalcon_CR_5W_1000x1000_ce1a7153-74c4-4e73-aeb4-8807d6ae0fbe.jpg",
+            "title_align": "left",
+            "enable_absolute": false,
+            "align_items": "top",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 40,
+            "align_items_spacing_bottom": 40,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "",
+            "color_title": "#232323",
+            "fontsize_title": 16,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "",
+            "link": "shopify://products/low-wattage-engraver-cr-laser-falcon-5w-for-beginners",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#336d61",
+            "bg_color_button": "#336d61",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#e95144",
+            "bg_color_button_hover": "#e95144",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        },
+        "image_RJeYbq": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/A1EDM1000x1000.jpg",
+            "title_align": "left",
+            "enable_absolute": false,
+            "align_items": "top",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 40,
+            "align_items_spacing_bottom": 40,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "",
+            "color_title": "#232323",
+            "fontsize_title": 16,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "",
+            "link": "shopify://products/falcon-a1-pro-20w-dual-laser-engraver",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#336d61",
+            "bg_color_button": "#336d61",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#e95144",
+            "bg_color_button_hover": "#e95144",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        },
+        "image_eNNmYN": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/AUFalcon2_Pro_40W_1200x1200_2.jpg",
+            "title_align": "left",
+            "enable_absolute": false,
+            "align_items": "top",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 40,
+            "align_items_spacing_bottom": 40,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "",
+            "color_title": "#232323",
+            "fontsize_title": 16,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 8,
+            "enable_des_hover": false,
+            "button": "",
+            "link": "shopify://products/falcon2-40w-laser-engraver-cutter",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#336d61",
+            "bg_color_button": "#336d61",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#e95144",
+            "bg_color_button_hover": "#e95144",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_wfeb9U",
+        "image_RJeYbq",
+        "image_eNNmYN"
+      ],
+      "settings": {
+        "container": "1200",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "mg_minus_desktop": 30,
+        "block_layout": "grid",
+        "spotlight_block_swipe_on_mobile": "slider",
+        "column": "3",
+        "column_mb": "1",
+        "enable_arrows": true,
+        "enable_arrows_mb": false,
+        "position_horizontal_slick_arrow": "0",
+        "enable_dots": true,
+        "enable_dots_mb": true,
+        "display_border_bottom": false,
+        "border_color": "rgba(0,0,0,0)",
+        "mg_top_desktop": 30,
+        "mg_top_tablet": 30,
+        "mg_top_mobile": 30,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "spotlight_bg": "rgba(0,0,0,0)",
+        "spotlight_bg_gradient": "",
+        "spotlight_block_title": "",
+        "enable_border_title": false,
+        "color_title": "#232323",
+        "fontsize_title": 24,
+        "fontsize_title_mb": 18,
+        "margin_bottom_title": 11,
+        "spotlight_block_des": "Bonus",
+        "color_des": "#3c3c3c",
+        "margin_bottom_des": 30,
+        "fontsize_des": 16,
+        "title_align": "center",
+        "item_distance": 20,
+        "item_radius": 6,
+        "view_all": "",
+        "view_all_fs": 12,
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "display_spotlight_button": false,
+        "spotlight_button_text": "",
+        "spotlight_button_link": "",
+        "color_button": "#ffffff",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "#232323",
+        "border_color_button_hover": "#ffffff",
+        "bg_color_button_hover": "#ffffff",
+        "bg_color_gradient_button_hover": "",
+        "maxwidth_button": 230,
+        "mg_top_button": 30,
+        "enable_shadow": false,
+        "shadow_horizontal_length": 0,
+        "shadow_vertical_length": 0,
+        "shadow_blur_radius": 0,
+        "shadow_spread": 0,
+        "shadow_color": "transparent",
+        "shadow_inset": "no",
+        "enable_plus_icon": false,
+        "color_plus_icon": "#ffffff",
+        "enable_content_border": false,
+        "content_border_color": "rgba(0,0,0,0)"
+      }
+    },
+    "navbar_id_miCJbG": {
+      "type": "navbar-id",
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "Top 3 Pick"
+      }
+    },
+    "164518028491950ecc": {
+      "type": "spotlight-block",
+      "blocks": {
+        "163221535239da03ba-0": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/AU_Falcon_A1.png",
+            "title_align": "left",
+            "enable_absolute": false,
+            "align_items": "top",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 40,
+            "align_items_spacing_bottom": 40,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "Falcon A1 10W",
+            "color_title": "#232323",
+            "fontsize_title": 16,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "⭐ Auto Materials Recognition\n<br>⭐Newbie 100% Success Commitment\n<br>⭐Pre-set Camera for Easy Start\n<br>⭐No Assembly Needed\n<br>⭐Safety in Anywhere\n<br>⭐CoreXY for Up to 600mm/s",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 0,
+            "enable_des_hover": false,
+            "button": "Buy Now",
+            "link": "shopify://products/falcon-a1-10w-enclosed-laser-cutter-and-engraver",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#336d61",
+            "bg_color_button": "#ffffff",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#336d61",
+            "bg_color_button_hover": "#ffffff",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        },
+        "image_i8kN7W": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/AU_Falcon2_Pro_22W.png",
+            "title_align": "left",
+            "enable_absolute": false,
+            "align_items": "top",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 40,
+            "align_items_spacing_bottom": 40,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "Falcon2 Pro 22W",
+            "color_title": "#232323",
+            "fontsize_title": 16,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "⭐ Bring Ideas to Life, Faster\n<br>⭐Professional-Grade Power\n<br>⭐Bigger Canvas, Bigger Opportunities\n<br>⭐Create with Ease, No Learning Curve\n<br>⭐Work with a World of Materials\n<br>⭐Safety You Can Trust, Compliance You Can Show",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 0,
+            "enable_des_hover": false,
+            "button": "Buy Now",
+            "link": "shopify://products/falcon2-pro-40w-and-22w-enclosed-laser-cutter-engraver",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#336d61",
+            "bg_color_button": "#ffffff",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#336d61",
+            "bg_color_button_hover": "#ffffff",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        },
+        "image_yrJPRU": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/AU_Falcon2_40W.png",
+            "title_align": "left",
+            "enable_absolute": false,
+            "align_items": "top",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "bg_color_content": "",
+            "align_items_spacing_top": 40,
+            "align_items_spacing_bottom": 40,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "Falcon2 40W",
+            "color_title": "#232323",
+            "fontsize_title": 16,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "500",
+            "enable_style_italic": false,
+            "border_title": "border_hover",
+            "border_color_title": "",
+            "des": "⭐ Powerful 40W Laser Output + Free 1.6W\n<br>⭐Cut 0.15mm stainless steel sheet\n<br>⭐25000mm/min Cutting Speed\n<br>⭐Five Safety Protections\n<br>⭐Convenient Offline Operation\n<br>⭐CoreXY for Up to 600mm/s",
+            "color_des": "#3c3c3c",
+            "fontsize_des": 12,
+            "mg_top_des": 0,
+            "enable_des_hover": false,
+            "button": "Buy Now",
+            "link": "shopify://products/falcon2-40w-laser-engraver-cutter",
+            "fontsize_btn": 16,
+            "button_width": 190,
+            "color_button": "#ffffff",
+            "border_color_button": "#336d61",
+            "bg_color_button": "#ffffff",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#ffffff",
+            "bg_color_button_hover": "#336d61",
+            "bg_color_button_gradient_hover": "",
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30
+          }
+        }
+      },
+      "block_order": [
+        "163221535239da03ba-0",
+        "image_i8kN7W",
+        "image_yrJPRU"
+      ],
+      "settings": {
+        "container": "1200",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "mg_minus_desktop": 0,
+        "block_layout": "grid",
+        "spotlight_block_swipe_on_mobile": "scroll",
+        "column": "3",
+        "column_mb": "1",
+        "enable_arrows": true,
+        "enable_arrows_mb": false,
+        "position_horizontal_slick_arrow": "0",
+        "enable_dots": true,
+        "enable_dots_mb": true,
+        "display_border_bottom": false,
+        "border_color": "rgba(0,0,0,0)",
+        "mg_top_desktop": 20,
+        "mg_top_tablet": 20,
+        "mg_top_mobile": 20,
+        "mg_bottom_desktop": 20,
+        "mg_bottom_tablet": 20,
+        "mg_bottom_mobile": 20,
+        "spotlight_bg": "rgba(0,0,0,0)",
+        "spotlight_bg_gradient": "",
+        "spotlight_block_title": "Top 3 Pick🏆",
+        "enable_border_title": false,
+        "color_title": "#232323",
+        "fontsize_title": 24,
+        "fontsize_title_mb": 18,
+        "margin_bottom_title": 45,
+        "spotlight_block_des": "",
+        "color_des": "#3c3c3c",
+        "margin_bottom_des": 30,
+        "fontsize_des": 16,
+        "title_align": "center",
+        "item_distance": 20,
+        "item_radius": 6,
+        "view_all": "",
+        "view_all_fs": 12,
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "display_spotlight_button": false,
+        "spotlight_button_text": "",
+        "spotlight_button_link": "",
+        "color_button": "#ffffff",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "#232323",
+        "border_color_button_hover": "#ffffff",
+        "bg_color_button_hover": "#ffffff",
+        "bg_color_gradient_button_hover": "",
+        "maxwidth_button": 230,
+        "mg_top_button": 30,
+        "enable_shadow": false,
+        "shadow_horizontal_length": 0,
+        "shadow_vertical_length": 0,
+        "shadow_blur_radius": 0,
+        "shadow_spread": 0,
+        "shadow_color": "transparent",
+        "shadow_inset": "no",
+        "enable_plus_icon": false,
+        "color_plus_icon": "#ffffff",
+        "enable_content_border": false,
+        "content_border_color": "#e2e2e2"
+      }
+    },
+    "navbar_id_AhLPWi": {
+      "type": "navbar-id",
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "Bundle"
+      }
+    },
+    "164540968629fa906f": {
+      "type": "product-block",
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "border_height": 5,
+        "color_border_bottom": "#f6f6f6",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "mg_top_desktop": 30,
+        "mg_top_tablet": 30,
+        "mg_top_mobile": 30,
+        "mg_bottom_desktop": 20,
+        "mg_bottom_tablet": 20,
+        "mg_bottom_mobile": 20,
+        "product_block_layout": "grid",
+        "product_bg": "#ffffff",
+        "product_bg_gradient": "",
+        "style_block_header": "style2",
+        "pd_top_title": 30,
+        "product_block_title": "Turn Creativity Into Reality: Meet Falcon Selected Bundle",
+        "enable_border_title": false,
+        "enable_border_title_style2": false,
+        "fontsize_title": 24,
+        "fontsize_title_mb": 18,
+        "mg_bottom_title": 35,
+        "mg_bottom_title_mb": 12,
+        "border_color_title": "#2f7348",
+        "color_title": "#2f7348",
+        "product_tab_des": "",
+        "product_tab_des_color": "#232323",
+        "view_all": "Explore More>>",
+        "view_all_align": "center",
+        "font_weight_view_all": "500",
+        "mg_bottom_view": 30,
+        "mg_bottom_view_mb": 0,
+        "enable_border_view_all": false,
+        "link_view_all": "shopify://collections/new-year-bundle",
+        "color_view_all": "#202020",
+        "icon_view_all": "",
+        "color_view_all_icon": "#eb492f",
+        "title_align": "center",
+        "button_text": "Show More",
+        "button_text_font_size": 14,
+        "button_text_font_weight": "500",
+        "button_text_text_transform": "uppercase",
+        "product_button_width": 270,
+        "pd_top_product_button": 12,
+        "pd_bottom_product_button": 12,
+        "button_icon": "",
+        "mg_bottom_button": 55,
+        "enable_button_shadow": false,
+        "color_button": "#ffffff",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "",
+        "border_color_button_hover": "",
+        "bg_color_button_hover": "",
+        "bg_color_gradient_button_hover": "",
+        "product_block_collection": "new-year-bundle",
+        "product_block_limit": 20,
+        "grid_gap": 30,
+        "pb_style": "style2",
+        "style_countdown": "style_2",
+        "countdown": "2025/09/23 20:59:59",
+        "font_size_countdown_text": 14,
+        "color_countdown": "#901c1c",
+        "countdown_margin_left": 15,
+        "product_block_per_row": "4",
+        "product_block_infinite_scroll": true,
+        "product_block_swipe_on_mobile": true,
+        "enable_product_card_pd_bottom": false,
+        "product_card_pd_bottom": 30,
+        "product_block_dots": true,
+        "product_block_dots_mb": true,
+        "spacing_top_dots": 0,
+        "product_block_arrows": true,
+        "product_block_arrows_mb": false,
+        "product_block_progress_bar": false,
+        "product_block_counter_number": false,
+        "product_block_show": "4",
+        "position_vertical_arrow": "70px",
+        "product_block_per_view": "4",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_hover_drag_icon": true,
+        "position": "left",
+        "width_banner": 25,
+        "display_list_collection": false,
+        "collection_color": "#202020",
+        "collection_color_hover": "#3e8cc4",
+        "collection_bg_color": "#ffffff",
+        "collection_bg_color_gradient": "",
+        "text_list": "View all categories",
+        "url_list": "",
+        "enable_layout_special": false,
+        "bg_card": "#ffffff",
+        "padding_card": 15,
+        "border_radius_card": 5,
+        "border_layout_card": "only_bottom",
+        "border_width_card": 5,
+        "border_color_card": "#f0f1f4"
+      }
+    },
+    "navbar_id_jCGMQr": {
+      "type": "navbar-id",
+      "name": "NavBarID",
+      "settings": {
+        "nav-bar-id": "Shop By Creativity"
+      }
+    },
+    "tiktok_embedder_P9pmkt": {
+      "type": "tiktok-embedder",
+      "blocks": {
+        "tiktok_video_zbLFT8": {
+          "type": "tiktok_video",
+          "settings": {
+            "tiktok_video_embede_code": "<video width=\"350\" controls>\n  <source src=\"https://cdn.shopify.com/videos/c/o/v/8f26cb17caba4d9899a97ab6fdaaad5a.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</source></video>"
+          }
+        },
+        "tiktok_video_MPVY8p": {
+          "type": "tiktok_video",
+          "settings": {
+            "tiktok_video_embede_code": "<video width=\"350\" controls>\n  <source src=\"https://cdn.shopify.com/videos/c/o/v/cc3aed977d8f487f82f931c724c1fd0c.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</source></video>"
+          }
+        },
+        "tiktok_video_cWCgCF": {
+          "type": "tiktok_video",
+          "settings": {
+            "tiktok_video_embede_code": "<video width=\"350\" controls>\n  <source src=\"https://cdn.shopify.com/videos/c/o/v/9d57d047f38f4b04a4f1c908251e2334.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</source></video>"
+          }
+        }
+      },
+      "block_order": [
+        "tiktok_video_zbLFT8",
+        "tiktok_video_MPVY8p",
+        "tiktok_video_cWCgCF"
+      ],
+      "settings": {
+        "container": "fullwidth",
+        "padding_full_width": 0,
+        "mg_top_desktop": 15,
+        "mg_top_tablet": 15,
+        "mg_top_mobile": 15,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "section_bg": "#ffffff",
+        "section_gradient": "",
+        "section_title": "Shop By Creativity🏷️",
+        "section_title_font_size": 24,
+        "section_title_font_size_mb": 18,
+        "section_title_font_weight": "600",
+        "section_title_color": "#191919",
+        "section_title_margin_top": 0,
+        "section_title_font_style": "normal",
+        "section_title_enable_underline": false,
+        "section_title_underline_style": "1",
+        "section_title_underline_color": "",
+        "section_description": "",
+        "section_description_font_size": 16,
+        "section_description_font_size_mb": 14,
+        "section_description_font_weight": "500",
+        "section_description_color": "#191919",
+        "section_description_margin_top": 25,
+        "section_description_max_width": 530,
+        "button_type": "button",
+        "button_link": "",
+        "button_text": "",
+        "button_font_size": 16,
+        "button_width": 190,
+        "button_margin_top": 50,
+        "button_text_color": "#ffffff",
+        "button_border_color": "#2f7348",
+        "button_background_color": "#2f7348",
+        "button_gradient_color": "",
+        "button_text_color_hover": "#2f7348",
+        "button_border_color_hover": "#ffffff",
+        "button_background_color_hover": "#ffffff",
+        "button_gradient_color_hover": "",
+        "button_text_transform": "capitalize",
+        "button_font_weight": "600",
+        "link_text": "",
+        "link_image_width": 100,
+        "link_to_instagram": "",
+        "link_text_font_size": 16,
+        "link_text_font_size_mb": 14,
+        "link_text_font_weight": "500",
+        "link_text_font_style": "italic",
+        "link_margin_top": 50,
+        "link_text_color": "#191919",
+        "link_text_color_hover": "#191919",
+        "text_align": "center",
+        "column_per_row": "3",
+        "videos_margin_top": 35,
+        "swipe_on_mobile": "scroll",
+        "arrow_color": "#333333",
+        "arrow_bg_color": "",
+        "arrow_border_color": "#333333",
+        "arrow_button_size": 35,
+        "number_color": "#333333",
+        "number_font_size": 16
+      }
+    },
+    "home_s_gallery_LAbQmd": {
+      "type": "home-s-gallery",
+      "blocks": {
+        "home_section_title_zRCPeW": {
+          "type": "home-section-title",
+          "settings": {
+            "layout": "center",
+            "title": "Art Collection",
+            "sub_title": "",
+            "margin_top": 48,
+            "margin_bottom": 32
+          },
+          "blocks": {}
+        },
+        "ticker_G3mVF7": {
+          "type": "ticker",
+          "settings": {
+            "is_reverse": false,
+            "offset": 0,
+            "duration": 30,
+            "gap": 16
+          },
+          "blocks": {
+            "home_gallery_card_eWmqT3": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/10_eb762aef-7dce-4d4f-bec8-086266d35c89.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_iWdfhL": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/6_1bb63845-2471-43aa-aa5b-46d8bb35b60a.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_VqHW6y": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/452A9823.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_PLht7f": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/452A9911.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_dMPMBq": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/DSC06976.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_74BNL6": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/DSC06978___1.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "home_gallery_card_eWmqT3",
+            "home_gallery_card_iWdfhL",
+            "home_gallery_card_VqHW6y",
+            "home_gallery_card_PLht7f",
+            "home_gallery_card_dMPMBq",
+            "home_gallery_card_74BNL6"
+          ]
+        },
+        "ticker_PwgYwU": {
+          "type": "ticker",
+          "settings": {
+            "is_reverse": true,
+            "offset": 0,
+            "duration": 30,
+            "gap": 16
+          },
+          "blocks": {
+            "home_gallery_card_ydkUPh": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/452A3055.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_YAqKzR": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/452A9860.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_LxwAfp": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/452A2970.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_wid3ck": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/452A3006.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_hCxFiE": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/DSC07011___1.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "home_gallery_card_Mxdpyj": {
+              "type": "home-gallery-card",
+              "settings": {
+                "image": "shopify://shop_images/DSC06980_1___1.jpg",
+                "link": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "home_gallery_card_ydkUPh",
+            "home_gallery_card_YAqKzR",
+            "home_gallery_card_LxwAfp",
+            "home_gallery_card_wid3ck",
+            "home_gallery_card_hCxFiE",
+            "home_gallery_card_Mxdpyj"
+          ]
+        }
+      },
+      "block_order": [
+        "home_section_title_zRCPeW",
+        "ticker_G3mVF7",
+        "ticker_PwgYwU"
+      ],
+      "name": "Home S Gallery",
+      "settings": {
+        "mode": "gallery"
+      }
+    },
+    "rich_text_HNDJ8n": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KDewfT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop By Creativity",
+            "heading_size": 30,
+            "heading_size_mb": 30,
+            "heading_line_height": 1,
+            "heading_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KDewfT"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "mg_top_desktop": 25,
+        "mg_top_tablet": 20,
+        "mg_top_mobile": 20,
+        "mg_bottom_desktop": 25,
+        "mg_bottom_tablet": 30,
+        "mg_bottom_mobile": 25,
+        "rich_text_bg": "#deffd0",
+        "rich_text_bg_gradient": "",
+        "enable_column": false
+      }
+    },
+    "newsletter_tbExXb": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_63ngQg": {
+          "type": "newsletter",
+          "settings": {
+            "section_title": "See More Ideas Sharing",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 0,
+            "des_line_height": 20,
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_text_font_size": 13,
+            "button_text": "Show Me",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#2f7348",
+            "button_background_color": "#2f7348",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#2f7348",
+            "button_border_color_hover": "#2f7348",
+            "button_background_color_hover": "#ffffff",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "input_placeholder": "Your email address",
+            "input_placeholder_color": "#2f7348",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#2f7348",
+            "form_gap": 15,
+            "newsletter_content_direction": "column",
+            "newsletter_form_justify_content": "space-between",
+            "input_width_behavior": "restricted"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_63ngQg"
+      ],
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false
+      }
+    },
+    "16454104080f5bd8eb": {
+      "type": "brand-slider",
+      "blocks": {
+        "7f1e83d9-be00-46c1-b20e-93eae19a876e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fabbaloo_b5f7ebfa-baaf-438f-a772-b15c5fd060d1.webp",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "b8d93489-7780-41ce-92a5-38427c39e6e8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3d-print_dfc89590-9d65-46ae-b343-d348744346c5.webp",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "260f60c2-8074-4427-8c01-14d1b504e916": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/teknoloj-oku_64cff3ef-c204-4690-96ee-1c17d162e4c2.webp",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "a76c7513-8c87-4c2c-8a4c-de67327bdfbe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3d-poder_c16d74ac-fed9-4cbb-82bc-65dab095f5d2.webp",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "713c6597-60ef-4b9c-9203-c89cf935e338": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3d-printing-industry_505f011e-ab6f-4b33-8c64-421a441b5625.webp",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "4b1363cc-d8b6-4d21-bb7f-67504704876d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/all-3dp-review_9a5d04c8-0854-4da9-8d90-cb62eab8c8ec.webp",
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        },
+        "fe6bfee2-97fb-4966-8425-b48fe68a6cd8": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "color_text": "#000000",
+            "color_text_hover": "#3e8cc4",
+            "description": "",
+            "color_des": "#3c3c3c",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "7f1e83d9-be00-46c1-b20e-93eae19a876e",
+        "b8d93489-7780-41ce-92a5-38427c39e6e8",
+        "260f60c2-8074-4427-8c01-14d1b504e916",
+        "a76c7513-8c87-4c2c-8a4c-de67327bdfbe",
+        "713c6597-60ef-4b9c-9203-c89cf935e338",
+        "4b1363cc-d8b6-4d21-bb7f-67504704876d",
+        "fe6bfee2-97fb-4966-8425-b48fe68a6cd8"
+      ],
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "brands_block_style": "style_1",
+        "brand_layout": "infinite",
+        "scroll_from": "ltr",
+        "brand_scroll_time": "20",
+        "display_brand_border": false,
+        "brand_bg": "rgba(0,0,0,0)",
+        "brand_bg_gradient": "",
+        "title_align": "right",
+        "brand_title": "As Seen On",
+        "color_title": "#3c3c3c",
+        "fontsize_title": 20,
+        "fontsize_title_mb": 20,
+        "mg_bottom_title": 12,
+        "enable_background_title": false,
+        "enable_border_title": false,
+        "border_color_title": "#232323",
+        "brand_des": "",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "mg_bottom_des": 0,
+        "view_all": "",
+        "view_all_fs": 14,
+        "font_weight_view_all": "500",
+        "mg_bottom_view": 30,
+        "enable_border_view_all": false,
+        "link_view_all": "",
+        "color_view_all": "#202020",
+        "icon_view_all": "",
+        "color_view_all_icon": "#eb492f",
+        "view_all_icon_side": "left",
+        "btn_text": "",
+        "fontsize_btn": 12,
+        "btn_spacing_top": 15,
+        "btn_color": "#828282",
+        "btn_link": "",
+        "enable_autoplay": false,
+        "brand_speed": "3000",
+        "brand_rows": "6",
+        "enable_arrows": true,
+        "enable_dots": true,
+        "enable_center_mode": false,
+        "style_position_arrows": "none",
+        "position_horizontal_arrow": 15,
+        "color_arrow": "",
+        "arrow_background": "",
+        "arrow_background_gradient": "",
+        "arrow_border": "",
+        "color_arrow_hover": "",
+        "arrow_background_hover": "",
+        "arrow_background_gradient_hover": "",
+        "arrow_border_hover": "",
+        "brand_rows_mb": "2",
+        "brand_image_ratio": "square",
+        "item_distance": 15,
+        "margin_bottom_image": 0,
+        "brand_item_border": "box_shadow",
+        "border_radius": 15,
+        "border_color": "#e2e5e7",
+        "border_color_hover": "#2d2d2d",
+        "hover_effect": "zoom",
+        "color_underline_image_hover": "#000000",
+        "fontsize_text": 16,
+        "fontsize_text_mb": 13,
+        "font_weight_title": "400",
+        "margin_bottom_title": 0,
+        "mg_top_desktop": 30,
+        "mg_top_tablet": 30,
+        "mg_top_mobile": 30,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
+    "rich_text_8LfVFd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_YVjRc3": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": 30,
+            "heading_size_mb": 30,
+            "heading_line_height": 1,
+            "heading_color": "#000000"
+          }
+        },
+        "text_wexcEr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your creations with our machines. Explore money-making opportunities and join the <font color=\"#2F7348\">#Creality Falcon Spring Sale!</font> Share our store promotions with your followers today!</p>",
+            "text_size": 16,
+            "text_line_height": 1,
+            "margin_top_text": 20,
+            "text_color": "#000000",
+            "text_width": "800px"
+          }
+        },
+        "button_pLBcta": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Join",
+            "margin_top_button": 30,
+            "button_link": "",
+            "button_color": "#ffffff",
+            "enable_underline_button": false,
+            "button_border_color": "#000000",
+            "button_bg_color": "#000000",
+            "button_bg_gradient": "",
+            "button_color_hover": "#000000",
+            "button_border_color_hover": "#000000",
+            "button_bg_color_hover": "#ffffff",
+            "button_bg_gradient_hover": "",
+            "button_width": "270px"
+          }
+        },
+        "social_media_raVJaR": {
+          "type": "social_media",
+          "settings": {
+            "social_spacing_top": 10,
+            "social_spacing_bottom": 10,
+            "social_icon_color": "#2f7348",
+            "social_icon_background_color": "",
+            "social_icon_background_gradient": "",
+            "social_icon_hover_color": "",
+            "social_icon_background_hover_color": "",
+            "social_icon_background_hover_gradient": "",
+            "social_icon_ring_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_YVjRc3",
+        "text_wexcEr",
+        "button_pLBcta",
+        "social_media_raVJaR"
+      ],
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 20,
+        "mg_bottom_tablet": 20,
+        "mg_bottom_mobile": 20,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false
+      }
+    },
+    "rich_text_BHrd39": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_GFVBJL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop By Material",
+            "heading_size": 30,
+            "heading_size_mb": 30,
+            "heading_line_height": 1,
+            "heading_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GFVBJL"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "mg_top_desktop": 25,
+        "mg_top_tablet": 20,
+        "mg_top_mobile": 20,
+        "mg_bottom_desktop": 35,
+        "mg_bottom_tablet": 30,
+        "mg_bottom_mobile": 25,
+        "rich_text_bg": "#deffd0",
+        "rich_text_bg_gradient": "",
+        "enable_column": false
+      }
+    },
+    "rich_text_qVCRDE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_c3RL9r": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bundle",
+            "heading_size": 30,
+            "heading_size_mb": 30,
+            "heading_line_height": 1,
+            "heading_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_c3RL9r"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "mg_top_desktop": 25,
+        "mg_top_tablet": 20,
+        "mg_top_mobile": 20,
+        "mg_bottom_desktop": 25,
+        "mg_bottom_tablet": 30,
+        "mg_bottom_mobile": 25,
+        "rich_text_bg": "#deffd0",
+        "rich_text_bg_gradient": "",
+        "enable_column": false
+      }
+    }
+  },
+  "order": [
+    "image_banner_H3cKVh",
+    "image_banner_6iyCYX",
+    "1644400438a4a3ac04",
+    "d12dad15-f09f-4ca3-9ba4-e6497c941aa1",
+    "navbar_YeNHqL",
+    "navbar_id_U8g6hU",
+    "spotlight_block_eUMKCp",
+    "navbar_id_miCJbG",
+    "164518028491950ecc",
+    "navbar_id_AhLPWi",
+    "164540968629fa906f",
+    "navbar_id_jCGMQr",
+    "tiktok_embedder_P9pmkt",
+    "home_s_gallery_LAbQmd",
+    "rich_text_HNDJ8n",
+    "newsletter_tbExXb",
+    "16454104080f5bd8eb",
+    "rich_text_8LfVFd",
+    "rich_text_BHrd39",
+    "rich_text_qVCRDE"
+  ]
+}

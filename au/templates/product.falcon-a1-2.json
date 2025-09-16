@@ -71,19 +71,6 @@
             "spacing_bottom": 0
           }
         },
-        "custom_liquid_RyG9xW": {
-          "type": "custom_liquid",
-          "disabled": true,
-          "settings": {
-            "custom_liquid": "<style>\n  .falcon-activity-banner {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    padding: 10px 14px;\n    background-color: #F0FBFF;\n    border: 1px solid #14A9DE;\n    border-radius: 8px;\n    text-decoration: none;\n    transition: all 0.3s ease;\n    margin-top: 16px;\n    box-sizing: border-box;\n  }\n\n  .falcon-activity-banner:hover {\n    box-shadow: 0 4px 12px rgba(20, 169, 222, 0.4);\n  }\n\n  .falcon-activity-banner img {\n    width: 60px;\n    height: auto;\n    border-radius: 4px;\n    animation: floatUpDown 2s ease-in-out infinite;\n    flex-shrink: 0;\n  }\n\n  .falcon-activity-text {\n    font-family: 'Montserrat', sans-serif;\n    color: #14A9DE;\n    font-size: 13px;\n    font-weight: 600;\n    line-height: 1.4;\n  }\n\n  @keyframes floatUpDown {\n    0%, 100% {\n      transform: translateY(0);\n    }\n    50% {\n      transform: translateY(-6px);\n    }\n  }\n\n  @media (max-width: 600px) {\n    .falcon-activity-banner {\n      flex-direction: column;\n      text-align: center;\n    }\n\n    .falcon-activity-banner img {\n      margin-bottom: 6px;\n    }\n  }\n</style>\n\n<a href=\"#\"\n   class=\"falcon-activity-banner\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0678/2933/4237/files/Buy_More_Save_More_A_100_OFF_on_Orders_over_A_1000.png?v=1752562195\"\n       alt=\"Free Falcon 5W\" />\n  <div class=\"falcon-activity-text\">\n    📅 July Bonus: A$100 OFF on Orders over A$1000!<br />*Only 30 Spots! Code auto-applied at checkout.\n  </div>\n</a>"
-          }
-        },
-        "custom_liquid_eTh3R9": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<style>\n.falcon-gift-bundle {\n  background-color: #F5FBFF;\n  padding: 12px 16px;\n  border-radius: 10px;\n  margin-top: 20px;\n  font-family: inherit;\n  border: 1px solid #D4EEF9;\n}\n\n.falcon-gift-bundle p {\n  font-size: 13.5px;\n  line-height: 1.5;\n  margin-bottom: 12px;\n  color: #1A1A1A;\n}\n\n.falcon-gift-bundle .highlight {\n  color: #14A9DE;\n  font-weight: 700;\n}\n\n.falcon-gift-grid {\n  display: flex;\n  justify-content: flex-start;\n  gap: 10px;\n  flex-wrap: nowrap;\n  overflow-x: auto;\n  scrollbar-width: none;\n  -ms-overflow-style: none;\n}\n\n.falcon-gift-grid::-webkit-scrollbar {\n  display: none;\n}\n\n.falcon-gift-item {\n  flex: 0 0 auto;\n  width: 70px;\n  height: 70px;\n  border-radius: 6px;\n  overflow: hidden;\n  position: relative;\n  border: 1px solid #E0F2F8;\n  background-color: #FFFFFF;\n  box-shadow: 0 2px 4px rgba(20, 169, 222, 0.1);\n  transition: transform 0.3s ease;\n}\n\n.falcon-gift-item img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n\n.falcon-gift-item:hover {\n  transform: scale(1.05);\n}\n\n.falcon-gift-item::after {\n  content: \"🎁\";\n  position: absolute;\n  bottom: 3px;\n  right: 3px;\n  font-size: 10px;\n  background: #14A9DE;\n  color: #FFFFFF;\n  padding: 2px 4px;\n  border-radius: 3px;\n}\n</style>\n\n<div class=\"falcon-gift-bundle\">\n  <p>\n    💥 <strong>Buy <span class=\"highlight\">Falcon A1</span>,</strong>\n    <span class=\"highlight\">Get a FREE</span> <strong>crafting materials package</strong> 🎁(contains a random auto-recognition material)<br>\n    <span style=\"font-size: 12px; color: #666666;\">*Automatically added to your cart! While supplies last, gifts may be adjusted based on actual inventory.</span>\n  </p>\n\n  <div class=\"falcon-gift-grid\">\n    {% assign gift_images = \n      \"https://au.crealityfalcon.com/cdn/shop/files/FalconA110WEnclosedLaserEngraverandCutterAutoRecognitionKits.png?v=1751349140,\n\nhttps://au.crealityfalcon.com/cdn/shop/files/2_7717832a-0c72-4811-8e2b-1c7b6c66dad6.png?v=1753262547\" | split: \",\" %}\n\n    {% for image in gift_images %}\n      <div class=\"falcon-gift-item\">\n        <img loading=\"lazy\" src=\"{{ image | strip }}\" alt=\"Gift {{ forloop.index }}\">\n      </div>\n    {% endfor %}\n  </div>\n</div>"
-          }
-        },
         "4e59f24a-8859-4579-a80a-d70e6f1bf66b": {
           "type": "info",
           "settings": {
@@ -206,8 +193,6 @@
         "judge_me_reviews_preview_badge_7JjqMP",
         "4f95b592-8369-4ab0-b30d-24e463fb6890",
         "b87b5d94-d9c5-4d66-a99b-da56e65d25e9",
-        "custom_liquid_RyG9xW",
-        "custom_liquid_eTh3R9",
         "4e59f24a-8859-4579-a80a-d70e6f1bf66b",
         "bd3a641e-98d0-4da1-ab57-d5e4b0391995",
         "d98e243b-3682-495a-965a-1c7f7d460880",
@@ -522,7 +507,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_cjzCiA": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

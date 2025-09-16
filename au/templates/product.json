@@ -349,16 +349,24 @@
         "border_color_card": "#f0f1f4"
       }
     },
-    "17116063070cdb3445": {
+    "175636782269ddc896": {
       "type": "apps",
       "blocks": {
-        "judge_me_reviews_review_widget_cjzCiA": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "judge_me_reviews_all_reviews_text_ytep9x": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
+        },
+        "judge_me_reviews_review_widget_rXWPP8": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [
-        "judge_me_reviews_review_widget_cjzCiA"
+        "judge_me_reviews_all_reviews_text_ytep9x",
+        "judge_me_reviews_review_widget_rXWPP8"
       ],
       "settings": {
         "include_margins": false
@@ -368,6 +376,6 @@
   "order": [
     "main",
     "product-recommendations",
-    "17116063070cdb3445"
+    "175636782269ddc896"
   ]
 }

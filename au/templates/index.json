@@ -25,22 +25,66 @@
             "show_scrollbar": false
           },
           "blocks": {
-            "home_banner_card_big_QPxkC6": {
+            "home_banner_card_big_3hgmeM": {
               "type": "home-banner-card-big",
               "settings": {
-                "image": "shopify://shop_images/1880X600_AU.jpg",
-                "image_mobile": "shopify://shop_images/960X1200_AU.jpg",
-                "link": "shopify://pages/back-to-school-sale",
-                "subtitle": "",
+                "image": "shopify://shop_images/US_8ed006dd-2597-4cfe-a909-04a2ed197391.jpg",
+                "image_mobile": "shopify://shop_images/US_50c2c75a-cba4-4f34-b5ef-317ccfcb4610.jpg",
+                "link": "shopify://pages/creality-falcon-spring-laser-jewelry-making",
+                "subtitle": "Up to 48% OFF",
+                "subtitle_color": "#336d61",
+                "subtitle_color_mobile": "#336d61",
+                "title": "Spring Into Creation",
+                "title_color": "#336d61",
+                "title_color_mobile": "#336d61",
+                "desc": "Turn Creativity Into Reality",
+                "desc_color": "#336d61",
+                "desc_color_mobile": "#336d61",
+                "btn_text": "Shop Now",
+                "button_color": "#ffffff",
+                "button_background_color": "#336d61",
+                "button_background_gradient": ""
+              },
+              "blocks": {}
+            },
+            "home_banner_card_big_VXGNKU": {
+              "type": "home-banner-card-big",
+              "settings": {
+                "image": "shopify://shop_images/Falcon_A1_Pro_20W_Dual-laser_Engraver_4.jpg",
+                "image_mobile": "shopify://shop_images/Falcon_A1_Pro_20W_Dual-laser_Engraver_3.jpg",
+                "link": "shopify://products/falcon-a1-pro-20w-dual-laser-engraver",
+                "subtitle": "Run a Laser Business",
                 "subtitle_color": "#e95144",
                 "subtitle_color_mobile": "#e95144",
-                "title": "",
+                "title": "Falcon A1 Pro 20W",
                 "title_color": "#ffffff",
                 "title_color_mobile": "#ffffff",
-                "desc": "",
+                "desc": "Go Pro, Go Smart, Go Earn",
                 "desc_color": "#ffffff",
                 "desc_color_mobile": "#ffffff",
-                "btn_text": "",
+                "btn_text": "Shop Now",
+                "button_color": "#3c3c3c",
+                "button_background_color": "#ffffff",
+                "button_background_gradient": ""
+              },
+              "blocks": {}
+            },
+            "home_banner_card_big_L6QyYC": {
+              "type": "home-banner-card-big",
+              "settings": {
+                "image": "shopify://shop_images/Creality_Falcon_Laser_Cutter_and_Engraver5760x1800.jpg",
+                "image_mobile": "shopify://shop_images/Creality_Falcon_Laser_Cutter_and_Engraver_1125x1470_ed480a38-c404-415f-84fb-d3913bfbd443.jpg",
+                "link": "shopify://collections/falcon2-pro-enclosed-laser-engraver-and-cutter",
+                "subtitle": "Clean Work, Less Smoke",
+                "subtitle_color": "#3c3c3c",
+                "subtitle_color_mobile": "#232323",
+                "title": "Falcon2 Pro",
+                "title_color": "#3c3c3c",
+                "title_color_mobile": "#232323",
+                "desc": "Up to 60W High-speed Laser Cutting with Enhanced Smoke Purification",
+                "desc_color": "#3c3c3c",
+                "desc_color_mobile": "#232323",
+                "btn_text": "Shop Now",
                 "button_color": "#3c3c3c",
                 "button_background_color": "#ffffff",
                 "button_background_gradient": ""
@@ -69,29 +113,6 @@
               },
               "blocks": {}
             },
-            "home_banner_card_big_m6Tnfk": {
-              "type": "home-banner-card-big",
-              "disabled": true,
-              "settings": {
-                "image": "shopify://shop_images/Falcon_A1_Pro_20W_Dual-laser_Engraver_2.jpg",
-                "image_mobile": "shopify://shop_images/Falcon_A1_Pro_20W_Dual-laser_Engraver_1.jpg",
-                "link": "shopify://products/falcon-a1-pro-20w-dual-laser-engraver",
-                "subtitle": "New",
-                "subtitle_color": "#e95144",
-                "subtitle_color_mobile": "#e95144",
-                "title": "Falcon A1 Pro 20W",
-                "title_color": "#ffffff",
-                "title_color_mobile": "#ffffff",
-                "desc": "Go Pro, Go Smart, Go Earn",
-                "desc_color": "#ffffff",
-                "desc_color_mobile": "#ffffff",
-                "btn_text": "Learn More",
-                "button_color": "#3c3c3c",
-                "button_background_color": "#ffffff",
-                "button_background_gradient": ""
-              },
-              "blocks": {}
-            },
             "home_banner_card_big_8jgFLm": {
               "type": "home-banner-card-big",
               "settings": {
@@ -110,51 +131,6 @@
                 "btn_text": "Shop Now",
                 "button_color": "#ffffff",
                 "button_background_color": "#e95144",
-                "button_background_gradient": ""
-              },
-              "blocks": {}
-            },
-            "home_banner_card_big_3hgmeM": {
-              "type": "home-banner-card-big",
-              "settings": {
-                "image": "shopify://shop_images/Falcon_A1_Pro_20W_Dual-laser_Engraver_4.jpg",
-                "image_mobile": "shopify://shop_images/Falcon_A1_Pro_20W_Dual-laser_Engraver_3.jpg",
-                "link": "shopify://products/falcon-a1-pro-20w-dual-laser-engraver",
-                "subtitle": "New",
-                "subtitle_color": "#e95144",
-                "subtitle_color_mobile": "#e95144",
-                "title": "Falcon A1 Pro 20W",
-                "title_color": "#ffffff",
-                "title_color_mobile": "#ffffff",
-                "desc": "Go Pro, Go Smart, Go Earn",
-                "desc_color": "#ffffff",
-                "desc_color_mobile": "#ffffff",
-                "btn_text": "Shop Now",
-                "button_color": "#3c3c3c",
-                "button_background_color": "#ffffff",
-                "button_background_gradient": ""
-              },
-              "blocks": {}
-            },
-            "home_banner_card_big_VBNE6J": {
-              "type": "home-banner-card-big",
-              "disabled": true,
-              "settings": {
-                "image": "shopify://shop_images/Falcon_A1_Pro_20W_Dual-laser_Engraver_5760x1800_e40e071b-90cd-42d1-9505-de74725f7ce4.jpg",
-                "image_mobile": "shopify://shop_images/Falcon_A1_Pro_20W_Dual-laser_Engraver1125x1488.jpg",
-                "link": "",
-                "subtitle": "",
-                "subtitle_color": "#e95144",
-                "subtitle_color_mobile": "#e95144",
-                "title": "",
-                "title_color": "#ffffff",
-                "title_color_mobile": "#ffffff",
-                "desc": "",
-                "desc_color": "#ffffff",
-                "desc_color_mobile": "#ffffff",
-                "btn_text": "",
-                "button_color": "#3c3c3c",
-                "button_background_color": "#ffffff",
                 "button_background_gradient": ""
               },
               "blocks": {}
@@ -180,39 +156,15 @@
                 "button_background_gradient": ""
               },
               "blocks": {}
-            },
-            "home_banner_card_big_L6QyYC": {
-              "type": "home-banner-card-big",
-              "settings": {
-                "image": "shopify://shop_images/Creality_Falcon_Laser_Cutter_and_Engraver5760x1800.jpg",
-                "image_mobile": "shopify://shop_images/Creality_Falcon_Laser_Cutter_and_Engraver_1125x1470_ed480a38-c404-415f-84fb-d3913bfbd443.jpg",
-                "link": "shopify://collections/falcon2-pro-enclosed-laser-engraver-and-cutter",
-                "subtitle": "Clean Work, Less Smoke",
-                "subtitle_color": "#3c3c3c",
-                "subtitle_color_mobile": "#232323",
-                "title": "Falcon2 Pro",
-                "title_color": "#3c3c3c",
-                "title_color_mobile": "#232323",
-                "desc": "Up to 60W High-speed Laser Cutting with Enhanced Smoke Purification",
-                "desc_color": "#3c3c3c",
-                "desc_color_mobile": "#232323",
-                "btn_text": "Shop Now",
-                "button_color": "#3c3c3c",
-                "button_background_color": "#ffffff",
-                "button_background_gradient": ""
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "home_banner_card_big_QPxkC6",
-            "home_banner_card_big_dp8zfX",
-            "home_banner_card_big_m6Tnfk",
-            "home_banner_card_big_8jgFLm",
             "home_banner_card_big_3hgmeM",
-            "home_banner_card_big_VBNE6J",
-            "home_banner_card_big_ttVVJc",
-            "home_banner_card_big_L6QyYC"
+            "home_banner_card_big_VXGNKU",
+            "home_banner_card_big_L6QyYC",
+            "home_banner_card_big_dp8zfX",
+            "home_banner_card_big_8jgFLm",
+            "home_banner_card_big_ttVVJc"
           ]
         }
       },
@@ -268,11 +220,12 @@
       "type": "home-s-best-sell",
       "settings": {
         "products": [
-          "falcon2-40w-laser-engraver-cutter",
-          "falcon-a1-10w-enclosed-laser-cutter-and-engraver",
+          "falcon-a1-pro-20w-dual-laser-engraver",
           "falcon2-22w-laser-engraver-and-cutter",
+          "falcon-a1-10w-enclosed-laser-cutter-and-engraver",
           "falcon2-pro-40w-and-22w-enclosed-laser-cutter-engraver",
-          "low-wattage-engraver-cr-laser-falcon-10w"
+          "low-wattage-engraver-cr-laser-falcon-10w",
+          "falcon2-40w-laser-engraver-cutter"
         ],
         "title": "Best Selling Products"
       }
@@ -1017,7 +970,7 @@
       "settings": {
         "bind": "",
         "link": "",
-        "tag_text": "White Falcon A1 is Coming Soon!",
+        "tag_text": "White Falcon A1 is Coming!",
         "heading": "Be the first to know",
         "subtext": "Subscribe to our newsletter and get 5% Off!",
         "placeholder": "Enter your Email",

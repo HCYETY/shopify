@@ -13,9 +13,59 @@
       "type": "main-page",
       "disabled": true,
       "settings": {}
+    },
+    "creality_2024_5_community_qeA6gR": {
+      "type": "creality_2024_5_community",
+      "blocks": {
+        "product_qBcPB6": {
+          "type": "product",
+          "settings": {
+            "product": "bundle-falcon2-22w-laser-engraver-protection-kits",
+            "bottom_text": "11111"
+          }
+        },
+        "product_BTVX8C": {
+          "type": "product",
+          "settings": {
+            "product": "falcon-a1-pro-20w-dual-laser-engraver",
+            "bottom_text": ""
+          }
+        },
+        "product_iLhBeY": {
+          "type": "product",
+          "settings": {
+            "product": "falcon-a1-pro-20w-dual-laser-engraver",
+            "bottom_text": ""
+          }
+        },
+        "product_AVqQ3G": {
+          "type": "product",
+          "settings": {
+            "product": "falcon-a1-pro-20w-dual-laser-engraver",
+            "bottom_text": ""
+          }
+        },
+        "rule_item_zbnLGE": {
+          "type": "rule_item",
+          "settings": {
+            "rule_title": "",
+            "rule_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_qBcPB6",
+        "product_BTVX8C",
+        "product_iLhBeY",
+        "product_AVqQ3G",
+        "rule_item_zbnLGE"
+      ],
+      "name": "creality 24 04 Community",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "creality_2024_5_community_qeA6gR"
   ]
 }

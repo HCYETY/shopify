@@ -456,7 +456,7 @@
       ],
       "settings": {
         "id_section": "",
-        "container": "container",
+        "container": "fullwidth",
         "padding_full_width": 0,
         "mg_top_desktop": 0,
         "mg_top_tablet": 0,
@@ -509,9 +509,9 @@
         "autoplay": true,
         "border_radius": "0",
         "video_height": "54",
-        "style_video": "youtube",
+        "style_video": "mp4",
         "video_url": "https://youtu.be/mFnrIwVOEcI",
-        "url_mp4": "",
+        "url_mp4": "https://cdn.shopify.com/videos/c/o/v/42909750bc5f4f8d9498e4591b249591.mp4",
         "description": "",
         "full_width": false
       }
@@ -908,6 +908,7 @@
       "block_order": [
         "banner_MeYKwh"
       ],
+      "disabled": true,
       "settings": {
         "container": "1170",
         "padding_full_width": 0,
@@ -1023,7 +1024,7 @@
         "product_tabs_RttGmf": {
           "type": "ProductTabs",
           "settings": {
-            "title": "Use for Falcon A1",
+            "title": "Use for Falcon A1/A1 Pro",
             "collection": "accessories-for-falcon-a1-10w-enclosed-laser-engraver-and-cutter"
           }
         },
@@ -1088,127 +1089,6 @@
         "product_block_arrows_mb": true,
         "product_block_show": "4",
         "product_block_per_view": "4",
-        "show_half": true,
-        "scroll_height": 4,
-        "scroll_track_bg": "#f1f1f1",
-        "scroll_thumb_color": "#000000",
-        "scroll_thumb_hover_color": "#444444",
-        "enable_hover_drag_icon": true,
-        "position": "left",
-        "width_banner": 20,
-        "tab_title_style": "style_1",
-        "mg_bottom_title_tab": 24,
-        "type_tab_font": "font_1",
-        "separation": true,
-        "style_separation": "style2",
-        "color_separation": "#727272",
-        "enable_scroll_title": true,
-        "fontsize_tab": 14,
-        "fontsize_tab_mb": 14,
-        "font_weight_tab": "700",
-        "font_weight_active_tab": "700",
-        "spacing_between_title": 24,
-        "line_height_tab": 20,
-        "line_height_tab_mobile": 24,
-        "border_tab_radius": 15,
-        "min_width_tab": 5,
-        "border_width_tab": 3,
-        "color_tab": "#3c3c3c",
-        "border_color_tab": "",
-        "bg_color_tab": "#ffffff",
-        "bg_color_gradient_tab": "",
-        "color_tab_active": "#14a9de",
-        "bg_color_tab_active": "#f8f8f8",
-        "bg_color_gradient_tab_active": ""
-      }
-    },
-    "product_tab_block_WDVrQQ": {
-      "type": "product-tab-block",
-      "blocks": {
-        "product_tabs_Y7TNHr": {
-          "type": "ProductTabs",
-          "settings": {
-            "title": "Craft Wood Sheets",
-            "collection": "craft-wood-and-sheets-for-laser-cutting-engraving"
-          }
-        },
-        "product_tabs_CTqWQq": {
-          "type": "ProductTabs",
-          "settings": {
-            "title": "Craft Paper",
-            "collection": "quality-art-and-craft-paper-for-laser-engraving"
-          }
-        },
-        "product_tabs_GgWwt9": {
-          "type": "ProductTabs",
-          "settings": {
-            "title": "Acrylic",
-            "collection": "premium-craft-acrylic-sheets-for-laser-engraving"
-          }
-        },
-        "product_tabs_FUkMyL": {
-          "type": "ProductTabs",
-          "settings": {
-            "title": "Leather",
-            "collection": "premium-leather-crafting-supplies-for-laser-engraving"
-          }
-        },
-        "product_tabs_hi8YiR": {
-          "type": "ProductTabs",
-          "settings": {
-            "title": "Metalworking",
-            "collection": "quality-metalworking-supplies-for-laser-engraving"
-          }
-        },
-        "banner_tM89gQ": {
-          "type": "banner",
-          "settings": {
-            "image": "shopify://shop_images/1.gif"
-          }
-        }
-      },
-      "block_order": [
-        "product_tabs_Y7TNHr",
-        "product_tabs_CTqWQq",
-        "product_tabs_GgWwt9",
-        "product_tabs_FUkMyL",
-        "product_tabs_hi8YiR",
-        "banner_tM89gQ"
-      ],
-      "settings": {
-        "container": "1170",
-        "padding_full_width": 0,
-        "mg_top_desktop": 50,
-        "mg_top_tablet": 50,
-        "mg_top_mobile": 50,
-        "mg_bottom_desktop": 50,
-        "mg_bottom_tablet": 50,
-        "mg_bottom_mobile": 50,
-        "product_block_layout": "slider",
-        "product_bg": "#ffffff",
-        "product_block_title": "",
-        "fontsize_title": 20,
-        "fontsize_title_mb": 18,
-        "mg_bottom_title": 35,
-        "enable_border_title": true,
-        "border_color_title": "#3c3c3c",
-        "enable_border_title2": false,
-        "border_color_title2": "#3c3c3c",
-        "color_title": "#3c3c3c",
-        "product_tab_des": "",
-        "product_tab_des_color": "#232323",
-        "title_align": "center",
-        "product_block_limit": 20,
-        "image_behavior": "none",
-        "product_block_per_row": "5",
-        "product_block_infinite_scroll": true,
-        "min_width_button": "",
-        "product_block_dots": false,
-        "product_block_dots_mb": true,
-        "product_block_arrows": true,
-        "product_block_arrows_mb": true,
-        "product_block_show": "5",
-        "product_block_per_view": "5",
         "show_half": true,
         "scroll_height": 4,
         "scroll_track_bg": "#f1f1f1",
@@ -1796,7 +1676,6 @@
     "product_block_eQ7rtf",
     "product_block_7nHy3V",
     "product_tab_block_wcwF4p",
-    "product_tab_block_WDVrQQ",
     "16451667106dc2e7cf",
     "custom_liquid_4AryCU",
     "164518028491950ecc"

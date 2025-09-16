@@ -61,12 +61,6 @@
             "spacing_bottom": 22
           }
         },
-        "custom_liquid_LJTQHp": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<style>\n  .falcon-activity-banner {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    padding: 10px 14px;\n    background-color: #F0FBFF;\n    border: 1px solid #14A9DE;\n    border-radius: 8px;\n    text-decoration: none;\n    transition: all 0.3s ease;\n    margin-top: 16px;\n    box-sizing: border-box;\n  }\n\n  .falcon-activity-banner:hover {\n    box-shadow: 0 4px 12px rgba(20, 169, 222, 0.4);\n  }\n\n  .falcon-activity-banner img {\n    width: 60px;\n    height: auto;\n    border-radius: 4px;\n    animation: floatUpDown 2s ease-in-out infinite;\n    flex-shrink: 0;\n  }\n\n  .falcon-activity-text {\n    font-family: 'Montserrat', sans-serif;\n    color: #14A9DE;\n    font-size: 13px;\n    font-weight: 600;\n    line-height: 1.4;\n  }\n\n  @keyframes floatUpDown {\n    0%, 100% {\n      transform: translateY(0);\n    }\n    50% {\n      transform: translateY(-6px);\n    }\n  }\n\n  @media (max-width: 600px) {\n    .falcon-activity-banner {\n      flex-direction: column;\n      text-align: center;\n    }\n\n    .falcon-activity-banner img {\n      margin-bottom: 6px;\n    }\n  }\n</style>\n\n<a href=\"#\"\n   class=\"falcon-activity-banner\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0678/2933/4237/files/1200X200.jpg?v=1754900734\"\n       alt=\"Free Falcon 5W\" />\n  <div class=\"falcon-activity-text\">\n    📚Back to School Sale<br />\n    🎁 Get Free Protection Enclosure Pro\n  </div>\n</a>"
-          }
-        },
         "b87b5d94-d9c5-4d66-a99b-da56e65d25e9": {
           "type": "short_description",
           "settings": {
@@ -199,7 +193,6 @@
         "0e4ea696-4820-4c98-aaa6-806d41782a3d",
         "judge_me_reviews_preview_badge_ingm8R",
         "4f95b592-8369-4ab0-b30d-24e463fb6890",
-        "custom_liquid_LJTQHp",
         "b87b5d94-d9c5-4d66-a99b-da56e65d25e9",
         "4e59f24a-8859-4579-a80a-d70e6f1bf66b",
         "d98e243b-3682-495a-965a-1c7f7d460880",
@@ -2034,7 +2027,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_VnfX8t": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [

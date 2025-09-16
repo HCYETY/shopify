@@ -87,12 +87,6 @@
             "spacing_bottom": 0
           }
         },
-        "custom_liquid_xg6W3A": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<style>\n  .falcon-activity-banner {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    padding: 10px 14px;\n    background-color: #F0FBFF;\n    border: 1px solid #14A9DE;\n    border-radius: 8px;\n    text-decoration: none;\n    transition: all 0.3s ease;\n    margin-top: 16px;\n    box-sizing: border-box;\n  }\n\n  .falcon-activity-banner:hover {\n    box-shadow: 0 4px 12px rgba(20, 169, 222, 0.4);\n  }\n\n  .falcon-activity-banner img {\n    width: 60px;\n    height: auto;\n    border-radius: 4px;\n    animation: floatUpDown 2s ease-in-out infinite;\n    flex-shrink: 0;\n  }\n\n  .falcon-activity-text {\n    font-family: 'Montserrat', sans-serif;\n    color: #14A9DE;\n    font-size: 13px;\n    font-weight: 600;\n    line-height: 1.4;\n  }\n\n  @keyframes floatUpDown {\n    0%, 100% {\n      transform: translateY(0);\n    }\n    50% {\n      transform: translateY(-6px);\n    }\n  }\n\n  @media (max-width: 600px) {\n    .falcon-activity-banner {\n      flex-direction: column;\n      text-align: center;\n    }\n\n    .falcon-activity-banner img {\n      margin-bottom: 6px;\n    }\n  }\n</style>\n\n<a href=\"#\"\n   class=\"falcon-activity-banner\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0678/2933/4237/files/1200X200.jpg?v=1754900734\"\n       alt=\"Free Falcon 5W\" />\n  <div class=\"falcon-activity-text\">\n    📚Back to School Sale<br />\n    🎁 Get Free Protection Enclosure Pro\n  </div>\n</a>"
-          }
-        },
         "d98e243b-3682-495a-965a-1c7f7d460880": {
           "type": "variant_picker",
           "settings": {
@@ -201,7 +195,6 @@
         "4e59f24a-8859-4579-a80a-d70e6f1bf66b",
         "4f95b592-8369-4ab0-b30d-24e463fb6890",
         "b87b5d94-d9c5-4d66-a99b-da56e65d25e9",
-        "custom_liquid_xg6W3A",
         "d98e243b-3682-495a-965a-1c7f7d460880",
         "faa2b3e6-c0a1-4269-baa6-d2605efe4c05",
         "04ea8843-f461-4f1d-8ea4-43f62fdfb21e",
