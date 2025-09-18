@@ -1428,10 +1428,9 @@
             <div class="product-info-sections">
               <style>
                 .product-info-sections {
-                  max-width: 600px;
                   margin: 20px auto;
-                  grid-template-rows: repeat(4, 1fr);
                   display: grid;
+                  grid-auto-rows: 1fr;
                 }
                 
                 .info-section {
@@ -1478,9 +1477,14 @@
                 }
                 
                 .info-right {
-                  color: #333;
+                  color: #1E1E1E;
                   font-size: 14px;
                   text-align: right;
+                }
+
+                .info-right-text {
+                  font-size: 16px;
+                  font-weight: bold;
                 }
 
                 .info-right-item-grid {
@@ -1576,10 +1580,10 @@
                   {{ settings.delivery_empty_icon }}
                 </div>
                 <div class="info-text">
-                  <span>Estimated Delivery Date</span>
+                  Estimated Delivery Date
                 </div>
-                <div class="info-right">
-                  <span>ss{{ estimated_delivery_text }}</span>
+                <div class="info-right info-right-text">
+                  {{ estimated_delivery_text }}
                 </div>
               </div>
             {%- endif -%}
