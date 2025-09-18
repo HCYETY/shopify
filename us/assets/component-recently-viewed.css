@@ -305,6 +305,19 @@
     fill: #4c4b4b;
 }
 
+.recently-viewed-icon .recently-viewed-icon-svg{
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+}
+
+.recently-viewed-icon .recently-viewed-icon-svg svg{
+    width: 100%;
+    height: 100%;
+    fill: none;
+}
+
 .recently-viewed-icon .icon.icon-social-media{
     fill: #232323;
 }
