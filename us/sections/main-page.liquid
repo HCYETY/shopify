@@ -195,26 +195,26 @@ a {
   display: flex;
   flex-direction: column;
 }
-.trade-in-page .enroll-machine-form .form-wrap {
+.trade-in-page .enroll-machine-form .form-container .form-wrap {
   box-sizing: border-box;
   background: #F9F9F9;
 }
-.trade-in-page .enroll-machine-form .form-wrap .custom-form {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .custom-form {
   margin: 0 auto;
 }
-.trade-in-page .enroll-machine-form .form-wrap .custom-form .form-group:nth-child(4) textarea {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .custom-form .form-group:nth-child(4) textarea {
   width: 100%;
   background: #F1F1F1;
   box-sizing: border-box;
   resize: vertical;
 }
-.trade-in-page .enroll-machine-form .form-wrap .custom-form .form-group:nth-child(4) textarea::placeholder {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .custom-form .form-group:nth-child(4) textarea::placeholder {
   color: #999;
 }
-.trade-in-page .enroll-machine-form .form-wrap .custom-form .form-group:nth-child(4) textarea:focus {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .custom-form .form-group:nth-child(4) textarea:focus {
   outline: none;
 }
-.trade-in-page .enroll-machine-form .form-wrap .form-group .select-trigger {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .select-trigger {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -222,16 +222,16 @@ a {
   position: relative;
   background-color: #F1F1F1;
 }
-.trade-in-page .enroll-machine-form .form-wrap .form-group .select-trigger .selected-value {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .select-trigger .selected-value {
   color: #999;
 }
-.trade-in-page .enroll-machine-form .form-wrap .form-group .select-trigger .has-value {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .select-trigger .has-value {
   color: #000;
 }
-.trade-in-page .enroll-machine-form .form-wrap .form-group .select-trigger svg {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .select-trigger svg {
   position: absolute;
 }
-.trade-in-page .enroll-machine-form .form-wrap .form-group .select-options {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .select-options {
   position: absolute;
   top: 100%;
   left: 0;
@@ -241,39 +241,39 @@ a {
   z-index: 1000;
   display: none;
 }
-.trade-in-page .enroll-machine-form .form-wrap .form-group .option {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .option {
   cursor: pointer;
 }
-.trade-in-page .enroll-machine-form .form-wrap .form-group .option:hover {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .option:hover {
   background-color: rgba(0, 0, 0, 0.08);
 }
-.trade-in-page .enroll-machine-form .form-wrap #upgrade-to {
+.trade-in-page .enroll-machine-form .form-container .form-wrap #upgrade-to {
   width: 100%;
   max-width: 100%;
 }
-.trade-in-page .enroll-machine-form .form-wrap #upgrade-to option {
+.trade-in-page .enroll-machine-form .form-container .form-wrap #upgrade-to option {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
 }
-.trade-in-page .enroll-machine-form .form-wrap .form-row {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.trade-in-page .enroll-machine-form .form-wrap label {
+.trade-in-page .enroll-machine-form .form-container .form-wrap label {
   display: block;
   color: #000;
 }
-.trade-in-page .enroll-machine-form .form-wrap input {
+.trade-in-page .enroll-machine-form .form-container .form-wrap input {
   width: 100%;
   box-sizing: border-box;
   background: #F1F1F1;
 }
-.trade-in-page .enroll-machine-form .form-wrap .upload-wrap {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .upload-wrap {
   background-color: #f1f1f1;
 }
-.trade-in-page .enroll-machine-form .form-wrap .upload-wrap .upload-area {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .upload-wrap .upload-area {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -281,31 +281,90 @@ a {
   justify-content: center;
   cursor: pointer;
 }
-.trade-in-page .enroll-machine-form .form-wrap .submit-group {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .submit-group {
   text-align: center;
 }
-.trade-in-page .enroll-machine-form .form-wrap .submit-btn {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .submit-btn {
   background: #0BB3FB;
   color: white;
   border: none;
   cursor: pointer;
   width: 80%;
 }
-.trade-in-page .enroll-machine-form .form-wrap .form-btn-wrap {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .form-btn-wrap {
   display: flex;
   justify-content: center;
 }
-.trade-in-page .enroll-machine-form .form-wrap .form-btn-wrap .form-submit-btn {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .form-btn-wrap .form-submit-btn {
   background-color: #0BB3FB;
 }
-.trade-in-page .enroll-machine-form .form-wrap .form-btn-wrap .form-submit-btn span {
+.trade-in-page .enroll-machine-form .form-container .form-wrap .form-btn-wrap .form-submit-btn span {
   color: #fff;
 }
 .trade-in-page .enroll-machine-form .form-pop-up {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 400px;
-  background-color: blue;
+}
+.trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .success-icon {
+  border-radius: 100%;
+}
+.trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .title-text {
+  color: #1E1E1E;
+}
+.trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .des-text {
+  text-align: center;
+  color: #8D9095;
+}
+.trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount {
+  position: relative;
+}
+.trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .title-text {
+  color: #1E1E1E;
+  text-align: center;
+}
+.trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .des-text {
+  display: inline-flex;
+  align-items: center;
+  color: #0BB3FB;
+}
+.trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .des-text .copy-img {
+  cursor: pointer;
+}
+.trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .discount-number {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+}
+.trade-in-page .enroll-machine-form .form-pop-up .pop-up-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.trade-in-page .enroll-machine-form .form-pop-up .pop-up-btn .pop-up-btn-text {
+  text-align: center;
+  color: #8D9095;
+}
+.trade-in-page .enroll-machine-form .form-pop-up .pop-up-btn .go-shopping-btn {
+  background-color: #0BB3FB;
+  color: #fff;
 }
 .trade-in-page .trade-in-steps {
   display: flex;
@@ -658,6 +717,59 @@ a {
     align-items: center;
     justify-content: center;
   }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap {
+    gap: 16px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .success-icon {
+    padding: 21px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .title-text {
+    font-size: 32px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .des-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount {
+    width: 500px;
+    height: 193px;
+    margin: 32px 0;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text {
+    gap: 16px;
+    left: 40px;
+    top: 48px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .title-text {
+    font-size: 24px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .des-text {
+    gap: 8px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .des-text .copy-img {
+    width: 20px;
+    height: 20px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .discount-number {
+    font-size: 16px;
+    right: 35px;
+    top: 70px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .discount-number p {
+    font-size: 32px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-btn .pop-up-btn-text {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 32px;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-btn .go-shopping-btn {
+    padding: 8px 32px;
+    border-radius: 44px;
+    font-size: 16px;
+  }
   #trade-in .trade-in-page .trade-in-steps .step-container {
     gap: 11px;
     margin: 94px 0 113px 0;
@@ -764,6 +876,18 @@ a {
   #trade-in .trade-in-page .sub-title {
     font-size: 3.7333333333vw;
     text-align: center;
+  }
+  #trade-in .trade-in-page .tooltip-wrap {
+    padding: 1.3333333333vw 5.3333333333vw;
+    border-radius: 5.3333333333vw;
+    gap: 2.1333333333vw;
+  }
+  #trade-in .trade-in-page .tooltip-wrap .tooltip-icon {
+    width: 5.3333333333vw;
+    height: 5.3333333333vw;
+  }
+  #trade-in .trade-in-page .tooltip-wrap .tooltip {
+    font-size: 3.2vw;
   }
   #trade-in .trade-in-page .banner {
     padding: 12.2666666667vw 0 16vw 0;
@@ -962,6 +1086,59 @@ a {
   #trade-in .trade-in-page .enroll-machine-form input:focus {
     outline: none;
     border: 0.2666666667vw solid #ddd;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap {
+    gap: 4.2666666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .success-icon {
+    padding: 3.4666666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .title-text {
+    font-size: 6.4vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .des-text {
+    font-size: 3.7333333333vw;
+    line-height: 5.6vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount {
+    width: 78.6666666667vw;
+    height: 39.4666666667vw;
+    margin: 6.4vw 0;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text {
+    gap: 2.1333333333vw;
+    left: 2.4vw;
+    top: 9.0666666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .title-text {
+    font-size: 4.2666666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .des-text {
+    gap: 1.6vw;
+    font-size: 4.2666666667vw;
+    line-height: 6.4vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .des-text .copy-img {
+    width: 5.3333333333vw;
+    height: 5.3333333333vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .discount-number {
+    font-size: 3.2vw;
+    right: 4.5333333333vw;
+    top: 13.3333333333vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .discount-number p {
+    font-size: 6.4vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-btn .pop-up-btn-text {
+    font-size: 3.7333333333vw;
+    line-height: 5.6vw;
+    margin-bottom: 6.4vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-btn .go-shopping-btn {
+    padding: 2.1333333333vw 8.5333333333vw;
+    border-radius: 11.7333333333vw;
+    font-size: 4.2666666667vw;
   }
   #trade-in .trade-in-page .upload-container {
     width: 100%;
@@ -1399,6 +1576,59 @@ a {
     align-items: center;
     justify-content: center;
   }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap {
+    gap: 0.8333333333vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .success-icon {
+    padding: 1.09375vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .title-text {
+    font-size: 1.6666666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .des-text {
+    font-size: 0.8333333333vw;
+    line-height: 1.25vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount {
+    width: 26.0416666667vw;
+    height: 10.0520833333vw;
+    margin: 1.6666666667vw 0;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text {
+    gap: 0.8333333333vw;
+    left: 2.0833333333vw;
+    top: 2.5vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .title-text {
+    font-size: 1.25vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .des-text {
+    gap: 0.4166666667vw;
+    font-size: 0.8333333333vw;
+    line-height: 1.25vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .des-text .copy-img {
+    width: 1.0416666667vw;
+    height: 1.0416666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .discount-number {
+    font-size: 0.8333333333vw;
+    right: 1.8229166667vw;
+    top: 3.6458333333vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .discount-number p {
+    font-size: 1.6666666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-btn .pop-up-btn-text {
+    font-size: 0.7291666667vw;
+    line-height: 1.09375vw;
+    margin-bottom: 1.6666666667vw;
+  }
+  #trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-btn .go-shopping-btn {
+    padding: 0.4166666667vw 1.6666666667vw;
+    border-radius: 2.2916666667vw;
+    font-size: 0.8333333333vw;
+  }
   #trade-in .trade-in-page .trade-in-steps .step-container {
     gap: 0.5729166667vw;
     margin: 4.8958333333vw 0 5.8854166667vw 0;
@@ -1441,7 +1671,7 @@ a {
 </style>
 
 {% unless template.suffix contains 'landing' %}
-   <div id="trade-in">
+  <div id="trade-in">
       <div class="trade-in-page">
         <div class="tooltip-wrap hide"></div>
 
@@ -1654,41 +1884,58 @@ a {
               </tr>
               <tr>
                 <td>
-                  <a href="https://www.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver">Falcon A1 Pro</a>
+                  <a
+                    href="https://www.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver"
+                    >Falcon A1 Pro</a
+                  >
                 </td>
                 <td>$100 off</td>
               </tr>
               <tr>
                 <td>
-                  <a href=" https://www.crealityfalcon.com/products/falcon-a1-10w-enclosed-laser-engraver-and-cutter">Falcon A1</a>
+                  <a
+                    href=" https://www.crealityfalcon.com/products/falcon-a1-10w-enclosed-laser-engraver-and-cutter"
+                    >Falcon A1</a
+                  >
                 </td>
                 <td>$50 off</td>
               </tr>
               <tr>
                 <td>
-                  <a href="https://www.crealityfalcon.com/products/falcon-2-pro-40w-enclosed-laser-engraver-and-cutter">Falcon2 Pro 22W</a>
+                  <a
+                    href="https://www.crealityfalcon.com/products/falcon-2-pro-40w-enclosed-laser-engraver-and-cutter"
+                    >Falcon2 Pro 22W</a
+                  >
                 </td>
                 <td>$100 off</td>
               </tr>
               <tr>
                 <td>
-                  <a href="https://www.crealityfalcon.com/products/falcon-2-pro-40w-enclosed-laser-engraver-and-cutter">Falcon2 Pro 40W</a>
+                  <a
+                    href="https://www.crealityfalcon.com/products/falcon-2-pro-40w-enclosed-laser-engraver-and-cutter"
+                    >Falcon2 Pro 40W</a
+                  >
                 </td>
                 <td>$150 off</td>
               </tr>
               <tr>
                 <td>
-                  <a href="https://www.crealityfalcon.com/products/falcon-2-pro-40w-enclosed-laser-engraver-and-cutter">Falcon2 Pro 60W</a>
+                  <a
+                    href="https://www.crealityfalcon.com/products/falcon-2-pro-40w-enclosed-laser-engraver-and-cutter"
+                    >Falcon2 Pro 60W</a
+                  >
                 </td>
                 <td>$200 off</td>
               </tr>
               <tr>
                 <td>
-                  <a href="https://www.crealityfalcon.com/products/falcon-ap1-smoke-purifier">AP1 Air Purifier</a>
+                  <a
+                    href="https://www.crealityfalcon.com/products/falcon-ap1-smoke-purifier"
+                    >AP1 Air Purifier</a
+                  >
                 </td>
                 <td>$50 off</td>
               </tr>
-              
             </table>
           </div>
           <div class="save-big-img-wrap">
@@ -1725,7 +1972,7 @@ a {
             </p>
           </div>
 
-          <div class="form-container">
+          <div class="form-container" style="display: flex">
             <div class="form-wrap">
               <form class="custom-form">
                 <!-- 第一行：Email -->
@@ -2024,20 +2271,133 @@ a {
               </form>
             </div>
           </div>
+
+          <div class="form-pop-up container" style="display: none">
+            <div class="pop-up-text-wrap">
+              <div class="success-icon">
+                <picture>
+                  <source
+                    type="image/jpeg"
+                    srcset="
+                      https://cdn.shopify.com/s/files/1/0799/8714/7049/files/Group_3834.png?v=1758100454
+                    "
+                    media="(max-width:900px)"
+                  />
+                  <source
+                    type="image/jpeg"
+                    srcset="
+                      https://cdn.shopify.com/s/files/1/0799/8714/7049/files/6e26a771a0cc139a7566db944c3a9a0d.png?v=1758100395
+                    "
+                    media="(min-width:901px)"
+                  />
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/6e26a771a0cc139a7566db944c3a9a0d.png?v=1758100395"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </picture>
+              </div>
+              <div class="title-text text-bold">
+                Thank You for Your<br class="m-show" />
+                Submission!
+              </div>
+              <div class="des-text text-400">
+                We’ve received your information<br class="m-show" />
+                successfully.<br class="pc-show" />No need to return your old<br
+                  class="m-show"
+                />
+                machine — just keep creating!
+              </div>
+            </div>
+            <div class="pop-up-discount">
+              <picture>
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    https://cdn.shopify.com/s/files/1/0799/8714/7049/files/e4e9d8e66572b39027153d74ca365edb.png?v=1758100535
+                  "
+                  media="(max-width:900px)"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    https://cdn.shopify.com/s/files/1/0799/8714/7049/files/5ef875716d66d1f19a838f9020536aa3.png?v=1758100395
+                  "
+                  media="(min-width:901px)"
+                />
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/5ef875716d66d1f19a838f9020536aa3.png?v=1758100395"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                />
+              </picture>
+              <div class="pop-up-discount-text">
+                <div class="title-text text-bold">
+                  Your exclusive discount <br />code is ready below.
+                </div>
+                <div class="des-text text-bold">
+                  <span id="discount-code"></span>
+                  <div class="copy-img">
+                    <picture>
+                      <source
+                        type="image/jpeg"
+                        srcset="
+                          https://cdn.shopify.com/s/files/1/0799/8714/7049/files/1_fba90656-3dd5-4ee0-a019-00aaf327fa0f.png?v=1758101382
+                        "
+                        media="(max-width:900px)"
+                      />
+                      <source
+                        type="image/jpeg"
+                        srcset="
+                          https://cdn.shopify.com/s/files/1/0799/8714/7049/files/72c9b88c76039f4609bea4f1ff87410b.png?v=1758100395
+                        "
+                        media="(min-width:901px)"
+                      />
+                      <img
+                        src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/72c9b88c76039f4609bea4f1ff87410b.png?v=1758100395"
+                        alt=""
+                        width="100%"
+                        height="100%"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div class="discount-number">
+                <p>10%</p>
+                OFF
+              </div>
+            </div>
+
+            <div class="pop-up-btn">
+              <div class="pop-up-btn-text text-400">
+                Copy it and use it at checkout to save on<br class="m-show" />
+                your brand-new Falcon machine.<br />✨ Happy upgrading, and
+                welcome to your<br class="m-show" />
+                next level of creation!
+              </div>
+              <a
+                class="go-shopping-btn text-bold"
+                href="https://www.crealityfalcon.com/collections/engravers"
+                >Go Shopping</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
   {% endunless %}
  
  
- <script>
+ 
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
       const BASE_URL = "https://testmembership.creality.com";
       let uploadedImageUrl = "";
 
       const isMobile = window.innerWidth <= 900;
-
-      
 
       // 校验
       function validateForm() {
@@ -2087,7 +2447,7 @@ a {
         );
         if (printerBrand.dataset.value === "default") {
           printerBrandError.textContent =
-            "Please input your previous 3D printer brand ";
+            "Please input your previous 3D printer brand";
           printerBrandError.style.display = "block";
           isValid = false;
         }
@@ -2279,10 +2639,53 @@ a {
           reason: document.getElementById("why-upgrade").value,
           siteCode: "US",
           platform: "falcon",
+          discountCode: "1PB138HMX2T3",
+          approvalStatus: "NO_NEED_APPROVAL",
         };
 
         return formData;
       }
+      // 显示隐藏弹窗
+      function toggleFormPopUp() {
+        const formPopUp = document.querySelector(".form-pop-up");
+        const formContainer = document.querySelector(".form-container");
+        const discountCode = document.getElementById("discount-code");
+        const isFormVisible = formContainer.style.display !== "none";
+
+        formContainer.style.display = isFormVisible ? "none" : "flex";
+        formPopUp.style.display = isFormVisible ? "flex" : "none";
+
+        if (isFormVisible) {
+          discountCode.textContent = "1PB138HMX2T3";
+        }
+      }
+      // 复制文本函数
+      function copyToClipboard(text) {
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            showTooltip("success", "Copied to clipboard!");
+          })
+          .catch(() => {
+            // 降级方案
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+            showTooltip("success", "Copied to clipboard!");
+          });
+      }
+
+      //复制折扣码
+      const copyImg = document.querySelector(".copy-img");
+      copyImg.addEventListener("click", function (event) {
+        const discountCode =
+          document.getElementById("discount-code").textContent;
+        copyToClipboard(discountCode);
+      });
+
       //节流提交表单
       let isSubmitting = false;
       const submitBtn = document.getElementById("submit-btn");
@@ -2291,7 +2694,6 @@ a {
         event.preventDefault();
         const isvalidata = validateForm();
         const formData = collectFormData();
-
         if (isvalidata) {
           if (uploadedImageUrl) {
             let isSubmitting = true;
@@ -2317,6 +2719,7 @@ a {
                 setTimeout(() => {
                   clearForm();
                 }, 10);
+                toggleFormPopUp();
               }
             } catch (err) {
               showTooltip("fail", "Failed to submit form. Please try again.");
@@ -2332,8 +2735,6 @@ a {
         }
       }, 1000);
       submitBtn.addEventListener("click", throttledHandleSubmit);
-
-    
 
       function showTooltip(type, customText) {
         const tooltipWrap = document.querySelector(".tooltip-wrap");
