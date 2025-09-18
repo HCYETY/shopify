@@ -4,6 +4,11 @@
 <noscript>{{ 'component-fancybox.css' | asset_url | stylesheet_tag }}</noscript>
 <script src="{{ 'fancybox.js' | asset_url }}" defer="defer"></script>
 
+{%- comment -%} 预加载关键图片以提升LCP {%- endcomment -%}
+{%- if article.image and show_main_img -%}
+  <link rel="preload" as="image" href="{{ article.image | img_url: '1100x' }}" fetchpriority="high">
+{%- endif -%}
+
 {{ 'article-gallery-lookbook-style.css' | asset_url | stylesheet_tag }}
 {{ 'lookbook-script.js' | asset_url | script_tag }}
 
@@ -313,7 +318,9 @@
                       {%- if article.image and show_main_img -%}
                           <div class="article-image">
                               <a href="{{ article.url }}" class="image">
-                                 <img srcset="{% if article.image.width >= 350 %}{{ article.image | img_url: '350x' }} 350w,{% endif %}
+                                 <img 
+                                    fetchpriority="high"
+                                    srcset="{% if article.image.width >= 350 %}{{ article.image | img_url: '350x' }} 350w,{% endif %}
                                   {% if article.image.width >= 700 %}{{ article.image | img_url: '700x' }} 700w,{% endif %}
                                   {% if article.image.width >= 749 %}{{ article.image | img_url: '749x' }} 749w,{% endif %}
                                   {% if article.image.width >= 1498 %}{{ article.image | img_url: '1498x' }} 1498w,{% endif %}
@@ -321,7 +328,8 @@
                                   {% if article.image.width >= 2200 %}{{ article.image | img_url: '2200x' }} 2200w,{% endif %}"
                                   sizes="(min-width: 1200px) 1100px, (min-width: 750px) calc(100vw - 10rem), 100vw"
                                   src="{{ article.image | img_url: '1100x' }}"
-                                  loading="lazy"
+                                  loading="eager"
+                                  decoding="sync"
                                   width="{{ article.image.width }}"
                                   height="{{ article.image.height }}"
                                   alt="{{ article.image.alt | escape }}">

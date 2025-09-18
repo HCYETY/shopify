@@ -836,7 +836,7 @@
                         <div class="submenu-sidebar-list">
                           <ul>
                             {% for childlink in link.links %}
-                              <a href="{{ childlink.url }}"> 
+                              <a href="{{ childlink.url }}">
                                 <li>
                                   {{ childlink.title }}
                                   {% if childlink.type == 'collection_link' %}
@@ -1157,7 +1157,7 @@
   const sale_link_title_one = '{{ sale_link_title_one }}';
   const sale_link_title_two = '{{ sale_link_title_two }}';
   const sale_link_title_three = '{{ sale_link_title_three }}';
-  
+
   document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('#home-s-header');
     const headerSection = header.closest('.shopify-section.shopify-section-group-header-group');
@@ -1228,49 +1228,54 @@
     const menuItems = document.querySelectorAll('.header-menu-desktop .header-menu-item-has-children');
     const noMenuItems = document.querySelectorAll('.header-menu-desktop .sale-menu-item');
     const submenuContent = document.querySelector('.submenu-wrap-content');
-   const submenuItems = document.querySelectorAll('.submenu-wrap-content > div:not(.sale-event-page-one):not(.sale-event-page-two):not(.sale-event-page-three)');
+    const submenuItems = document.querySelectorAll(
+      '.submenu-wrap-content > div:not(.sale-event-page-one):not(.sale-event-page-two):not(.sale-event-page-three)'
+    );
     const headerMask = document.querySelector('.header-mask');
     const submenuWrap = document.querySelector('.submenu-wrap');
     const saleEventPageOne = document.querySelector('.sale-event-page-one');
     const saleEventPageTwo = document.querySelector('.sale-event-page-two');
     const saleEventPageThree = document.querySelector('.sale-event-page-three');
-    
-const salePages = [
-  {
-    title: sale_link_title_one.trim(),
-    element: saleEventPageOne
-  },
-  {
-    title: sale_link_title_two.trim(),
-    element: saleEventPageTwo
-  },
-  {
-    title: sale_link_title_three.trim(),
-    element: saleEventPageThree
-  }
-];
+
+    const salePages = [
+      {
+        title: sale_link_title_one.trim(),
+        element: saleEventPageOne,
+      },
+      {
+        title: sale_link_title_two.trim(),
+        element: saleEventPageTwo,
+      },
+      {
+        title: sale_link_title_three.trim(),
+        element: saleEventPageThree,
+      },
+    ];
     // 确保初始状态下所有子菜单都处于隐藏状态
     submenuItems.forEach((item) => {
-      item.style.display = 'none';
+      if(item) {
+        item.style.display = 'none';
+      }
     });
     //没有子菜单的选项悬停事件
     noMenuItems.forEach((item, index) => {
       item.addEventListener('mouseenter', function () {
         submenuItems.forEach((item) => {
-          item.style.display = 'none';
+          if (item) {
+            item.style.display = 'none';
+          }
         });
-        
-       salePages.forEach(page => {
-           page.element.style.display = 'none';
-  if (page.title === item.textContent.trim()) {
-    page.element.style.display = 'block';
-    submenuWrap.classList.add('active');
-    headerMask.classList.add('active');
-  }
-});
-      
+
+        salePages.forEach((page) => {
+          page.element.style.display = 'none';
+          if (page.title === item.textContent.trim()) {
+            page.element.style.display = 'block';
+            submenuWrap.classList.add('active');
+            headerMask.classList.add('active');
+          }
+        });
       });
-       item.addEventListener('mouseleave', function () {
+      item.addEventListener('mouseleave', function () {
         submenuWrap.classList.remove('active');
         headerMask.classList.remove('active');
       });
@@ -1284,10 +1289,10 @@ const salePages = [
           submenuItems.forEach((submenu) => {
             submenu.style.display = 'none';
           });
-        
-salePages.forEach(page => {
-  if(page && page.element) page.element.style.display = 'none';
-});
+
+          salePages.forEach((page) => {
+            if (page && page.element) page.element.style.display = 'none';
+          });
           // 显示当前菜单对应的子菜单
           submenuItems[index].style.display = 'block';
           // 显示子菜单容器和遮罩
@@ -1416,20 +1421,20 @@ salePages.forEach(page => {
       "label": "Logo"
     },
     {
-  "type": "text",
-  "id": "sale_page_one",
-  "label": "Salepage One",
-},
-      {
-  "type": "text",
-  "id": "sale_page_two",
-  "label": "Salepage Two",
-},
-      {
-  "type": "text",
-  "id": "sale_page_three",
-  "label": "Salepage Tree",
-}
+      "type": "text",
+      "id": "sale_page_one",
+      "label": "Salepage One"
+    },
+    {
+      "type": "text",
+      "id": "sale_page_two",
+      "label": "Salepage Two"
+    },
+    {
+      "type": "text",
+      "id": "sale_page_three",
+      "label": "Salepage Tree"
+    }
   ],
   "blocks": [
     {
@@ -1483,7 +1488,8 @@ salePages.forEach(page => {
           "label": "配置项链接"
         }
       ]
-    },{
+    },
+    {
       "type": "custom_block_three",
       "name": "活动页配置项三",
       "settings": [

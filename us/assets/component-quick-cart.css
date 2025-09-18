@@ -697,6 +697,12 @@ body.cart-sidebar-show .halo-cart-sidebar{
     padding-top: 3px;
 }
 
+.cart-discounts .discounts__discount svg {
+    display: inline;
+    width: 14px;
+    height: 14px;
+}
+
 .halo-cart-sidebar .previewCartItem-price .previewCartItem-saving-price {
     display: flex;
     gap: 7px;
