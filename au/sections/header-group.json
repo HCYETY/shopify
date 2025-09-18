@@ -17,8 +17,28 @@
         "announcement_JxLB4j": {
           "type": "announcement",
           "settings": {
-            "text": "<!-- Load Montserrat font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap\" rel=\"stylesheet\">\n\n<style>\n  .announcement-bar-final {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-family: 'Montserrat', sans-serif;\n    font-size: 12px;\n    padding: 8px 16px;\n    background-color: #f0faff;\n    text-align: center;\n    flex-wrap: wrap;\n  }\n\n  .announcement-bar-content {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    gap: 8px;\n    flex-wrap: nowrap;\n    max-width: 100%;\n    flex-shrink: 1;\n  }\n\n  .announcement-bar-content img {\n    height: 20px;\n    width: auto;\n    vertical-align: middle;\n    margin-right: 4px;\n  }\n\n  .announcement-bar-content a {\n    color: #14A9DE !important;\n    text-decoration: none;\n    font-weight: 600 !important;\n    font-family: 'Montserrat', sans-serif;\n  }\n\n  .announcement-bar-content a:hover {\n    text-decoration: underline;\n  }\n\n  .announcement-bar-title {\n    font-weight: 800;\n    font-size: 14px;\n    color: #03a9f4;\n    text-transform: uppercase;\n  }\n\n  .announcement-bar-subtitle {\n    font-weight: 600;\n    font-size: 12px;\n    color: #03a9f4;\n    margin-left: 4px;\n  }\n\n  @media (max-width: 600px) {\n    .announcement-bar-final {\n      padding: 10px 12px;\n      flex-direction: column;\n    }\n\n    .announcement-bar-content {\n      flex-direction: column-reverse;\n      gap: 6px;\n    }\n\n    .announcement-bar-content img {\n      margin-right: 0;\n      display: block;\n      margin: 0 auto;\n    }\n\n    .announcement-bar-content a {\n      display: block;\n      width: 100%;\n      max-width: fit-content;\n      margin: 0 auto;\n    }\n  }\n</style>\n\n<div id=\"announcement-bar\" class=\"announcement-bar-final\">\n  <div class=\"announcement-bar-content\">\n    <img src=\"https://au.crealityfalcon.com/cdn/shop/files/FalconA1Pro20WDual-laserEngraver.png?v=1755506030\" alt=\"Creality Falcon\">\n    \n    <a href=\"https://au.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver\" target=\"_blank\">\n      <span class=\"announcement-bar-title\">A1 Pro 20W &amp; 2W IR Laser Is Coming</span>\n      <span class=\"announcement-bar-subtitle\"></span>\n    </a>\n  </div>\n</div>",
-            "btn_color": "#f84248",
+            "text": "<a href=\"https://au.crealityfalcon.com/pages/creality-falcon-spring-laser-jewelry-making\" style=\"color: #000; font-weight: bold; text-decoration: none;\">\n\n🌸 Bloom Into Creation – Special Offers\n\n<span style=\"color:#EA6B82;\">\nLive Now!\n</span> </a>",
+            "btn_color": "#ea6b82",
+            "btn_border_color": "#ffffff",
+            "btn_bg_color": "#ffffff",
+            "btn_bg_color_gradient": ""
+          }
+        },
+        "announcement_4Q6Kke": {
+          "type": "announcement",
+          "settings": {
+            "text": "<a href=\"https://au.crealityfalcon.com/products/falcon-a1-10w-enclosed-laser-cutter-and-engraver?variant=46655711314141\" style=\"color: #000; font-weight: bold; text-decoration: none;\">\n💌 Fresh Look – Falcon A1 in White!     🛒\n<span style=\"color:#EA6B82;\">\nShop Now\n</span> \n</a>",
+            "btn_color": "#ea6b82",
+            "btn_border_color": "#ffffff",
+            "btn_bg_color": "#ffffff",
+            "btn_bg_color_gradient": ""
+          }
+        },
+        "announcement_PE3b9K": {
+          "type": "announcement",
+          "settings": {
+            "text": "<div style=\"text-align: center;\">\n  <strong>\n    ✨Unleash your creativity with the new \n    <a href=\"https://au.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver\" style=\"color:#EA6B82;font-weight: bold; text-decoration: none;\">A1 Pro 20W</a>\n  </strong>\n</div>",
+            "btn_color": "#14a9de",
             "btn_border_color": "#ffffff",
             "btn_bg_color": "#ffffff",
             "btn_bg_color_gradient": ""
@@ -26,8 +46,9 @@
         },
         "announcement_LfAi84": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
-            "text": "<!-- Load Montserrat font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap\" rel=\"stylesheet\">\n\n<style>\n  .announcement-bar-final {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-family: 'Montserrat', sans-serif;\n    font-size: 12px;\n    padding: 8px 16px;\n    text-align: center;\n  }\n\n  .announcement-bar-content {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    gap: 4px;\n    max-width: 100%;\n    flex-shrink: 1;\n    flex-wrap: nowrap;\n  }\n\n  .announcement-bar-content img {\n    height: 20px;\n    width: auto;\n    vertical-align: middle;\n    margin-right: 4px;\n  }\n\n  .announcement-bar-content a {\n    color: #14A9DE !important;\n    text-decoration: none;\n    font-weight: 600 !important;\n    font-family: 'Montserrat', sans-serif;\n  }\n\n  .announcement-bar-content a:hover {\n    text-decoration: underline;\n  }\n\n  /* 手机端样式 */\n  @media (max-width: 600px) {\n    .announcement-bar-final {\n      padding: 10px 12px;\n    }\n    .announcement-bar-content {\n      flex-direction: column-reverse;\n      gap: 6px;\n      width: 100%;\n      align-items: center;\n      text-align: center;\n    }\n    .announcement-bar-content img {\n      margin-right: 0;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n    }\n    .announcement-bar-content a {\n      display: block;\n      width: 100%;\n      max-width: fit-content;\n      margin: 0 auto;\n      color: #14A9DE !important;\n      font-weight: 600 !important;\n    }\n  }\n</style>\n\n<div class=\"announcement-bar-final\">\n  <div class=\"announcement-bar-content\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0558/1199/7864/files/AP_logo_badge_6328x2204_blackmint_png.png?v=1677476648\" alt=\"Afterpay logo\">\n    <a href=\"https://www.afterpay.com/en-AU/how-it-works\" target=\"_blank\">Shop Now, Pay Later with Afterpay</a>\n  </div>\n</div>",
+            "text": "<!-- Load Montserrat font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap\" rel=\"stylesheet\">\n\n<style>\n  .announcement-bar-content {\n    display: inline-flex;\n    gap: 4px;\n    max-width: 100%;\n    flex-shrink: 1;\n    flex-wrap: nowrap;\n  }\n\n  .announcement-bar-content img {\n    height: 20px;\n    vertical-align: middle;\n    margin-right: 4px;\n    margin-left: 100px;\n  }\n\n  .announcement-bar-content a {\n    color: #14A9DE !important; \n    font-weight: 600 !important;\n  }\n\n\n  /* 手机端样式 */\n\n    .announcement-bar-content {\n      width: 100%;     \n    }\n    .announcement-bar-content img {\n      margin-right: 0;\n      display: block;\n      margin-left: auto;\n      margin-right: auto;\n    }\n    .announcement-bar-content a {\n      display: block;\n      width: 100%;\n      max-width: fit-content;\n      margin: 0 auto;\n      color: #14A9DE !important;\n      font-weight: 600 !important;\n    }\n  }\n</style>\n\n<div class=\"announcement-bar-final\">\n  <div class=\"announcement-bar-content\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0558/1199/7864/files/AP_logo_badge_6328x2204_blackmint_png.png?v=1677476648\" alt=\"Afterpay logo\">\n    <a href=\"https://www.afterpay.com/en-AU/how-it-works\" target=\"_blank\">Shop Now, Pay Later with Afterpay</a>\n  </div>\n</div>",
             "btn_color": "#f84248",
             "btn_border_color": "#ffffff",
             "btn_bg_color": "#ffffff",
@@ -37,383 +58,24 @@
       },
       "block_order": [
         "announcement_JxLB4j",
+        "announcement_4Q6Kke",
+        "announcement_PE3b9K",
         "announcement_LfAi84"
       ],
       "settings": {
         "enable_announcement": true,
         "layout": "slider",
         "enable_close": false,
-        "color_text": "#ffffff",
-        "bg_color_text": "#f5fbff",
+        "color_text": "#232323",
+        "bg_color_text": "#f5f6f7",
         "bg_color_text_gradient": "",
-        "font_size_text": 12,
+        "font_size_text": 14,
         "font_style_text": "normal",
-        "font_weight_text": "400",
-        "arrow_active": false,
-        "content_max_width": 38,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "0827887c-0743-496d-b06a-55cd8d659ff4": {
-      "type": "header-navigation-utility",
-      "blocks": {
-        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-0": {
-          "type": "logo",
-          "settings": {
-            "logo_position": "always",
-            "logo": "shopify://shop_images/280x80_02f5ce0a-1f45-4cb6-9029-c22495234b9e.jpg",
-            "logo_width": 150,
-            "logo_width_fixed": 100,
-            "logo_text": "",
-            "logo_font_size": 20,
-            "logo_font_weight": "900",
-            "logo_text_transform": "uppercase",
-            "logo_color": "#000000"
-          }
-        },
-        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-1": {
-          "type": "main_menu",
-          "settings": {
-            "menu": "main-mega-menu",
-            "menu_top_spacing": 27,
-            "menu_bottom_spacing": 27,
-            "grid_gap_menu_item": 20,
-            "alignment": "center",
-            "bg_mega_menu": "#ffffff",
-            "bg_mega_menu_gradient": "",
-            "lv_1_color": "#3c3c3c",
-            "lv_1_color_hover": "#14a9de",
-            "lv_2_color": "#3c3c3c",
-            "lv_2_color_hover": "#14a9de",
-            "lv_3_color": "#3c3c3c",
-            "lv_3_color_hover": "#14a9de",
-            "sale_item_1": "European Cup Deals",
-            "sale_item_2": "",
-            "sale_item_3": "",
-            "sale_item_color": "#e95144",
-            "label_position": "main_menu",
-            "show_label_blink": true,
-            "new_label_1": "New Arrival, Materials",
-            "new_label_2": "",
-            "new_label_3": "Falcon2 Pro 60W Enclosed Laser Engraver And Cutter",
-            "new_label_color": "#ffffff",
-            "new_label_bg": "#14a9de",
-            "new_label_bg_gradient": "",
-            "sale_label_1": "European Cup Deals",
-            "sale_label_2": "",
-            "sale_label_3": "",
-            "sale_label_color": "#ffffff",
-            "sale_label_bg": "#ef6454",
-            "sale_label_bg_gradient": "",
-            "hot_label_1": "New Arrival",
-            "hot_label_2": "",
-            "hot_label_3": "",
-            "hot_label_color": "#ffffff",
-            "hot_label_bg": "#ffbb49",
-            "hot_label_bg_gradient": ""
-          }
-        },
-        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-2": {
-          "type": "header_icons",
-          "settings": {
-            "show_language_currency": true,
-            "show_search": true,
-            "show_customer": true,
-            "show_wishlist": true,
-            "show_cart": true,
-            "text_font_size": 14,
-            "show_language_currency_sticky": true,
-            "show_search_sticky": true,
-            "show_customer_sticky": true,
-            "show_wishlist_sticky": true,
-            "show_cart_sticky": true,
-            "header_icons_color": "#232323",
-            "header_icons_color_hover": "#232323",
-            "cart_count_bubble_color": "#ffffff",
-            "cart_count_bubble_bg": "#1a2531",
-            "cart_count_bubble_bg_gradient": ""
-          }
-        },
-        "2504d97c-d2e8-4203-a55a-aff8b17b5498": {
-          "type": "megamenu_style_1",
-          "settings": {
-            "layout_block": "custom_width",
-            "header_custom_width_size": 1280,
-            "item": "Theme Demo",
-            "column": 5,
-            "show_banner_1": false,
-            "banner_url_1": "",
-            "show_product": false,
-            "product_title": "Featured Products",
-            "product_collection": ""
-          }
-        },
-        "24d4b595-9d92-4b04-ac3c-62b2f599d20f": {
-          "type": "megamenu_style_1",
-          "settings": {
-            "layout_block": "custom_width",
-            "header_custom_width_size": 1200,
-            "item": "product",
-            "column": 5,
-            "show_banner_1": false,
-            "banner_url_1": "",
-            "show_product": false,
-            "product_title": "Featured Products",
-            "product_collection": ""
-          }
-        },
-        "6c368518-bedd-4b8b-b9ba-bb542219267a": {
-          "type": "megamenu_style_1",
-          "settings": {
-            "layout_block": "custom_width",
-            "header_custom_width_size": 1200,
-            "item": "Shop",
-            "column": 4,
-            "show_banner_1": false,
-            "banner_url_1": "",
-            "show_product": false,
-            "product_title": "Featured Products",
-            "product_collection": ""
-          }
-        },
-        "49459ccc-e7bb-40e5-8544-bf7b8e3000b5": {
-          "type": "megamenu_style_1",
-          "settings": {
-            "layout_block": "custom_width",
-            "header_custom_width_size": 1200,
-            "item": "new in",
-            "column": 3,
-            "show_banner_1": true,
-            "banner_url_1": "",
-            "show_product": true,
-            "product_title": "Featured Products",
-            "product_collection": ""
-          }
-        },
-        "a95ae51a-e02d-42cd-8e35-232434188ac6": {
-          "type": "megamenu_style_2",
-          "disabled": true,
-          "settings": {
-            "layout_block": "full",
-            "header_custom_width_size": 1200,
-            "item": "Materials",
-            "column": 3,
-            "show_banner_1": true,
-            "banner_1": "shopify://shop_images/arts-and-crafts-paper.webp",
-            "banner_url_1": "shopify://collections/quality-art-and-craft-paper-for-laser-engraving",
-            "show_banner_2": true,
-            "banner_2": "shopify://shop_images/6pcs-A4-basswood-plywood-18-8.27-11.69-for-laser-engraving-1_1570x_a52091d2-d578-4e3a-857c-c9e6ef6cee9c.webp",
-            "banner_url_2": "shopify://collections/craft-wood-and-sheets-for-laser-cutting-engraving",
-            "show_banner_3": true,
-            "banner_3": "shopify://shop_images/Custom-Leather-Passport-Holder-And-Luggage-Tag-Set-For-Laser-Engraving.webp",
-            "banner_url_3": "shopify://collections/premium-leather-crafting-supplies-for-laser-engraving"
-          }
-        },
-        "97694fad-9988-43b2-9b94-417b1bf997cc": {
-          "type": "megamenu_style_4",
-          "disabled": true,
-          "settings": {
-            "layout_block": "custom_width",
-            "header_custom_width_size": 1200,
-            "item": "Materials",
-            "column": 5,
-            "menu_text_left": "materials-category",
-            "menu_text_left_sale": "",
-            "show_banner_1": true,
-            "banner_url_1": "shopify://collections/congue",
-            "show_banner_2": true,
-            "banner_url_2": "shopify://collections/cosmopolis",
-            "show_az_brand": true,
-            "az_brand_title": "All Brands A-Z",
-            "az_brand_link_text": "See All Brands",
-            "az_brand_url": "",
-            "bg_mega_menu_bottom": "#f8f8f8",
-            "az_brand_link_text_color": "#000000"
-          }
-        },
-        "megamenu_style_3_HJ4Hd4": {
-          "type": "megamenu_style_3",
-          "settings": {
-            "layout_block": "custom_width",
-            "header_custom_width_size": 1200,
-            "mega_tyle": "style1",
-            "item": "Engravers",
-            "column": 5,
-            "show_banner_1": true,
-            "banner_1": "shopify://shop_images/falcon-engraver-cutter_d6b62fd8-bc56-474b-aa82-2800b72d1b69.jpg",
-            "banner_url_1": "shopify://collections/cr-laser-falcon-engraver",
-            "show_banner_2": true,
-            "banner_2": "shopify://shop_images/crealityfalcon-falcon-pro-10w-engraver-02_2593f487-fe1f-4385-a100-807a465ceaee.jpg",
-            "banner_url_2": "shopify://collections/falcon-pro-engraver",
-            "show_banner_3": true,
-            "banner_3": "shopify://shop_images/falcon2-22w-engraver-02_36f16f0a-b2da-4fec-9275-d1c0db3ce39b.jpg",
-            "banner_url_3": "shopify://collections/falcon2-engraver",
-            "show_banner_4": true,
-            "banner_4": "shopify://shop_images/falcon2-pro-40w-and-22w-engraver_2495bc89-438c-436c-869a-da31607f82a9.jpg",
-            "banner_url_4": "shopify://collections/falcon2-pro-engraver",
-            "show_banner_5": true,
-            "banner_5": "shopify://shop_images/crealityfalcon-materials-for-engravers_4dffa620-038e-4ca3-a908-7475b453e43d.jpg",
-            "banner_url_5": "shopify://collections/engraving-machine-craft-materials"
-          }
-        },
-        "megamenu_style_6_wbG7jG": {
-          "type": "megamenu_style_6",
-          "disabled": true,
-          "settings": {
-            "item_bgcolor": "#000000",
-            "item_bgcolor_url": "",
-            "font_size": 14,
-            "item_bgcolor_pd_tb": 12,
-            "item_title": "Happy Mothers' Day Sale❤️: Win A Free Falcon A1 for Her!",
-            "item_title_color": "#fbedc4",
-            "item_btn_text": "Buy Now",
-            "item_btn_url": "https://au.crealityfalcon.com/pages/engraver-mothers-day-sale",
-            "item_btn_color": "#ffffff",
-            "item_btn_bgcolor": "#f44336",
-            "item_btn_brr_size": 3,
-            "item_btn_pdlr_size": 12,
-            "item_btn_pdtb_size": 4,
-            "item_btn_text_size": 12,
-            "item_position": "center",
-            "is_countDown": true,
-            "item_count_down_start": "",
-            "item_count_down_end": "2025/05/11 20:59:59",
-            "item_count_down_color": "#e95144",
-            "item_count_down_text_sieze": 16
-          }
-        },
-        "megamenu_style_6_y9WeyP": {
-          "type": "megamenu_style_6",
-          "settings": {
-            "item_bgcolor": "#000000",
-            "item_bgcolor_url": "",
-            "font_size": 14,
-            "item_bgcolor_pd_tb": 12,
-            "item_title": "Laser Cutter Combo Sale🔥 - Buy More, Save More and Get More!",
-            "item_title_color": "#fbedc4",
-            "item_btn_text": "Shop Now",
-            "item_btn_url": "https://au.crealityfalcon.com/collections/falcon2-laser-engraver-and-cutter",
-            "item_btn_color": "#ffffff",
-            "item_btn_bgcolor": "#f44336",
-            "item_btn_brr_size": 3,
-            "item_btn_pdlr_size": 12,
-            "item_btn_pdtb_size": 4,
-            "item_btn_text_size": 12,
-            "item_position": "center",
-            "is_countDown": false,
-            "item_count_down_start": "",
-            "item_count_down_end": "2025-4-10 20:59:59",
-            "item_count_down_color": "#ffffff",
-            "item_count_down_text_sieze": 12
-          }
-        },
-        "megamenu_style_6_rTiPLp": {
-          "type": "megamenu_style_6",
-          "settings": {
-            "item_bgcolor": "#000000",
-            "item_bgcolor_url": "",
-            "font_size": 14,
-            "item_bgcolor_pd_tb": 12,
-            "item_title": "📢New Falcon A1 Bundles, Just Released!",
-            "item_title_color": "#ffffff",
-            "item_btn_text": "Add to Cart",
-            "item_btn_url": "https://au.crealityfalcon.com/products/falcon-a1-10w-enclosed-laser-engraver-and-cutter",
-            "item_btn_color": "#ffffff",
-            "item_btn_bgcolor": "#45cdff",
-            "item_btn_brr_size": 3,
-            "item_btn_pdlr_size": 12,
-            "item_btn_pdtb_size": 4,
-            "item_btn_text_size": 12,
-            "item_position": "center",
-            "is_countDown": false,
-            "item_count_down_start": "",
-            "item_count_down_end": "2025-3-28 20:59:59",
-            "item_count_down_color": "#f8611f",
-            "item_count_down_text_sieze": 12
-          }
-        },
-        "megamenu_style_6_49UQpy": {
-          "type": "megamenu_style_6",
-          "disabled": true,
-          "settings": {
-            "item_bgcolor": "#000000",
-            "item_bgcolor_url": "",
-            "font_size": 14,
-            "item_bgcolor_pd_tb": 12,
-            "item_title": "🛒 A$9.99 Flash Deal 💥",
-            "item_title_color": "#ffffff",
-            "item_btn_text": "Hurry Up",
-            "item_btn_url": "https://au.crealityfalcon.com/collections/engraving-machine-craft-materials",
-            "item_btn_color": "#ffffff",
-            "item_btn_bgcolor": "#45cdff",
-            "item_btn_brr_size": 3,
-            "item_btn_pdlr_size": 12,
-            "item_btn_pdtb_size": 4,
-            "item_btn_text_size": 12,
-            "item_position": "center",
-            "is_countDown": false,
-            "item_count_down_start": "",
-            "item_count_down_end": "2024-9-30 21:59:59",
-            "item_count_down_color": "#e95144",
-            "item_count_down_text_sieze": 16
-          }
-        },
-        "megamenu_style_6_NdkJMi": {
-          "type": "megamenu_style_6",
-          "disabled": true,
-          "settings": {
-            "item_bgcolor": "#000000",
-            "item_bgcolor_url": "",
-            "font_size": 14,
-            "item_bgcolor_pd_tb": 12,
-            "item_title": "Free Shipping Over A$69.99 // 14-Day Money-Back Guarantee // 12-Month Warranty // Live Chat",
-            "item_title_color": "#fbedc4",
-            "item_btn_text": "",
-            "item_btn_url": "",
-            "item_btn_color": "#ffffff",
-            "item_btn_bgcolor": "#000000",
-            "item_btn_brr_size": 3,
-            "item_btn_pdlr_size": 12,
-            "item_btn_pdtb_size": 4,
-            "item_btn_text_size": 12,
-            "item_position": "center",
-            "is_countDown": false,
-            "item_count_down_start": "",
-            "item_count_down_end": "",
-            "item_count_down_color": "#e95144",
-            "item_count_down_text_sieze": 16
-          }
-        }
-      },
-      "block_order": [
-        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-0",
-        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-1",
-        "sections--14682829619277__0827887c-0743-496d-b06a-55cd8d659ff4-1680774046de6465b6-2",
-        "2504d97c-d2e8-4203-a55a-aff8b17b5498",
-        "24d4b595-9d92-4b04-ac3c-62b2f599d20f",
-        "6c368518-bedd-4b8b-b9ba-bb542219267a",
-        "49459ccc-e7bb-40e5-8544-bf7b8e3000b5",
-        "a95ae51a-e02d-42cd-8e35-232434188ac6",
-        "97694fad-9988-43b2-9b94-417b1bf997cc",
-        "megamenu_style_3_HJ4Hd4",
-        "megamenu_style_6_wbG7jG",
-        "megamenu_style_6_y9WeyP",
-        "megamenu_style_6_rTiPLp",
-        "megamenu_style_6_49UQpy",
-        "megamenu_style_6_NdkJMi"
-      ],
-      "disabled": true,
-      "settings": {
-        "container": "1770",
-        "padding_full_width": 0,
-        "header_navigation_bg": "#ffffff",
-        "header_navigation_bg_gradient": "",
-        "sticky_header_type": "on_scroll",
-        "sticky_header_width": "full",
-        "item_rotatingBroadcast_color": "#ffffff",
-        "item_rotatingBroadcast_size": 1,
-        "is_rotatingBroadcast": true
+        "font_weight_text": "500",
+        "arrow_active": true,
+        "content_max_width": 50,
+        "padding_top": 10,
+        "padding_bottom": 10
       }
     },
     "header-mobile": {
@@ -619,7 +281,7 @@
           "type": "custom_block_one",
           "settings": {
             "option_image_one": "shopify://shop_images/banner_48e968d2-a79d-4923-a589-abe7db52b257.png",
-            "option_title_one": "🌸Bloom Into Creation",
+            "option_title_one": "🌸 Bloom Into Creation",
             "option_subtitle_one": "Celebrate Spring with Up to 48% OFF",
             "option_link_one": "https://au.crealityfalcon.com/pages/creality-falcon-spring-laser-jewelry-making"
           }
@@ -677,9 +339,9 @@
         "custom_block_two_gRmHfR": {
           "type": "custom_block_two",
           "settings": {
-            "option_image_two": "shopify://shop_images/4fe46b8023771947dd7d0ffcdf636751.png",
-            "option_title_two": "Customer Support",
-            "option_subtitle_two": "",
+            "option_image_two": "shopify://shop_images/Lifetime_Customer_Support.webp",
+            "option_title_two": "Lifetime Customer Support",
+            "option_subtitle_two": "Email Us: au.support@crealityfalcon.com",
             "option_link_two": "https://au.crealityfalcon.com/pages/contact"
           }
         },
@@ -841,7 +503,6 @@
   },
   "order": [
     "announcement_bar_4bq3pp",
-    "0827887c-0743-496d-b06a-55cd8d659ff4",
     "header-mobile",
     "home_s_header_i3WjEX",
     "home_s_header_mobile_e98jXJ"
