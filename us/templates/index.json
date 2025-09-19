@@ -18,6 +18,7 @@
           "settings": {
             "image_slide": "shopify://shop_images/US_d83b2911-336e-4dff-968c-ef48b0a8a7df.jpg",
             "image_slide_mb": "shopify://shop_images/US_32b3dd81-3e7a-4abd-9798-c42125d4e268.jpg",
+            "enable_fetchpriority": true,
             "alignment": "center",
             "enable_custom_position": true,
             "custom_horizontal": "6",
@@ -116,6 +117,7 @@
           "settings": {
             "image_slide": "shopify://shop_images/1880-600_fd536847-4977-4f63-90d0-a4101cfa7d9e.png",
             "image_slide_mb": "shopify://shop_images/A1_new_banner_0716_M.jpg",
+            "enable_fetchpriority": false,
             "alignment": "center",
             "enable_custom_position": true,
             "custom_horizontal": "10",
@@ -214,6 +216,7 @@
           "settings": {
             "image_slide": "shopify://shop_images/A1pro_banner_pc_8f6ab3d4-686e-4cf1-ac37-75cd7a1c1b81.jpg",
             "image_slide_mb": "shopify://shop_images/A1pro_banner_m_d04b499b-2a57-4b39-ace5-0f7d9fb7afaf.jpg",
+            "enable_fetchpriority": false,
             "alignment": "left",
             "enable_custom_position": false,
             "custom_horizontal": "",
@@ -312,6 +315,7 @@
           "settings": {
             "image_slide": "shopify://shop_images/falcon2_pro_1880-600_1.png",
             "image_slide_mb": "shopify://shop_images/crealityfalcon-falcon2-pro-40w-wap.jpg",
+            "enable_fetchpriority": false,
             "alignment": "center",
             "enable_custom_position": true,
             "custom_horizontal": "10",
@@ -410,6 +414,7 @@
           "settings": {
             "image_slide": "shopify://shop_images/falcon2-laser-engraver-series-1880x600_0081a4b3-e2fd-4375-87a2-15adea7f5d57.jpg",
             "image_slide_mb": "shopify://shop_images/Crafting-giveway-675x975_ddc1e6ca-e505-430d-b9e5-57c727a229cd.jpg",
+            "enable_fetchpriority": false,
             "alignment": "center",
             "enable_custom_position": true,
             "custom_horizontal": "10",
@@ -508,6 +513,7 @@
           "settings": {
             "image_slide": "shopify://shop_images/low-wattage-engraver-banner_pc.jpg",
             "image_slide_mb": "shopify://shop_images/low-wattage-engraver-banner_m.jpg",
+            "enable_fetchpriority": false,
             "alignment": "center",
             "enable_custom_position": true,
             "custom_horizontal": "10",
@@ -606,6 +612,7 @@
           "settings": {
             "image_slide": "shopify://shop_images/20250604-114150_1.png",
             "image_slide_mb": "shopify://shop_images/20250604-113146_1.png",
+            "enable_fetchpriority": false,
             "alignment": "center",
             "enable_custom_position": true,
             "custom_horizontal": "10",

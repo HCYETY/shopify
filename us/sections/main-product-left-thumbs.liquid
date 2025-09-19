@@ -8,6 +8,11 @@
 {{ 'component-product-form.css' | asset_url | stylesheet_tag }}
 {{ 'component-grid.css' | asset_url | stylesheet_tag }}
 
+{%- comment -%} 优化LCP：预加载第一张产品图片 {%- endcomment -%}
+{%- if product.featured_media and product.featured_media.media_type == 'image' -%}
+  <link rel="preload" as="image" href="{{ product.featured_media | img_url: 'master' }}" fetchpriority="high">
+{%- endif -%}
+
 {% render 'product-page-left-thumbs' %}
 
 {% schema %}

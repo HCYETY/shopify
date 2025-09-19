@@ -119,15 +119,6 @@
             "bin_bg_color_hover": "#ff736b",
             "bin_bg_color_hover_gradient": ""
           }
-        },
-        "19ab1d9f-74b2-4c76-bf2e-1bc749e5c2a3": {
-          "type": "share",
-          "settings": {
-            "show_share": true,
-            "share_layout": "2",
-            "spacing_top": 0,
-            "spacing_bottom": 0
-          }
         }
       },
       "block_order": [
@@ -139,8 +130,7 @@
         "d98e243b-3682-495a-965a-1c7f7d460880",
         "faa2b3e6-c0a1-4269-baa6-d2605efe4c05",
         "4f95b592-8369-4ab0-b30d-24e463fb6890",
-        "f1b31d90-1e43-4948-9fe3-97ba43f6fb34",
-        "19ab1d9f-74b2-4c76-bf2e-1bc749e5c2a3"
+        "f1b31d90-1e43-4948-9fe3-97ba43f6fb34"
       ],
       "settings": {
         "container": "1170",
@@ -275,7 +265,7 @@
       ],
       "name": "2025-周年庆-s7",
       "settings": {
-        "background_color": "#fff",
+        "background_color": "#ffffff",
         "headline": "Product Video Center"
       }
     },

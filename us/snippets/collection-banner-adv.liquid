@@ -203,7 +203,8 @@
                                                 serial: forloop.index,
                                                 sectionId: section.id,
                                                 show_list: true,
-                                                loading: true
+                                                loading: true,
+                                                is_first_product: forloop.first
                                             %}
                                         </li>
                                         <li class="product banner" data-product-banner="1" data-first-position="{{ banner_position_1 }}">
@@ -239,7 +240,8 @@
                                                 serial: forloop.index,
                                                 sectionId: section.id,
                                                 show_list: true,
-                                                loading: true
+                                                loading: true,
+                                                is_first_product: forloop.first
                                             %}
                                         </li>
                                     {%- elsif paginate.current_page == 1 and forloop.index == banner_position_3 and section.settings.show_banner -%}
@@ -251,7 +253,8 @@
                                                 serial: forloop.index,
                                                 sectionId: section.id,
                                                 show_list: true,
-                                                loading: true
+                                                loading: true,
+                                                is_first_product: forloop.first
                                             %}
                                         </li>
                                         <li class="product banner" data-product-banner="3" data-first-position="{{ banner_position_3 | plus: 2 }}">
@@ -275,7 +278,8 @@
                                                 serial: forloop.index,
                                                 sectionId: section.id,
                                                 show_list: true,
-                                                loading: true
+                                                loading: true,
+                                                is_first_product: forloop.first
                                             %}
                                         </li>
                                     {%- endif -%}

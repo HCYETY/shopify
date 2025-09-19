@@ -1,7 +1,9 @@
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
-<style>@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+  <style>
+
+   
 * {
   font-family: Montserrat;
   padding: 0;
@@ -13,36 +15,36 @@ a {
   color: #000;
 }
 
-.trade-in-page {
+#trade-in .trade-in-page {
   letter-spacing: 0;
   font-kerning: normal;
   text-rendering: optimizeLegibility;
   position: relative;
 }
-.trade-in-page .pc-show {
+#trade-in .trade-in-page .pc-show {
   display: block;
 }
-.trade-in-page .m-show {
+#trade-in .trade-in-page .m-show {
   display: none !important;
 }
-.trade-in-page .text-bold {
+#trade-in .trade-in-page .text-bold {
   font-weight: bold;
 }
-.trade-in-page .text-400 {
+#trade-in .trade-in-page .text-400 {
   font-weight: 400;
 }
-.trade-in-page .text-600 {
+#trade-in .trade-in-page .text-600 {
   font-weight: 600;
 }
-.trade-in-page .text-300 {
+#trade-in .trade-in-page .text-300 {
   font-weight: 300;
 }
-.trade-in-page .fit_picture {
+#trade-in .trade-in-page .fit_picture {
   display: block;
   width: 100%;
   height: auto;
 }
-.trade-in-page .fit_picture img {
+#trade-in .trade-in-page .fit_picture img {
   position: absolute;
   width: 100%;
   height: auto;
@@ -70,7 +72,7 @@ a {
     transform: translateX(-50%) scale(0.8);
   }
 }
-.trade-in-page .tooltip-wrap {
+#trade-in .trade-in-page .tooltip-wrap {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -82,40 +84,40 @@ a {
   border-radius: 10%;
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.trade-in-page .tooltip-wrap .tooltip {
+#trade-in .trade-in-page .tooltip-wrap .tooltip {
   color: rgba(0, 0, 0, 0.85);
   white-space: nowrap;
 }
-.trade-in-page .tooltip-wrap.show {
+#trade-in .trade-in-page .tooltip-wrap.show {
   display: flex;
   animation: antTooltipZoomIn 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.trade-in-page .tooltip-wrap.hide {
+#trade-in .trade-in-page .tooltip-wrap.hide {
   display: none;
   animation: antTooltipZoomOut 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.trade-in-page .banner {
+#trade-in .trade-in-page .banner {
   width: 100%;
 }
-.trade-in-page .banner .content {
+#trade-in .trade-in-page .banner .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.trade-in-page .banner .content .banner-text-wrap {
+#trade-in .trade-in-page .banner .content .banner-text-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.trade-in-page .banner .content .banner-text-wrap .small-title span {
+#trade-in .trade-in-page .banner .content .banner-text-wrap .small-title span {
   color: #0BB3FB;
 }
-.trade-in-page .banner .content .banner-text-wrap .subtitle {
+#trade-in .trade-in-page .banner .content .banner-text-wrap .subtitle {
   text-align: center;
 }
-.trade-in-page .banner .content .banner-text-wrap .banner-btn-wrap {
+#trade-in .trade-in-page .banner .content .banner-text-wrap .banner-btn-wrap {
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -123,25 +125,28 @@ a {
   justify-content: center;
   background-color: #0BB3FB;
 }
-.trade-in-page .save-big {
+#trade-in .trade-in-page .save-big {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.trade-in-page .save-big .save-big-text-wrap {
+#trade-in .trade-in-page .save-big .save-big-text-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.trade-in-page .save-big .save-big-text-wrap .small-title span {
+#trade-in .trade-in-page .save-big .save-big-text-wrap .small-title span {
   color: #0BB3FB;
 }
-.trade-in-page .save-big .save-big-text-wrap .subtitle {
+#trade-in .trade-in-page .save-big .save-big-text-wrap .subtitle {
   text-align: center;
 }
-.trade-in-page .save-big .save-big-text-wrap .save-big-btn-wrap {
+#trade-in .trade-in-page .save-big .save-big-text-wrap .subtitle span {
+  color: #0BB3FB;
+}
+#trade-in .trade-in-page .save-big .save-big-text-wrap .save-big-btn-wrap {
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -149,20 +154,28 @@ a {
   justify-content: center;
   background-color: #0BB3FB;
 }
-.trade-in-page .new-product {
+#trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table {
+  margin: 0 auto;
+  text-align: center;
+}
+#trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table td {
+  vertical-align: middle;
+  text-align: center;
+}
+#trade-in .trade-in-page .new-product {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.trade-in-page .new-product .text-wrap {
+#trade-in .trade-in-page .new-product .text-wrap {
   display: flex;
   flex-flow: column;
 }
-.trade-in-page .new-product .swiper-container .slide-wrap {
+#trade-in .trade-in-page .new-product .swiper-container .slide-wrap {
   position: relative;
 }
-.trade-in-page .new-product .swiper-container .slide-wrap .slide-text-wrap {
+#trade-in .trade-in-page .new-product .swiper-container .slide-wrap .slide-text-wrap {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -171,13 +184,13 @@ a {
   align-items: center;
   justify-content: center;
 }
-.trade-in-page .new-product .swiper-container .slide-wrap .slide-text-wrap .tag {
+#trade-in .trade-in-page .new-product .swiper-container .slide-wrap .slide-text-wrap .tag {
   color: #0BB3FB;
 }
-.trade-in-page .new-product .swiper-container .slide-wrap .slide-text-wrap .product-name {
+#trade-in .trade-in-page .new-product .swiper-container .slide-wrap .slide-text-wrap .product-name {
   color: #fff;
 }
-.trade-in-page .new-product .swiper-container .slide-wrap .slide-text-wrap .slide-learn-more {
+#trade-in .trade-in-page .new-product .swiper-container .slide-wrap .slide-text-wrap .slide-learn-more {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -185,36 +198,36 @@ a {
   color: #fff;
   background-color: #0BB3FB;
 }
-.trade-in-page .enroll-machine-form {
+#trade-in .trade-in-page .enroll-machine-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.trade-in-page .enroll-machine-form .text-wrap {
+#trade-in .trade-in-page .enroll-machine-form .text-wrap {
   display: flex;
   flex-direction: column;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap {
   box-sizing: border-box;
   background: #F9F9F9;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .custom-form {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .custom-form {
   margin: 0 auto;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .custom-form .form-group:nth-child(4) textarea {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .custom-form .form-group:nth-child(4) textarea {
   width: 100%;
   background: #F1F1F1;
   box-sizing: border-box;
   resize: vertical;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .custom-form .form-group:nth-child(4) textarea::placeholder {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .custom-form .form-group:nth-child(4) textarea::placeholder {
   color: #999;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .custom-form .form-group:nth-child(4) textarea:focus {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .custom-form .form-group:nth-child(4) textarea:focus {
   outline: none;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .select-trigger {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .select-trigger {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -222,16 +235,16 @@ a {
   position: relative;
   background-color: #F1F1F1;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .select-trigger .selected-value {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .select-trigger .selected-value {
   color: #999;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .select-trigger .has-value {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .select-trigger .has-value {
   color: #000;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .select-trigger svg {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .select-trigger svg {
   position: absolute;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .select-options {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .select-options {
   position: absolute;
   top: 100%;
   left: 0;
@@ -241,39 +254,39 @@ a {
   z-index: 1000;
   display: none;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .option {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .option {
   cursor: pointer;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .option:hover {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .form-group .option:hover {
   background-color: rgba(0, 0, 0, 0.08);
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap #upgrade-to {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap #upgrade-to {
   width: 100%;
   max-width: 100%;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap #upgrade-to option {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap #upgrade-to option {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .form-row {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap label {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap label {
   display: block;
   color: #000;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap input {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap input {
   width: 100%;
   box-sizing: border-box;
   background: #F1F1F1;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .upload-wrap {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .upload-wrap {
   background-color: #f1f1f1;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .upload-wrap .upload-area {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .upload-wrap .upload-area {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -281,114 +294,114 @@ a {
   justify-content: center;
   cursor: pointer;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .submit-group {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .submit-group {
   text-align: center;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .submit-btn {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .submit-btn {
   background: #0BB3FB;
   color: white;
   border: none;
   cursor: pointer;
   width: 80%;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .form-btn-wrap {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .form-btn-wrap {
   display: flex;
   justify-content: center;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .form-btn-wrap .form-submit-btn {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .form-btn-wrap .form-submit-btn {
   background-color: #0BB3FB;
 }
-.trade-in-page .enroll-machine-form .form-container .form-wrap .form-btn-wrap .form-submit-btn span {
+#trade-in .trade-in-page .enroll-machine-form .form-container .form-wrap .form-btn-wrap .form-submit-btn span {
   color: #fff;
 }
-.trade-in-page .enroll-machine-form .form-pop-up {
+#trade-in .trade-in-page .enroll-machine-form .form-pop-up {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
-.trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap {
+#trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-.trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .success-icon {
+#trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .success-icon {
   border-radius: 100%;
 }
-.trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .title-text {
+#trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .title-text {
   color: #1E1E1E;
 }
-.trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .des-text {
+#trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-text-wrap .des-text {
   text-align: center;
   color: #8D9095;
 }
-.trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount {
+#trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount {
   position: relative;
 }
-.trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text {
+#trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: absolute;
 }
-.trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .title-text {
+#trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .title-text {
   color: #1E1E1E;
   text-align: center;
 }
-.trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .des-text {
+#trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .des-text {
   display: inline-flex;
   align-items: center;
   color: #0BB3FB;
 }
-.trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .des-text .copy-img {
+#trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .pop-up-discount-text .des-text .copy-img {
   cursor: pointer;
 }
-.trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .discount-number {
+#trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-discount .discount-number {
   position: absolute;
   text-align: center;
   color: #fff;
 }
-.trade-in-page .enroll-machine-form .form-pop-up .pop-up-btn {
+#trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.trade-in-page .enroll-machine-form .form-pop-up .pop-up-btn .pop-up-btn-text {
+#trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-btn .pop-up-btn-text {
   text-align: center;
   color: #8D9095;
 }
-.trade-in-page .enroll-machine-form .form-pop-up .pop-up-btn .go-shopping-btn {
+#trade-in .trade-in-page .enroll-machine-form .form-pop-up .pop-up-btn .go-shopping-btn {
   background-color: #0BB3FB;
   color: #fff;
 }
-.trade-in-page .trade-in-steps {
+#trade-in .trade-in-page .trade-in-steps {
   display: flex;
   flex-direction: column;
 }
-.trade-in-page .trade-in-steps .step-container {
+#trade-in .trade-in-page .trade-in-steps .step-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.trade-in-page .trade-in-steps .step-container .step-wrap {
+#trade-in .trade-in-page .trade-in-steps .step-container .step-wrap {
   flex: 0 0 auto;
   display: flex;
   flex-flow: column;
   position: relative;
 }
-.trade-in-page .trade-in-steps .step-container .step-wrap .step-text-wrap {
+#trade-in .trade-in-page .trade-in-steps .step-container .step-wrap .step-text-wrap {
   position: absolute;
 }
-.trade-in-page .ant-input-outlined:focus,
-.trade-in-page .ant-input-outlined:focus-within,
-.trade-in-page .ant-input-outlined:hover,
-.trade-in-page .ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector,
-.trade-in-page :where(.css-dev-only-do-not-override-7ny38l).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
+#trade-in .trade-in-page .ant-input-outlined:focus,
+#trade-in .trade-in-page .ant-input-outlined:focus-within,
+#trade-in .trade-in-page .ant-input-outlined:hover,
+#trade-in .trade-in-page .ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector,
+#trade-in .trade-in-page :where(.css-dev-only-do-not-override-7ny38l).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
   border-color: transparent;
 }
 
@@ -422,16 +435,17 @@ a {
   }
   #trade-in .trade-in-page .container {
     margin: 0 auto;
-    max-width: 1170px;
-    width: 1170px;
+    max-width: 1120px;
+    width: 1120px;
   }
   #trade-in .trade-in-page .title {
-    font-size: 45px;
+    font-size: 32px;
     text-align: center;
   }
   #trade-in .trade-in-page .sub-title {
-    font-size: 30px;
+    font-size: 24px;
     text-align: center;
+    line-height: 33px;
   }
   #trade-in .trade-in-page .tooltip-wrap {
     padding: 5px 20px;
@@ -446,39 +460,39 @@ a {
     font-size: 12px;
   }
   #trade-in .trade-in-page .banner {
-    padding: 169px 0 166px 0;
+    padding: 30px 0px 60px 0;
   }
   #trade-in .trade-in-page .banner .banner-text-wrap .small-title {
-    font-size: 30px;
+    font-size: 24px;
     line-height: 59px;
   }
   #trade-in .trade-in-page .banner .banner-text-wrap .title {
-    font-size: 75px;
+    font-size: 48px;
     line-height: 38px;
-    margin: 35px 0 50px 0;
+    margin: 30px 0 35px 0;
   }
   #trade-in .trade-in-page .banner .banner-text-wrap .subtitle {
-    font-size: 30px;
-    line-height: 45px;
+    font-size: 24px;
+    line-height: 28px;
   }
   #trade-in .trade-in-page .banner .banner-text-wrap .banner-btn-wrap {
     width: 213px;
     height: 47px;
-    margin: 39px 0 49px 0;
+    margin: 25px 0;
     border-radius: 24px;
   }
   #trade-in .trade-in-page .banner .banner-img-wrap {
-    width: 1072px;
+    width: 1050px;
     height: 347px;
   }
   #trade-in .trade-in-page .save-big .save-big-text-wrap .title {
-    font-size: 45px;
+    font-size: 32px;
     line-height: 38px;
   }
   #trade-in .trade-in-page .save-big .save-big-text-wrap .subtitle {
-    font-size: 30px;
-    line-height: 45px;
-    margin: 36px 0 48px 0;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 36px 0 40px 0;
   }
   #trade-in .trade-in-page .save-big .save-big-text-wrap .save-big-btn-wrap {
     width: 213px;
@@ -492,6 +506,10 @@ a {
     justify-content: center;
     margin: 80px 0 60px 0;
   }
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .ps-text {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+  }
   #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table {
     border-collapse: collapse;
     width: 861px;
@@ -501,10 +519,11 @@ a {
     border-bottom: 1px solid #ddd;
     border-left: none;
     border-right: none;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
   }
   #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:last-child td,
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:nth-child(2) td,
   #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:nth-child(3) td,
   #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:nth-child(4) td,
   #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:nth-child(5) td {
@@ -514,19 +533,17 @@ a {
     color: rgba(0, 0, 0, 0.5);
   }
   #trade-in .trade-in-page .save-big .save-big-img-wrap {
-    width: 1170px;
-    height: 596px;
+    width: 1050px;
   }
   #trade-in .trade-in-page .new-product {
-    margin: 0 0 94px 0;
+    margin: 0 0 60px 0;
     gap: 39px;
   }
   #trade-in .trade-in-page .new-product .text-wrap {
     gap: 23px;
   }
   #trade-in .trade-in-page .new-product .swiper-container {
-    width: 1126px;
-    height: 627px;
+    width: 1050px;
     border-radius: 18px;
   }
   #trade-in .trade-in-page .new-product .swiper-container .arrow-wrap {
@@ -568,7 +585,7 @@ a {
     gap: 35px;
   }
   #trade-in .trade-in-page .enroll-machine-form .form-wrap {
-    width: 1125px;
+    width: 1050px;
     padding: 39px 55px 71px 57px;
     box-shadow: 0px 0px 2px 0px rgba(7, 7, 7, 0.63);
   }
@@ -685,8 +702,8 @@ a {
     box-sizing: border-box;
   }
   #trade-in .trade-in-page .enroll-machine-form .form-wrap .upload-area .upload-icon-wrap {
-    width: 51px;
-    height: 51px;
+    width: 41px;
+    height: 39px;
   }
   #trade-in .trade-in-page .enroll-machine-form .form-wrap .upload-area .preview-image {
     width: 100px;
@@ -772,7 +789,7 @@ a {
   }
   #trade-in .trade-in-page .trade-in-steps .step-container {
     gap: 11px;
-    margin: 94px 0 113px 0;
+    margin: 60px 0 30px 0;
   }
   #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap .step-img-wrap {
     width: 365px;
@@ -996,7 +1013,7 @@ a {
     margin: 0 auto;
   }
   #trade-in .trade-in-page .enroll-machine-form .custom-form .form-group:nth-child(4) textarea {
-    font-size: 1.8666666667vw;
+    font-size: 2.4vw;
     border: 0.2666666667vw solid #ddd;
     border-radius: 1.3333333333vw;
     padding: 1.3333333333vw 3.2vw;
@@ -1019,7 +1036,7 @@ a {
     padding: 0 3.2vw;
   }
   #trade-in .trade-in-page .enroll-machine-form .form-group .select-trigger .selected-value {
-    font-size: 1.6vw;
+    font-size: 2.1333333333vw;
   }
   #trade-in .trade-in-page .enroll-machine-form .form-group .select-trigger svg {
     position: absolute;
@@ -1053,7 +1070,7 @@ a {
   }
   #trade-in .trade-in-page .enroll-machine-form .form-group .option {
     padding: 1.6vw 3.2vw;
-    font-size: 1.6vw;
+    font-size: 2.1333333333vw;
   }
   #trade-in .trade-in-page .enroll-machine-form .form-group .option:hover {
     background-color: rgba(0, 0, 0, 0.08);
@@ -1069,14 +1086,14 @@ a {
   #trade-in .trade-in-page .enroll-machine-form label {
     margin-bottom: 1.8666666667vw;
     font-weight: 400;
-    font-size: 1.8666666667vw;
+    font-size: 2.4vw;
   }
   #trade-in .trade-in-page .enroll-machine-form input {
     width: 100%;
     padding: 3.2vw;
     border: 0.2666666667vw solid #ddd;
     border-radius: 1.0666666667vw;
-    font-size: 1.6vw;
+    font-size: 2.1333333333vw;
     height: 4.5333333333vw;
     box-sizing: border-box;
   }
@@ -1200,12 +1217,17 @@ a {
     font-weight: 600;
   }
   .save-big .save-big-table-wrap .save-big-table tr:last-child td,
+  .save-big .save-big-table-wrap .save-big-table tr:nth-child(2) td,
   .save-big .save-big-table-wrap .save-big-table tr:nth-child(3) td,
   .save-big .save-big-table-wrap .save-big-table tr:nth-child(4) td,
   .save-big .save-big-table-wrap .save-big-table tr:nth-child(5) td {
     border-bottom: none;
   }
   .save-big .save-big-table-wrap .save-big-table tr:first-child td {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .save-big .save-big-table-wrap .ps-text {
+    font-size: 2.1333333333vw;
     color: rgba(0, 0, 0, 0.5);
   }
   .save-big .save-big-img-wrap {
@@ -1285,12 +1307,13 @@ a {
     width: 62.5vw;
   }
   #trade-in .trade-in-page .title {
-    font-size: 2.34375vw;
+    font-size: 1.6666666667vw;
     text-align: center;
   }
   #trade-in .trade-in-page .sub-title {
-    font-size: 1.5625vw;
+    font-size: 1.25vw;
     text-align: center;
+    line-height: 1.71875vw;
   }
   #trade-in .trade-in-page .tooltip-wrap {
     padding: 0.2604166667vw 1.0416666667vw;
@@ -1305,39 +1328,39 @@ a {
     font-size: 0.625vw;
   }
   #trade-in .trade-in-page .banner {
-    padding: 8.8020833333vw 0 8.6458333333vw 0;
+    padding: 1.5625vw 0 3.125vw 0;
   }
   #trade-in .trade-in-page .banner .banner-text-wrap .small-title {
-    font-size: 1.5625vw;
-    line-height: 3.0729166667vw;
+    font-size: 1.25vw;
+    line-height: 1.4583333333vw;
   }
   #trade-in .trade-in-page .banner .banner-text-wrap .title {
-    font-size: 3.90625vw;
+    font-size: 2.5vw;
     line-height: 1.9791666667vw;
-    margin: 1.8229166667vw 0 2.6041666667vw 0;
+    margin: 1.5625vw 0 1.8229166667vw 0;
   }
   #trade-in .trade-in-page .banner .banner-text-wrap .subtitle {
-    font-size: 1.5625vw;
-    line-height: 2.34375vw;
+    font-size: 1.25vw;
+    line-height: 1.4583333333vw;
   }
   #trade-in .trade-in-page .banner .banner-text-wrap .banner-btn-wrap {
     width: 11.09375vw;
     height: 2.4479166667vw;
-    margin: 2.03125vw 0 2.5520833333vw 0;
+    margin: 1.3020833333vw 0;
     border-radius: 1.25vw;
   }
   #trade-in .trade-in-page .banner .banner-img-wrap {
-    width: 55.8333333333vw;
+    width: 54.6875vw;
     height: 18.0729166667vw;
   }
   #trade-in .trade-in-page .save-big .save-big-text-wrap .title {
-    font-size: 2.34375vw;
+    font-size: 1.6666666667vw;
     line-height: 1.9791666667vw;
   }
   #trade-in .trade-in-page .save-big .save-big-text-wrap .subtitle {
-    font-size: 1.5625vw;
-    line-height: 2.34375vw;
-    margin: 1.875vw 0 2.5vw 0;
+    font-size: 1.25vw;
+    line-height: 1.4583333333vw;
+    margin: 1.875vw 0 2.0833333333vw 0;
   }
   #trade-in .trade-in-page .save-big .save-big-text-wrap .save-big-btn-wrap {
     width: 11.09375vw;
@@ -1351,6 +1374,10 @@ a {
     justify-content: center;
     margin: 4.1666666667vw 0 3.125vw 0;
   }
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .ps-text {
+    font-size: 0.625vw;
+    color: rgba(0, 0, 0, 0.5);
+  }
   #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table {
     border-collapse: collapse;
     width: 44.84375vw;
@@ -1360,10 +1387,11 @@ a {
     border-bottom: 0.0520833333vw solid #ddd;
     border-left: none;
     border-right: none;
-    font-size: 1.5625vw;
+    font-size: 1.25vw;
     font-weight: 600;
   }
   #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:last-child td,
+  #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:nth-child(2) td,
   #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:nth-child(3) td,
   #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:nth-child(4) td,
   #trade-in .trade-in-page .save-big .save-big-table-wrap .save-big-table tr:nth-child(5) td {
@@ -1373,19 +1401,17 @@ a {
     color: rgba(0, 0, 0, 0.5);
   }
   #trade-in .trade-in-page .save-big .save-big-img-wrap {
-    width: 60.9375vw;
-    height: 31.0416666667vw;
+    width: 54.6875vw;
   }
   #trade-in .trade-in-page .new-product {
-    margin: 0 0 4.8958333333vw 0;
+    margin: 0 0 3.125vw 0;
     gap: 2.03125vw;
   }
   #trade-in .trade-in-page .new-product .text-wrap {
     gap: 1.1979166667vw;
   }
   #trade-in .trade-in-page .new-product .swiper-container {
-    width: 58.6458333333vw;
-    height: 32.65625vw;
+    width: 54.6875vw;
     border-radius: 0.9375vw;
   }
   #trade-in .trade-in-page .new-product .swiper-container .arrow-wrap {
@@ -1427,7 +1453,7 @@ a {
     gap: 1.8229166667vw;
   }
   #trade-in .trade-in-page .enroll-machine-form .form-wrap {
-    width: 58.59375vw;
+    width: 54.6875vw;
     padding: 2.03125vw 2.8645833333vw 3.6979166667vw 2.96875vw;
     box-shadow: 0px 0px 0.1041666667vw 0px rgba(7, 7, 7, 0.63);
   }
@@ -1544,8 +1570,8 @@ a {
     box-sizing: border-box;
   }
   #trade-in .trade-in-page .enroll-machine-form .form-wrap .upload-area .upload-icon-wrap {
-    width: 2.65625vw;
-    height: 2.65625vw;
+    width: 2.1354166667vw;
+    height: 2.03125vw;
   }
   #trade-in .trade-in-page .enroll-machine-form .form-wrap .upload-area .preview-image {
     width: 5.2083333333vw;
@@ -1631,7 +1657,7 @@ a {
   }
   #trade-in .trade-in-page .trade-in-steps .step-container {
     gap: 0.5729166667vw;
-    margin: 4.8958333333vw 0 5.8854166667vw 0;
+    margin: 3.125vw 0 1.5625vw 0;
   }
   #trade-in .trade-in-page .trade-in-steps .step-container .step-wrap .step-img-wrap {
     width: 19.0104166667vw;
@@ -1668,10 +1694,11 @@ a {
 }
 
 /*# sourceMappingURL=index.css.map */
-</style>
+
+  </style>
 
 {% unless template.suffix contains 'landing' %}
-  <div id="trade-in">
+    <div id="trade-in">
       <div class="trade-in-page">
         <div class="tooltip-wrap hide"></div>
 
@@ -1717,7 +1744,7 @@ a {
         <div class="trade-in-steps container">
           <p class="text-bold title">
             Easy Trade-In in<br class="m-show" />
-            3 Simple Steps
+            3 Steps
           </p>
           <div class="step-container">
             <div class="step-wrap">
@@ -1819,7 +1846,7 @@ a {
                 <div class="step-title text-600">Upgrade and Save Big</div>
                 <div class="step-desc text-600">
                   Ready to trade up to any Falcon new laser machine? Use your
-                  reward to save up to $300 on your new order.
+                  reward to save big on your new order.
                 </div>
               </div>
             </div>
@@ -1869,10 +1896,12 @@ a {
           <div class="save-big-text-wrap">
             <div class="title text-bold">Save Big, Level Up</div>
             <div class="subtitle text-400">
-              Upgrade to any Falcon laser machine and get $500-$100in<br
-                class="pc-show"
-              />
-              rewards-noreturnneeded.
+              Upgrade to any Falcon laser machine<br class="m-show" />
+              and enjoy <span>10% OFF</span> <br class="pc-show" />instantly
+              with our Trade-In<br class="m-show" />
+              Program. No returns required. Keep<br class="pc-show" />
+              your old<br class="m-show" />
+              machine, and start creating more with less!
             </div>
             <div class="save-big-btn-wrap text-400">Upgrade Now</div>
           </div>
@@ -1889,7 +1918,7 @@ a {
                     >Falcon A1 Pro</a
                   >
                 </td>
-                <td>$100 off</td>
+                <td>10% &ensp;off</td>
               </tr>
               <tr>
                 <td>
@@ -1898,7 +1927,7 @@ a {
                     >Falcon A1</a
                   >
                 </td>
-                <td>$50 off</td>
+                <td>10% &ensp;off</td>
               </tr>
               <tr>
                 <td>
@@ -1907,7 +1936,7 @@ a {
                     >Falcon2 Pro 22W</a
                   >
                 </td>
-                <td>$100 off</td>
+                <td>10% &ensp;off</td>
               </tr>
               <tr>
                 <td>
@@ -1916,7 +1945,7 @@ a {
                     >Falcon2 Pro 40W</a
                   >
                 </td>
-                <td>$150 off</td>
+                <td>10% &ensp;off</td>
               </tr>
               <tr>
                 <td>
@@ -1925,7 +1954,7 @@ a {
                     >Falcon2 Pro 60W</a
                   >
                 </td>
-                <td>$200 off</td>
+                <td>10% &ensp;off</td>
               </tr>
               <tr>
                 <td>
@@ -1934,9 +1963,12 @@ a {
                     >AP1 Air Purifier</a
                   >
                 </td>
-                <td>$50 off</td>
+                <td>10% &ensp;off</td>
               </tr>
             </table>
+            <p class="text-400 ps-text">
+              *Valid on all Falcon laser machines. Discount applied at checkout.
+            </p>
           </div>
           <div class="save-big-img-wrap">
             <picture>
@@ -1967,8 +1999,7 @@ a {
           <div class="text-wrap">
             <p class="title text-bold">Enroll Machine Form</p>
             <p class="sub-title text-400">
-              Complete the form below to unlock your<br />
-              upgrade reward
+              Complete the form below to unlock your upgrade reward
             </p>
           </div>
 
@@ -2019,7 +2050,7 @@ a {
                           class="selected-value"
                           data-value="default"
                           id="machine-type"
-                          >Select Your Machine Type</span
+                          >Machine Type</span
                         >
                       </div>
 
@@ -2072,7 +2103,7 @@ a {
                           class="selected-value"
                           id="printer-brand"
                           data-value="default"
-                          >Select Your current model-Brand</span
+                          >current model-Brand</span
                         >
                       </div>
 
@@ -2180,19 +2211,26 @@ a {
                         class="selected-value"
                         data-value="default"
                         id="upgrade-to"
-                        >Select Your Upgrade Machine Type</span
+                        >Upgrade Machine Type</span
                       >
                     </div>
 
                     <div class="select-options">
                       <div class="option" data-value="falcon-a1-pro">
-                        CrealityFalcon A1 Pro 20W | $200 OFF
+                        Falcon A1 Pro
                       </div>
-                      <div class="option" data-value="falcon2-pro">
-                        CrealityFalcon2 Pro | $150 OFF
+                      <div class="option" data-value="falcon-a1">Falcon A1</div>
+                      <div class="option" data-value="falcon2-pro-22w">
+                        Falcon2 Pro 22W
                       </div>
-                      <div class="option" data-value="falcon-a1">
-                        CrealityFalcon A1 | $50 OFF
+                      <div class="option" data-value="falcon2-pro-40w">
+                        Falcon2 Pro 40W
+                      </div>
+                      <div class="option" data-value="falcon2-pro-60w">
+                        Falcon2 Pro 60W
+                      </div>
+                      <div class="option" data-value="ap1-air-purifier">
+                        AP1 Air Purifier
                       </div>
                     </div>
                   </div>
@@ -2390,13 +2428,15 @@ a {
     </div>
   {% endunless %}
  
+  
+ 
  
  
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const BASE_URL = "https://testmembership.creality.com";
+      const BASE_URL = "https://membership.creality.com";
       let uploadedImageUrl = "";
-
+      const DISCOUNT_CODE = "1PB138HMX2T3";
       const isMobile = window.innerWidth <= 900;
 
       // 校验
@@ -2639,7 +2679,7 @@ a {
           reason: document.getElementById("why-upgrade").value,
           siteCode: "US",
           platform: "falcon",
-          discountCode: "1PB138HMX2T3",
+          discountCode: DISCOUNT_CODE,
           approvalStatus: "NO_NEED_APPROVAL",
         };
 
@@ -2656,7 +2696,7 @@ a {
         formPopUp.style.display = isFormVisible ? "flex" : "none";
 
         if (isFormVisible) {
-          discountCode.textContent = "1PB138HMX2T3";
+          discountCode.textContent = DISCOUNT_CODE;
         }
       }
       // 复制文本函数
@@ -2821,8 +2861,6 @@ a {
         });
     });
   </script>
-
-
 {% schema %}
 {
   "name": "t:sections.main-page.name",

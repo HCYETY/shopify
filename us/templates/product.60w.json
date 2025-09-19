@@ -143,15 +143,6 @@
             "show_compare_color_drop_drap": true,
             "compare_layout": "1"
           }
-        },
-        "19ab1d9f-74b2-4c76-bf2e-1bc749e5c2a3": {
-          "type": "share",
-          "settings": {
-            "show_share": true,
-            "share_layout": "2",
-            "spacing_top": 0,
-            "spacing_bottom": 0
-          }
         }
       },
       "block_order": [
@@ -165,8 +156,7 @@
         "4f95b592-8369-4ab0-b30d-24e463fb6890",
         "klarna_on_site_messaging_app_block_39AnCe",
         "f1b31d90-1e43-4948-9fe3-97ba43f6fb34",
-        "04ea8843-f461-4f1d-8ea4-43f62fdfb21e",
-        "19ab1d9f-74b2-4c76-bf2e-1bc749e5c2a3"
+        "04ea8843-f461-4f1d-8ea4-43f62fdfb21e"
       ],
       "settings": {
         "container": "container",
