@@ -17,8 +17,8 @@
         "announcement_JxLB4j": {
           "type": "announcement",
           "settings": {
-            "text": "<a href=\"https://au.crealityfalcon.com/pages/creality-falcon-spring-laser-jewelry-making\" style=\"color: #000; font-weight: bold; text-decoration: none;\">\n\n🌸 Bloom Into Creation – Special Offers\n\n<span style=\"color:#EA6B82;\">\nLive Now!\n</span> </a>",
-            "btn_color": "#ea6b82",
+            "text": "<style>\n@media screen and (max-width: 768px) {\n  .announcement-link-inline {\n    font-size: 11px !important;\n  }\n}\n</style>\n\n\n\n<a href=\"https://au.crealityfalcon.com/pages/creality-falcon-spring-laser-jewelry-making\" class=\"announcement-link-inline\" style=\"color:#000; font-weight:bold; text-decoration:none; font-size:15px;\">\n   🌱 Bloom Into Creation – Special Offers\n   <span style=\"color:#5FBF2C;\">Live Now!</span>\n</a>",
+            "btn_color": "#232323",
             "btn_border_color": "#ffffff",
             "btn_bg_color": "#ffffff",
             "btn_bg_color_gradient": ""
@@ -27,8 +27,8 @@
         "announcement_4Q6Kke": {
           "type": "announcement",
           "settings": {
-            "text": "<a href=\"https://au.crealityfalcon.com/products/falcon-a1-10w-enclosed-laser-cutter-and-engraver?variant=46655711314141\" style=\"color: #000; font-weight: bold; text-decoration: none;\">\n💌 Fresh Look – Falcon A1 in White!     🛒\n<span style=\"color:#EA6B82;\">\nShop Now\n</span> \n</a>",
-            "btn_color": "#ea6b82",
+            "text": "<style>\n@media screen and (max-width: 768px) {\n  .announcement-link-white {\n    font-size: 12px !important; /* 手机端字号 */\n  }\n}\n</style>\n\n<a href=\"https://au.crealityfalcon.com/products/falcon-a1-10w-enclosed-laser-cutter-and-engraver?variant=46655711314141\" class=\"announcement-link-white\" style=\"color:#000; font-weight:bold; text-decoration:none; font-size:15px;\">\n   💌 Fresh Look – Falcon A1 in White!     🛒\n   <span style=\"color:#03a9f4;\">Shop Now</span>\n</a>",
+            "btn_color": "#232323",
             "btn_border_color": "#ffffff",
             "btn_bg_color": "#ffffff",
             "btn_bg_color_gradient": ""
@@ -37,8 +37,8 @@
         "announcement_PE3b9K": {
           "type": "announcement",
           "settings": {
-            "text": "<div style=\"text-align: center;\">\n  <strong>\n    ✨Unleash your creativity with the new \n    <a href=\"https://au.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver\" style=\"color:#EA6B82;font-weight: bold; text-decoration: none;\">A1 Pro 20W</a>\n  </strong>\n</div>",
-            "btn_color": "#14a9de",
+            "text": "<style>\n@media screen and (max-width: 768px) {\n  .announcement-center-text {\n    font-size: 12px !important; /* 手机端字号 */\n  }\n}\n</style>\n\n<div class=\"announcement-center-text\" style=\"text-align: center; font-size:15px;\">\n  <strong>\n    ✨Unleash your creativity with the new\n    <a href=\"https://au.crealityfalcon.com/products/falcon-a1-pro-20w-dual-laser-engraver\" style=\"color:#03a9f4; font-weight:bold; text-decoration:none;\">\n       A1 Pro 20W\n    </a>\n  </strong>\n</div>",
+            "btn_color": "#232323",
             "btn_border_color": "#ffffff",
             "btn_bg_color": "#ffffff",
             "btn_bg_color_gradient": ""
@@ -281,7 +281,7 @@
           "type": "custom_block_one",
           "settings": {
             "option_image_one": "shopify://shop_images/banner_48e968d2-a79d-4923-a589-abe7db52b257.png",
-            "option_title_one": "🌸 Bloom Into Creation",
+            "option_title_one": "🌱 Spring Into Creation",
             "option_subtitle_one": "Celebrate Spring with Up to 48% OFF",
             "option_link_one": "https://au.crealityfalcon.com/pages/creality-falcon-spring-laser-jewelry-making"
           }
@@ -378,7 +378,7 @@
       "settings": {
         "menu": "home-s-header",
         "logo": "shopify://shop_images/crealityfalcon-logo-png_7cc7df78-679e-4472-b13e-7ee2707a521a.png",
-        "sale_page_one": "🌸Spring Sale",
+        "sale_page_one": "🌱Spring Sale",
         "sale_page_two": "Support",
         "sale_page_three": "CraftSeek"
       }

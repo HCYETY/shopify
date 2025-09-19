@@ -343,6 +343,12 @@
     padding: 3px 0;
 }
 
+.cart-discounts .discounts__discount svg {
+    display: inline;
+    width: 14px;
+    height: 14px;
+}
+
 .previewCartTotals .previewCartTotals-label,
 .previewCartTotals .previewCartTotals-value{
     display: inline-block;
