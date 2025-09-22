@@ -1,0 +1,379 @@
+/* 产品介绍区域基础样式 */
+.product-introduction-simple {
+  /* --desktop-height: 800px; */
+  /* --mobile-height: 665px; */
+  /* --mobile-content-height: 615px;
+  --mobile-content-width: 86%; */
+
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  color: #000;
+}
+
+.product-introduction-simple .row.full-width-row {
+  padding: 0;
+}
+
+.product-introduction-simple .row.full-width-row>.columns {
+  padding: 0;
+}
+
+.product-introduction-simple .full-width-row-false img {
+  border-radius: 16px
+}
+
+/* 产品容器样式 - 相对定位作为绝对定位元素的参考 */
+.product-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* 背景图片样式 - 绝对定位 */
+.product__background {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #000;
+}
+
+/* 背景图片自适应 */
+.product__background img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+/* 视频播放器样式 */
+.product-video {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* 桌面端和移动端视频显示控制 */
+.product-video--desktop {
+  display: block;
+}
+
+.product-video--mobile {
+  display: none;
+}
+
+/* 内容区域样式 - 绝对定位到图片上方 */
+.product__content {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 100%;
+  max-width: 100%;
+  height: 90%;
+  width: var(--content-max-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* 文案容器样式 */
+/* .product-texts-container {
+  margin-bottom: 20px;
+} */
+
+.product-text {
+  line-height: normal;
+  color: var(--color, #fff);
+  font-size: var(--font-size, 16px);
+  font-weight: var(--font-weight, 300);
+  margin-bottom: var(--margin-bottom, 5px);
+}
+
+/* 按钮容器样式 */
+.product-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* 桌面端和移动端文案显示控制 */
+.desktop-text {
+  display: block;
+}
+
+.mobile-text {
+  display: none;
+}
+
+/* 响应式设计 - 移动端 */
+@media screen and (max-width: 749px) {
+  .desktop-text {
+    display: none;
+  }
+
+  .mobile-text {
+    display: block;
+  }
+
+  .product-introduction-simple .has-video {
+    background-color: var(--mobile-bg-color, #000);
+  }
+
+  .product-introduction-simple .has-video .product__content {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    padding-top: 14px;
+  }
+
+  /* .product-introduction-simple .has-video .product__background {
+    padding: 10px;
+  }
+
+  .product-introduction-simple .has-video .product__background .product-video {
+    border-radius: 10px;
+    border: 1px solid #72757B;
+  } */
+
+  .product__content {
+    padding-top: 30px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .product-texts-container {
+    width: 90%;
+  }
+
+  .product-text {
+    font-size: var(--font-size-mobile, 18px);
+    margin-bottom: var(--mobile-margin-bottom, 5px);
+  }
+
+  .product-buttons-container .button {
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 300;
+  }
+}
+
+/* 桌面端和移动端图片显示控制 */
+.product-image--desktop {
+  display: block;
+}
+
+.product-image--mobile {
+  display: none;
+}
+
+@media screen and (max-width: 749px) {
+  .product-image--desktop {
+    display: none;
+  }
+
+  .product-image--mobile {
+    display: block;
+  }
+
+  /* 移动端视频显示控制 */
+  .product-video--desktop {
+    display: none;
+  }
+
+  .product-video--mobile {
+    display: block;
+  }
+}
+
+/* 按钮基础样式 */
+.product-buttons-container .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: normal;
+  letter-spacing: 0em;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.product-buttons-container .button:hover {
+  opacity: 0.8;
+}
+
+/* Ghost 按钮样式 */
+.product-buttons-container .button.ghost {
+  height: 36px;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 8px 15px;
+  color: #fff;
+  background: unset;
+  border-radius: 183px;
+  border: 1px solid #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-buttons-container .button.ghost::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='none' version='1.1' width='6' height='10.5' viewBox='0 0 6 10.5'%3E%3Cg%3E%3Cpath d='M4.7738,5.0191L0.146447,9.64645L0.853553,10.35355L6.2262,4.9809L0.834482,0.128353L0.165518,0.8716470000000001L4.7738,5.0191Z' fill-rule='evenodd' fill='%23FFFFFF' fill-opacity='1'/%3E%3C/g%3E%3C/svg%3E");
+  margin-left: 13px;
+  margin-right: 4px;
+}
+
+/* Black 按钮样式 */
+.product-buttons-container .button.black {
+  height: 55px;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 12px 40px;
+  color: #fff;
+  background: #000000;
+  border-radius: 269px;
+  border: none;
+}
+
+/* White 按钮样式 */
+.product-buttons-container .button.white {
+  height: 55px;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 12px 40px;
+  color: #000;
+  background: #fff;
+  border: 2px solid #000000;
+  border-radius: 269px;
+}
+
+/* 内容位置样式 */
+.product__content.content-top-left {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.product__content.content-top-center {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.product__content.content-top-right {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.product__content.content-middle-left {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.product__content.content-middle-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.product__content.content-middle-right {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.product__content.content-bottom-left {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.product__content.content-bottom-center {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.product__content.content-bottom-right {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* 文本对齐方式 */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media screen and (max-width: 749px) {
+
+  /* 移动端内容位置样式 */
+  .product__content.mobile-content-top-left {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .product__content.mobile-content-top-center {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .product__content.mobile-content-top-right {
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .product__content.mobile-content-middle-left {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .product__content.mobile-content-middle-center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product__content.mobile-content-middle-right {
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .product__content.mobile-content-bottom-left {
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .product__content.mobile-content-bottom-center {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .product__content.mobile-content-bottom-right {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  /* 移动端文本对齐方式 */
+  .mobile-text-left {
+    text-align: left;
+  }
+
+  .mobile-text-center {
+    text-align: center;
+  }
+
+  .mobile-text-right {
+    text-align: right;
+  }
+}

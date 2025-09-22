@@ -1,0 +1,367 @@
+{{ 'contact-faq-newsletter.css' | asset_url | stylesheet_tag }}
+
+<div class="contact-faq-newsletter-section" data-section-id="{{ section.id }}">
+  <div class="container">
+    
+    <!-- 联系表单部分 -->
+    <div class="contact-card">
+      <div class="contact-content">
+        <!-- 左侧联系信息 -->
+        <div class="contact-info">
+          <div class="contact-header">
+            <span class="contact-label">CONTACT</span>
+            <h2 class="contact-title">Get in Touch</h2>
+            <p class="contact-subtitle">Thank you for your interest in Creality Falcon. We're here to assist you and welcome your inquiries.</p>
+          </div>
+          
+          <div class="contact-item">
+            <svg class="contact-icon" width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.66992 25.7023C4.07248 25.8963 4.51728 25.9999 4.97264 25.9999H27.0005C27.3294 25.9999 27.653 25.9459 27.9592 25.8425L19.268 16.7561C18.8155 17.1903 18.4114 17.5779 18.0741 17.9001C16.9144 19.0095 15.0866 19.0095 13.9269 17.9001C13.5272 17.518 13.0315 17.0425 12.4725 16.5059L3.66992 25.7023Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M29.3129 7.08801C28.0338 8.32097 23.8479 12.3559 20.7109 15.3709L29.5388 24.6C29.8386 24.1248 30.0012 23.5709 30.0012 23V9.00001C30.0012 8.29921 29.7561 7.62369 29.3129 7.08801Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M2.67474 7.07141C2.2229 7.60965 1.97266 8.29189 1.97266 9.00005V23.0001C1.97266 23.4477 2.07282 23.8852 2.26066 24.2823L11.0303 15.1201C7.96178 12.1693 4.0101 8.35941 2.67474 7.07141Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4.48828 6.03968L15.31 16.455C15.6966 16.825 16.3059 16.825 16.6924 16.455C19.1782 14.0771 25.312 8.16704 27.5142 6.04416C27.3459 6.01504 27.1744 6 27.0012 6H4.9734C4.80988 6 4.64764 6.01344 4.48828 6.03968Z"></path></svg>
+            <div>
+              <span class="contact-text">Get in touch</span>
+              <div class="contact-details">
+                <b>
+                  <font color="#000"></font>
+                </b> 
+                <a href="tel:+001 626 239 3346" class="contact-phone">{{ section.settings.contact_phone | default: '+001 626 239 3346' }}</a> &nbsp;
+                <a href="mailto:support@crealityfalcon.com" class="contact-email">{{ section.settings.contact_email | default: 'support@crealityfalcon.com' }}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 右侧表单 -->
+        <div class="contact-form-wrapper">
+          <div class="form-header">
+            <div class="contact-logo">
+              <img src="https://cdn.shopify.com/s/files/1/0799/8714/7049/files/crealityfalcon-logo-png_8608eddc-93fd-4d46-8aad-ff8ac8584c01.png?v=1730684177" 
+                   alt="CREALITY FALCON" 
+                   width="120" 
+                   height="30"
+                   class="logo-image">
+            </div>
+            <div class="logo-line"></div>
+          </div>
+          
+          {% form 'contact', class: 'contact-form' %}
+            <div class="form-group">
+              <input type="text" name="contact[your-name]" placeholder="Your Name" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="contact[email]" placeholder="Email Address" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <textarea name="contact[message]" placeholder="Message" class="form-textarea" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+            <p class="form-disclaimer">* Our team will get back to you within 24 hours. Please note, there may be a slight delay during weekends or holidays.</p>
+          {% endform %}
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ部分 -->
+    <div class="faq-card">
+      <div class="faq-header">
+        <span class="faq-label">FAQs</span>
+        <h2 class="faq-title">Your Inquiries, Our Solutions!</h2>
+      </div>
+      
+      <div class="faq-content">
+        {% for block in section.blocks %}
+          {% if block.type == 'faq_item' %}
+            <div class="faq-item" {{ block.shopify_attributes }}>
+              <div class="faq-question" data-faq-toggle="{{ forloop.index }}">
+                <span class="faq-question-text">{{ block.settings.question }}</span>
+                <span class="faq-icon">
+                  <svg class="faq-icon-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M488 231.1C501.3 231.1 512 242.7 512 255.1C512 269.3 501.3 279.1 488 279.1H280V488C280 501.3 269.3 512 255.1 512C242.7 512 231.1 501.3 231.1 488V279.1H23.1C10.74 279.1-.0006 269.3-.0006 255.1C-.0006 242.7 10.74 231.1 23.1 231.1H231.1V24C231.1 10.75 242.7 0 255.1 0C269.3 0 280 10.75 280 24V231.1H488z"></path></svg>
+                  <svg class="faq-icon-minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M432 256C432 269.3 421.3 280 408 280H40c-13.25 0-24-10.74-24-23.99C16 242.8 26.75 232 40 232h368C421.3 232 432 242.8 432 256z"></path></svg>
+                </span>
+              </div>
+              <div class="faq-answer" data-faq-content="{{ forloop.index }}">
+                <div class="faq-answer-content">
+                  {{ block.settings.answer }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- 新闻订阅部分 -->
+    <div class="newsletter-card">
+      <div class="newsletter-content">
+        <div class="newsletter-text">
+          <span class="newsletter-label">NEWSLETTER</span>
+          <h2 class="newsletter-title">Join Our Newsletter</h2>
+          <p class="newsletter-subtitle">Become part of the exclusive community!</p>
+        </div>
+        
+        <div class="newsletter-form-wrapper">
+          {% form 'customer', class: 'newsletter-forms' %}
+            <input type="hidden" name="contact[tags]" value="newsletter">
+            <div class="newsletter-input-group">
+              <input type="email" name="contact[email]" class="ecom-shopify__newsletter-form-field--input newsletter-input" value="{{ form.email }}" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="email" placeholder="Your Email" required="">
+              <button type="submit" class="newsletter-btn">Subscribe</button>
+            </div>
+            
+            {%- if form.posted_successfully? -%}
+              <div class="newsletter-success show" id="newsletter-success">
+                Subscribed successfully!
+              </div>
+            {%- endif -%}
+            
+            {%- if form.errors -%}
+              <div class="newsletter-error show" id="newsletter-error">
+                {{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}
+              </div>
+            {%- endif -%}
+          {% endform %}
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // FAQ 手风琴功能
+  const faqQuestions = document.querySelectorAll('[data-faq-toggle]');
+  
+  faqQuestions.forEach(function(question) {
+    question.addEventListener('click', function() {
+      const faqIndex = this.getAttribute('data-faq-toggle');
+      const answer = document.querySelector(`[data-faq-content="${faqIndex}"]`);
+      const icon = this.querySelector('.faq-icon');
+      
+      // 关闭其他打开的FAQ
+      faqQuestions.forEach(function(otherQuestion) {
+        if (otherQuestion !== question) {
+          const otherIndex = otherQuestion.getAttribute('data-faq-toggle');
+          const otherAnswer = document.querySelector(`[data-faq-content="${otherIndex}"]`);
+          const otherIcon = otherQuestion.querySelector('.faq-icon');
+          
+          otherAnswer.classList.remove('active');
+          otherIcon.classList.remove('active');
+        }
+      });
+      
+      // 切换当前FAQ
+      answer.classList.toggle('active');
+      icon.classList.toggle('active');
+    });
+  });
+  
+  // 联系表单提交处理
+  {% comment %} const contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      const submitBtn = this.querySelector('.submit-btn');
+      const originalText = submitBtn.textContent;
+      
+      submitBtn.textContent = 'Submitting...';
+      submitBtn.disabled = true;
+      
+      fetch('/contact', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          submitBtn.textContent = 'Submitted!';
+          submitBtn.style.backgroundColor = '#28a745';
+          this.reset();
+        } else {
+          throw new Error('Submission failed');
+        }
+      })
+      .catch(error => {
+        submitBtn.textContent = 'Error - Try Again';
+        submitBtn.style.backgroundColor = '#dc3545';
+      })
+      .finally(() => {
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+          submitBtn.style.backgroundColor = '';
+        }, 3000);
+      });
+    });
+  } {% endcomment %}
+  
+      // 新闻订阅表单处理
+      {% comment %} const newsletterForm = document.querySelector('.newsletter-form');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+          e.preventDefault(); // 完全阻止默认提交行为
+          
+          const submitBtn = this.querySelector('.newsletter-btn');
+          const successMsg = this.querySelector('#newsletter-success-js');
+          const errorMsg = this.querySelector('#newsletter-error-js');
+          const emailInput = this.querySelector('.newsletter-input');
+          const originalText = submitBtn.textContent;
+          
+          // 隐藏之前的消息
+          successMsg.style.display = 'none';
+          errorMsg.style.display = 'none';
+          
+          // 验证邮箱格式
+          const email = emailInput.value.trim();
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          
+          if (!emailRegex.test(email)) {
+            errorMsg.style.display = 'block';
+            return;
+          }
+          
+          // 显示提交状态
+          submitBtn.textContent = 'Subscribing...';
+          submitBtn.disabled = true;
+          
+          // 使用AJAX提交表单
+          const formData = new FormData(this);
+          
+          fetch('/contact', {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'X-Requested-With': 'XMLHttpRequest'
+            }
+          })
+          .then(response => {
+            if (response.ok) {
+              // 成功订阅
+              successMsg.style.display = 'block';
+              emailInput.value = ''; // 清空输入框
+            } else {
+              // 处理错误
+              return response.text().then(text => {
+                // 检查是否是重复订阅错误
+                if (text.includes('already been taken') || text.includes('already exists')) {
+                  errorMsg.textContent = 'This email has already been subscribed!';
+                } else {
+                  errorMsg.textContent = 'Please enter a valid email address.';
+                }
+                errorMsg.style.display = 'block';
+              });
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            errorMsg.textContent = 'An error occurred. Please try again.';
+            errorMsg.style.display = 'block';
+          })
+          .finally(() => {
+            // 恢复按钮状态
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          });
+        });
+      } {% endcomment %}
+});
+</script>
+
+{% schema %}
+{
+  "name": "联系表单 + FAQ + 新闻订阅",
+  "class": "section-contact-faq-newsletter",
+  "settings": [
+    {
+      "type": "header",
+      "content": "联系信息设置"
+    },
+    {
+      "type": "text",
+      "id": "contact_phone",
+      "label": "联系电话",
+      "default": "+001 626 239 3346"
+    },
+    {
+      "type": "text",
+      "id": "contact_email",
+      "label": "联系邮箱",
+      "default": "support@crealityfalcon.com"
+    },
+    {
+      "type": "header",
+      "content": "样式设置"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#f8f9fa"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "卡片背景颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "primary_color",
+      "label": "主色调",
+      "default": "#007bff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#333333"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ项目",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "问题",
+          "default": "From where can I download those software?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "答案",
+          "default": "<p>1. Falcon Design Space (https://www.craftseek.com)</p><p>2. LaserGRBL (https://lasergrbl.com/download/)</p><p>3. LightBurn (https://lightburnsoftware.com/pages/trial-version-try-before-you-buy)</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "联系表单 + FAQ + 新闻订阅",
+      "blocks": [
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "From where can I download those software?",
+            "answer": "<p>1. Falcon Design Space (https://www.craftseek.com)</p><p>2. LaserGRBL (https://lasergrbl.com/download/)</p><p>3. LightBurn (https://lightburnsoftware.com/pages/trial-version-try-before-you-buy)</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "What warranty and support do you provide?",
+            "answer": "<p>Our laser engravers come with a 1-year-warranty, and we offer online support, tutorials, and spare parts.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is laser engraving environmentally friendly?",
+            "answer": "<p>Laser engraving is eco-friendly when used with safe materials and proper ventilation, producing minimal waste compared to traditional methods.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

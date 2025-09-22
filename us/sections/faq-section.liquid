@@ -1,0 +1,569 @@
+{{- 'faq-section.css' | asset_url | stylesheet_tag -}}
+
+<div class="faq-section section-spacing" style="--color-bg: {{ section.settings.color_bg }}; --color-heading: {{ section.settings.color_heading }}; --color-text: {{ section.settings.color_text }}; --color-border: {{ section.settings.color_border }}; --color-accent: {{ section.settings.color_accent }};">
+  
+  <div class="faq-section__content">
+    {% assign categories = section.blocks | where: "type", "faq_category" %}
+    {% assign category_count = categories.size %}
+    
+    {% if category_count > 1 %}
+      <!-- 左侧导航菜单 -->
+      <div class="faq-navigation">
+        <div class="faq-categories">
+          {% for category in categories %}
+            {% assign category_id = 'category_' | append: forloop.index %}
+            <div class="faq-category-item {% if forloop.first %}active{% endif %}" 
+                 data-category="{{ category_id }}" 
+                 onclick="switchFaqCategory('{{ category_id }}')"
+                 style="cursor: pointer;">
+              <span class="category-number">{{ forloop.index }}</span>
+              <span class="category-name">{{ category.settings.category_name }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    <!-- 右侧内容区域 -->
+    <div class="faq-content {% if category_count <= 1 %}single-category{% endif %}">
+      {% for category in categories %}
+        {% assign category_id = 'category_' | append: forloop.index %}
+        <div class="faq-category-content {% if forloop.first %}active{% endif %}" id="content-{{ category_id }}">
+          
+          
+          {% comment %} 直接处理标题分组 {% endcomment %}
+          {% assign found_titles = false %}
+          {% for title_block in section.blocks %}
+            {% if title_block.type == "faq_title" and title_block.settings.category_id == category.settings.category_id %}
+              {% assign found_titles = true %}
+              <div class="faq-title-section">
+                <h3 class="faq-section-title">{{ title_block.settings.title }}</h3>
+                
+                <div class="faq-questions">
+                  {% comment %} 显示该标题下的所有问答 - 使用动态问答块 {% endcomment %}
+                  {% assign has_questions = false %}
+                  
+                  {% comment %} 显示属于当前标题分组的问答块 {% endcomment %}
+                  {% for qa_block in section.blocks %}
+                    {% if qa_block.type == "faq_question" and qa_block.settings.title_id == title_block.settings.title_id %}
+                      <div class="faq-item">
+                        <div class="faq-question">
+                          <span class="question-text"><strong>Q: "{{ qa_block.settings.question }}"</strong></span>
+                        </div>
+                        <div class="faq-answer">
+                          <p>{{ qa_block.settings.answer | strip_html }}</p>
+                        </div>
+                      </div>
+                      {% assign has_questions = true %}
+                    {% endif %}
+                  {% endfor %}
+                  
+                  {% if has_questions == false %}
+                    <div class="no-questions">
+                      <p>暂无相关问题</p>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+          
+          {% if found_titles == false %}
+            {% comment %} 如果没有标题分组，显示分类标题和独立问题 {% endcomment %}
+            <div class="faq-title-section">
+              <h3 class="faq-section-title">
+                {% if category.settings.category_title != blank %}
+                  {{ category.settings.category_title }}
+                {% else %}
+                  {{ category.settings.category_name }}
+                {% endif %}
+              </h3>
+              
+              <div class="faq-questions">
+                {% assign category_questions = section.blocks | where: "type", "faq_question" | where: "settings.category_id", category.settings.category_id %}
+                {% for question_block in category_questions %}
+                  <div class="faq-item">
+                    <div class="faq-question">
+                      <span class="question-text"><strong>Q: "{{ question_block.settings.question }}"</strong></span>
+                    </div>
+                    <div class="faq-answer">
+                      <p>{{ question_block.settings.answer | strip_html }}</p>
+                    </div>
+                  </div>
+                {% endfor %}
+                
+                {% if category_questions.size == 0 %}
+                  <div class="no-questions">
+                    <p>暂无相关问题</p>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+// FAQ功能类
+class FaqManager {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    this.initializeFaqState();
+    this.setupEventListeners();
+  }
+
+  initializeFaqState() {
+    // 直接显示模式，无需初始化折叠状态
+    console.log('FAQ 初始化为直接显示模式');
+  }
+
+  setupEventListeners() {
+    // 使用事件委托来处理点击事件
+    const faqContainer = document.querySelector('.faq-section');
+    if (faqContainer) {
+      faqContainer.addEventListener('click', (e) => {
+        const categoryItem = e.target.closest('.faq-category-item');
+        if (categoryItem) {
+          e.preventDefault();
+          const categoryId = categoryItem.getAttribute('data-category');
+          console.log('点击分类:', categoryId);
+          this.switchFaqCategory(categoryId);
+        }
+      });
+      console.log('FAQ 事件监听器设置完成');
+    } else {
+      console.error('未找到FAQ容器元素');
+    }
+  }
+
+  switchFaqCategory(categoryId) {
+    console.log('切换分类到:', categoryId);
+    
+  // 隐藏所有内容
+  document.querySelectorAll('.faq-category-content').forEach(content => {
+    content.classList.remove('active');
+  });
+  
+  // 移除所有导航项的active状态
+  document.querySelectorAll('.faq-category-item').forEach(item => {
+    item.classList.remove('active');
+  });
+  
+  // 显示选中的内容
+  const selectedContent = document.getElementById('content-' + categoryId);
+  if (selectedContent) {
+    selectedContent.classList.add('active');
+      console.log('显示内容:', selectedContent.id);
+    } else {
+      console.error('未找到内容元素:', 'content-' + categoryId);
+  }
+  
+  // 激活选中的导航项
+  const selectedNav = document.querySelector(`[data-category="${categoryId}"]`);
+  if (selectedNav) {
+    selectedNav.classList.add('active');
+      console.log('激活导航:', selectedNav.textContent);
+    } else {
+      console.error('未找到导航元素:', `[data-category="${categoryId}"]`);
+    }
+
+    // 滚动到顶部
+    const faqContent = document.querySelector('.faq-content');
+    if (faqContent) {
+      faqContent.scrollTop = 0;
+    }
+  }
+
+  // 不再需要折叠功能
+}
+
+// 全局函数，保持向后兼容
+function switchFaqCategory(categoryId) {
+  if (window.faqManager) {
+    window.faqManager.switchFaqCategory(categoryId);
+  }
+}
+
+// 不再需要折叠功能
+
+// 页面加载完成后初始化FAQ状态
+document.addEventListener('DOMContentLoaded', function() {
+  // 延迟一点时间确保DOM完全渲染
+  setTimeout(() => {
+    window.faqManager = new FaqManager();
+    
+    // 测试切换功能
+    console.log('FAQ Manager 初始化完成');
+    console.log('所有分类内容:', document.querySelectorAll('.faq-category-content'));
+    console.log('所有导航项:', document.querySelectorAll('.faq-category-item'));
+    
+    // 验证事件绑定
+    const categoryItems = document.querySelectorAll('.faq-category-item');
+    console.log('找到分类项数量:', categoryItems.length);
+    categoryItems.forEach((item, index) => {
+      console.log(`分类项${index + 1}:`, item.getAttribute('data-category'));
+    });
+  }, 100);
+});
+</script>
+
+{% schema %}
+{
+  "name": "FAQ 常见问题",
+  "class": "section-faq",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "主标题",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "副标题",
+      "info": "可选，显示在主标题下方",
+      "default": "Find answers to common questions about our products and services"
+    },
+    {
+      "type": "header",
+      "content": "布局设置"
+    },
+    {
+      "type": "select",
+      "id": "layout_style",
+      "label": "布局样式",
+      "options": [
+        {
+          "value": "sidebar",
+          "label": "侧边栏布局"
+        },
+        {
+          "value": "tabs",
+          "label": "标签页布局"
+        },
+        {
+          "value": "accordion",
+          "label": "手风琴布局"
+        }
+      ],
+      "default": "sidebar"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_category_numbers",
+      "label": "显示分类编号",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_question_numbers",
+      "label": "显示问题编号",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "debug_mode",
+      "label": "调试模式",
+      "info": "开启后显示调试信息，帮助排查问题",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "颜色设置"
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "背景颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "color_heading",
+      "label": "标题颜色",
+      "default": "#1a1c1d"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "文字颜色",
+      "default": "#2c2d2e"
+    },
+    {
+      "type": "color",
+      "id": "color_border",
+      "label": "边框颜色",
+      "default": "#DADCE0"
+    },
+    {
+      "type": "color",
+      "id": "color_accent",
+      "label": "强调色",
+      "default": "#1d80dc"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_category",
+      "name": "FAQ分类",
+      "settings": [
+        {
+          "type": "text",
+          "id": "category_id",
+          "label": "分类ID",
+          "info": "用于关联问题，请使用英文和数字",
+          "default": "general_category"
+        },
+        {
+          "type": "text",
+          "id": "category_name",
+          "label": "分类名称",
+          "default": "常见问题"
+        },
+        {
+          "type": "text",
+          "id": "category_title",
+          "label": "分类标题",
+          "info": "可选，显示在分类内容顶部"
+        },
+        {
+          "type": "textarea",
+          "id": "category_description",
+          "label": "分类描述",
+          "info": "可选，显示在分类标题下方"
+        },
+        {
+          "type": "text",
+          "id": "category_icon",
+          "label": "分类图标",
+          "info": "可选，显示在分类名称旁边（如：📦、💡等）"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_more_link",
+          "label": "显示更多链接",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "more_link_text",
+          "label": "更多链接文字",
+          "default": "查看更多"
+        },
+        {
+          "type": "url",
+          "id": "more_link_url",
+          "label": "更多链接地址"
+        }
+      ]
+    },
+    {
+      "type": "faq_title",
+      "name": "FAQ标题分组",
+      "settings": [
+        {
+          "type": "text",
+          "id": "category_id",
+          "label": "所属分类ID",
+          "info": "必须与分类的category_id匹配",
+          "default": "general_category"
+        },
+        {
+          "type": "text",
+          "id": "title_id",
+          "label": "标题ID",
+          "info": "用于关联问题，请使用英文和数字",
+          "default": "title_1"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "1. Pre-sale Questions"
+        },
+      ]
+    },
+    {
+      "type": "faq_question",
+      "name": "FAQ问题",
+      "settings": [
+        {
+          "type": "text",
+          "id": "category_id",
+          "label": "所属分类ID",
+          "info": "必须与分类的category_id匹配",
+          "default": "general_category"
+        },
+        {
+          "type": "text",
+          "id": "title_id",
+          "label": "所属标题ID",
+          "info": "必须与标题分组的title_id匹配",
+          "default": "title_1"
+        },
+        {
+          "type": "text",
+          "id": "question",
+          "label": "问题",
+          "default": "这是一个常见问题吗？"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "答案",
+          "info": "支持富文本格式"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ 常见问题",
+      "blocks": [
+        {
+          "type": "faq_category",
+          "settings": {
+            "category_id": "general_category",
+            "category_name": "General Questions",
+            "category_title": "1. Pre-sale Questions",
+            "category_description": "售前相关问题解答",
+            "category_icon": "❓"
+          }
+        },
+        {
+          "type": "faq_category",
+          "settings": {
+            "category_id": "products_category",
+            "category_name": "Products/Services Questions",
+            "category_title": "2. Device Questions",
+            "category_description": "产品设备相关问题",
+            "category_icon": "🔧"
+          }
+        },
+        {
+          "type": "faq_category",
+          "settings": {
+            "category_id": "account_category",
+            "category_name": "Account Questions",
+            "category_title": "3. Account Management",
+            "category_description": "账户管理相关问题",
+            "category_icon": "👤"
+          }
+        },
+        {
+          "type": "faq_category",
+          "settings": {
+            "category_id": "technical_category",
+            "category_name": "Technical Questions",
+            "category_title": "4. Technical Support",
+            "category_description": "技术支持相关问题",
+            "category_icon": "⚙️"
+          }
+        },
+        {
+          "type": "faq_category",
+          "settings": {
+            "category_id": "contact_category",
+            "category_name": "Contact Questions",
+            "category_title": "5. Contact Information",
+            "category_description": "联系方式相关问题",
+            "category_icon": "📞"
+          }
+        },
+        {
+          "type": "faq_category",
+          "settings": {
+            "category_id": "returns_category",
+            "category_name": "Refund & Return Questions",
+            "category_title": "6. Refund & Return Policy",
+            "category_description": "退换货政策相关问题",
+            "category_icon": "🔄"
+          }
+        },
+        {
+          "type": "faq_category",
+          "settings": {
+            "category_id": "tutorials_category",
+            "category_name": "How-to Tutorials",
+            "category_title": "7. How-to Tutorials",
+            "category_description": "使用教程和指南",
+            "category_icon": "📚"
+          }
+        },
+        {
+          "type": "faq_title",
+          "settings": {
+            "category_id": "general_category",
+            "title_id": "presale_title",
+            "title": "1. Pre-sale Questions",
+          }
+        },
+        {
+          "type": "faq_title",
+          "settings": {
+            "category_id": "products_category",
+            "title_id": "device_title",
+            "title": "2. Device Questions",
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "general_category",
+            "title_id": "presale_title",
+            "question": "Do you offer any special pricing for bulk orders?",
+            "answer": "<p>Yes, discounts are available for purchases of more than 5 machines and more than 15 accessories or consumables of the same model. Please contact our customer service for specific discount gradients.</p>",
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "general_category",
+            "title_id": "presale_title",
+            "question": "How does this product compare to similar products on the market?",
+            "answer": "<p>Our brand offers a unique appeal in the realm of carving machines. We stand out by providing machines at various price points, catering to beginners and enthusiasts alike. With a range of products spanning multiple price ranges, customers can choose according to their needs.</p>",
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "general_category",
+            "title_id": "presale_title",
+            "question": "What payment methods do you accept?",
+            "answer": "<p>A variety of payment methods are accepted, including credit cards, Shop Pay, PayPal, and more, with customers able to choose their preferred method at checkout.</p>",
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "products_category",
+            "title_id": "device_title",
+            "question": "What will happen when the device loses power during operation?",
+            "answer": "<p>If the device loses power during an engraving task, the laser head remains in place. Upon powering on again, it initializes but does not resume the original task.</p>",
+          }
+        },
+        {
+          "type": "faq_question",
+          "settings": {
+            "category_id": "products_category",
+            "title_id": "device_title",
+            "question": "Why is the engraved pattern so different from the original drawing?",
+            "answer": "<p>Several factors can affect the final engraved pattern: material properties, power settings, speed settings, focus distance, and file resolution. Please ensure your settings match the material specifications and use high-quality source files.</p>",
+          }
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["header", "footer"]
+  }
+}
+{% endschema %}
