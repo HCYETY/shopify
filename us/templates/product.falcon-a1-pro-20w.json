@@ -251,12 +251,22 @@
                 "autoplay": false
               },
               "blocks": {}
+            },
+            "youtube_video_card_xLDjqj": {
+              "type": "youtube-video-card",
+              "name": "YouTube视频卡片",
+              "settings": {
+                "video_url": "https://www.youtube.com/watch?v=1pyTG4xFQX0",
+                "autoplay": false
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "youtube_video_card_D93zCf",
             "youtube_video_card_knbWK8",
-            "youtube_video_card_DMNaEM"
+            "youtube_video_card_DMNaEM",
+            "youtube_video_card_xLDjqj"
           ]
         }
       },

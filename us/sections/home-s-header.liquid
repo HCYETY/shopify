@@ -788,6 +788,26 @@
     }
   }
 </style>
+
+<script>
+function handleCustomerClick(event, element) {
+  // 检查是否有 OAuth 回调参数
+  const urlParams = new URLSearchParams(window.location.search);
+  const hasOAuthCode = urlParams.get('code');
+  
+  if (hasOAuthCode || window.oauthLoading) {
+    // 如果有 OAuth 回调，阻止默认跳转
+    event.preventDefault();
+    event.stopPropagation();
+    
+    return false;
+  }
+  
+  // 没有 OAuth 回调，正常处理
+  return true;
+}
+</script>
+
 {% assign sale_link_title_one = section.settings.sale_page_one %}
 {% assign sale_link_title_two = section.settings.sale_page_two %}
 {% assign sale_link_title_three = section.settings.sale_page_three %}
@@ -1041,6 +1061,7 @@
               {% if is_contained and customer %}
                 data-open-auth-sidebar
               {% endif %}
+              onclick="return handleCustomerClick(event, this)"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8836 5.6C13.4126 5.6 14.65 6.83585 14.65 8.38001C14.65 9.80162 13.5864 10.9703 12.2092 11.1311C12.094 11.1271 11.9782 11.125 11.8617 11.125C11.7569 11.125 11.6525 11.1267 11.5487 11.13C10.1693 10.9637 9.1 9.78442 9.1 8.38001C9.1 6.85908 10.351 5.6 11.8836 5.6ZM8.91318 11.5889C8.0446 10.7889 7.5 9.64472 7.5 8.38001C7.5 5.97746 9.46534 4 11.8836 4C14.3018 4 16.25 5.95769 16.25 8.38001C16.25 9.65267 15.7078 10.7987 14.8404 11.5976C17.7183 12.5512 19.75 14.8443 19.75 17.52C19.75 21.0505 16.2038 21.625 11.8706 21.625C7.53735 21.625 4 21.0505 4 17.52C4 14.8361 6.02879 12.5372 8.91318 11.5889ZM11.4932 12.7328C7.91197 12.8849 5.6 15.242 5.6 17.52C5.6 18.1226 5.74563 18.4772 5.91542 18.7112C6.09447 18.9579 6.3974 19.2028 6.91754 19.4161C8.02357 19.8698 9.70535 20.025 11.8706 20.025C14.0356 20.025 15.7201 19.8699 16.8288 19.4158C17.3505 19.2022 17.6545 18.9569 17.8341 18.7099C18.0043 18.4759 18.15 18.1217 18.15 17.52C18.15 15.254 15.8327 12.8979 12.2598 12.7341C12.1358 12.7446 12.0103 12.75 11.8836 12.75C11.752 12.75 11.6218 12.7442 11.4932 12.7328Z" fill="#1E1E1E"></path>

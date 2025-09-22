@@ -12,10 +12,17 @@
   "sections": {
     "ecom-help-center-page": {
       "type": "ecom-help-center-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "help_center_Xikm98": {
+      "type": "help-center",
+      "name": "Help Center",
       "settings": {}
     }
   },
   "order": [
-    "ecom-help-center-page"
+    "ecom-help-center-page",
+    "help_center_Xikm98"
   ]
 }

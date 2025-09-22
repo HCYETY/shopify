@@ -853,6 +853,37 @@
       "ecom-footer-footer": {
         "type": "ecom-footer-footer",
         "settings": {}
+      },
+      "password-page-1": {
+        "type": "password-page-1",
+        "settings": {
+          "background_color": "",
+          "brand_type": "image",
+          "brand_text": "",
+          "brand_logo_font_size": 30,
+          "logo_color": "#232323",
+          "brand_logo": "shopify://shop_images/falcon-logo_5b31acee-79b2-4b99-90c0-ccdfa058e196.png",
+          "brand_logo_width": 100,
+          "banner": "shopify://shop_images/A1pro_banner_m_d04b499b-2a57-4b39-ace5-0f7d9fb7afaf.jpg",
+          "banner_color": "#ffffff",
+          "show_newsletter": true,
+          "title": "Be the first to know",
+          "title_font_size": 24,
+          "title_font_size_mb": 24,
+          "title_color": "#000000",
+          "subtitle": "Subscribe to our newsletter and get an extra 5% discount coupon for your first order!",
+          "subtitle_font_size": 12,
+          "subtitle_color": "#000000",
+          "input_color": "#323232",
+          "terms_text_color": "#848484",
+          "terms_link_color": "#3c3c3c",
+          "btn": "1",
+          "show_social_media": true,
+          "social_media_color": "#ffffff",
+          "show_copyright": true,
+          "copyright_content": "",
+          "copyright_color": "#7e7e7e"
+        }
       }
     },
     "content_for_index": [],

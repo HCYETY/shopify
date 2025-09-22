@@ -25,6 +25,9 @@
             if(params.type) localStorage.setItem('view_type', params.type || 'store');
             
             if(params.code){
+                // 设置loading标识
+                window.oauthLoading = true;
+                
                 const url = 'https://membership.creality.com/personal-center/falcon/internal/getMultiPassTokenByCode'; 
                 try{
                     const res = await fetch(url, {
@@ -40,12 +43,18 @@
                     const {data, code} = await res.json();
                     if(data?.multiPassToken && code == 200){
                         localStorage.setItem('store_userId', data.userId);
+                        // 清除loading标识
+                        window.oauthLoading = false;
                         window.location.href = `/account/login/multipass/${data.multiPassToken}?return_to=/`;
                     }else{
+                        // 清除loading标识
+                        window.oauthLoading = false;
                         window.location.href = `/`;
                     }
                 }catch(e){
                     console.log(e);
+                    // 清除loading标识
+                    window.oauthLoading = false;
                 }
             }else if(params.multiPassToken){
                 window.location.href = `/account/login/multipass/${params.multiPassToken}?return_to=/`;
