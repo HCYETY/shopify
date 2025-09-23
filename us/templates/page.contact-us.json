@@ -1,0 +1,55 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "contact_faq_newsletter": {
+      "type": "contact-faq-newsletter",
+      "settings": {
+        "contact_phone": "+001 626 239 3346",
+        "contact_email": "support@crealityfalcon.com",
+        "background_color": "#f8f9fa",
+        "card_background": "#ffffff",
+        "primary_color": "#007bff",
+        "text_color": "#333333"
+      },
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "From where can I download those software?",
+            "answer": "<p>1. Falcon Design Space (https://www.craftseek.com)</p><p>2. LaserGRBL (https://lasergrbl.com/download/)</p><p>3. LightBurn (https://lightburnsoftware.com/pages/trial-version-try-before-you-buy)</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What warranty and support do you provide?",
+            "answer": "<p>Our laser engravers come with a 1-year-warranty, and we offer online support, tutorials, and spare parts.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is laser engraving environmentally friendly?",
+            "answer": "<p>Laser engraving is eco-friendly when used with safe materials and proper ventilation, producing minimal waste compared to traditional methods.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ]
+    }
+  },
+  "order": [
+    "contact_faq_newsletter"
+  ]
+}

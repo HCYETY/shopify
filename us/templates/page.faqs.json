@@ -1,0 +1,28 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "faq_section": {
+      "type": "faq-section",
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "subheading": "Find answers to common questions about our products and services",
+        "color_bg": "#ffffff",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "color_border": "#dadce0",
+        "color_accent": "#1d80dc"
+      }
+    }
+  },
+  "order": [
+    "faq_section"
+  ]
+}

@@ -1,107 +1,522 @@
 {{- 'faq-section.css' | asset_url | stylesheet_tag -}}
 
-<div class="faq-section section-spacing" style="--color-bg: {{ section.settings.color_bg }}; --color-heading: {{ section.settings.color_heading }}; --color-text: {{ section.settings.color_text }}; --color-border: {{ section.settings.color_border }}; --color-accent: {{ section.settings.color_accent }};">
+<!-- FAQ页面头部区域 -->
+<div class="faq-header-section">
+  <div class="faq-header-content">
+    <div class="faq-header-text">
+      <h1 class="faq-main-title">Frequently Asked Questions</h1>
+      <p class="faq-main-subtitle">Welcome to our FAQ page, where you can find answers to the most commonly asked</p>
+      <p class="faq-main-subtitle">questions about our company, products/services, policies, and more</p>
+    </div>
+  </div>
+</div>
+
+<div class="faq-section section-spacing" style="--faq-color-bg: {{ section.settings.color_bg | default: '#ffffff' }}; --faq-color-heading: {{ section.settings.color_heading | default: '#1a1c1d' }}; --faq-color-text: {{ section.settings.color_text | default: '#2c2d2e' }}; --faq-color-border: {{ section.settings.color_border | default: '#dadce0' }}; --faq-color-accent: {{ section.settings.color_accent | default: '#1d80dc' }};">
   
   <div class="faq-section__content">
-    {% assign categories = section.blocks | where: "type", "faq_category" %}
-    {% assign category_count = categories.size %}
-    
-    {% if category_count > 1 %}
       <!-- 左侧导航菜单 -->
       <div class="faq-navigation">
         <div class="faq-categories">
-          {% for category in categories %}
-            {% assign category_id = 'category_' | append: forloop.index %}
-            <div class="faq-category-item {% if forloop.first %}active{% endif %}" 
-                 data-category="{{ category_id }}" 
-                 onclick="switchFaqCategory('{{ category_id }}')"
-                 style="cursor: pointer;">
-              <span class="category-number">{{ forloop.index }}</span>
-              <span class="category-name">{{ category.settings.category_name }}</span>
+        <div class="faq-category-item active" data-category="category_1" onclick="switchFaqCategory('category_1')" style="cursor: pointer;">
+          <span class="category-number">1</span>
+          <span class="category-name">General Questions</span>
+        </div>
+        <div class="faq-category-item" data-category="category_2" onclick="switchFaqCategory('category_2')" style="cursor: pointer;">
+          <span class="category-number">2</span>
+          <span class="category-name">Products/Services Questions</span>
+        </div>
+        <div class="faq-category-item" data-category="category_3" onclick="switchFaqCategory('category_3')" style="cursor: pointer;">
+          <span class="category-number">3</span>
+          <span class="category-name">Account Questions</span>
+        </div>
+        <div class="faq-category-item" data-category="category_4" onclick="switchFaqCategory('category_4')" style="cursor: pointer;">
+          <span class="category-number">4</span>
+          <span class="category-name">Technical Questions</span>
+        </div>
+        <div class="faq-category-item" data-category="category_5" onclick="switchFaqCategory('category_5')" style="cursor: pointer;">
+          <span class="category-number">5</span>
+          <span class="category-name">Contact Questions</span>
+        </div>
+        <div class="faq-category-item" data-category="category_6" onclick="switchFaqCategory('category_6')" style="cursor: pointer;">
+          <span class="category-number">6</span>
+          <span class="category-name">Refund & Return Questions</span>
             </div>
-          {% endfor %}
+        <div class="faq-category-item" data-category="category_7" onclick="switchFaqCategory('category_7')" style="cursor: pointer;">
+          <span class="category-number">7</span>
+          <span class="category-name">How-to Tutorials</span>
         </div>
       </div>
-    {% endif %}
+    </div>
 
     <!-- 右侧内容区域 -->
-    <div class="faq-content {% if category_count <= 1 %}single-category{% endif %}">
-      {% for category in categories %}
-        {% assign category_id = 'category_' | append: forloop.index %}
-        <div class="faq-category-content {% if forloop.first %}active{% endif %}" id="content-{{ category_id }}">
-          
-          
-          {% comment %} 直接处理标题分组 {% endcomment %}
-          {% assign found_titles = false %}
-          {% for title_block in section.blocks %}
-            {% if title_block.type == "faq_title" and title_block.settings.category_id == category.settings.category_id %}
-              {% assign found_titles = true %}
-              <div class="faq-title-section">
-                <h3 class="faq-section-title">{{ title_block.settings.title }}</h3>
-                
-                <div class="faq-questions">
-                  {% comment %} 显示该标题下的所有问答 - 使用动态问答块 {% endcomment %}
-                  {% assign has_questions = false %}
-                  
-                  {% comment %} 显示属于当前标题分组的问答块 {% endcomment %}
-                  {% for qa_block in section.blocks %}
-                    {% if qa_block.type == "faq_question" and qa_block.settings.title_id == title_block.settings.title_id %}
-                      <div class="faq-item">
-                        <div class="faq-question">
-                          <span class="question-text"><strong>Q: "{{ qa_block.settings.question }}"</strong></span>
-                        </div>
-                        <div class="faq-answer">
-                          <p>{{ qa_block.settings.answer | strip_html }}</p>
-                        </div>
-                      </div>
-                      {% assign has_questions = true %}
-                    {% endif %}
-                  {% endfor %}
-                  
-                  {% if has_questions == false %}
-                    <div class="no-questions">
-                      <p>暂无相关问题</p>
-                    </div>
-                  {% endif %}
-                </div>
+    <div class="faq-content">
+      <!-- General Questions -->
+      <div class="faq-category-content active" id="content-category_1">
+        <div class="faq-title-section">
+          <h3 class="faq-section-title">1. Pre-sale Questions</h3>
+          <div class="faq-questions">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "Do you offer any special pricing for bulk orders?"</span>
               </div>
-            {% endif %}
-          {% endfor %}
-          
-          {% if found_titles == false %}
-            {% comment %} 如果没有标题分组，显示分类标题和独立问题 {% endcomment %}
-            <div class="faq-title-section">
-              <h3 class="faq-section-title">
-                {% if category.settings.category_title != blank %}
-                  {{ category.settings.category_title }}
-                {% else %}
-                  {{ category.settings.category_name }}
-                {% endif %}
-              </h3>
-              
-              <div class="faq-questions">
-                {% assign category_questions = section.blocks | where: "type", "faq_question" | where: "settings.category_id", category.settings.category_id %}
-                {% for question_block in category_questions %}
-                  <div class="faq-item">
-                    <div class="faq-question">
-                      <span class="question-text"><strong>Q: "{{ question_block.settings.question }}"</strong></span>
-                    </div>
-                    <div class="faq-answer">
-                      <p>{{ question_block.settings.answer | strip_html }}</p>
-                    </div>
-                  </div>
-                {% endfor %}
-                
-                {% if category_questions.size == 0 %}
-                  <div class="no-questions">
-                    <p>暂无相关问题</p>
-                  </div>
-                {% endif %}
+              <div class="faq-answer">
+                <p>Yes, we have separate discounts for bulk purchases. Discounts will be given for purchases of more than 5 machines and more than 15 accessories or consumables of the same model. Please contact our customer service for specific discount gradients.</p>
               </div>
             </div>
-          {% endif %}
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "How does this product compare to similar products on the market?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>Our brand offers a unique appeal in the realm of carving machines. We stand out by providing machines at various price points, catering to beginners and enthusiasts alike. With a range of products spanning multiple price ranges, customers can choose according to their needs.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "What payment methods do you accept?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>We accept a variety of payment methods including credit cards, shop pay, PayPal and more. You can choose the payment method that works best for you at checkout.</p>
+              </div>
+            </div>
+          </div>
         </div>
-      {% endfor %}
+        
+        <div class="faq-title-section">
+          <h3 class="faq-section-title">2. Device Questions</h3>
+          <div class="faq-questions">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "What will happen when the device loses power during operation?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>When the device loses power while performing an engraving task, the laser head stays in place. When the device is powered on again, it initializes and does not continue to perform the original task.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "Why is the engraved pattern so different from the original drawing"</span>
+              </div>
+              <div class="faq-answer">
+                <p>(e.g., straight lines are not straight, crooked)? Please check whether the screws of the device have been tightened, and whether the belt is properly loosened. Judgment method:1. When the laser module is under the action of gravity, it can be exactly perpendicular to the desktop of the X-axis profile slowly gliding;.2. when any of the pulleys in the laser head assembly have no empty sliding;3. the tightness of the belt.4. the belt is properly elasticized; otherwise, please adjust the belt elasticity manually.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "How do I focus the unit?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>Place the multi-stage focusing bar between the laser module and the processed material, follow the laser engraving on the surface of the focusing bar to make the bottom of the laser module's eyecup contact with the corresponding position of the multi-stage focusing bar, and then finally use the hand screw on the right side to lock it.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "What should I do if the buzzer emits a sharp alarm sound?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>1. During the working process, if the device overturns or moves, the device will turn off the laser, the motor stops moving, the indicator light blinks, and the buzzer emits a sharp alarm sound at the same time. Please check the status of the device, clear the abnormality and press the button to restart.</p>
+                <p>2. Destruction of the confined space during the working process of the device will also generate an alarm sound and stop working. After restoring the confined space, please press the button to restart.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "When the device is working, the beeper suddenly emits a "drop" sound and then stops working, how to deal with it?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>When the laser module exceeds the working range of the device, the limit switch of the device will be triggered and the buzzer will alarm and stop working. At this time, you need to adjust the laser module position and check the graphic size.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "How does the tightness of the synchronous belt of the equipment affect the engraving or cutting effect?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>The engraved image will be distorted with obvious misalignment: e.g. a square circle becomes an ellipse.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products/Services Questions -->
+      <div class="faq-category-content" id="content-category_2">
+              <div class="faq-title-section">
+          <h3 class="faq-section-title">1. Engraving and Cutting Questions</h3>
+                <div class="faq-questions">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "What materials can be engraved or cut by laser engraving machine?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>Engraving: cardboard, wood, bamboo, rubber sheet, leather, fabric, acrylic, lacquered metal, plastic and so on;Cutting: cardboard, wood panels, bamboo panels, cloth, leather, fabric, acrylic (can not cut transparent acrylic), plastics, etc.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "Can you engrave on curved materials?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes, but the curvature of the material as well as the area of the engraved image is not easy to be too big, otherwise there will be slight deformation.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "Can I engrave on reflective/transparent materials such as ceramic/glass?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes, but you need to coat the surface of the material with anti-reflective material before engraving to ensure the engraving effect and prevent the reflected light from damaging the laser module.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "Why is there a big difference in the processing effect of the same material with different colors using the same G-code file?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>Different color materials will have different optical properties, the absorption and reflection of laser energy are different. It is recommended to set different power and speed in the software when engraving the same material with different colors.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "There is a lot of soot on the material after cutting. How to deal with it?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>Please reduce the laser power appropriately, speed up the speed and use the air-assisted kit.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "Why the cutting does not penetrate the material?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>A. Make sure the equipment and engraving material are parallel to the working table;</p>
+                <p>B. Make sure the protective lens of the laser module is clean;</p>
+                <p>C. Ensure that the unit is properly focused as described in the Quick Start Guide;</p>
+                <p>D. Reconfirm the material thickness and refer to the recommended parameters in the supplied literature for settings;</p>
+                <p>E. Gradually increase the number of cuts or reduce the cutting speed appropriately;</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "How should I use the air assist?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>It is recommended to turn on a weak air flow when engraving and a larger air flow when cutting (the effect depends on the specific material).The main role of air-assisted equipment:</p>
+                <p>A. Effectively blow away the smoke and dust generated during the cutting process, protect the laser module lens, and ensure the stability of laser energy;</p>
+                <p>B. Rapidly reduce the surface temperature of the cutting material, blow away the high temperature soot, keep the material surface clean, make the cutting edge more flat and delicate.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-title-section">
+          <h3 class="faq-section-title">2. Software Questions</h3>
+          <div class="faq-questions">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "What software does the CR-Laser Falcon laser engraver support?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>LaserGRBL (free) - real time</p>
+                <p>LightBurn (paid) - real-time/offline 30-day trial period</p>
+                <p>Real-time engraving note that the computer does not lag, can not enter standby mode (do not lock the screen), so as not to affect the engraving.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "From where can I download those software?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>LaserGRBL（https://lasergrbl.com/download/）</p>
+                <p>LightBurn（https://lightburnsoftware.com/pages/trial-version-try-before-you-buy）</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "What image formats does the software support?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>LaserGRBL（bmp/png/jpg/gif/svg）</p>
+                <p>LightBurn（bmp/png/jpg/jpeg/gif/tif/tiff/tga/ai/pdf/sc/dxf/hpgl/plt/rd/svg）</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "Where can I get software related tutorials?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>LaserGRBL（https://lasergrbl.com/usage/）</p>
+                <p>LightBurn（https://lightburnsoftware.github.io/NewDocs/）</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "What should I do if I can't recognize the COM port of my engraving machine in WIN7 system?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>Unzip the Drivers for Win7 in the package, and enter the device manager to install it manually.</p>
+              </div>
+            </div>
+                      <div class="faq-item">
+                        <div class="faq-question">
+                <span class="question-text">Q: "What should I do if the software is not responding or not connecting when engraving online?"</span>
+                        </div>
+                        <div class="faq-answer">
+                <p>A. Make sure the data cable has a communication function and that the end of the cable connected to the computer has a USB-A port. If the computer does not have a USB-A port, you will need to use an A to C adapter to convert it, or use a hub with a USB-A port.</p>
+                <p>B. Ensure that the Creality Falcon2.lbdev file has been successfully imported according to the LightBurn software tutorial on the TF card.</p>
+                <p>C. Make sure the COM port of the engraver is not occupied.</p>
+                <p>D. If you still can't connect, please record a small video of the connection operation, and feedback the relevant system information and software version number, so that you can troubleshoot the problem more quickly.</p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+                        </div>
+                      </div>
+
+      <!-- Account Questions -->
+      <div class="faq-category-content" id="content-category_3">
+        <div class="faq-title-section">
+          <h3 class="faq-section-title">1. Account registration, sign in, password & linked accounts</h3>
+          <div class="faq-questions">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Resetting Your Password</span>
+              </div>
+              <div class="faq-answer">
+                <p>If you have forgotten your password, click the "Forgot password?" link on the Sign In screen. Enter your email address, and we will send you a link to reset your password.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Changing Your Login Email Address or Password</span>
+              </div>
+              <div class="faq-answer">
+                <p>You can change your account email address and password on the Account Information page. All your email subscriptions and order confirmations will be sent to your new email address.</p>
+              </div>
+                    </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Viewing Your Linked Accounts</span>
+                </div>
+              <div class="faq-answer">
+                <p>If you've linked your Beauty Insider and Kohl's accounts on kohls.com you will be able to see your linked account status on the Account Information page. You can also unlink your Kohl's account by clicking Unlink.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Questions -->
+      <div class="faq-category-content" id="content-category_4">
+            <div class="faq-title-section">
+          <h3 class="faq-section-title">Download FAQs</h3>
+              <div class="faq-questions">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "Which firmware version should I download for my CrealityFalcon engraver?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>Please download the latest firmware version available on the CrealityFalcon support page to ensure compatibility and access to the latest features and improvements.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "How do I update the firmware on my CrealityFalcon engraver?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>Follow the step-by-step instructions provided in the firmware download package or user manual to safely update your CrealityFalcon printer's firmware.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "Can I revert to a previous firmware version if needed?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes, previous firmware versions are usually available for download on our support page. Ensure compatibility with your specific printer model before proceeding with the downgrade.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "Is it necessary to update the firmware regularly?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>Regular firmware updates can enhance printer performance, introduce new features, and address potential issues. We recommend checking for updates periodically to optimize your printing experience.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "What should I do if I encounter issues after updating the firmware?"</span>
+              </div>
+              <div class="faq-answer">
+                <p>If you experience any issues after updating the firmware, please ensure you followed the update instructions correctly. You can also check our troubleshooting guides or contact CrealityFalcon support for assistance. Email to: support@crealityfalcon.com</p>
+              </div>
+            </div>
+                  <div class="faq-item">
+                    <div class="faq-question">
+                <span class="question-text">Q: "Do I need special software to update the firmware?"</span>
+                    </div>
+                    <div class="faq-answer">
+                <p>Typically, firmware updates can be performed using a USB drive or through the printer's control interface. Specific instructions and necessary software tools, if any, will be included in the firmware download package or user manual.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Questions -->
+      <div class="faq-category-content" id="content-category_5">
+        <div class="faq-title-section">
+          <h3 class="faq-section-title">Contact Questions</h3>
+          <div class="faq-questions">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Call us</span>
+              </div>
+              <div class="faq-answer">
+                <br><p>+001 626 239 3346</p>
+                <br><p style="color: #000">Mail to: support@crealityfalcon.com</p>
+                <br><p><b style="color: #000">MON-FRI</b>: 9am to 6pm PT </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Chat with us</span>
+              </div>
+              <div class="faq-answer">
+                <br><p>Click on the orange button chat now in the bottom left corner of the page. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Refund & Return Questions -->
+      <div class="faq-category-content" id="content-category_6">
+        <div class="faq-title-section">
+          <h3 class="faq-section-title">Refund & Return Questions</h3>
+          <div class="faq-questions">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "How to get after-sales service?"</span>
+              </div>
+              <div class="faq-answer">
+                <div>
+                  <br><p>It’s ensured by Creality Falcon that under normal use, the Creality Falcon products you purchase will be free from defects in material and workmanship during the warranty period.</p>
+                </div><br>
+                <div>
+                  <p>During the warranty period, if the product cannot achieve the guaranteed function, please contact the after-sales service channel of Creality Falcon to obtain the corresponding after-sales service.</p>
+                </div><br>
+                <div>
+                  <p>After-sales service channel information:</p>
+                  <p>Mail: support@crealityfalcon.com</p>
+                  <p>Let us know what we can do for you by emailing us your order ID, breakdown information and pictures or videos </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Solutions Provided by Creality Falcon</span>
+              </div>
+              <div class="faq-answer">
+              <div>
+                <br><p>When contacting CrealityFalcon technical support, please provide detailed product information, purchase details, a fault description, and pictures/videos of the issue.</p>
+              </div><br>
+              <div>
+                <p>Our engineers will assist via phone, email, or remote support.</p>
+              </div><br>
+              <div>
+                <p>For returns, exchanges, or warranty services:</p>
+                <p>If the issue is not due to the engraver, customers bear transportation costs, including potential taxes for returns to China.</p>
+                <p>If a package is refused or returned for personal reasons (in original condition), the customer covers shipping and return fees.</p>
+              </div><br>
+              <div>
+                <p>Refunds are processed within 15 business days after the fulfillment center receives the return, with 3–5 days for the amount to reflect in your account.</p>
+              </div><br>
+              <div>
+                <p>Warranty services are provided per the product’s specified coverage.</p>
+              </div>
+            </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">You can apply for a return if you meet the following conditions:</span>
+              </div>
+              <div class="faq-answer">
+                <br><p>√ Within 14 natural days after the customer receives the goods, the product packaging, accessories, gifts, and instructions are complete, and there is no artificial damage, and it has not been activated for use, which does not affect the secondary sales;</p>
+                <p>√ Within 14 natural days after the customer receives the goods, it is found that the product has a performance failure that is not artificially damaged.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">An exchange may be requested if one of the following conditions is met:</span>
+              </div>
+              <div class="faq-answer">
+                <br><p>√ The customer finds that the product has been damaged during transportation within 30 natural days after receiving the goods and can provide the certificate of damage to the goods provided by the transportation company;</p>
+                <p>√ The customer finds that the product is seriously inconsistent with the original product description in one or more important aspects within 30 natural days after receiving the goods;</p>
+                <p>√ Within 30 natural days after the customer receives the goods, it is found that the product has a performance failure that is not artificially damaged.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: Will the shipping cost be deducted from my refund?</span>
+              </div>
+              <div class="faq-answer">
+                <br><p>If there is a shipping cost incurred at the time of purchase, the shipping cost incurred at the time of purchase will be deducted from the refund, if there is no shipping cost incurred at the time of purchase, a full refund will be made.</p>
+              </div>
+            </div>
+          </div>
+                    </div>
+                  </div>
+
+      <!-- How-to Tutorials -->
+      <div class="faq-category-content" id="content-category_7">
+        <div class="faq-title-section">
+          <h3 class="faq-section-title">How-to Tutorials</h3>
+          <div class="faq-questions">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "How do I set up my laser engraver for the first time?"</span>
+              </div>
+              <div class="faq-answer">
+                <br><p>Follow our product user's manual step-by-step setup tutorial to assemble, connect, and configure your laser engraver.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "What are the recommended settings for different materials?"</span>
+              </div>
+              <div class="faq-answer">
+                <br><p>Check our tutorials for material-specific power, speed, and focus adjustments.</p><br>
+                <p><a href="https://www.crealityfalcon.com/blogs/crealityfalcon-tutorial">https://www.crealityfalcon.com/blogs/crealityfalcon-tutorial</a></p>
+                <p><a href="https://www.crealityfalcon.com/blogs/product-tutorials-and-support">https://www.crealityfalcon.com/blogs/product-tutorials-and-support</a></p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "How do I create custom designs for engraving?"</span>
+              </div>
+              <div class="faq-answer">
+                <br><p>Use our design software tutorials to import, edit, and prepare files for engraving.<a href="https://www.craftseek.com/">https://www.craftseek.com/</a></p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "How do I optimize engraving speed and efficiency?"</span>
+              </div>
+              <div class="faq-answer">
+                <br><p>Explore tips in our tutorials to adjust machine settings for faster, high-quality results.<br/><a href="https://www.crealityfalcon.com/blogs/falcon-news">https://www.crealityfalcon.com/blogs/falcon-news</a></p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="question-text">Q: "How do I update the firmware or software of my engraver?"</span>
+                  </div>
+              <div class="faq-answer">
+                <br><p>Follow our guide for downloading and installing the latest firmware or software updates.<br/><a href="https://www.craftseek.com/">https://www.craftseek.com/</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -179,8 +594,6 @@ class FaqManager {
       faqContent.scrollTop = 0;
     }
   }
-
-  // 不再需要折叠功能
 }
 
 // 全局函数，保持向后兼容
@@ -189,8 +602,6 @@ function switchFaqCategory(categoryId) {
     window.faqManager.switchFaqCategory(categoryId);
   }
 }
-
-// 不再需要折叠功能
 
 // 页面加载完成后初始化FAQ状态
 document.addEventListener('DOMContentLoaded', function() {
@@ -213,6 +624,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+
 {% schema %}
 {
   "name": "FAQ 常见问题",
@@ -230,49 +642,6 @@ document.addEventListener('DOMContentLoaded', function() {
       "label": "副标题",
       "info": "可选，显示在主标题下方",
       "default": "Find answers to common questions about our products and services"
-    },
-    {
-      "type": "header",
-      "content": "布局设置"
-    },
-    {
-      "type": "select",
-      "id": "layout_style",
-      "label": "布局样式",
-      "options": [
-        {
-          "value": "sidebar",
-          "label": "侧边栏布局"
-        },
-        {
-          "value": "tabs",
-          "label": "标签页布局"
-        },
-        {
-          "value": "accordion",
-          "label": "手风琴布局"
-        }
-      ],
-      "default": "sidebar"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_category_numbers",
-      "label": "显示分类编号",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_question_numbers",
-      "label": "显示问题编号",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "debug_mode",
-      "label": "调试模式",
-      "info": "开启后显示调试信息，帮助排查问题",
-      "default": false
     },
     {
       "type": "header",
@@ -309,256 +678,9 @@ document.addEventListener('DOMContentLoaded', function() {
       "default": "#1d80dc"
     }
   ],
-  "blocks": [
-    {
-      "type": "faq_category",
-      "name": "FAQ分类",
-      "settings": [
-        {
-          "type": "text",
-          "id": "category_id",
-          "label": "分类ID",
-          "info": "用于关联问题，请使用英文和数字",
-          "default": "general_category"
-        },
-        {
-          "type": "text",
-          "id": "category_name",
-          "label": "分类名称",
-          "default": "常见问题"
-        },
-        {
-          "type": "text",
-          "id": "category_title",
-          "label": "分类标题",
-          "info": "可选，显示在分类内容顶部"
-        },
-        {
-          "type": "textarea",
-          "id": "category_description",
-          "label": "分类描述",
-          "info": "可选，显示在分类标题下方"
-        },
-        {
-          "type": "text",
-          "id": "category_icon",
-          "label": "分类图标",
-          "info": "可选，显示在分类名称旁边（如：📦、💡等）"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_more_link",
-          "label": "显示更多链接",
-          "default": false
-        },
-        {
-          "type": "text",
-          "id": "more_link_text",
-          "label": "更多链接文字",
-          "default": "查看更多"
-        },
-        {
-          "type": "url",
-          "id": "more_link_url",
-          "label": "更多链接地址"
-        }
-      ]
-    },
-    {
-      "type": "faq_title",
-      "name": "FAQ标题分组",
-      "settings": [
-        {
-          "type": "text",
-          "id": "category_id",
-          "label": "所属分类ID",
-          "info": "必须与分类的category_id匹配",
-          "default": "general_category"
-        },
-        {
-          "type": "text",
-          "id": "title_id",
-          "label": "标题ID",
-          "info": "用于关联问题，请使用英文和数字",
-          "default": "title_1"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "标题",
-          "default": "1. Pre-sale Questions"
-        },
-      ]
-    },
-    {
-      "type": "faq_question",
-      "name": "FAQ问题",
-      "settings": [
-        {
-          "type": "text",
-          "id": "category_id",
-          "label": "所属分类ID",
-          "info": "必须与分类的category_id匹配",
-          "default": "general_category"
-        },
-        {
-          "type": "text",
-          "id": "title_id",
-          "label": "所属标题ID",
-          "info": "必须与标题分组的title_id匹配",
-          "default": "title_1"
-        },
-        {
-          "type": "text",
-          "id": "question",
-          "label": "问题",
-          "default": "这是一个常见问题吗？"
-        },
-        {
-          "type": "richtext",
-          "id": "answer",
-          "label": "答案",
-          "info": "支持富文本格式"
-        }
-      ]
-    }
-  ],
   "presets": [
     {
-      "name": "FAQ 常见问题",
-      "blocks": [
-        {
-          "type": "faq_category",
-          "settings": {
-            "category_id": "general_category",
-            "category_name": "General Questions",
-            "category_title": "1. Pre-sale Questions",
-            "category_description": "售前相关问题解答",
-            "category_icon": "❓"
-          }
-        },
-        {
-          "type": "faq_category",
-          "settings": {
-            "category_id": "products_category",
-            "category_name": "Products/Services Questions",
-            "category_title": "2. Device Questions",
-            "category_description": "产品设备相关问题",
-            "category_icon": "🔧"
-          }
-        },
-        {
-          "type": "faq_category",
-          "settings": {
-            "category_id": "account_category",
-            "category_name": "Account Questions",
-            "category_title": "3. Account Management",
-            "category_description": "账户管理相关问题",
-            "category_icon": "👤"
-          }
-        },
-        {
-          "type": "faq_category",
-          "settings": {
-            "category_id": "technical_category",
-            "category_name": "Technical Questions",
-            "category_title": "4. Technical Support",
-            "category_description": "技术支持相关问题",
-            "category_icon": "⚙️"
-          }
-        },
-        {
-          "type": "faq_category",
-          "settings": {
-            "category_id": "contact_category",
-            "category_name": "Contact Questions",
-            "category_title": "5. Contact Information",
-            "category_description": "联系方式相关问题",
-            "category_icon": "📞"
-          }
-        },
-        {
-          "type": "faq_category",
-          "settings": {
-            "category_id": "returns_category",
-            "category_name": "Refund & Return Questions",
-            "category_title": "6. Refund & Return Policy",
-            "category_description": "退换货政策相关问题",
-            "category_icon": "🔄"
-          }
-        },
-        {
-          "type": "faq_category",
-          "settings": {
-            "category_id": "tutorials_category",
-            "category_name": "How-to Tutorials",
-            "category_title": "7. How-to Tutorials",
-            "category_description": "使用教程和指南",
-            "category_icon": "📚"
-          }
-        },
-        {
-          "type": "faq_title",
-          "settings": {
-            "category_id": "general_category",
-            "title_id": "presale_title",
-            "title": "1. Pre-sale Questions",
-          }
-        },
-        {
-          "type": "faq_title",
-          "settings": {
-            "category_id": "products_category",
-            "title_id": "device_title",
-            "title": "2. Device Questions",
-          }
-        },
-        {
-          "type": "faq_question",
-          "settings": {
-            "category_id": "general_category",
-            "title_id": "presale_title",
-            "question": "Do you offer any special pricing for bulk orders?",
-            "answer": "<p>Yes, discounts are available for purchases of more than 5 machines and more than 15 accessories or consumables of the same model. Please contact our customer service for specific discount gradients.</p>",
-          }
-        },
-        {
-          "type": "faq_question",
-          "settings": {
-            "category_id": "general_category",
-            "title_id": "presale_title",
-            "question": "How does this product compare to similar products on the market?",
-            "answer": "<p>Our brand offers a unique appeal in the realm of carving machines. We stand out by providing machines at various price points, catering to beginners and enthusiasts alike. With a range of products spanning multiple price ranges, customers can choose according to their needs.</p>",
-          }
-        },
-        {
-          "type": "faq_question",
-          "settings": {
-            "category_id": "general_category",
-            "title_id": "presale_title",
-            "question": "What payment methods do you accept?",
-            "answer": "<p>A variety of payment methods are accepted, including credit cards, Shop Pay, PayPal, and more, with customers able to choose their preferred method at checkout.</p>",
-          }
-        },
-        {
-          "type": "faq_question",
-          "settings": {
-            "category_id": "products_category",
-            "title_id": "device_title",
-            "question": "What will happen when the device loses power during operation?",
-            "answer": "<p>If the device loses power during an engraving task, the laser head remains in place. Upon powering on again, it initializes but does not resume the original task.</p>",
-          }
-        },
-        {
-          "type": "faq_question",
-          "settings": {
-            "category_id": "products_category",
-            "title_id": "device_title",
-            "question": "Why is the engraved pattern so different from the original drawing?",
-            "answer": "<p>Several factors can affect the final engraved pattern: material properties, power settings, speed settings, focus distance, and file resolution. Please ensure your settings match the material specifications and use high-quality source files.</p>",
-          }
-        }
-      ]
+      "name": "FAQ 常见问题"
     }
   ],
   "enabled_on": {

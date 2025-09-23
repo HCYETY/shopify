@@ -1,14 +1,15 @@
-.contact-faq-newsletter-section {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+.contact-faq-newsletter-section-container {
+  background: url(https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-7sPrLJzCGhlines.png?v=1704420802) no-repeat scroll top center / cover #f6f6f7;
+  clear: both;
   min-height: 100vh;
-  padding: 60px 0;
+  padding: 90px 0;
   position: relative;
   overflow: hidden;
   font-family: Montserrat, sans-serif;
   box-sizing: border-box;
 }
 
-.contact-faq-newsletter-section::before {
+.contact-faq-newsletter-section-container::before {
   content: '';
   position: absolute;
   top: 0;
@@ -23,31 +24,29 @@
   z-index: 0;
 }
 
-.contact-faq-newsletter-section .container {
-  max-width: 1200px;
+.contact-faq-newsletter-section-container .contact-faq-newsletter-section {
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px;
   position: relative;
   z-index: 1;
   font-family: inherit;
 }
 
 /* 联系表单卡片 */
-.contact-faq-newsletter-section .contact-card {
+.contact-faq-newsletter-section-container .contact-card {
   background: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  padding: 50px 60px;
+  padding: 90px 90px 90px 70px;
   margin-bottom: 50px;
   font-family: inherit;
   position: relative;
 }
 
-.contact-faq-newsletter-section .contact-header {
+.contact-faq-newsletter-section-container .contact-header {
   margin-bottom: 40px;
 }
 
-.contact-faq-newsletter-section .contact-label {
+.contact-faq-newsletter-section-container .contact-label {
   font-family: inherit;
       font-weight: 500;
     font-size: 16px;
@@ -61,20 +60,20 @@
         color: #14a9de;
 }
 
-.contact-faq-newsletter-section .contact-title {
+.contact-faq-newsletter-section-container .contact-title {
   font-family: inherit;
   background: linear-gradient(180deg, #19e4ff, #8c1aff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
         font-weight: 600;
-    font-size: 60px;
+    font-size: 70px;
     font-family: Montserrat, sans-serif;
     line-height: 1.25em;
     letter-spacing: 0px;
     margin-top: 10px;
 }
 
-.contact-faq-newsletter-section .contact-subtitle {
+.contact-faq-newsletter-section-container .contact-subtitle {
   color: #000000a3;
   font-family: inherit;
   font-size: 16px;
@@ -84,7 +83,7 @@
         margin-top: 20px;
 }
 
-.contact-faq-newsletter-section .contact-content {
+.contact-faq-newsletter-section-container .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
@@ -92,16 +91,16 @@
   min-height: 500px;
 }
 
-.contact-faq-newsletter-section .contact-info {
-  padding: 80px 60px;
+.contact-faq-newsletter-section-container .contact-info {
+  padding: 60px 60px 20px 20px;
 }
 
-.contact-faq-newsletter-section .contact-item {
+.contact-faq-newsletter-section-container .contact-item {
   display: flex;
   align-items: start;
 }
 
-.contact-faq-newsletter-section .contact-icon {
+.contact-faq-newsletter-section-container .contact-icon {
   width: 32px;
   height: 32px;
   color: #14a9de;
@@ -109,7 +108,7 @@
   flex-shrink: 0;
 }
 
-.contact-faq-newsletter-section .contact-text {
+.contact-faq-newsletter-section-container .contact-text {
   font-size: 20px;
     font-weight: 500;
     line-height: 1.5em;
@@ -123,7 +122,7 @@
   margin-bottom: 10px;
 }
 
-.contact-faq-newsletter-section .contact-details > a {
+.contact-faq-newsletter-section-container .contact-details > a {
   font-size: 14px;
     line-height: 1.5em;
     font-weight: 500;
@@ -135,12 +134,12 @@
     color: #0000007a;
 }
 
-.contact-faq-newsletter-section .contact-details > a:hover {
+.contact-faq-newsletter-section-container .contact-details > a:hover {
   text-decoration: underline;
 }
 
-.contact-faq-newsletter-section .contact-phone,
-.contact-faq-newsletter-section .contact-email {
+.contact-faq-newsletter-section-container .contact-phone,
+.contact-faq-newsletter-section-container .contact-email {
   color: #4a4a4a;
   font-size: 1rem;
   margin-bottom: 8px;
@@ -149,7 +148,7 @@
   font-weight: 400;
 }
 
-.contact-faq-newsletter-section .contact-form-wrapper {
+.contact-faq-newsletter-section-container .contact-form-wrapper {
   background: #ffffff;
   padding: 50px 32px 32px 92px;
   display: flex;
@@ -159,20 +158,20 @@
   min-height: 500px;
 }
 
-.contact-faq-newsletter-section .contact-form {
+.contact-faq-newsletter-section-container .contact-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
       row-gap: 16px;
 }
 
-.contact-faq-newsletter-section .form-group {
+.contact-faq-newsletter-section-container .form-group {
   display: flex;
   flex-direction: column;
 }
 
-.contact-faq-newsletter-section .form-input,
-.contact-faq-newsletter-section .form-textarea {
+.contact-faq-newsletter-section-container .form-input,
+.contact-faq-newsletter-section-container .form-textarea {
   background: #f8f9fa;
   text-align: left;
     font-weight: 500;
@@ -192,21 +191,21 @@
     margin: 0;
 }
 
-.contact-faq-newsletter-section .form-input:focus,
-.contact-faq-newsletter-section .form-textarea:focus {
+.contact-faq-newsletter-section-container .form-input:focus,
+.contact-faq-newsletter-section-container .form-textarea:focus {
   background: #e5e7eb;
 }
 
-.contact-faq-newsletter-section .form-input::placeholder,
-.contact-faq-newsletter-section .form-textarea::placeholder {
+.contact-faq-newsletter-section-container .form-input::placeholder,
+.contact-faq-newsletter-section-container .form-textarea::placeholder {
   color: #999999;
 }
 
-.contact-faq-newsletter-section .form-textarea {
+.contact-faq-newsletter-section-container .form-textarea {
   min-height: 140px;
 }
 
-.contact-faq-newsletter-section .submit-btn {
+.contact-faq-newsletter-section-container .submit-btn {
   align-self: center;
     justify-content: center;
     font-family: Montserrat, sans-serif;
@@ -224,53 +223,53 @@
     padding: 17px 20px;
 }
 
-.contact-faq-newsletter-section .submit-btn:hover {
+.contact-faq-newsletter-section-container .submit-btn:hover {
   background: #232323;
 }
 
-.contact-faq-newsletter-section .form-disclaimer {
+.contact-faq-newsletter-section-container .form-disclaimer {
 font-family: Montserrat, sans-serif;
     font-size: 14px;
     margin-top: 10px;
 }
 
-.contact-faq-newsletter-section .form-header {
+.contact-faq-newsletter-section-container .form-header {
   margin-bottom: 30px;
 }
 
-.contact-faq-newsletter-section .contact-logo {
+.contact-faq-newsletter-section-container .contact-logo {
   margin-bottom: 15px;
 }
 
-.contact-faq-newsletter-section .logo-image {
+.contact-faq-newsletter-section-container .logo-image {
   width: 40%;
   height: auto;
   display: block;
 }
 
-.contact-faq-newsletter-section .logo-line {
+.contact-faq-newsletter-section-container .logo-line {
   width: 100%;
   height: 1px;
   background-color: #e0e0e0;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 /* FAQ 卡片 */
-.contact-faq-newsletter-section .faq-card {
+.contact-faq-newsletter-section-container .faq-card {
     max-width: 680px;
-    margin: 45px auto;
+    margin: 45px auto 90px;
     position: relative;
     overflow: hidden;
     font-family: inherit;
     padding: 20px;
 }
 
-.contact-faq-newsletter-section .faq-header {
+.contact-faq-newsletter-section-container .faq-header {
   margin-bottom: 40px;
   text-align: center;
 }
 
-.contact-faq-newsletter-section .faq-label {
+.contact-faq-newsletter-section-container .faq-label {
   font-size: 16px;
   font-weight: 600;
   color: #14a9de;
@@ -283,16 +282,17 @@ font-family: Montserrat, sans-serif;
   display: inline-block;
 }
 
-.contact-faq-newsletter-section .faq-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #2c3e50;
+.contact-faq-newsletter-section-container .faq-title {
+  color: #232323;
   margin-top: 12px;
-  line-height: 1.1;
   font-family: inherit;
+  font-weight: 500;
+    font-size: 40px;
+    line-height: 1.25em;
+    letter-spacing: 0px;
 }
 
-.contact-faq-newsletter-section .faq-content {
+.contact-faq-newsletter-section-container .faq-content {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -300,14 +300,14 @@ font-family: Montserrat, sans-serif;
   margin: 0 auto;
 }
 
-.contact-faq-newsletter-section .faq-item {
+.contact-faq-newsletter-section-container .faq-item {
   border: 1px solid #DBDBDB;
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.5s ease;
 }
 
-.contact-faq-newsletter-section .faq-question {
+.contact-faq-newsletter-section-container .faq-question {
   padding: 16px;
   cursor: pointer;
   display: flex;
@@ -317,7 +317,7 @@ font-family: Montserrat, sans-serif;
   position: relative;
 }
 
-.contact-faq-newsletter-section .faq-question-text {
+.contact-faq-newsletter-section-container .faq-question-text {
   flex: 1;
   font-family: inherit;
   font-size: 16px;
@@ -330,7 +330,7 @@ font-family: Montserrat, sans-serif;
     color: #000;
 }
 
-.contact-faq-newsletter-section .faq-icon {
+.contact-faq-newsletter-section-container .faq-icon {
   position: relative;
   width: 14px;
   height: 14px;
@@ -343,44 +343,44 @@ font-family: Montserrat, sans-serif;
   color: #000;
 }
 
-.contact-faq-newsletter-section .faq-icon svg {
+.contact-faq-newsletter-section-container .faq-icon svg {
   width: 14px;
   height: 14px;
   position: absolute;
   transition: all 0.5s ease;
 }
 
-.contact-faq-newsletter-section .faq-icon-plus {
+.contact-faq-newsletter-section-container .faq-icon-plus {
   opacity: 1;
   transform: rotate(0deg);
 }
 
-.contact-faq-newsletter-section .faq-icon-minus {
+.contact-faq-newsletter-section-container .faq-icon-minus {
   opacity: 0;
   transform: rotate(90deg);
 }
 
-.contact-faq-newsletter-section .faq-icon.active .faq-icon-plus {
+.contact-faq-newsletter-section-container .faq-icon.active .faq-icon-plus {
   opacity: 0;
   transform: rotate(-90deg);
 }
 
-.contact-faq-newsletter-section .faq-icon.active .faq-icon-minus {
+.contact-faq-newsletter-section-container .faq-icon.active .faq-icon-minus {
   opacity: 1;
   transform: rotate(0deg);
 }
 
-.contact-faq-newsletter-section .faq-answer {
+.contact-faq-newsletter-section-container .faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
 }
 
-.contact-faq-newsletter-section .faq-answer.active {
+.contact-faq-newsletter-section-container .faq-answer.active {
   max-height: 500px;
 }
 
-.contact-faq-newsletter-section .faq-answer-content {
+.contact-faq-newsletter-section-container .faq-answer-content {
   padding: 0 16px 16px;
   color: #000000a3;
   font-size: 16px;
@@ -391,36 +391,34 @@ font-family: Montserrat, sans-serif;
   font-family: Inter, sans-serif;
 }
 
-.contact-faq-newsletter-section .faq-answer-content p, div {
+.contact-faq-newsletter-section-container .faq-answer-content p, div {
   font-family: inherit;
 }
 
-.contact-faq-newsletter-section .faq-answer-content p:last-child {
+.contact-faq-newsletter-section-container .faq-answer-content p:last-child {
   margin-bottom: 0;
 }
 
 /* 新闻订阅卡片 */
-.contact-faq-newsletter-section .newsletter-card {
+.contact-faq-newsletter-section-container .newsletter-card {
   background: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   padding: 70px;
   font-family: inherit;
 }
 
-.contact-faq-newsletter-section .newsletter-content {
+.contact-faq-newsletter-section-container .newsletter-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  max-width: 1000px;
   margin: 0 auto;
 }
 
-.contact-faq-newsletter-section .newsletter-text {
+.contact-faq-newsletter-section-container .newsletter-text {
   padding: 20px;
 }
 
-.contact-faq-newsletter-section .newsletter-label {
+.contact-faq-newsletter-section-container .newsletter-label {
   display: inline-block;
   border-radius: 12px;
   margin-bottom: 20px;
@@ -434,7 +432,7 @@ font-family: Montserrat, sans-serif;
             background-color: #f6f6f7;
 }
 
-.contact-faq-newsletter-section .newsletter-title {
+.contact-faq-newsletter-section-container .newsletter-title {
   color: #232323;
   margin-bottom: 20px;
   font-family: inherit;
@@ -445,7 +443,7 @@ font-family: Montserrat, sans-serif;
         text-transform: none;
 }
 
-.contact-faq-newsletter-section .newsletter-subtitle {
+.contact-faq-newsletter-section-container .newsletter-subtitle {
   color: #000000a3;
   font-family: inherit;
   font-size: 16px;
@@ -454,20 +452,20 @@ font-family: Montserrat, sans-serif;
     letter-spacing: 0px;
 }
 
-.contact-faq-newsletter-section .newsletter-form-wrapper {
+.contact-faq-newsletter-section-container .newsletter-form-wrapper {
   background: transparent;
   padding: 20px;
   border-radius: 0;
   border: none;
 }
 
-.contact-faq-newsletter-section .newsletter-forms {
+.contact-faq-newsletter-section-container .newsletter-forms {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.contact-faq-newsletter-section .newsletter-input-group {
+.contact-faq-newsletter-section-container .newsletter-input-group {
   display: flex;
   gap: 12px;
   align-items: stretch;
@@ -479,10 +477,10 @@ font-family: Montserrat, sans-serif;
     border-color: #0000;
     border-radius: 12px;
     margin: 0;
-    padding: 10px 25px 10px 0;
+    padding: 10px 10px 10px 0;
 }
 
-.contact-faq-newsletter-section .newsletter-input {
+.contact-faq-newsletter-section-container .newsletter-input {
   flex: 1;
   width: 100%;
   text-align: left;
@@ -495,11 +493,11 @@ font-family: Montserrat, sans-serif;
   padding-left: 25px;
 }
 
-.contact-faq-newsletter-section .newsletter-input::placeholder {
+.contact-faq-newsletter-section-container .newsletter-input::placeholder {
   color: #999999;
 }
 
-.contact-faq-newsletter-section .newsletter-btn {
+.contact-faq-newsletter-section-container .newsletter-btn {
   font-size: 16px;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
@@ -513,14 +511,14 @@ font-family: Montserrat, sans-serif;
     padding: 0 25px;
 }
 
-.contact-faq-newsletter-section .newsletter-btn:disabled {
+.contact-faq-newsletter-section-container .newsletter-btn:disabled {
   background: #6c757d;
   cursor: not-allowed;
   transform: none;
 }
 
 /* 成功提示样式 */
-.contact-faq-newsletter-section .newsletter-success {
+.contact-faq-newsletter-section-container .newsletter-success {
   display: none;
   font-family: Inter, sans-serif;
   font-size: 14px;
@@ -534,12 +532,12 @@ font-family: Montserrat, sans-serif;
   margin-bottom: 0;
 }
 
-.contact-faq-newsletter-section .newsletter-success.show {
+.contact-faq-newsletter-section-container .newsletter-success.show {
   display: block;
   animation: slideDown 0.3s ease-out;
 }
 
-.contact-faq-newsletter-section .newsletter-error {
+.contact-faq-newsletter-section-container .newsletter-error {
   display: none;
   font-family: Inter, sans-serif;
   font-size: 14px;
@@ -553,7 +551,7 @@ font-family: Montserrat, sans-serif;
   margin-bottom: 0;
 }
 
-.contact-faq-newsletter-section .newsletter-error.show {
+.contact-faq-newsletter-section-container .newsletter-error.show {
   display: block;
   animation: slideDown 0.3s ease-out;
 }
@@ -571,79 +569,79 @@ font-family: Montserrat, sans-serif;
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-  .contact-faq-newsletter-section {
+  .contact-faq-newsletter-section-container {
     padding: 40px 0;
   }
   
-  .contact-faq-newsletter-section .contact-card,
-  .contact-faq-newsletter-section .faq-card,
-  .contact-faq-newsletter-section .newsletter-card {
+  .contact-faq-newsletter-section-container .contact-card,
+  .contact-faq-newsletter-section-container .faq-card,
+  .contact-faq-newsletter-section-container .newsletter-card {
     padding: 40px 0;
   }
 
-  .contact-faq-newsletter-section .contact-title,
-  .contact-faq-newsletter-section .faq-title,
-  .contact-faq-newsletter-section .newsletter-title {
+  .contact-faq-newsletter-section-container .contact-title,
+  .contact-faq-newsletter-section-container .faq-title,
+  .contact-faq-newsletter-section-container .newsletter-title {
     font-size: 25px;
   }
   
-  .contact-faq-newsletter-section .faq-content {
+  .contact-faq-newsletter-section-container .faq-content {
     max-width: 100%;
   }
 
-  .contact-faq-newsletter-section .contact-content,
-  .contact-faq-newsletter-section .newsletter-content {
+  .contact-faq-newsletter-section-container .contact-content,
+  .contact-faq-newsletter-section-container .newsletter-content {
     grid-template-columns: 1fr;
     gap: 0;
   }
   
-  .contact-faq-newsletter-section .newsletter-text,
-  .contact-faq-newsletter-section .contact-header {
+  .contact-faq-newsletter-section-container .newsletter-text,
+  .contact-faq-newsletter-section-container .contact-header {
     text-align: center;
   }
 
-  .contact-faq-newsletter-section .contact-info {
+  .contact-faq-newsletter-section-container .contact-info {
     padding: 35px 15px;
   }
   
-  .contact-faq-newsletter-section .contact-form-wrapper {
+  .contact-faq-newsletter-section-container .contact-form-wrapper {
     padding: 50px 40px;
   }
   
-  .contact-faq-newsletter-section .contact-title {
+  .contact-faq-newsletter-section-container .contact-title {
     font-size: 30px;
     margin-bottom: 25px;
     text-align: center;
   }
   
-  .contact-faq-newsletter-section .contact-label {
+  .contact-faq-newsletter-section-container .contact-label {
     font-size: 14px;
   }
   
-  .contact-faq-newsletter-section .newsletter-btn {
+  .contact-faq-newsletter-section-container .newsletter-btn {
     align-self: stretch;
     font-size: 12px;
   }
   
-  .contact-faq-newsletter-section .newsletter-input-group {
+  .contact-faq-newsletter-section-container .newsletter-input-group {
     padding: 10px 10px 10px 0;
     margin-top: 15px;
   }
 
-  .contact-faq-newsletter-section .newsletter-input {
+  .contact-faq-newsletter-section-container .newsletter-input {
     padding-left: 15px;
     font-size: 14px;
   }
 
-  .contact-faq-newsletter-section .contact-logo img {
+  .contact-faq-newsletter-section-container .contact-logo img {
     margin: auto;
   }
   
-  .contact-faq-newsletter-section .faq-question {
+  .contact-faq-newsletter-section-container .faq-question {
     padding: 10px 15px;
   }
   
-  .contact-faq-newsletter-section .faq-answer-content {
+  .contact-faq-newsletter-section-container .faq-answer-content {
     padding: 0 25px 25px 25px;
   }
 }
@@ -660,40 +658,40 @@ font-family: Montserrat, sans-serif;
   }
 }
 
-.contact-faq-newsletter-section .contact-card,
-.contact-faq-newsletter-section .faq-card,
-.contact-faq-newsletter-section .newsletter-card {
+.contact-faq-newsletter-section-container .contact-card,
+.contact-faq-newsletter-section-container .faq-card,
+.contact-faq-newsletter-section-container .newsletter-card {
   animation: fadeInUp 0.6s ease-out;
 }
 
-.contact-faq-newsletter-section .faq-card {
+.contact-faq-newsletter-section-container .faq-card {
   animation-delay: 0.2s;
 }
 
-.contact-faq-newsletter-section .newsletter-card {
+.contact-faq-newsletter-section-container .newsletter-card {
   animation-delay: 0.4s;
 }
 
 /* 防止外部样式干扰 */
-.contact-faq-newsletter-section a {
+.contact-faq-newsletter-section-container a {
   color: inherit;
   text-decoration: none;
 }
 
-.contact-faq-newsletter-section ul,
-.contact-faq-newsletter-section ol {
+.contact-faq-newsletter-section-container ul,
+.contact-faq-newsletter-section-container ol {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.contact-faq-newsletter-section img {
+.contact-faq-newsletter-section-container img {
   max-width: 100%;
   height: auto;
 }
 
 /* 确保z-index层级 */
-.contact-faq-newsletter-section {
+.contact-faq-newsletter-section-container {
   position: relative;
   z-index: 1;
 }
